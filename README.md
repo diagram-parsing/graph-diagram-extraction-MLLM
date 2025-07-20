@@ -9,7 +9,8 @@ This project explores both prompting-based and PEFT-finetuned strategies.
 
 ## Repository Structure
 
-- `data/`: ground-truth JSON annotations for the diagram datasets used in our study
-- `evaluation/`: Evaluation scripts and manual review
+- `data/labels/`: ground-truth JSON annotations for the diagram datasets used in our study
+- `data/predictions/`: JSON extractions for the diagram datasets from the MLLM
+- `evaluation/`: Evaluation scripts 
 
 ---
