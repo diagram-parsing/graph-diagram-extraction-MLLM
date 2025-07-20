@@ -1,0 +1,147 @@
+{
+  "nodes": [
+    {
+      "text": "write recommendation",
+      "id": "write recommendation",
+      "class": "task"
+    },
+    {
+      "text": "check recommendation",
+      "id": "check recommendation",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "register & examine",
+      "id": "register & examine",
+      "class": "task"
+    },
+    {
+      "text": "claim\nreceived",
+      "id": "claim\nreceived",
+      "class": "messageEvent"
+    },
+    {
+      "text": "recommendation written",
+      "id": "recommendation written",
+      "class": "messageEvent"
+    },
+    {
+      "text": "claim OK",
+      "id": "claim OK",
+      "class": "event"
+    },
+    {
+      "text": "claim\nregistered",
+      "id": "claim\nregistered",
+      "class": "event"
+    },
+    {
+      "text": "claim\nnot OK",
+      "id": "claim\nnot OK",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "register & examine",
+      "head": "claim\nregistered",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "claim\nnot OK",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write recommendation",
+      "head": "recommendation written",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim\nnot OK",
+      "head": "write recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "claim OK",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "check recommendation",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim\nreceived",
+      "head": "register & examine",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim\nregistered",
+      "head": "write recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "recommendation written",
+      "head": "check recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Customer",
+      "head": "claim\nreceived",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "insurer",
+      "nodes": [
+        "claims officer",
+        "senior claims officer"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "claims officer",
+      "nodes": [
+        "write recommendation",
+        "register & examine",
+        "claim\nreceived",
+        "recommendation written",
+        "claim\nregistered"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "senior claims officer",
+      "nodes": [
+        "check recommendation",
+        "exclusiveGateway_1",
+        "claim OK",
+        "claim\nnot OK"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Customer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

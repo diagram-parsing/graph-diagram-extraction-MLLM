@@ -1,0 +1,242 @@
+{
+  "nodes": [
+    {
+      "text": "Select \"Staff\"",
+      "id": "Select \"Staff\"",
+      "class": "Task"
+    },
+    {
+      "text": "Select Option",
+      "id": "Select Option",
+      "class": "Task"
+    },
+    {
+      "text": "Select \"Inventory\"",
+      "id": "Select \"Inventory\"",
+      "class": "Task"
+    },
+    {
+      "text": "Enter Details",
+      "id": "Enter Details",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Select \" Supplier\"",
+      "id": "Select \" Supplier\"",
+      "class": "Task"
+    },
+    {
+      "text": "Display Error Message",
+      "id": "Display Error Message",
+      "class": "Task"
+    },
+    {
+      "text": "Return Setups Pages",
+      "id": "Return Setups Pages",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Display Administrator  Main page",
+      "id": "Display Administrator  Main page",
+      "class": "Task"
+    },
+    {
+      "text": "Display relevent Interface",
+      "id": "Display relevent Interface",
+      "class": "Task"
+    },
+    {
+      "text": "Verify Details Format",
+      "id": "Verify Details Format",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Display Successful Message",
+      "id": "Display Successful Message",
+      "class": "Task"
+    },
+    {
+      "text": "Insert / Update Details",
+      "id": "Insert / Update Details",
+      "class": "Task"
+    },
+    {
+      "text": "Return System \nInitialization\n Pages",
+      "id": "Return System \nInitialization\n Pages",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Select \"Staff\"",
+      "head": "Display relevent Interface",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Option",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "Option?"
+    },
+    {
+      "tail": "Select \"Inventory\"",
+      "head": "Display relevent Interface",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Enter Details",
+      "head": "Verify Details Format",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Select \" Supplier\"",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Select \"Inventory\"",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Select \"Staff\"",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select \" Supplier\"",
+      "head": "Display relevent Interface",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Display Error Message",
+      "head": "Enter Details",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Return Setups Pages",
+      "head": "Return System \nInitialization\n Pages",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Display Administrator  Main page",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Display Administrator  Main page",
+      "head": "Select Option",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Display relevent Interface",
+      "head": "Enter Details",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verify Details Format",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "Valid?"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Display Error Message",
+      "class": "SequenceFlow",
+      "label": "Invalid"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Display Successful Message",
+      "class": "SequenceFlow",
+      "label": "Valid"
+    },
+    {
+      "tail": "Display Successful Message",
+      "head": "Insert / Update Details",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Insert / Update Details",
+      "head": "Return Setups Pages",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Administrative Staff",
+      "id": "Administrative Staff",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Select \"Staff\"",
+        "Select Option",
+        "Select \"Inventory\"",
+        "Enter Details",
+        "Exclusive_Databased_Gateway_1",
+        "Select \" Supplier\""
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Purchasing System",
+      "id": "Purchasing System",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Display Error Message",
+        "Return Setups Pages",
+        "StartEvent_1",
+        "Display Administrator  Main page",
+        "Display relevent Interface",
+        "Verify Details Format",
+        "Exclusive_Databased_Gateway_2",
+        "Display Successful Message",
+        "Insert / Update Details",
+        "Return System \nInitialization\n Pages"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "text": "START request received",
+      "id": "START request received",
+      "class": "event"
+    },
+    {
+      "text": "assess the risk",
+      "id": "assess the risk",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "carry out advanced assessment",
+      "id": "carry out advanced assessment",
+      "class": "task"
+    },
+    {
+      "text": "carry out simple assessment",
+      "id": "carry out simple assessment",
+      "class": "task"
+    },
+    {
+      "text": "notify customer",
+      "id": "notify customer",
+      "class": "task"
+    },
+    {
+      "text": "organize distursement",
+      "id": "organize distursement",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "END credit approved",
+      "id": "END credit approved",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "organize distursement",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "organize distursement",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "END credit approved",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "notify customer",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "notify customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "carry out simple assessment",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "carry out advanced assessment",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "assess the risk",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "START request received",
+      "head": "assess the risk",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "carry out simple assessment",
+      "class": "sequenceFlow",
+      "label": "below threshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "carry out advanced assessment",
+      "class": "sequenceFlow",
+      "label": "above threshold"
+    }
+  ],
+  "groups": []
+}

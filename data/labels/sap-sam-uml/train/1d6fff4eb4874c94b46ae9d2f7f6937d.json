@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "text": "Kostenträger",
+      "attributes": null,
+      "methods": null,
+      "id": "Kostenträger",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Leistungsträger",
+      "attributes": null,
+      "methods": null,
+      "id": "Leistungsträger",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Hilfebedürftiger",
+      "attributes": null,
+      "methods": null,
+      "id": "Hilfebedürftiger",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Ressourcen",
+      "attributes": null,
+      "methods": null,
+      "id": "Ressourcen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Rahmenbedingungen",
+      "attributes": null,
+      "methods": null,
+      "id": "Rahmenbedingungen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Überwachung",
+      "attributes": null,
+      "methods": null,
+      "id": "Überwachung",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Leistungen",
+      "attributes": null,
+      "methods": null,
+      "id": "Leistungen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Qualitätsplanung",
+      "attributes": null,
+      "methods": null,
+      "id": "Qualitätsplanung",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Hilfe",
+      "attributes": null,
+      "methods": null,
+      "id": "Hilfe",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kostenträger",
+      "head": "Rahmenbedingungen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kostenträger",
+      "head": "Ressourcen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kostenträger",
+      "head": "Überwachung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Leistungsträger",
+      "head": "Leistungen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Leistungsträger",
+      "head": "Qualitätsplanung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Hilfebedürftiger",
+      "head": "Hilfe",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Ressourcen",
+      "head": "Leistungen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rahmenbedingungen",
+      "head": "Leistungen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Überwachung",
+      "head": "Qualitätsplanung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Leistungen",
+      "head": "Hilfe",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

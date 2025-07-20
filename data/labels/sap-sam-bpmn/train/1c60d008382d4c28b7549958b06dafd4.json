@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "text": "Hungry",
+      "id": "Hungry",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Select Meal",
+      "id": "Select Meal",
+      "class": "Task"
+    },
+    {
+      "text": "Which Meal?",
+      "id": "Which Meal?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Cook Pasta",
+      "id": "Cook Pasta",
+      "class": "Task"
+    },
+    {
+      "text": "Grill Steak",
+      "id": "Grill Steak",
+      "class": "Task"
+    },
+    {
+      "text": "Prepare Salad",
+      "id": "Prepare Salad",
+      "class": "Task"
+    },
+    {
+      "text": "Salad is prepared",
+      "id": "Salad is prepared",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Steak is Grilled",
+      "id": "Steak is Grilled",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Pasta Is cooked",
+      "id": "Pasta Is cooked",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Hungry",
+      "head": "Select Meal",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Meal",
+      "head": "Which Meal?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Which Meal?",
+      "head": "Cook Pasta",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Which Meal?",
+      "head": "Grill Steak",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Which Meal?",
+      "head": "Prepare Salad",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cook Pasta",
+      "head": "Pasta Is cooked",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Grill Steak",
+      "head": "Steak is Grilled",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prepare Salad",
+      "head": "Salad is prepared",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "text": "Application\nreceived",
+      "id": "Application\nreceived",
+      "class": "event"
+    },
+    {
+      "text": "Application\nevaluation",
+      "id": "Application\nevaluation",
+      "class": "task"
+    },
+    {
+      "text": "application\nrejected",
+      "id": "application\nrejected",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "create new\nbank account",
+      "id": "create new\nbank account",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "send\nwelcome\npack",
+      "id": "send\nwelcome\npack",
+      "class": "task"
+    },
+    {
+      "text": "send\ncredit\ncard",
+      "id": "send\ncredit\ncard",
+      "class": "task"
+    },
+    {
+      "text": "send\nPIN",
+      "id": "send\nPIN",
+      "class": "task"
+    },
+    {
+      "text": "notify\ncustomer\nvia email",
+      "id": "notify\ncustomer\nvia email",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "application\napproved",
+      "id": "application\napproved",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_2",
+      "head": "application\napproved",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send\nPIN",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send\nwelcome\npack",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send\ncredit\ncard",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "send\nPIN",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "send\ncredit\ncard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "notify\ncustomer\nvia email",
+      "head": "application\nrejected",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "notify\ncustomer\nvia email",
+      "class": "sequenceFlow",
+      "label": "Application\nrejected"
+    },
+    {
+      "tail": "create new\nbank account",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "create new\nbank account",
+      "class": "sequenceFlow",
+      "label": "Application\napproved"
+    },
+    {
+      "tail": "Application\nevaluation",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Application\nreceived",
+      "head": "Application\nevaluation",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

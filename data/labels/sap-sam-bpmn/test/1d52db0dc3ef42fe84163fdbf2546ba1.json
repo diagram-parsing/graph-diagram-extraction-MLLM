@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "text": "Auftrag ist eingegangen\n",
+      "id": "Auftrag ist eingegangen\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Auftrag prüfen\n",
+      "id": "Auftrag prüfen\n",
+      "class": "Task"
+    },
+    {
+      "text": "Auftrag vollständig?",
+      "id": "Auftrag vollständig?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Auftrag freigeben",
+      "id": "Auftrag freigeben",
+      "class": "Task"
+    },
+    {
+      "text": "Auftrag stornieren",
+      "id": "Auftrag stornieren",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Kunde informieren",
+      "id": "Kunde informieren",
+      "class": "Task"
+    },
+    {
+      "text": "Kunde ist informiert",
+      "id": "Kunde ist informiert",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Auftrag ist eingegangen\n",
+      "head": "Auftrag prüfen\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag prüfen\n",
+      "head": "Auftrag vollständig?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag vollständig?",
+      "head": "Auftrag freigeben",
+      "class": "SequenceFlow",
+      "label": "ja\n"
+    },
+    {
+      "tail": "Auftrag vollständig?",
+      "head": "Auftrag stornieren",
+      "class": "SequenceFlow",
+      "label": "nein"
+    },
+    {
+      "tail": "Auftrag freigeben",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag stornieren",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Kunde informieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunde informieren",
+      "head": "Kunde ist informiert",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

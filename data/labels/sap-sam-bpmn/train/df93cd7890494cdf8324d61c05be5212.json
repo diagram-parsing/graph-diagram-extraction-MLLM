@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Register \nClaim\n(a)",
+      "id": "Register \nClaim\n(a)",
+      "class": "Task"
+    },
+    {
+      "text": "Process\nClaim\nwith quick\n(c)",
+      "id": "Process\nClaim\nwith quick\n(c)",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Archive Claim\n(d)",
+      "id": "Archive Claim\n(d)",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Process\nClaim\nwith detail\n(e)",
+      "id": "Process\nClaim\nwith detail\n(e)",
+      "class": "Task"
+    },
+    {
+      "text": "Approve\n Claim\n(f)",
+      "id": "Approve\n Claim\n(f)",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Reject\nClaim\n(b)",
+      "id": "Reject\nClaim\n(b)",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Register \nClaim\n(a)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Register \nClaim\n(a)",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Process\nClaim\nwith quick\n(c)",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Process\nClaim\nwith detail\n(e)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Process\nClaim\nwith quick\n(c)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Reject\nClaim\n(b)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Archive Claim\n(d)",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Process\nClaim\nwith detail\n(e)",
+      "head": "Approve\n Claim\n(f)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approve\n Claim\n(f)",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Archive Claim\n(d)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reject\nClaim\n(b)",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "SEMAFORO",
+      "attributes": [
+        "Codice: string",
+        "indirizzo: string",
+        "Latitudine: string",
+        "Longitudine: string",
+        "Tipo lampadina: string",
+        "Pedonale: boolean"
+      ],
+      "methods": null,
+      "id": "SEMAFORO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CITTADINO",
+      "attributes": [
+        "email: string",
+        "telefono: string"
+      ],
+      "methods": null,
+      "id": "CITTADINO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SEGNALAZIONE",
+      "attributes": [
+        "tipoguasto: string",
+        "Descrizione: string",
+        "Tempo risoluzione: Time"
+      ],
+      "methods": null,
+      "id": "SEGNALAZIONE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SQUADRA",
+      "attributes": [
+        "Codice: string",
+        ": "
+      ],
+      "methods": null,
+      "id": "SQUADRA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "OPERAIO",
+      "attributes": [
+        "Nome: string",
+        "Cognome: string",
+        "Cellulare: string",
+        "Caposquadra: boolean"
+      ],
+      "methods": null,
+      "id": "OPERAIO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Proposta a ",
+      "attributes": [
+        "accettata: boolean",
+        "valutata: boolean"
+      ],
+      "methods": null,
+      "id": "Proposta a ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ZONA",
+      "attributes": [
+        "Nome: string"
+      ],
+      "methods": null,
+      "id": "ZONA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ogni squadra può operare in più zone, teniamone traccia con una classe a a parte",
+      "attributes": null,
+      "methods": null,
+      "id": "Ogni squadra può operare in più zone, teniamone traccia con una classe a a parte",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "CITTADINO",
+      "head": "SEGNALAZIONE",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "SEGNALAZIONE",
+      "head": "SEMAFORO",
+      "class": "UndirectedAssociation",
+      "label": "Riferita a"
+    },
+    {
+      "tail": "SEGNALAZIONE",
+      "head": "SQUADRA",
+      "class": "UndirectedAssociation",
+      "label": "proposta a"
+    },
+    {
+      "tail": "SQUADRA",
+      "head": "OPERAIO",
+      "class": "UndirectedAssociation",
+      "label": "composta da"
+    },
+    {
+      "tail": "SQUADRA",
+      "head": "ZONA",
+      "class": "UndirectedAssociation",
+      "label": "opera"
+    },
+    {
+      "tail": "ZONA",
+      "head": "SEMAFORO",
+      "class": "UndirectedAssociation",
+      "label": "situato in"
+    },
+    {
+      "tail": "ZONA",
+      "head": "Ogni squadra può operare in più zone, teniamone traccia con una classe a a parte",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

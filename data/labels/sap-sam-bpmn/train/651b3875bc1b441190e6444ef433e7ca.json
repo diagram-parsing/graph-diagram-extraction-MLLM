@@ -1,0 +1,215 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Gather Receipts",
+      "id": "Gather Receipts",
+      "class": "Task"
+    },
+    {
+      "text": "Prepare official Form ",
+      "id": "Prepare official Form ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Reviews both Documents",
+      "id": "Reviews both Documents",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Corrects Documents",
+      "id": "Corrects Documents",
+      "class": "Task"
+    },
+    {
+      "text": "Finished Documents",
+      "id": "Finished Documents",
+      "class": "Task"
+    },
+    {
+      "text": "Prepares Form",
+      "id": "Prepares Form",
+      "class": "Task"
+    },
+    {
+      "text": "Amount typed into System",
+      "id": "Amount typed into System",
+      "class": "Task"
+    },
+    {
+      "text": "Reviews Documents",
+      "id": "Reviews Documents",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Receives Money",
+      "id": "Receives Money",
+      "class": "Task"
+    },
+    {
+      "text": "Reimbursement Complete",
+      "id": "Reimbursement Complete",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Prepare official Form ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Gather Receipts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Gather Receipts",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prepare official Form ",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Finished Documents",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reviews both Documents",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Prepares Form",
+      "class": "SequenceFlow",
+      "label": "If correct"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Corrects Documents",
+      "class": "SequenceFlow",
+      "label": "If incorrect"
+    },
+    {
+      "tail": "Corrects Documents",
+      "head": "Finished Documents",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Finished Documents",
+      "head": "Reviews both Documents",
+      "class": "SequenceFlow",
+      "label": "sent to secretary"
+    },
+    {
+      "tail": "Prepares Form",
+      "head": "Amount typed into System",
+      "class": "SequenceFlow",
+      "label": "Sends to Treasurer"
+    },
+    {
+      "tail": "Amount typed into System",
+      "head": "Reviews Documents",
+      "class": "SequenceFlow",
+      "label": "Asked to Review Documents"
+    },
+    {
+      "tail": "Reviews Documents",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Receives Money",
+      "class": "SequenceFlow",
+      "label": "If correct"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Corrects Documents",
+      "class": "SequenceFlow",
+      "label": "If not"
+    },
+    {
+      "tail": "Receives Money",
+      "head": "Reimbursement Complete",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Jane Doe   Univeristy",
+      "id": "Jane Doe   Univeristy",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "AND_Gateway_1",
+        "Gather Receipts",
+        "Prepare official Form ",
+        "AND_Gateway_2",
+        "Reviews both Documents",
+        "Exclusive_Databased_Gateway_1",
+        "Corrects Documents",
+        "Finished Documents",
+        "Prepares Form",
+        "Amount typed into System",
+        "Reviews Documents",
+        "Exclusive_Databased_Gateway_2",
+        "Receives Money",
+        "Reimbursement Complete"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

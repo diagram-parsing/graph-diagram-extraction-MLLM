@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "articolo",
+      "attributes": [
+        "Nome: string",
+        "Descrizione: string",
+        "Immagine: string",
+        "Prezzo: Currency"
+      ],
+      "methods": null,
+      "id": "articolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "negozio",
+      "attributes": [
+        "nome: string",
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "negozio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "lista nozze",
+      "attributes": [
+        "sposa: string",
+        "sposo: string"
+      ],
+      "methods": null,
+      "id": "lista nozze",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "amico",
+      "attributes": [
+        "nome: string",
+        "email: string"
+      ],
+      "methods": null,
+      "id": "amico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "regalo",
+      "attributes": null,
+      "methods": null,
+      "id": "regalo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "prenota",
+      "attributes": [
+        "data: date",
+        "acquistato: boolean"
+      ],
+      "methods": null,
+      "id": "prenota",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "articolo",
+      "head": "negozio",
+      "class": "UndirectedAssociation",
+      "label": "catalogo"
+    },
+    {
+      "tail": "negozio",
+      "head": "lista nozze",
+      "class": "UndirectedAssociation",
+      "label": "si appoggia"
+    },
+    {
+      "tail": "lista nozze",
+      "head": "amico",
+      "class": "UndirectedAssociation",
+      "label": "invita"
+    },
+    {
+      "tail": "lista nozze",
+      "head": "regalo",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    },
+    {
+      "tail": "amico",
+      "head": "regalo",
+      "class": "UndirectedAssociation",
+      "label": "prenota"
+    },
+    {
+      "tail": "regalo",
+      "head": "articolo",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

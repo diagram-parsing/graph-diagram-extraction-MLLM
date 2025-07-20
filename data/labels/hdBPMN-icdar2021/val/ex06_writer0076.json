@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "write down order",
+      "id": "write down order",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "attach order note to pinboard",
+      "id": "attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": "open Restaurant",
+      "id": "open Restaurant",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Printer",
+      "id": "Printer",
+      "class": "dataStore"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "attach order note to pinboard",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "write down order",
+      "class": "sequenceFlow",
+      "label": "Phone"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": "Web"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": "Lieferando"
+    },
+    {
+      "tail": "open Restaurant",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": "receive order by..."
+    },
+    {
+      "tail": "Printer",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Printer",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

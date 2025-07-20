@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "text": "TIROCINIO",
+      "attributes": [
+        "Nome: String",
+        "dataInizio: Date",
+        "dataFine: Date",
+        "Voto: int",
+        "firmaTutorAz: Boolean",
+        "firmaTutorAcc: Boolean"
+      ],
+      "methods": null,
+      "id": "TIROCINIO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "STUDENTE",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "Matricola: String",
+        "crediti: int"
+      ],
+      "methods": null,
+      "id": "STUDENTE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PROPOSTA",
+      "attributes": [
+        "cod_identificativo: String"
+      ],
+      "methods": null,
+      "id": "PROPOSTA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AZIENDA",
+      "attributes": [
+        "nome: String",
+        "matricola: String"
+      ],
+      "methods": null,
+      "id": "AZIENDA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TUTOR_ACCADEMICO",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "Matricola: String"
+      ],
+      "methods": null,
+      "id": "TUTOR_ACCADEMICO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "QUESTIONARIO",
+      "attributes": [
+        "valutazione: String",
+        "data: Date"
+      ],
+      "methods": null,
+      "id": "QUESTIONARIO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "FOGLIO_PRESENZE\n",
+      "attributes": [
+        "Data: Date",
+        "ingresso: Time",
+        "uscita: Time",
+        "firmato: Boolean"
+      ],
+      "methods": null,
+      "id": "FOGLIO_PRESENZE\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "TIROCINIO",
+      "head": "FOGLIO_PRESENZE\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "STUDENTE",
+      "head": "PROPOSTA",
+      "class": "UndirectedAssociation",
+      "label": "sceglie"
+    },
+    {
+      "tail": "STUDENTE",
+      "head": "TIROCINIO",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "STUDENTE",
+      "head": "QUESTIONARIO",
+      "class": "UndirectedAssociation",
+      "label": "consegna"
+    },
+    {
+      "tail": "PROPOSTA",
+      "head": "AZIENDA",
+      "class": "UndirectedAssociation",
+      "label": "sottoscrive"
+    },
+    {
+      "tail": "TUTOR_ACCADEMICO",
+      "head": "TIROCINIO",
+      "class": "UndirectedAssociation",
+      "label": "segue"
+    },
+    {
+      "tail": "TUTOR_ACCADEMICO",
+      "head": "QUESTIONARIO",
+      "class": "UndirectedAssociation",
+      "label": "compila"
+    },
+    {
+      "tail": "QUESTIONARIO",
+      "head": "TIROCINIO",
+      "class": "UndirectedAssociation",
+      "label": "valuta"
+    }
+  ],
+  "groups": []
+}

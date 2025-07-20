@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "text": "Messaging",
+      "attributes": [
+        "Senders name: ",
+        "Contact list: "
+      ],
+      "methods": [
+        "Send messages()",
+        "Receive messages()"
+      ],
+      "id": "Messaging",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Chatbot - spoken",
+      "attributes": [
+        "Auditory: ",
+        "language - accents: ",
+        "A.I.: "
+      ],
+      "methods": [
+        "Read out messages()",
+        "Simulate conversation()"
+      ],
+      "id": "Chatbot - spoken",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Chatbot - written",
+      "attributes": [
+        "Textual: ",
+        "language - type: ",
+        "A.I.: "
+      ],
+      "methods": [
+        "Type out messages()",
+        "simulate conversation()"
+      ],
+      "id": "Chatbot - written",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Messaging mobile app",
+      "attributes": [
+        "User account: ",
+        "Private (direct) messaging: ",
+        "one to one: "
+      ],
+      "methods": [
+        "Create group()",
+        "Accept message()",
+        "Share files()",
+        "Make calls()"
+      ],
+      "id": "Messaging mobile app",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Discussion forum",
+      "attributes": [
+        "User profile: ",
+        "Replies: ",
+        "multi-user messaging: ",
+        "many to many: "
+      ],
+      "methods": [
+        "Archive messages()",
+        "Post messages()"
+      ],
+      "id": "Discussion forum",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Online chat (with staff on the website)",
+      "attributes": [
+        "Staff profile: ",
+        "real-time transmitions: ",
+        "Human: ",
+        "one to many: "
+      ],
+      "methods": [
+        "Talk to a person()",
+        "ask question()",
+        "receive answer()"
+      ],
+      "id": "Online chat (with staff on the website)",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Chatbot - spoken",
+      "head": "Messaging",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Chatbot - written",
+      "head": "Messaging",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Messaging mobile app",
+      "head": "Messaging",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Discussion forum",
+      "head": "Messaging",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Online chat (with staff on the website)",
+      "head": "Messaging",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

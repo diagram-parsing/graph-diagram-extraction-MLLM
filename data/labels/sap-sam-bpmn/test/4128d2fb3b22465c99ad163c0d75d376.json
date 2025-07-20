@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "ciao belli",
+      "id": "ciao belli",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Jane Doe  è il migliore",
+      "id": "Jane Doe  è il migliore",
+      "class": "Task"
+    },
+    {
+      "text": "Jane Doe ",
+      "id": "Jane Doe ",
+      "class": "Task"
+    },
+    {
+      "text": "Annalisa puzza",
+      "id": "Annalisa puzza",
+      "class": "Task"
+    },
+    {
+      "text": "galassi merda",
+      "id": "galassi merda",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "ciao belli",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Jane Doe  è il migliore",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Jane Doe ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Annalisa puzza",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "TextAnnotation_1",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "Jane Doe  è il migliore",
+      "head": "galassi merda",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Jane Doe ",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Annalisa puzza",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "galassi merda",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

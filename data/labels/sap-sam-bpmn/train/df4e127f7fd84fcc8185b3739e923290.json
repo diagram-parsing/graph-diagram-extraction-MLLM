@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "text": "Lid wil boek lenen\n",
+      "id": "Lid wil boek lenen\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Lid doet aanvraag tot lenen\n",
+      "id": "Lid doet aanvraag tot lenen\n",
+      "class": "Task"
+    },
+    {
+      "text": "Lid heeft 0 of 1 boek\n",
+      "id": "Lid heeft 0 of 1 boek\n",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Aanvraag mag\n",
+      "id": "Aanvraag mag\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Aanwezigheid boek",
+      "id": "Aanwezigheid boek",
+      "class": "Task"
+    },
+    {
+      "text": "Boek niet in assortiment",
+      "id": "Boek niet in assortiment",
+      "class": "Task"
+    },
+    {
+      "text": "Boek uitgeleend\n",
+      "id": "Boek uitgeleend\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Bibliothecaris bestelt boek bij leverancier",
+      "id": "Bibliothecaris bestelt boek bij leverancier",
+      "class": "Task"
+    },
+    {
+      "text": "Boek besteld\n",
+      "id": "Boek besteld\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Lid levert 1 of 2 boek(en) in\n",
+      "id": "Lid levert 1 of 2 boek(en) in\n",
+      "class": "Task"
+    },
+    {
+      "text": "Bibliotecaris wil boek bestellen",
+      "id": "Bibliotecaris wil boek bestellen",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Bibliothecaris bestelt boek bij leverancier",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "Boek niet uitgeleend",
+      "id": "Boek niet uitgeleend",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Boek besteld\n",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Lid wil boek lenen\n",
+      "head": "Lid doet aanvraag tot lenen\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lid doet aanvraag tot lenen\n",
+      "head": "Lid heeft 0 of 1 boek\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lid heeft 0 of 1 boek\n",
+      "head": "Aanvraag mag\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lid heeft 0 of 1 boek\n",
+      "head": "Lid levert 1 of 2 boek(en) in\n",
+      "class": "SequenceFlow",
+      "label": "Lid heeft 2 boeken\n"
+    },
+    {
+      "tail": "Aanvraag mag\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Aanwezigheid boek",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Boek niet in assortiment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aanwezigheid boek",
+      "head": "Boek uitgeleend\n",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "Aanwezigheid boek",
+      "head": "Boek niet uitgeleend",
+      "class": "SequenceFlow",
+      "label": "Nee\n"
+    },
+    {
+      "tail": "Boek niet in assortiment",
+      "head": "Bibliothecaris bestelt boek bij leverancier",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bibliothecaris bestelt boek bij leverancier",
+      "head": "Boek besteld\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lid levert 1 of 2 boek(en) in\n",
+      "head": "Aanvraag mag\n",
+      "class": "SequenceFlow",
+      "label": "Lid heeft 0 of 1 boek\n"
+    },
+    {
+      "tail": "Bibliotecaris wil boek bestellen",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

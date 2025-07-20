@@ -1,0 +1,257 @@
+{
+  "nodes": [
+    {
+      "text": "formulir pendaftaran",
+      "id": "formulir pendaftaran",
+      "class": "StartEvent"
+    },
+    {
+      "text": "ubah file\nmenjadi pdf",
+      "id": "ubah file\nmenjadi pdf",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "terima dokumen\nsiswa",
+      "id": "terima dokumen\nsiswa",
+      "class": "Task"
+    },
+    {
+      "text": "periksa kelengkapan dokumen",
+      "id": "periksa kelengkapan dokumen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "kirim salinan dokumen asli",
+      "id": "kirim salinan dokumen asli",
+      "class": "Task"
+    },
+    {
+      "text": "kirim pemberitahuan",
+      "id": "kirim pemberitahuan",
+      "class": "Task"
+    },
+    {
+      "text": "terima hasil verif",
+      "id": "terima hasil verif",
+      "class": "Task"
+    },
+    {
+      "text": "periksa hasil tes b ing",
+      "id": "periksa hasil tes b ing",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "kirim dokumen ke komite",
+      "id": "kirim dokumen ke komite",
+      "class": "Task"
+    },
+    {
+      "text": "periksa hasil seleksi",
+      "id": "periksa hasil seleksi",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "kirim surat konfirmasi",
+      "id": "kirim surat konfirmasi",
+      "class": "Task"
+    },
+    {
+      "text": "kirim pemberitahuan",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "pendaftaran ditolak",
+      "id": "pendaftaran ditolak",
+      "class": "EndEvent"
+    },
+    {
+      "text": "pendaftaran diterima",
+      "id": "pendaftaran diterima",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "formulir pendaftaran",
+      "head": "ubah file\nmenjadi pdf",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ubah file\nmenjadi pdf",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "terima dokumen\nsiswa",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "terima dokumen\nsiswa",
+      "head": "periksa kelengkapan dokumen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "periksa kelengkapan dokumen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "kirim salinan dokumen asli",
+      "class": "SequenceFlow",
+      "label": "dokumen\nlengkap"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "kirim pemberitahuan",
+      "class": "SequenceFlow",
+      "label": "dokumen hilang"
+    },
+    {
+      "tail": "kirim salinan dokumen asli",
+      "head": "terima hasil verif",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "terima hasil verif",
+      "head": "periksa hasil tes b ing",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "periksa hasil tes b ing",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "kirim dokumen ke komite",
+      "class": "SequenceFlow",
+      "label": "hasil lolos"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "hasil gagal verif"
+    },
+    {
+      "tail": "kirim dokumen ke komite",
+      "head": "periksa hasil seleksi",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "periksa hasil seleksi",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "kirim surat konfirmasi",
+      "class": "SequenceFlow",
+      "label": "hasil lolos seleksi"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "hasil seleksi gagal"
+    },
+    {
+      "tail": "kirim surat konfirmasi",
+      "head": "pendaftaran diterima",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "pendaftaran ditolak",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Penerima",
+      "id": "Penerima",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "formulir pendaftaran",
+        "ubah file\nmenjadi pdf",
+        "Exclusive_Databased_Gateway_1",
+        "terima dokumen\nsiswa",
+        "periksa kelengkapan dokumen",
+        "Exclusive_Databased_Gateway_2",
+        "kirim salinan dokumen asli",
+        "kirim pemberitahuan",
+        "terima hasil verif",
+        "periksa hasil tes b ing",
+        "Exclusive_Databased_Gateway_3",
+        "kirim dokumen ke komite",
+        "periksa hasil seleksi",
+        "Exclusive_Databased_Gateway_4",
+        "kirim surat konfirmasi",
+        "Task_1",
+        "pendaftaran ditolak",
+        "pendaftaran diterima"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "siswa",
+      "id": "siswa",
+      "nodes": [],
+      "class": "CollapsedPool"
+    },
+    {
+      "name": "badan verivikasi",
+      "id": "badan verivikasi",
+      "nodes": [],
+      "class": "CollapsedPool"
+    },
+    {
+      "name": "komite akademik",
+      "id": "komite akademik",
+      "nodes": [],
+      "class": "CollapsedPool"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "text": "claim received",
+      "id": "claim received",
+      "class": "event"
+    },
+    {
+      "text": "register and examine",
+      "id": "register and examine",
+      "class": "task"
+    },
+    {
+      "text": "write settlement recommendation",
+      "id": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "text": "recommendation",
+      "id": "recommendation",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "dataObject_1",
+      "class": "dataObject"
+    },
+    {
+      "text": "settlement recommendation",
+      "id": "settlement recommendation",
+      "class": "dataObject"
+    },
+    {
+      "text": "check recommendation",
+      "id": "check recommendation",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "send to officer",
+      "id": "send to officer",
+      "class": "task"
+    },
+    {
+      "text": "send to claim handeling",
+      "id": "send to claim handeling",
+      "class": "task"
+    },
+    {
+      "text": "claim handeling process",
+      "id": "claim handeling process",
+      "class": "subProcess"
+    },
+    {
+      "text": "claim handeled",
+      "id": "claim handeled",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "claim received",
+      "head": "register and examine",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register and examine",
+      "head": "write settlement recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check recommendation",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "send to officer",
+      "class": "sequenceFlow",
+      "label": "Not OK"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "send to claim handeling",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "claim handeling process",
+      "head": "claim handeled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "recommendation",
+      "head": "write settlement recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write settlement recommendation",
+      "head": "settlement recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "settlement recommendation",
+      "head": "check recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "dataObject_1",
+      "head": "claim handeling process",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send to officer",
+      "head": "recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send to claim handeling",
+      "head": "dataObject_1",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Insurer",
+      "nodes": [
+        "claim officer",
+        "senior claim officer",
+        "claim handling"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "claim officer",
+      "nodes": [
+        "claim received",
+        "register and examine",
+        "write settlement recommendation",
+        "settlement recommendation"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "senior claim officer",
+      "nodes": [
+        "recommendation",
+        "dataObject_1",
+        "check recommendation",
+        "exclusiveGateway_1",
+        "send to officer",
+        "send to claim handeling"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "claim handling",
+      "nodes": [
+        "claim handeling process",
+        "claim handeled"
+      ],
+      "class": "lane"
+    }
+  ]
+}

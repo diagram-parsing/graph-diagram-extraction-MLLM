@@ -1,0 +1,271 @@
+{
+  "nodes": [
+    {
+      "text": "Product Categories",
+      "attributes": [
+        "Product_category_number: PK",
+        "Product_category_description: ",
+        "Product_category_manager: ",
+        "Product_category_notes: ",
+        "Product_number: FK",
+        "Partner_number: FK"
+      ],
+      "methods": null,
+      "id": "Product Categories",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Products ",
+      "attributes": [
+        "Product_number: PK",
+        "Product_description: ",
+        "Product_price: ",
+        "Product_unit_of_sale: ",
+        "Product_category: ",
+        "Product_quantity_on_hand: ",
+        "Product_notes: ",
+        "Product_category_number: FK"
+      ],
+      "methods": null,
+      "id": "Products ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Order Status",
+      "attributes": [
+        "Order_status_code: PK",
+        "Order_status_description: "
+      ],
+      "methods": null,
+      "id": "Order Status",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cash",
+      "attributes": [
+        "Account_number: PK",
+        "Bank_routing_number: ",
+        "Bank_balance: ",
+        "Bank_name: ",
+        "Bank_branch: ",
+        "Bank_phone_number: "
+      ],
+      "methods": null,
+      "id": "Cash",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Quote",
+      "attributes": [
+        "Quote_number: PK",
+        "Quote_date: ",
+        "Quote_amount: ",
+        "Customer_number: FK",
+        "Partner_number: FK"
+      ],
+      "methods": null,
+      "id": "Quote",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Order",
+      "attributes": [
+        "Order_number: PK",
+        "Order_date: ",
+        "Order_required_by: ",
+        "Order_delivered: ",
+        "Order_total_amount: ",
+        "Order_instructions: ",
+        "Order_status_code: FK",
+        "Receipt_number: FK",
+        "Quote_number: FK",
+        "Customer_number: FK",
+        "Partner_number: FK"
+      ],
+      "methods": null,
+      "id": "Order",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cash Receipt",
+      "attributes": [
+        "Receipt_number: PK",
+        "Receipt_date: ",
+        "Receipt_amount: ",
+        "Customer_check_number: ",
+        "Bank_account_number: ",
+        "Receipt_deposit_date: ",
+        "Account_number: FK",
+        "Partner_number: FK",
+        "Customer_number: FK"
+      ],
+      "methods": null,
+      "id": "Cash Receipt",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sunset Partner",
+      "attributes": [
+        "Partner_number: PK",
+        "Partner_first_name: ",
+        "Partner_last_name: ",
+        "Partner_hire_date: ",
+        "Partner_SocSecNo: ",
+        "Partner_address: ",
+        "Partner_address2: ",
+        "Partner_city: ",
+        "Partner_state: ",
+        "Partner_zip: ",
+        "Partner_phone: ",
+        "Partner_cellphone: "
+      ],
+      "methods": null,
+      "id": "Sunset Partner",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Customer",
+      "attributes": [
+        "Customer_number: PK",
+        "Customer_name: ",
+        "Customer_address: ",
+        "Customer_address_2: ",
+        "Customer_city: ",
+        "Customer_state: ",
+        "Customer_zip: ",
+        "Customer_contact: ",
+        "Customer_phone: ",
+        "Customer_established_date: ",
+        "Customer_last_activity: ",
+        "Customer_balance: "
+      ],
+      "methods": null,
+      "id": "Customer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Quote-Products",
+      "attributes": [
+        "Product_number: FK",
+        "Quote_number: FK",
+        "Quote_quantity: ",
+        "Quote_price: ",
+        "Quote_notes: "
+      ],
+      "methods": null,
+      "id": "Quote-Products",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Order-Products",
+      "attributes": [
+        "Product_number: FK",
+        "Order_number: FK",
+        "Order_quantity: ",
+        "Order_price: "
+      ],
+      "methods": null,
+      "id": "Order-Products",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Product Categories",
+      "head": "Sunset Partner",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Product Categories",
+      "head": "Products ",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Products ",
+      "head": "Quote-Products",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Products ",
+      "head": "Order-Products",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Order Status",
+      "head": "Order",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Cash",
+      "head": "Cash Receipt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Quote",
+      "head": "Sunset Partner",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Quote",
+      "head": "Customer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Order",
+      "head": "Sunset Partner",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Order",
+      "head": "Customer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Order",
+      "head": "Quote",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Order",
+      "head": "Cash Receipt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Cash Receipt",
+      "head": "Sunset Partner",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Cash Receipt",
+      "head": "Customer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Quote-Products",
+      "head": "Quote",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Order-Products",
+      "head": "Order",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

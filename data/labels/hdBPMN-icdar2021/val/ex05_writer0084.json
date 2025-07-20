@@ -1,0 +1,265 @@
+{
+  "nodes": [
+    {
+      "text": "Check documents for completness",
+      "id": "Check documents for completness",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Register claim",
+      "id": "Register claim",
+      "class": "task"
+    },
+    {
+      "text": "claim rejected",
+      "id": "claim rejected",
+      "class": "event"
+    },
+    {
+      "text": "pick up claim",
+      "id": "pick up claim",
+      "class": "task"
+    },
+    {
+      "text": "Check insurance",
+      "id": "Check insurance",
+      "class": "task"
+    },
+    {
+      "text": "claim rejected",
+      "id": "claim rejected",
+      "class": "event"
+    },
+    {
+      "text": "perform assesment",
+      "id": "perform assesment",
+      "class": "task"
+    },
+    {
+      "text": "phone garage",
+      "id": "phone garage",
+      "class": "task"
+    },
+    {
+      "text": "schedule payment",
+      "id": "schedule payment",
+      "class": "task"
+    },
+    {
+      "text": "Reject claim",
+      "id": "Reject claim",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "letter sent",
+      "id": "letter sent",
+      "class": "event"
+    },
+    {
+      "text": "send letter to customer",
+      "id": "send letter to customer",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_4",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "claim received",
+      "id": "claim received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "Authorize repairs",
+      "id": "Authorize repairs",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "send letter to customer",
+      "head": "letter sent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "send letter to customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "schedule payment",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Reject claim",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "Reject claim",
+      "class": "sequenceFlow",
+      "label": "assesment negative"
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "phone garage",
+      "class": "sequenceFlow",
+      "label": "assesment positive"
+    },
+    {
+      "tail": "perform assesment",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "perform assesment",
+      "class": "sequenceFlow",
+      "label": "test passed"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "claim rejected",
+      "class": "sequenceFlow",
+      "label": "test failed"
+    },
+    {
+      "tail": "Check insurance",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pick up claim",
+      "head": "Check insurance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Register claim",
+      "head": "pick up claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "claim rejected",
+      "class": "sequenceFlow",
+      "label": "test failed"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "Register claim",
+      "class": "sequenceFlow",
+      "label": "test passed"
+    },
+    {
+      "tail": "Check documents for completness",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim received",
+      "head": "Check documents for completness",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send letter to customer",
+      "head": "customer",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "customer",
+      "head": "claim received",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "phone garage",
+      "head": "Authorize repairs",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "Authorize repairs",
+      "head": "schedule payment",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Car insurer",
+      "nodes": [
+        "Handling department",
+        "Notification department"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "Handling department",
+      "nodes": [
+        "pick up claim",
+        "Check insurance",
+        "claim rejected",
+        "perform assesment",
+        "phone garage",
+        "schedule payment",
+        "Reject claim",
+        "exclusiveGateway_2",
+        "exclusiveGateway_3",
+        "letter sent",
+        "send letter to customer",
+        "exclusiveGateway_4"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Notification department",
+      "nodes": [
+        "Check documents for completness",
+        "exclusiveGateway_1",
+        "Register claim",
+        "claim rejected",
+        "claim received"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Garage",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "customer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

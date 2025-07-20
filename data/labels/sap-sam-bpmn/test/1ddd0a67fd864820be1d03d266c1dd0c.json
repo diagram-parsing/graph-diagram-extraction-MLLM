@@ -1,0 +1,94 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartMessageEvent_1",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Validazione ordine",
+      "id": "Validazione ordine",
+      "class": "Task"
+    },
+    {
+      "text": "Controllo credito",
+      "id": "Controllo credito",
+      "class": "Task"
+    },
+    {
+      "text": "ordine non valido",
+      "id": "ordine non valido",
+      "class": "IntermediateErrorEvent"
+    },
+    {
+      "text": "notifica errore",
+      "id": "notifica errore",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Soddisfacimento ordine",
+      "id": "Soddisfacimento ordine",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateErrorEvent_1",
+      "class": "IntermediateErrorEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartMessageEvent_1",
+      "head": "Validazione ordine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Validazione ordine",
+      "head": "Controllo credito",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Controllo credito",
+      "head": "Soddisfacimento ordine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ordine non valido",
+      "head": "notifica errore",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "notifica errore",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Soddisfacimento ordine",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateErrorEvent_1",
+      "head": "notifica errore",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

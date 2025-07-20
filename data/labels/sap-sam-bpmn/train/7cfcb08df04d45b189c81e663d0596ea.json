@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "text": "carica la perizia",
+      "id": "carica la perizia",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "inserisce i dati del sinistro",
+      "id": "inserisce i dati del sinistro",
+      "class": "Task"
+    },
+    {
+      "text": "incarica il perito",
+      "id": "incarica il perito",
+      "class": "Task"
+    },
+    {
+      "text": "decisione sul sinistro",
+      "id": "decisione sul sinistro",
+      "class": "Task"
+    },
+    {
+      "text": "invia una comunicazione",
+      "id": "invia una comunicazione",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "carica la perizia",
+      "head": "decisione sul sinistro",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "inserisce i dati del sinistro",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "inserisce i dati del sinistro",
+      "head": "incarica il perito",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "incarica il perito",
+      "head": "carica la perizia",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "decisione sul sinistro",
+      "head": "invia una comunicazione",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "invia una comunicazione",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "perito",
+      "id": "perito",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "carica la perizia"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "assicurazione",
+      "id": "assicurazione",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "StartEvent_1",
+        "inserisce i dati del sinistro",
+        "incarica il perito"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "ufficio liquidazione",
+      "id": "ufficio liquidazione",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "decisione sul sinistro"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

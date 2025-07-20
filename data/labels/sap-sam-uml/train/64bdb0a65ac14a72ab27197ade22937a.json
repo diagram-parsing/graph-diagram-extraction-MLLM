@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "text": "Prodotto",
+      "attributes": [
+        "Titolo:  string",
+        "pdf:  string"
+      ],
+      "methods": null,
+      "id": "Prodotto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ricercatore",
+      "attributes": [
+        "ID:  string"
+      ],
+      "methods": null,
+      "id": "Ricercatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pubblicazione",
+      "attributes": [
+        "N citazioni:  Int",
+        "quartile:  string",
+        "DOI:  string"
+      ],
+      "methods": null,
+      "id": "Pubblicazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Brevetto",
+      "attributes": [
+        "Numerobrevetto:  string"
+      ],
+      "methods": null,
+      "id": "Brevetto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Totale, esclusiva",
+      "attributes": null,
+      "methods": null,
+      "id": "Totale, esclusiva",
+      "class": "Note"
+    },
+    {
+      "text": "Centro di Ricerca",
+      "attributes": [
+        "ID:  string"
+      ],
+      "methods": null,
+      "id": "Centro di Ricerca",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esperto",
+      "attributes": [
+        "ID:  string"
+      ],
+      "methods": null,
+      "id": "Esperto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Commissione ministeriale",
+      "attributes": [
+        "relazione: string"
+      ],
+      "methods": null,
+      "id": "Commissione ministeriale",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "valuta",
+      "attributes": [
+        "valutazione:  string"
+      ],
+      "methods": null,
+      "id": "valuta",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Prodotto",
+      "head": "Pubblicazione",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Prodotto",
+      "head": "Brevetto",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Prodotto",
+      "head": "Ricercatore",
+      "class": "UndirectedAssociation",
+      "label": "scritto da"
+    },
+    {
+      "tail": "Prodotto",
+      "head": "Esperto",
+      "class": "UndirectedAssociation",
+      "label": "valutatoDa"
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "seleziona"
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Centro di Ricerca",
+      "class": "UndirectedAssociation",
+      "label": "appartiene"
+    },
+    {
+      "tail": "Centro di Ricerca",
+      "head": "Commissione ministeriale",
+      "class": "UndirectedAssociation",
+      "label": "valuta"
+    }
+  ],
+  "groups": []
+}

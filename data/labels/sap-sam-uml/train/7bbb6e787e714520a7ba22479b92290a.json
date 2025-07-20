@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "figlio",
+      "attributes": [
+        "Nome: String",
+        "DataNascita: Date",
+        "codiceEsenzione: float",
+        ": "
+      ],
+      "methods": null,
+      "id": "figlio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "vaccinazione",
+      "attributes": [
+        "tipo inoculazione: boolean",
+        "DataEsecuzione: Date",
+        "EffettiRiscontrati: String",
+        "verificato: Boolean"
+      ],
+      "methods": null,
+      "id": "vaccinazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Famiglia",
+      "attributes": [
+        "Cognome: String",
+        "Componenti: int"
+      ],
+      "methods": null,
+      "id": "Famiglia",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "vaccino",
+      "attributes": [
+        "Nome : String",
+        "Obbligatorio: Boolean",
+        "EtàMinima: int",
+        ": "
+      ],
+      "methods": null,
+      "id": "vaccino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "esente da",
+      "attributes": [
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "esente da",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "anomalia",
+      "attributes": [
+        "Tipo: String"
+      ],
+      "methods": null,
+      "id": "anomalia",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "figlio",
+      "head": "vaccinazione",
+      "class": "UndirectedAssociation",
+      "label": "esegue"
+    },
+    {
+      "tail": "vaccinazione",
+      "head": "vaccino",
+      "class": "UndirectedAssociation",
+      "label": "composta da"
+    },
+    {
+      "tail": "vaccinazione",
+      "head": "anomalia",
+      "class": "UndirectedAssociation",
+      "label": "segnala"
+    },
+    {
+      "tail": "Famiglia",
+      "head": "figlio",
+      "class": "UndirectedAssociation",
+      "label": "appartiene a"
+    },
+    {
+      "tail": "vaccino",
+      "head": "figlio",
+      "class": "UndirectedAssociation",
+      "label": "esente da"
+    },
+    {
+      "tail": "anomalia",
+      "head": "Famiglia",
+      "class": "UndirectedAssociation",
+      "label": "a"
+    }
+  ],
+  "groups": []
+}

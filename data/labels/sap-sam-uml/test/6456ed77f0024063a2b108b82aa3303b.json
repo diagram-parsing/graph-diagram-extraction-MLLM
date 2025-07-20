@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "text": "cliente",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "indirizzo: string",
+        "latitudine: double",
+        "longitudine: double",
+        "nascita: date",
+        "cell: int"
+      ],
+      "methods": null,
+      "id": "cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "articolo",
+      "attributes": [
+        "foto: string",
+        "nome: string",
+        "descriz: string",
+        "prezzo: currency"
+      ],
+      "methods": null,
+      "id": "articolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ordine",
+      "attributes": [
+        "feedback: string",
+        "voto: int",
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "ordine",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "gestore",
+      "attributes": [
+        "nome: string",
+        "cell: int"
+      ],
+      "methods": null,
+      "id": "gestore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "rider",
+      "attributes": [
+        "nome: string",
+        "cell: int",
+        "disponibile: boolean"
+      ],
+      "methods": null,
+      "id": "rider",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "incarico",
+      "attributes": [
+        "accettato: boolean",
+        "feedback cl: string",
+        "esito: string",
+        "oraconsegna: datetime",
+        "esito_pagamento: boolean"
+      ],
+      "methods": null,
+      "id": "incarico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "quantity",
+      "attributes": [
+        "quantita: int"
+      ],
+      "methods": null,
+      "id": "quantity",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "cliente",
+      "head": "ordine",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "articolo",
+      "head": "ordine",
+      "class": "UndirectedAssociation",
+      "label": "comprende"
+    },
+    {
+      "tail": "articolo",
+      "head": "gestore",
+      "class": "UndirectedAssociation",
+      "label": "carica"
+    },
+    {
+      "tail": "articolo",
+      "head": "articolo",
+      "class": "UndirectedAssociation",
+      "label": "aggiornamento di"
+    },
+    {
+      "tail": "ordine",
+      "head": "incarico",
+      "class": "UndirectedAssociation",
+      "label": "prende"
+    },
+    {
+      "tail": "gestore",
+      "head": "rider",
+      "class": "UndirectedAssociation",
+      "label": "sceglie"
+    },
+    {
+      "tail": "rider",
+      "head": "incarico",
+      "class": "UndirectedAssociation",
+      "label": "prende"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Semaforo",
+      "attributes": [
+        "Codice: String",
+        "Indirizzo: String",
+        "Latitudine: String",
+        "Longitudine: String",
+        "Tipo lampadine: String",
+        "Semaforo_attr_ped: Boolean"
+      ],
+      "methods": null,
+      "id": "Semaforo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cittadino",
+      "attributes": [
+        "Cod_fiscale: String",
+        "Email: String",
+        "Cell: String"
+      ],
+      "methods": null,
+      "id": "Cittadino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Segnalazione",
+      "attributes": [
+        "Tipo guasto: String",
+        "Descrizione: String",
+        "cell_segnalatore: String",
+        "email: String",
+        "Accettata: Boolean",
+        "Guasto_confermato: Boolean",
+        "Descrizione integrata: String",
+        "Intervento: String",
+        "Soluzione: String",
+        "Tempo risoluzione: String"
+      ],
+      "methods": null,
+      "id": "Segnalazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Squadra",
+      "attributes": [
+        "Codice: String"
+      ],
+      "methods": null,
+      "id": "Squadra",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Zona",
+      "attributes": [
+        "Cod_zona: String"
+      ],
+      "methods": null,
+      "id": "Zona",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Operaio",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "Cod_fisc: String",
+        "Cellulare: String",
+        "Caposquadra: boolean"
+      ],
+      "methods": null,
+      "id": "Operaio",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Semaforo",
+      "head": "Zona",
+      "class": "UndirectedAssociation",
+      "label": "collocato in"
+    },
+    {
+      "tail": "Cittadino",
+      "head": "Segnalazione",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Segnalazione",
+      "head": "Semaforo",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "Segnalazione",
+      "head": "Squadra",
+      "class": "UndirectedAssociation",
+      "label": "riceve"
+    },
+    {
+      "tail": "Squadra",
+      "head": "Zona",
+      "class": "UndirectedAssociation",
+      "label": "Opera in"
+    },
+    {
+      "tail": "Squadra",
+      "head": "Operaio",
+      "class": "UndirectedAssociation",
+      "label": "Composta da"
+    }
+  ],
+  "groups": []
+}

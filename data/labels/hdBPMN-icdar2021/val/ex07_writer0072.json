@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "text": "fill the cheque",
+      "id": "fill the cheque",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_2",
+      "class": "messageEvent"
+    },
+    {
+      "text": "file the results on the expertise",
+      "id": "file the results on the expertise",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "check sent to the expert",
+      "id": "check sent to the expert",
+      "class": "messageEvent"
+    },
+    {
+      "text": "request fpr review the worst of the doctor sent",
+      "id": "request fpr review the worst of the doctor sent",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "time the hospital can wait",
+      "id": "time the hospital can wait",
+      "class": "timerEvent"
+    },
+    {
+      "text": "interview patients",
+      "id": "interview patients",
+      "class": "subProcess"
+    },
+    {
+      "text": "a new case for a certain doctor started",
+      "id": "a new case for a certain doctor started",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_3",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "eventBasedGateway_1",
+      "class": "eventBasedGateway"
+    },
+    {
+      "text": "forward the expertise the doctor at specialist",
+      "id": "forward the expertise the doctor at specialist",
+      "class": "task"
+    },
+    {
+      "text": "case is done",
+      "id": "case is done",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_4",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "createa report",
+      "id": "createa report",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "eventBasedGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "interview patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "request fpr review the worst of the doctor sent",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patients",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "request fpr review the worst of the doctor sent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check sent to the expert",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill the cheque",
+      "head": "check sent to the expert",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "case is done",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "createa report",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file the results on the expertise",
+      "head": "createa report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "file the results on the expertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "fill the cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward the expertise the doctor at specialist",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": "request sent to another expert"
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "time the hospital can wait",
+      "head": "messageEvent_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "forward the expertise the doctor at specialist",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "time the hospital can wait",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "a new case for a certain doctor started",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "request fpr review the worst of the doctor sent",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "external expert",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "check sent to the expert",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "nodes": [
+        "managing director",
+        "QA deaprtement",
+        "QA Specialist"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "managing director",
+      "nodes": [
+        "fill the cheque",
+        "exclusiveGateway_1",
+        "messageEvent_1",
+        "messageEvent_2",
+        "check sent to the expert",
+        "request fpr review the worst of the doctor sent",
+        "time the hospital can wait",
+        "eventBasedGateway_1",
+        "forward the expertise the doctor at specialist"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "QA deaprtement",
+      "nodes": [
+        "file the results on the expertise",
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "interview patients",
+        "a new case for a certain doctor started",
+        "parallelGateway_3",
+        "case is done",
+        "parallelGateway_4",
+        "createa report"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "QA Specialist",
+      "nodes": [
+        "file the results on the expertise",
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "interview patients",
+        "a new case for a certain doctor started",
+        "parallelGateway_3",
+        "case is done",
+        "parallelGateway_4",
+        "createa report"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "external expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "text": "request\nreceived",
+      "id": "request\nreceived",
+      "class": "event"
+    },
+    {
+      "text": "assess\nrisk",
+      "id": "assess\nrisk",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "advanced risk\nassessmend",
+      "id": "advanced risk\nassessmend",
+      "class": "task"
+    },
+    {
+      "text": "simple risk\nassessmend",
+      "id": "simple risk\nassessmend",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "inform\ncustomer",
+      "id": "inform\ncustomer",
+      "class": "task"
+    },
+    {
+      "text": "organize\ndisbursement",
+      "id": "organize\ndisbursement",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "end\nprocess",
+      "id": "end\nprocess",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_1",
+      "head": "end\nprocess",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "organize\ndisbursement",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "inform\ncustomer",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "organize\ndisbursement",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "inform\ncustomer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "advanced risk\nassessmend",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "simple risk\nassessmend",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "simple risk\nassessmend",
+      "class": "sequenceFlow",
+      "label": "below\nthreshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "advanced risk\nassessmend",
+      "class": "sequenceFlow",
+      "label": "above\nthreshold"
+    },
+    {
+      "tail": "assess\nrisk",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "request\nreceived",
+      "head": "assess\nrisk",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

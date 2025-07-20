@@ -1,0 +1,195 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Write and send notice of arrival\n\n",
+      "id": "Write and send notice of arrival\n\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Write and send appointment\n",
+      "id": "Write and send appointment\n",
+      "class": "Task"
+    },
+    {
+      "text": "Write and send refusal\n",
+      "id": "Write and send refusal\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateTimerEvent_1",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Define date for interview\n",
+      "id": "Define date for interview\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Applicant acknowledges date\n",
+      "id": "Applicant acknowledges date\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "IntermediateTimerEvent_2",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Interview the applicant\n",
+      "id": "Interview the applicant\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Hire applicant",
+      "id": "Hire applicant",
+      "class": "Task"
+    },
+    {
+      "text": "Dont hire applicant\n",
+      "id": "Dont hire applicant\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Write and send notice of arrival\n\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Write and send notice of arrival\n\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Write and send appointment\n",
+      "class": "SequenceFlow",
+      "label": "Applicant suitable\n"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Write and send refusal\n",
+      "class": "SequenceFlow",
+      "label": "Applicant unsuitable\n"
+    },
+    {
+      "tail": "Write and send appointment\n",
+      "head": "IntermediateTimerEvent_1",
+      "class": "SequenceFlow",
+      "label": "Wait for acknowledgement\n"
+    },
+    {
+      "tail": "Write and send refusal\n",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "Define date for interview\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Define date for interview\n",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Applicant acknowledges date\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Define date for interview\n",
+      "class": "SequenceFlow",
+      "label": "Applicant refuses date\n"
+    },
+    {
+      "tail": "Applicant acknowledges date\n",
+      "head": "IntermediateTimerEvent_2",
+      "class": "SequenceFlow",
+      "label": "Wait for interview\n"
+    },
+    {
+      "tail": "IntermediateTimerEvent_2",
+      "head": "Interview the applicant\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Interview the applicant\n",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Hire applicant",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Dont hire applicant\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Hire applicant",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Dont hire applicant\n",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

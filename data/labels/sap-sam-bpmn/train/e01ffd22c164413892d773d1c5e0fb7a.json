@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "text": "Start at the \nCompany Website\n",
+      "id": "Start at the \nCompany Website\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Check if Website is in English",
+      "id": "Check if Website is in English",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Expand all expandable \nparts of the site\ni.e. Click all \n\"View all\"s",
+      "id": "Expand all expandable \nparts of the site\ni.e. Click all \n\"View all\"s",
+      "class": "Task"
+    },
+    {
+      "text": "(Check A)\nCheck for Link with keyword \"Investor Relation\"\n or \"IR\"",
+      "id": "(Check A)\nCheck for Link with keyword \"Investor Relation\"\n or \"IR\"",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Click on the link, expand all expandable parts and check for email patterns and phone numbers",
+      "id": "Click on the link, expand all expandable parts and check for email patterns and phone numbers",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "(Check B)\nCheck for Link with keyword \"Corporate Communication\" or \"CorpComm\"",
+      "id": "(Check B)\nCheck for Link with keyword \"Corporate Communication\" or \"CorpComm\"",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "(Check C)\nCheck for Link with \"Contact us\"",
+      "id": "(Check C)\nCheck for Link with \"Contact us\"",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_5",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "(Check D)\nClick through the all the link for all the sites and extract any Email address",
+      "id": "(Check D)\nClick through the all the link for all the sites and extract any Email address",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_6",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Save the Email(s) as \n\"IR Email Address\"",
+      "id": "Save the Email(s) as \n\"IR Email Address\"",
+      "class": "Task"
+    },
+    {
+      "text": "End\n(Success)",
+      "id": "End\n(Success)",
+      "class": "EndEvent"
+    },
+    {
+      "text": "End\n(Failed)",
+      "id": "End\n(Failed)",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Check for Links for keywords \"Contact\", \"Contact Information\"",
+      "id": "Check for Links for keywords \"Contact\", \"Contact Information\"",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_7",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Move down to the next check.\ni.e. \n\"IR\" >> \"CC\" >> \"Contact US >> \"Click through\"",
+      "id": "Move down to the next check.\ni.e. \n\"IR\" >> \"CC\" >> \"Contact US >> \"Click through\"",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start at the \nCompany Website\n",
+      "head": "Check if Website is in English",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check if Website is in English",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Expand all expandable \nparts of the site\ni.e. Click all \n\"View all\"s",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "(Check D)\nClick through the all the link for all the sites and extract any Email address",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Expand all expandable \nparts of the site\ni.e. Click all \n\"View all\"s",
+      "head": "(Check A)\nCheck for Link with keyword \"Investor Relation\"\n or \"IR\"",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "(Check A)\nCheck for Link with keyword \"Investor Relation\"\n or \"IR\"",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Click on the link, expand all expandable parts and check for email patterns and phone numbers",
+      "class": "SequenceFlow",
+      "label": "Found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "(Check B)\nCheck for Link with keyword \"Corporate Communication\" or \"CorpComm\"",
+      "class": "SequenceFlow",
+      "label": "Not Found"
+    },
+    {
+      "tail": "Click on the link, expand all expandable parts and check for email patterns and phone numbers",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Save the Email(s) as \n\"IR Email Address\"",
+      "class": "SequenceFlow",
+      "label": "Found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Check for Links for keywords \"Contact\", \"Contact Information\"",
+      "class": "SequenceFlow",
+      "label": "Not Found"
+    },
+    {
+      "tail": "(Check B)\nCheck for Link with keyword \"Corporate Communication\" or \"CorpComm\"",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Click on the link, expand all expandable parts and check for email patterns and phone numbers",
+      "class": "SequenceFlow",
+      "label": "Found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "(Check C)\nCheck for Link with \"Contact us\"",
+      "class": "SequenceFlow",
+      "label": "Not Found"
+    },
+    {
+      "tail": "(Check C)\nCheck for Link with \"Contact us\"",
+      "head": "Exclusive_Databased_Gateway_5",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_5",
+      "head": "Click on the link, expand all expandable parts and check for email patterns and phone numbers",
+      "class": "SequenceFlow",
+      "label": "Found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_5",
+      "head": "(Check D)\nClick through the all the link for all the sites and extract any Email address",
+      "class": "SequenceFlow",
+      "label": "Not Found"
+    },
+    {
+      "tail": "(Check D)\nClick through the all the link for all the sites and extract any Email address",
+      "head": "Exclusive_Databased_Gateway_6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_6",
+      "head": "Save the Email(s) as \n\"IR Email Address\"",
+      "class": "SequenceFlow",
+      "label": "Found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_6",
+      "head": "End\n(Failed)",
+      "class": "SequenceFlow",
+      "label": "Not Found"
+    },
+    {
+      "tail": "Save the Email(s) as \n\"IR Email Address\"",
+      "head": "End\n(Success)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check for Links for keywords \"Contact\", \"Contact Information\"",
+      "head": "Exclusive_Databased_Gateway_7",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_7",
+      "head": "Save the Email(s) as \n\"IR Email Address\"",
+      "class": "SequenceFlow",
+      "label": "Found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_7",
+      "head": "Move down to the next check.\ni.e. \n\"IR\" >> \"CC\" >> \"Contact US >> \"Click through\"",
+      "class": "SequenceFlow",
+      "label": "Not Found"
+    }
+  ],
+  "groups": []
+}

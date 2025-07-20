@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "text": "application received",
+      "id": "application received",
+      "class": "event"
+    },
+    {
+      "text": "evaluate application",
+      "id": "evaluate application",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "create new bank account",
+      "id": "create new bank account",
+      "class": "task"
+    },
+    {
+      "text": "send welcome pack",
+      "id": "send welcome pack",
+      "class": "task"
+    },
+    {
+      "text": "send card",
+      "id": "send card",
+      "class": "task"
+    },
+    {
+      "text": "send PIN",
+      "id": "send PIN",
+      "class": "task"
+    },
+    {
+      "text": "process finished",
+      "id": "process finished",
+      "class": "event"
+    },
+    {
+      "text": "process finished",
+      "id": "process finished",
+      "class": "event"
+    },
+    {
+      "text": "write notification amil",
+      "id": "write notification amil",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "send card",
+      "head": "process finished",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send welcome pack",
+      "head": "send PIN",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create new bank account",
+      "head": "send welcome pack",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write notification amil",
+      "head": "process finished",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "evaluate application",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "application received",
+      "head": "evaluate application",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "write notification amil",
+      "class": "sequenceFlow",
+      "label": "reject"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "create new bank account",
+      "class": "sequenceFlow",
+      "label": "approve"
+    },
+    {
+      "tail": "send PIN",
+      "head": "send card",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

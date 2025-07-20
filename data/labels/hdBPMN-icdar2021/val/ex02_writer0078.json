@@ -1,0 +1,153 @@
+{
+  "nodes": [
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "claim received",
+      "id": "claim received",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "register",
+      "id": "register",
+      "class": "task"
+    },
+    {
+      "text": "examine",
+      "id": "examine",
+      "class": "task"
+    },
+    {
+      "text": "write recommendation",
+      "id": "write recommendation",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "check recommendation",
+      "id": "check recommendation",
+      "class": "task"
+    },
+    {
+      "text": "proceed with process handling",
+      "id": "proceed with process handling",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "write recommendation",
+      "class": "sequenceFlow",
+      "label": "not ok"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "proceed with process handling",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "check recommendation",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write recommendation",
+      "head": "check recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "write recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "examine",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "examine",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "register",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim received",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "CUSTOMER",
+      "head": "claim received",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "INSURER",
+      "nodes": [
+        "SENIOR C. O.",
+        "CLAIMS OFFICER"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "SENIOR C. O.",
+      "nodes": [
+        "exclusiveGateway_1",
+        "check recommendation",
+        "proceed with process handling"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "CLAIMS OFFICER",
+      "nodes": [
+        "parallelGateway_1",
+        "claim received",
+        "parallelGateway_2",
+        "register",
+        "examine",
+        "write recommendation"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "CUSTOMER",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

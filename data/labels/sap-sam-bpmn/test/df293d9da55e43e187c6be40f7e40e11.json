@@ -1,0 +1,283 @@
+{
+  "nodes": [
+    {
+      "text": "arrivo fine\ndel mese",
+      "id": "arrivo fine\ndel mese",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "calcolo ore effettive di lavoro di ogni dipendente",
+      "id": "calcolo ore effettive di lavoro di ogni dipendente",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "invio informazioni\nsulle ore",
+      "id": "invio informazioni\nsulle ore",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "consegna buste paga ai dipendenti",
+      "id": "consegna buste paga ai dipendenti",
+      "class": "Task"
+    },
+    {
+      "text": "pagamenti",
+      "id": "pagamenti",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "ricevute buste\npaga",
+      "id": "ricevute buste\npaga",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "controllo buste paga",
+      "id": "controllo buste paga",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "modifica busta paga, correzioni",
+      "id": "modifica busta paga, correzioni",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "ricevute informazioni\nsulle ore",
+      "id": "ricevute informazioni\nsulle ore",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "compilazione buste paga",
+      "id": "compilazione buste paga",
+      "class": "Task"
+    },
+    {
+      "text": "invio buste \npaga",
+      "id": "invio buste \npaga",
+      "class": "EndMessageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "arrivo fine\ndel mese",
+      "head": "calcolo ore effettive di lavoro di ogni dipendente",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "calcolo ore effettive di lavoro di ogni dipendente",
+      "head": "TextAnnotation_1",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "calcolo ore effettive di lavoro di ogni dipendente",
+      "head": "invio informazioni\nsulle ore",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "invio informazioni\nsulle ore",
+      "head": "ricevute informazioni\nsulle ore",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "invio informazioni\nsulle ore",
+      "head": "ricevute buste\npaga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "consegna buste paga ai dipendenti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "pagamenti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "consegna buste paga ai dipendenti",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "pagamenti",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ricevute buste\npaga",
+      "head": "controllo buste paga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "controllo buste paga",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "modifica busta paga, correzioni",
+      "class": "SequenceFlow",
+      "label": "presenza\nerrori"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "modifica busta paga, correzioni",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ricevute informazioni\nsulle ore",
+      "head": "compilazione buste paga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "compilazione buste paga",
+      "head": "invio buste \npaga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "invio buste \npaga",
+      "head": "ricevute buste\npaga",
+      "class": "MessageFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "ALBATROS TRADE",
+      "id": "ALBATROS TRADE",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "Responsabile dell'Amministrazione",
+      "id": "Responsabile dell'Amministrazione",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "arrivo fine\ndel mese",
+        "calcolo ore effettive di lavoro di ogni dipendente",
+        "TextAnnotation_1",
+        "invio informazioni\nsulle ore",
+        "AND_Gateway_1",
+        "consegna buste paga ai dipendenti",
+        "pagamenti",
+        "AND_Gateway_2",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Amministratore Delegato",
+      "id": "Amministratore Delegato",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "ricevute buste\npaga",
+        "controllo buste paga",
+        "Exclusive_Databased_Gateway_1",
+        "modifica busta paga, correzioni",
+        "Exclusive_Databased_Gateway_2"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Consulente del lavoro",
+      "id": "Consulente del lavoro",
+      "nodes": [
+        "Lane_4"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_4",
+      "nodes": [
+        "ricevute informazioni\nsulle ore",
+        "compilazione buste paga",
+        "invio buste \npaga"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

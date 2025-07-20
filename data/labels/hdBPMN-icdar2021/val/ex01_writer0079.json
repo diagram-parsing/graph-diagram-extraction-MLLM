@@ -1,0 +1,145 @@
+{
+  "nodes": [
+    {
+      "text": "request received",
+      "id": "request received",
+      "class": "event"
+    },
+    {
+      "text": "assess risk",
+      "id": "assess risk",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "execute advanced assessment",
+      "id": "execute advanced assessment",
+      "class": "task"
+    },
+    {
+      "text": "execute simple assessment",
+      "id": "execute simple assessment",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "notify customer",
+      "id": "notify customer",
+      "class": "task"
+    },
+    {
+      "text": "organize disbursement",
+      "id": "organize disbursement",
+      "class": "task"
+    },
+    {
+      "text": "credit request handled",
+      "id": "credit request handled",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "assessment completed",
+      "id": "assessment completed",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "assessment completed",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "credit request handled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "organize disbursement",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "notify customer",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "notify customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "organize disbursement",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "assessment completed",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "execute simple assessment",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "execute advanced assessment",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "assess risk",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "request received",
+      "head": "assess risk",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "execute simple assessment",
+      "class": "sequenceFlow",
+      "label": "below threshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "execute advanced assessment",
+      "class": "sequenceFlow",
+      "label": "above threshold"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "text": "selectare produse",
+      "id": "selectare produse",
+      "class": "StartEvent"
+    },
+    {
+      "text": "selectare profil client",
+      "id": "selectare profil client",
+      "class": "Task"
+    },
+    {
+      "text": "selectare data si ora livrarii",
+      "id": "selectare data si ora livrarii",
+      "class": "Task"
+    },
+    {
+      "text": "numarul cartii de credit",
+      "id": "numarul cartii de credit",
+      "class": "Task"
+    },
+    {
+      "text": "plasarea comenzii\n",
+      "id": "plasarea comenzii\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "confirmarea comenzii",
+      "id": "confirmarea comenzii",
+      "class": "Task"
+    },
+    {
+      "text": "anulare comanda",
+      "id": "anulare comanda",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "comanda primita",
+      "id": "comanda primita",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "trimitere confirmare client",
+      "id": "trimitere confirmare client",
+      "class": "Task"
+    },
+    {
+      "text": "verificare comanda",
+      "id": "verificare comanda",
+      "class": "Task"
+    },
+    {
+      "text": "preluare din depozit produse ",
+      "id": "preluare din depozit produse ",
+      "class": "Task"
+    },
+    {
+      "text": "preparare produse",
+      "id": "preparare produse",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "expediere  comanda la client",
+      "id": "expediere  comanda la client",
+      "class": "Task"
+    },
+    {
+      "text": "preluare comanda curier",
+      "id": "preluare comanda curier",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "1 zi",
+      "id": "1 zi",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "trimitere e-mail de feedback",
+      "id": "trimitere e-mail de feedback",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "selectare produse",
+      "head": "confirmarea comenzii",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "selectare profil client",
+      "head": "selectare data si ora livrarii",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "selectare data si ora livrarii",
+      "head": "numarul cartii de credit",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "numarul cartii de credit",
+      "head": "plasarea comenzii\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "confirmarea comenzii",
+      "head": "selectare profil client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "comanda primita",
+      "head": "trimitere confirmare client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "trimitere confirmare client",
+      "head": "verificare comanda",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "verificare comanda",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "preluare din depozit produse ",
+      "head": "preluare comanda curier",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "preparare produse",
+      "head": "preluare comanda curier",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "preluare din depozit produse ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "preparare produse",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "expediere  comanda la client",
+      "head": "1 zi",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "preluare comanda curier",
+      "head": "expediere  comanda la client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "1 zi",
+      "head": "trimitere e-mail de feedback",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "client",
+      "id": "client",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "selectare produse",
+        "selectare profil client",
+        "selectare data si ora livrarii",
+        "numarul cartii de credit",
+        "plasarea comenzii\n",
+        "confirmarea comenzii",
+        "anulare comanda"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "companie de catering",
+      "id": "companie de catering",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "comanda primita",
+        "trimitere confirmare client",
+        "verificare comanda",
+        "preluare din depozit produse ",
+        "preparare produse",
+        "Exclusive_Databased_Gateway_1",
+        "expediere  comanda la client",
+        "preluare comanda curier",
+        "1 zi",
+        "trimitere e-mail de feedback"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

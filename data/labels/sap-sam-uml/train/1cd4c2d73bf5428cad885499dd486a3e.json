@@ -1,0 +1,169 @@
+{
+  "nodes": [
+    {
+      "text": "Mitarbeiter",
+      "attributes": null,
+      "methods": null,
+      "id": "Mitarbeiter",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Betreuer",
+      "attributes": null,
+      "methods": null,
+      "id": "Betreuer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Teilnehmer",
+      "attributes": null,
+      "methods": null,
+      "id": "Teilnehmer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Nutzer",
+      "attributes": [
+        "Name: ",
+        "EMail: ",
+        "Telefonnummer: ",
+        "Kennwort: "
+      ],
+      "methods": null,
+      "id": "Nutzer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Team",
+      "attributes": [
+        "Name: ",
+        "Platzierung: "
+      ],
+      "methods": null,
+      "id": "Team",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Wettbewerb",
+      "attributes": [
+        "Jahrgang: ",
+        "Thema: ",
+        "Link zur Beschreibung: "
+      ],
+      "methods": null,
+      "id": "Wettbewerb",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Fertigungsauftrag",
+      "attributes": [
+        "Kosten: ",
+        "Dauer: ",
+        "Status: "
+      ],
+      "methods": null,
+      "id": "Fertigungsauftrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellung",
+      "attributes": [
+        "Kosten: ",
+        "Dauer: ",
+        "Status: "
+      ],
+      "methods": null,
+      "id": "Bestellung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Arbeitsergebnis",
+      "attributes": [
+        "Art: ",
+        "Dokument: "
+      ],
+      "methods": null,
+      "id": "Arbeitsergebnis",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Statushistorie",
+      "attributes": [
+        "Art: ",
+        "Datum: "
+      ],
+      "methods": null,
+      "id": "Statushistorie",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Mitarbeiter",
+      "head": "Fertigungsauftrag",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Betreuer",
+      "head": "Statushistorie",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Nutzer",
+      "head": "Mitarbeiter",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Nutzer",
+      "head": "Betreuer",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Nutzer",
+      "head": "Teilnehmer",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Team",
+      "head": "Teilnehmer",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Team",
+      "head": "Wettbewerb",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Fertigungsauftrag",
+      "head": "Arbeitsergebnis",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Arbeitsergebnis",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Arbeitsergebnis",
+      "head": "Team",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Arbeitsergebnis",
+      "head": "Statushistorie",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

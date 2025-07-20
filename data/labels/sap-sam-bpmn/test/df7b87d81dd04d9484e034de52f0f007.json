@@ -1,0 +1,269 @@
+{
+  "nodes": [
+    {
+      "text": "Εξεταση /Αξιολόγηση  αιτήσεων",
+      "id": "Εξεταση /Αξιολόγηση  αιτήσεων",
+      "class": "Task"
+    },
+    {
+      "text": "Ανακοίνωση τελικής κατάταξης",
+      "id": "Ανακοίνωση τελικής κατάταξης",
+      "class": "Task"
+    },
+    {
+      "text": "Letter of Acceptance 2",
+      "id": "Letter of Acceptance 2",
+      "class": "Task"
+    },
+    {
+      "text": "Αίτημα για Letter of Acceptance",
+      "id": "Αίτημα για Letter of Acceptance",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Oλοκλήρωση προγράμματος Erasmus Placement",
+      "id": "Oλοκλήρωση προγράμματος Erasmus Placement",
+      "class": "Task"
+    },
+    {
+      "text": "Αιτηση αναγνώρισης Πρακτικής ασκησης",
+      "id": "Αιτηση αναγνώρισης Πρακτικής ασκησης",
+      "class": "Task"
+    },
+    {
+      "text": "Υπογραφή συμβάσεων & μετακίνηση",
+      "id": "Υπογραφή συμβάσεων & μετακίνηση",
+      "class": "Task"
+    },
+    {
+      "text": "Κατάθεση Αίτησης Xωρίς LoA",
+      "id": "Κατάθεση Αίτησης Xωρίς LoA",
+      "class": "Task"
+    },
+    {
+      "text": "Κατάθεση Αίτησης Με LoA",
+      "id": "Κατάθεση Αίτησης Με LoA",
+      "class": "Task"
+    },
+    {
+      "text": "LoA",
+      "id": "LoA",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Ετήσια Πρόσκληση",
+      "id": "Ετήσια Πρόσκληση",
+      "class": "Task"
+    },
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Τελική Κατάταξη Φοιτητών",
+      "id": "Τελική Κατάταξη Φοιτητών",
+      "class": "Task"
+    },
+    {
+      "text": "Letter of Acceptance 1",
+      "id": "Letter of Acceptance 1",
+      "class": "Task"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Εξεταση /Αξιολόγηση  αιτήσεων",
+      "head": "Ανακοίνωση τελικής κατάταξης",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ανακοίνωση τελικής κατάταξης",
+      "head": "Τελική Κατάταξη Φοιτητών",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Letter of Acceptance 2",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Αίτημα για Letter of Acceptance",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Letter of Acceptance 1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Letter of Acceptance 2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Oλοκλήρωση προγράμματος Erasmus Placement",
+      "head": "Αιτηση αναγνώρισης Πρακτικής ασκησης",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Αιτηση αναγνώρισης Πρακτικής ασκησης",
+      "head": "End",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Υπογραφή συμβάσεων & μετακίνηση",
+      "head": "Oλοκλήρωση προγράμματος Erasmus Placement",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Κατάθεση Αίτησης Xωρίς LoA",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Κατάθεση Αίτησης Με LoA",
+      "head": "Αίτημα για Letter of Acceptance",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "LoA",
+      "head": "Κατάθεση Αίτησης Με LoA",
+      "class": "SequenceFlow",
+      "label": "Loa"
+    },
+    {
+      "tail": "LoA",
+      "head": "Κατάθεση Αίτησης Xωρίς LoA",
+      "class": "SequenceFlow",
+      "label": "No LoA"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Εξεταση /Αξιολόγηση  αιτήσεων",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ετήσια Πρόσκληση",
+      "head": "LoA",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Start",
+      "head": "Ετήσια Πρόσκληση",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Τελική Κατάταξη Φοιτητών",
+      "head": "Υπογραφή συμβάσεων & μετακίνηση",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Letter of Acceptance 1",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Πανεπιστημιακό Ίδρυμα",
+      "id": "Πανεπιστημιακό Ίδρυμα",
+      "nodes": [
+        "Τμηματικός Υπεύθυνος",
+        "Γραφείο Διασύνδεσης",
+        "Φοιτητής",
+        "Γραφείο Erasmus"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Τμηματικός Υπεύθυνος",
+      "id": "Τμηματικός Υπεύθυνος",
+      "nodes": [
+        "Εξεταση /Αξιολόγηση  αιτήσεων",
+        "Ανακοίνωση τελικής κατάταξης"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Γραφείο Διασύνδεσης",
+      "id": "Γραφείο Διασύνδεσης",
+      "nodes": [
+        "Letter of Acceptance 2"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Φοιτητής",
+      "id": "Φοιτητής",
+      "nodes": [
+        "Αίτημα για Letter of Acceptance",
+        "AND_Gateway_1",
+        "AND_Gateway_2",
+        "Oλοκλήρωση προγράμματος Erasmus Placement",
+        "Αιτηση αναγνώρισης Πρακτικής ασκησης",
+        "Υπογραφή συμβάσεων & μετακίνηση",
+        "Κατάθεση Αίτησης Xωρίς LoA",
+        "Κατάθεση Αίτησης Με LoA",
+        "LoA",
+        "Exclusive_Databased_Gateway_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Γραφείο Erasmus ",
+      "id": "Γραφείο Erasmus",
+      "nodes": [
+        "Ετήσια Πρόσκληση",
+        "Start",
+        "Τελική Κατάταξη Φοιτητών",
+        "Letter of Acceptance 1",
+        "End"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

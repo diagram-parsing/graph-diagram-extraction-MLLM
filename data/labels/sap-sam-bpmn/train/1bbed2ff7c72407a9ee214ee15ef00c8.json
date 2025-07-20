@@ -1,0 +1,245 @@
+{
+  "nodes": [
+    {
+      "text": "Bestellung ist \neingegangen",
+      "id": "Bestellung ist \neingegangen",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Bestellung empfangen",
+      "id": "Bestellung empfangen",
+      "class": "Task"
+    },
+    {
+      "text": "Produkte aus dem Lager holen",
+      "id": "Produkte aus dem Lager holen",
+      "class": "Task"
+    },
+    {
+      "text": "Produkte verpacken",
+      "id": "Produkte verpacken",
+      "class": "Task"
+    },
+    {
+      "text": "Pakete wiegen",
+      "id": "Pakete wiegen",
+      "class": "Task"
+    },
+    {
+      "text": "Etikette drucken",
+      "id": "Etikette drucken",
+      "class": "Task"
+    },
+    {
+      "text": "Lagermitarbeiter",
+      "id": "Lagermitarbeiter",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Pakete zur Verladungsrampe transportieren",
+      "id": "Pakete zur Verladungsrampe transportieren",
+      "class": "Task"
+    },
+    {
+      "text": "Qualität der Verpackung überprüfen",
+      "id": "Qualität der Verpackung überprüfen",
+      "class": "Task"
+    },
+    {
+      "text": "Paketanzahl überprüfen",
+      "id": "Paketanzahl überprüfen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Pakete \nverladen",
+      "id": "Pakete \nverladen",
+      "class": "Task"
+    },
+    {
+      "text": "Bestellstatus aktualisieren",
+      "id": "Bestellstatus aktualisieren",
+      "class": "Task"
+    },
+    {
+      "text": "Lagerbestand aktualisieren",
+      "id": "Lagerbestand aktualisieren",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_3",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Kundenbestellung \nversendet",
+      "id": "Kundenbestellung \nversendet",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Bestellung ist \neingegangen",
+      "head": "Bestellung empfangen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung empfangen",
+      "head": "Produkte aus dem Lager holen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Produkte aus dem Lager holen",
+      "head": "Produkte verpacken",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Produkte verpacken",
+      "head": "Pakete wiegen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pakete wiegen",
+      "head": "Etikette drucken",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Etikette drucken",
+      "head": "Lagermitarbeiter",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagermitarbeiter",
+      "head": "Pakete zur Verladungsrampe transportieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagermitarbeiter",
+      "head": "Qualität der Verpackung überprüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagermitarbeiter",
+      "head": "Paketanzahl überprüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pakete zur Verladungsrampe transportieren",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Qualität der Verpackung überprüfen",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Paketanzahl überprüfen",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Pakete \nverladen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Bestellstatus aktualisieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Lagerbestand aktualisieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pakete \nverladen",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestellstatus aktualisieren",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagerbestand aktualisieren",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "Kundenbestellung \nversendet",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Verpackung und Versand ",
+      "id": "Verpackung und Versand",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Bestellung ist \neingegangen",
+        "Bestellung empfangen",
+        "Produkte aus dem Lager holen",
+        "Produkte verpacken",
+        "Pakete wiegen",
+        "Etikette drucken",
+        "Lagermitarbeiter",
+        "Pakete zur Verladungsrampe transportieren",
+        "Qualität der Verpackung überprüfen",
+        "Paketanzahl überprüfen",
+        "AND_Gateway_1",
+        "AND_Gateway_2",
+        "Pakete \nverladen",
+        "Bestellstatus aktualisieren",
+        "Lagerbestand aktualisieren",
+        "AND_Gateway_3",
+        "Kundenbestellung \nversendet"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

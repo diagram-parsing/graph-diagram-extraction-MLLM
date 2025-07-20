@@ -1,0 +1,172 @@
+{
+  "nodes": [
+    {
+      "text": "Purchase Order Recieved",
+      "id": "Purchase Order Recieved",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Check Stock Availability\n",
+      "id": "Check Stock Availability\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Reject Order",
+      "id": "Reject Order",
+      "class": "Task"
+    },
+    {
+      "text": "Retrieve Product from Warehouse",
+      "id": "Retrieve Product from Warehouse",
+      "class": "Task"
+    },
+    {
+      "text": "Order Rejected",
+      "id": "Order Rejected",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Confirm Order",
+      "id": "Confirm Order",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Get Shipment Address",
+      "id": "Get Shipment Address",
+      "class": "Task"
+    },
+    {
+      "text": "Emit Invoice",
+      "id": "Emit Invoice",
+      "class": "Task"
+    },
+    {
+      "text": "Ship Product",
+      "id": "Ship Product",
+      "class": "Task"
+    },
+    {
+      "text": "Receive Payment",
+      "id": "Receive Payment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Archive Order",
+      "id": "Archive Order",
+      "class": "Task"
+    },
+    {
+      "text": "Order Fulfilled",
+      "id": "Order Fulfilled",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Purchase Order Recieved",
+      "head": "Check Stock Availability\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check Stock Availability\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Reject Order",
+      "class": "SequenceFlow",
+      "label": "Product Not in Stock"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Retrieve Product from Warehouse",
+      "class": "SequenceFlow",
+      "label": "Product in Stock"
+    },
+    {
+      "tail": "Reject Order",
+      "head": "Order Rejected",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Retrieve Product from Warehouse",
+      "head": "Confirm Order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Confirm Order",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Get Shipment Address",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Emit Invoice",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Get Shipment Address",
+      "head": "Ship Product",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Emit Invoice",
+      "head": "Receive Payment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ship Product",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive Payment",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Archive Order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Archive Order",
+      "head": "Order Fulfilled",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

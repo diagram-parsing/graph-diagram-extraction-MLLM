@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "text": "Percorsi escursionistici ",
+      "attributes": [
+        "etichetta descrittiva: String",
+        "punto ritorno: string",
+        "descrizione: string",
+        "traccia gps: string",
+        "livello difficolta: int",
+        "intervallo durata: int"
+      ],
+      "methods": null,
+      "id": "Percorsi escursionistici ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Punto partenza",
+      "attributes": [
+        "codice univoco: string",
+        "nome: string",
+        "coordinate geografiche: string"
+      ],
+      "methods": null,
+      "id": "Punto partenza",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "escursionista",
+      "attributes": [
+        "nome: string",
+        "cogonme: string",
+        "email : string",
+        "numero cellulare: string"
+      ],
+      "methods": null,
+      "id": "escursionista",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rifugio",
+      "attributes": [
+        "numero cellulare: string",
+        "email : string"
+      ],
+      "methods": null,
+      "id": "Rifugio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Parcheggio",
+      "attributes": null,
+      "methods": null,
+      "id": "Parcheggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Escursione",
+      "attributes": [
+        "data: date",
+        "numero persone: int",
+        "targa: string",
+        "ritardi: string",
+        "escursione finita: boolean",
+        "ora fine escursione: time",
+        "ora inizio: time"
+      ],
+      "methods": null,
+      "id": "Escursione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Percorsi escursionistici ",
+      "head": "Punto partenza",
+      "class": "UndirectedAssociation",
+      "label": "si parte da"
+    },
+    {
+      "tail": "Punto partenza",
+      "head": "Rifugio",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Punto partenza",
+      "head": "Parcheggio",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "escursionista",
+      "head": "Escursione",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Escursione",
+      "head": "Percorsi escursionistici ",
+      "class": "UndirectedAssociation",
+      "label": "relativa al "
+    }
+  ],
+  "groups": []
+}

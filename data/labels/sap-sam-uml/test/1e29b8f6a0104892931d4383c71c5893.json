@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "text": "customer",
+      "attributes": [
+        "customer ID: ",
+        "Name: ",
+        "address: ",
+        "phone: ",
+        "e-mail: "
+      ],
+      "methods": [
+        "register()",
+        "update personal profile()",
+        "search catalog()",
+        "purchase product()"
+      ],
+      "id": "customer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "customer service",
+      "attributes": [
+        "FAQ database: ",
+        "online chat: ",
+        "phone call: ",
+        "chatbot: "
+      ],
+      "methods": [
+        "use()"
+      ],
+      "id": "customer service",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "staff",
+      "attributes": [
+        "staff No.: ",
+        "Name: "
+      ],
+      "methods": [
+        "add()",
+        "remove()"
+      ],
+      "id": "staff",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "shipping",
+      "attributes": [
+        "shipping type: ",
+        "cost: ",
+        "shipping Ref No.: ",
+        "shipping address: "
+      ],
+      "methods": [
+        "choose()"
+      ],
+      "id": "shipping",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "order",
+      "attributes": [
+        "order create date: ",
+        "product No.: ",
+        "quantity: ",
+        "customer ID: "
+      ],
+      "methods": [
+        "add product()",
+        "remove()",
+        "cancel()",
+        "update()"
+      ],
+      "id": "order",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "payment",
+      "attributes": [
+        "payment type: ",
+        "payment option: ",
+        "pay date: ",
+        "amount: "
+      ],
+      "methods": [
+        "choose()"
+      ],
+      "id": "payment",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "product",
+      "attributes": [
+        "product No.: ",
+        "Name: ",
+        "price: ",
+        "description: ",
+        "stock: "
+      ],
+      "methods": [
+        "add product()",
+        "update()",
+        "remove()",
+        "display()"
+      ],
+      "id": "product",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "user",
+      "attributes": [
+        "login ID: ",
+        "Password: "
+      ],
+      "methods": [
+        "login()",
+        "logout()"
+      ],
+      "id": "user",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "shipping detail",
+      "attributes": [
+        "shipping Ref No.: ",
+        "receiver Name: ",
+        "receiver address: ",
+        "receiver date: ",
+        "status: "
+      ],
+      "methods": [
+        "dsiplay()"
+      ],
+      "id": "shipping detail",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "payment detail",
+      "attributes": [
+        "credit card detail: ",
+        "bank account detail: ",
+        "paid date: ",
+        "amount: "
+      ],
+      "methods": [
+        "display()"
+      ],
+      "id": "payment detail",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "catalog",
+      "attributes": [
+        "product categories: ",
+        "product Name: "
+      ],
+      "methods": [
+        "update()",
+        "search()",
+        "display()"
+      ],
+      "id": "catalog",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "feedback",
+      "attributes": [
+        "product No.: ",
+        "date create : ",
+        "rating value : ",
+        "customer ID: ",
+        "comment : "
+      ],
+      "methods": [
+        "add feedback()",
+        "delete()",
+        "display()"
+      ],
+      "id": "feedback",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "order detail",
+      "attributes": [
+        "order ID: ",
+        "order status: ",
+        "order date: ",
+        "subtotal price: "
+      ],
+      "methods": [
+        "display()"
+      ],
+      "id": "order detail",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "customer",
+      "head": "order",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "customer",
+      "head": "customer service",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "customer",
+      "head": "feedback",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "staff",
+      "head": "customer service",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "staff",
+      "head": "catalog",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "order",
+      "head": "payment",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "order",
+      "head": "order detail",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "order",
+      "head": "shipping",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "payment",
+      "head": "payment detail",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "product",
+      "head": "order",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "product",
+      "head": "feedback",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "user",
+      "head": "customer",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "shipping detail",
+      "head": "shipping",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "catalog",
+      "head": "product",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

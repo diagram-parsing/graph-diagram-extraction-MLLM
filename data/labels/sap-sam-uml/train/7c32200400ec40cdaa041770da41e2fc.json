@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "text": "Ateneo\n",
+      "attributes": null,
+      "methods": null,
+      "id": "Ateneo\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Corso di studio\n",
+      "attributes": null,
+      "methods": null,
+      "id": "Corso di studio\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Collegio",
+      "attributes": null,
+      "methods": null,
+      "id": "Collegio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "DocenteTitolare",
+      "attributes": null,
+      "methods": null,
+      "id": "DocenteTitolare",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CommissioneSUA\n",
+      "attributes": null,
+      "methods": null,
+      "id": "CommissioneSUA\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SUA",
+      "attributes": [
+        "quadroA: String",
+        "quadroB: String",
+        "quadroC: String",
+        "verificaForm: boolean"
+      ],
+      "methods": null,
+      "id": "SUA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Insegnamento",
+      "attributes": [
+        "titolo: String",
+        "settDisc: String",
+        "crediti: Int",
+        "descrizione: String"
+      ],
+      "methods": null,
+      "id": "Insegnamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "conisglioDiDip",
+      "attributes": null,
+      "methods": null,
+      "id": "conisglioDiDip",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "approvataDa",
+      "attributes": [
+        "verdetto: boolean"
+      ],
+      "methods": null,
+      "id": "approvataDa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "approvataDa",
+      "attributes": [
+        "verdetto: boolean"
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SenAccademico",
+      "attributes": null,
+      "methods": null,
+      "id": "SenAccademico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "approvataDa",
+      "attributes": [
+        "verdetto: boolean"
+      ],
+      "methods": null,
+      "id": "ComplexClass_2",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Ateneo\n",
+      "head": "Corso di studio\n",
+      "class": "UndirectedAssociation",
+      "label": "offre"
+    },
+    {
+      "tail": "Corso di studio\n",
+      "head": "Collegio",
+      "class": "UndirectedAssociation",
+      "label": "gestitoDa"
+    },
+    {
+      "tail": "Collegio",
+      "head": "DocenteTitolare",
+      "class": "UndirectedAssociation",
+      "label": "comprende"
+    },
+    {
+      "tail": "Collegio",
+      "head": "CommissioneSUA\n",
+      "class": "UndirectedAssociation",
+      "label": "appartieneA"
+    },
+    {
+      "tail": "CommissioneSUA\n",
+      "head": "SUA",
+      "class": "UndirectedAssociation",
+      "label": "rivede"
+    },
+    {
+      "tail": "SUA",
+      "head": "Insegnamento",
+      "class": "UndirectedAssociation",
+      "label": "inseritoIn"
+    },
+    {
+      "tail": "SUA",
+      "head": "conisglioDiDip",
+      "class": "UndirectedAssociation",
+      "label": "approvataDa"
+    },
+    {
+      "tail": "SUA",
+      "head": "Collegio",
+      "class": "UndirectedAssociation",
+      "label": "approvataDa"
+    },
+    {
+      "tail": "SUA",
+      "head": "SenAccademico",
+      "class": "UndirectedAssociation",
+      "label": "approvatoDa"
+    }
+  ],
+  "groups": []
+}

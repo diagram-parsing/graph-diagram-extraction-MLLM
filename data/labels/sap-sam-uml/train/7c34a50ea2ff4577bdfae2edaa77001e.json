@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "text": "utente\n\n",
+      "attributes": [
+        "nickname: string",
+        "nome: string",
+        "cognome: string",
+        "email: string"
+      ],
+      "methods": null,
+      "id": "utente\n\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "messaggio\n",
+      "attributes": [
+        "testo: string",
+        "timestamp: DateTime"
+      ],
+      "methods": null,
+      "id": "messaggio\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "utente\n\n",
+      "head": "messaggio\n",
+      "class": "UndirectedAssociation",
+      "label": "scrive"
+    }
+  ],
+  "groups": []
+}

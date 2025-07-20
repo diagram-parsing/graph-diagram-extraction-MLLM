@@ -1,0 +1,236 @@
+{
+  "nodes": [
+    {
+      "text": "claim submitted",
+      "id": "claim submitted",
+      "class": "messageEvent"
+    },
+    {
+      "text": "check & register claim",
+      "id": "check & register claim",
+      "class": "task"
+    },
+    {
+      "text": "check insurance",
+      "id": "check insurance",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "task_1",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "authorize repairs",
+      "id": "authorize repairs",
+      "class": "task"
+    },
+    {
+      "text": "schedule payment",
+      "id": "schedule payment",
+      "class": "task"
+    },
+    {
+      "text": "inform customer",
+      "id": "inform customer",
+      "class": "task"
+    },
+    {
+      "text": "reject claim",
+      "id": "reject claim",
+      "class": "task"
+    },
+    {
+      "text": "claim files",
+      "id": "claim files",
+      "class": "dataStore"
+    },
+    {
+      "text": "documents from customer",
+      "id": "documents from customer",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "claim handled",
+      "id": "claim handled",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "reject claim",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "reject claim",
+      "class": "sequenceFlow",
+      "label": "negative"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "reject claim",
+      "class": "sequenceFlow",
+      "label": "not insured"
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "inform customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "authorize repairs",
+      "head": "schedule payment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": "insured"
+    },
+    {
+      "tail": "check insurance",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check & register claim",
+      "head": "check insurance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim submitted",
+      "head": "check & register claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "authorize repairs",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "schedule payment",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "inform customer",
+      "head": "claim handled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "documents from customer",
+      "head": "check & register claim",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "check & register claim",
+      "head": "claim files",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "claim files",
+      "head": "check insurance",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "inform customer",
+      "head": "Customer",
+      "class": "messageFlow",
+      "label": "letter"
+    },
+    {
+      "tail": "authorize repairs",
+      "head": "Garage",
+      "class": "messageFlow",
+      "label": "authorization"
+    },
+    {
+      "tail": "Customer",
+      "head": "claim submitted",
+      "class": "messageFlow",
+      "label": "claim"
+    }
+  ],
+  "groups": [
+    {
+      "name": "insurer",
+      "nodes": [
+        "handling",
+        "notifications"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "handling",
+      "nodes": [
+        "check insurance",
+        "exclusiveGateway_1",
+        "task_1",
+        "exclusiveGateway_2",
+        "authorize repairs",
+        "schedule payment",
+        "inform customer",
+        "reject claim",
+        "exclusiveGateway_3",
+        "claim handled"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "notifications",
+      "nodes": [
+        "claim submitted",
+        "check & register claim",
+        "claim files",
+        "documents from customer"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Customer",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "Garage",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

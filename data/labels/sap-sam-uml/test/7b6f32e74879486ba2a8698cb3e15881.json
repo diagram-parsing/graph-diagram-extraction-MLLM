@@ -1,0 +1,104 @@
+{
+  "nodes": [
+    {
+      "text": "Eingabemenge",
+      "attributes": [
+        "mengenelemente: ArrayList<Mengenelement>"
+      ],
+      "methods": null,
+      "id": "Eingabemenge",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mengenelement",
+      "attributes": null,
+      "methods": null,
+      "id": "Mengenelement",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ziffer",
+      "attributes": [
+        "p1x: int",
+        "p1y: int",
+        "p2x: int",
+        "p2y: int",
+        "p3x: int",
+        "p3y: int",
+        "wert: double"
+      ],
+      "methods": null,
+      "id": "Ziffer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Punkt",
+      "attributes": [
+        "x: int",
+        "y: int"
+      ],
+      "methods": null,
+      "id": "Punkt",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pfeilspitze",
+      "attributes": [
+        "p1x: int",
+        "p1y: int",
+        "p2x: int",
+        "p2y: int",
+        "p3x: int",
+        "p3y: int"
+      ],
+      "methods": null,
+      "id": "Pfeilspitze",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Strecke",
+      "attributes": [
+        "p1x: int",
+        "p1y: int",
+        "p2x: int",
+        "p2y: int"
+      ],
+      "methods": null,
+      "id": "Strecke",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Eingabemenge",
+      "head": "Mengenelement",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Ziffer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Pfeilspitze",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Strecke",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Punkt",
+      "class": "Composition",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "text": "Person",
+      "attributes": [
+        "Namen: String",
+        "Telefonnummer: int",
+        "E-Mail: string"
+      ],
+      "methods": null,
+      "id": "Person",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adresse",
+      "attributes": [
+        "Straße: String",
+        "Stadt: String",
+        "PLZ: int",
+        "Land: String",
+        "Bestatigt: boolean"
+      ],
+      "methods": [
+        "bestätigten()",
+        "druckenFürPostversant()"
+      ],
+      "id": "Adresse",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Student",
+      "attributes": [
+        "durchschnittsnote: float",
+        "matrikelnummer: int"
+      ],
+      "methods": [
+        "einschreiben()"
+      ],
+      "id": "Student",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Professor",
+      "attributes": [
+        "Lohn: int"
+      ],
+      "methods": null,
+      "id": "Professor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Modul",
+      "attributes": null,
+      "methods": null,
+      "id": "Modul",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Person",
+      "head": "Student",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Professor",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Adresse",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Modul",
+      "head": "Student",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

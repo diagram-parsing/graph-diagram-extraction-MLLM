@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "text": "Specie",
+      "attributes": [
+        "Nome Latino: String",
+        "Nome Comune: String",
+        "Codice Identificazione: String",
+        "Da Giardino: Boolean",
+        "Specie Esotica: Boolean"
+      ],
+      "methods": null,
+      "id": "Specie",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prezzo",
+      "attributes": [
+        "Valore: Currency",
+        "Data entrata in vigore: Date"
+      ],
+      "methods": null,
+      "id": "Prezzo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Fornitore",
+      "attributes": [
+        "Codice Fornitore: String",
+        "Nome: String",
+        "Tax Code: String",
+        "Indirizzo: String"
+      ],
+      "methods": null,
+      "id": "Fornitore",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Specie",
+      "head": "Prezzo",
+      "class": "UndirectedAssociation",
+      "label": "venduta"
+    },
+    {
+      "tail": "Fornitore",
+      "head": "Specie",
+      "class": "UndirectedAssociation",
+      "label": "fornita"
+    }
+  ],
+  "groups": []
+}

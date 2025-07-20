@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "text": "Workflow\n",
+      "attributes": [
+        "ID: int",
+        "Owner: uID",
+        "Type: int"
+      ],
+      "methods": null,
+      "id": "Workflow\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Aufgabenliste mit Rollen\n",
+      "attributes": [
+        "Name: string",
+        "Task: string",
+        "Rolle: Rollen",
+        "Frist: daze",
+        "Instanz: Aufgabeninstanz"
+      ],
+      "methods": null,
+      "id": "Aufgabenliste mit Rollen\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rollen",
+      "attributes": [
+        "ID: int",
+        "name: String"
+      ],
+      "methods": null,
+      "id": "Rollen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rechte\n",
+      "attributes": [
+        "accessType: "
+      ],
+      "methods": [
+        "CheckRights()"
+      ],
+      "id": "Rechte\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Views\n",
+      "attributes": null,
+      "methods": null,
+      "id": "Views\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Benutzer",
+      "attributes": [
+        "uID: int",
+        "name: string",
+        "Email: string",
+        "Password: string"
+      ],
+      "methods": null,
+      "id": "Benutzer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Benutzerverwaltung\n",
+      "attributes": null,
+      "methods": [
+        "createUser()",
+        "changePW()"
+      ],
+      "id": "Benutzerverwaltung\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bewerbungsunterlagen",
+      "attributes": [
+        "NumberOfApplications: int",
+        "Created: Date",
+        "Bewerbung: doc"
+      ],
+      "methods": null,
+      "id": "Bewerbungsunterlagen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Loginmanager",
+      "attributes": null,
+      "methods": [
+        "validate()"
+      ],
+      "id": "Loginmanager",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Aufgabenkatalog",
+      "attributes": null,
+      "methods": null,
+      "id": "Aufgabenkatalog",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Workflowarchiv",
+      "attributes": null,
+      "methods": null,
+      "id": "Workflowarchiv",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rollenkatalog\n",
+      "attributes": null,
+      "methods": null,
+      "id": "Rollenkatalog\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dokumente",
+      "attributes": [
+        "Dokument: doc",
+        "Version: int",
+        "Owner: string"
+      ],
+      "methods": null,
+      "id": "Dokumente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Aufgabeninstanz",
+      "attributes": [
+        "Status: boolen",
+        "ChangeDate: Date"
+      ],
+      "methods": null,
+      "id": "Aufgabeninstanz",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Szenarienliste",
+      "attributes": [
+        "1: ",
+        "2: ",
+        "3: ",
+        ": "
+      ],
+      "methods": null,
+      "id": "Szenarienliste",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Workflow\n",
+      "head": "Dokumente",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Aufgabenliste mit Rollen\n",
+      "head": "Aufgabenkatalog",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Aufgabenliste mit Rollen\n",
+      "head": "Workflow\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rollen",
+      "head": "Rechte\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rollen",
+      "head": "Aufgabenliste mit Rollen\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Views\n",
+      "head": "Rollen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Benutzer",
+      "head": "Benutzerverwaltung\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bewerbungsunterlagen",
+      "head": "Dokumente",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Loginmanager",
+      "head": "Benutzer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Workflowarchiv",
+      "head": "Workflow\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rollenkatalog\n",
+      "head": "Rollen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Aufgabeninstanz",
+      "head": "Aufgabenliste mit Rollen\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Szenarienliste",
+      "head": "Aufgabenliste mit Rollen\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

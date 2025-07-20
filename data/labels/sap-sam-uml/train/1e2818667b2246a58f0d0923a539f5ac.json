@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "text": "Escursionista",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "CF: string",
+        "email: string",
+        "cellulare: string",
+        "datanascita: date"
+      ],
+      "methods": null,
+      "id": "Escursionista",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "percorso",
+      "attributes": [
+        "descrizione: string",
+        "etichetta: string",
+        "tracciaGPS: string",
+        "livello: string",
+        "mindurata: time",
+        "maxdurata: time"
+      ],
+      "methods": null,
+      "id": "percorso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "punto partenza/arrivo",
+      "attributes": null,
+      "methods": null,
+      "id": "punto partenza/arrivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "rifugio",
+      "attributes": [
+        "codiceunivoco: string",
+        "nome: string",
+        "lat: double",
+        "long: double",
+        "email: string",
+        "numero: string"
+      ],
+      "methods": null,
+      "id": "rifugio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "parcheggio",
+      "attributes": null,
+      "methods": null,
+      "id": "parcheggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "escursione",
+      "attributes": [
+        "codice: string",
+        "numpersone: int",
+        "targa: string",
+        "ritardo: time",
+        "escursioneterminata: boolean",
+        "allarme: boolean"
+      ],
+      "methods": null,
+      "id": "escursione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Escursionista",
+      "head": "escursione",
+      "class": "UndirectedAssociation",
+      "label": "sceglie"
+    },
+    {
+      "tail": "percorso",
+      "head": "punto partenza/arrivo",
+      "class": "UndirectedAssociation",
+      "label": "ha"
+    },
+    {
+      "tail": "escursione",
+      "head": "percorso",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,188 @@
+{
+  "nodes": [
+    {
+      "text": "Richiesta preventivo",
+      "id": "Richiesta preventivo",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Calcola preventivo",
+      "id": "Calcola preventivo",
+      "class": "Task"
+    },
+    {
+      "text": "Invio preventivo",
+      "id": "Invio preventivo",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_1",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "Rifiuto",
+      "id": "Rifiuto",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Accettazione",
+      "id": "Accettazione",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "IntermediateEvent_1",
+      "class": "IntermediateEvent"
+    },
+    {
+      "text": "Info pagamento",
+      "id": "Info pagamento",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_2",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "10 min",
+      "id": "10 min",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Tempo scaduto",
+      "id": "Tempo scaduto",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Pagamento",
+      "id": "Pagamento",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Inoltra ordine",
+      "id": "Inoltra ordine",
+      "class": "Task"
+    },
+    {
+      "text": "Prepara fattura",
+      "id": "Prepara fattura",
+      "class": "Task"
+    },
+    {
+      "text": "Fattura",
+      "id": "Fattura",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Annullamento",
+      "id": "Annullamento",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "IntermediateEvent_2",
+      "class": "IntermediateEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Richiesta preventivo",
+      "head": "Calcola preventivo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Calcola preventivo",
+      "head": "Invio preventivo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Invio preventivo",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Rifiuto",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Accettazione",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Rifiuto",
+      "head": "IntermediateEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Accettazione",
+      "head": "Info pagamento",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Info pagamento",
+      "head": "Exclusive_Eventbased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "10 min",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "Pagamento",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "Annullamento",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "10 min",
+      "head": "Tempo scaduto",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pagamento",
+      "head": "Inoltra ordine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inoltra ordine",
+      "head": "Prepara fattura",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prepara fattura",
+      "head": "Fattura",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Annullamento",
+      "head": "IntermediateEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

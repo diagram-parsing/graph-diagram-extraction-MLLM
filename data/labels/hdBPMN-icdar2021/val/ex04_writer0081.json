@@ -1,0 +1,219 @@
+{
+  "nodes": [
+    {
+      "text": "check if owner payed the fees",
+      "id": "check if owner payed the fees",
+      "class": "task"
+    },
+    {
+      "text": "request",
+      "id": "request",
+      "class": "dataObject"
+    },
+    {
+      "text": "request",
+      "id": "request",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "fee notice",
+      "id": "fee notice",
+      "class": "dataObject"
+    },
+    {
+      "text": "allocate the hearing date",
+      "id": "allocate the hearing date",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": "check if compliant with the description of the premises on file",
+      "id": "check if compliant with the description of the premises on file",
+      "class": "task"
+    },
+    {
+      "text": "check if acceptable for filing",
+      "id": "check if acceptable for filing",
+      "class": "task"
+    },
+    {
+      "text": "retrieve the file",
+      "id": "retrieve the file",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": "produce fee botice",
+      "id": "produce fee botice",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "messageEvent_1",
+      "head": "retrieve the file",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "retrieve the file",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "check if acceptable for filing",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check if acceptable for filing",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "check if owner payed the fees",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check if owner payed the fees",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "produce fee botice",
+      "class": "sequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "produce fee botice",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "allocate the hearing date",
+      "class": "sequenceFlow",
+      "label": "yes"
+    },
+    {
+      "tail": "allocate the hearing date",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "check if compliant with the description of the premises on file",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check if compliant with the description of the premises on file",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "request",
+      "head": "check if owner payed the fees",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "request",
+      "head": "check if compliant with the description of the premises on file",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "request",
+      "head": "check if acceptable for filing",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "request",
+      "head": "retrieve the file",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "produce fee botice",
+      "head": "fee notice",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "owner",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": "sends request for compensation"
+    },
+    {
+      "tail": "owner",
+      "head": "check if owner payed the fees",
+      "class": "messageFlow",
+      "label": "pay fee"
+    },
+    {
+      "tail": "produce fee botice",
+      "head": "owner",
+      "class": "messageFlow",
+      "label": "send fee notice"
+    }
+  ],
+  "groups": [
+    {
+      "name": "tribunal",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "owner",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

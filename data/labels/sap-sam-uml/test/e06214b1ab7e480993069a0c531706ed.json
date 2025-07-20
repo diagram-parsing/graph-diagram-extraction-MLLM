@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": " Bambino",
+      "attributes": [
+        "Nome: string",
+        "Cognome: string",
+        "DataNascita: date",
+        "LuogoNascita: string",
+        "CodiceFiscale: string"
+      ],
+      "methods": null,
+      "id": " Bambino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adulto",
+      "attributes": [
+        "Nome: string",
+        "Cognome: string",
+        "DataNascita: date",
+        "LuogoNascita: string",
+        "CodiceFiscale: string"
+      ],
+      "methods": null,
+      "id": "Adulto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccinazione",
+      "attributes": [
+        "TipoInoculazione: enum",
+        "DataEsecuzione: date",
+        "Effettiventuali: string",
+        "CertificatoPDF: string"
+      ],
+      "methods": null,
+      "id": "Vaccinazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TipoInoculazione: Iniziale, Richiamo",
+      "attributes": null,
+      "methods": null,
+      "id": "TipoInoculazione: Iniziale, Richiamo",
+      "class": "Note"
+    },
+    {
+      "text": "Esenzione",
+      "attributes": [
+        "TipoVaccino: string",
+        "Codice: string"
+      ],
+      "methods": null,
+      "id": "Esenzione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccino",
+      "attributes": [
+        "Nome: string",
+        "EtàRichiesta: int"
+      ],
+      "methods": null,
+      "id": "Vaccino",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": " Bambino",
+      "head": "Vaccinazione",
+      "class": "UndirectedAssociation",
+      "label": "haEffettuato"
+    },
+    {
+      "tail": " Bambino",
+      "head": "Esenzione",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "Adulto",
+      "head": " Bambino",
+      "class": "UndirectedAssociation",
+      "label": "responsabileDi"
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "TipoInoculazione: Iniziale, Richiamo",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "Vaccino",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    }
+  ],
+  "groups": []
+}

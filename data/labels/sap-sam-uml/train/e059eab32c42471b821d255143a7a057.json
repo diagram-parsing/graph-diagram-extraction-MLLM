@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "text": "Objetivo Estratégicos",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Objetivo Estratégicos",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Visión Estrategica",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Visión Estrategica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Iniciativas Estratégicas",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Iniciativas Estratégicas",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Capacidades de Negocio requeridas",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Capacidades de Negocio requeridas",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Capacidades de TI Habilitadoras ",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Capacidades de TI Habilitadoras ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Aplicaciones",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Aplicaciones",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Infraestructura TI",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Infraestructura TI",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Organización",
+      "attributes": [
+        "Descripción: "
+      ],
+      "methods": null,
+      "id": "Organización",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Objetivo Estratégicos",
+      "head": "Iniciativas Estratégicas",
+      "class": "UndirectedAssociation",
+      "label": "soportado por"
+    },
+    {
+      "tail": "Visión Estrategica",
+      "head": "Objetivo Estratégicos",
+      "class": "UndirectedAssociation",
+      "label": "Influencia"
+    },
+    {
+      "tail": "Iniciativas Estratégicas",
+      "head": "Capacidades de Negocio requeridas",
+      "class": "UndirectedAssociation",
+      "label": "Requieren"
+    },
+    {
+      "tail": "Capacidades de Negocio requeridas",
+      "head": "Capacidades de TI Habilitadoras ",
+      "class": "UndirectedAssociation",
+      "label": "Habilitadas por"
+    },
+    {
+      "tail": "Capacidades de TI Habilitadoras ",
+      "head": "Aplicaciones",
+      "class": "UndirectedAssociation",
+      "label": "Requieren"
+    },
+    {
+      "tail": "Aplicaciones",
+      "head": "Infraestructura TI",
+      "class": "UndirectedAssociation",
+      "label": "Soportadas por"
+    },
+    {
+      "tail": "Infraestructura TI",
+      "head": "Organización",
+      "class": "UndirectedAssociation",
+      "label": "A cargo de"
+    }
+  ],
+  "groups": []
+}

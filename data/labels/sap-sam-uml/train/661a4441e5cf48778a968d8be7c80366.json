@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "text": "TradesService\n",
+      "attributes": null,
+      "methods": [
+        "GetTradeInfo()",
+        "GetNewTrades()"
+      ],
+      "id": "TradesService\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Program",
+      "attributes": null,
+      "methods": [
+        "CreateHostBuilder()"
+      ],
+      "id": "Program",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Startup",
+      "attributes": null,
+      "methods": [
+        "ConfigureServices()",
+        "Configure()"
+      ],
+      "id": "Startup",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "BoersenServer",
+      "attributes": null,
+      "methods": null,
+      "id": "BoersenServer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "gRPC\n",
+      "attributes": null,
+      "methods": null,
+      "id": "gRPC\n",
+      "class": "Interface"
+    },
+    {
+      "text": "message: TradeModel",
+      "attributes": [
+        "stockName: string",
+        "quantity: int32",
+        "priceOne: double",
+        "sum: double"
+      ],
+      "methods": null,
+      "id": "message: TradeModel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "message: NewTradeRequest",
+      "attributes": [
+        "min: int32"
+      ],
+      "methods": null,
+      "id": "message: NewTradeRequest",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "message: TradeLookupModel",
+      "attributes": [
+        "tradeNr: int32"
+      ],
+      "methods": null,
+      "id": "message: TradeLookupModel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "service: Trade",
+      "attributes": null,
+      "methods": [
+        "GetTradeInfo()",
+        "GetNewTrades()"
+      ],
+      "id": "service: Trade",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "BoersenClient",
+      "attributes": null,
+      "methods": null,
+      "id": "BoersenClient",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Program",
+      "attributes": null,
+      "methods": [
+        "RecMenu()",
+        "Stream()",
+        "Search()"
+      ],
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "TradesService\n",
+      "head": "BoersenServer",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Program",
+      "head": "BoersenServer",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Startup",
+      "head": "BoersenServer",
+      "class": "UnnavigableDirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "BoersenServer",
+      "head": "gRPC\n",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "BoersenClient",
+      "head": "gRPC\n",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "BoersenClient",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

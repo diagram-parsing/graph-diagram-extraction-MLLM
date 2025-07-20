@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "text": "Cliente",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "CI: String",
+        "Email: String",
+        "Telefono: String",
+        ": "
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Noleggio",
+      "attributes": [
+        "Codice: String",
+        "Prezzo: Currency",
+        "Pagato: Boolean",
+        "Rilasciato: Boolean",
+        "DataRilascio: Date",
+        "DataRestituzione: Date",
+        "Restituito: Boolean"
+      ],
+      "methods": null,
+      "id": "Noleggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Attrezzatura",
+      "attributes": [
+        "Modello: String"
+      ],
+      "methods": null,
+      "id": "Attrezzatura",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Appuntamento",
+      "attributes": [
+        "Data: Date",
+        "Ora: Time"
+      ],
+      "methods": null,
+      "id": "Appuntamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Per",
+      "attributes": [
+        "QRcode: String"
+      ],
+      "methods": null,
+      "id": "Per",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sci",
+      "attributes": [
+        "Lunghezza: String"
+      ],
+      "methods": null,
+      "id": "Sci",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Scarponi",
+      "attributes": [
+        "Numero: Int"
+      ],
+      "methods": null,
+      "id": "Scarponi",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Racchette",
+      "attributes": null,
+      "methods": null,
+      "id": "Racchette",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cliente",
+      "head": "Noleggio",
+      "class": "UndirectedAssociation",
+      "label": "Effettua"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Appuntamento",
+      "class": "UndirectedAssociation",
+      "label": "Prenota"
+    },
+    {
+      "tail": "Noleggio",
+      "head": "Attrezzatura",
+      "class": "UndirectedAssociation",
+      "label": "Del"
+    },
+    {
+      "tail": "Attrezzatura",
+      "head": "Sci",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Attrezzatura",
+      "head": "Scarponi",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Attrezzatura",
+      "head": "Racchette",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Appuntamento",
+      "head": "Noleggio",
+      "class": "UndirectedAssociation",
+      "label": "Per"
+    }
+  ],
+  "groups": []
+}

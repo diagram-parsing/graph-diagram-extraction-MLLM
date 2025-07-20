@@ -1,0 +1,185 @@
+{
+  "nodes": [
+    {
+      "text": "Bewertung/Rezessionen",
+      "attributes": [
+        "Titel: ",
+        "Rezession: ",
+        "Sterne: "
+      ],
+      "methods": null,
+      "id": "Bewertung/Rezessionen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Werbung",
+      "attributes": [
+        "Name: ",
+        "Dauer: "
+      ],
+      "methods": null,
+      "id": "Werbung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellung durchführen",
+      "attributes": [
+        "Konto: ",
+        "Artikel: "
+      ],
+      "methods": null,
+      "id": "Bestellung durchführen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel in Shop stellen",
+      "attributes": [
+        "Name: ",
+        "Preis: ",
+        "Hersteller: ",
+        "Produktdetails: "
+      ],
+      "methods": null,
+      "id": "Artikel in Shop stellen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Retour",
+      "attributes": [
+        "Name: ",
+        "Artikel: ",
+        "Grund: ",
+        "Adresse: "
+      ],
+      "methods": null,
+      "id": "Retour",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mahnungen ",
+      "attributes": [
+        "Name/Konto: ",
+        "Grund: "
+      ],
+      "methods": null,
+      "id": "Mahnungen ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Newsletter abonnieren",
+      "attributes": [
+        "Konto: "
+      ],
+      "methods": null,
+      "id": "Newsletter abonnieren",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Amazon Prime Mitglied",
+      "attributes": [
+        "Konto: ",
+        "Zahlungsinformationen: "
+      ],
+      "methods": null,
+      "id": "Amazon Prime Mitglied",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Webseite",
+      "attributes": [
+        "Shop: ",
+        "Kundenservice: "
+      ],
+      "methods": null,
+      "id": "Webseite",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "Name: ",
+        "Preis: ",
+        "Hersteller: ",
+        "Produktdetails: "
+      ],
+      "methods": null,
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Konto",
+      "attributes": [
+        "Name: ",
+        "Alter: ",
+        "Adresse: ",
+        "Zahlungsinformationen: "
+      ],
+      "methods": null,
+      "id": "Konto",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Webseite",
+      "head": "Artikel",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Webseite",
+      "head": "Konto",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Webseite",
+      "head": "Artikel in Shop stellen",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Webseite",
+      "head": "Werbung",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Artikel",
+      "head": "Bewertung/Rezessionen",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Artikel",
+      "head": "Bestellung durchführen",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Konto",
+      "head": "Retour",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Konto",
+      "head": "Mahnungen ",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Konto",
+      "head": "Newsletter abonnieren",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Konto",
+      "head": "Amazon Prime Mitglied",
+      "class": "Aggregation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

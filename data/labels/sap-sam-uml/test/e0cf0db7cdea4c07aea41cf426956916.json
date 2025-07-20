@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "text": "Addetto",
+      "attributes": [
+        "ID addetto: String"
+      ],
+      "methods": null,
+      "id": "Addetto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cliente",
+      "attributes": [
+        "Nome: String",
+        "Estremo IDcard: String",
+        "Cell: String",
+        "email: String"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Noleggio",
+      "attributes": [
+        "Materiale affittato: String",
+        "Importo: String",
+        "Data di restituzione: Date"
+      ],
+      "methods": null,
+      "id": "Noleggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prenotazione",
+      "attributes": [
+        "Ora : time",
+        "Data: date",
+        "Materiale da nolleggiare: string",
+        "Gemneralità cliente: string",
+        "QR: String"
+      ],
+      "methods": null,
+      "id": "Prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pezzi",
+      "attributes": [
+        "Misura : Float",
+        "COdice pezzo: String"
+      ],
+      "methods": null,
+      "id": "Pezzi",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tipo pezzo",
+      "attributes": [
+        "Marca: String",
+        "Modello: String",
+        "Prezzo: String"
+      ],
+      "methods": null,
+      "id": "Tipo pezzo",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Addetto",
+      "head": "Noleggio",
+      "class": "UndirectedAssociation",
+      "label": "registra"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Noleggio",
+      "head": "Cliente",
+      "class": "UndirectedAssociation",
+      "label": "compie"
+    },
+    {
+      "tail": "Noleggio",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": "si converte in"
+    },
+    {
+      "tail": "Pezzi",
+      "head": "Noleggio",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Pezzi",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tipo pezzo",
+      "head": "Pezzi",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

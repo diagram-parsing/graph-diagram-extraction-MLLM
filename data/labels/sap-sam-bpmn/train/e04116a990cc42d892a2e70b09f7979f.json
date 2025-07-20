@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "text": "Informera klubbar via mail",
+      "id": "Informera klubbar via mail",
+      "class": "Task"
+    },
+    {
+      "text": "Manuell registrering",
+      "id": "Manuell registrering",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Mottag uppgifter om lag via mail/telefon",
+      "id": "Mottag uppgifter om lag via mail/telefon",
+      "class": "Task"
+    },
+    {
+      "text": "Mottag anmälningsavgift",
+      "id": "Mottag anmälningsavgift",
+      "class": "Task"
+    },
+    {
+      "text": "Registrerat lag",
+      "id": "Registrerat lag",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Slutbetalning mottagen?",
+      "id": "Slutbetalning mottagen?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Icke registrerat lag",
+      "id": "Icke registrerat lag",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Slutbetalning ej genomförd",
+      "id": "Slutbetalning ej genomförd",
+      "class": "Task"
+    },
+    {
+      "text": "Slutbetalning genomförd",
+      "id": "Slutbetalning genomförd",
+      "class": "Task"
+    },
+    {
+      "text": "Påminn om slutbetalning",
+      "id": "Påminn om slutbetalning",
+      "class": "Task"
+    },
+    {
+      "text": "Påminnelse fruktbar?",
+      "id": "Påminnelse fruktbar?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Kontrollera status på slutbetalning",
+      "id": "Kontrollera status på slutbetalning",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Informera klubbar via mail",
+      "head": "Mottag uppgifter om lag via mail/telefon",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Manuell registrering",
+      "head": "Informera klubbar via mail",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Mottag uppgifter om lag via mail/telefon",
+      "head": "Mottag anmälningsavgift",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Mottag anmälningsavgift",
+      "head": "Kontrollera status på slutbetalning",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Slutbetalning mottagen?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "Slutbetalning mottagen?",
+      "head": "Påminn om slutbetalning",
+      "class": "SequenceFlow",
+      "label": "Nej"
+    },
+    {
+      "tail": "Slutbetalning ej genomförd",
+      "head": "Icke registrerat lag",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Slutbetalning genomförd",
+      "head": "Registrerat lag",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Påminn om slutbetalning",
+      "head": "Påminnelse fruktbar?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Påminnelse fruktbar?",
+      "head": "Slutbetalning ej genomförd",
+      "class": "SequenceFlow",
+      "label": "Nej"
+    },
+    {
+      "tail": "Påminnelse fruktbar?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Slutbetalning genomförd",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kontrollera status på slutbetalning",
+      "head": "Slutbetalning mottagen?",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Trollhättan GoIF Fotbollssektion",
+      "id": "Trollhättan GoIF Fotbollssektion",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Informera klubbar via mail",
+        "Manuell registrering",
+        "Mottag uppgifter om lag via mail/telefon",
+        "Mottag anmälningsavgift",
+        "Registrerat lag",
+        "Slutbetalning mottagen?",
+        "Icke registrerat lag",
+        "Slutbetalning ej genomförd",
+        "Slutbetalning genomförd",
+        "Påminn om slutbetalning",
+        "Påminnelse fruktbar?",
+        "Exclusive_Databased_Gateway_1",
+        "Kontrollera status på slutbetalning"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

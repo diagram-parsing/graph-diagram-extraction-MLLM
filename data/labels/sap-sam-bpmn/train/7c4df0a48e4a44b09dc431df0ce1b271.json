@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "take a piece of paper(a4)and ruler",
+      "id": "take a piece of paper(a4)and ruler",
+      "class": "Task"
+    },
+    {
+      "text": "Draw 2 10 cm parallel lines, 6 centimeters between them",
+      "id": "Draw 2 10 cm parallel lines, 6 centimeters between them",
+      "class": "Task"
+    },
+    {
+      "text": "draw a 15 cm line in the middle of these two lines",
+      "id": "draw a 15 cm line in the middle of these two lines",
+      "class": "Task"
+    },
+    {
+      "text": "Draw curves to the left of the 9 cm line on both sides",
+      "id": "Draw curves to the left of the 9 cm line on both sides",
+      "class": "Task"
+    },
+    {
+      "text": "Draw concav to the left of the 9 cm line on both sides",
+      "id": "Draw concav to the left of the 9 cm line on both sides",
+      "class": "Task"
+    },
+    {
+      "text": "draw an convexcurve to the right from these points",
+      "id": "draw an convexcurve to the right from these points",
+      "class": "Task"
+    },
+    {
+      "text": "draw a circle between these two lines close to the left side",
+      "id": "draw a circle between these two lines close to the left side",
+      "class": "Task"
+    },
+    {
+      "text": "Draw a one-cm curve outside the leftmost curve",
+      "id": "Draw a one-cm curve outside the leftmost curve",
+      "class": "Task"
+    },
+    {
+      "text": "take any double folded elastic fabric",
+      "id": "take any double folded elastic fabric",
+      "class": "Task"
+    },
+    {
+      "text": "put the cut piece on the fabric and draw around with a pencil",
+      "id": "put the cut piece on the fabric and draw around with a pencil",
+      "class": "Task"
+    },
+    {
+      "text": "cut from drawn parts",
+      "id": "cut from drawn parts",
+      "class": "Task"
+    },
+    {
+      "text": "stick the bottom of the double folded fabric together",
+      "id": "stick the bottom of the double folded fabric together",
+      "class": "Task"
+    },
+    {
+      "text": "mask ready",
+      "id": "mask ready",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "take a piece of paper(a4)and ruler",
+      "head": "Draw 2 10 cm parallel lines, 6 centimeters between them",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Draw 2 10 cm parallel lines, 6 centimeters between them",
+      "head": "draw a 15 cm line in the middle of these two lines",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "draw a 15 cm line in the middle of these two lines",
+      "head": "Draw curves to the left of the 9 cm line on both sides",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Draw curves to the left of the 9 cm line on both sides",
+      "head": "Draw concav to the left of the 9 cm line on both sides",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Draw concav to the left of the 9 cm line on both sides",
+      "head": "draw an convexcurve to the right from these points",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "draw an convexcurve to the right from these points",
+      "head": "draw a circle between these two lines close to the left side",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "draw a circle between these two lines close to the left side",
+      "head": "Draw a one-cm curve outside the leftmost curve",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Draw a one-cm curve outside the leftmost curve",
+      "head": "take any double folded elastic fabric",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "take any double folded elastic fabric",
+      "head": "put the cut piece on the fabric and draw around with a pencil",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "put the cut piece on the fabric and draw around with a pencil",
+      "head": "cut from drawn parts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "cut from drawn parts",
+      "head": "stick the bottom of the double folded fabric together",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "stick the bottom of the double folded fabric together",
+      "head": "mask ready",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

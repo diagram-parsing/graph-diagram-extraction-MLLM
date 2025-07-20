@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "A",
+      "id": "A",
+      "class": "Task"
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": "Task"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "Task"
+    },
+    {
+      "text": "D",
+      "id": "D",
+      "class": "Task"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "EndEvent"
+    },
+    {
+      "text": "F",
+      "id": "F",
+      "class": "StartEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "A",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B",
+      "head": "A",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "D",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "D",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "F",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

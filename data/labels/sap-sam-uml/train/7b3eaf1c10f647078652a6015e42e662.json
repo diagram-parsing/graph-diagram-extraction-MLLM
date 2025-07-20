@@ -1,0 +1,255 @@
+{
+  "nodes": [
+    {
+      "text": "Kunde",
+      "attributes": null,
+      "methods": null,
+      "id": "Kunde",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Kundeninformation",
+      "attributes": null,
+      "methods": null,
+      "id": "Kundeninformation",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Name",
+      "attributes": null,
+      "methods": null,
+      "id": "Name",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Anschrift",
+      "attributes": null,
+      "methods": null,
+      "id": "Anschrift",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Flug",
+      "attributes": null,
+      "methods": null,
+      "id": "Flug",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Fluginformation",
+      "attributes": null,
+      "methods": null,
+      "id": "Fluginformation",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Flugnummer",
+      "attributes": null,
+      "methods": null,
+      "id": "Flugnummer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Reiseziel",
+      "attributes": null,
+      "methods": null,
+      "id": "Reiseziel",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Fluggesellschaft",
+      "attributes": null,
+      "methods": null,
+      "id": "Fluggesellschaft",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Drittanbieter",
+      "attributes": null,
+      "methods": null,
+      "id": "Drittanbieter",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Flughafen ",
+      "attributes": null,
+      "methods": null,
+      "id": "Flughafen ",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Reisestart",
+      "attributes": null,
+      "methods": null,
+      "id": "Reisestart",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Flugticket",
+      "attributes": null,
+      "methods": null,
+      "id": "Flugticket",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Preis",
+      "attributes": null,
+      "methods": null,
+      "id": "Preis",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Ticketnummer",
+      "attributes": null,
+      "methods": null,
+      "id": "Ticketnummer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Ort",
+      "attributes": null,
+      "methods": null,
+      "id": "Ort",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Datum",
+      "attributes": null,
+      "methods": null,
+      "id": "Datum",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Anmerkung:\n\nLinke Ziffer bezieht sich auch die linke Kardinalität und umgekehrt. ",
+      "attributes": null,
+      "methods": null,
+      "id": "Anmerkung:\n\nLinke Ziffer bezieht sich auch die linke Kardinalität und umgekehrt. ",
+      "class": "Note"
+    },
+    {
+      "text": "Zwischenziel",
+      "attributes": null,
+      "methods": null,
+      "id": "Zwischenziel",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Annahme:\n\nEin Kunde besitzt nur eine Anschrift",
+      "attributes": null,
+      "methods": null,
+      "id": "Annahme:\n\nEin Kunde besitzt nur eine Anschrift",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde",
+      "head": "Kundeninformation",
+      "class": "Aggregation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Name",
+      "head": "Kundeninformation",
+      "class": "DirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Anschrift",
+      "head": "Kundeninformation",
+      "class": "DirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Flug",
+      "head": "Fluginformation",
+      "class": "Aggregation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Fluginformation",
+      "head": "Reiseziel",
+      "class": "UndirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Fluginformation",
+      "head": "Reisestart",
+      "class": "UndirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Fluginformation",
+      "head": "Flugnummer",
+      "class": "UndirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Fluginformation",
+      "head": "Datum",
+      "class": "UndirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Fluginformation",
+      "head": "Zwischenziel",
+      "class": "UndirectedAssociation",
+      "label": "1.0-n"
+    },
+    {
+      "tail": "Fluggesellschaft",
+      "head": "Flugticket",
+      "class": "UndirectedAssociation",
+      "label": "1"
+    },
+    {
+      "tail": "Drittanbieter",
+      "head": "Flugticket",
+      "class": "UndirectedAssociation",
+      "label": "1         Verkauft"
+    },
+    {
+      "tail": "Flughafen ",
+      "head": "Reiseziel",
+      "class": "UndirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Flughafen ",
+      "head": "Reisestart",
+      "class": "UndirectedAssociation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Flughafen ",
+      "head": "Ort",
+      "class": "Aggregation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Flugticket",
+      "head": "Flug",
+      "class": "UndirectedAssociation",
+      "label": "n.1.  "
+    },
+    {
+      "tail": "Flugticket",
+      "head": "Preis",
+      "class": "Aggregation",
+      "label": "n   n"
+    },
+    {
+      "tail": "Flugticket",
+      "head": "Ticketnummer",
+      "class": "Aggregation",
+      "label": "1.1"
+    },
+    {
+      "tail": "Flugticket",
+      "head": "Kunde",
+      "class": "UndirectedAssociation",
+      "label": "1.n"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,195 @@
+{
+  "nodes": [
+    {
+      "text": "Accion",
+      "attributes": [
+        "denominacion: ",
+        "pais: "
+      ],
+      "methods": null,
+      "id": "Accion",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Campaña",
+      "attributes": [
+        "denominacion: ",
+        "fechaInicio: ",
+        "fechaFin: ",
+        "presupuesto: "
+      ],
+      "methods": null,
+      "id": "Campaña",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Voluntario",
+      "attributes": null,
+      "methods": null,
+      "id": "Voluntario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Donacion",
+      "attributes": [
+        "valorUnitario: ",
+        "cantidad: "
+      ],
+      "methods": null,
+      "id": "Donacion",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TipoRecurso\n",
+      "attributes": [
+        "nombre: ",
+        "unidadDeMedida: "
+      ],
+      "methods": null,
+      "id": "TipoRecurso\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Donante",
+      "attributes": [
+        "nombre: ",
+        "nif: ",
+        "tipo: TipoDonante: "
+      ],
+      "methods": null,
+      "id": "Donante",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TipoDonante",
+      "attributes": null,
+      "methods": null,
+      "id": "TipoDonante",
+      "class": "Enumeration"
+    },
+    {
+      "text": "Voluntario",
+      "attributes": [
+        "nombre: ",
+        "nif: ",
+        "direccion: ",
+        "email: ",
+        "telefono: "
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AsignacionPuesto",
+      "attributes": [
+        "fechaInicio: ",
+        "fechaFin: "
+      ],
+      "methods": null,
+      "id": "AsignacionPuesto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Puesto",
+      "attributes": [
+        "nombre: "
+      ],
+      "methods": null,
+      "id": "Puesto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Campaña",
+      "attributes": [
+        "denominacion: ",
+        "fechaInicio: ",
+        "fechaFin: ",
+        "presupuesto: "
+      ],
+      "methods": null,
+      "id": "ComplexClass_2",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AdscripcionCampaña",
+      "attributes": [
+        "fechaInicio: ",
+        "fechaFin: "
+      ],
+      "methods": null,
+      "id": "AdscripcionCampaña",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "RN1: Para que un voluntario pueda dirigir una campaña debe haber sido voluntario previamente en otras campañas.",
+      "attributes": null,
+      "methods": null,
+      "id": "RN1: Para que un voluntario pueda dirigir una campaña debe haber sido voluntario previamente en otras campañas.",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Campaña",
+      "head": "Voluntario",
+      "class": "UndirectedAssociation",
+      "label": "esDirigidaPor"
+    },
+    {
+      "tail": "Campaña",
+      "head": "Donacion",
+      "class": "UndirectedAssociation",
+      "label": "vaDestinadaA"
+    },
+    {
+      "tail": "Donacion",
+      "head": "TipoRecurso\n",
+      "class": "UndirectedAssociation",
+      "label": "tieneAsociado"
+    },
+    {
+      "tail": "Donacion",
+      "head": "Donante",
+      "class": "UndirectedAssociation",
+      "label": "esHechaPor"
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "AsignacionPuesto",
+      "class": "UndirectedAssociation",
+      "label": "esOcupado"
+    },
+    {
+      "tail": "AsignacionPuesto",
+      "head": "Puesto",
+      "class": "UndirectedAssociation",
+      "label": "ocupa"
+    },
+    {
+      "tail": "ComplexClass_2",
+      "head": "ComplexClass_1",
+      "class": "UndirectedAssociation",
+      "label": "esDirigidaPor"
+    },
+    {
+      "tail": "AdscripcionCampaña",
+      "head": "ComplexClass_1",
+      "class": "UndirectedAssociation",
+      "label": "tomaParteDe"
+    },
+    {
+      "tail": "AdscripcionCampaña",
+      "head": "ComplexClass_2",
+      "class": "UndirectedAssociation",
+      "label": "haceReferenciaA"
+    },
+    {
+      "tail": "RN1: Para que un voluntario pueda dirigir una campaña debe haber sido voluntario previamente en otras campañas.",
+      "head": "ComplexClass_1",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

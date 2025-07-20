@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "text": "New credit request received\n",
+      "id": "New credit request received\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Simple risk assessment performed \n",
+      "id": "Simple risk assessment performed \n",
+      "class": "Task"
+    },
+    {
+      "text": "Is the risk \nabove the threshold ?\n",
+      "id": "Is the risk \nabove the threshold ?\n",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Advanced risk test performed\n",
+      "id": "Advanced risk test performed\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Notify customer with result",
+      "id": "Notify customer with result",
+      "class": "Task"
+    },
+    {
+      "text": "Disbursement is organized ",
+      "id": "Disbursement is organized ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Process complete\n",
+      "id": "Process complete\n",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "New credit request received\n",
+      "head": "Simple risk assessment performed \n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Simple risk assessment performed \n",
+      "head": "Is the risk \nabove the threshold ?\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Is the risk \nabove the threshold ?\n",
+      "head": "Advanced risk test performed\n",
+      "class": "SequenceFlow",
+      "label": "Above threshold\n"
+    },
+    {
+      "tail": "Is the risk \nabove the threshold ?\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "Below threshold: Simple assessment suffice\n"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Advanced risk test performed\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Notify customer with result",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Disbursement is organized ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notify customer with result",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Disbursement is organized ",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Process complete\n",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

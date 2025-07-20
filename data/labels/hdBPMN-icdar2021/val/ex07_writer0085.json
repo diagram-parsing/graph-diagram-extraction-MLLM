@@ -1,0 +1,279 @@
+{
+  "nodes": [
+    {
+      "text": "forward expertise to QA",
+      "id": "forward expertise to QA",
+      "class": "task"
+    },
+    {
+      "text": "fill cheque",
+      "id": "fill cheque",
+      "class": "task"
+    },
+    {
+      "text": "send cheque to expert",
+      "id": "send cheque to expert",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "file result of interviews",
+      "id": "file result of interviews",
+      "class": "task"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "interview patients",
+      "id": "interview patients",
+      "class": "subProcess"
+    },
+    {
+      "text": "ask an external expert to review doctors work",
+      "id": "ask an external expert to review doctors work",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_3",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "expertise received",
+      "id": "expertise received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "expertise received",
+      "id": "expertise received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "new case started",
+      "id": "new case started",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_4",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "file result of expertise",
+      "id": "file result of expertise",
+      "class": "task"
+    },
+    {
+      "text": "report created",
+      "id": "report created",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "file result of expertise",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expertise received",
+      "head": "forward expertise to QA",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask an external expert to review doctors work",
+      "head": "expertise received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send cheque to expert",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": "expert payed"
+    },
+    {
+      "tail": "fill cheque",
+      "head": "send cheque to expert",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward expertise to QA",
+      "head": "fill cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward expertise to QA",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "report created",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "file result of expertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file result of interviews",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "file result of interviews",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expertise received",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "expertise received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patients",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "interview patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "ask an external expert to review doctors work",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "new case started",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward expertise to QA",
+      "head": "expertise received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send cheque to expert",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": "cheque"
+    },
+    {
+      "tail": "external expert",
+      "head": "expertise received",
+      "class": "messageFlow",
+      "label": "expertise"
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "nodes": [
+        "managing director",
+        "quality assurance departement",
+        "Qaulity Assurance Specialist (QA)"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "managing director",
+      "nodes": [
+        "forward expertise to QA",
+        "fill cheque",
+        "send cheque to expert",
+        "ask an external expert to review doctors work",
+        "expertise received",
+        "event_1"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "quality assurance departement",
+      "nodes": [
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "file result of interviews",
+        "create report",
+        "interview patients",
+        "parallelGateway_3",
+        "expertise received",
+        "new case started",
+        "parallelGateway_4",
+        "file result of expertise",
+        "report created"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Qaulity Assurance Specialist (QA)",
+      "nodes": [
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "file result of interviews",
+        "create report",
+        "interview patients",
+        "parallelGateway_3",
+        "expertise received",
+        "new case started",
+        "parallelGateway_4",
+        "file result of expertise",
+        "report created"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "external expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

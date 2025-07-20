@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "text": "Seadmele järele tulemine",
+      "id": "Seadmele järele tulemine",
+      "class": "Task"
+    },
+    {
+      "text": "Seadme \nrendiperioodi \nlõppemine",
+      "id": "Seadme \nrendiperioodi \nlõppemine",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Arve esitamine",
+      "id": "Arve esitamine",
+      "class": "Task"
+    },
+    {
+      "text": "Arve vastavuse kontrollimine",
+      "id": "Arve vastavuse kontrollimine",
+      "class": "Task"
+    },
+    {
+      "text": "Töötajalt kinnituse küsimine",
+      "id": "Töötajalt kinnituse küsimine",
+      "class": "Task"
+    },
+    {
+      "text": "Arve kontrollimine",
+      "id": "Arve kontrollimine",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Arve tasumine",
+      "id": "Arve tasumine",
+      "class": "Task"
+    },
+    {
+      "text": "Arve saatmine parandamiseks",
+      "id": "Arve saatmine parandamiseks",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Seadmele järele tulemine",
+      "head": "Arve esitamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Seadme \nrendiperioodi \nlõppemine",
+      "head": "Seadmele järele tulemine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arve esitamine",
+      "head": "Arve vastavuse kontrollimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arve vastavuse kontrollimine",
+      "head": "Töötajalt kinnituse küsimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Töötajalt kinnituse küsimine",
+      "head": "Arve kontrollimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arve kontrollimine",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Arve tasumine",
+      "class": "SequenceFlow",
+      "label": "On ok"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Arve saatmine parandamiseks",
+      "class": "SequenceFlow",
+      "label": "Ei ole ok"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Pakkuja",
+      "id": "Pakkuja",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Seadmele järele tulemine",
+        "Seadme \nrendiperioodi \nlõppemine"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

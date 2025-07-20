@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "text": "Klient",
+      "attributes": null,
+      "methods": null,
+      "id": "Klient",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Koht",
+      "attributes": null,
+      "methods": null,
+      "id": "Koht",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Hooned",
+      "attributes": null,
+      "methods": null,
+      "id": "Hooned",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Ruumid",
+      "attributes": null,
+      "methods": null,
+      "id": "Ruumid",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Seadmed",
+      "attributes": null,
+      "methods": null,
+      "id": "Seadmed",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Tüüp",
+      "attributes": null,
+      "methods": null,
+      "id": "Tüüp",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Kontroll",
+      "attributes": null,
+      "methods": null,
+      "id": "Kontroll",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Järelvalve objekt",
+      "attributes": null,
+      "methods": null,
+      "id": "Järelvalve objekt",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Juriidiline isik",
+      "attributes": null,
+      "methods": null,
+      "id": "Juriidiline isik",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Füüsiline isik",
+      "attributes": null,
+      "methods": null,
+      "id": "Füüsiline isik",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Klient",
+      "head": "Koht",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Klient",
+      "head": "Füüsiline isik",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Klient",
+      "head": "Juriidiline isik",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Koht",
+      "head": "Hooned",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Koht",
+      "head": "Järelvalve objekt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Hooned",
+      "head": "Ruumid",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Ruumid",
+      "head": "Seadmed",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tüüp",
+      "head": "Järelvalve objekt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kontroll",
+      "head": "Järelvalve objekt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

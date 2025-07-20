@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "text": "Equipo \nRequerido",
+      "id": "Equipo \nRequerido",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Diligenciar solicitud de alquiler",
+      "id": "Diligenciar solicitud de alquiler",
+      "class": "Task"
+    },
+    {
+      "text": "Seleccionar equipo",
+      "id": "Seleccionar equipo",
+      "class": "Task"
+    },
+    {
+      "text": "Validar disponibilidad del equipo",
+      "id": "Validar disponibilidad del equipo",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Agregar detalles a la solicitud",
+      "id": "Agregar detalles a la solicitud",
+      "class": "Task"
+    },
+    {
+      "text": "Aprobar solicitiud",
+      "id": "Aprobar solicitiud",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Emitir  pedido\n",
+      "id": "Emitir  pedido\n",
+      "class": "Task"
+    },
+    {
+      "text": "pedido emitido",
+      "id": "pedido emitido",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Equipo \nRequerido",
+      "head": "Diligenciar solicitud de alquiler",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Diligenciar solicitud de alquiler",
+      "head": "Seleccionar equipo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Seleccionar equipo",
+      "head": "Validar disponibilidad del equipo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Validar disponibilidad del equipo",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Agregar detalles a la solicitud",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Seleccionar equipo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Agregar detalles a la solicitud",
+      "head": "Aprobar solicitiud",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aprobar solicitiud",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Emitir  pedido\n",
+      "class": "SequenceFlow",
+      "label": "Solicitud Aprovada"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Emitir  pedido\n",
+      "head": "pedido emitido",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,145 @@
+{
+  "nodes": [
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "received order by Phone",
+      "id": "received order by Phone",
+      "class": "messageEvent"
+    },
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "take note",
+      "id": "take note",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Print order",
+      "id": "Print order",
+      "class": "task"
+    },
+    {
+      "text": "Attach order to Pinboard",
+      "id": "Attach order to Pinboard",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "event_2",
+      "class": "event"
+    },
+    {
+      "text": "received order by Website",
+      "id": "received order by Website",
+      "class": "messageEvent"
+    },
+    {
+      "text": "received order by lieferando",
+      "id": "received order by lieferando",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Attach order to Pinboard",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "Attach order to Pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Print order",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "Print order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "take note",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received order by Phone",
+      "head": "take note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received order by Website",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received order by lieferando",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "received order by Phone",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "received order by Website",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "received order by lieferando",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

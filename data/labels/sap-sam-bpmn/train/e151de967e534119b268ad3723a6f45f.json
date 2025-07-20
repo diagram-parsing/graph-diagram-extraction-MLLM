@@ -1,0 +1,281 @@
+{
+  "nodes": [
+    {
+      "text": "Recibir Pedido",
+      "id": "Recibir Pedido",
+      "class": "Task"
+    },
+    {
+      "text": "Calcular Precio",
+      "id": "Calcular Precio",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Satisfacer Pedido",
+      "id": "Satisfacer Pedido",
+      "class": "Task"
+    },
+    {
+      "text": "Enviar Factura",
+      "id": "Enviar Factura",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Cerrar Pedido",
+      "id": "Cerrar Pedido",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndTerminateEvent_1",
+      "class": "EndTerminateEvent"
+    },
+    {
+      "text": "",
+      "id": "StartMessageEvent_1",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Confirmar recepción",
+      "id": "Confirmar recepción",
+      "class": "Task"
+    },
+    {
+      "text": "Confirmar Facturación",
+      "id": "Confirmar Facturación",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Recibir Pedido",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "Realizar Un Pedido",
+      "id": "Realizar Un Pedido",
+      "class": "Task"
+    },
+    {
+      "text": "Comprobar Pedido",
+      "id": "Comprobar Pedido",
+      "class": "Task"
+    },
+    {
+      "text": "Pedido finalizado",
+      "id": "Pedido finalizado",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Comprobar realización del pago ",
+      "id": "Comprobar realización del pago ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartMessageEvent_2",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Facturación finalizada",
+      "id": "Facturación finalizada",
+      "class": "EndMessageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Recibir Pedido",
+      "head": "Calcular Precio",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Calcular Precio",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Satisfacer Pedido",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Enviar Factura",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Satisfacer Pedido",
+      "head": "Task_1",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Enviar Factura",
+      "head": "StartMessageEvent_2",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Cerrar Pedido",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cerrar Pedido",
+      "head": "EndTerminateEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartMessageEvent_1",
+      "head": "Recibir Pedido",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Confirmar recepción",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Confirmar Facturación",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Realizar Un Pedido",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "Comprobar Pedido",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Realizar Un Pedido",
+      "head": "StartMessageEvent_1",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Comprobar Pedido",
+      "head": "Confirmar recepción",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Comprobar Pedido",
+      "head": "Pedido finalizado",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Comprobar realización del pago ",
+      "head": "Facturación finalizada",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Comprobar realización del pago ",
+      "head": "Confirmar Facturación",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartMessageEvent_2",
+      "head": "Comprobar realización del pago ",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Tienda",
+      "id": "Tienda",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Recibir Pedido",
+        "Calcular Precio",
+        "AND_Gateway_1",
+        "Satisfacer Pedido",
+        "Enviar Factura",
+        "AND_Gateway_2",
+        "Cerrar Pedido",
+        "EndTerminateEvent_1",
+        "StartMessageEvent_1",
+        "Confirmar recepción",
+        "Confirmar Facturación"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Cliente",
+      "id": "Cliente",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "StartEvent_1",
+        "Task_1",
+        "Realizar Un Pedido",
+        "Comprobar Pedido",
+        "Pedido finalizado"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Facturación",
+      "id": "Facturación",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "Comprobar realización del pago ",
+        "StartMessageEvent_2",
+        "Facturación finalizada"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Find driving school and apply",
+      "id": "Find driving school and apply",
+      "class": "Task"
+    },
+    {
+      "text": "accepted?",
+      "id": "accepted?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "attend theory classes",
+      "id": "attend theory classes",
+      "class": "Task"
+    },
+    {
+      "text": "attend practical sessions",
+      "id": "attend practical sessions",
+      "class": "Task"
+    },
+    {
+      "text": "attended the \nrequired sessions?",
+      "id": "attended the \nrequired sessions?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "attended the required\n number of classes?",
+      "id": "attended the required\n number of classes?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "attend final theoretical exam",
+      "id": "attend final theoretical exam",
+      "class": "Task"
+    },
+    {
+      "text": "did you pass?",
+      "id": "did you pass?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "attend final practical exam",
+      "id": "attend final practical exam",
+      "class": "Task"
+    },
+    {
+      "text": "did you pass?",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "receive license in mail",
+      "id": "receive license in mail",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_3",
+      "class": "AND_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Find driving school and apply",
+      "head": "accepted?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "accepted?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "accepted?",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Find driving school and apply",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "attend theory classes",
+      "head": "attended the required\n number of classes?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "attend practical sessions",
+      "head": "attended the \nrequired sessions?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "attended the \nrequired sessions?",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "attended the \nrequired sessions?",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "attend practical sessions",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "attended the required\n number of classes?",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "attended the required\n number of classes?",
+      "head": "attend final theoretical exam",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "attend theory classes",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "attend final theoretical exam",
+      "head": "did you pass?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "did you pass?",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "did you pass?",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "yes"
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "attend final practical exam",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "attend final practical exam",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "receive license in mail",
+      "class": "SequenceFlow",
+      "label": "yes"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "receive license in mail",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "did you pass?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "text": "order request received",
+      "id": "order request received",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "check outstanding debts",
+      "id": "check outstanding debts",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "reject order",
+      "id": "reject order",
+      "class": "Task"
+    },
+    {
+      "text": "order rejected",
+      "id": "order rejected",
+      "class": "EndEvent"
+    },
+    {
+      "text": "check availability of required equipment",
+      "id": "check availability of required equipment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "estimate the date of availability",
+      "id": "estimate the date of availability",
+      "class": "Task"
+    },
+    {
+      "text": "estimate the shipping time",
+      "id": "estimate the shipping time",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Send proposal to the partner",
+      "id": "Send proposal to the partner",
+      "class": "Task"
+    },
+    {
+      "text": "receive confirmation",
+      "id": "receive confirmation",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "check order origin",
+      "id": "check order origin",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_5",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "order request received",
+      "head": "check outstanding debts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "check outstanding debts",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "reject order",
+      "class": "SequenceFlow",
+      "label": "yes"
+    },
+    {
+      "tail": "reject order",
+      "head": "order rejected",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "check availability of required equipment",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "estimate the date of availability",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "estimate the date of availability",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": "date of availability"
+    },
+    {
+      "tail": "estimate the shipping time",
+      "head": "Exclusive_Databased_Gateway_5",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "estimate the shipping time",
+      "class": "SequenceFlow",
+      "label": "international order"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_5",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send proposal to the partner",
+      "head": "receive confirmation",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send proposal to the partner",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": "no response in 48 hours"
+    },
+    {
+      "tail": "Send proposal to the partner",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": "proposal rejected"
+    },
+    {
+      "tail": "receive confirmation",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": "stop process with success"
+    },
+    {
+      "tail": "check order origin",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "check availability of required equipment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "check order origin",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_5",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Send proposal to the partner",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

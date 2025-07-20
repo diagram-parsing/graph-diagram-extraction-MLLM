@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "text": "Saturday Night Fever aufgekommen\n",
+      "id": "Saturday Night Fever aufgekommen\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Abendprogramm aussuchen",
+      "id": "Abendprogramm aussuchen",
+      "class": "Task"
+    },
+    {
+      "text": "was möchtest du machen?",
+      "id": "was möchtest du machen?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Essen gehen",
+      "id": "Essen gehen",
+      "class": "Task"
+    },
+    {
+      "text": "ins Kino gehen",
+      "id": "ins Kino gehen",
+      "class": "Task"
+    },
+    {
+      "text": "im Club tanzen",
+      "id": "im Club tanzen",
+      "class": "Task"
+    },
+    {
+      "text": "was machst du danach?",
+      "id": "was machst du danach?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Absacker nehmen",
+      "id": "Absacker nehmen",
+      "class": "Task"
+    },
+    {
+      "text": "zu Hause angekommen",
+      "id": "zu Hause angekommen",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Saturday Night Fever aufgekommen\n",
+      "head": "Abendprogramm aussuchen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Saturday Night Fever aufgekommen\n",
+      "head": "Abendprogramm aussuchen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Abendprogramm aussuchen",
+      "head": "was möchtest du machen?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "was möchtest du machen?",
+      "head": "ins Kino gehen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "was möchtest du machen?",
+      "head": "Essen gehen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "was möchtest du machen?",
+      "head": "im Club tanzen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Essen gehen",
+      "head": "was machst du danach?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ins Kino gehen",
+      "head": "was machst du danach?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "im Club tanzen",
+      "head": "was machst du danach?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "was machst du danach?",
+      "head": "Absacker nehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Absacker nehmen",
+      "head": "zu Hause angekommen",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

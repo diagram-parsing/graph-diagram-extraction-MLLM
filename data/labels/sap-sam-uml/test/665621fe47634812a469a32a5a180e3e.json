@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "text": "Messaging",
+      "attributes": [
+        "user: ",
+        "instant message: "
+      ],
+      "methods": [
+        "converse ()",
+        "interact()",
+        "update()",
+        "exchange()"
+      ],
+      "id": "Messaging",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Chatbot (AI bot)",
+      "attributes": [
+        "customer service: ",
+        "information acquisition : "
+      ],
+      "methods": [
+        "ask question()",
+        "receive help()",
+        "simulate()",
+        "inform()"
+      ],
+      "id": "Chatbot (AI bot)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Highly interactive social media (Facebook)",
+      "attributes": [
+        "friend: ",
+        "profile: "
+      ],
+      "methods": [
+        "like ()",
+        "comment()",
+        "post photo()",
+        "join group()"
+      ],
+      "id": "Highly interactive social media (Facebook)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mobile communication app (Text message)",
+      "attributes": [
+        "phone number: ",
+        "contacts: "
+      ],
+      "methods": [
+        "use emoji()",
+        "send image()",
+        "group chat()",
+        "send gif()"
+      ],
+      "id": "Mobile communication app (Text message)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "App for collaboration (for staff) \n(Slack)\n",
+      "attributes": [
+        "document: ",
+        "channels: "
+      ],
+      "methods": [
+        "collaborate()",
+        "share documents()",
+        "invite people()",
+        "add thread()"
+      ],
+      "id": "App for collaboration (for staff) \n(Slack)\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Messaging",
+      "head": "Chatbot (AI bot)",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaging",
+      "head": "Highly interactive social media (Facebook)",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaging",
+      "head": "Mobile communication app (Text message)",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaging",
+      "head": "App for collaboration (for staff) \n(Slack)\n",
+      "class": "Generalization",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

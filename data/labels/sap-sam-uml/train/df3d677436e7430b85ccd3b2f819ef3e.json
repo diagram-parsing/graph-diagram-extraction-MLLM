@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "text": "Amministratore",
+      "attributes": [
+        "Nome : String",
+        "Cf: String"
+      ],
+      "methods": null,
+      "id": "Amministratore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Condominio",
+      "attributes": [
+        "indirizzo: String",
+        "codice catastali: String"
+      ],
+      "methods": null,
+      "id": "Condominio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Condomino",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "CF: String",
+        "quote millimesimali: String",
+        "Proprietario: boolean",
+        "Locatore: boolean"
+      ],
+      "methods": null,
+      "id": "Condomino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Spese di condominio",
+      "attributes": [
+        "Anno : int",
+        "tipologia: string",
+        "notificaPagamentoInviata: Boolean",
+        "modalitàPagamento: string",
+        "pagamentoEseguito: boolean",
+        "daPagare : currency",
+        ": "
+      ],
+      "methods": null,
+      "id": "Spese di condominio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Anomalia",
+      "attributes": [
+        "tipo: string",
+        "necessitàIntervento: boolean",
+        "Propostaappuntamento: date",
+        "AppuntamentoAccettato: Boolean",
+        "Risolta: Boolean"
+      ],
+      "methods": null,
+      "id": "Anomalia",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ConsumoRiscaldamento",
+      "attributes": [
+        "Consumo : int",
+        "Costo unitario: currency"
+      ],
+      "methods": null,
+      "id": "ConsumoRiscaldamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "parziale ed esclusiva (il testo non ci fornisce dettagli sulle altre)",
+      "attributes": null,
+      "methods": null,
+      "id": "parziale ed esclusiva (il testo non ci fornisce dettagli sulle altre)",
+      "class": "Note"
+    },
+    {
+      "text": "ConsumoRiscaldamentoCondominiale",
+      "attributes": [
+        "Consumo: String",
+        "costounitario: currency"
+      ],
+      "methods": null,
+      "id": "ConsumoRiscaldamentoCondominiale",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Amministratore",
+      "head": "Condominio",
+      "class": "UndirectedAssociation",
+      "label": "gestisce"
+    },
+    {
+      "tail": "Condominio",
+      "head": "Condomino",
+      "class": "UndirectedAssociation",
+      "label": "abita"
+    },
+    {
+      "tail": "Condominio",
+      "head": "Spese di condominio",
+      "class": "UndirectedAssociation",
+      "label": "comporta"
+    },
+    {
+      "tail": "Spese di condominio",
+      "head": "Condomino",
+      "class": "UndirectedAssociation",
+      "label": "Paga"
+    },
+    {
+      "tail": "Spese di condominio",
+      "head": "ConsumoRiscaldamento",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Anomalia",
+      "head": "Condomino",
+      "class": "UndirectedAssociation",
+      "label": "SegnalataA"
+    },
+    {
+      "tail": "ConsumoRiscaldamento",
+      "head": "Anomalia",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ConsumoRiscaldamentoCondominiale",
+      "head": "Condominio",
+      "class": "UndirectedAssociation",
+      "label": "assegnatoA"
+    }
+  ],
+  "groups": []
+}

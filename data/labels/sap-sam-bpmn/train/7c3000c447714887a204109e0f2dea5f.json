@@ -1,0 +1,217 @@
+{
+  "nodes": [
+    {
+      "text": "Taotlus \nkäitlejalt",
+      "id": "Taotlus \nkäitlejalt",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Taotluse \nregistreerimine\n",
+      "id": "Taotluse \nregistreerimine\n",
+      "class": "Task"
+    },
+    {
+      "text": "Nõuete-kohasuse\nhindamine",
+      "id": "Nõuete-kohasuse\nhindamine",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Menetluse\nalustamine",
+      "id": "Menetluse\nalustamine",
+      "class": "Task"
+    },
+    {
+      "text": "Teatise \nvormistamine",
+      "id": "Teatise \nvormistamine",
+      "class": "Task"
+    },
+    {
+      "text": "Teatise\nedastamine",
+      "id": "Teatise\nedastamine",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Teatise\nvormistamine",
+      "id": "Teatise\nvormistamine",
+      "class": "Task"
+    },
+    {
+      "text": "Teatise ja \ndokumentide\ntagastamine",
+      "id": "Teatise ja \ndokumentide\ntagastamine",
+      "class": "Task"
+    },
+    {
+      "text": "Menetluse\nlõpetmaine",
+      "id": "Menetluse\nlõpetmaine",
+      "class": "Task"
+    },
+    {
+      "text": "Menetlus\nlõpetatud",
+      "id": "Menetlus\nlõpetatud",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Taotlus\nmenetluses",
+      "id": "Taotlus\nmenetluses",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Teatise\nallkirjastamine",
+      "id": "Teatise\nallkirjastamine",
+      "class": "Task"
+    },
+    {
+      "text": "Teatise\nallkirjastamine",
+      "id": "Task_1",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Taotlus \nkäitlejalt",
+      "head": "Taotluse \nregistreerimine\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Taotluse \nregistreerimine\n",
+      "head": "Nõuete-kohasuse\nhindamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Nõuete-kohasuse\nhindamine",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Menetluse\nalustamine",
+      "class": "SequenceFlow",
+      "label": "nõuetekohane"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Teatise \nvormistamine",
+      "class": "SequenceFlow",
+      "label": "ei vasta nõuetele"
+    },
+    {
+      "tail": "Menetluse\nalustamine",
+      "head": "Taotlus\nmenetluses",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Teatise \nvormistamine",
+      "head": "Teatise\nallkirjastamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Teatise\nedastamine",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Nõuete-kohasuse\nhindamine",
+      "class": "SequenceFlow",
+      "label": "Esitab uuesti"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Teatise\nvormistamine",
+      "class": "SequenceFlow",
+      "label": "Ei esita tähtajaks"
+    },
+    {
+      "tail": "Teatise\nvormistamine",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Teatise ja \ndokumentide\ntagastamine",
+      "head": "Menetluse\nlõpetmaine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Menetluse\nlõpetmaine",
+      "head": "Menetlus\nlõpetatud",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Teatise\nallkirjastamine",
+      "head": "Teatise\nedastamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "Teatise ja \ndokumentide\ntagastamine",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Järelvalveametnik",
+      "id": "Järelvalveametnik",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Taotluse \nregistreerimine\n",
+        "Nõuete-kohasuse\nhindamine",
+        "Exclusive_Databased_Gateway_1",
+        "Menetluse\nalustamine",
+        "Teatise \nvormistamine",
+        "Teatise\nedastamine",
+        "Exclusive_Databased_Gateway_2",
+        "Teatise\nvormistamine",
+        "Teatise ja \ndokumentide\ntagastamine",
+        "Menetluse\nlõpetmaine",
+        "Menetlus\nlõpetatud",
+        "Taotlus\nmenetluses"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "VTA kohaliku asutuse juht",
+      "id": "VTA kohaliku asutuse juht",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Teatise\nallkirjastamine",
+        "Task_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

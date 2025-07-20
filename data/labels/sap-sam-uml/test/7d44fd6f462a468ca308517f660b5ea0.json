@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "text": "ct2: Cita",
+      "attributes": [
+        "motivo = \"Dudas permutas\": ",
+        "fecha = 17/11/2016: ",
+        "hora = 13:15: ",
+        "duracion: 15"
+      ],
+      "methods": null,
+      "id": "ct2: Cita",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ct3: Cita",
+      "attributes": [
+        "motivo = \"Informacion Matricula\": ",
+        "fecha = 15/10/2016: ",
+        "hora = 17:45: ",
+        "duracion: 15"
+      ],
+      "methods": null,
+      "id": "ct3: Cita",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ct1: Cita",
+      "attributes": [
+        "motivo = \"Orientacion en la escuela\": ",
+        "fecha = 10/9/2016: ",
+        "hora = 12:15: ",
+        "duracion: 40"
+      ],
+      "methods": null,
+      "id": "ct1: Cita",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "a1: Alumno\n",
+      "attributes": [
+        "nombre = \"Diego\": ",
+        "apellidos = \"Al Macho Linchen\": ",
+        "telefono = \"666666666\": ",
+        "email = \"jane.doe@dummy.com\": ",
+        "titulacion = Tecnologías Informaticas: ",
+        "curso = 2: ",
+        "grupo = 1: "
+      ],
+      "methods": null,
+      "id": "a1: Alumno\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "a2: Alumno\n",
+      "attributes": [
+        "nombre = \"Rafael\": ",
+        "apellidos = \"Marea y Algo\": ",
+        "telefono = \"696969696\": ",
+        "email = \"jane.doe@dummy.com\": ",
+        "titulacion = Tecnologias Informaticas: ",
+        "curso = 2: ",
+        "grupo = 1: "
+      ],
+      "methods": null,
+      "id": "a2: Alumno\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "a1: Alumno\n",
+      "head": "ct1: Cita",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "a2: Alumno\n",
+      "head": "ct3: Cita",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "a2: Alumno\n",
+      "head": "ct2: Cita",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

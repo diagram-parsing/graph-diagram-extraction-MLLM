@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "text": "videolezione",
+      "attributes": [
+        "codice videolezione: ",
+        "numero: ",
+        "data: ",
+        "ora inizio: ",
+        "docente: ",
+        "descrizione: ",
+        "caricata: boolean"
+      ],
+      "methods": null,
+      "id": "videolezione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "insegnamento",
+      "attributes": [
+        "codice: ",
+        "nome: "
+      ],
+      "methods": null,
+      "id": "insegnamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "docente",
+      "attributes": [
+        "nome: ",
+        "cognome: ",
+        "matricola: "
+      ],
+      "methods": null,
+      "id": "docente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "studente",
+      "attributes": [
+        "nome: string",
+        "matricola: string"
+      ],
+      "methods": null,
+      "id": "studente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "materiale",
+      "attributes": [
+        "descrizione: "
+      ],
+      "methods": null,
+      "id": "materiale",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "modulo",
+      "attributes": [
+        "da: time",
+        "a: time",
+        "descrizione: string"
+      ],
+      "methods": null,
+      "id": "modulo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "sottotitolo",
+      "attributes": [
+        "convalidato: boolean",
+        "scelta migliore: boolean"
+      ],
+      "methods": null,
+      "id": "sottotitolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "segmento",
+      "attributes": [
+        "tempo inizio: time",
+        "tempo fine: time",
+        "testo: string"
+      ],
+      "methods": null,
+      "id": "segmento",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "videolezione",
+      "head": "insegnamento",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "videolezione",
+      "head": "modulo",
+      "class": "UndirectedAssociation",
+      "label": "relativo a"
+    },
+    {
+      "tail": "videolezione",
+      "head": "videolezione",
+      "class": "UndirectedAssociation",
+      "label": "versione editata di"
+    },
+    {
+      "tail": "insegnamento",
+      "head": "docente",
+      "class": "UndirectedAssociation",
+      "label": "coinvolto in"
+    },
+    {
+      "tail": "docente",
+      "head": "insegnamento",
+      "class": "UndirectedAssociation",
+      "label": "titolare di"
+    },
+    {
+      "tail": "docente",
+      "head": "videolezione",
+      "class": "UndirectedAssociation",
+      "label": "tiene"
+    },
+    {
+      "tail": "studente",
+      "head": "insegnamento",
+      "class": "UndirectedAssociation",
+      "label": "iscritto a"
+    },
+    {
+      "tail": "studente",
+      "head": "sottotitolo",
+      "class": "UndirectedAssociation",
+      "label": "inserisce"
+    },
+    {
+      "tail": "materiale",
+      "head": "modulo",
+      "class": "UndirectedAssociation",
+      "label": "di"
+    },
+    {
+      "tail": "modulo",
+      "head": "sottotitolo",
+      "class": "UndirectedAssociation",
+      "label": "relativo a"
+    },
+    {
+      "tail": "sottotitolo",
+      "head": "segmento",
+      "class": "UndirectedAssociation",
+      "label": "costituito da"
+    }
+  ],
+  "groups": []
+}

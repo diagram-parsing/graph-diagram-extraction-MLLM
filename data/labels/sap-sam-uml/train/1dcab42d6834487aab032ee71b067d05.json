@@ -1,0 +1,162 @@
+{
+  "nodes": [
+    {
+      "text": "Cliente",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "email: String",
+        "cellulare: String",
+        "indirizzo: String",
+        "città: String",
+        "CAP: String",
+        "latitudine: String",
+        "longitudine: String"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prodotto",
+      "attributes": [
+        "foto: String",
+        "titolo: String",
+        "prezzo: Currency",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Prodotto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Consegna",
+      "attributes": [
+        "dettagliIndirizzo: String",
+        "data: Date",
+        "ora: Time",
+        "accettato: boolean",
+        "barcode: String",
+        "percorso: String",
+        "consegnato: boolean"
+      ],
+      "methods": null,
+      "id": "Consegna",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "contiene",
+      "attributes": [
+        "quantità: int"
+      ],
+      "methods": null,
+      "id": "contiene",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rider",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "email: String",
+        "disponibile: boolean"
+      ],
+      "methods": null,
+      "id": "Rider",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Valutazione Rider",
+      "attributes": [
+        "cortesiaCliente: int",
+        "commentoCortesia: String",
+        "altroCommento: String"
+      ],
+      "methods": null,
+      "id": "Valutazione Rider",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Valutazione Cliente",
+      "attributes": [
+        "qualitàMerce: int",
+        "velocitàConsegna: int",
+        "cortesiaRider: int",
+        "commentoQualità: String",
+        "commentoVelocità: String",
+        "commentoRider: String"
+      ],
+      "methods": null,
+      "id": "Valutazione Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "vieneAssegnato",
+      "attributes": [
+        "esito: enum"
+      ],
+      "methods": null,
+      "id": "vieneAssegnato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "esito: accettato e consegnato,  accettato e consegna fallita, incarico rifiutato",
+      "attributes": null,
+      "methods": null,
+      "id": "esito: accettato e consegnato,  accettato e consegna fallita, incarico rifiutato",
+      "class": "Note"
+    },
+    {
+      "text": "-Gli account sono creati in modo univoco tramite la mail\n- Valutazione Cliente si riferisce alla valutazione effettuata dal cliente, il cliente inserisce un voto da 1 a 5 per esempio per ogni voce più un commento testuale\n- Valutazione Rider si riferisce alla valutazione effettuata dal rider che inserisce un voto e un commento per la cortesia, l'attributo altroCommento comprende eventuali altri commenti poiché nel testo dell'esame vi sono i puntini di sospensione tra i parametri da valutare",
+      "attributes": null,
+      "methods": null,
+      "id": "-Gli account sono creati in modo univoco tramite la mail\n- Valutazione Cliente si riferisce alla valutazione effettuata dal cliente, il cliente inserisce un voto da 1 a 5 per esempio per ogni voce più un commento testuale\n- Valutazione Rider si riferisce alla valutazione effettuata dal rider che inserisce un voto e un commento per la cortesia, l'attributo altroCommento comprende eventuali altri commenti poiché nel testo dell'esame vi sono i puntini di sospensione tra i parametri da valutare",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cliente",
+      "head": "Consegna",
+      "class": "UndirectedAssociation",
+      "label": "compone"
+    },
+    {
+      "tail": "Consegna",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    },
+    {
+      "tail": "Consegna",
+      "head": "Rider",
+      "class": "UndirectedAssociation",
+      "label": "vieneAssegnato"
+    },
+    {
+      "tail": "Rider",
+      "head": "Valutazione Rider",
+      "class": "UndirectedAssociation",
+      "label": "esprime"
+    },
+    {
+      "tail": "Valutazione Rider",
+      "head": "Consegna",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    },
+    {
+      "tail": "Valutazione Cliente",
+      "head": "Consegna",
+      "class": "UndirectedAssociation",
+      "label": "riceve"
+    },
+    {
+      "tail": "vieneAssegnato",
+      "head": "esito: accettato e consegnato,  accettato e consegna fallita, incarico rifiutato",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

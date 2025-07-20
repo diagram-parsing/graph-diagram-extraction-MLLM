@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "text": "Utente",
+      "attributes": [
+        "Codice Fiscale: ",
+        "e-mail: ",
+        "Nome: ",
+        "Cognome: ",
+        "password: "
+      ],
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Help Desk",
+      "attributes": null,
+      "methods": null,
+      "id": "Help Desk",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esame",
+      "attributes": [
+        "IDEsame: ",
+        "data: ",
+        "luogo: ",
+        "aula: "
+      ],
+      "methods": null,
+      "id": "Esame",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esito",
+      "attributes": [
+        "Cod. Fis. Utente: ",
+        "Voto: ",
+        "Certificato: "
+      ],
+      "methods": null,
+      "id": "Esito",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Corso",
+      "attributes": [
+        "ID Corso: ",
+        "Nome: ",
+        "Programma: ",
+        "Descrizione: ",
+        "Docente: "
+      ],
+      "methods": null,
+      "id": "Corso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Richiesta assistenza",
+      "attributes": [
+        "Cod. Fis. Utente: ",
+        "ID richiesta: ",
+        "Argomento: ",
+        "Descrizione: ",
+        "Soluzione: "
+      ],
+      "methods": null,
+      "id": "Richiesta assistenza",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Competenze utente",
+      "attributes": [
+        "Cod. Fis. Utente: ",
+        "Lista competenze []: ",
+        "Note: "
+      ],
+      "methods": null,
+      "id": "Competenze utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Valutazione corso",
+      "attributes": [
+        "Difficoltà: ",
+        "Interesse: ",
+        "Qualità insegmaneto: "
+      ],
+      "methods": null,
+      "id": "Valutazione corso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Studente",
+      "attributes": null,
+      "methods": null,
+      "id": "Studente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Lezione",
+      "attributes": [
+        "data: ",
+        "luogo: ",
+        "aula: "
+      ],
+      "methods": null,
+      "id": "Lezione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Utente",
+      "head": "Richiesta assistenza",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Utente",
+      "head": "Help Desk",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Utente",
+      "head": "Studente",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Esame",
+      "head": "Esito",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Corso",
+      "head": "Esame",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Corso",
+      "head": "Competenze utente",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Corso",
+      "head": "Valutazione corso",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Corso",
+      "head": "Lezione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Studente",
+      "head": "Esame",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Studente",
+      "head": "Corso",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

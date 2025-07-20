@@ -1,0 +1,147 @@
+{
+  "nodes": [
+    {
+      "text": "prod 1: producto",
+      "attributes": [
+        "Precio: Double",
+        "Descripción: String",
+        "Nombre: String"
+      ],
+      "methods": null,
+      "id": "prod 1: producto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Albarán",
+      "attributes": [
+        "Precio: Money",
+        "Cantidad: Numeric"
+      ],
+      "methods": null,
+      "id": "Albarán",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Albarán",
+      "attributes": [
+        "Precio: Money",
+        "Cantidad: Numeric"
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "prod 2: producto",
+      "attributes": [
+        "Precio: Double",
+        "Descripción: String",
+        "Nombre: String"
+      ],
+      "methods": null,
+      "id": "prod 2: producto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Proveedor",
+      "attributes": [
+        "Empresa: String",
+        "Dirección: String",
+        "CIF: String",
+        "Tipo venta: E:venta"
+      ],
+      "methods": null,
+      "id": "Proveedor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pedido",
+      "attributes": [
+        "Proveedor: String",
+        "Fecha: LocalDate",
+        "Tiempo estimado: Days"
+      ],
+      "methods": null,
+      "id": "Pedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Catálogo",
+      "attributes": [
+        "Proveedor: String",
+        "Temporada: E:temporada"
+      ],
+      "methods": null,
+      "id": "Catálogo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cliente\n",
+      "attributes": [
+        "Nombre: String",
+        "Edad: Integer",
+        "Dni: String"
+      ],
+      "methods": null,
+      "id": "Cliente\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Albarán",
+      "head": "prod 1: producto",
+      "class": "UndirectedAssociation",
+      "label": "Referencia"
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "prod 2: producto",
+      "class": "UndirectedAssociation",
+      "label": "Referencia"
+    },
+    {
+      "tail": "Pedido",
+      "head": "ComplexClass_1",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Pedido",
+      "head": "Albarán",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Pedido",
+      "head": "Proveedor",
+      "class": "UndirectedAssociation",
+      "label": "realizadoA"
+    },
+    {
+      "tail": "Catálogo",
+      "head": "prod 1: producto",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Catálogo",
+      "head": "prod 2: producto",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Cliente\n",
+      "head": "Catálogo",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Cliente\n",
+      "head": "Pedido",
+      "class": "UndirectedAssociation",
+      "label": "Realiza"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "text": "Prodotto",
+      "attributes": [
+        "Nome: string",
+        "Descrizione: string",
+        "Immagine: string",
+        "Prezzo: currency"
+      ],
+      "methods": null,
+      "id": "Prodotto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Lista nozze",
+      "attributes": [
+        "cod: string",
+        "data: date"
+      ],
+      "methods": null,
+      "id": "Lista nozze",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sposi",
+      "attributes": [
+        "cod: string",
+        "nome: string",
+        "cognome: string"
+      ],
+      "methods": null,
+      "id": "Sposi",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Negozio",
+      "attributes": [
+        "Nome: string",
+        "Prov: string",
+        "Comune: string",
+        "Via: string",
+        "Nciv: string"
+      ],
+      "methods": null,
+      "id": "Negozio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Amico",
+      "attributes": [
+        "cod: string",
+        "nome: string",
+        "cognome: string",
+        "datan: date"
+      ],
+      "methods": null,
+      "id": "Amico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Regalo",
+      "attributes": null,
+      "methods": null,
+      "id": "Regalo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "prenotazione",
+      "attributes": [
+        "datap: date",
+        "data scadenza: date",
+        "importo: currency",
+        "pagato: boolean"
+      ],
+      "methods": null,
+      "id": "prenotazione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Lista nozze",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "Appartiene"
+    },
+    {
+      "tail": "Lista nozze",
+      "head": "Sposi",
+      "class": "UndirectedAssociation",
+      "label": "scelgono"
+    },
+    {
+      "tail": "Lista nozze",
+      "head": "Negozio",
+      "class": "UndirectedAssociation",
+      "label": "Negozio"
+    },
+    {
+      "tail": "Amico",
+      "head": "Lista nozze",
+      "class": "UndirectedAssociation",
+      "label": "Consulta"
+    },
+    {
+      "tail": "Amico",
+      "head": "Regalo",
+      "class": "UndirectedAssociation",
+      "label": "prenota"
+    },
+    {
+      "tail": "Regalo",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "diventa"
+    }
+  ],
+  "groups": []
+}

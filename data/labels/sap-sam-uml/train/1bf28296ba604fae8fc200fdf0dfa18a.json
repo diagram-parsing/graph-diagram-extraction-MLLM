@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "text": "Slot giornaliero",
+      "attributes": [
+        "da: Time",
+        "a: Time",
+        "Maxcap: Int"
+      ],
+      "methods": null,
+      "id": "Slot giornaliero",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cliente",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "Cod_fisc: String"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prenotazione",
+      "attributes": [
+        "Cod_prenotazione: String",
+        "Cancellata: Boolean",
+        "Variata: Boolean",
+        "Annullata: Boolean",
+        "Data: Date"
+      ],
+      "methods": null,
+      "id": "Prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Gestore",
+      "attributes": [
+        "Nome: String",
+        "Codice: String"
+      ],
+      "methods": null,
+      "id": "Gestore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Conferma",
+      "attributes": [
+        "Confermata: Boolean"
+      ],
+      "methods": null,
+      "id": "Conferma",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Avviso",
+      "attributes": [
+        "Avviso_attenzione: Boolean"
+      ],
+      "methods": null,
+      "id": "Avviso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Appuntamento fallito",
+      "attributes": [
+        "Data: Date",
+        "Punteggio : Float",
+        "Tariffa: Currency",
+        "Pagata: Boolean"
+      ],
+      "methods": null,
+      "id": "Appuntamento fallito",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "No-show",
+      "attributes": [
+        "Data: Date",
+        "Punteggio: Float",
+        "Pagamento: Currency",
+        "Pagato: Boolean"
+      ],
+      "methods": null,
+      "id": "No-show",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cliente",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Gestore",
+      "class": "UndirectedAssociation",
+      "label": "richiama attenzione di"
+    },
+    {
+      "tail": "Cliente",
+      "head": "No-show",
+      "class": "UndirectedAssociation",
+      "label": "relativo a "
+    },
+    {
+      "tail": "Prenotazione",
+      "head": "Slot giornaliero",
+      "class": "UndirectedAssociation",
+      "label": "per "
+    },
+    {
+      "tail": "Prenotazione",
+      "head": "Gestore",
+      "class": "UndirectedAssociation",
+      "label": "conferma"
+    },
+    {
+      "tail": "Gestore",
+      "head": "Appuntamento fallito",
+      "class": "UndirectedAssociation",
+      "label": "Corrisponde"
+    }
+  ],
+  "groups": []
+}

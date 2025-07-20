@@ -1,0 +1,267 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "A",
+      "id": "A",
+      "class": "Task"
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "Task"
+    },
+    {
+      "text": "D",
+      "id": "D",
+      "class": "Task"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "Task"
+    },
+    {
+      "text": "F",
+      "id": "F",
+      "class": "Task"
+    },
+    {
+      "text": "G",
+      "id": "G",
+      "class": "Task"
+    },
+    {
+      "text": "H",
+      "id": "H",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "I",
+      "id": "I",
+      "class": "Task"
+    },
+    {
+      "text": "J",
+      "id": "J",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "K",
+      "id": "K",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "L",
+      "id": "L",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "A",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "D",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "D",
+      "head": "F",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "E",
+      "head": "K",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "F",
+      "head": "G",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "G",
+      "head": "H",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "H",
+      "head": "I",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "H",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "I",
+      "head": "J",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "J",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "J",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "K",
+      "head": "L",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "K",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "L",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "M",
+      "id": "M",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "N",
+      "id": "N",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "O",
+      "id": "O",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "StartEvent_1",
+        "Exclusive_Databased_Gateway_1",
+        "A",
+        "B",
+        "Exclusive_Databased_Gateway_2",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "EndEvent_1",
+        "I",
+        "J",
+        "Exclusive_Databased_Gateway_3",
+        "K",
+        "L"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

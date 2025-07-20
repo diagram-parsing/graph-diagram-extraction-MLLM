@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "text": "OPID",
+      "attributes": null,
+      "methods": null,
+      "id": "OPID",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "PRID",
+      "attributes": null,
+      "methods": null,
+      "id": "PRID",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "BasID",
+      "attributes": null,
+      "methods": null,
+      "id": "BasID",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "precio",
+      "attributes": null,
+      "methods": null,
+      "id": "precio",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "fechaEfectiva",
+      "attributes": null,
+      "methods": null,
+      "id": "fechaEfectiva",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "OPID",
+      "head": "fechaEfectiva",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "OPID",
+      "head": "precio",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "OPID",
+      "head": "BasID",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "OPID",
+      "head": "PRID",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

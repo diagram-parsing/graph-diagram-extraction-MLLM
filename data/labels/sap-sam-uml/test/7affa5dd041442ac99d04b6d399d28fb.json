@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "text": "Centro di servizio",
+      "attributes": [
+        "Codice: String",
+        "Indirizzo: String",
+        "Telefono: int"
+      ],
+      "methods": null,
+      "id": "Centro di servizio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Impiegato",
+      "attributes": [
+        "CF: String",
+        "Nome: String",
+        "Titolo: String",
+        "Tel: Int"
+      ],
+      "methods": null,
+      "id": "Impiegato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "mansione",
+      "attributes": [
+        "inizio: date",
+        "fine: date",
+        "carica: String"
+      ],
+      "methods": null,
+      "id": "mansione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "film",
+      "attributes": [
+        "nome: string",
+        "regista: string",
+        "aa_registrazione: date",
+        "prezzo_noleggio: currency",
+        "disponibilità: boolean"
+      ],
+      "methods": null,
+      "id": "film",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "attori",
+      "attributes": [
+        "nome: string"
+      ],
+      "methods": null,
+      "id": "attori",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "collocazione",
+      "attributes": [
+        "posto: string",
+        "settore: int",
+        "no_copie: int"
+      ],
+      "methods": null,
+      "id": "collocazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "centro distribuzione",
+      "attributes": [
+        "nome: string",
+        "tel: int",
+        "codice: string"
+      ],
+      "methods": null,
+      "id": "centro distribuzione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "",
+      "attributes": [
+        "prezzo: currency"
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Centro di servizio",
+      "head": "mansione",
+      "class": "UndirectedAssociation",
+      "label": "nel"
+    },
+    {
+      "tail": "Centro di servizio",
+      "head": "film",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "mansione",
+      "head": "Impiegato",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "film",
+      "head": "film",
+      "class": "UndirectedAssociation",
+      "label": "remake di"
+    },
+    {
+      "tail": "attori",
+      "head": "film",
+      "class": "UndirectedAssociation",
+      "label": "con "
+    },
+    {
+      "tail": "centro distribuzione",
+      "head": "film",
+      "class": "UndirectedAssociation",
+      "label": "distribuisce"
+    }
+  ],
+  "groups": []
+}

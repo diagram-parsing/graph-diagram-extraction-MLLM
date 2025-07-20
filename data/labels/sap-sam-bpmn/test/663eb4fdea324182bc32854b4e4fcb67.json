@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "text": "Open iTunes Store",
+      "id": "Open iTunes Store",
+      "class": "Task"
+    },
+    {
+      "text": "Locate album",
+      "id": "Locate album",
+      "class": "Task"
+    },
+    {
+      "text": "Customer wishes \nto purchase album",
+      "id": "Customer wishes \nto purchase album",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Select price",
+      "id": "Select price",
+      "class": "Task"
+    },
+    {
+      "text": "Exit itunes",
+      "id": "Exit itunes",
+      "class": "Task"
+    },
+    {
+      "text": "Purchase failed",
+      "id": "Purchase failed",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Select Buy",
+      "id": "Select Buy",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Sign in to Apple ID",
+      "id": "Sign in to Apple ID",
+      "class": "Task"
+    },
+    {
+      "text": "Create Apple ID",
+      "id": "Create Apple ID",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Purchase successful",
+      "id": "Purchase successful",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Purchase Unsuccessful",
+      "id": "Purchase Unsuccessful",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Open iTunes Store",
+      "head": "Locate album",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Locate album",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Customer wishes \nto purchase album",
+      "head": "Open iTunes Store",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Select price",
+      "class": "SequenceFlow",
+      "label": "album found"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exit itunes",
+      "class": "SequenceFlow",
+      "label": "album not found"
+    },
+    {
+      "tail": "Select price",
+      "head": "Select Buy",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exit itunes",
+      "head": "Purchase failed",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Buy",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Sign in to Apple ID",
+      "class": "SequenceFlow",
+      "label": "Customer has \napple ID"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Create Apple ID",
+      "class": "SequenceFlow",
+      "label": "Customer does not\nhave Apple ID"
+    },
+    {
+      "tail": "Sign in to Apple ID",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Create Apple ID",
+      "head": "Sign in to Apple ID",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Purchase successful",
+      "class": "SequenceFlow",
+      "label": "No error received"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Purchase Unsuccessful",
+      "class": "SequenceFlow",
+      "label": "Errors received"
+    }
+  ],
+  "groups": []
+}

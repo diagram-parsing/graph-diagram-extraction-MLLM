@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "text": "Review seasonal demand",
+      "id": "Review seasonal demand",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Call store to verify inventory",
+      "id": "Call store to verify inventory",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Review seasonal demand",
+      "head": "Call store to verify inventory",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Purchase",
+      "id": "Purchase",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Review seasonal demand",
+        "Call store to verify inventory"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

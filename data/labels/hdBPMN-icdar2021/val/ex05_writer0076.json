@@ -1,0 +1,236 @@
+{
+  "nodes": [
+    {
+      "text": "claim submitted",
+      "id": "claim submitted",
+      "class": "messageEvent"
+    },
+    {
+      "text": "check insrance",
+      "id": "check insrance",
+      "class": "task"
+    },
+    {
+      "text": "perform assessment",
+      "id": "perform assessment",
+      "class": "task"
+    },
+    {
+      "text": "contact garage",
+      "id": "contact garage",
+      "class": "task"
+    },
+    {
+      "text": "pick up claim",
+      "id": "pick up claim",
+      "class": "task"
+    },
+    {
+      "text": "check documents",
+      "id": "check documents",
+      "class": "task"
+    },
+    {
+      "text": "register claim",
+      "id": "register claim",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "schedule payment",
+      "id": "schedule payment",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_4",
+      "class": "exclusiveGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "check documents",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "register claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": "fail"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": "fail"
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "contact garage",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "schedule payment",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "schedule payment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": "fail"
+    },
+    {
+      "tail": "perform assessment",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "perform assessment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check insrance",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pick up claim",
+      "head": "check insrance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register claim",
+      "head": "pick up claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim submitted",
+      "head": "check documents",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "contact garage",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "costumer",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "costumer",
+      "head": "claim submitted",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "KFZ",
+      "nodes": [
+        "Handling departmnet",
+        "notification department"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "Handling departmnet",
+      "nodes": [
+        "check insrance",
+        "perform assessment",
+        "pick up claim",
+        "exclusiveGateway_1",
+        "exclusiveGateway_2",
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "schedule payment",
+        "messageEvent_1",
+        "exclusiveGateway_4"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "notification department",
+      "nodes": [
+        "claim submitted",
+        "check documents",
+        "register claim",
+        "exclusiveGateway_3"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "costumer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

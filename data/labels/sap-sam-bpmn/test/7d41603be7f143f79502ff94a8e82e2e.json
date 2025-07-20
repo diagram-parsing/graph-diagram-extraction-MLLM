@@ -1,0 +1,226 @@
+{
+  "nodes": [
+    {
+      "text": "IMAC-Hülle erstellen",
+      "id": "IMAC-Hülle erstellen",
+      "class": "Task"
+    },
+    {
+      "text": "Auswahl SID-Produkte",
+      "id": "Auswahl SID-Produkte",
+      "class": "Task"
+    },
+    {
+      "text": "Komplettieren mit \"General Services\"",
+      "id": "Komplettieren mit \"General Services\"",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_1",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "",
+      "id": "StartMessageEvent_1",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "E-Mail lesen und verstehen",
+      "id": "E-Mail lesen und verstehen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Prüfen, ob neuer User angelegt werden muss",
+      "id": "Prüfen, ob neuer User angelegt werden muss",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Neuen User anlegen",
+      "id": "Neuen User anlegen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_1",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "IntermediateTimerEvent_1",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Trannsfer geschäftlicher Anforderungen in technische Anforderungen",
+      "id": "Trannsfer geschäftlicher Anforderungen in technische Anforderungen",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_2",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "IMAC-Hülle erstellen",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auswahl SID-Produkte",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Komplettieren mit \"General Services\"",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Auswahl SID-Produkte",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Komplettieren mit \"General Services\"",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartMessageEvent_1",
+      "head": "E-Mail lesen und verstehen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "E-Mail lesen und verstehen",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "IMAC-Hülle erstellen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Prüfen, ob neuer User angelegt werden muss",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prüfen, ob neuer User angelegt werden muss",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Neuen User anlegen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Neuen User anlegen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_1",
+      "head": "Trannsfer geschäftlicher Anforderungen in technische Anforderungen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Trannsfer geschäftlicher Anforderungen in technische Anforderungen",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "IntermediateTimerEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "MyMDS 4.0",
+      "id": "MyMDS 4.0",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "IMAC-Hülle erstellen",
+        "Auswahl SID-Produkte",
+        "Komplettieren mit \"General Services\"",
+        "OR_Gateway_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

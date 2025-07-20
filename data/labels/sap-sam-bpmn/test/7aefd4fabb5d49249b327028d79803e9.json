@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "text": "credentials from user retrieved",
+      "id": "credentials from user retrieved",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Username validated",
+      "id": "Username validated",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "invalid username logged",
+      "id": "invalid username logged",
+      "class": "Task"
+    },
+    {
+      "text": "password trial set to zero",
+      "id": "password trial set to zero",
+      "class": "Task"
+    },
+    {
+      "text": "password validated",
+      "id": "password validated",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "routine interrupted",
+      "id": "routine interrupted",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "number of trial +1",
+      "id": "number of trial +1",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "account frozen ",
+      "id": "account frozen ",
+      "class": "Task"
+    },
+    {
+      "text": "process ended",
+      "id": "process ended",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "procedure interrupted",
+      "id": "procedure interrupted",
+      "class": "Task"
+    },
+    {
+      "text": "notification to try later",
+      "id": "notification to try later",
+      "class": "EndEvent"
+    },
+    {
+      "text": "CAPTCHA test ",
+      "id": "CAPTCHA test ",
+      "class": "Task"
+    },
+    {
+      "text": "user is logged in",
+      "id": "user is logged in",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "credentials from user retrieved",
+      "head": "Username validated",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Username validated",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "invalid username logged",
+      "class": "SequenceFlow",
+      "label": "username invalid"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "password trial set to zero",
+      "class": "SequenceFlow",
+      "label": "username valid"
+    },
+    {
+      "tail": "invalid username logged",
+      "head": "routine interrupted",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "password trial set to zero",
+      "head": "password validated",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "password validated",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "number of trial +1",
+      "class": "SequenceFlow",
+      "label": "incorrect"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "user is logged in",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "number of trial +1",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "account frozen ",
+      "class": "SequenceFlow",
+      "label": "> 3"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": "< 3"
+    },
+    {
+      "tail": "account frozen ",
+      "head": "process ended",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "procedure interrupted",
+      "class": "SequenceFlow",
+      "label": "CAPTCHA unavailable"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "CAPTCHA test ",
+      "class": "SequenceFlow",
+      "label": "CAPTCHA available"
+    },
+    {
+      "tail": "procedure interrupted",
+      "head": "notification to try later",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "CAPTCHA test ",
+      "head": "password validated",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

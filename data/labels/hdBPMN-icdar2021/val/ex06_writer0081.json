@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": "attach order to pinboard",
+      "id": "attach order to pinboard",
+      "class": "task"
+    },
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "write down order note",
+      "id": "write down order note",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "eventBasedGateway_1",
+      "class": "eventBasedGateway"
+    },
+    {
+      "text": "order by liferando",
+      "id": "order by liferando",
+      "class": "messageEvent"
+    },
+    {
+      "text": "order by website",
+      "id": "order by website",
+      "class": "messageEvent"
+    },
+    {
+      "text": "order by phone",
+      "id": "order by phone",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "order",
+      "id": "order",
+      "class": "dataObject"
+    },
+    {
+      "text": "order note",
+      "id": "order note",
+      "class": "dataObject"
+    },
+    {
+      "text": "print",
+      "id": "print",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "order by website",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order by phone",
+      "head": "write down order note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "attach order to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order by liferando",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "order by phone",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "order by website",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "order by liferando",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_1",
+      "head": "eventBasedGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print",
+      "head": "attach order to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order",
+      "head": "confirm order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "print",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order by liferando",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order by website",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order by phone",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "liferando/ website/ phone",
+      "head": "order by phone",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": null,
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "liferando/ website/ phone",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

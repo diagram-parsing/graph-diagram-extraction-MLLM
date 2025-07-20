@@ -1,0 +1,94 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "A",
+      "id": "A",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "D",
+      "id": "D",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "IntermediateEvent_1",
+      "class": "IntermediateEvent"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "D",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "E",
+      "head": "A",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateEvent_1",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateEvent_1",
+      "head": "TextAnnotation_1",
+      "class": "Association_Undirected",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

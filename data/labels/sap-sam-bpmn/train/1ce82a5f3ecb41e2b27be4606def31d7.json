@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "text": "Õppimissoov",
+      "id": "Õppimissoov",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Dokumentide esitamine SAISis",
+      "id": "Dokumentide esitamine SAISis",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Sisseastumis-\neksamite läbimine",
+      "id": "Sisseastumis-\neksamite läbimine",
+      "class": "Task"
+    },
+    {
+      "text": "Avaldust ei rahuldata",
+      "id": "Avaldust ei rahuldata",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Eksami-\ntulemuste avalikustamine",
+      "id": "Eksami-\ntulemuste avalikustamine",
+      "class": "Task"
+    },
+    {
+      "text": "Õppetööle vastu võetud",
+      "id": "Õppetööle vastu võetud",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Eeldustele vastamine",
+      "id": "Eeldustele vastamine",
+      "class": "Task"
+    },
+    {
+      "text": "Eritingimustele vastamine\n",
+      "id": "Eritingimustele vastamine\n",
+      "class": "Task"
+    },
+    {
+      "text": "Õppetööle vastu võetud",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Õppimatulekust teavitamine SAIS-is",
+      "id": "Õppimatulekust teavitamine SAIS-is",
+      "class": "Task"
+    },
+    {
+      "text": "Tasulise koha lepingu sõlmimine",
+      "id": "Tasulise koha lepingu sõlmimine",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Tasuta õppekoht\n",
+      "id": "Tasuta õppekoht\n",
+      "class": "Task"
+    },
+    {
+      "text": "Õppetööle vastu võetud",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Õppimissoov",
+      "head": "Dokumentide esitamine SAISis",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Dokumentide esitamine SAISis",
+      "head": "Eeldustele vastamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Sisseastumis-\neksamite läbimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Avaldust ei rahuldata",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Eritingimustele vastamine\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Sisseastumis-\neksamite läbimine",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Eksami-\ntulemuste avalikustamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Eksami-\ntulemuste avalikustamine",
+      "head": "Õppimatulekust teavitamine SAIS-is",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Eeldustele vastamine",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Eritingimustele vastamine\n",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Õppimatulekust teavitamine SAIS-is",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Tasulise koha lepingu sõlmimine",
+      "head": "Õppetööle vastu võetud",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Tasulise koha lepingu sõlmimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Tasuta õppekoht\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Tasuta õppekoht\n",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

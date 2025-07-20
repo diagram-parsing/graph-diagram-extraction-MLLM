@@ -1,0 +1,103 @@
+{
+  "nodes": [
+    {
+      "text": "Articolo",
+      "attributes": [
+        "nome: stirng",
+        "descrizione: string",
+        "immagine: string"
+      ],
+      "methods": null,
+      "id": "Articolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ListaNozze",
+      "attributes": [
+        "nomeSposo: string",
+        "nomeSposa: string"
+      ],
+      "methods": null,
+      "id": "ListaNozze",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "negozio",
+      "attributes": [
+        "nome: string",
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "negozio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "regalo",
+      "attributes": null,
+      "methods": null,
+      "id": "regalo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "catalogo",
+      "attributes": [
+        "prezzo: double"
+      ],
+      "methods": null,
+      "id": "catalogo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Amico",
+      "attributes": [
+        "nome: string",
+        "cognome: string"
+      ],
+      "methods": null,
+      "id": "Amico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "prenota",
+      "attributes": [
+        "acquistato: boolean"
+      ],
+      "methods": null,
+      "id": "prenota",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "ListaNozze",
+      "head": "regalo",
+      "class": "UndirectedAssociation",
+      "label": "contenente"
+    },
+    {
+      "tail": "ListaNozze",
+      "head": "negozio",
+      "class": "UndirectedAssociation",
+      "label": "gestitaDa"
+    },
+    {
+      "tail": "ListaNozze",
+      "head": "Amico",
+      "class": "UndirectedAssociation",
+      "label": "inviataA"
+    },
+    {
+      "tail": "regalo",
+      "head": "Articolo",
+      "class": "UndirectedAssociation",
+      "label": "associatoA"
+    },
+    {
+      "tail": "Amico",
+      "head": "regalo",
+      "class": "UndirectedAssociation",
+      "label": "prenota"
+    }
+  ],
+  "groups": []
+}

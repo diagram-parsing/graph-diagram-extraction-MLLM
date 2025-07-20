@@ -1,0 +1,183 @@
+{
+  "nodes": [
+    {
+      "text": "Clasify the request",
+      "id": "Clasify the request",
+      "class": "Task"
+    },
+    {
+      "text": "qutation request",
+      "id": "qutation request",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Complex\n",
+      "id": "Complex\n",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Credit the prices on the pricellst\n",
+      "id": "Credit the prices on the pricellst\n",
+      "class": "Task"
+    },
+    {
+      "text": "Ask for assistance",
+      "id": "Ask for assistance",
+      "class": "Task"
+    },
+    {
+      "text": "tgujh ",
+      "id": "tgujh ",
+      "class": "Task"
+    },
+    {
+      "text": "yjuyghde",
+      "id": "yjuyghde",
+      "class": "Task"
+    },
+    {
+      "text": "tghkm",
+      "id": "tghkm",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "hjkuiyvf",
+      "id": "hjkuiyvf",
+      "class": "Task"
+    },
+    {
+      "text": "umjtym",
+      "id": "umjtym",
+      "class": "Task"
+    },
+    {
+      "text": "ytudm6",
+      "id": "ytudm6",
+      "class": "Task"
+    },
+    {
+      "text": "5t74j",
+      "id": "5t74j",
+      "class": "Task"
+    },
+    {
+      "text": "6rd5cx",
+      "id": "6rd5cx",
+      "class": "Task"
+    },
+    {
+      "text": "redty m",
+      "id": "redty m",
+      "class": "Task"
+    },
+    {
+      "text": "d5rt6y7um",
+      "id": "d5rt6y7um",
+      "class": "Task"
+    },
+    {
+      "text": "ou;uwsh\n",
+      "id": "ou;uwsh\n",
+      "class": "EndMessageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Clasify the request",
+      "head": "Complex\n",
+      "class": "SequenceFlow",
+      "label": "simple or camplex?\n"
+    },
+    {
+      "tail": "qutation request",
+      "head": "Clasify the request",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Complex\n",
+      "head": "Credit the prices on the pricellst\n",
+      "class": "SequenceFlow",
+      "label": "Simple\n"
+    },
+    {
+      "tail": "Complex\n",
+      "head": "Ask for assistance",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Credit the prices on the pricellst\n",
+      "head": "d5rt6y7um",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ask for assistance",
+      "head": "tgujh ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "tgujh ",
+      "head": "yjuyghde",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "yjuyghde",
+      "head": "tghkm",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "tghkm",
+      "head": "hjkuiyvf",
+      "class": "SequenceFlow",
+      "label": "ygh"
+    },
+    {
+      "tail": "tghkm",
+      "head": "umjtym",
+      "class": "SequenceFlow",
+      "label": "gyhju c"
+    },
+    {
+      "tail": "hjkuiyvf",
+      "head": "5t74j",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "umjtym",
+      "head": "ytudm6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "5t74j",
+      "head": "6rd5cx",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "6rd5cx",
+      "head": "redty m",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "redty m",
+      "head": "ytudm6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "d5rt6y7um",
+      "head": "ou;uwsh\n",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

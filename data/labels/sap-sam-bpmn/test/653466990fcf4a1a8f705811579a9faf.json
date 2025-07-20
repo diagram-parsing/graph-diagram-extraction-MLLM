@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "text": "OC Recibida",
+      "id": "OC Recibida",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Verifica existencias",
+      "id": "Verifica existencias",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Rechaza OC",
+      "id": "Rechaza OC",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "OC Recibida",
+      "head": "Verifica existencias",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica existencias",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Rechaza OC",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Surte pedido",
+      "id": "Surte pedido",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "Cliente",
+      "id": "Cliente",
+      "nodes": [],
+      "class": "CollapsedPool"
+    }
+  ]
+}

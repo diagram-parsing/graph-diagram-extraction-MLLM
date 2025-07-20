@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "text": "ServicePoint",
+      "attributes": [
+        "città: string",
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "ServicePoint",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Spedizione",
+      "attributes": [
+        "nomeMitt: string",
+        "indirizzoMitt: string",
+        "nomeDest: string",
+        "indirizzoDest: string",
+        "telefono: string",
+        "isAccettata: boolean",
+        "isConfermata: boolean"
+      ],
+      "methods": null,
+      "id": "Spedizione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Percorso",
+      "attributes": [
+        "dataPartenza: string"
+      ],
+      "methods": null,
+      "id": "Percorso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tratta",
+      "attributes": [
+        "oraPartenza: datetime",
+        "oraArrivo: datetime"
+      ],
+      "methods": null,
+      "id": "Tratta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Centro Smistamento",
+      "attributes": [
+        "nome: string",
+        "oraArrivo: datetime"
+      ],
+      "methods": null,
+      "id": "Centro Smistamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pacco",
+      "attributes": [
+        "dimensione: string",
+        "peso: double",
+        "isIntegro: boolean"
+      ],
+      "methods": null,
+      "id": "Pacco",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Destinatario",
+      "attributes": [
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "Destinatario",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "ServicePoint",
+      "head": "Spedizione",
+      "class": "UndirectedAssociation",
+      "label": "si occupa"
+    },
+    {
+      "tail": "Spedizione",
+      "head": "Percorso",
+      "class": "UndirectedAssociation",
+      "label": "relativo a"
+    },
+    {
+      "tail": "Spedizione",
+      "head": "Pacco",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "Percorso",
+      "head": "Tratta",
+      "class": "UndirectedAssociation",
+      "label": "composto da"
+    },
+    {
+      "tail": "Tratta",
+      "head": "ServicePoint",
+      "class": "UndirectedAssociation",
+      "label": "da"
+    },
+    {
+      "tail": "Tratta",
+      "head": "Centro Smistamento",
+      "class": "UndirectedAssociation",
+      "label": "a"
+    },
+    {
+      "tail": "Centro Smistamento",
+      "head": "Tratta",
+      "class": "UndirectedAssociation",
+      "label": "da"
+    },
+    {
+      "tail": "Centro Smistamento",
+      "head": "Destinatario",
+      "class": "UndirectedAssociation",
+      "label": "a"
+    }
+  ],
+  "groups": []
+}

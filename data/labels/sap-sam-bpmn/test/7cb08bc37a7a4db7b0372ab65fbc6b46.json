@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Prescribe Further Medication",
+      "id": "Prescribe Further Medication",
+      "class": "Task"
+    },
+    {
+      "text": "Send Discharge Confirmtion",
+      "id": "Send Discharge Confirmtion",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Discharge patient",
+      "id": "Discharge patient",
+      "class": "Task"
+    },
+    {
+      "text": "Start Follow-up\nDiagnosis",
+      "id": "Start Follow-up\nDiagnosis",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Prescribe Further Medication",
+      "head": "Send Discharge Confirmtion",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Discharge patient",
+      "head": "Send Discharge Confirmtion",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Start Follow-up\nDiagnosis",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Prescribe Further Medication",
+      "class": "SequenceFlow",
+      "label": "Need further medication"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Discharge patient",
+      "class": "SequenceFlow",
+      "label": "Does not Need Further Madication"
+    }
+  ],
+  "groups": []
+}

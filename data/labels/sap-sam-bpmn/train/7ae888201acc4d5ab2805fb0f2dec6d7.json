@@ -1,0 +1,210 @@
+{
+  "nodes": [
+    {
+      "text": "Each Hour",
+      "id": "Each Hour",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Review Email",
+      "id": "Review Email",
+      "class": "Task"
+    },
+    {
+      "text": "XML Folder Exist",
+      "id": "XML Folder Exist",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Send Email",
+      "id": "Send Email",
+      "class": "Task"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Download all attachments into \"Download\" folder",
+      "id": "Download all attachments into \"Download\" folder",
+      "class": "Task"
+    },
+    {
+      "text": "Move all \"Facturas\" emails to \"XML\" email folder",
+      "id": "Move all \"Facturas\" emails to \"XML\" email folder",
+      "class": "Task"
+    },
+    {
+      "text": "Create folders: \"News\", \"Trash\", \"Renamed\"",
+      "id": "Create folders: \"News\", \"Trash\", \"Renamed\"",
+      "class": "Task"
+    },
+    {
+      "text": "XML file?",
+      "id": "XML file?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Create folder: \"Donwloads\"",
+      "id": "Create folder: \"Donwloads\"",
+      "class": "Task"
+    },
+    {
+      "text": "Duplicated",
+      "id": "Duplicated",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Move to folder \"News\"",
+      "id": "Move to folder \"News\"",
+      "class": "Task"
+    },
+    {
+      "text": "Rename and move to folder \"Renamed\"",
+      "id": "Rename and move to folder \"Renamed\"",
+      "class": "Task"
+    },
+    {
+      "text": "Duplicated",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Rename and move to folder \"Trash\"",
+      "id": "Rename and move to folder \"Trash\"",
+      "class": "Task"
+    },
+    {
+      "text": "Move to folder \"Trash\"",
+      "id": "Move to folder \"Trash\"",
+      "class": "Task"
+    },
+    {
+      "text": "Create Excel report file",
+      "id": "Create Excel report file",
+      "class": "Task"
+    },
+    {
+      "text": "Send report by email",
+      "id": "Send report by email",
+      "class": "Task"
+    },
+    {
+      "text": "End",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Each Hour",
+      "head": "Review Email",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Review Email",
+      "head": "XML Folder Exist",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "XML Folder Exist",
+      "head": "Send Email",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "XML Folder Exist",
+      "head": "Create folder: \"Donwloads\"",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Send Email",
+      "head": "End",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Download all attachments into \"Download\" folder",
+      "head": "Move all \"Facturas\" emails to \"XML\" email folder",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Move all \"Facturas\" emails to \"XML\" email folder",
+      "head": "Create folders: \"News\", \"Trash\", \"Renamed\"",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Create folders: \"News\", \"Trash\", \"Renamed\"",
+      "head": "XML file?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "XML file?",
+      "head": "Duplicated",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "XML file?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Create folder: \"Donwloads\"",
+      "head": "Download all attachments into \"Download\" folder",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Duplicated",
+      "head": "Move to folder \"News\"",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Duplicated",
+      "head": "Rename and move to folder \"Renamed\"",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Move to folder \"News\"",
+      "head": "Create Excel report file",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Rename and move to folder \"Trash\"",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Move to folder \"Trash\"",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Create Excel report file",
+      "head": "Send report by email",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send report by email",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

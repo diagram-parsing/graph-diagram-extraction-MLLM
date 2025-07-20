@@ -1,0 +1,162 @@
+{
+  "nodes": [
+    {
+      "text": "Firma",
+      "attributes": null,
+      "methods": null,
+      "id": "Firma",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Standort",
+      "attributes": null,
+      "methods": null,
+      "id": "Standort",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Gebäude",
+      "attributes": [
+        "Hausnummer: "
+      ],
+      "methods": null,
+      "id": "Gebäude",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Büro",
+      "attributes": [
+        "Nummer: ",
+        "Namensschild: "
+      ],
+      "methods": null,
+      "id": "Büro",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kantine",
+      "attributes": null,
+      "methods": null,
+      "id": "Kantine",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Angestellter",
+      "attributes": [
+        "ID: "
+      ],
+      "methods": null,
+      "id": "Angestellter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Chef",
+      "attributes": null,
+      "methods": [
+        "entscheiden()"
+      ],
+      "id": "Chef",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Arbeiter",
+      "attributes": null,
+      "methods": [
+        "arbeiten()"
+      ],
+      "id": "Arbeiter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Führungsperson",
+      "attributes": null,
+      "methods": [
+        "leiten()"
+      ],
+      "id": "Führungsperson",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Produkt",
+      "attributes": null,
+      "methods": null,
+      "id": "Produkt",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Firma",
+      "head": "Standort",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Standort",
+      "head": "Arbeiter",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Standort",
+      "head": "Chef",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Standort",
+      "head": "Führungsperson",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Standort",
+      "head": "Gebäude",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Gebäude",
+      "head": "Büro",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Gebäude",
+      "head": "Kantine",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Angestellter",
+      "head": "Chef",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Angestellter",
+      "head": "Führungsperson",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Angestellter",
+      "head": "Arbeiter",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Führungsperson",
+      "head": "Arbeiter",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Produkt",
+      "head": "Arbeiter",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

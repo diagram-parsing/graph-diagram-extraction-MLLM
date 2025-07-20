@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "text": "Person",
+      "attributes": [
+        "name: String",
+        "vorname: String",
+        "geburtsDatum: Datum",
+        "Telefon: Arraylist(INT)"
+      ],
+      "methods": null,
+      "id": "Person",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kunde",
+      "attributes": [
+        "kundenID: int"
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mitarbeiter",
+      "attributes": [
+        "maID: int",
+        "login: String",
+        "berechtigung: String",
+        "person: Person",
+        "password: char [ ]",
+        "urlaubstage: int",
+        "aktiv: int"
+      ],
+      "methods": null,
+      "id": "Mitarbeiter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Partnumber",
+      "attributes": [
+        "partNumberID: int",
+        "bezeichnung: String"
+      ],
+      "methods": null,
+      "id": "Partnumber",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bauteile",
+      "attributes": [
+        "bauteileListe: ArrayList"
+      ],
+      "methods": null,
+      "id": "Bauteile",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Auftrag",
+      "attributes": [
+        "auftragID: int"
+      ],
+      "methods": null,
+      "id": "Auftrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adresse\n",
+      "attributes": [
+        "hausNummer: int",
+        "strasse: String ",
+        "wohnort: String",
+        "plz: int",
+        "land: String",
+        "Zusatz: String"
+      ],
+      "methods": null,
+      "id": "Adresse\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Login",
+      "attributes": null,
+      "methods": null,
+      "id": "Login",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "HighSpeed_Main",
+      "attributes": [
+        "user: User"
+      ],
+      "methods": null,
+      "id": "HighSpeed_Main",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "JPanel1, JPanel2, JPanel3...",
+      "attributes": null,
+      "methods": null,
+      "id": "JPanel1, JPanel2, JPanel3...",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Person",
+      "head": "Kunde",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Mitarbeiter",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Kunde",
+      "head": "Auftrag",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Mitarbeiter",
+      "head": "HighSpeed_Main",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Partnumber",
+      "head": "Bauteile",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Bauteile",
+      "head": "Auftrag",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag",
+      "head": "HighSpeed_Main",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Adresse\n",
+      "head": "Person",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "HighSpeed_Main",
+      "head": "Login",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "JPanel1, JPanel2, JPanel3...",
+      "head": "HighSpeed_Main",
+      "class": "Composition",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

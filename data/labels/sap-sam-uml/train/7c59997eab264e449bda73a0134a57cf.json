@@ -1,0 +1,181 @@
+{
+  "nodes": [
+    {
+      "text": "Utente",
+      "attributes": null,
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Associazione",
+      "attributes": null,
+      "methods": null,
+      "id": "Associazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ente Pubblico",
+      "attributes": null,
+      "methods": null,
+      "id": "Ente Pubblico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Messaggio di testo",
+      "attributes": null,
+      "methods": null,
+      "id": "Messaggio di testo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Annotazione testuale",
+      "attributes": null,
+      "methods": null,
+      "id": "Annotazione testuale",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Documenti allegati",
+      "attributes": null,
+      "methods": null,
+      "id": "Documenti allegati",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Affidamento ",
+      "attributes": null,
+      "methods": null,
+      "id": "Affidamento ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Revoca",
+      "attributes": null,
+      "methods": null,
+      "id": "Revoca",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prenotazione",
+      "attributes": null,
+      "methods": null,
+      "id": "Prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Chiusura",
+      "attributes": null,
+      "methods": null,
+      "id": "Chiusura",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Organizzazione",
+      "attributes": null,
+      "methods": null,
+      "id": "Organizzazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Operatore",
+      "attributes": null,
+      "methods": null,
+      "id": "Operatore",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Associazione",
+      "head": "Revoca",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Associazione",
+      "head": "Affidamento ",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Ente Pubblico",
+      "head": "Messaggio di testo",
+      "class": "UndirectedAssociation",
+      "label": "segue"
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Chiusura",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Prenotazione",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Documenti allegati",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Annotazione testuale",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Affidamento ",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Revoca",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Utente",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Operatore",
+      "class": "UndirectedAssociation",
+      "label": "autoreDi"
+    },
+    {
+      "tail": "Messaggio di testo",
+      "head": "Associazione",
+      "class": "UndirectedAssociation",
+      "label": "AffidatoA"
+    },
+    {
+      "tail": "Organizzazione",
+      "head": "Ente Pubblico",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Organizzazione",
+      "head": "Associazione",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Organizzazione",
+      "head": "Operatore",
+      "class": "UndirectedAssociation",
+      "label": "LavoraPresso"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "text": "Änderungen vor Produktionsstart im Werk umsetzen ",
+      "id": "Änderungen vor Produktionsstart im Werk umsetzen ",
+      "class": "Task"
+    },
+    {
+      "text": "Änderungen nach Produktionsstart im Werk umsetzen ",
+      "id": "Änderungen nach Produktionsstart im Werk umsetzen ",
+      "class": "Task"
+    },
+    {
+      "text": "Änderungen außerhalb des Werk vor Abnahme umsetzen ",
+      "id": "Änderungen außerhalb des Werk vor Abnahme umsetzen ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Vollständige Umsetzung der Maßnahmen prüfen ",
+      "id": "Vollständige Umsetzung der Maßnahmen prüfen ",
+      "class": "Task"
+    },
+    {
+      "text": "Vollständig umgesetzt ",
+      "id": "Vollständig umgesetzt ",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Klärung mit Maßnahmen-verantwortlichen herbeiführen",
+      "id": "Klärung mit Maßnahmen-verantwortlichen herbeiführen",
+      "class": "Task"
+    },
+    {
+      "text": "OCM-Claim vervollständigen ",
+      "id": "OCM-Claim vervollständigen ",
+      "class": "Task"
+    },
+    {
+      "text": "OCM-Claim Abschließen",
+      "id": "OCM-Claim Abschließen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Außenmontage und Endmontage ",
+      "id": "Außenmontage und Endmontage ",
+      "class": "Task"
+    },
+    {
+      "text": "Zellen zusammenstellen und abnehmen ",
+      "id": "Zellen zusammenstellen und abnehmen ",
+      "class": "Task"
+    },
+    {
+      "text": "Einzelmaqschinen Abnehmen ",
+      "id": "Einzelmaqschinen Abnehmen ",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Änderungen vor Produktionsstart im Werk umsetzen ",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Änderungen nach Produktionsstart im Werk umsetzen ",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Änderungen außerhalb des Werk vor Abnahme umsetzen ",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Vollständige Umsetzung der Maßnahmen prüfen ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vollständige Umsetzung der Maßnahmen prüfen ",
+      "head": "Vollständig umgesetzt ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vollständig umgesetzt ",
+      "head": "Klärung mit Maßnahmen-verantwortlichen herbeiführen",
+      "class": "SequenceFlow",
+      "label": "Nein"
+    },
+    {
+      "tail": "Vollständig umgesetzt ",
+      "head": "OCM-Claim vervollständigen ",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "OCM-Claim vervollständigen ",
+      "head": "OCM-Claim Abschließen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OCM-Claim Abschließen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Einzelmaqschinen Abnehmen ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Zellen zusammenstellen und abnehmen ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Außenmontage und Endmontage ",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "text": "Persona 1\n",
+      "attributes": [
+        "DNI: ",
+        "Nombre: ",
+        "Apellidos: ",
+        "Fecha de nacimiento: ",
+        "Email: "
+      ],
+      "methods": null,
+      "id": "Persona 1\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Trabajador 1\n",
+      "attributes": [
+        "Sueldo: ",
+        "Puesto: ",
+        "Carnet conducir: "
+      ],
+      "methods": null,
+      "id": "Trabajador 1\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Trabajador Tienda",
+      "attributes": null,
+      "methods": null,
+      "id": "Trabajador Tienda",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Persona 2\n",
+      "attributes": [
+        "DNI: ",
+        "Nombre: ",
+        "Apellidos: ",
+        "Fecha de nacimiento: ",
+        "Email: "
+      ],
+      "methods": null,
+      "id": "Persona 2\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Trabajador 2\n",
+      "attributes": [
+        "Sueldo: ",
+        "Puesto: ",
+        "Carnet conducir: "
+      ],
+      "methods": null,
+      "id": "Trabajador 2\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Trabajador Almacén",
+      "attributes": null,
+      "methods": null,
+      "id": "Trabajador Almacén",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Persona 3\n",
+      "attributes": [
+        "DNI: ",
+        "Nombre: ",
+        "Apellidos: ",
+        "Fecha de nacimiento: ",
+        "Email: "
+      ],
+      "methods": null,
+      "id": "Persona 3\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Trabajador 3\n",
+      "attributes": [
+        "Sueldo: ",
+        "Puesto: ",
+        "Carnet conducir: "
+      ],
+      "methods": null,
+      "id": "Trabajador 3\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Repartidor",
+      "attributes": null,
+      "methods": null,
+      "id": "Repartidor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vehículo 1",
+      "attributes": [
+        "Matrícula: "
+      ],
+      "methods": null,
+      "id": "Vehículo 1",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Persona 1\n",
+      "head": "Trabajador 1\n",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Trabajador 1\n",
+      "head": "Trabajador Tienda",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Persona 2\n",
+      "head": "Trabajador 2\n",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Trabajador 2\n",
+      "head": "Trabajador Almacén",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Persona 3\n",
+      "head": "Trabajador 3\n",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Trabajador 3\n",
+      "head": "Repartidor",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Vehículo 1",
+      "head": "Repartidor",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

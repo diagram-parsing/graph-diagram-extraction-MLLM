@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "text": "ICar\n",
+      "attributes": null,
+      "methods": [
+        "accelerate()",
+        "shiftUp()",
+        "shiftDown()"
+      ],
+      "id": "ICar\n",
+      "class": "Interface"
+    },
+    {
+      "text": "Car\n",
+      "attributes": [
+        "speed: int",
+        "gear: int "
+      ],
+      "methods": null,
+      "id": "Car\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ElectricCar\n",
+      "attributes": [
+        "speed: int"
+      ],
+      "methods": null,
+      "id": "ElectricCar\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Car\n",
+      "head": "ICar\n",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "ElectricCar\n",
+      "head": "ICar\n",
+      "class": "Realization",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

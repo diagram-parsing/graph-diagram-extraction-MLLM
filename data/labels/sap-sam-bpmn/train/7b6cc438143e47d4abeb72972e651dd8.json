@@ -1,0 +1,227 @@
+{
+  "nodes": [
+    {
+      "text": "Auftrag/\nBestellvorschlag\nentgegengenommen",
+      "id": "Auftrag/\nBestellvorschlag\nentgegengenommen",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Auftrag erfassen",
+      "id": "Auftrag erfassen",
+      "class": "Task"
+    },
+    {
+      "text": "Auftrag\nerfasst",
+      "id": "Auftrag\nerfasst",
+      "class": "IntermediateEvent"
+    },
+    {
+      "text": "Lagerbestand prüfen",
+      "id": "Lagerbestand prüfen",
+      "class": "Task"
+    },
+    {
+      "text": "Ist genug\nauf Lager?",
+      "id": "Ist genug\nauf Lager?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "mit Lieferschein kommis-sionieren",
+      "id": "mit Lieferschein kommis-sionieren",
+      "class": "Task"
+    },
+    {
+      "text": "ERP System Lieferanten-schnittstelle",
+      "id": "ERP System Lieferanten-schnittstelle",
+      "class": "DataObject"
+    },
+    {
+      "text": "Telefon, E-Mail, Fax, persönlich, ERP System",
+      "id": "Telefon, E-Mail, Fax, persönlich, ERP System",
+      "class": "DataObject"
+    },
+    {
+      "text": "Lieferstatus\nerhalten",
+      "id": "Lieferstatus\nerhalten",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "ERP System",
+      "id": "ERP System",
+      "class": "DataObject"
+    },
+    {
+      "text": "ERP System",
+      "id": "DataObject_1",
+      "class": "DataObject"
+    },
+    {
+      "text": "Lieferung ist\nversandt",
+      "id": "Lieferung ist\nversandt",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Artikel\nbestellen",
+      "id": "Artikel\nbestellen",
+      "class": "Task"
+    },
+    {
+      "text": "ERP System",
+      "id": "DataObject_2",
+      "class": "DataObject"
+    },
+    {
+      "text": "Bestellung um \n12 und 17 Uhr \ndurchgeführt",
+      "id": "Bestellung um \n12 und 17 Uhr \ndurchgeführt",
+      "class": "IntermediateTimerEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Auftrag/\nBestellvorschlag\nentgegengenommen",
+      "head": "Auftrag erfassen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag/\nBestellvorschlag\nentgegengenommen",
+      "head": "Telefon, E-Mail, Fax, persönlich, ERP System",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag erfassen",
+      "head": "Auftrag\nerfasst",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag erfassen",
+      "head": "ERP System",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Auftrag\nerfasst",
+      "head": "Lagerbestand prüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagerbestand prüfen",
+      "head": "Ist genug\nauf Lager?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagerbestand prüfen",
+      "head": "ERP System",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Ist genug\nauf Lager?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Ist genug\nauf Lager?",
+      "head": "Artikel\nbestellen",
+      "class": "SequenceFlow",
+      "label": "nein"
+    },
+    {
+      "tail": "mit Lieferschein kommis-sionieren",
+      "head": "Lieferung ist\nversandt",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "mit Lieferschein kommis-sionieren",
+      "head": "DataObject_2",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Lieferstatus\nerhalten",
+      "head": "DataObject_1",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Lieferstatus\nerhalten",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "mit Lieferschein kommis-sionieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Artikel\nbestellen",
+      "head": "Bestellung um \n12 und 17 Uhr \ndurchgeführt",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Artikel\nbestellen",
+      "head": "ERP System Lieferanten-schnittstelle",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung um \n12 und 17 Uhr \ndurchgeführt",
+      "head": "Lieferstatus\nerhalten",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung um \n12 und 17 Uhr \ndurchgeführt",
+      "head": "ERP System Lieferanten-schnittstelle",
+      "class": "Association_Unidirectional",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Carpart GmbH Einkauf",
+      "id": "Carpart GmbH Einkauf",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Auftrag/\nBestellvorschlag\nentgegengenommen",
+        "Auftrag erfassen",
+        "Auftrag\nerfasst",
+        "Lagerbestand prüfen",
+        "Ist genug\nauf Lager?",
+        "mit Lieferschein kommis-sionieren",
+        "ERP System Lieferanten-schnittstelle",
+        "Telefon, E-Mail, Fax, persönlich, ERP System",
+        "Lieferstatus\nerhalten",
+        "Exclusive_Databased_Gateway_1",
+        "ERP System",
+        "DataObject_1",
+        "Lieferung ist\nversandt",
+        "Artikel\nbestellen",
+        "DataObject_2",
+        "Bestellung um \n12 und 17 Uhr \ndurchgeführt"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "text": "Produkt",
+      "attributes": null,
+      "methods": null,
+      "id": "Produkt",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Baugruppe",
+      "attributes": null,
+      "methods": null,
+      "id": "Baugruppe",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bauteil",
+      "attributes": null,
+      "methods": null,
+      "id": "Bauteil",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Aluprofil",
+      "attributes": null,
+      "methods": null,
+      "id": "Aluprofil",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Mutter",
+      "attributes": null,
+      "methods": null,
+      "id": "Mutter",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Schraube",
+      "attributes": null,
+      "methods": null,
+      "id": "Schraube",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Werk",
+      "attributes": null,
+      "methods": null,
+      "id": "Werk",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Lieferant",
+      "attributes": null,
+      "methods": null,
+      "id": "Lieferant",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Produktmanager",
+      "attributes": null,
+      "methods": null,
+      "id": "Produktmanager",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Produkt",
+      "head": "Baugruppe",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Produkt",
+      "head": "Werk",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bauteil",
+      "head": "Schraube",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Bauteil",
+      "head": "Mutter",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Bauteil",
+      "head": "Aluprofil",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Lieferant",
+      "head": "Baugruppe",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Lieferant",
+      "head": "Produkt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Produktmanager",
+      "head": "Produkt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "text": "A",
+      "id": "A",
+      "class": "Task"
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": "Task"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "D",
+      "id": "D",
+      "class": "Task"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "Task"
+    },
+    {
+      "text": "F",
+      "id": "F",
+      "class": "Task"
+    },
+    {
+      "text": "G",
+      "id": "G",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "A",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "D",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "F",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "D",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "F",
+      "head": "G",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "G",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

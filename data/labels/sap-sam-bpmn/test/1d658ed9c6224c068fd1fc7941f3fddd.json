@@ -1,0 +1,234 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "offence is registered",
+      "id": "offence is registered",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "judge offence",
+      "id": "judge offence",
+      "class": "Task"
+    },
+    {
+      "text": "investigate history",
+      "id": "investigate history",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "type?",
+      "id": "type?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "temporary judgement",
+      "id": "temporary judgement",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "final judgement",
+      "id": "final judgement",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_3",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "collect information about earlier offences",
+      "id": "collect information about earlier offences",
+      "class": "Task"
+    },
+    {
+      "text": "collect information about other offences committed by the offender",
+      "id": "collect information about other offences committed by the offender",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_4",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Determine fine",
+      "id": "Determine fine",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "send transfer form",
+      "id": "send transfer form",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "offence put in archives",
+      "id": "offence put in archives",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "offence is registered",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "offence is registered",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "judge offence",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "investigate history",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "judge offence",
+      "head": "type?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "investigate history",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Determine fine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "type?",
+      "head": "temporary judgement",
+      "class": "SequenceFlow",
+      "label": "severe"
+    },
+    {
+      "tail": "type?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "normal\n"
+    },
+    {
+      "tail": "temporary judgement",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "final judgement",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "final judgement",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "collect information about earlier offences",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "collect information about other offences committed by the offender",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "collect information about earlier offences",
+      "head": "AND_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "collect information about other offences committed by the offender",
+      "head": "AND_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_4",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Determine fine",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "send transfer form",
+      "class": "SequenceFlow",
+      "label": "fine>0"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": "fine = 0"
+    },
+    {
+      "tail": "send transfer form",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "offence put in archives",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

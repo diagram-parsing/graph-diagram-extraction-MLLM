@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Simple Claim Received",
+      "id": "Simple Claim Received",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Check Policy",
+      "id": "Check Policy",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Cancel Processing",
+      "id": "Cancel Processing",
+      "class": "Task"
+    },
+    {
+      "text": "Process Claimed",
+      "id": "Process Claimed",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Letter Sent",
+      "id": "Letter Sent",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Simple Claim Received",
+      "head": "Check Policy",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check Policy",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Cancel Processing",
+      "class": "SequenceFlow",
+      "label": "Not Valid"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Process Claimed",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cancel Processing",
+      "head": "Letter Sent",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

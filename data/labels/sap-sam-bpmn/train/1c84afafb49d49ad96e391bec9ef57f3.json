@@ -1,0 +1,172 @@
+{
+  "nodes": [
+    {
+      "text": "Soumission d'une candidature",
+      "id": "Soumission d'une candidature",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Etude de la demande",
+      "id": "Etude de la demande",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Non suite de la demande",
+      "id": "Non suite de la demande",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Programmation d'un entretient",
+      "id": "Programmation d'un entretient",
+      "class": "Task"
+    },
+    {
+      "text": "Reception de la date chez le client",
+      "id": "Reception de la date chez le client",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Passage de l'entretient",
+      "id": "Passage de l'entretient",
+      "class": "Task"
+    },
+    {
+      "text": "Vote des 6 experts",
+      "id": "Vote des 6 experts",
+      "class": "Task"
+    },
+    {
+      "text": "Réception des votes des expert ",
+      "id": "Réception des votes des expert ",
+      "class": "Task"
+    },
+    {
+      "text": "Envoie de la décision au client",
+      "id": "Envoie de la décision au client",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Candidat non retenue",
+      "id": "Candidat non retenue",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Candidat retenue",
+      "id": "Candidat retenue",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Prise de la descision",
+      "id": "Prise de la descision",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Soumission d'une candidature",
+      "head": "Etude de la demande",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Etude de la demande",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Non suite de la demande",
+      "class": "SequenceFlow",
+      "label": "Dossier non retenu"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Programmation d'un entretient",
+      "class": "SequenceFlow",
+      "label": "Dossier retenu"
+    },
+    {
+      "tail": "Programmation d'un entretient",
+      "head": "Reception de la date chez le client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reception de la date chez le client",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Passage de l'entretient",
+      "class": "SequenceFlow",
+      "label": "Date acceptée"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Programmation d'un entretient",
+      "class": "SequenceFlow",
+      "label": "Date refusée"
+    },
+    {
+      "tail": "Passage de l'entretient",
+      "head": "Vote des 6 experts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vote des 6 experts",
+      "head": "Réception des votes des expert ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Réception des votes des expert ",
+      "head": "Prise de la descision",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Envoie de la décision au client",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Candidat non retenue",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Candidat retenue",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prise de la descision",
+      "head": "Envoie de la décision au client",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

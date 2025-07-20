@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "text": "Einloggen\n",
+      "id": "Einloggen\n",
+      "class": "Task"
+    },
+    {
+      "text": "Bestellung auswählen\n",
+      "id": "Bestellung auswählen\n",
+      "class": "Task"
+    },
+    {
+      "text": "Stornierungswunsch \n",
+      "id": "Stornierungswunsch \n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Bestätigung empfangen\n",
+      "id": "Bestätigung empfangen\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Status empfangen",
+      "id": "Status empfangen",
+      "class": "Task"
+    },
+    {
+      "text": "Stornierung verschicken",
+      "id": "Stornierung verschicken",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "Stornierung einleiten\n",
+      "id": "Stornierung einleiten\n",
+      "class": "Task"
+    },
+    {
+      "text": "Bestätigung senden\n",
+      "id": "Bestätigung senden\n",
+      "class": "Task"
+    },
+    {
+      "text": "überprüfen ob Ware bereits verschickt worden ist \n",
+      "id": "überprüfen ob Ware bereits verschickt worden ist \n",
+      "class": "Task"
+    },
+    {
+      "text": "Stornierung erhalten",
+      "id": "Stornierung erhalten",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Stornierung nicht mehr möglich",
+      "id": "Stornierung nicht mehr möglich",
+      "class": "Task"
+    },
+    {
+      "text": "Stornierungsvorgang erfolgreich",
+      "id": "Stornierungsvorgang erfolgreich",
+      "class": "Task"
+    },
+    {
+      "text": "Status der Stornierung an Kunden weiterleiten",
+      "id": "Status der Stornierung an Kunden weiterleiten",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Einloggen\n",
+      "head": "Bestellung auswählen\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung auswählen\n",
+      "head": "Stornierung verschicken",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stornierungswunsch \n",
+      "head": "Einloggen\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestätigung empfangen\n",
+      "head": "Status empfangen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Status empfangen",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stornierung verschicken",
+      "head": "Bestätigung empfangen\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stornierung verschicken",
+      "head": "Stornierung erhalten",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stornierung einleiten\n",
+      "head": "Bestätigung senden\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestätigung senden\n",
+      "head": "Bestätigung empfangen\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestätigung senden\n",
+      "head": "überprüfen ob Ware bereits verschickt worden ist \n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "überprüfen ob Ware bereits verschickt worden ist \n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stornierung erhalten",
+      "head": "Stornierung einleiten\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Stornierung nicht mehr möglich",
+      "class": "SequenceFlow",
+      "label": "Ware bereits versandt\n"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Stornierungsvorgang erfolgreich",
+      "class": "SequenceFlow",
+      "label": "Ware noch nicht versandt"
+    },
+    {
+      "tail": "Stornierung nicht mehr möglich",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stornierungsvorgang erfolgreich",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Status der Stornierung an Kunden weiterleiten",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Status der Stornierung an Kunden weiterleiten",
+      "head": "Status empfangen",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Status der Stornierung an Kunden weiterleiten",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Kunde",
+      "id": "Kunde",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Einloggen\n",
+        "Bestellung auswählen\n",
+        "Stornierungswunsch \n",
+        "Bestätigung empfangen\n",
+        "EndEvent_1",
+        "Status empfangen",
+        "Stornierung verschicken"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Amazon",
+      "id": "Amazon",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Stornierung einleiten\n",
+        "Bestätigung senden\n",
+        "überprüfen ob Ware bereits verschickt worden ist \n",
+        "Stornierung erhalten",
+        "Exclusive_Databased_Gateway_1",
+        "Stornierung nicht mehr möglich",
+        "Stornierungsvorgang erfolgreich",
+        "Status der Stornierung an Kunden weiterleiten",
+        "EndEvent_2",
+        "Exclusive_Databased_Gateway_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

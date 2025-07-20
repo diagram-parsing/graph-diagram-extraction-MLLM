@@ -1,0 +1,173 @@
+{
+  "nodes": [
+    {
+      "text": "AcciónHumanitaria",
+      "attributes": [
+        "denominación: ",
+        "país: "
+      ],
+      "methods": null,
+      "id": "AcciónHumanitaria",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Campaña",
+      "attributes": [
+        "denominación: ",
+        "fechaInicio: ",
+        "fechaFin: ",
+        "presupuesto: "
+      ],
+      "methods": null,
+      "id": "Campaña",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Donación",
+      "attributes": [
+        "valorUnitario [0..1]: ",
+        "cantidad: "
+      ],
+      "methods": null,
+      "id": "Donación",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Donante",
+      "attributes": [
+        "nif: ",
+        "nombre: ",
+        "tipo:TipoDonante: "
+      ],
+      "methods": null,
+      "id": "Donante",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TipoRecurso",
+      "attributes": [
+        "nombre: ",
+        "tipoUnidad: "
+      ],
+      "methods": null,
+      "id": "TipoRecurso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TipoDonante",
+      "attributes": null,
+      "methods": null,
+      "id": "TipoDonante",
+      "class": "Enumeration"
+    },
+    {
+      "text": "Voluntario",
+      "attributes": [
+        "NIF: ",
+        "nombre: ",
+        "dirección: ",
+        "email: ",
+        "telefono: "
+      ],
+      "methods": null,
+      "id": "Voluntario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AdscripciónPuesto",
+      "attributes": [
+        "fechaInicio: ",
+        "fechaFin: "
+      ],
+      "methods": null,
+      "id": "AdscripciónPuesto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Puesto",
+      "attributes": [
+        "nombre: "
+      ],
+      "methods": null,
+      "id": "Puesto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AdscripciónACampaña",
+      "attributes": null,
+      "methods": null,
+      "id": "AdscripciónACampaña",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "RN-01 para dirigir campañas, debe haber participado en otras campañas",
+      "attributes": null,
+      "methods": null,
+      "id": "RN-01 para dirigir campañas, debe haber participado en otras campañas",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "AcciónHumanitaria",
+      "head": "Campaña",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Donación",
+      "head": "Campaña",
+      "class": "UndirectedAssociation",
+      "label": "destinadaA"
+    },
+    {
+      "tail": "Donación",
+      "head": "Donante",
+      "class": "UndirectedAssociation",
+      "label": "< realiza"
+    },
+    {
+      "tail": "Donación",
+      "head": "TipoRecurso",
+      "class": "UndirectedAssociation",
+      "label": "donadoEn"
+    },
+    {
+      "tail": "Voluntario",
+      "head": "Campaña",
+      "class": "UndirectedAssociation",
+      "label": "dirige"
+    },
+    {
+      "tail": "Voluntario",
+      "head": "RN-01 para dirigir campañas, debe haber participado en otras campañas",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "AdscripciónPuesto",
+      "head": "Voluntario",
+      "class": "UndirectedAssociation",
+      "label": "posee"
+    },
+    {
+      "tail": "Puesto",
+      "head": "AdscripciónPuesto",
+      "class": "UndirectedAssociation",
+      "label": "correspondeA >"
+    },
+    {
+      "tail": "AdscripciónACampaña",
+      "head": "Campaña",
+      "class": "UndirectedAssociation",
+      "label": "< correspondeA"
+    },
+    {
+      "tail": "AdscripciónACampaña",
+      "head": "Voluntario",
+      "class": "UndirectedAssociation",
+      "label": "tiene"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,158 @@
+{
+  "nodes": [
+    {
+      "text": "Order received",
+      "id": "Order received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "write down order note",
+      "id": "write down order note",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "attach order note to pinboard",
+      "id": "attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "text": "Order processed",
+      "id": "Order processed",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "Order",
+      "id": "Order",
+      "class": "dataObject"
+    },
+    {
+      "text": "Order note",
+      "id": "Order note",
+      "class": "dataObject"
+    },
+    {
+      "text": "Order [printed]",
+      "id": "Order [printed]",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "attach order note to pinboard",
+      "head": "Order processed",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "write down order note",
+      "class": "sequenceFlow",
+      "label": "order taken by"
+    },
+    {
+      "tail": "confirm order",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": "order received by website"
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": "order received by Lieferando"
+    },
+    {
+      "tail": "Order received",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Order",
+      "head": "confirm order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Order",
+      "head": "write down order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "Order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Order",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "Order [printed]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Order [printed]",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Order note",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

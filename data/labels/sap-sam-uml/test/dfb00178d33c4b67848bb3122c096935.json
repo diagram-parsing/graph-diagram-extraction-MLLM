@@ -1,0 +1,184 @@
+{
+  "nodes": [
+    {
+      "text": "Anforderungen im Fachkonzept",
+      "attributes": [
+        "Gliederungspunkte: ",
+        "Überschriften: ",
+        "Beschreibung: ",
+        "Prio: "
+      ],
+      "methods": null,
+      "id": "Anforderungen im Fachkonzept",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Spezifikation in Anforderungstabelle",
+      "attributes": [
+        "lfd Nummer: ",
+        "Hauptthema : ",
+        "Unterthema: ",
+        "Beschreibung: ",
+        "Ref. zum FK: ",
+        "Status: ",
+        "Datum der Abstimmung: "
+      ],
+      "methods": null,
+      "id": "Spezifikation in Anforderungstabelle",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Änderungen in Anforderungstabelle",
+      "attributes": [
+        "lfd.  Nummer: ",
+        "Hauptthema: ",
+        "Unterthema: ",
+        "Beschreibung: ",
+        "Ref. zum FK: ",
+        "Status: ",
+        "Datum Abstimmung: "
+      ],
+      "methods": null,
+      "id": "Änderungen in Anforderungstabelle",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "User-Story",
+      "attributes": [
+        "Story- ID: ",
+        "Titel: ",
+        "Anwendungsfall: ",
+        "Akzeptanzkriterien: ",
+        "Ref. zur Task: ",
+        "Ref. zum FK /Anf.Tab: "
+      ],
+      "methods": null,
+      "id": "User-Story",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Testfall",
+      "attributes": [
+        "Testfall-ID: ",
+        "Ref. zur User-Story: ",
+        "Titel: ",
+        "Testschritt: ",
+        "erwartetes Ergebnis: ",
+        "Status: "
+      ],
+      "methods": null,
+      "id": "Testfall",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Fehlerticket",
+      "attributes": [
+        "Fehler-ID: ",
+        "Titel: ",
+        "Beschreibung: ",
+        "Ref. zur User-Story: ",
+        "Ref. zum Test-Az : ",
+        "Tester/In: ",
+        "Status: "
+      ],
+      "methods": null,
+      "id": "Fehlerticket",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Epic (Hauptaufgabe)",
+      "attributes": [
+        "Titel: ",
+        "FK / Anf.Tab: ",
+        "Reihenfolge: "
+      ],
+      "methods": null,
+      "id": "Epic (Hauptaufgabe)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Feature (Unteraufgabe)",
+      "attributes": [
+        "Titel: ",
+        "Ref. zur Epic: ",
+        "Ref. FK / Anf.Tab: ",
+        "Reihenfolge: "
+      ],
+      "methods": null,
+      "id": "Feature (Unteraufgabe)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Task (Entwickleraufgabe)",
+      "attributes": [
+        "DVZ-intern: "
+      ],
+      "methods": null,
+      "id": "Task (Entwickleraufgabe)",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Anforderungen im Fachkonzept",
+      "head": "Epic (Hauptaufgabe)",
+      "class": "DirectedAssociation",
+      "label": "daraus leitet sich ab"
+    },
+    {
+      "tail": "Anforderungen im Fachkonzept",
+      "head": "Spezifikation in Anforderungstabelle",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Spezifikation in Anforderungstabelle",
+      "head": "Epic (Hauptaufgabe)",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Änderungen in Anforderungstabelle",
+      "head": "Epic (Hauptaufgabe)",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "User-Story",
+      "head": "Testfall",
+      "class": "DirectedAssociation",
+      "label": "daraus leitet sich ab"
+    },
+    {
+      "tail": "Testfall",
+      "head": "Fehlerticket",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Fehlerticket",
+      "head": "Task (Entwickleraufgabe)",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Epic (Hauptaufgabe)",
+      "head": "Feature (Unteraufgabe)",
+      "class": "Generalization",
+      "label": "Oberklasse"
+    },
+    {
+      "tail": "Feature (Unteraufgabe)",
+      "head": "User-Story",
+      "class": "Generalization",
+      "label": "Oberklasse"
+    },
+    {
+      "tail": "Task (Entwickleraufgabe)",
+      "head": "User-Story",
+      "class": "DirectedAssociation",
+      "label": "realisiert"
+    }
+  ],
+  "groups": []
+}

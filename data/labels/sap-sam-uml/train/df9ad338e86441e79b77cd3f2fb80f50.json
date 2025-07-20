@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "text": "CENTRO SERVIZIO",
+      "attributes": [
+        "codice: int",
+        "indirizzo: String",
+        "telefono: String"
+      ],
+      "methods": null,
+      "id": "CENTRO SERVIZIO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "IMPIEGATO",
+      "attributes": [
+        "CF: String",
+        "nome: String",
+        "titoloStudio: String",
+        "recapito: String"
+      ],
+      "methods": null,
+      "id": "IMPIEGATO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "FILM",
+      "attributes": [
+        "titolo: String",
+        "nomeRegista: String",
+        "anno: int",
+        "costoCorrente: Currency",
+        "remakeDisponibili: int"
+      ],
+      "methods": null,
+      "id": "FILM",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SETTORE",
+      "attributes": [
+        "codice: int",
+        "numeroCopie: int"
+      ],
+      "methods": null,
+      "id": "SETTORE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CENTRO DISTRIBUZIONE",
+      "attributes": [
+        "nome: String",
+        "recapito: String",
+        "codice: int"
+      ],
+      "methods": null,
+      "id": "CENTRO DISTRIBUZIONE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SPOSTAMENTO",
+      "attributes": [
+        "dataInizio: Date",
+        "dataFine: Date",
+        "carica: String"
+      ],
+      "methods": null,
+      "id": "SPOSTAMENTO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ATTORE",
+      "attributes": [
+        "nomeAttore: String"
+      ],
+      "methods": null,
+      "id": "ATTORE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "approvvigionamento presso",
+      "attributes": [
+        "costo: Currency"
+      ],
+      "methods": null,
+      "id": "approvvigionamento presso",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "FILM",
+      "head": "FILM",
+      "class": "UndirectedAssociation",
+      "label": "remake di"
+    },
+    {
+      "tail": "FILM",
+      "head": "ATTORE",
+      "class": "UndirectedAssociation",
+      "label": "appare"
+    },
+    {
+      "tail": "FILM",
+      "head": "SETTORE",
+      "class": "UndirectedAssociation",
+      "label": "collocato"
+    },
+    {
+      "tail": "FILM",
+      "head": "CENTRO DISTRIBUZIONE",
+      "class": "UndirectedAssociation",
+      "label": "approvvigionamento presso"
+    },
+    {
+      "tail": "SETTORE",
+      "head": "CENTRO SERVIZIO",
+      "class": "UndirectedAssociation",
+      "label": "di"
+    },
+    {
+      "tail": "SPOSTAMENTO",
+      "head": "IMPIEGATO",
+      "class": "UndirectedAssociation",
+      "label": "subisce"
+    },
+    {
+      "tail": "SPOSTAMENTO",
+      "head": "CENTRO SERVIZIO",
+      "class": "UndirectedAssociation",
+      "label": "presso"
+    }
+  ],
+  "groups": []
+}

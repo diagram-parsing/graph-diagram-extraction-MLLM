@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "text": "Funktion wird von Skript get_stages_regions_and_fstage_epochs_on_SIESTA aufgreufen\nOutput aus Funktion get_fstage_epochs_and_avgs_of_stages vorhanden",
+      "id": "Funktion wird von Skript get_stages_regions_and_fstage_epochs_on_SIESTA aufgreufen\nOutput aus Funktion get_fstage_epochs_and_avgs_of_stages vorhanden",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "id": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "class": "Task"
+    },
+    {
+      "text": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "id": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "class": "Task"
+    },
+    {
+      "text": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "id": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "class": "Task"
+    },
+    {
+      "text": "A10: Differenzen aller Kombinationen aus Regionen und Stadien\nsind in einzelnen Arrays gesammelt",
+      "id": "A10: Differenzen aller Kombinationen aus Regionen und Stadien\nsind in einzelnen Arrays gesammelt",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "id": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Stabiler Übergang?",
+      "id": "Stabiler Übergang?",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Funktion wird von Skript get_stages_regions_and_fstage_epochs_on_SIESTA aufgreufen\nOutput aus Funktion get_fstage_epochs_and_avgs_of_stages vorhanden",
+      "head": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "head": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "head": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "head": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "head": "Stabiler Übergang?",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "head": "A10: Differenzen aller Kombinationen aus Regionen und Stadien\nsind in einzelnen Arrays gesammelt",
+      "class": "SequenceFlow",
+      "label": "nein"
+    },
+    {
+      "tail": "Stabiler Übergang?",
+      "head": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Stabiler Übergang?",
+      "head": "Schleife über TDS der Regionen.\nWeitere Epoche vorhanden?",
+      "class": "SequenceFlow",
+      "label": "nein"
+    }
+  ],
+  "groups": []
+}

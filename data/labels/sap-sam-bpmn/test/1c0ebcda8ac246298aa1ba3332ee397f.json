@@ -1,0 +1,197 @@
+{
+  "nodes": [
+    {
+      "text": "Inizio",
+      "id": "Inizio",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Seleziona lingua",
+      "id": "Seleziona lingua",
+      "class": "Task"
+    },
+    {
+      "text": "Inserimento dati",
+      "id": "Inserimento dati",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Verifica dati",
+      "id": "Verifica dati",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "scelta posto a sedere",
+      "id": "scelta posto a sedere",
+      "class": "Task"
+    },
+    {
+      "text": "inserimento numero bagagli e verifica peso",
+      "id": "inserimento numero bagagli e verifica peso",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "riepilogo e stampa",
+      "id": "riepilogo e stampa",
+      "class": "Task"
+    },
+    {
+      "text": "fine processo",
+      "id": "fine processo",
+      "class": "EndEvent"
+    },
+    {
+      "text": "paga supplemento",
+      "id": "paga supplemento",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Inizio",
+      "head": "Seleziona lingua",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Seleziona lingua",
+      "head": "Inserimento dati",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inserimento dati",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": "Prenotazione\n non esistente"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Verifica dati",
+      "class": "SequenceFlow",
+      "label": "Prenotazione\nesistente"
+    },
+    {
+      "tail": "Verifica dati",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": "dati non corretti"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "scelta posto a sedere",
+      "class": "SequenceFlow",
+      "label": "dati corretti"
+    },
+    {
+      "tail": "scelta posto a sedere",
+      "head": "inserimento numero bagagli e verifica peso",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "inserimento numero bagagli e verifica peso",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": "peso < = max"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "paga supplemento",
+      "class": "SequenceFlow",
+      "label": "peso > max"
+    },
+    {
+      "tail": "riepilogo e stampa",
+      "head": "fine processo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "paga supplemento",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Utente",
+      "id": "Utente",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Inizio",
+        "Seleziona lingua",
+        "Inserimento dati",
+        "Exclusive_Databased_Gateway_1",
+        "EndEvent_1",
+        "Verifica dati",
+        "Exclusive_Databased_Gateway_2",
+        "EndEvent_2",
+        "scelta posto a sedere",
+        "inserimento numero bagagli e verifica peso",
+        "Exclusive_Databased_Gateway_3",
+        "Exclusive_Databased_Gateway_4",
+        "riepilogo e stampa",
+        "fine processo",
+        "paga supplemento"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

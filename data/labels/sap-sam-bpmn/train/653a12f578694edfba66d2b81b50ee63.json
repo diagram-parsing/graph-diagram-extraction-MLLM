@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "new equpment meeded ",
+      "id": "new equpment meeded ",
+      "class": "StartEvent"
+    },
+    {
+      "text": "search new equipment ",
+      "id": "search new equipment ",
+      "class": "Task"
+    },
+    {
+      "text": "create rental card ",
+      "id": "create rental card ",
+      "class": "Task"
+    },
+    {
+      "text": "create po ",
+      "id": "create po ",
+      "class": "Task"
+    },
+    {
+      "text": "po created ",
+      "id": "po created ",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "new equpment meeded ",
+      "head": "search new equipment ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "search new equipment ",
+      "head": "create rental card ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "create rental card ",
+      "head": "create po ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "create po ",
+      "head": "po created ",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "new equpment meeded ",
+        "search new equipment ",
+        "create rental card ",
+        "create po ",
+        "po created "
+      ],
+      "class": "Lane"
+    }
+  ]
+}

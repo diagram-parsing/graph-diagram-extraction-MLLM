@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "\n",
+      "id": "\n",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "A\n",
+      "id": "A\n",
+      "class": "Task"
+    },
+    {
+      "text": "B\n",
+      "id": "B\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "\n",
+      "head": "A\n",
+      "class": "SequenceFlow",
+      "label": "true"
+    },
+    {
+      "tail": "\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "false"
+    },
+    {
+      "tail": "A\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B\n",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "B\n",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "pizza order\n",
+      "id": "pizza order\n",
+      "class": "Task"
+    },
+    {
+      "text": "30 min",
+      "id": "30 min",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "complain to the delivery service\n",
+      "id": "complain to the delivery service\n",
+      "class": "Task"
+    },
+    {
+      "text": "50 min",
+      "id": "50 min",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "cancel order\n",
+      "id": "cancel order\n",
+      "class": "Task"
+    },
+    {
+      "text": "eat pizza\n",
+      "id": "eat pizza\n",
+      "class": "Task"
+    },
+    {
+      "text": "end eating\n",
+      "id": "end eating\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "cancelled order\n",
+      "id": "cancelled order\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "order complained\n",
+      "id": "order complained\n",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "pizza order\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "pizza order\n",
+      "head": "eat pizza\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "30 min",
+      "head": "complain to the delivery service\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "complain to the delivery service\n",
+      "head": "order complained\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "50 min",
+      "head": "cancel order\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "cancel order\n",
+      "head": "cancelled order\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "eat pizza\n",
+      "head": "end eating\n",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

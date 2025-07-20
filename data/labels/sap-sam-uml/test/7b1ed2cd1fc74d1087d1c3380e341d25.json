@@ -1,0 +1,187 @@
+{
+  "nodes": [
+    {
+      "text": "Cittadino\n",
+      "attributes": [
+        "nome: ",
+        "cognome: ",
+        "id: "
+      ],
+      "methods": null,
+      "id": "Cittadino\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Credenziali Cittadino",
+      "attributes": [
+        "username: ",
+        "password: "
+      ],
+      "methods": null,
+      "id": "Credenziali Cittadino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SchedaPubblica",
+      "attributes": null,
+      "methods": null,
+      "id": "SchedaPubblica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Scheda Opera/evento ",
+      "attributes": [
+        "tipologia: ",
+        "dataInizioValidita': ",
+        "dataFineValidita': "
+      ],
+      "methods": null,
+      "id": "Scheda Opera/evento ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Scheda Informativa",
+      "attributes": [
+        "titolo: ",
+        "descrizione: "
+      ],
+      "methods": null,
+      "id": "Scheda Informativa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Argomento",
+      "attributes": [
+        "nome: ",
+        "tipo: "
+      ],
+      "methods": null,
+      "id": "Argomento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AreaGeografica",
+      "attributes": [
+        "Latitudine: ",
+        "Longitudine: ",
+        "id: "
+      ],
+      "methods": null,
+      "id": "AreaGeografica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AssociazioneSchedaArgomento",
+      "attributes": [
+        "nomeArgomento: ",
+        "titoloScheda: "
+      ],
+      "methods": null,
+      "id": "AssociazioneSchedaArgomento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AssociazioneSchedaArea",
+      "attributes": [
+        "titoloScheda: ",
+        "idAreaGeografica: "
+      ],
+      "methods": null,
+      "id": "AssociazioneSchedaArea",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Credenziali Pubblica Amministrazione",
+      "attributes": [
+        "username: ",
+        "password: "
+      ],
+      "methods": null,
+      "id": "Credenziali Pubblica Amministrazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Utente Pubblica Amministrazione",
+      "attributes": [
+        "nome: ",
+        "cognome: "
+      ],
+      "methods": null,
+      "id": "Utente Pubblica Amministrazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AssociazioneSchedaCittadino",
+      "attributes": [
+        "titoloScheda: ",
+        "idCittadino: "
+      ],
+      "methods": null,
+      "id": "AssociazioneSchedaCittadino",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cittadino\n",
+      "head": "Credenziali Cittadino",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Scheda Informativa",
+      "head": "SchedaPubblica",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Scheda Informativa",
+      "head": "Scheda Opera/evento ",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "AssociazioneSchedaArgomento",
+      "head": "Scheda Opera/evento ",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AssociazioneSchedaArgomento",
+      "head": "Argomento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AssociazioneSchedaArea",
+      "head": "Scheda Opera/evento ",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AssociazioneSchedaArea",
+      "head": "AreaGeografica",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Utente Pubblica Amministrazione",
+      "head": "Credenziali Pubblica Amministrazione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AssociazioneSchedaCittadino",
+      "head": "Cittadino\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AssociazioneSchedaCittadino",
+      "head": "Scheda Opera/evento ",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

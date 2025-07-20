@@ -1,0 +1,94 @@
+{
+  "nodes": [
+    {
+      "text": "Famiglia ",
+      "attributes": [
+        "Nome: string",
+        "Codice anagrafe: string"
+      ],
+      "methods": null,
+      "id": "Famiglia ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bambino",
+      "attributes": [
+        "Nome: string",
+        "Cognome: string",
+        "Data di nascita: date",
+        "Codice fiscale: string",
+        "In regola: boolean",
+        "Presente in elenco: boolean"
+      ],
+      "methods": null,
+      "id": "Bambino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccino",
+      "attributes": [
+        "Nome: string",
+        "Tipo inoculazione: enum [iniziale, richiamo]",
+        "Età indicata: int"
+      ],
+      "methods": null,
+      "id": "Vaccino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccinazione",
+      "attributes": [
+        "Data esecuzione: date",
+        "Effetti riscontrati: string",
+        "Compiuta: boolean",
+        "Pdf certificato: string",
+        "Esente: boolean"
+      ],
+      "methods": null,
+      "id": "Vaccinazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esenzione",
+      "attributes": [
+        "Codice univoco: string"
+      ],
+      "methods": null,
+      "id": "Esenzione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Famiglia ",
+      "head": "Bambino",
+      "class": "UndirectedAssociation",
+      "label": "responsabile per"
+    },
+    {
+      "tail": "Bambino",
+      "head": "Vaccinazione",
+      "class": "UndirectedAssociation",
+      "label": "ha sostenuto"
+    },
+    {
+      "tail": "Bambino",
+      "head": "Esenzione",
+      "class": "UndirectedAssociation",
+      "label": "beneficia di"
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "Vaccino",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "Esenzione",
+      "head": "Vaccino",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    }
+  ],
+  "groups": []
+}

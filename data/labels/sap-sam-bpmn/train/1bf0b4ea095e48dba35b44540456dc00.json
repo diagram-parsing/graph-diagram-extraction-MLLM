@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "text": "Locate invoice",
+      "id": "Locate invoice",
+      "class": "Subprocess"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Locate invoice and 'Invoice Entry Form' ",
+      "id": "Locate invoice and 'Invoice Entry Form' ",
+      "class": "Task"
+    },
+    {
+      "text": "Scan invoice and 'Invoice Entry Form' ",
+      "id": "Scan invoice and 'Invoice Entry Form' ",
+      "class": "Task"
+    },
+    {
+      "text": "\n\n",
+      "id": "\n\n",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Locate invoice and 'Invoice Entry Form' ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Locate invoice and 'Invoice Entry Form' ",
+      "head": "Scan invoice and 'Invoice Entry Form' ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Scan invoice and 'Invoice Entry Form' ",
+      "head": "\n\n",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

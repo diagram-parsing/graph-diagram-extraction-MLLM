@@ -1,0 +1,145 @@
+{
+  "nodes": [
+    {
+      "text": "checks request",
+      "id": "checks request",
+      "class": "task"
+    },
+    {
+      "text": "set a hearing date",
+      "id": "set a hearing date",
+      "class": "task"
+    },
+    {
+      "text": "check if owner payed fees",
+      "id": "check if owner payed fees",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "allocate hearing date",
+      "id": "allocate hearing date",
+      "class": "task"
+    },
+    {
+      "text": "send fee note",
+      "id": "send fee note",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_2",
+      "class": "messageEvent"
+    },
+    {
+      "text": "pays fees",
+      "id": "pays fees",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_3",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "messageEvent_1",
+      "head": "allocate hearing date",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "checks request",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "checks request",
+      "head": "set a hearing date",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "set a hearing date",
+      "head": "check if owner payed fees",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check if owner payed fees",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "allocate hearing date",
+      "class": "sequenceFlow",
+      "label": "payed fees"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "send fee note",
+      "class": "sequenceFlow",
+      "label": "not payd fees"
+    },
+    {
+      "tail": "allocate hearing date",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_3",
+      "head": "pays fees",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "owner",
+      "head": "messageEvent_2",
+      "class": "messageFlow",
+      "label": "compensation request"
+    },
+    {
+      "tail": "send fee note",
+      "head": "messageEvent_3",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "pays fees",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "cashier at tribunal",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "owner",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "text": "Passagier tritt an den Schalter",
+      "id": "Passagier tritt an den Schalter",
+      "class": "StartEvent"
+    },
+    {
+      "text": "den Passagier nach Handgepäck fragen",
+      "id": "den Passagier nach Handgepäck fragen",
+      "class": "Task"
+    },
+    {
+      "text": "Normalgepäck wiegen",
+      "id": "Normalgepäck wiegen",
+      "class": "Task"
+    },
+    {
+      "text": "Handgepäck wiegen",
+      "id": "Handgepäck wiegen",
+      "class": "Task"
+    },
+    {
+      "text": "Gebühr erheben",
+      "id": "Gebühr erheben",
+      "class": "Task"
+    },
+    {
+      "text": "mit Aufkleber kennzeichnen",
+      "id": "mit Aufkleber kennzeichnen",
+      "class": "Task"
+    },
+    {
+      "text": "keine Gebühr erheben",
+      "id": "keine Gebühr erheben",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Handgepäck messen",
+      "id": "Handgepäck messen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_5",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_6",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Auf Gepäckband legen",
+      "id": "Auf Gepäckband legen",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Task_2",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Passagier tritt an den Schalter",
+      "head": "den Passagier nach Handgepäck fragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "den Passagier nach Handgepäck fragen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "den Passagier nach Handgepäck fragen",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Normalgepäck wiegen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Handgepäck wiegen",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Gebühr erheben",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "mit Aufkleber kennzeichnen",
+      "head": "Exclusive_Databased_Gateway_5",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Normalgepäck wiegen",
+      "class": "SequenceFlow",
+      "label": "Passagier gibt kein Handgepäck an"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "keine Gebühr erheben",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Gebühr erheben",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "mit Aufkleber kennzeichnen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Handgepäck messen",
+      "class": "SequenceFlow",
+      "label": "<8kg"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ">8kg"
+    },
+    {
+      "tail": "Handgepäck messen",
+      "head": "Exclusive_Databased_Gateway_6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Handgepäck messen",
+      "head": "Exclusive_Databased_Gateway_6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_5",
+      "head": "Auf Gepäckband legen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_6",
+      "head": "Exclusive_Databased_Gateway_5",
+      "class": "SequenceFlow",
+      "label": "<60*40*30cm"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_6",
+      "head": "mit Aufkleber kennzeichnen",
+      "class": "SequenceFlow",
+      "label": ">60*40*30cm"
+    },
+    {
+      "tail": "Task_1",
+      "head": "Task_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Passagier tritt an den Schalter",
+        "den Passagier nach Handgepäck fragen",
+        "Normalgepäck wiegen",
+        "Handgepäck wiegen",
+        "Gebühr erheben",
+        "mit Aufkleber kennzeichnen",
+        "keine Gebühr erheben",
+        "Exclusive_Databased_Gateway_1",
+        "Exclusive_Databased_Gateway_2",
+        "Exclusive_Databased_Gateway_3",
+        "Exclusive_Databased_Gateway_4",
+        "Handgepäck messen",
+        "Exclusive_Databased_Gateway_5",
+        "Exclusive_Databased_Gateway_6",
+        "Auf Gepäckband legen",
+        "Task_1",
+        "Task_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

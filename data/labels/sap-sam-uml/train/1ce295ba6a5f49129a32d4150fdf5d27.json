@@ -1,0 +1,145 @@
+{
+  "nodes": [
+    {
+      "text": "Centro servizio",
+      "attributes": [
+        "indirizzo: String"
+      ],
+      "methods": null,
+      "id": "Centro servizio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Impiegato",
+      "attributes": [
+        "codice fiscale: String",
+        "nome: String",
+        "titolo di studio: String",
+        "recapito: Int"
+      ],
+      "methods": null,
+      "id": "Impiegato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Servizio",
+      "attributes": [
+        "data inizio: Date",
+        "data fine: Date",
+        "carica rivestita: String"
+      ],
+      "methods": null,
+      "id": "Servizio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Film",
+      "attributes": [
+        "titolo: String",
+        "nome regista: String",
+        "anno produzione: Int",
+        "elenco attori: String"
+      ],
+      "methods": null,
+      "id": "Film",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Collocazione",
+      "attributes": [
+        "settore: Int",
+        "posizione: String",
+        "numero copie: Int"
+      ],
+      "methods": null,
+      "id": "Collocazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Centro",
+      "attributes": [
+        "codice: Int",
+        "numero telefono: Int"
+      ],
+      "methods": null,
+      "id": "Centro",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Centro distribuzione",
+      "attributes": [
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "Centro distribuzione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Costo del film",
+      "attributes": [
+        "prezzo: Currency"
+      ],
+      "methods": null,
+      "id": "Costo del film",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "la classe di associazione non tiene lo storico, mentre la classe intermedia si",
+      "attributes": null,
+      "methods": null,
+      "id": "la classe di associazione non tiene lo storico, mentre la classe intermedia si",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Centro servizio",
+      "head": "Servizio",
+      "class": "UndirectedAssociation",
+      "label": "presso"
+    },
+    {
+      "tail": "Servizio",
+      "head": "Impiegato",
+      "class": "UndirectedAssociation",
+      "label": "presta"
+    },
+    {
+      "tail": "Film",
+      "head": "Collocazione",
+      "class": "UndirectedAssociation",
+      "label": "nota"
+    },
+    {
+      "tail": "Film",
+      "head": "Centro distribuzione",
+      "class": "UndirectedAssociation",
+      "label": "consegnato grazie "
+    },
+    {
+      "tail": "Film",
+      "head": "Film",
+      "class": "UndirectedAssociation",
+      "label": "remake di"
+    },
+    {
+      "tail": "Collocazione",
+      "head": "Centro servizio",
+      "class": "UndirectedAssociation",
+      "label": "presso"
+    },
+    {
+      "tail": "Centro",
+      "head": "Centro servizio",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Centro",
+      "head": "Centro distribuzione",
+      "class": "Generalization",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

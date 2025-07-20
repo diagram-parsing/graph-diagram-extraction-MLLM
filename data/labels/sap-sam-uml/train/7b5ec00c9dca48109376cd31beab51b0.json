@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "text": "Menù",
+      "attributes": [
+        "giorno: Date"
+      ],
+      "methods": null,
+      "id": "Menù",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Piatto",
+      "attributes": [
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "Piatto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Categoria",
+      "attributes": [
+        "categoria: Enum",
+        "prezzo: Currency"
+      ],
+      "methods": null,
+      "id": "Categoria",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Categoria:\n- primo\n- secondo\n- contorno\n- dolce",
+      "attributes": null,
+      "methods": null,
+      "id": "Categoria:\n- primo\n- secondo\n- contorno\n- dolce",
+      "class": "Note"
+    },
+    {
+      "text": "Vassoio",
+      "attributes": [
+        "codice: String",
+        "posizione: Int",
+        "finito: Boolean",
+        "rimosso: Boolean"
+      ],
+      "methods": null,
+      "id": "Vassoio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cuoco",
+      "attributes": [
+        "mansione: String"
+      ],
+      "methods": null,
+      "id": "Cuoco",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Comanda",
+      "attributes": [
+        "creata: Date",
+        "tConsegna: Int"
+      ],
+      "methods": null,
+      "id": "Comanda",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Menù",
+      "head": "Piatto",
+      "class": "UndirectedAssociation",
+      "label": "comprende "
+    },
+    {
+      "tail": "Piatto",
+      "head": "Categoria",
+      "class": "UndirectedAssociation",
+      "label": "appartieneA"
+    },
+    {
+      "tail": "Categoria",
+      "head": "Categoria:\n- primo\n- secondo\n- contorno\n- dolce",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Vassoio",
+      "head": "Piatto",
+      "class": "UndirectedAssociation",
+      "label": "contenuto"
+    },
+    {
+      "tail": "Cuoco",
+      "head": "Piatto",
+      "class": "UndirectedAssociation",
+      "label": "assegnatoA"
+    },
+    {
+      "tail": "Comanda",
+      "head": "Piatto",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    },
+    {
+      "tail": "Comanda",
+      "head": "Cuoco",
+      "class": "UndirectedAssociation",
+      "label": "inCarico"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "text": "assess risk",
+      "id": "assess risk",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "advanced risk assessment",
+      "id": "advanced risk assessment",
+      "class": "task"
+    },
+    {
+      "text": "notify customer",
+      "id": "notify customer",
+      "class": "task"
+    },
+    {
+      "text": "organize disbursement",
+      "id": "organize disbursement",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "accept request",
+      "id": "accept request",
+      "class": "task"
+    },
+    {
+      "text": "reject request",
+      "id": "reject request",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "request granted",
+      "id": "request granted",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "new credit request received",
+      "id": "new credit request received",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_2",
+      "head": "request granted",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "notify customer",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "organize disbursement",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "organize disbursement",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "notify customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "assess risk",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "new credit request received",
+      "head": "assess risk",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "accept request",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "reject request",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "reject request",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "accept request",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "advanced risk assessment",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "reject request",
+      "class": "sequenceFlow",
+      "label": "rejected"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "accept request",
+      "class": "sequenceFlow",
+      "label": "accepted"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "advanced risk assessment",
+      "class": "sequenceFlow",
+      "label": "above\nthreshold"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "text": "Area",
+      "attributes": [
+        "costoOrario: Currency",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Area",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cittadino",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "luogoNascita: String",
+        "dataNascita: Date",
+        "CF: String",
+        "indirizzo: String",
+        "numeroCivico: int",
+        "CAP: int",
+        "telefono: String",
+        "provinciaNascita: String",
+        "documentoIdentita: String",
+        "mail: String"
+      ],
+      "methods": null,
+      "id": "Cittadino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Veicolo",
+      "attributes": [
+        "targa: String",
+        "modello: String",
+        "omologazione: String",
+        "tipoAlimentazione: enum",
+        "tipoContratto: String",
+        "tipoProprietà: enum"
+      ],
+      "methods": null,
+      "id": "Veicolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Via",
+      "attributes": [
+        "nome: String",
+        "numeroCivicoInizio: int",
+        "numeroCivicoFine: int"
+      ],
+      "methods": null,
+      "id": "Via",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Permesso",
+      "attributes": [
+        "dataScadenza: Date",
+        "verificato: Boolean",
+        "pagato: Boolean",
+        "stampato: Boolean",
+        "inviato: Boolean"
+      ],
+      "methods": null,
+      "id": "Permesso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Documento di identità indica il link alla scansione;\nla mail serve per avere un attributo utile per il processo",
+      "attributes": null,
+      "methods": null,
+      "id": "Documento di identità indica il link alla scansione;\nla mail serve per avere un attributo utile per il processo",
+      "class": "Note"
+    },
+    {
+      "text": "Tipo di alimentazione: B,D, G,M,E,I",
+      "attributes": null,
+      "methods": null,
+      "id": "Tipo di alimentazione: B,D, G,M,E,I",
+      "class": "Note"
+    },
+    {
+      "text": "Tipo di proprietà: proprietario, leasing, benefit, NLT, usufrutto",
+      "attributes": null,
+      "methods": null,
+      "id": "Tipo di proprietà: proprietario, leasing, benefit, NLT, usufrutto",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Area",
+      "head": "Cittadino",
+      "class": "UndirectedAssociation",
+      "label": "risiede"
+    },
+    {
+      "tail": "Cittadino",
+      "head": "Veicolo",
+      "class": "UndirectedAssociation",
+      "label": "effettuaRichiesta"
+    },
+    {
+      "tail": "Cittadino",
+      "head": "Documento di identità indica il link alla scansione;\nla mail serve per avere un attributo utile per il processo",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Veicolo",
+      "head": "Tipo di alimentazione: B,D, G,M,E,I",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Veicolo",
+      "head": "Tipo di proprietà: proprietario, leasing, benefit, NLT, usufrutto",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Via",
+      "head": "Area",
+      "class": "UndirectedAssociation",
+      "label": "costituisce"
+    },
+    {
+      "tail": "Permesso",
+      "head": "Veicolo",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "Permesso",
+      "head": "Area",
+      "class": "UndirectedAssociation",
+      "label": "per"
+    }
+  ],
+  "groups": []
+}

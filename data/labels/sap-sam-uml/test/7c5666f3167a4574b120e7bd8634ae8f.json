@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "text": "Kunde",
+      "attributes": [
+        "ID: ",
+        "Name: ",
+        "Vorname: ",
+        "Telefonnummer: ",
+        "Adresse: "
+      ],
+      "methods": [
+        "ArtikelBestellen()",
+        "AuftragVerändern()",
+        "ArtikelWarten()",
+        "ArtikelErhalten()"
+      ],
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kundenauftrag",
+      "attributes": [
+        "ID: ",
+        "ABwicklungsdatum: ",
+        "Statut: "
+      ],
+      "methods": null,
+      "id": "Kundenauftrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kundenauftragsposition",
+      "attributes": [
+        "ID: ",
+        "Auftragspositionsnummer: ",
+        "Anzahl: "
+      ],
+      "methods": null,
+      "id": "Kundenauftragsposition",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mitarbeiter",
+      "attributes": [
+        "ID: ",
+        "Rolle: ",
+        "Name: ",
+        "Vorname: "
+      ],
+      "methods": null,
+      "id": "Mitarbeiter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "ID: ",
+        "Beschreibung: "
+      ],
+      "methods": null,
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Getränk",
+      "attributes": [
+        "Qualität: ",
+        "Menge: ",
+        "Preis: "
+      ],
+      "methods": null,
+      "id": "Getränk",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Taschentuch",
+      "attributes": [
+        "Marke: ",
+        "Grösse: ",
+        "Menge: ",
+        "Farbe: ",
+        "Preis: "
+      ],
+      "methods": null,
+      "id": "Taschentuch",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde",
+      "head": "Kundenauftrag",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kundenauftrag",
+      "head": "Kundenauftragsposition",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kundenauftrag",
+      "head": "Mitarbeiter",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kundenauftragsposition",
+      "head": "Artikel",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Artikel",
+      "head": "Getränk",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Artikel",
+      "head": "Taschentuch",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

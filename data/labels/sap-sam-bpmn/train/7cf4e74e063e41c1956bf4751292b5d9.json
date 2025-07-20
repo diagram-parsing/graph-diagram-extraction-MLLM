@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Extract Activities relation knowledge",
+      "id": "Extract Activities relation knowledge",
+      "class": "Task"
+    },
+    {
+      "text": "Process Model\n",
+      "id": "Process Model\n",
+      "class": "DataObject"
+    },
+    {
+      "text": "Ssets\nPsets\nXsets\n\n",
+      "id": "Ssets\nPsets\nXsets\n\n",
+      "class": "DataObject"
+    },
+    {
+      "text": "Project Activity relations on the Event log ",
+      "id": "Project Activity relations on the Event log ",
+      "class": "Task"
+    },
+    {
+      "text": "Uncorrelated events\n",
+      "id": "Uncorrelated events\n",
+      "class": "DataObject"
+    },
+    {
+      "text": "Define SAT variables\n",
+      "id": "Define SAT variables\n",
+      "class": "Task"
+    },
+    {
+      "text": "PDFG\nPDPG\nXsets",
+      "id": "PDFG\nPDPG\nXsets",
+      "class": "DataObject"
+    },
+    {
+      "text": "SAT Variables",
+      "id": "SAT Variables",
+      "class": "DataObject"
+    },
+    {
+      "text": "Define Constraints",
+      "id": "Define Constraints",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Check for new solution",
+      "id": "Check for new solution",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Store Solution",
+      "id": "Store Solution",
+      "class": "Task"
+    },
+    {
+      "text": "Solution",
+      "id": "Solution",
+      "class": "DataObject"
+    },
+    {
+      "text": "Solutions\n",
+      "id": "Solutions\n",
+      "class": "DataObject"
+    },
+    {
+      "text": "Generate Event logs",
+      "id": "Generate Event logs",
+      "class": "Task"
+    },
+    {
+      "text": "Event Logs",
+      "id": "Event Logs",
+      "class": "DataObject"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Extract Activities relation knowledge",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Extract Activities relation knowledge",
+      "head": "Ssets\nPsets\nXsets\n\n",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Extract Activities relation knowledge",
+      "head": "Project Activity relations on the Event log ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Process Model\n",
+      "head": "Extract Activities relation knowledge",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Ssets\nPsets\nXsets\n\n",
+      "head": "Project Activity relations on the Event log ",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Project Activity relations on the Event log ",
+      "head": "Define SAT variables\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Project Activity relations on the Event log ",
+      "head": "PDFG\nPDPG\nXsets",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Uncorrelated events\n",
+      "head": "Project Activity relations on the Event log ",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Uncorrelated events\n",
+      "head": "Define SAT variables\n",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Define SAT variables\n",
+      "head": "SAT Variables",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Define SAT variables\n",
+      "head": "Define Constraints",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "PDFG\nPDPG\nXsets",
+      "head": "Define Constraints",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "SAT Variables",
+      "head": "Define Constraints",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Define Constraints",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Check for new solution",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check for new solution",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check for new solution",
+      "head": "Solution",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Store Solution",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Generate Event logs",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Store Solution",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Store Solution",
+      "head": "Solutions\n",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Solution",
+      "head": "Store Solution",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Solutions\n",
+      "head": "Generate Event logs",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Generate Event logs",
+      "head": "Event Logs",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Generate Event logs",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

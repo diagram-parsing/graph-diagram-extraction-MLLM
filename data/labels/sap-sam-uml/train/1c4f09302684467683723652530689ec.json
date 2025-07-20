@@ -1,0 +1,316 @@
+{
+  "nodes": [
+    {
+      "text": "Lista de Equipamentos\n",
+      "attributes": [
+        "Nome equipamento: varchar",
+        "Caracteristicas: varchar"
+      ],
+      "methods": null,
+      "id": "Lista de Equipamentos\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Caderno de Encargos\n",
+      "attributes": [
+        "Cláusulas: varchar"
+      ],
+      "methods": null,
+      "id": "Caderno de Encargos\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pedido de Propostas \nde Orçamento",
+      "attributes": [
+        "Lista de equipamentos: varchar",
+        "Caderno de encargos: varchar"
+      ],
+      "methods": null,
+      "id": "Pedido de Propostas \nde Orçamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Nota de Encomenda",
+      "attributes": [
+        "Número de encomenda: int"
+      ],
+      "methods": null,
+      "id": "Nota de Encomenda",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Fatura da Encomenda",
+      "attributes": [
+        "Número da fatura: int",
+        "Valor: float",
+        "Número de contribuinte: int"
+      ],
+      "methods": null,
+      "id": "Fatura da Encomenda",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Equipamento",
+      "attributes": [
+        "Código de inventário: int",
+        "Número de série: int",
+        "Categoria: varchar",
+        "Família: varchar",
+        "Tipo: varchar",
+        "Estado: varchar",
+        "Marca: varchar",
+        "Modelo: varchar",
+        "Número de fatura: int",
+        "Fornecedor: varchar",
+        "Data de entrada: datatime",
+        "Garantia (em meses): int",
+        "Hostname: varchar",
+        "VLAN: varchar",
+        "Endereço IPv4 : varchar",
+        "Endereço IPv6 : varchar",
+        "Endereço MAC: varchar",
+        "Bastidor: varchar",
+        "Localização: varchar"
+      ],
+      "methods": null,
+      "id": "Equipamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Código de Inventário do Equipamento",
+      "attributes": [
+        "Código: int"
+      ],
+      "methods": null,
+      "id": "Código de Inventário do Equipamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cartão de Identificação",
+      "attributes": [
+        "Nome : ",
+        "Data nascimento: ",
+        "Nº Cartão de identificação fiscal: ",
+        "Nº Utente: ",
+        "Nº Segurança social: ",
+        "Nº cartão: ",
+        "Sexo: ",
+        "Nacionalidade: "
+      ],
+      "methods": null,
+      "id": "Cartão de Identificação",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cartão da ordem ",
+      "attributes": [
+        "Nome clinico: ",
+        "Data validade: ",
+        "Nº da ordem dos médicos: "
+      ],
+      "methods": null,
+      "id": "Cartão da ordem ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Documentação da licença",
+      "attributes": [
+        "Licença associada: varchar",
+        "Id: int"
+      ],
+      "methods": null,
+      "id": "Documentação da licença",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Licença de software",
+      "attributes": [
+        "id: int",
+        "nome: varchar",
+        "tipo de licença: varchar"
+      ],
+      "methods": null,
+      "id": "Licença de software",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Orçamento",
+      "attributes": [
+        "id: int",
+        "preço: float",
+        "descricao: varchar",
+        "equipamento: varchar",
+        "destinatário: varchar"
+      ],
+      "methods": null,
+      "id": "Orçamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Documentação do Pedido de Suporte",
+      "attributes": [
+        "Código: int",
+        "Nome do documento: varchar"
+      ],
+      "methods": null,
+      "id": "Documentação do Pedido de Suporte",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pedido de Suporte",
+      "attributes": [
+        "Exposição: varchar",
+        "Assunto: varchar",
+        "Nome do Departamento: varchar",
+        "Nome do Serviço: varchar",
+        "Contacto do serviço: int",
+        "Estado: varchar",
+        "Código: int"
+      ],
+      "methods": null,
+      "id": "Pedido de Suporte",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Repositório de coordenação de código",
+      "attributes": [
+        "Código: "
+      ],
+      "methods": null,
+      "id": "Repositório de coordenação de código",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Relatório de alterações",
+      "attributes": [
+        "Funcionalidades em falta: varchar"
+      ],
+      "methods": null,
+      "id": "Relatório de alterações",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Proposta de desenvolvimento",
+      "attributes": [
+        "Cliente: varchar",
+        "Necessidades tecnológicas: varchar",
+        "Recursos Necessários: varchar"
+      ],
+      "methods": null,
+      "id": "Proposta de desenvolvimento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Utilizador",
+      "attributes": [
+        "Id: int",
+        "Número de ordem: int",
+        "Nome completo: varchar",
+        "Nome profissional: varchar",
+        "Grupo profissional: varchar",
+        "Departamento: varchar",
+        "Serviço: varchar",
+        "E-mail: varchar",
+        "Ativo: boolean",
+        "Data de nascimento: datatime",
+        "Telemóvel: int",
+        "CC: int",
+        "Contribuinte: int",
+        "E-mail alternativo: varchar",
+        "Observações: varchar",
+        "Acesso ao SI: varchar",
+        "Acesso às aplicações do HDS: varchar"
+      ],
+      "methods": null,
+      "id": "Utilizador",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Pedido de Propostas \nde Orçamento",
+      "head": "Lista de Equipamentos\n",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Pedido de Propostas \nde Orçamento",
+      "head": "Orçamento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Pedido de Propostas \nde Orçamento",
+      "head": "Caderno de Encargos\n",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Nota de Encomenda",
+      "head": "Fatura da Encomenda",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Equipamento",
+      "head": "Fatura da Encomenda",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Equipamento",
+      "head": "Código de Inventário do Equipamento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Cartão de Identificação",
+      "head": "Utilizador",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Cartão da ordem ",
+      "head": "Utilizador",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Documentação da licença",
+      "head": "Licença de software",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Orçamento",
+      "head": "Licença de software",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Orçamento",
+      "head": "Equipamento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Orçamento",
+      "head": "Nota de Encomenda",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Pedido de Suporte",
+      "head": "Documentação do Pedido de Suporte",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Proposta de desenvolvimento",
+      "head": "Relatório de alterações",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "text": "Person",
+      "attributes": [
+        "name: string",
+        "phone numer: string",
+        "e-mail address: string"
+      ],
+      "methods": null,
+      "id": "Person",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Address",
+      "attributes": [
+        "street: string",
+        "city: string",
+        "postal code: integer",
+        "country: string"
+      ],
+      "methods": [
+        "validateaddress()",
+        "printlabel()"
+      ],
+      "id": "Address",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Student",
+      "attributes": [
+        "matriculation number: integer",
+        "average grade: float"
+      ],
+      "methods": [
+        "enrollformodule()"
+      ],
+      "id": "Student",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Professor",
+      "attributes": [
+        "salary: integer"
+      ],
+      "methods": null,
+      "id": "Professor",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Person",
+      "head": "Address",
+      "class": "DirectedAssociation",
+      "label": "1"
+    },
+    {
+      "tail": "Person",
+      "head": "Professor",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Student",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Address",
+      "head": "Person",
+      "class": "DirectedAssociation",
+      "label": "0..1"
+    }
+  ],
+  "groups": []
+}

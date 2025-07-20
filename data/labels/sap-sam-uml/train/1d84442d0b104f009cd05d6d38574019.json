@@ -1,0 +1,255 @@
+{
+  "nodes": [
+    {
+      "text": "Carta Utensile",
+      "attributes": [
+        "usata: Boolean"
+      ],
+      "methods": [
+        "applica()"
+      ],
+      "id": "Carta Utensile",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Carta Obiettivo Pubblico",
+      "attributes": [
+        "punti: byte"
+      ],
+      "methods": [
+        "calcola()"
+      ],
+      "id": "Carta Obiettivo Pubblico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Carta Obiettivo Privato",
+      "attributes": [
+        "colore: Colore"
+      ],
+      "methods": [
+        "calcola()"
+      ],
+      "id": "Carta Obiettivo Privato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dado",
+      "attributes": [
+        "colore: Colore",
+        "valore: int"
+      ],
+      "methods": [
+        "cambiaValore()",
+        "()"
+      ],
+      "id": "Dado",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Schema",
+      "attributes": [
+        "id: byte",
+        "name: String",
+        "stelle: byte",
+        "idretro: byte",
+        "dadopiazzato: boolean",
+        "casellevuote: int"
+      ],
+      "methods": [
+        "posizionaDado()"
+      ],
+      "id": "Schema",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Casella",
+      "attributes": [
+        "colore: Colore",
+        "occupata: Boolean",
+        "shade: Sfumatura"
+      ],
+      "methods": [
+        "occupaCasella()"
+      ],
+      "id": "Casella",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Colore",
+      "attributes": null,
+      "methods": null,
+      "id": "Colore",
+      "class": "Enumeration"
+    },
+    {
+      "text": "Carta",
+      "attributes": [
+        "id: byte",
+        "titolo: String",
+        "descr: String"
+      ],
+      "methods": null,
+      "id": "Carta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sfumatura",
+      "attributes": null,
+      "methods": null,
+      "id": "Sfumatura",
+      "class": "Enumeration"
+    },
+    {
+      "text": "Tabellone",
+      "attributes": null,
+      "methods": null,
+      "id": "Tabellone",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Giocatore",
+      "attributes": null,
+      "methods": null,
+      "id": "Giocatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Segnalino Favore",
+      "attributes": null,
+      "methods": null,
+      "id": "Segnalino Favore",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Tracciato Round",
+      "attributes": [
+        "round[]: int",
+        "numero turno: int"
+      ],
+      "methods": [
+        "inserisciDado()",
+        "togliDado()",
+        "incrementaRound()"
+      ],
+      "id": "Tracciato Round",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tracciato Punti",
+      "attributes": [
+        "punti[]: int"
+      ],
+      "methods": [
+        "calcolaPunteggio()"
+      ],
+      "id": "Tracciato Punti",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Carta Obiettivo Privato",
+      "head": "Colore",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Dado",
+      "head": "Colore",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Schema",
+      "head": "Casella",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Casella",
+      "head": "Colore",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Casella",
+      "head": "Sfumatura",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Carta",
+      "head": "Carta Obiettivo Pubblico",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Carta",
+      "head": "Carta Utensile",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Carta",
+      "head": "Carta Obiettivo Privato",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Tabellone",
+      "head": "Dado",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tabellone",
+      "head": "Carta Utensile",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tabellone",
+      "head": "Carta Obiettivo Pubblico",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tabellone",
+      "head": "Tracciato Punti",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Tabellone",
+      "head": "Tracciato Round",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Giocatore",
+      "head": "Schema",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Giocatore",
+      "head": "Carta Obiettivo Privato",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Giocatore",
+      "head": "Segnalino Favore",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tracciato Round",
+      "head": "Dado",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

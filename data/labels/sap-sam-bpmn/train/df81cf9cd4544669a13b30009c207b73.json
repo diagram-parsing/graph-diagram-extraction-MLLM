@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "text": "Änderungsbedarf",
+      "id": "Änderungsbedarf",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Änderungsbedarf Jane Doe ",
+      "id": "Änderungsbedarf Jane Doe ",
+      "class": "Task"
+    },
+    {
+      "text": "Bedarf prüfen",
+      "id": "Bedarf prüfen",
+      "class": "Task"
+    },
+    {
+      "text": "vertragl. Leistung?",
+      "id": "vertragl. Leistung?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Anfrage erstellen und übermitteln",
+      "id": "Anfrage erstellen und übermitteln",
+      "class": "Task"
+    },
+    {
+      "text": "Angebortsanfrage",
+      "id": "Angebortsanfrage",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Angebot erstellen",
+      "id": "Angebot erstellen",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Änderungsbedarf",
+      "head": "Änderungsbedarf Jane Doe ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Änderungsbedarf Jane Doe ",
+      "head": "Bedarf prüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bedarf prüfen",
+      "head": "vertragl. Leistung?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "vertragl. Leistung?",
+      "head": "Anfrage erstellen und übermitteln",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Anfrage erstellen und übermitteln",
+      "head": "Angebortsanfrage",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Angebortsanfrage",
+      "head": "Angebot erstellen",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "LABO",
+      "id": "LABO",
+      "nodes": [
+        "Änderungsmanagement intern LABO",
+        "Änderungsmanagement Jane Doe",
+        "Vertrieb LABO"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Änderungsmanagement intern LABO",
+      "id": "Änderungsmanagement intern LABO",
+      "nodes": [
+        "Änderungsbedarf",
+        "Änderungsbedarf Jane Doe "
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Änderungsmanagement Jane Doe",
+      "id": "Änderungsmanagement Jane Doe",
+      "nodes": [
+        "Bedarf prüfen",
+        "vertragl. Leistung?"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Vertrieb LABO",
+      "id": "Vertrieb LABO",
+      "nodes": [
+        "Anfrage erstellen und übermitteln"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "ITDZ",
+      "id": "ITDZ",
+      "nodes": [
+        "Vertrieb",
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Vertrieb",
+      "id": "Vertrieb",
+      "nodes": [
+        "Angebortsanfrage",
+        "Angebot erstellen"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [],
+      "class": "Lane"
+    }
+  ]
+}

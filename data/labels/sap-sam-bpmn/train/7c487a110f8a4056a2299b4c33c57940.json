@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Gladan",
+      "id": "Gladan",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Odabir pice",
+      "id": "Odabir pice",
+      "class": "Task"
+    },
+    {
+      "text": "Narucivanje",
+      "id": "Narucivanje",
+      "class": "Task"
+    },
+    {
+      "text": "Prihvatanje porudzbine",
+      "id": "Prihvatanje porudzbine",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Gladan",
+      "head": "Odabir pice",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Odabir pice",
+      "head": "Narucivanje",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Narucivanje",
+      "head": "Prihvatanje porudzbine",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prihvatanje porudzbine",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Klijent",
+      "id": "Klijent",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Gladan",
+        "Odabir pice",
+        "Narucivanje"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Prihvatanje porudzbine",
+        "Exclusive_Databased_Gateway_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "text": "O Gestor Decide\n Modificar o Sistema",
+      "id": "O Gestor Decide\n Modificar o Sistema",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Estuda-se o Novo Sistema",
+      "id": "Estuda-se o Novo Sistema",
+      "class": "Task"
+    },
+    {
+      "text": "Analisam-se as Diferenças entre o Antigo e do Novo Sistema",
+      "id": "Analisam-se as Diferenças entre o Antigo e do Novo Sistema",
+      "class": "Task"
+    },
+    {
+      "text": "Inicia-se a Migração de Dados",
+      "id": "Inicia-se a Migração de Dados",
+      "class": "Task"
+    },
+    {
+      "text": "Fim da \nMigração de Dados",
+      "id": "Fim da \nMigração de Dados",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "O Gestor Decide\n Modificar o Sistema",
+      "head": "Estuda-se o Novo Sistema",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Estuda-se o Novo Sistema",
+      "head": "Analisam-se as Diferenças entre o Antigo e do Novo Sistema",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Analisam-se as Diferenças entre o Antigo e do Novo Sistema",
+      "head": "Inicia-se a Migração de Dados",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inicia-se a Migração de Dados",
+      "head": "Fim da \nMigração de Dados",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

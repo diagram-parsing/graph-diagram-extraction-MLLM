@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "text": "Select Category",
+      "id": "Select Category",
+      "class": "Task"
+    },
+    {
+      "text": "Learn more about product\n",
+      "id": "Learn more about product\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Add to Bag",
+      "id": "Add to Bag",
+      "class": "Task"
+    },
+    {
+      "text": "Checkout",
+      "id": "Checkout",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_3",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Select Deliver",
+      "id": "Select Deliver",
+      "class": "Task"
+    },
+    {
+      "text": "Select Pickup",
+      "id": "Select Pickup",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_4",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Select Location",
+      "id": "Select Location",
+      "class": "Task"
+    },
+    {
+      "text": "Pay Online",
+      "id": "Pay Online",
+      "class": "Task"
+    },
+    {
+      "text": "Receive Receipt",
+      "id": "Receive Receipt",
+      "class": "Task"
+    },
+    {
+      "text": "Login Apple Store",
+      "id": "Login Apple Store",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Select Category",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Learn more about product\n",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Learn more about product\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Add to Bag",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Add to Bag",
+      "head": "Checkout",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Checkout",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "Select Pickup",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "Select Deliver",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Deliver",
+      "head": "AND_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Pickup",
+      "head": "AND_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_4",
+      "head": "Select Location",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Location",
+      "head": "Pay Online",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pay Online",
+      "head": "Receive Receipt",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive Receipt",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Login Apple Store",
+      "head": "Select Category",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

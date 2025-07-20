@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "text": "Patient",
+      "attributes": [
+        "Name: string",
+        "Vorname: string",
+        "Geburtsdatum: DateTime"
+      ],
+      "methods": null,
+      "id": "Patient",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Einnahmeregel",
+      "attributes": [
+        "StartDatum: DateTime",
+        "EndDatum: DateTime"
+      ],
+      "methods": null,
+      "id": "Einnahmeregel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tagesregel",
+      "attributes": [
+        "MengeMorgens: double",
+        "MengeMittags: double",
+        "MengeAbends: double"
+      ],
+      "methods": null,
+      "id": "Tagesregel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Wochenregel",
+      "attributes": [
+        "AnzahlMontag: int",
+        "AnzahlDienstag: int",
+        "AnzahlMittwoch: int",
+        "AnzahlDonnerstag: int",
+        "AnzahlFreitag: int",
+        "AnzahlSamstag: int",
+        "AnzahlSonntag: int"
+      ],
+      "methods": null,
+      "id": "Wochenregel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Medikament",
+      "attributes": [
+        "Name: string",
+        "Hersteller: string"
+      ],
+      "methods": null,
+      "id": "Medikament",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dosierung",
+      "attributes": [
+        "Menge: double"
+      ],
+      "methods": null,
+      "id": "Dosierung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Unverträglichkeit",
+      "attributes": null,
+      "methods": null,
+      "id": "Unverträglichkeit",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Wirkstoff",
+      "attributes": null,
+      "methods": null,
+      "id": "Wirkstoff",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Hilfsstoff",
+      "attributes": null,
+      "methods": null,
+      "id": "Hilfsstoff",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Inhaltsstoff",
+      "attributes": [
+        "Name: string"
+      ],
+      "methods": null,
+      "id": "Inhaltsstoff",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Verschreibung",
+      "attributes": null,
+      "methods": null,
+      "id": "Verschreibung",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Patient",
+      "head": "Unverträglichkeit",
+      "class": "UndirectedAssociation",
+      "label": "hat"
+    },
+    {
+      "tail": "Patient",
+      "head": "Verschreibung",
+      "class": "UndirectedAssociation",
+      "label": "bekommt "
+    },
+    {
+      "tail": "Einnahmeregel",
+      "head": "Tagesregel",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Einnahmeregel",
+      "head": "Wochenregel",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Medikament",
+      "head": "Wirkstoff",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Medikament",
+      "head": "Hilfsstoff",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Unverträglichkeit",
+      "head": "Inhaltsstoff",
+      "class": "UndirectedAssociation",
+      "label": "löst aus"
+    },
+    {
+      "tail": "Wirkstoff",
+      "head": "Wirkstoff",
+      "class": "UndirectedAssociation",
+      "label": "besteht Wechselwirkung"
+    },
+    {
+      "tail": "Wirkstoff",
+      "head": "Dosierung",
+      "class": "UndirectedAssociation",
+      "label": "hat"
+    },
+    {
+      "tail": "Inhaltsstoff",
+      "head": "Hilfsstoff",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Inhaltsstoff",
+      "head": "Wirkstoff",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Verschreibung",
+      "head": "Medikament",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Verschreibung",
+      "head": "Tagesregel",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Verschreibung",
+      "head": "Wochenregel",
+      "class": "Aggregation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

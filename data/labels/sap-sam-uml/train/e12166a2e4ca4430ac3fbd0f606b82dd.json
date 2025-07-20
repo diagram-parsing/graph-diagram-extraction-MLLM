@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "text": "a1: Administrador",
+      "attributes": [
+        "Nombre: Juan David",
+        "Apellidos: Reyes Helisondo",
+        "Teléfono: 665456338",
+        "Email: jane.doe@dummy.com",
+        "Sueldo: 1750€"
+      ],
+      "methods": null,
+      "id": "a1: Administrador",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "e1: Encargo",
+      "attributes": [
+        "ID_Encargo: 001",
+        "Fecha Inicio: 24/10/2017",
+        "Entrega estimada: 30/10/2017",
+        "Precio: 50€",
+        "Estado: Pendiente"
+      ],
+      "methods": null,
+      "id": "e1: Encargo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "p2: Proveedor",
+      "attributes": [
+        "Nombre: A.C.",
+        "Email: jane.doe@dummy.com",
+        "Telefono de contacto: 662130563",
+        "Categoria: Bebida"
+      ],
+      "methods": null,
+      "id": "p2: Proveedor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "e2: Encargo",
+      "attributes": [
+        "ID_Encargo: 002",
+        "Fecha Inicio: 31/12/2016",
+        "Entrega Estimada: 01/01/2017",
+        "Precio: 200€",
+        "Estado: Finalizado"
+      ],
+      "methods": null,
+      "id": "e2: Encargo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "p1: Proveedor",
+      "attributes": [
+        "Nombre: Fripan",
+        "Email: jane.doe@dummy.com",
+        "Telefono de contacto: 935 04 17 00",
+        "Categoria: Reposteria"
+      ],
+      "methods": null,
+      "id": "p1: Proveedor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "pr2: Producto",
+      "attributes": [
+        "ID: 1002",
+        "Nombre: Clipper De Fresa",
+        "Información nutricional: \"Por 100ml: Calorías: 0, Grasas: 0g, HC: 0g\"",
+        "Precio Unitario: 2€",
+        "Descripción: Bebida refrescante sabor fresa"
+      ],
+      "methods": null,
+      "id": "pr2: Producto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "pr1: Producto",
+      "attributes": [
+        "ID: 2008",
+        "Nombre: Pastel de Limón",
+        "Información nutricional: \"Por 100gr: Calorías: 540Kcal, Grasas: 6g, HC: 30g\"",
+        "Precio Unitario: 5€",
+        "Descripción: Delicioso pastel helado sabor limón"
+      ],
+      "methods": null,
+      "id": "pr1: Producto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "pr3: Producto",
+      "attributes": [
+        "ID: 1004",
+        "Nombre: Nick-cola",
+        "Información nutricional: \"Por 100ml: Calorías: 0, Grasas: 0g, HC: 0g\"",
+        "Precio Unitario: 2€",
+        "Descripción: Bebida refrescante sabor Cola"
+      ],
+      "methods": null,
+      "id": "pr3: Producto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cantidad",
+      "attributes": [
+        "Unidades: 75"
+      ],
+      "methods": null,
+      "id": "Cantidad",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cantidad",
+      "attributes": [
+        "Unidades: 25"
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cantidad",
+      "attributes": [
+        "Unidades: 10"
+      ],
+      "methods": null,
+      "id": "ComplexClass_2",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "a1: Administrador",
+      "head": "p2: Proveedor",
+      "class": "Composition",
+      "label": "Contacta con"
+    },
+    {
+      "tail": "a1: Administrador",
+      "head": "p1: Proveedor",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "e1: Encargo",
+      "head": "p1: Proveedor",
+      "class": "Composition",
+      "label": "Realiza"
+    },
+    {
+      "tail": "e1: Encargo",
+      "head": "pr1: Producto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "e2: Encargo",
+      "head": "p2: Proveedor",
+      "class": "Composition",
+      "label": "Realiza"
+    },
+    {
+      "tail": "e2: Encargo",
+      "head": "pr3: Producto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "e2: Encargo",
+      "head": "pr2: Producto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

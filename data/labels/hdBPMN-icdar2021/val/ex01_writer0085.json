@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "text": "Request fulfilled",
+      "id": "Request fulfilled",
+      "class": "event"
+    },
+    {
+      "text": "credit request received",
+      "id": "credit request received",
+      "class": "event"
+    },
+    {
+      "text": "Assess risk",
+      "id": "Assess risk",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Carry out advanced risk assessement",
+      "id": "Carry out advanced risk assessement",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Carry out simple risk assessment",
+      "id": "Carry out simple risk assessment",
+      "class": "task"
+    },
+    {
+      "text": "Complete risk assessment",
+      "id": "Complete risk assessment",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "Notify customer",
+      "id": "Notify customer",
+      "class": "task"
+    },
+    {
+      "text": "Organize disbursement",
+      "id": "Organize disbursement",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_2",
+      "head": "Request fulfilled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Notify customer",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Organize disbursement",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "Organize disbursement",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "Notify customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Complete risk assessment",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "Complete risk assessment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "Carry out simple risk assessment",
+      "class": "sequenceFlow",
+      "label": "risk below threshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "Carry out advanced risk assessement",
+      "class": "sequenceFlow",
+      "label": "risk above threshold"
+    },
+    {
+      "tail": "Assess risk",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "credit request received",
+      "head": "Assess risk",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

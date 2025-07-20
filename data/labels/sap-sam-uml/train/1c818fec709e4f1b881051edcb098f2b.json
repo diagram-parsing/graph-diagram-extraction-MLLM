@@ -1,0 +1,202 @@
+{
+  "nodes": [
+    {
+      "text": "Flugzeug",
+      "attributes": [
+        "Bezeichnung: ",
+        "Baujahr: ",
+        "Seriennummer: "
+      ],
+      "methods": null,
+      "id": "Flugzeug",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kunde",
+      "attributes": [
+        "Name: ",
+        "Adresse: "
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Baugruppe",
+      "attributes": [
+        "Seriennummer: "
+      ],
+      "methods": null,
+      "id": "Baugruppe",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rumpf",
+      "attributes": null,
+      "methods": null,
+      "id": "Rumpf",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Flügel",
+      "attributes": null,
+      "methods": null,
+      "id": "Flügel",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Cockpit",
+      "attributes": null,
+      "methods": null,
+      "id": "Cockpit",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Seitenruder",
+      "attributes": null,
+      "methods": null,
+      "id": "Seitenruder",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Höhenruder",
+      "attributes": null,
+      "methods": null,
+      "id": "Höhenruder",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Fahrwerk",
+      "attributes": null,
+      "methods": null,
+      "id": "Fahrwerk",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Lieferant",
+      "attributes": null,
+      "methods": null,
+      "id": "Lieferant",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Typ",
+      "attributes": null,
+      "methods": null,
+      "id": "Typ",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Triebwerk",
+      "attributes": null,
+      "methods": null,
+      "id": "Triebwerk",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Flugzeug",
+      "head": "Kunde",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Rumpf",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Flügel",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Cockpit",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Seitenruder",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Höhenruder",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Fahrwerk",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Triebwerk",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Rumpf",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Flügel",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Cockpit",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Seitenruder",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Höhenruder",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Fahrwerk",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Triebwerk",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Lieferant",
+      "head": "Baugruppe",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Typ",
+      "head": "Flugzeug",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

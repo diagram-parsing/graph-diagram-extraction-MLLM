@@ -1,0 +1,346 @@
+{
+  "nodes": [
+    {
+      "text": "claim",
+      "id": "claim",
+      "class": "dataObject"
+    },
+    {
+      "text": "evaluate severity of claim",
+      "id": "evaluate severity of claim",
+      "class": "task"
+    },
+    {
+      "text": "claim processed",
+      "id": "claim processed",
+      "class": "event"
+    },
+    {
+      "text": "check relevant forms for completness",
+      "id": "check relevant forms for completness",
+      "class": "task"
+    },
+    {
+      "text": "forms",
+      "id": "forms",
+      "class": "dataObject"
+    },
+    {
+      "text": "send forms (simple)",
+      "id": "send forms (simple)",
+      "class": "task"
+    },
+    {
+      "text": "send forms (complex)",
+      "id": "send forms (complex)",
+      "class": "task"
+    },
+    {
+      "text": "inform claimant to update forms",
+      "id": "inform claimant to update forms",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "claim rejected",
+      "id": "claim rejected",
+      "class": "event"
+    },
+    {
+      "text": "send automatic notifications",
+      "id": "send automatic notifications",
+      "class": "task"
+    },
+    {
+      "text": "automatic notification",
+      "id": "automatic notification",
+      "class": "dataObject"
+    },
+    {
+      "text": "check if claiment is insured",
+      "id": "check if claiment is insured",
+      "class": "task"
+    },
+    {
+      "text": "received claim",
+      "id": "received claim",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "simple forms",
+      "id": "simple forms",
+      "class": "dataObject"
+    },
+    {
+      "text": "complex forms",
+      "id": "complex forms",
+      "class": "dataObject"
+    },
+    {
+      "text": "register claim in claim management system",
+      "id": "register claim in claim management system",
+      "class": "task"
+    },
+    {
+      "text": "claims management system",
+      "id": "claims management system",
+      "class": "dataStore"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_4",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "claim",
+      "id": "claim",
+      "class": "dataObject"
+    },
+    {
+      "text": "received forms",
+      "id": "received forms",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "send automatic notifications",
+      "head": "claim rejected",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received claim",
+      "head": "check if claiment is insured",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check if claiment is insured",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "send automatic notifications",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "evaluate severity of claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "evaluate severity of claim",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received forms",
+      "head": "check relevant forms for completness",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check relevant forms for completness",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "inform claimant to update forms",
+      "class": "sequenceFlow",
+      "label": "forms not complete"
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "register claim in claim management system",
+      "class": "sequenceFlow",
+      "label": "forms complete"
+    },
+    {
+      "tail": "register claim in claim management system",
+      "head": "claim processed",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send forms (simple)",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "send forms (complex)",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "send forms (simple)",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send forms (complex)",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim",
+      "head": "evaluate severity of claim",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "forms",
+      "head": "check relevant forms for completness",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send forms (simple)",
+      "head": "simple forms",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send forms (complex)",
+      "head": "complex forms",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send automatic notifications",
+      "head": "automatic notification",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "check if claiment is insured",
+      "head": "claim",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "claim",
+      "head": "register claim in claim management system",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "register claim in claim management system",
+      "head": "claims management system",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "claiment",
+      "head": "received claim",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "send forms (simple)",
+      "head": "claiment",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "send forms (complex)",
+      "head": "claiment",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "inform claimant to update forms",
+      "head": "claiment",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "claiment",
+      "head": "received forms",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "claiment",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "insurer",
+      "nodes": [
+        "SAP system",
+        "claims officer",
+        "senior claims officer"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "SAP system",
+      "nodes": [
+        "send forms (simple)",
+        "send forms (complex)",
+        "inform claimant to update forms",
+        "claim rejected",
+        "send automatic notifications",
+        "automatic notification",
+        "simple forms",
+        "complex forms"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "claims officer",
+      "nodes": [
+        "claim",
+        "claim processed",
+        "check relevant forms for completness",
+        "forms",
+        "exclusiveGateway_2",
+        "check if claiment is insured",
+        "received claim",
+        "exclusiveGateway_3",
+        "register claim in claim management system",
+        "claims management system",
+        "exclusiveGateway_4",
+        "claim",
+        "received forms"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "senior claims officer",
+      "nodes": [
+        "evaluate severity of claim",
+        "exclusiveGateway_1"
+      ],
+      "class": "lane"
+    }
+  ]
+}

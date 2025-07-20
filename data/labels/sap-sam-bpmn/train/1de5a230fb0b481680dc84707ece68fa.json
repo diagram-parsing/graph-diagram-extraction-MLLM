@@ -1,0 +1,175 @@
+{
+  "nodes": [
+    {
+      "text": "rilevamento transiti in entrata",
+      "id": "rilevamento transiti in entrata",
+      "class": "Task"
+    },
+    {
+      "text": "addebito mensile intestatario contratto ",
+      "id": "addebito mensile intestatario contratto ",
+      "class": "Task"
+    },
+    {
+      "text": "registrazione dati e prezzi",
+      "id": "registrazione dati e prezzi",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "addebito costo aggiuntivo con tassa maggiore",
+      "id": "addebito costo aggiuntivo con tassa maggiore",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "completamento dati di uscita",
+      "id": "completamento dati di uscita",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndTerminateEvent_1",
+      "class": "EndTerminateEvent"
+    },
+    {
+      "text": "completamento dati di entrata",
+      "id": "completamento dati di entrata",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "passaggio dal casello con telepass",
+      "id": "passaggio dal casello con telepass",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "rilevamento transiti in entrata",
+      "head": "addebito mensile intestatario contratto ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "addebito mensile intestatario contratto ",
+      "head": "registrazione dati e prezzi",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "registrazione dati e prezzi",
+      "head": "completamento dati di entrata",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "addebito costo aggiuntivo con tassa maggiore",
+      "class": "SequenceFlow",
+      "label": "non registrato"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "registrato"
+    },
+    {
+      "tail": "addebito costo aggiuntivo con tassa maggiore",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "completamento dati di uscita",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "completamento dati di uscita",
+      "head": "EndTerminateEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "completamento dati di entrata",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "passaggio dal casello con telepass",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "passaggio dal casello con telepass",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "rilevamento transiti in entrata",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Fastconnection",
+      "id": "Fastconnection",
+      "nodes": [
+        "sistema",
+        "automobilista"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "sistema",
+      "id": "sistema",
+      "nodes": [
+        "rilevamento transiti in entrata",
+        "addebito mensile intestatario contratto ",
+        "registrazione dati e prezzi",
+        "Exclusive_Databased_Gateway_1",
+        "addebito costo aggiuntivo con tassa maggiore",
+        "Exclusive_Databased_Gateway_2",
+        "completamento dati di uscita",
+        "EndTerminateEvent_1",
+        "completamento dati di entrata"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "automobilista",
+      "id": "automobilista",
+      "nodes": [
+        "StartEvent_1",
+        "passaggio dal casello con telepass",
+        "AND_Gateway_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

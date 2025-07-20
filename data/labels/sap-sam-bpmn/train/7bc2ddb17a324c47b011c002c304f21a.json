@@ -1,0 +1,155 @@
+{
+  "nodes": [
+    {
+      "text": "Hungry for Pizza",
+      "id": "Hungry for Pizza",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Select a Pizza",
+      "id": "Select a Pizza",
+      "class": "Task"
+    },
+    {
+      "text": "Order a Pizza",
+      "id": "Order a Pizza",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Pay for Pizza",
+      "id": "Pay for Pizza",
+      "class": "Task"
+    },
+    {
+      "text": "call ask for pizza",
+      "id": "call ask for pizza",
+      "class": "Task"
+    },
+    {
+      "text": "eat the pizza",
+      "id": "eat the pizza",
+      "class": "Task"
+    },
+    {
+      "text": "Hunger Satisfied",
+      "id": "Hunger Satisfied",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_1",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "Pizza delievered",
+      "id": "Pizza delievered",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "60 minutes",
+      "id": "60 minutes",
+      "class": "IntermediateTimerEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Hungry for Pizza",
+      "head": "Select a Pizza",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select a Pizza",
+      "head": "Order a Pizza",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Order a Pizza",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pay for Pizza",
+      "head": "eat the pizza",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "call ask for pizza",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "eat the pizza",
+      "head": "Hunger Satisfied",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Pizza delievered",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "60 minutes",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pizza delievered",
+      "head": "Pay for Pizza",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "60 minutes",
+      "head": "call ask for pizza",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Pool Costumer",
+      "id": "Pool Costumer",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Hungry for Pizza",
+        "Select a Pizza",
+        "Order a Pizza",
+        "Exclusive_Databased_Gateway_1",
+        "Pay for Pizza",
+        "call ask for pizza",
+        "eat the pizza",
+        "Hunger Satisfied",
+        "Exclusive_Eventbased_Gateway_1",
+        "Pizza delievered",
+        "60 minutes"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

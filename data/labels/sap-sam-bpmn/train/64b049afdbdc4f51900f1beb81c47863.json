@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "text": "Anfrage Angebot erhalten",
+      "id": "Anfrage Angebot erhalten",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Start Berechnungsprogramm VU",
+      "id": "Start Berechnungsprogramm VU",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Dateneingabe",
+      "id": "Dateneingabe",
+      "class": "Task"
+    },
+    {
+      "text": "zur engeren Auswahl hinzufügen",
+      "id": "zur engeren Auswahl hinzufügen",
+      "class": "Task"
+    },
+    {
+      "text": "VU verwerfen",
+      "id": "VU verwerfen",
+      "class": "Task"
+    },
+    {
+      "text": "Angebote ausgewertet",
+      "id": "Angebote ausgewertet",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Auswahl des besten Angebots",
+      "id": "Auswahl des besten Angebots",
+      "class": "Task"
+    },
+    {
+      "text": "Angebot sichten",
+      "id": "Angebot sichten",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Anfrage Angebot erhalten",
+      "head": "Start Berechnungsprogramm VU",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Start Berechnungsprogramm VU",
+      "head": "Dateneingabe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "zur engeren Auswahl hinzufügen",
+      "class": "SequenceFlow",
+      "label": "Angebot gut"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "VU verwerfen",
+      "class": "SequenceFlow",
+      "label": "Angebot schlecht"
+    },
+    {
+      "tail": "Dateneingabe",
+      "head": "Angebot sichten",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Dateneingabe",
+      "head": "Angebot sichten",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "zur engeren Auswahl hinzufügen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "VU verwerfen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Auswahl des besten Angebots",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auswahl des besten Angebots",
+      "head": "Angebote ausgewertet",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Angebot sichten",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "TextAnnotation_1",
+      "head": "Auswahl des besten Angebots",
+      "class": "Association_Undirected",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Versicherungsmakler",
+      "id": "Versicherungsmakler",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Anfrage Angebot erhalten",
+        "Start Berechnungsprogramm VU",
+        "Exclusive_Databased_Gateway_1",
+        "Dateneingabe",
+        "zur engeren Auswahl hinzufügen",
+        "VU verwerfen",
+        "Angebote ausgewertet",
+        "Exclusive_Databased_Gateway_2",
+        "Auswahl des besten Angebots",
+        "Angebot sichten",
+        "TextAnnotation_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

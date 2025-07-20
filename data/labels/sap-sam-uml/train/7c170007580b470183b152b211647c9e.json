@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Bestellung",
+      "attributes": [
+        "Bestellung ID: ",
+        "Bestelldatum: ",
+        "Status: ",
+        "Version: ",
+        "Aktualiersiert: "
+      ],
+      "methods": [
+        "erstellen,update()"
+      ],
+      "id": "Bestellung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kunde",
+      "attributes": [
+        "Kunden ID: ",
+        "Vorname: ",
+        "Nachname: ",
+        "Geburtsdatum: ",
+        "Geschlecht: ",
+        "EmailAdresse: ",
+        "Eintrittsdatum: ",
+        "Aktualiersiert: "
+      ],
+      "methods": [
+        "erstellen,update()"
+      ],
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adresse",
+      "attributes": [
+        "Adresse ID: ",
+        "Strasse: ",
+        "Hausnummer: ",
+        "PLZ: ",
+        "Ort: ",
+        "Aktualisiert: "
+      ],
+      "methods": [
+        "erstellen,updaten()"
+      ],
+      "id": "Adresse",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellposition",
+      "attributes": [
+        "Position ID: ",
+        "Menge: ",
+        "Version: ",
+        "Zwischenpreis: "
+      ],
+      "methods": [
+        "erstellen,update()"
+      ],
+      "id": "Bestellposition",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "Artikel ID: ",
+        "Bezeichnung: ",
+        "Farbe: ",
+        "Preis: ",
+        "Verfügbarkeit: ",
+        "Erstellt: ",
+        "Akutaliersiert: "
+      ],
+      "methods": [
+        "erstellen,updaten()"
+      ],
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Lieferung",
+      "attributes": [
+        "Lieferung ID: ",
+        "Liefernungnr.: ",
+        "Erstellt: ",
+        "Aktualiersiert: ",
+        ": "
+      ],
+      "methods": [
+        "erstellen,update()"
+      ],
+      "id": "Lieferung",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Bestellung",
+      "head": "Kunde",
+      "class": "UndirectedAssociation",
+      "label": "0,*............1"
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Bestellposition",
+      "class": "UndirectedAssociation",
+      "label": "1...........1,*"
+    },
+    {
+      "tail": "Kunde",
+      "head": "Adresse",
+      "class": "UndirectedAssociation",
+      "label": "1,*...........1"
+    },
+    {
+      "tail": "Bestellposition",
+      "head": "Lieferung",
+      "class": "UndirectedAssociation",
+      "label": "1,*...........1,*"
+    },
+    {
+      "tail": "Artikel",
+      "head": "Bestellposition",
+      "class": "UndirectedAssociation",
+      "label": "1...........*"
+    }
+  ],
+  "groups": []
+}

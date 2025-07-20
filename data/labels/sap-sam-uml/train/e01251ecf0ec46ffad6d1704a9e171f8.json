@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "text": "Tenure",
+      "attributes": [
+        "id: int",
+        "type: string"
+      ],
+      "methods": null,
+      "id": "Tenure",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Application",
+      "attributes": [
+        "system file reference: int"
+      ],
+      "methods": null,
+      "id": "Application",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Applicant",
+      "attributes": [
+        "id: int",
+        "contact name: string",
+        "mailing address: string"
+      ],
+      "methods": null,
+      "id": "Applicant",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Documents",
+      "attributes": [
+        "id: int",
+        "date: int",
+        "key interactions: string",
+        "comments: string"
+      ],
+      "methods": null,
+      "id": "Documents",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Parcels",
+      "attributes": [
+        "id: int"
+      ],
+      "methods": null,
+      "id": "Parcels",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Application",
+      "head": "Tenure",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Applicant",
+      "head": "Application",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Documents",
+      "head": "Application",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

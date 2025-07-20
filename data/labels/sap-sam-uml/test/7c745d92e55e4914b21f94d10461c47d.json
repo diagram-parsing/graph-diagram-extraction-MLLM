@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "text": "Kunde",
+      "attributes": [
+        "Geburtsdatum: ",
+        "Kunden-Nr.: ",
+        ": "
+      ],
+      "methods": [
+        "zahlungsfähigkeit()",
+        "akt_kaufen()"
+      ],
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Verkäufe",
+      "attributes": [
+        "Artikelbezeichnung: ",
+        "Menge: "
+      ],
+      "methods": [
+        "bezahlen()",
+        "verpacken()"
+      ],
+      "id": "Verkäufe",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Produkte",
+      "attributes": [
+        "Artikel-Nr.: ",
+        "Gewicht: ",
+        "Größe: "
+      ],
+      "methods": [
+        "klassifizierung()",
+        "altersbegrenzung()"
+      ],
+      "id": "Produkte",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde",
+      "head": "Produkte",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

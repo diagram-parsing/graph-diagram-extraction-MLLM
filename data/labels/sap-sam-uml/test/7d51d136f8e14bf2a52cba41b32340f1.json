@@ -1,0 +1,155 @@
+{
+  "nodes": [
+    {
+      "text": "Viaggiatore",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "data_nascita: Date",
+        "e-mail: String",
+        "nazionalità: String",
+        "CF: String",
+        "cell.: String"
+      ],
+      "methods": null,
+      "id": "Viaggiatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ingresso",
+      "attributes": [
+        "data: DateTime",
+        "mezzo_trasporto: enum",
+        "codice : String"
+      ],
+      "methods": null,
+      "id": "Ingresso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Località",
+      "attributes": [
+        "nome: String",
+        "provincia: String",
+        "regione: String"
+      ],
+      "methods": null,
+      "id": "Località",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Nazione",
+      "attributes": [
+        "Nome: String",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Nazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "mezzo:\n-bus\n-treno\n-traghetto\n-mezzo proprio",
+      "attributes": null,
+      "methods": null,
+      "id": "mezzo:\n-bus\n-treno\n-traghetto\n-mezzo proprio",
+      "class": "Note"
+    },
+    {
+      "text": "indirizzo",
+      "attributes": [
+        "Via: String",
+        "num_civico: int",
+        "CAP: String",
+        "Città: String",
+        "provincia: String",
+        "regione: String"
+      ],
+      "methods": null,
+      "id": "indirizzo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "presidio sanitario",
+      "attributes": [
+        "nome: String",
+        "indirizzo: String",
+        "Città: String",
+        "CAP: String"
+      ],
+      "methods": null,
+      "id": "presidio sanitario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rischio",
+      "attributes": [
+        "data_inizio: Date",
+        "data_fine: Date"
+      ],
+      "methods": null,
+      "id": "Rischio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Test",
+      "attributes": [
+        "data: Date",
+        "positivo: boolean"
+      ],
+      "methods": null,
+      "id": "Test",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Viaggiatore",
+      "head": "Ingresso",
+      "class": "UndirectedAssociation",
+      "label": "registra"
+    },
+    {
+      "tail": "Viaggiatore",
+      "head": "indirizzo",
+      "class": "UndirectedAssociation",
+      "label": "reperibilePresso"
+    },
+    {
+      "tail": "Ingresso",
+      "head": "Località",
+      "class": "UndirectedAssociation",
+      "label": "da"
+    },
+    {
+      "tail": "Ingresso",
+      "head": "mezzo:\n-bus\n-treno\n-traghetto\n-mezzo proprio",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Ingresso",
+      "head": "presidio sanitario",
+      "class": "UndirectedAssociation",
+      "label": "deveRecarsi"
+    },
+    {
+      "tail": "Ingresso",
+      "head": "Test",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Località",
+      "head": "Nazione",
+      "class": "UndirectedAssociation",
+      "label": "presenteIn"
+    },
+    {
+      "tail": "Nazione",
+      "head": "Rischio",
+      "class": "UndirectedAssociation",
+      "label": "associatoA"
+    }
+  ],
+  "groups": []
+}

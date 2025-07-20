@@ -1,0 +1,80 @@
+{
+  "nodes": [
+    {
+      "text": "B",
+      "id": "B",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "Task"
+    },
+    {
+      "text": "A",
+      "id": "A",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "B",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "A",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_1",
+        "Lane_2",
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "B",
+        "Exclusive_Databased_Gateway_1",
+        "C"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "A"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [],
+      "class": "Lane"
+    }
+  ]
+}

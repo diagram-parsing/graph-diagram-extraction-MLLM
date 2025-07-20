@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "text": "State",
+      "attributes": null,
+      "methods": [
+        "Handle()"
+      ],
+      "id": "State",
+      "class": "Interface"
+    },
+    {
+      "text": "Context",
+      "attributes": null,
+      "methods": [
+        "Request()"
+      ],
+      "id": "Context",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ConcreteStateA",
+      "attributes": null,
+      "methods": [
+        "Handle()"
+      ],
+      "id": "ConcreteStateA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ConcreteStateA",
+      "attributes": null,
+      "methods": [
+        "Handle()"
+      ],
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "state.Handle()",
+      "attributes": null,
+      "methods": null,
+      "id": "state.Handle()",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Context",
+      "head": "State",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Context",
+      "head": "state.Handle()",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "ConcreteStateA",
+      "head": "State",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "State",
+      "class": "Realization",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

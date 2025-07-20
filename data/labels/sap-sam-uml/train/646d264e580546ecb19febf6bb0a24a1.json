@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "aggregierteDatenmitGegnerdaten\n",
+      "attributes": [
+        "keyWP2: ",
+        "ZeitstempelInS: ",
+        "...: ",
+        "TeamBallbesitz: ",
+        "Spielort: "
+      ],
+      "methods": null,
+      "id": "aggregierteDatenmitGegnerdaten\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Hilfstabelle min",
+      "attributes": [
+        "Time in s: ",
+        "Time in min: "
+      ],
+      "methods": null,
+      "id": "Hilfstabelle min",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Entfernungskaliert",
+      "attributes": [
+        "Minute: ",
+        "keybezeichnungMappedIDSensortyp: ",
+        "Bezeichnung: ",
+        "MappedID: ",
+        "Wert: "
+      ],
+      "methods": null,
+      "id": "Entfernungskaliert",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PassDaten",
+      "attributes": [
+        "keyWP2: ",
+        "MappedIDwechsel: ",
+        "MappedIDNext: ",
+        "BallDistanzStart: ",
+        "BallDistanzEnde: ",
+        "PassDistanz: ",
+        "BallGeschwindigkeit: ",
+        "BallID: "
+      ],
+      "methods": null,
+      "id": "PassDaten",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "aggregierteDatenmitGegnerdaten\n",
+      "head": "Hilfstabelle min",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Hilfstabelle min",
+      "head": "Entfernungskaliert",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "PassDaten",
+      "head": "aggregierteDatenmitGegnerdaten\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

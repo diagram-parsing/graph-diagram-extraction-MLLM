@@ -1,0 +1,172 @@
+{
+  "nodes": [
+    {
+      "text": "Employee\ntraining\nrequest",
+      "id": "Employee\ntraining\nrequest",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Select \nvendor",
+      "id": "Select \nvendor",
+      "class": "Task"
+    },
+    {
+      "text": "Fill\ntraining\nrequest",
+      "id": "Fill\ntraining\nrequest",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Evaluates\ntraining",
+      "id": "Evaluates\ntraining",
+      "class": "Task"
+    },
+    {
+      "text": "Check\nbudget",
+      "id": "Check\nbudget",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Deny \nrequest",
+      "id": "Deny \nrequest",
+      "class": "Task"
+    },
+    {
+      "text": "Approve\ntraining",
+      "id": "Approve\ntraining",
+      "class": "Task"
+    },
+    {
+      "text": "Notify\ndenial",
+      "id": "Notify\ndenial",
+      "class": "Task"
+    },
+    {
+      "text": "Process \ncompleted",
+      "id": "Process \ncompleted",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Notify\napproval",
+      "id": "Notify\napproval",
+      "class": "Task"
+    },
+    {
+      "text": "Schedule\ntraining",
+      "id": "Schedule\ntraining",
+      "class": "Task"
+    },
+    {
+      "text": "Process\ncompleted",
+      "id": "Process\ncompleted",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Employee\ntraining\nrequest",
+      "head": "Select \nvendor",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select \nvendor",
+      "head": "Fill\ntraining\nrequest",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Fill\ntraining\nrequest",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Evaluates\ntraining",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Check\nbudget",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Evaluates\ntraining",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check\nbudget",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Deny \nrequest",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Approve\ntraining",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Deny \nrequest",
+      "head": "Notify\ndenial",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approve\ntraining",
+      "head": "Notify\napproval",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notify\ndenial",
+      "head": "Process \ncompleted",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notify\napproval",
+      "head": "Schedule\ntraining",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Schedule\ntraining",
+      "head": "Process\ncompleted",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

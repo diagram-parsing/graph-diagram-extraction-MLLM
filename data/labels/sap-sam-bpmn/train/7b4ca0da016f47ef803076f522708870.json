@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "text": "Kundenanfrage trifft ein",
+      "id": "Kundenanfrage trifft ein",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Überprüfung Neu- oder Altkunde",
+      "id": "Überprüfung Neu- oder Altkunde",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Bonität überprüfen und Stammdaten anglegen",
+      "id": "Bonität überprüfen und Stammdaten anglegen",
+      "class": "Task"
+    },
+    {
+      "text": "Stammdaten abgleichen",
+      "id": "Stammdaten abgleichen",
+      "class": "Task"
+    },
+    {
+      "text": "Weiterleitung an zuständigen MA",
+      "id": "Weiterleitung an zuständigen MA",
+      "class": "Task"
+    },
+    {
+      "text": "zuständigen MA zuweisen",
+      "id": "zuständigen MA zuweisen",
+      "class": "Task"
+    },
+    {
+      "text": "Bestellung aufnehmen",
+      "id": "Bestellung aufnehmen",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kundenanfrage trifft ein",
+      "head": "Überprüfung Neu- oder Altkunde",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Überprüfung Neu- oder Altkunde",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Bonität überprüfen und Stammdaten anglegen",
+      "class": "SequenceFlow",
+      "label": "Neukunde"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Stammdaten abgleichen",
+      "class": "SequenceFlow",
+      "label": "Stammkunde"
+    },
+    {
+      "tail": "Bonität überprüfen und Stammdaten anglegen",
+      "head": "zuständigen MA zuweisen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stammdaten abgleichen",
+      "head": "Weiterleitung an zuständigen MA",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Weiterleitung an zuständigen MA",
+      "head": "Bestellung aufnehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "zuständigen MA zuweisen",
+      "head": "Bestellung aufnehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Kundenanfrage",
+      "id": "Kundenanfrage",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Kundenanfrage trifft ein",
+        "Überprüfung Neu- oder Altkunde",
+        "Exclusive_Databased_Gateway_1",
+        "Bonität überprüfen und Stammdaten anglegen",
+        "Stammdaten abgleichen",
+        "Weiterleitung an zuständigen MA",
+        "zuständigen MA zuweisen",
+        "Bestellung aufnehmen"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartMessageEvent_1",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Check whether product has been ordered before",
+      "id": "Check whether product has been ordered before",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Copy specifications of previous PO\n",
+      "id": "Copy specifications of previous PO\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Fill in missing fields",
+      "id": "Fill in missing fields",
+      "class": "Task"
+    },
+    {
+      "text": "Create new supplier",
+      "id": "Create new supplier",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Confirmation of receival",
+      "id": "Confirmation of receival",
+      "class": "Task"
+    },
+    {
+      "text": "Save",
+      "id": "Save",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Copy specifications of previous PO\n",
+      "class": "SequenceFlow",
+      "label": "Product has already been ordered in the past"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "Product has not been ordered yet"
+    },
+    {
+      "tail": "Copy specifications of previous PO\n",
+      "head": "Fill in missing fields",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Fill in missing fields",
+      "class": "SequenceFlow",
+      "label": "Existing supplier"
+    },
+    {
+      "tail": "Fill in missing fields",
+      "head": "Confirmation of receival",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Confirmation of receival",
+      "head": "Save",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Save",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Melina - Funtion? ",
+      "id": "Melina - Funtion?",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartMessageEvent_1",
+        "Check whether product has been ordered before",
+        "Exclusive_Databased_Gateway_1",
+        "Copy specifications of previous PO\n",
+        "Exclusive_Databased_Gateway_2",
+        "Fill in missing fields",
+        "Create new supplier",
+        "EndEvent_1",
+        "Confirmation of receival",
+        "Save"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Bart Boone - Function?",
+      "id": "Bart Boone - Function?",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [],
+      "class": "Lane"
+    }
+  ]
+}

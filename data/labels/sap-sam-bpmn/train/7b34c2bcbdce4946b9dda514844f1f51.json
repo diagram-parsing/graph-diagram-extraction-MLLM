@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "text": "Invoice\nreceived",
+      "id": "Invoice\nreceived",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Invoice\nhandled",
+      "id": "Invoice\nhandled",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Check invoice for mismatches",
+      "id": "Check invoice for mismatches",
+      "class": "Task"
+    },
+    {
+      "text": "Post invoice",
+      "id": "Post invoice",
+      "class": "Task"
+    },
+    {
+      "text": "Re-send invoice to customer",
+      "id": "Re-send invoice to customer",
+      "class": "Task"
+    },
+    {
+      "text": "Block invoice",
+      "id": "Block invoice",
+      "class": "Task"
+    },
+    {
+      "text": "Park invoice",
+      "id": "Park invoice",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Invoice\nreceived",
+      "head": "Check invoice for mismatches",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Park invoice",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Re-send invoice to customer",
+      "class": "SequenceFlow",
+      "label": "Mismatches exist but\ncan be corrected"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Post invoice",
+      "class": "SequenceFlow",
+      "label": "No mismatches"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Block invoice",
+      "class": "SequenceFlow",
+      "label": "Mismatches exist but\ncannot be corrected"
+    },
+    {
+      "tail": "Check invoice for mismatches",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check invoice for mismatches",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Post invoice",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Re-send invoice to customer",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Block invoice",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Park invoice",
+      "head": "Invoice\nhandled",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

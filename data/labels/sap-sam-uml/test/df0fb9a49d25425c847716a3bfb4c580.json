@@ -1,0 +1,163 @@
+{
+  "nodes": [
+    {
+      "text": "Berater",
+      "attributes": null,
+      "methods": null,
+      "id": "Berater",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Lieferant",
+      "attributes": null,
+      "methods": null,
+      "id": "Lieferant",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bauteile",
+      "attributes": null,
+      "methods": null,
+      "id": "Bauteile",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Flugzeug",
+      "attributes": [
+        "Seriennummer: "
+      ],
+      "methods": null,
+      "id": "Flugzeug",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Termin",
+      "attributes": null,
+      "methods": null,
+      "id": "Termin",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bestelltermin",
+      "attributes": null,
+      "methods": null,
+      "id": "Bestelltermin",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Liefertermin",
+      "attributes": null,
+      "methods": null,
+      "id": "Liefertermin",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bestellung",
+      "attributes": [
+        "Bestellnummer: "
+      ],
+      "methods": null,
+      "id": "Bestellung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Auftragsprüfer",
+      "attributes": null,
+      "methods": null,
+      "id": "Auftragsprüfer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Konfigurator",
+      "attributes": null,
+      "methods": null,
+      "id": "Konfigurator",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Kunde",
+      "attributes": [
+        "Kundennummer: "
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kontaktinfo",
+      "attributes": null,
+      "methods": null,
+      "id": "Kontaktinfo",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Bauteile",
+      "head": "Lieferant",
+      "class": "UndirectedAssociation",
+      "label": "liefert"
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Bauteile",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Termin",
+      "head": "Bestelltermin",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Termin",
+      "head": "Liefertermin",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Termin",
+      "head": "Bestellung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Flugzeug",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Auftragsprüfer",
+      "head": "Bestellung",
+      "class": "UndirectedAssociation",
+      "label": "gibt frei"
+    },
+    {
+      "tail": "Auftragsprüfer",
+      "head": "Konfigurator",
+      "class": "UndirectedAssociation",
+      "label": "prüft"
+    },
+    {
+      "tail": "Konfigurator",
+      "head": "Kunde",
+      "class": "UndirectedAssociation",
+      "label": "nutzt"
+    },
+    {
+      "tail": "Kunde",
+      "head": "Berater",
+      "class": "UndirectedAssociation",
+      "label": "berät"
+    },
+    {
+      "tail": "Kunde",
+      "head": "Kontaktinfo",
+      "class": "Aggregation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

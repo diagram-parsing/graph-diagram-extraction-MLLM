@@ -1,0 +1,142 @@
+{
+  "nodes": [
+    {
+      "text": "Clean up photos\n",
+      "id": "Clean up photos\n",
+      "class": "Subprocess"
+    },
+    {
+      "text": "Pictures uploaded",
+      "id": "Pictures uploaded",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Delete duplicates & failed shots",
+      "id": "Delete duplicates & failed shots",
+      "class": "Task"
+    },
+    {
+      "text": "Edit remaining shots",
+      "id": "Edit remaining shots",
+      "class": "Task"
+    },
+    {
+      "text": "Arrange in gallery",
+      "id": "Arrange in gallery",
+      "class": "Task"
+    },
+    {
+      "text": "Photos cleaned",
+      "id": "Photos cleaned",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Handle Booking\n",
+      "id": "Handle Booking\n",
+      "class": "Subprocess"
+    },
+    {
+      "text": "Booking received",
+      "id": "Booking received",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Update IS",
+      "id": "Update IS",
+      "class": "Task"
+    },
+    {
+      "text": "Assign Photographer\n",
+      "id": "Assign Photographer\n",
+      "class": "Task"
+    },
+    {
+      "text": "Booking handled",
+      "id": "Booking handled",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Date of photoshoot",
+      "id": "Date of photoshoot",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Cancellation received",
+      "id": "Cancellation received",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Cancel booking",
+      "id": "Cancel booking",
+      "class": "Task"
+    },
+    {
+      "text": "Booking cancelled",
+      "id": "Booking cancelled",
+      "class": "EndTerminateEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Pictures uploaded",
+      "head": "Delete duplicates & failed shots",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Delete duplicates & failed shots",
+      "head": "Edit remaining shots",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Edit remaining shots",
+      "head": "Arrange in gallery",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arrange in gallery",
+      "head": "Photos cleaned",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Booking received",
+      "head": "Update IS",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Update IS",
+      "head": "Assign Photographer\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Assign Photographer\n",
+      "head": "Date of photoshoot",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Date of photoshoot",
+      "head": "Booking handled",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cancellation received",
+      "head": "Cancel booking",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cancel booking",
+      "head": "Booking cancelled",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

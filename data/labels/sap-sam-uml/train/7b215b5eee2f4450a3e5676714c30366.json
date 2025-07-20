@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "text": "Service Point",
+      "attributes": [
+        "nomeService: String",
+        "codiceService: String"
+      ],
+      "methods": null,
+      "id": "Service Point",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Consegna",
+      "attributes": [
+        "nomeMittente: String",
+        "cognomeMittente: String",
+        "nomeDestinatario: String",
+        "cognomeDestinatario: String",
+        "indirizzoMittente: String",
+        "indirizzoDestinatario: String",
+        "telefonoDestinatario: String",
+        "arrivoPrevisto: Date",
+        "arrivoReale: Date"
+      ],
+      "methods": null,
+      "id": "Consegna",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tratta",
+      "attributes": [
+        "indirizzoArrivo: String",
+        "dataArrivo: Date",
+        "dataPartenza: Date",
+        "tempoArrivo: Time",
+        "tempoPartenza: Time",
+        "ultimaTratta: boolean"
+      ],
+      "methods": null,
+      "id": "Tratta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Addetto",
+      "attributes": [
+        "tipologia: String",
+        "codiceIdentificativo: String"
+      ],
+      "methods": null,
+      "id": "Addetto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "{ addetto, trasportatore, magazziniere}",
+      "attributes": null,
+      "methods": null,
+      "id": "{ addetto, trasportatore, magazziniere}",
+      "class": "Note"
+    },
+    {
+      "text": "Integrità",
+      "attributes": [
+        "successo: Boolean"
+      ],
+      "methods": null,
+      "id": "Integrità",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "controllata da",
+      "attributes": [
+        "ritardo: Time"
+      ],
+      "methods": null,
+      "id": "controllata da",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "se non c'è ritardo la voce \"ritardo\" = 0",
+      "attributes": null,
+      "methods": null,
+      "id": "se non c'è ritardo la voce \"ritardo\" = 0",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Service Point",
+      "head": "Consegna",
+      "class": "UndirectedAssociation",
+      "label": "registrata in"
+    },
+    {
+      "tail": "Consegna",
+      "head": "Tratta",
+      "class": "UndirectedAssociation",
+      "label": "segue"
+    },
+    {
+      "tail": "Consegna",
+      "head": "Integrità",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "Addetto",
+      "head": "{ addetto, trasportatore, magazziniere}",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Addetto",
+      "head": "Integrità",
+      "class": "UndirectedAssociation",
+      "label": "registra"
+    },
+    {
+      "tail": "Addetto",
+      "head": "Tratta",
+      "class": "UndirectedAssociation",
+      "label": "controllata da"
+    },
+    {
+      "tail": "Addetto",
+      "head": "Consegna",
+      "class": "UndirectedAssociation",
+      "label": "prende in carico"
+    },
+    {
+      "tail": "controllata da",
+      "head": "se non c'è ritardo la voce \"ritardo\" = 0",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

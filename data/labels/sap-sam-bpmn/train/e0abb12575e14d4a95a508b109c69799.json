@@ -1,0 +1,289 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Musik suchen",
+      "id": "Musik suchen",
+      "class": "Task"
+    },
+    {
+      "text": "Musik in Warenkorb legen",
+      "id": "Musik in Warenkorb legen",
+      "class": "Task"
+    },
+    {
+      "text": "Anmeldung zum downloaden",
+      "id": "Anmeldung zum downloaden",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Erneute Eingabe",
+      "id": "Erneute Eingabe",
+      "class": "Task"
+    },
+    {
+      "text": "Bestellung abschicken",
+      "id": "Bestellung abschicken",
+      "class": "Task"
+    },
+    {
+      "text": "Download Aktivierungslink betätigen",
+      "id": "Download Aktivierungslink betätigen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Download erfolgt",
+      "id": "Download erfolgt",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_2",
+      "class": "StartEvent"
+    },
+    {
+      "text": "sucht Musik",
+      "id": "sucht Musik",
+      "class": "Task"
+    },
+    {
+      "text": "legt Warenkorb an\n",
+      "id": "legt Warenkorb an\n",
+      "class": "Task"
+    },
+    {
+      "text": "Eingaben prüfen",
+      "id": "Eingaben prüfen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Bestellung anzeigen",
+      "id": "Bestellung anzeigen",
+      "class": "Task"
+    },
+    {
+      "text": "Aktivierungslink senden",
+      "id": "Aktivierungslink senden",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Musik suchen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Musik suchen",
+      "head": "Musik in Warenkorb legen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Musik in Warenkorb legen",
+      "head": "Anmeldung zum downloaden",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Musik in Warenkorb legen",
+      "head": "legt Warenkorb an\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Anmeldung zum downloaden",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Bestellung abschicken",
+      "class": "SequenceFlow",
+      "label": "Eingabe Richtig"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Erneute Eingabe",
+      "class": "SequenceFlow",
+      "label": "Eingabe falsch"
+    },
+    {
+      "tail": "Erneute Eingabe",
+      "head": "Anmeldung zum downloaden",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung abschicken",
+      "head": "Download Aktivierungslink betätigen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Download Aktivierungslink betätigen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Download erfolgt",
+      "class": "SequenceFlow",
+      "label": "Download startet"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Download Aktivierungslink betätigen",
+      "class": "SequenceFlow",
+      "label": "Download startet nicht"
+    },
+    {
+      "tail": "Download erfolgt",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "sucht Musik",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "sucht Musik",
+      "head": "legt Warenkorb an\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "legt Warenkorb an\n",
+      "head": "Eingaben prüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Eingaben prüfen",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Eingaben prüfen",
+      "class": "SequenceFlow",
+      "label": "Eingabe ungütig"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Bestellung anzeigen",
+      "class": "SequenceFlow",
+      "label": "Eingabe gültig"
+    },
+    {
+      "tail": "Bestellung anzeigen",
+      "head": "Aktivierungslink senden",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aktivierungslink senden",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aktivierungslink senden",
+      "head": "Download Aktivierungslink betätigen",
+      "class": "MessageFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Kunde",
+      "id": "Kunde",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Musik suchen",
+        "Musik in Warenkorb legen",
+        "Anmeldung zum downloaden",
+        "Exclusive_Databased_Gateway_1",
+        "Erneute Eingabe",
+        "Bestellung abschicken",
+        "Download Aktivierungslink betätigen",
+        "Exclusive_Databased_Gateway_2",
+        "Download erfolgt",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "System",
+      "id": "System",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "StartEvent_2",
+        "sucht Musik",
+        "legt Warenkorb an\n",
+        "Eingaben prüfen",
+        "Exclusive_Databased_Gateway_3",
+        "Bestellung anzeigen",
+        "Aktivierungslink senden",
+        "EndEvent_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

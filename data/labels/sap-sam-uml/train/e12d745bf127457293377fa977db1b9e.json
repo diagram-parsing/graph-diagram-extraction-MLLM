@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "text": "App",
+      "attributes": [
+        "running: boolean",
+        "instaHummli: InstagramHummli"
+      ],
+      "methods": [
+        "stop()",
+        "login()",
+        "follow()",
+        "unfollow()",
+        "followers()",
+        "info()",
+        "safeFollowedList()",
+        "safeUnfollowedList()",
+        "readFollowedList()",
+        "readUnfollowedList()",
+        "readFile()",
+        "safeActualFollowingList()",
+        "safeActualFollowersList()",
+        "check()",
+        "autoFollowFollowers()",
+        "unfollowOldFollowing()",
+        "loadFavourites()",
+        "addFavourite()",
+        "deleteFavourite()",
+        "stopAutoFollow()",
+        "stopAutoUnfollow()"
+      ],
+      "id": "App",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "InstagramHummli",
+      "attributes": [
+        "follower: Follower",
+        "unfollower: Unfollower",
+        "favourites: List<String>",
+        "unfollowedList: List<ActionUser>",
+        "followedList: List<ActionUser>"
+      ],
+      "methods": [
+        "InstagramHummli()",
+        "follow()",
+        "unfollow()",
+        "info()",
+        "autoFollowFollowers()",
+        "loadFavourites()",
+        "getFollowingList()",
+        "getFollowedByList()",
+        "autoFollow()",
+        "stopAutoFollow()",
+        "unfollowFollowers()",
+        "addFavourite()",
+        "deleteFavourite()"
+      ],
+      "id": "InstagramHummli",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "DataController",
+      "attributes": null,
+      "methods": [
+        "safeFollowedList()",
+        "safeUnfollowedList()",
+        "safeFavourites()",
+        "safeActualFollowingList()",
+        "safeActualFollowedByList()",
+        "addFavourite()"
+      ],
+      "id": "DataController",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Filemanager",
+      "attributes": null,
+      "methods": [
+        "writeFile()",
+        "writeFile()",
+        "outputFile()",
+        "contains()",
+        "scanFile()",
+        "removeLine()"
+      ],
+      "id": "Filemanager",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Follower (Thread)",
+      "attributes": [
+        "userList: List<String>",
+        "instaHummli: InstagramHummli"
+      ],
+      "methods": null,
+      "id": "Follower (Thread)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Unfollower (Thread)",
+      "attributes": [
+        "userList: List<String>",
+        "instaHummli: InstagramHummli"
+      ],
+      "methods": null,
+      "id": "Unfollower (Thread)",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "App",
+      "head": "InstagramHummli",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "InstagramHummli",
+      "head": "Follower (Thread)",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "InstagramHummli",
+      "head": "Unfollower (Thread)",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "InstagramHummli",
+      "head": "DataController",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "DataController",
+      "head": "Filemanager",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

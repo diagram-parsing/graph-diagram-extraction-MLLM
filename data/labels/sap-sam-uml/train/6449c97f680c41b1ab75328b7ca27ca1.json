@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "text": "Impiegato \n",
+      "attributes": [
+        "nome: String",
+        "dataNascita: Date",
+        "stipendio: Currency"
+      ],
+      "methods": null,
+      "id": "Impiegato \n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Progetto\n",
+      "attributes": [
+        "nome: String",
+        "budget: Currency"
+      ],
+      "methods": null,
+      "id": "Progetto\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dipartimento\n",
+      "attributes": [
+        "nome: String",
+        "tel: String"
+      ],
+      "methods": null,
+      "id": "Dipartimento\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "molteplicità 0..* perchè non dice ALMENO un impiegato\n",
+      "attributes": null,
+      "methods": null,
+      "id": "molteplicità 0..* perchè non dice ALMENO un impiegato\n",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Impiegato \n",
+      "head": "Dipartimento\n",
+      "class": "UndirectedAssociation",
+      "label": "afferisce"
+    },
+    {
+      "tail": "Impiegato \n",
+      "head": "molteplicità 0..* perchè non dice ALMENO un impiegato\n",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Impiegato \n",
+      "head": "Progetto\n",
+      "class": "UndirectedAssociation",
+      "label": "partecipa"
+    }
+  ],
+  "groups": []
+}

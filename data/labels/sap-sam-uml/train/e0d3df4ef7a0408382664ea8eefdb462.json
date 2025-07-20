@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "text": "Stromanbieter",
+      "attributes": [
+        "ID: String",
+        "Name: String",
+        "Hotline-Nummer: String",
+        "Kontoverbindung: String",
+        "Tarifkarten: []Tarifkarte"
+      ],
+      "methods": [
+        "Stromanbieter()"
+      ],
+      "id": "Stromanbieter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tarifkartenart",
+      "attributes": [
+        "ID: String",
+        "Name: String",
+        "Tarif: double",
+        "Roaming-Tarif: double"
+      ],
+      "methods": [
+        "Tarifkartenart()"
+      ],
+      "id": "Tarifkartenart",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ladestandort",
+      "attributes": [
+        "ID: String",
+        "Name: String",
+        "Adresse: String",
+        "Stromanbieter: Stromanbieter",
+        "Ladesäulen: []Ladesäule"
+      ],
+      "methods": [
+        "Ladestation()"
+      ],
+      "id": "Ladestandort",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ladevorgang",
+      "attributes": [
+        "Auto: E-Auto",
+        "Ladesäule: Ladesäule",
+        "Startzeit: Date",
+        "Endzeit: Date",
+        "Tarifkarte: Tarifkartenart",
+        "Strommenge: int"
+      ],
+      "methods": [
+        "Ladevorgang()"
+      ],
+      "id": "Ladevorgang",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ladesäule",
+      "attributes": [
+        "Standort: Ladestandort",
+        "Stromanbieter: Stromanbieter",
+        "Status: int",
+        "Stecker: []Steckerart",
+        "Karten: []Tarifkartenart"
+      ],
+      "methods": [
+        "Ladesäule()"
+      ],
+      "id": "Ladesäule",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Steckerart",
+      "attributes": [
+        "ID: String",
+        "Bezeichnung: String",
+        "maxLeistung: double"
+      ],
+      "methods": [
+        "Steckerart()"
+      ],
+      "id": "Steckerart",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "E-Auto",
+      "attributes": [
+        "Steckeranschlüsse: []Steckerart"
+      ],
+      "methods": [
+        "E-Auto()"
+      ],
+      "id": "E-Auto",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Stromanbieter",
+      "head": "Tarifkartenart",
+      "class": "DirectedAssociation",
+      "label": "bietet an"
+    },
+    {
+      "tail": "Ladestandort",
+      "head": "Ladesäule",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Ladestandort",
+      "head": "Stromanbieter",
+      "class": "DirectedAssociation",
+      "label": "wird betrieben von"
+    },
+    {
+      "tail": "Ladesäule",
+      "head": "Steckerart",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Ladesäule",
+      "head": "Tarifkartenart",
+      "class": "DirectedAssociation",
+      "label": "kann verwendet werden mit"
+    },
+    {
+      "tail": "Ladesäule",
+      "head": "E-Auto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "E-Auto",
+      "head": "Steckerart",
+      "class": "Composition",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

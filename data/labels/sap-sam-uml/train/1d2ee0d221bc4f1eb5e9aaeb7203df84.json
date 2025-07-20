@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "text": "Monitroring",
+      "attributes": null,
+      "methods": null,
+      "id": "Monitroring",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Report",
+      "attributes": null,
+      "methods": null,
+      "id": "Report",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Control",
+      "attributes": null,
+      "methods": null,
+      "id": "Control",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Monitroring",
+      "head": "Report",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Report",
+      "head": "Control",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

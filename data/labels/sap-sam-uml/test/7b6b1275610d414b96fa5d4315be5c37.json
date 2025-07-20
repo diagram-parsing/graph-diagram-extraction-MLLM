@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "text": "VIDEOLEZIONE\n",
+      "attributes": [
+        "numProgr: int",
+        "data: Date",
+        "oraInizio: Time",
+        "descrizione: String",
+        "pubblicata: boolean"
+      ],
+      "methods": null,
+      "id": "VIDEOLEZIONE\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "INSEGNAMENTO",
+      "attributes": [
+        "nome: String",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "INSEGNAMENTO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "DOCENTE",
+      "attributes": [
+        "matricola: String",
+        "nome: String",
+        "cognome: String",
+        "titolare: boolean"
+      ],
+      "methods": null,
+      "id": "DOCENTE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "STUDENTE",
+      "attributes": [
+        "matricola: String",
+        "nome: String",
+        "cognome: String"
+      ],
+      "methods": null,
+      "id": "STUDENTE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "MODULO\n",
+      "attributes": [
+        "oraInizio: int",
+        "minInizio: int",
+        "secInizio: int",
+        "oraFine: int",
+        "minFine: int",
+        "secFine: int",
+        "descrizione: String",
+        "materiale: String"
+      ],
+      "methods": null,
+      "id": "MODULO\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SOTTOTITOLI",
+      "attributes": [
+        "oraInizio : int",
+        "minInizio: int",
+        "secInizio : int",
+        "oraFine: int",
+        "minFine: int",
+        "secFine: int",
+        "testo: String"
+      ],
+      "methods": null,
+      "id": "SOTTOTITOLI",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Devo consentire al docente di poter scegliere i sottotitoli migliori dopo la data di scadenza quindi dovrò salvarli tutti",
+      "attributes": null,
+      "methods": null,
+      "id": "Devo consentire al docente di poter scegliere i sottotitoli migliori dopo la data di scadenza quindi dovrò salvarli tutti",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "VIDEOLEZIONE\n",
+      "head": "INSEGNAMENTO",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    },
+    {
+      "tail": "INSEGNAMENTO",
+      "head": "DOCENTE",
+      "class": "UndirectedAssociation",
+      "label": "tenutoDa"
+    },
+    {
+      "tail": "DOCENTE",
+      "head": "VIDEOLEZIONE\n",
+      "class": "UndirectedAssociation",
+      "label": "erogataDa"
+    },
+    {
+      "tail": "STUDENTE",
+      "head": "INSEGNAMENTO",
+      "class": "UndirectedAssociation",
+      "label": "segue"
+    },
+    {
+      "tail": "STUDENTE",
+      "head": "SOTTOTITOLI",
+      "class": "UndirectedAssociation",
+      "label": "aggiuntiDa"
+    },
+    {
+      "tail": "MODULO\n",
+      "head": "VIDEOLEZIONE\n",
+      "class": "UndirectedAssociation",
+      "label": "contenutoIn"
+    },
+    {
+      "tail": "MODULO\n",
+      "head": "SOTTOTITOLI",
+      "class": "UndirectedAssociation",
+      "label": "siRiferisconoA"
+    },
+    {
+      "tail": "SOTTOTITOLI",
+      "head": "Devo consentire al docente di poter scegliere i sottotitoli migliori dopo la data di scadenza quindi dovrò salvarli tutti",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

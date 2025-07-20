@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Get idea",
+      "id": "Get idea",
+      "class": "Task"
+    },
+    {
+      "text": "Request funding",
+      "id": "Request funding",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "Receive request funding",
+      "id": "Receive request funding",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Evaluate idea",
+      "id": "Evaluate idea",
+      "class": "Task"
+    },
+    {
+      "text": "Result?",
+      "id": "Result?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Reject agreement",
+      "id": "Reject agreement",
+      "class": "Task"
+    },
+    {
+      "text": "Propose agreement",
+      "id": "Propose agreement",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Get idea",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Get idea",
+      "head": "Request funding",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Request funding",
+      "head": "Receive request funding",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive request funding",
+      "head": "Evaluate idea",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Evaluate idea",
+      "head": "Result?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Result?",
+      "head": "Reject agreement",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Result?",
+      "head": "Propose agreement",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Inventor",
+      "id": "Inventor",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Get idea",
+        "Request funding"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "VC",
+      "id": "VC",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Receive request funding",
+        "Evaluate idea",
+        "Result?",
+        "Reject agreement",
+        "Propose agreement"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "text": "Agent",
+      "attributes": [
+        "ability: integer",
+        "role: string",
+        "tenancy: string",
+        "role: string",
+        "status: string",
+        "name: string",
+        "type: agent_type"
+      ],
+      "methods": null,
+      "id": "Agent",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Object",
+      "attributes": [
+        "name: string",
+        "type: string"
+      ],
+      "methods": null,
+      "id": "Object",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Resource",
+      "attributes": [
+        "name: string",
+        "class: string"
+      ],
+      "methods": null,
+      "id": "Resource",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Òbject_type",
+      "attributes": null,
+      "methods": null,
+      "id": "Òbject_type",
+      "class": "Enumeration"
+    },
+    {
+      "text": "agent_type",
+      "attributes": null,
+      "methods": null,
+      "id": "agent_type",
+      "class": "Enumeration"
+    },
+    {
+      "text": "Business management",
+      "attributes": null,
+      "methods": null,
+      "id": "Business management",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Operations management",
+      "attributes": null,
+      "methods": null,
+      "id": "Operations management",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Agent control",
+      "attributes": null,
+      "methods": null,
+      "id": "Agent control",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Process management system",
+      "attributes": null,
+      "methods": null,
+      "id": "Process management system",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Orchestration system",
+      "attributes": null,
+      "methods": null,
+      "id": "Orchestration system",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Printing agent",
+      "attributes": null,
+      "methods": null,
+      "id": "Printing agent",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Actuating agent",
+      "attributes": null,
+      "methods": null,
+      "id": "Actuating agent",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Sensing agent",
+      "attributes": null,
+      "methods": null,
+      "id": "Sensing agent",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Human agent",
+      "attributes": null,
+      "methods": null,
+      "id": "Human agent",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Transport agent",
+      "attributes": null,
+      "methods": null,
+      "id": "Transport agent",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Agent",
+      "head": "Printing agent",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Agent",
+      "head": "Actuating agent",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Agent",
+      "head": "Sensing agent",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Agent",
+      "head": "Human agent",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Agent",
+      "head": "agent_type",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Agent",
+      "head": "Transport agent",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Object",
+      "head": "Òbject_type",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Resource",
+      "head": "Object",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Resource",
+      "head": "Agent",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Business management",
+      "head": "Operations management",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Business management",
+      "head": "Process management system",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Operations management",
+      "head": "Process management system",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Operations management",
+      "head": "Agent control",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Agent control",
+      "head": "Agent",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Agent control",
+      "head": "Orchestration system",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Process management system",
+      "head": "Orchestration system",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Orchestration system",
+      "head": "Printing agent",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Orchestration system",
+      "head": "Transport agent",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Orchestration system",
+      "head": "Human agent",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Orchestration system",
+      "head": "Sensing agent",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "Orchestration system",
+      "head": "Actuating agent",
+      "class": "Dependency",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,180 @@
+{
+  "nodes": [
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "write down order note",
+      "id": "write down order note",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "attach order note to pinboard",
+      "id": "attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "text": "Order fulfilled",
+      "id": "Order fulfilled",
+      "class": "event"
+    },
+    {
+      "text": "Purchase order received",
+      "id": "Purchase order received",
+      "class": "event"
+    },
+    {
+      "text": "Order",
+      "id": "Order",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [confirmed]",
+      "id": "order [confirmed]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [printed]",
+      "id": "order [printed]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [written]",
+      "id": "order [written]",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "attach order note to pinboard",
+      "head": "Order fulfilled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": "by Lieferando"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "write down order note",
+      "class": "sequenceFlow",
+      "label": "by phone"
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": "by Website"
+    },
+    {
+      "tail": "Purchase order received",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Order",
+      "head": "confirm order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "order [confirmed]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Order",
+      "head": "write down order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "order [written]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order [confirmed]",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "order [printed]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order [printed]",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order [written]",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

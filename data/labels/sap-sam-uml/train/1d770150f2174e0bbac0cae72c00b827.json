@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "text": "Compagnia\n",
+      "attributes": null,
+      "methods": null,
+      "id": "Compagnia\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tratta\n",
+      "attributes": null,
+      "methods": null,
+      "id": "Tratta\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tipo veivolo\n",
+      "attributes": null,
+      "methods": null,
+      "id": "tipo veivolo\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "personale\n",
+      "attributes": null,
+      "methods": null,
+      "id": "personale\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "volo\n",
+      "attributes": null,
+      "methods": null,
+      "id": "volo\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "effettua\n",
+      "attributes": [
+        "ruolo: string"
+      ],
+      "methods": null,
+      "id": "effettua\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "",
+      "attributes": null,
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "",
+      "attributes": null,
+      "methods": null,
+      "id": "ComplexClass_2",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Compagnia\n",
+      "head": "Tratta\n",
+      "class": "UndirectedAssociation",
+      "label": "gestisce"
+    },
+    {
+      "tail": "Compagnia\n",
+      "head": "tipo veivolo\n",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "personale\n",
+      "head": "volo\n",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "personale\n",
+      "head": "Compagnia\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "Tratta\n",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

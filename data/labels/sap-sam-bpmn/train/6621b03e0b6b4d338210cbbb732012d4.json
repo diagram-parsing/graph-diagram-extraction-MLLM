@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "verificare dauna",
+      "id": "verificare dauna",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "trimitere confirmare dauna",
+      "id": "trimitere confirmare dauna",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_3",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "oferire asistenta suplimentara",
+      "id": "oferire asistenta suplimentara",
+      "class": "Task"
+    },
+    {
+      "text": "cerere primita",
+      "id": "cerere primita",
+      "class": "StartEvent"
+    },
+    {
+      "text": "informare agent",
+      "id": "informare agent",
+      "class": "Task"
+    },
+    {
+      "text": "creare dosar",
+      "id": "creare dosar",
+      "class": "Task"
+    },
+    {
+      "text": "emitere ordin de plata",
+      "id": "emitere ordin de plata",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_4",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "arhivare dosar",
+      "id": "arhivare dosar",
+      "class": "Task"
+    },
+    {
+      "text": "dosar arhivat",
+      "id": "dosar arhivat",
+      "class": "EndEvent"
+    },
+    {
+      "text": "dosar dauna",
+      "id": "dosar dauna",
+      "class": "DataObject"
+    },
+    {
+      "text": "ordin de plata",
+      "id": "ordin de plata",
+      "class": "DataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "AND_Gateway_1",
+      "head": "verificare dauna",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "creare dosar",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "verificare dauna",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "trimitere confirmare dauna",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "trimitere confirmare dauna",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "oferire asistenta suplimentara",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "emitere ordin de plata",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "oferire asistenta suplimentara",
+      "head": "AND_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "cerere primita",
+      "head": "informare agent",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "informare agent",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "creare dosar",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "creare dosar",
+      "head": "dosar dauna",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "emitere ordin de plata",
+      "head": "AND_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "emitere ordin de plata",
+      "head": "ordin de plata",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_4",
+      "head": "arhivare dosar",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "arhivare dosar",
+      "head": "dosar arhivat",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "dosar dauna",
+      "head": "arhivare dosar",
+      "class": "Association_Unidirectional",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Agent asigurari",
+      "id": "Agent asigurari",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "AND_Gateway_1",
+        "verificare dauna",
+        "AND_Gateway_2",
+        "trimitere confirmare dauna",
+        "AND_Gateway_3",
+        "oferire asistenta suplimentara"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "cerere primita",
+        "informare agent",
+        "creare dosar",
+        "emitere ordin de plata",
+        "AND_Gateway_4",
+        "arhivare dosar",
+        "dosar arhivat",
+        "dosar dauna",
+        "ordin de plata"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

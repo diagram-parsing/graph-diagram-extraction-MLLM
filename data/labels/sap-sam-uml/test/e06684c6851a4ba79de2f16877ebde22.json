@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "text": "Clínica",
+      "attributes": [
+        "nombre: ",
+        "dirección: "
+      ],
+      "methods": null,
+      "id": "Clínica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ProductoInventario",
+      "attributes": [
+        "nombre: ",
+        "cantidad: ",
+        "máximo: ",
+        "mínimo: ",
+        "descripcion: "
+      ],
+      "methods": null,
+      "id": "ProductoInventario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Distribuidor",
+      "attributes": [
+        "nombre: ",
+        "dirección: ",
+        "e-mail: ",
+        "telefono: "
+      ],
+      "methods": null,
+      "id": "Distribuidor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pedido",
+      "attributes": [
+        "código: ",
+        "fecha: "
+      ],
+      "methods": null,
+      "id": "Pedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "LíneaDePedido",
+      "attributes": [
+        "cantidadPedida: ",
+        "precioPorUnidad: ",
+        ": "
+      ],
+      "methods": null,
+      "id": "LíneaDePedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "mínimo>cantidad>máximo\nminimo>0",
+      "attributes": null,
+      "methods": null,
+      "id": "mínimo>cantidad>máximo\nminimo>0",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Clínica",
+      "head": "ProductoInventario",
+      "class": "UndirectedAssociation",
+      "label": "Almacena"
+    },
+    {
+      "tail": "ProductoInventario",
+      "head": "mínimo>cantidad>máximo\nminimo>0",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Distribuidor",
+      "head": "Pedido",
+      "class": "UndirectedAssociation",
+      "label": "realizadoA"
+    },
+    {
+      "tail": "Pedido",
+      "head": "Clínica",
+      "class": "UndirectedAssociation",
+      "label": "realiza"
+    },
+    {
+      "tail": "Pedido",
+      "head": "LíneaDePedido",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "LíneaDePedido",
+      "head": "ProductoInventario",
+      "class": "UndirectedAssociation",
+      "label": "referencia"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "text": "Oddaja vloge\n",
+      "id": "Oddaja vloge\n",
+      "class": "Task"
+    },
+    {
+      "text": "Dovoljenje za posvojitev",
+      "id": "Dovoljenje za posvojitev",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Priložitev dokumentov\n",
+      "id": "Priložitev dokumentov\n",
+      "class": "Task"
+    },
+    {
+      "text": "Vloga poslana\n",
+      "id": "Vloga poslana\n",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_1",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Odpiranje odločbe",
+      "id": "Odpiranje odločbe",
+      "class": "Task"
+    },
+    {
+      "text": "Ali je odločba pozitivna?",
+      "id": "Ali je odločba pozitivna?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "podpis pogodbe",
+      "id": "podpis pogodbe",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Vloga prejeta\n",
+      "id": "Vloga prejeta\n",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Pregled vloge",
+      "id": "Pregled vloge",
+      "class": "Task"
+    },
+    {
+      "text": "Ali je zadovoljiva?\n",
+      "id": "Ali je zadovoljiva?\n",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Zavrnitev\nProšnje",
+      "id": "Zavrnitev\nProšnje",
+      "class": "Task"
+    },
+    {
+      "text": "Potrditev",
+      "id": "Potrditev",
+      "class": "Task"
+    },
+    {
+      "text": "Obvestilo matičarja",
+      "id": "Obvestilo matičarja",
+      "class": "Task"
+    },
+    {
+      "text": "Odločba poslana",
+      "id": "Odločba poslana",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "EndMessageEvent_1",
+      "class": "EndMessageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Oddaja vloge\n",
+      "head": "Priložitev dokumentov\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Dovoljenje za posvojitev",
+      "head": "Oddaja vloge\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Priložitev dokumentov\n",
+      "head": "Vloga poslana\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vloga poslana\n",
+      "head": "Vloga prejeta\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vloga poslana\n",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_1",
+      "head": "Odpiranje odločbe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Odpiranje odločbe",
+      "head": "Ali je odločba pozitivna?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ali je odločba pozitivna?",
+      "head": "podpis pogodbe",
+      "class": "SequenceFlow",
+      "label": "da"
+    },
+    {
+      "tail": "Ali je odločba pozitivna?",
+      "head": "Oddaja vloge\n",
+      "class": "SequenceFlow",
+      "label": "ne"
+    },
+    {
+      "tail": "podpis pogodbe",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vloga prejeta\n",
+      "head": "Pregled vloge",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pregled vloge",
+      "head": "Ali je zadovoljiva?\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ali je zadovoljiva?\n",
+      "head": "Zavrnitev\nProšnje",
+      "class": "SequenceFlow",
+      "label": "ne"
+    },
+    {
+      "tail": "Ali je zadovoljiva?\n",
+      "head": "Potrditev",
+      "class": "SequenceFlow",
+      "label": "da"
+    },
+    {
+      "tail": "Zavrnitev\nProšnje",
+      "head": "Odločba poslana",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Potrditev",
+      "head": "Obvestilo matičarja",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Obvestilo matičarja",
+      "head": "EndMessageEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Odločba poslana",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "EndMessageEvent_1",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "MessageFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Fizična oseba",
+      "id": "Fizična oseba",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Oddaja vloge\n",
+        "Dovoljenje za posvojitev",
+        "Priložitev dokumentov\n",
+        "Vloga poslana\n",
+        "IntermediateMessageEventCatching_1",
+        "Odpiranje odločbe",
+        "Ali je odločba pozitivna?",
+        "podpis pogodbe",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Zavod",
+      "id": "Zavod",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Vloga prejeta\n",
+        "Pregled vloge",
+        "Ali je zadovoljiva?\n",
+        "Zavrnitev\nProšnje",
+        "Potrditev",
+        "Obvestilo matičarja",
+        "Odločba poslana",
+        "EndMessageEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

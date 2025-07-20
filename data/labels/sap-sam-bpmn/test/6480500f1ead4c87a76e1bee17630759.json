@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "order check\n",
+      "id": "order check\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Invio Richiesta Anticipo",
+      "id": "Invio Richiesta Anticipo",
+      "class": "Task"
+    },
+    {
+      "text": "Invio Notifica Rifiuto\n",
+      "id": "Invio Notifica Rifiuto\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndMessageEvent_1",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_1",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "2 settimane",
+      "id": "2 settimane",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Ordine cancellazione\n",
+      "id": "Ordine cancellazione\n",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Cancellazione ordine\n",
+      "id": "Cancellazione ordine\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Arrivo anticipo\n",
+      "id": "Arrivo anticipo\n",
+      "class": "IntermediateConditionalEvent"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_1",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "Acquisizione parti da magazzino",
+      "id": "Acquisizione parti da magazzino",
+      "class": "Task"
+    },
+    {
+      "text": "Invio messaggio inizio produzione",
+      "id": "Invio messaggio inizio produzione",
+      "class": "Task"
+    },
+    {
+      "text": "Assemblaggio parti",
+      "id": "Assemblaggio parti",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_2",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "2 settimane",
+      "id": "IntermediateTimerEvent_1",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Invio richiesta pagamento",
+      "id": "Invio richiesta pagamento",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "order check\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "order check\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Invio Richiesta Anticipo",
+      "class": "SequenceFlow",
+      "label": "Ordine completabile"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Invio Notifica Rifiuto\n",
+      "class": "SequenceFlow",
+      "label": "Ordine non completabile\n"
+    },
+    {
+      "tail": "Invio Richiesta Anticipo",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Invio Notifica Rifiuto\n",
+      "head": "EndMessageEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "2 settimane",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Ordine cancellazione\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Arrivo anticipo\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "2 settimane",
+      "head": "Invio Notifica Rifiuto\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ordine cancellazione\n",
+      "head": "Cancellazione ordine\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cancellazione ordine\n",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arrivo anticipo\n",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Acquisizione parti da magazzino",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Invio messaggio inizio produzione",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Acquisizione parti da magazzino",
+      "head": "Assemblaggio parti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Invio messaggio inizio produzione",
+      "head": "Exclusive_Eventbased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "IntermediateTimerEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "Invio richiesta pagamento",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

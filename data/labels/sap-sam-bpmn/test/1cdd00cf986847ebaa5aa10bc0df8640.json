@@ -1,0 +1,203 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "A",
+      "id": "A",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": "Task"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "Task"
+    },
+    {
+      "text": "D",
+      "id": "D",
+      "class": "DataObject"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_2",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "IntermediateLinkEventThrowing"
+    },
+    {
+      "text": "J",
+      "id": "J",
+      "class": "DataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "A",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "D",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "D",
+      "head": "E",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "TextAnnotation_2",
+      "head": "B",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "TextAnnotation_2",
+      "head": "C",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "J",
+      "head": "TextAnnotation_1",
+      "class": "Association_Undirected",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "F",
+      "id": "F",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "TextAnnotation_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "G",
+      "id": "G",
+      "nodes": [
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "K",
+      "id": "K",
+      "nodes": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "TextAnnotation_2",
+        "E"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "L",
+      "id": "L",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "M",
+      "id": "M",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "N",
+      "id": "N",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "O",
+      "id": "O",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "P",
+      "id": "P",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "Q",
+      "id": "Q",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "R",
+      "id": "R",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "S",
+      "id": "S",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "H",
+      "id": "H",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [],
+      "class": "Lane"
+    }
+  ]
+}

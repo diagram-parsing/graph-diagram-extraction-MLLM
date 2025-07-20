@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Exchange application \nbegins \n(Around April) ",
+      "id": "Exchange application \nbegins \n(Around April) ",
+      "class": "StartEvent"
+    },
+    {
+      "text": "reach out to Jane Doe  a list of exchangers and their uni",
+      "id": "reach out to Jane Doe  a list of exchangers and their uni",
+      "class": "Task"
+    },
+    {
+      "text": "Contact exchangers for a testimonial and their home-uni coordinator's email",
+      "id": "Contact exchangers for a testimonial and their home-uni coordinator's email",
+      "class": "Task"
+    },
+    {
+      "text": "Send email to exchange coordinator using a template*",
+      "id": "Send email to exchange coordinator using a template*",
+      "class": "Task"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Exchange application \nbegins \n(Around April) ",
+      "head": "reach out to Jane Doe  a list of exchangers and their uni",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "reach out to Jane Doe  a list of exchangers and their uni",
+      "head": "Contact exchangers for a testimonial and their home-uni coordinator's email",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Contact exchangers for a testimonial and their home-uni coordinator's email",
+      "head": "Send email to exchange coordinator using a template*",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send email to exchange coordinator using a template*",
+      "head": "End",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Exchange application \nbegins \n(Around April) ",
+        "reach out to Jane Doe  a list of exchangers and their uni",
+        "Contact exchangers for a testimonial and their home-uni coordinator's email",
+        "Send email to exchange coordinator using a template*",
+        "End"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "text": "Utente",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "email: String",
+        "cell: String",
+        "via: String",
+        "num: String",
+        "città: String",
+        "dataNascita: Date"
+      ],
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Segnalazione",
+      "attributes": [
+        "hPartenza: DateTime",
+        "mezzo: enum"
+      ],
+      "methods": null,
+      "id": "Segnalazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Viaggio",
+      "attributes": [
+        "costo: Currency",
+        "hPart: DateTime"
+      ],
+      "methods": null,
+      "id": "Viaggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Luogo",
+      "attributes": [
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "Luogo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Credito",
+      "attributes": [
+        "valore: Currency",
+        "data: Date"
+      ],
+      "methods": null,
+      "id": "Credito",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Operazione",
+      "attributes": [
+        "data: Date",
+        "valore: Currency",
+        "causale : String"
+      ],
+      "methods": null,
+      "id": "Operazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ricarica",
+      "attributes": null,
+      "methods": null,
+      "id": "Ricarica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Riscossione",
+      "attributes": null,
+      "methods": null,
+      "id": "Riscossione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "coinvolge",
+      "attributes": [
+        "guidatore: boolean",
+        "stato : enum"
+      ],
+      "methods": null,
+      "id": "coinvolge",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pagamento",
+      "attributes": null,
+      "methods": null,
+      "id": "Pagamento",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Utente",
+      "head": "Segnalazione",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Utente",
+      "head": "Credito",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "Segnalazione",
+      "head": "Viaggio",
+      "class": "UndirectedAssociation",
+      "label": "per"
+    },
+    {
+      "tail": "Segnalazione",
+      "head": "Luogo",
+      "class": "UndirectedAssociation",
+      "label": "a"
+    },
+    {
+      "tail": "Viaggio",
+      "head": "Utente",
+      "class": "UndirectedAssociation",
+      "label": "coinvolge"
+    },
+    {
+      "tail": "Credito",
+      "head": "Operazione",
+      "class": "UndirectedAssociation",
+      "label": "subisce"
+    },
+    {
+      "tail": "Operazione",
+      "head": "Ricarica",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Operazione",
+      "head": "Riscossione",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Operazione",
+      "head": "Pagamento",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Pagamento",
+      "head": "Viaggio",
+      "class": "UndirectedAssociation",
+      "label": "per"
+    }
+  ],
+  "groups": []
+}

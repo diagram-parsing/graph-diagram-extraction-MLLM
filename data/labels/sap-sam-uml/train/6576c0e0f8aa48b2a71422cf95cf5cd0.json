@@ -1,0 +1,183 @@
+{
+  "nodes": [
+    {
+      "text": "Utente",
+      "attributes": [
+        "username: String",
+        "dataNascita: Date",
+        "paeseNascita: String",
+        "livelloEsperienza: String",
+        "URLimmagineProfilo: String",
+        "URLpagina: String"
+      ],
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Giocatore",
+      "attributes": null,
+      "methods": null,
+      "id": "Giocatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Moderatore",
+      "attributes": null,
+      "methods": null,
+      "id": "Moderatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Totale inclusiva",
+      "attributes": null,
+      "methods": null,
+      "id": "Totale inclusiva",
+      "class": "Note"
+    },
+    {
+      "text": "Team",
+      "attributes": [
+        "nome: String",
+        "motto: String",
+        "URLimmagine: String"
+      ],
+      "methods": null,
+      "id": "Team",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Partita",
+      "attributes": [
+        "matchID: String",
+        "DataInizio: Date",
+        "DataFine: Date",
+        "LimitePunteggio: String",
+        ": "
+      ],
+      "methods": null,
+      "id": "Partita",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Single Player",
+      "attributes": null,
+      "methods": null,
+      "id": "Single Player",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Multi Player",
+      "attributes": null,
+      "methods": null,
+      "id": "Multi Player",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Videogioco",
+      "attributes": [
+        "nome: String",
+        "genere: String",
+        "annoRilascio: Date"
+      ],
+      "methods": null,
+      "id": "Videogioco",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Post",
+      "attributes": [
+        "postID: String",
+        "data: Date",
+        "titolo: String",
+        "contenuto: String"
+      ],
+      "methods": null,
+      "id": "Post",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Forum",
+      "attributes": null,
+      "methods": null,
+      "id": "Forum",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "totale esclusiva",
+      "attributes": null,
+      "methods": null,
+      "id": "totale esclusiva",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Utente",
+      "head": "Giocatore",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Utente",
+      "head": "Moderatore",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Utente",
+      "head": "Team",
+      "class": "UndirectedAssociation",
+      "label": "registrato"
+    },
+    {
+      "tail": "Utente",
+      "head": "Single Player",
+      "class": "UndirectedAssociation",
+      "label": "partecipa"
+    },
+    {
+      "tail": "Utente",
+      "head": "Post",
+      "class": "UndirectedAssociation",
+      "label": "pubblica"
+    },
+    {
+      "tail": "Moderatore",
+      "head": "Forum",
+      "class": "UndirectedAssociation",
+      "label": "assegnato"
+    },
+    {
+      "tail": "Partita",
+      "head": "Single Player",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Partita",
+      "head": "Multi Player",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Partita",
+      "head": "Videogioco",
+      "class": "UndirectedAssociation",
+      "label": "si riferisce"
+    },
+    {
+      "tail": "Multi Player",
+      "head": "Team",
+      "class": "UndirectedAssociation",
+      "label": "partecipa"
+    },
+    {
+      "tail": "Forum",
+      "head": "Videogioco",
+      "class": "UndirectedAssociation",
+      "label": "di"
+    }
+  ],
+  "groups": []
+}

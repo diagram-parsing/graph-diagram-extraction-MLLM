@@ -1,0 +1,190 @@
+{
+  "nodes": [
+    {
+      "text": "Application",
+      "attributes": [
+        "system file reference: ",
+        "date: ",
+        "category: ",
+        "application status: ",
+        "application status description: "
+      ],
+      "methods": null,
+      "id": "Application",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Party",
+      "attributes": [
+        "party ID: ",
+        "contact name: ",
+        "contact details: ",
+        "mailing address: "
+      ],
+      "methods": null,
+      "id": "Party",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tenure",
+      "attributes": [
+        "tenure identifier: ",
+        "tenure type: ",
+        "date: "
+      ],
+      "methods": null,
+      "id": "Tenure",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Leasehold Tenure",
+      "attributes": [
+        "volume no.: ",
+        "folio no.: ",
+        ": "
+      ],
+      "methods": null,
+      "id": "Leasehold Tenure",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Freehold Tenure",
+      "attributes": [
+        "title: "
+      ],
+      "methods": null,
+      "id": "Freehold Tenure",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Term/Perpetual Lease\n",
+      "attributes": [
+        "annual rent: "
+      ],
+      "methods": null,
+      "id": "Term/Perpetual Lease\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Temporary Lease",
+      "attributes": [
+        "rent duration: ",
+        "rent renewal: "
+      ],
+      "methods": null,
+      "id": "Temporary Lease",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Freeloading Lease",
+      "attributes": [
+        "title: ",
+        "date: ",
+        "fee: "
+      ],
+      "methods": null,
+      "id": "Freeloading Lease",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Parcel",
+      "attributes": [
+        "lot no.: ",
+        "lot area: ",
+        "geographic locality: ",
+        "net area: ",
+        "land description: "
+      ],
+      "methods": null,
+      "id": "Parcel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Applicant",
+      "attributes": [
+        "applicant ID: ",
+        "contact name: ",
+        "contact details: ",
+        "mailing address: "
+      ],
+      "methods": null,
+      "id": "Applicant",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Stakeholder",
+      "attributes": [
+        "stakeholder ID: ",
+        "contact name: ",
+        "mailing contact details: ",
+        "mailing address: "
+      ],
+      "methods": null,
+      "id": "Stakeholder",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Application",
+      "head": "Applicant",
+      "class": "DirectedAssociation",
+      "label": "has"
+    },
+    {
+      "tail": "Application",
+      "head": "Party",
+      "class": "DirectedAssociation",
+      "label": "has"
+    },
+    {
+      "tail": "Application",
+      "head": "Stakeholder",
+      "class": "DirectedAssociation",
+      "label": "has"
+    },
+    {
+      "tail": "Tenure",
+      "head": "Freehold Tenure",
+      "class": "DirectedAssociation",
+      "label": "has"
+    },
+    {
+      "tail": "Tenure",
+      "head": "Leasehold Tenure",
+      "class": "DirectedAssociation",
+      "label": "has"
+    },
+    {
+      "tail": "Tenure",
+      "head": "Application",
+      "class": "UndirectedAssociation",
+      "label": "associated with"
+    },
+    {
+      "tail": "Leasehold Tenure",
+      "head": "Term/Perpetual Lease\n",
+      "class": "Generalization",
+      "label": "generalizes"
+    },
+    {
+      "tail": "Leasehold Tenure",
+      "head": "Temporary Lease",
+      "class": "Generalization",
+      "label": "generalizes"
+    },
+    {
+      "tail": "Leasehold Tenure",
+      "head": "Freeloading Lease",
+      "class": "Generalization",
+      "label": "generalizes"
+    },
+    {
+      "tail": "Parcel",
+      "head": "Application",
+      "class": "UndirectedAssociation",
+      "label": "associated with"
+    }
+  ],
+  "groups": []
+}

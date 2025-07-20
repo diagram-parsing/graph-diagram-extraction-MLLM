@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "text": "videolezione",
+      "attributes": [
+        "numeroprogressivo: int",
+        "data: Date",
+        "orainizio: time",
+        "docente: String",
+        "descrizione: String"
+      ],
+      "methods": null,
+      "id": "videolezione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "insegnamenti",
+      "attributes": [
+        "nome: String",
+        "semestre: int"
+      ],
+      "methods": null,
+      "id": "insegnamenti",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Docente",
+      "attributes": [
+        "nome : String",
+        "Cognome: String",
+        "dipartimento: String"
+      ],
+      "methods": null,
+      "id": "Docente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Strudente",
+      "attributes": [
+        "Strudente: String",
+        "matricola: String",
+        "datadinascita: Date",
+        "Codicefiscale: String"
+      ],
+      "methods": null,
+      "id": "Strudente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Moduli",
+      "attributes": [
+        "descrizione: String",
+        "materiale: String",
+        "sottotitolazione: boolean",
+        "datascadenza: Date"
+      ],
+      "methods": null,
+      "id": "Moduli",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "sottotitolo",
+      "attributes": [
+        "convalidato: boolean",
+        "selezionato: boolean"
+      ],
+      "methods": null,
+      "id": "sottotitolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Segmento",
+      "attributes": [
+        "tempoinizio: date",
+        "tempofine: date",
+        "testo: String"
+      ],
+      "methods": null,
+      "id": "Segmento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Titolare",
+      "attributes": [
+        "Titolare: boolean"
+      ],
+      "methods": null,
+      "id": "Titolare",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Attenzione il fatto che un insegnante sia titolare dipende dall'insegnamento, uno stesso docente potrebbe essere titolare in un insegnamento e in un'altro no",
+      "attributes": null,
+      "methods": null,
+      "id": "Attenzione il fatto che un insegnante sia titolare dipende dall'insegnamento, uno stesso docente potrebbe essere titolare in un insegnamento e in un'altro no",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "videolezione",
+      "head": "insegnamenti",
+      "class": "UndirectedAssociation",
+      "label": "relativo a "
+    },
+    {
+      "tail": "videolezione",
+      "head": "Moduli",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    },
+    {
+      "tail": "insegnamenti",
+      "head": "Docente",
+      "class": "UndirectedAssociation",
+      "label": "tenuto da"
+    },
+    {
+      "tail": "insegnamenti",
+      "head": "Strudente",
+      "class": "UndirectedAssociation",
+      "label": "si iscrive"
+    },
+    {
+      "tail": "Docente",
+      "head": "videolezione",
+      "class": "UndirectedAssociation",
+      "label": "registra"
+    },
+    {
+      "tail": "Strudente",
+      "head": "sottotitolo",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "sottotitolo",
+      "head": "Moduli",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "sottotitolo",
+      "head": "Segmento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Titolare",
+      "head": "Attenzione il fatto che un insegnante sia titolare dipende dall'insegnamento, uno stesso docente potrebbe essere titolare in un insegnamento e in un'altro no",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

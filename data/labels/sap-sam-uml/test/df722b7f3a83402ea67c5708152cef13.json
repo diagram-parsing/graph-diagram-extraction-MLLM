@@ -1,0 +1,104 @@
+{
+  "nodes": [
+    {
+      "text": "Cliente",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "indirizzo: String",
+        "IBAN: String",
+        "CF: String"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dispositivo",
+      "attributes": [
+        "codiceDispositivo: String",
+        "OTP: String",
+        "scadenzaOTP: int",
+        "confermato: boolean"
+      ],
+      "methods": null,
+      "id": "Dispositivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Passaggio",
+      "attributes": [
+        "giorno: Date",
+        "ora: Time",
+        "tornello: String"
+      ],
+      "methods": null,
+      "id": "Passaggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Addebito",
+      "attributes": [
+        "giorno: Date",
+        "stagione: String"
+      ],
+      "methods": null,
+      "id": "Addebito",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tariffa",
+      "attributes": [
+        "tipologia: String",
+        "tariffa: Currency"
+      ],
+      "methods": null,
+      "id": "Tariffa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rimborso",
+      "attributes": [
+        "importo: Currency",
+        "stagione: String",
+        "stato: String"
+      ],
+      "methods": null,
+      "id": "Rimborso",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cliente",
+      "head": "Dispositivo",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Passaggio",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Addebito",
+      "class": "UndirectedAssociation",
+      "label": "riceve"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Rimborso",
+      "class": "UndirectedAssociation",
+      "label": "richiede"
+    },
+    {
+      "tail": "Addebito",
+      "head": "Tariffa",
+      "class": "UndirectedAssociation",
+      "label": "importo da"
+    }
+  ],
+  "groups": []
+}

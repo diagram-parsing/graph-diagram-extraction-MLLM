@@ -1,0 +1,273 @@
+{
+  "nodes": [
+    {
+      "text": "Logs in ",
+      "id": "Logs in ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Display to the user",
+      "id": "Display to the user",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Validate Credentials ",
+      "id": "Validate Credentials ",
+      "class": "Task"
+    },
+    {
+      "text": "Registered ?",
+      "id": "Registered ?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Send Error Message ",
+      "id": "Send Error Message ",
+      "class": "Task"
+    },
+    {
+      "text": "Query the DB",
+      "id": "Query the DB",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_1",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Graph Driving Trends ",
+      "id": "Graph Driving Trends ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_2",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_1",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_3",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Find Driving Trends   ",
+      "id": "Find Driving Trends   ",
+      "class": "Task"
+    },
+    {
+      "text": "Result ?",
+      "id": "Result ?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Send Error Message ",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "Send Data",
+      "id": "Send Data",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_2",
+      "class": "IntermediateMessageEventThrowing"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Logs in ",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Logs in ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Display to the user",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Validate Credentials ",
+      "head": "Registered ?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Registered ?",
+      "head": "Send Error Message ",
+      "class": "SequenceFlow",
+      "label": "NO"
+    },
+    {
+      "tail": "Registered ?",
+      "head": "Query the DB",
+      "class": "SequenceFlow",
+      "label": "YES"
+    },
+    {
+      "tail": "Send Error Message ",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Query the DB",
+      "head": "IntermediateMessageEventCatching_3",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_1",
+      "head": "Validate Credentials ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Graph Driving Trends ",
+      "head": "IntermediateMessageEventThrowing_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_2",
+      "head": "Graph Driving Trends ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Display to the user",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_3",
+      "head": "Find Driving Trends   ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Find Driving Trends   ",
+      "head": "Result ?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Result ?",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "NO"
+    },
+    {
+      "tail": "Result ?",
+      "head": "Send Data",
+      "class": "SequenceFlow",
+      "label": "YES"
+    },
+    {
+      "tail": "Task_1",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send Data",
+      "head": "IntermediateMessageEventThrowing_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_2",
+      "head": "IntermediateMessageEventCatching_2",
+      "class": "MessageFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Django application",
+      "id": "Django application",
+      "nodes": [
+        "UI",
+        "Views",
+        "Models"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "UI",
+      "id": "UI",
+      "nodes": [
+        "Logs in ",
+        "StartEvent_1",
+        "Display to the user",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Views",
+      "id": "Views",
+      "nodes": [
+        "Validate Credentials ",
+        "Registered ?",
+        "Send Error Message ",
+        "Query the DB",
+        "EndEvent_2",
+        "IntermediateMessageEventCatching_1",
+        "Graph Driving Trends ",
+        "IntermediateMessageEventCatching_2",
+        "IntermediateMessageEventThrowing_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Models ",
+      "id": "Models",
+      "nodes": [
+        "IntermediateMessageEventCatching_3",
+        "Find Driving Trends   ",
+        "Result ?",
+        "Task_1",
+        "Send Data",
+        "EndEvent_3",
+        "IntermediateMessageEventThrowing_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

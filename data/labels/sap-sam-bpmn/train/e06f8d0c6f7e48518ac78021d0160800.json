@@ -1,0 +1,173 @@
+{
+  "nodes": [
+    {
+      "text": "Credit \napplication \nreceived",
+      "id": "Credit \napplication \nreceived",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Check credit history\n",
+      "id": "Check credit history\n",
+      "class": "Task"
+    },
+    {
+      "text": "Check income sources",
+      "id": "Check income sources",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Assess application",
+      "id": "Assess application",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Make credit offer",
+      "id": "Make credit offer",
+      "class": "Task"
+    },
+    {
+      "text": "Notify rejection",
+      "id": "Notify rejection",
+      "class": "Task"
+    },
+    {
+      "text": "Receive customer feedback",
+      "id": "Receive customer feedback",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Credit \napplication \nprocessed",
+      "id": "Credit \napplication \nprocessed",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Credit \napplication \nreceived",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Check credit history\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Check income sources",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check credit history\n",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check income sources",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Assess application",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Assess application",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Make credit offer",
+      "class": "SequenceFlow",
+      "label": "Granted"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Notify rejection",
+      "class": "SequenceFlow",
+      "label": "Denied"
+    },
+    {
+      "tail": "Make credit offer",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notify rejection",
+      "head": "Receive customer feedback",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive customer feedback",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "Decision review requested"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Credit \napplication \nprocessed",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

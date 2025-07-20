@@ -1,0 +1,88 @@
+{
+  "nodes": [
+    {
+      "text": "Spiaggia",
+      "attributes": [
+        "nome: String",
+        "latitudine: double",
+        "longitudine: double",
+        "parcheggio: boolean",
+        "superficie: double"
+      ],
+      "methods": null,
+      "id": "Spiaggia",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Posto",
+      "attributes": [
+        "numero: int",
+        "distanzaAcqua: double"
+      ],
+      "methods": null,
+      "id": "Posto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Utente",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "dataNascita: String",
+        "CF: String",
+        "numeroCellulare: String",
+        "documentoID: String",
+        "cellulareVerificato: boolean",
+        "documentoVerificato: boolean"
+      ],
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prenotazione",
+      "attributes": [
+        "dataInizio: Date",
+        "numeroGiorni: int",
+        "numeroAdulti: int",
+        "numeroBambini: int",
+        "confermata: boolean",
+        "cancellata: boolean",
+        "codice: String",
+        "questionarioCompilato: boolean",
+        "tempoLimiteQuestionario: Date"
+      ],
+      "methods": null,
+      "id": "Prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "il sistema quando verifica la disponibilità dei post, in base al numero di persone, può assegnare anche più posti per gruppi di persone molto numerose",
+      "attributes": null,
+      "methods": null,
+      "id": "il sistema quando verifica la disponibilità dei post, in base al numero di persone, può assegnare anche più posti per gruppi di persone molto numerose",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Spiaggia",
+      "head": "Posto",
+      "class": "UndirectedAssociation",
+      "label": "ha"
+    },
+    {
+      "tail": "Utente",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Prenotazione",
+      "head": "Posto",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    }
+  ],
+  "groups": []
+}

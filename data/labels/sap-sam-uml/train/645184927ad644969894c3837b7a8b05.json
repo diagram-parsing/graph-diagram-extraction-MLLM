@@ -1,0 +1,96 @@
+{
+  "nodes": [
+    {
+      "text": "cliente",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "codfisc: string",
+        "datadinascita: datestamp",
+        ": "
+      ],
+      "methods": null,
+      "id": "cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "noleggio",
+      "attributes": [
+        "datainizio: date",
+        "datafine: date",
+        "npasseggeri: int",
+        "luogodipartenza: string",
+        "luogodiarrivo: string",
+        "sconto: double",
+        "approvazione: boolean",
+        "conferma: boolean",
+        "kmpartenza: int",
+        "kmfinale: int"
+      ],
+      "methods": null,
+      "id": "noleggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "autobus",
+      "attributes": [
+        "ntarga: string",
+        "dataimmatricolazione: date",
+        "nposti: int",
+        "kmtotale: int",
+        "data: date"
+      ],
+      "methods": null,
+      "id": "autobus",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "autista",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "codfiscale: string"
+      ],
+      "methods": null,
+      "id": "autista",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "fattura",
+      "attributes": [
+        "importo: currency",
+        "data: date"
+      ],
+      "methods": null,
+      "id": "fattura",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "cliente",
+      "head": "noleggio",
+      "class": "UndirectedAssociation",
+      "label": "richiede"
+    },
+    {
+      "tail": "noleggio",
+      "head": "autobus",
+      "class": "UndirectedAssociation",
+      "label": "per"
+    },
+    {
+      "tail": "noleggio",
+      "head": "autista",
+      "class": "UndirectedAssociation",
+      "label": "assegnatoA"
+    },
+    {
+      "tail": "noleggio",
+      "head": "fattura",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    }
+  ],
+  "groups": []
+}

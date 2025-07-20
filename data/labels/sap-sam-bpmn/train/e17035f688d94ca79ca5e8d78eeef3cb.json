@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Create",
+      "id": "Create",
+      "class": "Task"
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": "Task"
+    },
+    {
+      "text": "Delete",
+      "id": "Delete",
+      "class": "Task"
+    },
+    {
+      "text": "Hantera",
+      "id": "Hantera",
+      "class": "Task"
+    },
+    {
+      "text": "Vad ska utföras?",
+      "id": "Vad ska utföras?",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_1",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Hantera",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Create",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Update",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Delete",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Hantera",
+      "head": "Vad ska utföras?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vad ska utföras?",
+      "head": "Create",
+      "class": "SequenceFlow",
+      "label": "Lägga till"
+    },
+    {
+      "tail": "Vad ska utföras?",
+      "head": "Update",
+      "class": "SequenceFlow",
+      "label": "Ändra"
+    },
+    {
+      "tail": "Vad ska utföras?",
+      "head": "Delete",
+      "class": "SequenceFlow",
+      "label": "Ta bort"
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Create",
+        "Update",
+        "Delete",
+        "Hantera",
+        "Vad ska utföras?",
+        "OR_Gateway_1",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

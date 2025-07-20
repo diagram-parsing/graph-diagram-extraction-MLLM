@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "text": "Feierabend",
+      "id": "Feierabend",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Kühlschrank leer",
+      "id": "Kühlschrank leer",
+      "class": "StartConditionalEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Einkaufen",
+      "id": "Einkaufen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Kühlschrank leer",
+      "id": "IntermediateEvent_1",
+      "class": "IntermediateEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Einkaufen",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Feierabend",
+      "id": "IntermediateTimerEvent_1",
+      "class": "IntermediateTimerEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Feierabend",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kühlschrank leer",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Einkaufen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Einkaufen",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "IntermediateTimerEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "IntermediateEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateEvent_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

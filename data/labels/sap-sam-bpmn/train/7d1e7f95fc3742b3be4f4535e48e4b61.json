@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "text": "Data Entry Process",
+      "id": "Data Entry Process",
+      "class": "IntermediateLinkEventCatching"
+    },
+    {
+      "text": "Payment Process",
+      "id": "Payment Process",
+      "class": "IntermediateLinkEventCatching"
+    },
+    {
+      "text": "Receive invoices paid list",
+      "id": "Receive invoices paid list",
+      "class": "Task"
+    },
+    {
+      "text": "Archive paid invoices per vendor (primary)",
+      "id": "Archive paid invoices per vendor (primary)",
+      "class": "Task"
+    },
+    {
+      "text": "Archive paid invoices per payment date (secondary)",
+      "id": "Archive paid invoices per payment date (secondary)",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Paid Invoices",
+      "id": "Paid Invoices",
+      "class": "DataObject"
+    },
+    {
+      "text": "Archived Invoices",
+      "id": "Archived Invoices",
+      "class": "DataObject"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Data Entry Process",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Payment Process",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive invoices paid list",
+      "head": "Archive paid invoices per vendor (primary)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive invoices paid list",
+      "head": "Paid Invoices",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Archive paid invoices per vendor (primary)",
+      "head": "Archive paid invoices per payment date (secondary)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Archive paid invoices per vendor (primary)",
+      "head": "Archived Invoices",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Archive paid invoices per payment date (secondary)",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Paid Invoices",
+      "head": "Archive paid invoices per vendor (primary)",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Archived Invoices",
+      "head": "Archive paid invoices per payment date (secondary)",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Receive invoices paid list",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "SSP",
+      "id": "SSP",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Data Entry Process",
+        "Payment Process",
+        "Receive invoices paid list",
+        "Archive paid invoices per vendor (primary)",
+        "Archive paid invoices per payment date (secondary)",
+        "EndEvent_1",
+        "Paid Invoices",
+        "Archived Invoices",
+        "AND_Gateway_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

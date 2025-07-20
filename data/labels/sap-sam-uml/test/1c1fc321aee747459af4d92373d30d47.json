@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "text": "Invoice Document",
+      "attributes": [
+        "InvoiceNumber: ",
+        "InvoiceDate: ",
+        "InvoiceAmount: "
+      ],
+      "methods": null,
+      "id": "Invoice Document",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Shipping document ",
+      "attributes": [
+        "ShippingAddress: ",
+        "ShippingID: "
+      ],
+      "methods": null,
+      "id": "Shipping document ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Material",
+      "attributes": [
+        "MaterialID: ",
+        "MaterialDescription: ",
+        "MaterialQuantity: "
+      ],
+      "methods": null,
+      "id": "Material",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sales order",
+      "attributes": [
+        "OrderDate: ",
+        "SalesOrderID: "
+      ],
+      "methods": null,
+      "id": "Sales order",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Customer",
+      "attributes": [
+        "CustomerArea: ",
+        "CustomerPONumber: ",
+        "OrderDate: ",
+        "OrderTotal: "
+      ],
+      "methods": null,
+      "id": "Customer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Schedule Line",
+      "attributes": [
+        "DeliveryQuantity: ",
+        "DeliveryDate: "
+      ],
+      "methods": null,
+      "id": "Schedule Line",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sales Document Items",
+      "attributes": [
+        "ItemID: ",
+        "Description: ",
+        "Quantity: "
+      ],
+      "methods": null,
+      "id": "Sales Document Items",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Invoice Document",
+      "head": "Sales order",
+      "class": "UndirectedAssociation",
+      "label": "1...1 associated with 1..1 "
+    },
+    {
+      "tail": "Sales order",
+      "head": "Sales Document Items",
+      "class": "Composition",
+      "label": "*..1 consists of 1..*"
+    },
+    {
+      "tail": "Sales order",
+      "head": "Customer",
+      "class": "Aggregation",
+      "label": "1..1 consists of 1..*"
+    },
+    {
+      "tail": "Customer",
+      "head": "Invoice Document",
+      "class": "Composition",
+      "label": "*..1 associated with 1..1"
+    },
+    {
+      "tail": "Schedule Line",
+      "head": "Shipping document ",
+      "class": "UndirectedAssociation",
+      "label": "1..1 associated with of 1..1"
+    },
+    {
+      "tail": "Sales Document Items",
+      "head": "Material",
+      "class": "Aggregation",
+      "label": "*..1 consists of 1..*"
+    },
+    {
+      "tail": "Sales Document Items",
+      "head": "Schedule Line",
+      "class": "Composition",
+      "label": "1..1 associated with 1..1"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "text": "cliente",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "tel: string",
+        "email: string",
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ordine",
+      "attributes": [
+        "tempoConsegna: string",
+        "pagato: boolean",
+        "incarico: boolean",
+        "inConsegna: boolean",
+        "concluso: boolean"
+      ],
+      "methods": null,
+      "id": "ordine",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "piatto",
+      "attributes": [
+        "nome: string",
+        "immagine: string",
+        "descrizione: string",
+        "Kcal: int",
+        "prezzo: currency",
+        "tempoPreparazione: time"
+      ],
+      "methods": null,
+      "id": "piatto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ingredienti",
+      "attributes": [
+        "nome: string",
+        "tipo: string"
+      ],
+      "methods": null,
+      "id": "ingredienti",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "allergeni",
+      "attributes": [
+        "nome : string",
+        "cat: string"
+      ],
+      "methods": null,
+      "id": "allergeni",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "cliente",
+      "head": "ordine",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "piatto",
+      "head": "ordine",
+      "class": "UndirectedAssociation",
+      "label": "comprende"
+    },
+    {
+      "tail": "ingredienti",
+      "head": "piatto",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    },
+    {
+      "tail": "allergeni",
+      "head": "piatto",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    }
+  ],
+  "groups": []
+}

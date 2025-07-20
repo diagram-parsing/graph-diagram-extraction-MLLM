@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "text": "cliente",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "documentod'identità: string",
+        "n°telefono: string",
+        "email: string"
+      ],
+      "methods": null,
+      "id": "cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "noleggio",
+      "attributes": [
+        "data: date",
+        "ora: time",
+        "datarestituzione: date",
+        "qrcode: boolean",
+        "numero: int",
+        "pagato: boolean"
+      ],
+      "methods": null,
+      "id": "noleggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "attrezzatura",
+      "attributes": [
+        "taglia: string",
+        "codice: string"
+      ],
+      "methods": null,
+      "id": "attrezzatura",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tipo attrezzatura",
+      "attributes": [
+        "modello: string",
+        "marca: string",
+        "prezzo: float",
+        "tipo: enum"
+      ],
+      "methods": null,
+      "id": "tipo attrezzatura",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "se non è presente la data di restituzione vuol dire che non è ancora stato restituito",
+      "attributes": null,
+      "methods": null,
+      "id": "se non è presente la data di restituzione vuol dire che non è ancora stato restituito",
+      "class": "Note"
+    },
+    {
+      "text": "prenotazione",
+      "attributes": [
+        "codice: string"
+      ],
+      "methods": null,
+      "id": "prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "se voglio distinguere il caso di noleggio via web e allora il qr-code andrebbe qua",
+      "attributes": null,
+      "methods": null,
+      "id": "se voglio distinguere il caso di noleggio via web e allora il qr-code andrebbe qua",
+      "class": "Note"
+    },
+    {
+      "text": "addetto",
+      "attributes": [
+        "nome: string",
+        "cognome: string"
+      ],
+      "methods": null,
+      "id": "addetto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tipo: {sci, scarpone, racchetta}",
+      "attributes": null,
+      "methods": null,
+      "id": "tipo: {sci, scarpone, racchetta}",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "cliente",
+      "head": "noleggio",
+      "class": "UndirectedAssociation",
+      "label": "noleggia"
+    },
+    {
+      "tail": "noleggio",
+      "head": "se non è presente la data di restituzione vuol dire che non è ancora stato restituito",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "attrezzatura",
+      "head": "noleggio",
+      "class": "UndirectedAssociation",
+      "label": "affitta"
+    },
+    {
+      "tail": "attrezzatura",
+      "head": "tipo attrezzatura",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "tipo attrezzatura",
+      "head": "tipo: {sci, scarpone, racchetta}",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "prenotazione",
+      "head": "noleggio",
+      "class": "UndirectedAssociation",
+      "label": "convertita in"
+    },
+    {
+      "tail": "prenotazione",
+      "head": "cliente",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "prenotazione",
+      "head": "attrezzatura",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "prenotazione",
+      "head": "se voglio distinguere il caso di noleggio via web e allora il qr-code andrebbe qua",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "addetto",
+      "head": "noleggio",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

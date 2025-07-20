@@ -1,0 +1,155 @@
+{
+  "nodes": [
+    {
+      "text": "Medewerker",
+      "id": "Medewerker",
+      "class": "Task"
+    },
+    {
+      "text": "Helpdesk",
+      "id": "Helpdesk",
+      "class": "Task"
+    },
+    {
+      "text": "'On the fly' verholpen",
+      "id": "'On the fly' verholpen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Escaleren via TOPDesk",
+      "id": "Escaleren via TOPDesk",
+      "class": "Task"
+    },
+    {
+      "text": "Ticket in Jira",
+      "id": "Ticket in Jira",
+      "class": "Task"
+    },
+    {
+      "text": "Verholpen in tweede lijn",
+      "id": "Verholpen in tweede lijn",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Nieuwe feature",
+      "id": "Nieuwe feature",
+      "class": "Task"
+    },
+    {
+      "text": "Naar normale swimlane",
+      "id": "Naar normale swimlane",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Naar Fastlane",
+      "id": "Naar Fastlane",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_4",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Bug",
+      "id": "Bug",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Medewerker",
+      "head": "Helpdesk",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Helpdesk",
+      "head": "'On the fly' verholpen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Helpdesk",
+      "head": "Escaleren via TOPDesk",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "'On the fly' verholpen",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Escaleren via TOPDesk",
+      "head": "Ticket in Jira",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Escaleren via TOPDesk",
+      "head": "Verholpen in tweede lijn",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket in Jira",
+      "head": "Nieuwe feature",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket in Jira",
+      "head": "Bug",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verholpen in tweede lijn",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Nieuwe feature",
+      "head": "Naar normale swimlane",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Naar normale swimlane",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Naar Fastlane",
+      "head": "EndEvent_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bug",
+      "head": "Naar Fastlane",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

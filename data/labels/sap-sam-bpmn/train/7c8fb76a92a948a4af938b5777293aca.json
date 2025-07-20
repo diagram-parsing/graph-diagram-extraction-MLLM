@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "text": "Benutzer anmelden\n",
+      "id": "Benutzer anmelden\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "Buch recherchieren",
+      "id": "Buch recherchieren",
+      "class": "Task"
+    },
+    {
+      "text": "Buchnummer angeben",
+      "id": "Buchnummer angeben",
+      "class": "Task"
+    },
+    {
+      "text": "Buch vormerken\n",
+      "id": "Buch vormerken\n",
+      "class": "Task"
+    },
+    {
+      "text": "Buchnummer als Vormerkung speichern\n",
+      "id": "Buchnummer als Vormerkung speichern\n",
+      "class": "Task"
+    },
+    {
+      "text": "Vormerkung bestätigen",
+      "id": "Vormerkung bestätigen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_2",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "Benutzer angekommen\n",
+      "id": "Benutzer angekommen\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Vormerkung bestätigt",
+      "id": "Vormerkung bestätigt",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_3",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_4",
+      "class": "TextAnnotation"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Buch vormerken\n",
+      "head": "TextAnnotation_4",
+      "class": "Association_Undirected",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

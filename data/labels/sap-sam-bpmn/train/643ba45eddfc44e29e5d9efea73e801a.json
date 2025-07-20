@@ -1,0 +1,212 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "HSL-kortti",
+      "id": "HSL-kortti",
+      "class": "Task"
+    },
+    {
+      "text": "Numerotunnus",
+      "id": "Numerotunnus",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Käyttöönotto",
+      "id": "Käyttöönotto",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_2",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Etsi vapaa pyörä",
+      "id": "Etsi vapaa pyörä",
+      "class": "Task"
+    },
+    {
+      "text": "Avaa pyörä",
+      "id": "Avaa pyörä",
+      "class": "Task"
+    },
+    {
+      "text": "Pyöräile",
+      "id": "Pyöräile",
+      "class": "Task"
+    },
+    {
+      "text": "Etsi kaupunki-\npyöräpiste",
+      "id": "Etsi kaupunki-\npyöräpiste",
+      "class": "Task"
+    },
+    {
+      "text": "Lukitse pyörä",
+      "id": "Lukitse pyörä",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "HSL-kortti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Numerotunnus",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "HSL-kortti",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Numerotunnus",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Käyttöönotto",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Käyttöönotto",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Käyttöönotto",
+      "head": "Avaa pyörä",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "Etsi vapaa pyörä",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Etsi vapaa pyörä",
+      "head": "Avaa pyörä",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Avaa pyörä",
+      "head": "Pyöräile",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Avaa pyörä",
+      "head": "Käyttöönotto",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pyöräile",
+      "head": "Etsi kaupunki-\npyöräpiste",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Etsi kaupunki-\npyöräpiste",
+      "head": "Lukitse pyörä",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lukitse pyörä",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Tunnistautuminen",
+      "id": "Tunnistautuminen",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Exclusive_Databased_Gateway_1",
+        "HSL-kortti",
+        "Numerotunnus",
+        "Exclusive_Databased_Gateway_2",
+        "Käyttöönotto",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Pyöräilymatka",
+      "id": "Pyöräilymatka",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "StartEvent_2",
+        "Etsi vapaa pyörä",
+        "Avaa pyörä",
+        "Pyöräile",
+        "Etsi kaupunki-\npyöräpiste",
+        "Lukitse pyörä",
+        "EndEvent_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "nodes": [
+    {
+      "text": "start doctor rating",
+      "id": "start doctor rating",
+      "class": "event"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "forward expertise",
+      "id": "forward expertise",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "expertise received",
+      "id": "expertise received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "file result",
+      "id": "file result",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "ask external expert review the work",
+      "id": "ask external expert review the work",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "expertise delivered",
+      "id": "expertise delivered",
+      "class": "messageEvent"
+    },
+    {
+      "text": "cheque sent",
+      "id": "cheque sent",
+      "class": "messageEvent"
+    },
+    {
+      "text": "respond created",
+      "id": "respond created",
+      "class": "event"
+    },
+    {
+      "text": "interview patients",
+      "id": "interview patients",
+      "class": "subProcess"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": "respond not in time"
+    },
+    {
+      "tail": "forward expertise",
+      "head": "cheque sent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "expertise delivered",
+      "class": "sequenceFlow",
+      "label": "repond in time"
+    },
+    {
+      "tail": "ask external expert review the work",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "ask external expert review the work",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "respond created",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file result",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expertise received",
+      "head": "file result",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patients",
+      "head": "expertise received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "interview patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "start doctor rating",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expertise delivered",
+      "head": "forward expertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "External expert",
+      "head": "expertise delivered",
+      "class": "messageFlow",
+      "label": "work reciev [finished]"
+    },
+    {
+      "tail": "cheque sent",
+      "head": "External expert",
+      "class": "messageFlow",
+      "label": "cheque for expenses"
+    },
+    {
+      "tail": "ask external expert review the work",
+      "head": "External expert",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Hospital",
+      "nodes": [
+        "manging director",
+        "Quality assurance specialist"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "manging director",
+      "nodes": [
+        "forward expertise",
+        "exclusiveGateway_1",
+        "ask external expert review the work",
+        "exclusiveGateway_2",
+        "expertise delivered",
+        "cheque sent"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Quality assurance specialist",
+      "nodes": [
+        "start doctor rating",
+        "create report",
+        "parallelGateway_1",
+        "expertise received",
+        "file result",
+        "respond created",
+        "interview patients"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "External expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

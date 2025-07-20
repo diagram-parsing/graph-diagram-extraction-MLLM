@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "text": "Articolo",
+      "attributes": [
+        "Titolo: string",
+        "Abstract: string",
+        "testo: string"
+      ],
+      "methods": null,
+      "id": "Articolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Review",
+      "attributes": null,
+      "methods": null,
+      "id": "Review",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ricercatore",
+      "attributes": [
+        "CodiceID: string",
+        "NomeRic: string",
+        "CognomeRic: string",
+        "DataDiNascita: string",
+        "Affiliazione: string"
+      ],
+      "methods": null,
+      "id": "Ricercatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rivista",
+      "attributes": [
+        "nome: string",
+        "settore: string",
+        "publisher: string"
+      ],
+      "methods": null,
+      "id": "Rivista",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Keyword",
+      "attributes": [
+        "CodiceK: STRING",
+        "NomeK: string"
+      ],
+      "methods": null,
+      "id": "Keyword",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Allegato",
+      "attributes": [
+        "ID: string",
+        "Nome: string",
+        "URL: string"
+      ],
+      "methods": null,
+      "id": "Allegato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Editor Di",
+      "attributes": [
+        "verdetto: string"
+      ],
+      "methods": null,
+      "id": "Editor Di",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Articolo",
+      "head": "Rivista",
+      "class": "UndirectedAssociation",
+      "label": "sottomessoA"
+    },
+    {
+      "tail": "Articolo",
+      "head": "Keyword",
+      "class": "UndirectedAssociation",
+      "label": "associatoA"
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Articolo",
+      "class": "UndirectedAssociation",
+      "label": "scritto da "
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Articolo",
+      "class": "UndirectedAssociation",
+      "label": "EditorDi"
+    },
+    {
+      "tail": "Allegato",
+      "head": "Articolo",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    }
+  ],
+  "groups": []
+}

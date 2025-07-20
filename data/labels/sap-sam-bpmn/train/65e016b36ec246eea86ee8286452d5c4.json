@@ -1,0 +1,225 @@
+{
+  "nodes": [
+    {
+      "text": "Auftrag zum Kauf eines mobile phones",
+      "id": "Auftrag zum Kauf eines mobile phones",
+      "class": "Task"
+    },
+    {
+      "text": "Order Mobile Phone",
+      "id": "Order Mobile Phone",
+      "class": "Subprocess"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Prüfen der Verfügbarkeit des Smartphones",
+      "id": "Prüfen der Verfügbarkeit des Smartphones",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Beschaffung des Smartphones",
+      "id": "Beschaffung des Smartphones",
+      "class": "Task"
+    },
+    {
+      "text": "Suchen eines alternativ Smartphones",
+      "id": "Suchen eines alternativ Smartphones",
+      "class": "Task"
+    },
+    {
+      "text": "Smartphone beschafft",
+      "id": "Smartphone beschafft",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndErrorEvent_1",
+      "class": "EndErrorEvent"
+    },
+    {
+      "text": "",
+      "id": "StartMessageEvent_1",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Order Tariff",
+      "id": "Order Tariff",
+      "class": "Subprocess"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_2",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Vorbereiten der Vertragsdokumente",
+      "id": "Vorbereiten der Vertragsdokumente",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "Prüfen ob Kunde älter als 18 ist",
+      "id": "Prüfen ob Kunde älter als 18 ist",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Task_2",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Auftrag zum Kauf eines mobile phones",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Prüfen der Verfügbarkeit des Smartphones",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prüfen der Verfügbarkeit des Smartphones",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Beschaffung des Smartphones",
+      "class": "SequenceFlow",
+      "label": "verfügbar"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Suchen eines alternativ Smartphones",
+      "class": "SequenceFlow",
+      "label": "nicht verfügbar"
+    },
+    {
+      "tail": "Beschaffung des Smartphones",
+      "head": "Smartphone beschafft",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Suchen eines alternativ Smartphones",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Beschaffung des Smartphones",
+      "class": "SequenceFlow",
+      "label": "alternative erwünscht"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndErrorEvent_1",
+      "class": "SequenceFlow",
+      "label": "alternative nicht erwünscht\n"
+    },
+    {
+      "tail": "StartMessageEvent_1",
+      "head": "Auftrag zum Kauf eines mobile phones",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "Vorbereiten der Vertragsdokumente",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vorbereiten der Vertragsdokumente",
+      "head": "Prüfen ob Kunde älter als 18 ist",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prüfen ob Kunde älter als 18 ist",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Task_2",
+      "class": "SequenceFlow",
+      "label": "nein"
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Order Tariff",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Order Mobile Phone",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Telekommunikations Firma",
+      "id": "Telekommunikations Firma",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Auftrag zum Kauf eines mobile phones",
+        "Order Mobile Phone",
+        "StartMessageEvent_1",
+        "Order Tariff",
+        "AND_Gateway_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "nodes": [
+    {
+      "text": "Famiglia\n",
+      "attributes": [
+        "Codice: String",
+        "Cognome: String",
+        "E-mail: String",
+        "Telefono: String",
+        "DatiValidati: Boolean"
+      ],
+      "methods": null,
+      "id": "Famiglia\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Figlio",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "DataNascita: Date",
+        "LuogoNascita: String",
+        "CoficeFiscale: String",
+        "InRegola: Boolean",
+        "Dativalidati: Boolean"
+      ],
+      "methods": null,
+      "id": "Figlio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccinazione\n",
+      "attributes": [
+        "Iniziale: Boolean",
+        "DataEsecuzione: Date",
+        "OraEsecuzione: Time",
+        "Certificato: String",
+        "Effetti: String"
+      ],
+      "methods": null,
+      "id": "Vaccinazione\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccino\n",
+      "attributes": [
+        "Nome: String",
+        "Obbligatorio: Boolean",
+        "Età: Int"
+      ],
+      "methods": null,
+      "id": "Vaccino\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esenzione",
+      "attributes": [
+        "Codice: String"
+      ],
+      "methods": null,
+      "id": "Esenzione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Patologia\n",
+      "attributes": [
+        "Codice: String",
+        "Nome: String"
+      ],
+      "methods": null,
+      "id": "Patologia\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Anomalia\n",
+      "attributes": [
+        "Codice: String",
+        "Descrizione: String"
+      ],
+      "methods": null,
+      "id": "Anomalia\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Famiglia\n",
+      "head": "Figlio",
+      "class": "UndirectedAssociation",
+      "label": "Comprende"
+    },
+    {
+      "tail": "Famiglia\n",
+      "head": "Anomalia\n",
+      "class": "UndirectedAssociation",
+      "label": "Segnala"
+    },
+    {
+      "tail": "Figlio",
+      "head": "Esenzione",
+      "class": "UndirectedAssociation",
+      "label": "Ha"
+    },
+    {
+      "tail": "Figlio",
+      "head": "Anomalia\n",
+      "class": "UndirectedAssociation",
+      "label": "Riferita a"
+    },
+    {
+      "tail": "Figlio",
+      "head": "Vaccinazione\n",
+      "class": "UndirectedAssociation",
+      "label": "Riceve"
+    },
+    {
+      "tail": "Vaccinazione\n",
+      "head": "Vaccino\n",
+      "class": "UndirectedAssociation",
+      "label": "Relativa a "
+    },
+    {
+      "tail": "Vaccino\n",
+      "head": "Anomalia\n",
+      "class": "UndirectedAssociation",
+      "label": "Riguarda"
+    },
+    {
+      "tail": "Esenzione",
+      "head": "Patologia\n",
+      "class": "UndirectedAssociation",
+      "label": "Legata a"
+    }
+  ],
+  "groups": []
+}

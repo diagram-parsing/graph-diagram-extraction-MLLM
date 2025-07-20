@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "text": "Drücken eines Lichtstaster",
+      "id": "Drücken eines Lichtstaster",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Das Licht angeschaltet",
+      "id": "Das Licht angeschaltet",
+      "class": "Task"
+    },
+    {
+      "text": "ein weiteres Betätigen des Lichttasters keinen Effekt",
+      "id": "ein weiteres Betätigen des Lichttasters keinen Effekt",
+      "class": "Task"
+    },
+    {
+      "text": "keine weitere Betätigung",
+      "id": "keine weitere Betätigung",
+      "class": "Task"
+    },
+    {
+      "text": "noch eine weitere Betätigung",
+      "id": "noch eine weitere Betätigung",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Das Licht ausgeschaltet",
+      "id": "Das Licht ausgeschaltet",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Drücken eines Lichtstaster",
+      "head": "Das Licht angeschaltet",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Das Licht angeschaltet",
+      "head": "ein weiteres Betätigen des Lichttasters keinen Effekt",
+      "class": "SequenceFlow",
+      "label": "in den ersten 40 Sekunden"
+    },
+    {
+      "tail": "ein weiteres Betätigen des Lichttasters keinen Effekt",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "in den letzten 20 Sekunden"
+    },
+    {
+      "tail": "keine weitere Betätigung",
+      "head": "Das Licht ausgeschaltet",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "noch eine weitere Betätigung",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "keine weitere Betätigung",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "noch eine weitere Betätigung",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

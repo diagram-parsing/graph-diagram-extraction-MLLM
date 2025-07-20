@@ -1,0 +1,202 @@
+{
+  "nodes": [
+    {
+      "text": "<<boundary >> Unterseite Jobangebot einstellen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<boundary >> Unterseite Jobangebot einstellen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Bankdaten",
+      "attributes": [
+        "kontonummer: String",
+        "arbeitgeber: Arbeitgeber"
+      ],
+      "methods": null,
+      "id": "<<entity>> Bankdaten",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "<<boundary >>externes Informationssystem",
+      "attributes": null,
+      "methods": null,
+      "id": "<<boundary >>externes Informationssystem",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> Bankdaten ermitteln",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> Bankdaten ermitteln",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> Jobangebot einstellen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> Jobangebot einstellen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<dto>> Bestätigung",
+      "attributes": null,
+      "methods": null,
+      "id": "<<dto>> Bestätigung",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> nicht korrektes Angebot ablehnen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> nicht korrektes Angebot ablehnen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Jobangebot\n",
+      "attributes": [
+        "beschreibung : Text",
+        "betrag: Betrag",
+        "arbeitgeber: Arbeitgeber"
+      ],
+      "methods": null,
+      "id": "<<entity>> Jobangebot\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "<<entity>> Freelander Angebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Freelander Angebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Praktika Angebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Praktika Angebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Festanstellung Angebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Festanstellung Angebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Unternehmer",
+      "attributes": [
+        "ID: Integer",
+        "Name: String",
+        "Firma: String",
+        "liste: List<Jobangebot>",
+        "liste: List<Bankdaten>"
+      ],
+      "methods": null,
+      "id": "<<entity>> Unternehmer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "<<control>> Bankeinzug durchführen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> Bankeinzug durchführen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<dto>> Jobangebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<dto>> Jobangebot",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "<<boundary >> Unterseite Jobangebot einstellen",
+      "head": "<<dto>> Bestätigung",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<dto>> Bestätigung",
+      "class": "Dependency",
+      "label": "benutzt"
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<dto>> Jobangebot",
+      "class": "Dependency",
+      "label": "empfängt"
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<boundary >>externes Informationssystem",
+      "class": "Dependency",
+      "label": "benutzt"
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<control>> Bankeinzug durchführen",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<entity>> Jobangebot\n",
+      "class": "Dependency",
+      "label": "benutzt/erzeugt"
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<entity>> Unternehmer",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<control>> nicht korrektes Angebot ablehnen",
+      "class": "Dependency",
+      "label": "benutzt"
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<entity>> Bankdaten",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "<<entity>> Jobangebot\n",
+      "head": "<<entity>> Praktika Angebot",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "<<entity>> Jobangebot\n",
+      "head": "<<entity>> Festanstellung Angebot",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "<<entity>> Jobangebot\n",
+      "head": "<<entity>> Freelander Angebot",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "<<entity>> Jobangebot\n",
+      "head": "<<entity>> Unternehmer",
+      "class": "UndirectedAssociation",
+      "label": "0..* "
+    },
+    {
+      "tail": "<<entity>> Unternehmer",
+      "head": "<<entity>> Bankdaten",
+      "class": "UndirectedAssociation",
+      "label": "1..1"
+    }
+  ],
+  "groups": []
+}

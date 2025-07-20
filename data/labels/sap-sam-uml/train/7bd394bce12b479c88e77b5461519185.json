@@ -1,0 +1,174 @@
+{
+  "nodes": [
+    {
+      "text": "FOORUMI\n",
+      "attributes": [
+        "nimi: ",
+        ": "
+      ],
+      "methods": null,
+      "id": "FOORUMI\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AIHEET",
+      "attributes": [
+        "luontipvm: "
+      ],
+      "methods": [
+        "haeAiheet()",
+        "luontipvm()"
+      ],
+      "id": "AIHEET",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "AIHEALUE",
+      "attributes": [
+        "nimi: string",
+        "käyttäjämäärä: "
+      ],
+      "methods": [
+        "haeNimi()",
+        "luoAihealue()"
+      ],
+      "id": "AIHEALUE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "KÄYTTÄJÄT",
+      "attributes": [
+        "nickname: ",
+        "luontipvm: ",
+        "description: ",
+        "oikeus: boolean"
+      ],
+      "methods": [
+        "haeOikeus()"
+      ],
+      "id": "KÄYTTÄJÄT",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "KÄYTTÄJÄ",
+      "attributes": [
+        "nickname: "
+      ],
+      "methods": [
+        "oikeus()"
+      ],
+      "id": "KÄYTTÄJÄ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ADMIN",
+      "attributes": [
+        "nickname: "
+      ],
+      "methods": [
+        "oikeus()"
+      ],
+      "id": "ADMIN",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "OIKEUDET",
+      "attributes": null,
+      "methods": [
+        "muunnaViesti()",
+        "poistaViesti()",
+        "lisääViesti()"
+      ],
+      "id": "OIKEUDET",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "viestiToiminto",
+      "attributes": [
+        "viestiOtsikko: ",
+        "viestiSisältö: "
+      ],
+      "methods": [
+        "lisääViesti()"
+      ],
+      "id": "viestiToiminto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "VIESTI",
+      "attributes": [
+        "otsikko: ",
+        "sisältö: ",
+        "lukukerrat: "
+      ],
+      "methods": [
+        "haeViesti()"
+      ],
+      "id": "VIESTI",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "FOORUMI\n",
+      "head": "AIHEET",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AIHEET",
+      "head": "AIHEALUE",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "AIHEALUE",
+      "head": "VIESTI",
+      "class": "Dependency",
+      "label": ""
+    },
+    {
+      "tail": "KÄYTTÄJÄT",
+      "head": "KÄYTTÄJÄ",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "KÄYTTÄJÄT",
+      "head": "ADMIN",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "KÄYTTÄJÄT",
+      "head": "OIKEUDET",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "KÄYTTÄJÄT",
+      "head": "VIESTI",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "KÄYTTÄJÄ",
+      "head": "FOORUMI\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "KÄYTTÄJÄ",
+      "head": "viestiToiminto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ADMIN",
+      "head": "FOORUMI\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

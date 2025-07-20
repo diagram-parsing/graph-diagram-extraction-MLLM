@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Reception of the material needed ",
+      "id": "Reception of the material needed ",
+      "class": "Task"
+    },
+    {
+      "text": "Sending on the product line",
+      "id": "Sending on the product line",
+      "class": "Task"
+    },
+    {
+      "text": "Scanning ",
+      "id": "Scanning ",
+      "class": "Task"
+    },
+    {
+      "text": "Sending to the customer ",
+      "id": "Sending to the customer ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Helps Sûti to know where each item was scanned ",
+      "id": "Helps Sûti to know where each item was scanned ",
+      "class": "DataObject"
+    },
+    {
+      "text": "Problem with the stove ",
+      "id": "Problem with the stove ",
+      "class": "Task"
+    },
+    {
+      "text": "Out of the product line",
+      "id": "Out of the product line",
+      "class": "Task"
+    },
+    {
+      "text": "No problem with the stove",
+      "id": "No problem with the stove",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Scanning the stove to know from where the mistake comes",
+      "id": "Scanning the stove to know from where the mistake comes",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Reception of the material needed ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reception of the material needed ",
+      "head": "Sending on the product line",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Sending on the product line",
+      "head": "Scanning ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Scanning ",
+      "head": "Out of the product line",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Scanning ",
+      "head": "Helps Sûti to know where each item was scanned ",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Sending to the customer ",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Problem with the stove ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "No problem with the stove",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Problem with the stove ",
+      "head": "Scanning the stove to know from where the mistake comes",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Out of the product line",
+      "head": "Sending to the customer ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Scanning the stove to know from where the mistake comes",
+      "head": "Helps Sûti to know where each item was scanned ",
+      "class": "Association_Unidirectional",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

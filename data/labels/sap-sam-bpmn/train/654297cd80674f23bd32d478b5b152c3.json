@@ -1,0 +1,224 @@
+{
+  "nodes": [
+    {
+      "text": "Place order\n",
+      "id": "Place order\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Receive invoice\n",
+      "id": "Receive invoice\n",
+      "class": "Task"
+    },
+    {
+      "text": "Settle invoice\n",
+      "id": "Settle invoice\n",
+      "class": "Task"
+    },
+    {
+      "text": "receive products\n",
+      "id": "receive products\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_2",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Receive order",
+      "id": "Receive order",
+      "class": "Task"
+    },
+    {
+      "text": "send invoice",
+      "id": "send invoice",
+      "class": "Task"
+    },
+    {
+      "text": "ship product\n",
+      "id": "ship product\n",
+      "class": "Task"
+    },
+    {
+      "text": "receive payment",
+      "id": "receive payment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "archive order",
+      "id": "archive order",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Place order\n",
+      "head": "Receive order",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Receive invoice\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "receive products\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive invoice\n",
+      "head": "Settle invoice\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Settle invoice\n",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "receive products\n",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "Receive order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive order",
+      "head": "send invoice",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "send invoice",
+      "head": "ship product\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "send invoice",
+      "head": "Receive invoice\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "ship product\n",
+      "head": "receive payment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ship product\n",
+      "head": "Settle invoice\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "receive payment",
+      "head": "archive order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "receive payment",
+      "head": "receive products\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "archive order",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Buyer /Kaeufer",
+      "id": "Buyer /Kaeufer",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Place order\n",
+        "AND_Gateway_1",
+        "StartEvent_1",
+        "Receive invoice\n",
+        "Settle invoice\n",
+        "receive products\n",
+        "EndEvent_1",
+        "AND_Gateway_2"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Reseller",
+      "id": "Reseller",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "StartEvent_2",
+        "Receive order",
+        "send invoice",
+        "ship product\n",
+        "receive payment",
+        "EndEvent_2",
+        "archive order"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

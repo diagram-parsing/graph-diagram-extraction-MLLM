@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "text": "Happy-Garden   Kindergarten",
+      "attributes": null,
+      "methods": null,
+      "id": "Happy-Garden   Kindergarten",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Child",
+      "attributes": null,
+      "methods": null,
+      "id": "Child",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Play Group",
+      "attributes": null,
+      "methods": null,
+      "id": "Play Group",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Teacher ",
+      "attributes": null,
+      "methods": null,
+      "id": "Teacher ",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Happy-Garden   Kindergarten",
+      "head": "Child",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Child",
+      "head": "Play Group",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Teacher ",
+      "head": "Play Group",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Teacher ",
+      "head": "Happy-Garden   Kindergarten",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

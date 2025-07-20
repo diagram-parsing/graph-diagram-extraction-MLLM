@@ -1,0 +1,274 @@
+{
+  "nodes": [
+    {
+      "text": "new\nrating case\nstarted",
+      "id": "new\nrating case\nstarted",
+      "class": "event"
+    },
+    {
+      "text": "rating\ncase\nfinished",
+      "id": "rating\ncase\nfinished",
+      "class": "event"
+    },
+    {
+      "text": "send cheque to\nexpert",
+      "id": "send cheque to\nexpert",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": "time\nis up",
+      "id": "time\nis up",
+      "class": "timerEvent"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_3",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "interview\npatents",
+      "id": "interview\npatents",
+      "class": "subProcess"
+    },
+    {
+      "text": "ask\nexternal\nexpert",
+      "id": "ask\nexternal\nexpert",
+      "class": "task"
+    },
+    {
+      "text": "forward expertise\nto QA specialist",
+      "id": "forward expertise\nto QA specialist",
+      "class": "task"
+    },
+    {
+      "text": "file results",
+      "id": "file results",
+      "class": "task"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "fill cheque",
+      "id": "fill cheque",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_4",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "eventBasedGateway_1",
+      "class": "eventBasedGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_4",
+      "head": "rating\ncase\nfinished",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send cheque to\nexpert",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill cheque",
+      "head": "send cheque to\nexpert",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file results",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "file results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "fill cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward expertise\nto QA specialist",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "forward expertise\nto QA specialist",
+      "class": "sequenceFlow",
+      "label": "expertise\nreceived"
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "time\nis up",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "time\nis up",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask\nexternal\nexpert",
+      "head": "eventBasedGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "ask\nexternal\nexpert",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview\npatents",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "interview\npatents",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "new\nrating case\nstarted",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send cheque to\nexpert",
+      "head": "External Expert",
+      "class": "messageFlow",
+      "label": "cheque"
+    },
+    {
+      "tail": "External Expert",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": "expertise"
+    },
+    {
+      "tail": "ask\nexternal\nexpert",
+      "head": "External Expert",
+      "class": "messageFlow",
+      "label": "inquiry\nfor\nexpertise"
+    }
+  ],
+  "groups": [
+    {
+      "name": null,
+      "nodes": [
+        "managing director",
+        "QA specialist",
+        "manager"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "managing director",
+      "nodes": [
+        "messageEvent_1",
+        "time\nis up",
+        "exclusiveGateway_1",
+        "ask\nexternal\nexpert",
+        "forward expertise\nto QA specialist",
+        "eventBasedGateway_1"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "QA specialist",
+      "nodes": [
+        "new\nrating case\nstarted",
+        "rating\ncase\nfinished",
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "parallelGateway_3",
+        "interview\npatents",
+        "file results",
+        "create report",
+        "parallelGateway_4"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "manager",
+      "nodes": [
+        "send cheque to\nexpert",
+        "fill cheque"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "External Expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

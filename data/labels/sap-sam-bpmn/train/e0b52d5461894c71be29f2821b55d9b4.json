@@ -1,0 +1,275 @@
+{
+  "nodes": [
+    {
+      "text": "Tutvumisringkäigu tegemine",
+      "id": "Tutvumisringkäigu tegemine",
+      "class": "Task"
+    },
+    {
+      "text": "Töökorralduste ja reeglite tutvustamine",
+      "id": "Töökorralduste ja reeglite tutvustamine",
+      "class": "Task"
+    },
+    {
+      "text": "UÖ tutvustamine meeskonnale ja kollegidele",
+      "id": "UÖ tutvustamine meeskonnale ja kollegidele",
+      "class": "Task"
+    },
+    {
+      "text": "Osakonna tegevusvaldkondadest ning eesmärkidest ülevaade andmine",
+      "id": "Osakonna tegevusvaldkondadest ning eesmärkidest ülevaade andmine",
+      "class": "Task"
+    },
+    {
+      "text": "Tööülesannete ja tööm eesmärkide tutvustamine",
+      "id": "Tööülesannete ja tööm eesmärkide tutvustamine",
+      "class": "Task"
+    },
+    {
+      "text": "Vajalike dokumentide ja õigusaktide tutvustamien",
+      "id": "Vajalike dokumentide ja õigusaktide tutvustamien",
+      "class": "Task"
+    },
+    {
+      "text": "Sisseelamise vajadus",
+      "id": "Sisseelamise vajadus",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Kolituste läbimine",
+      "id": "Kolituste läbimine",
+      "class": "Task"
+    },
+    {
+      "text": "Kollegidega tutvumine",
+      "id": "Kollegidega tutvumine",
+      "class": "Task"
+    },
+    {
+      "text": "vajalike tööesmärkide läbimine",
+      "id": "vajalike tööesmärkide läbimine",
+      "class": "Task"
+    },
+    {
+      "text": "Juhenduste saamine",
+      "id": "Juhenduste saamine",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Sisseelamine on edukas",
+      "id": "Sisseelamine on edukas",
+      "class": "EndEvent"
+    },
+    {
+      "text": "UÖ juhendamine",
+      "id": "UÖ juhendamine",
+      "class": "Task"
+    },
+    {
+      "text": "UÖ abistamine vajaliku informatsiooniga",
+      "id": "UÖ abistamine vajaliku informatsiooniga",
+      "class": "Task"
+    },
+    {
+      "text": "Tutvustab Keskkonnaagentuuriga",
+      "id": "Tutvustab Keskkonnaagentuuriga",
+      "class": "Task"
+    },
+    {
+      "text": "Ülevaade andmine erinevate organisatsiooni apektide kohta\n",
+      "id": "Ülevaade andmine erinevate organisatsiooni apektide kohta\n",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Tutvumisringkäigu tegemine",
+      "head": "Töökorralduste ja reeglite tutvustamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Töökorralduste ja reeglite tutvustamine",
+      "head": "UÖ tutvustamine meeskonnale ja kollegidele",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "UÖ tutvustamine meeskonnale ja kollegidele",
+      "head": "Osakonna tegevusvaldkondadest ning eesmärkidest ülevaade andmine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Osakonna tegevusvaldkondadest ning eesmärkidest ülevaade andmine",
+      "head": "Tööülesannete ja tööm eesmärkide tutvustamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Tööülesannete ja tööm eesmärkide tutvustamine",
+      "head": "Vajalike dokumentide ja õigusaktide tutvustamien",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vajalike dokumentide ja õigusaktide tutvustamien",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Sisseelamise vajadus",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Kolituste läbimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Tutvumisringkäigu tegemine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "UÖ juhendamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kolituste läbimine",
+      "head": "Kollegidega tutvumine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kollegidega tutvumine",
+      "head": "Juhenduste saamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "vajalike tööesmärkide läbimine",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Juhenduste saamine",
+      "head": "vajalike tööesmärkide läbimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Sisseelamine on edukas",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "UÖ juhendamine",
+      "head": "UÖ abistamine vajaliku informatsiooniga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "UÖ abistamine vajaliku informatsiooniga",
+      "head": "Tutvustab Keskkonnaagentuuriga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Tutvustab Keskkonnaagentuuriga",
+      "head": "Ülevaade andmine erinevate organisatsiooni apektide kohta\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ülevaade andmine erinevate organisatsiooni apektide kohta\n",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Otsene juht / vahetu juht",
+      "id": "Otsene juht / vahetu juht",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Tutvumisringkäigu tegemine",
+        "Töökorralduste ja reeglite tutvustamine",
+        "UÖ tutvustamine meeskonnale ja kollegidele",
+        "Osakonna tegevusvaldkondadest ning eesmärkidest ülevaade andmine",
+        "Tööülesannete ja tööm eesmärkide tutvustamine",
+        "Vajalike dokumentide ja õigusaktide tutvustamien"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Uus töötaja (UÖ)",
+      "id": "Uus töötaja (UÖ)",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Sisseelamise vajadus",
+        "AND_Gateway_1",
+        "Kolituste läbimine",
+        "Kollegidega tutvumine",
+        "vajalike tööesmärkide läbimine",
+        "Juhenduste saamine",
+        "AND_Gateway_2",
+        "Sisseelamine on edukas"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Tugiisik / kolleeg",
+      "id": "Tugiisik / kolleeg",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "UÖ juhendamine",
+        "UÖ abistamine vajaliku informatsiooniga",
+        "Tutvustab Keskkonnaagentuuriga",
+        "Ülevaade andmine erinevate organisatsiooni apektide kohta\n"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

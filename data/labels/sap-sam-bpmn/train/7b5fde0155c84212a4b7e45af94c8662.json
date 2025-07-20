@@ -1,0 +1,281 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Ustvarjanje zahtevka po novem kadru",
+      "id": "Ustvarjanje zahtevka po novem kadru",
+      "class": "Task"
+    },
+    {
+      "text": "Objavljanje razpisa za prosto delovno mesto",
+      "id": "Objavljanje razpisa za prosto delovno mesto",
+      "class": "Task"
+    },
+    {
+      "text": "Pregled vloge",
+      "id": "Pregled vloge",
+      "class": "Task"
+    },
+    {
+      "text": "Ocena kandidata",
+      "id": "Ocena kandidata",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Zavracanje kandidata",
+      "id": "Zavracanje kandidata",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Dolocanje termina",
+      "id": "Dolocanje termina",
+      "class": "Task"
+    },
+    {
+      "text": "Izvajanje razgovora",
+      "id": "Izvajanje razgovora",
+      "class": "Task"
+    },
+    {
+      "text": "Analiziranje razgovora",
+      "id": "Analiziranje razgovora",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Zavracanje kandidata",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "Sprejemanje kandidata",
+      "id": "Sprejemanje kandidata",
+      "class": "Task"
+    },
+    {
+      "text": "Vpisovanje kandidata v sistem\n",
+      "id": "Vpisovanje kandidata v sistem\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Dolocanje novega termina",
+      "id": "Dolocanje novega termina",
+      "class": "Task"
+    },
+    {
+      "text": "Ustvarjanje spremnega pisma in CVja",
+      "id": "Ustvarjanje spremnega pisma in CVja",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Ustvarjanje zahtevka po novem kadru",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ustvarjanje zahtevka po novem kadru",
+      "head": "Objavljanje razpisa za prosto delovno mesto",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Objavljanje razpisa za prosto delovno mesto",
+      "head": "Ustvarjanje spremnega pisma in CVja",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pregled vloge",
+      "head": "Ocena kandidata",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ocena kandidata",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Zavracanje kandidata",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Dolocanje termina",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Zavracanje kandidata",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Dolocanje termina",
+      "head": "Izvajanje razgovora",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Izvajanje razgovora",
+      "head": "Analiziranje razgovora",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Analiziranje razgovora",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Sprejemanje kandidata",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Dolocanje novega termina",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Sprejemanje kandidata",
+      "head": "Vpisovanje kandidata v sistem\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vpisovanje kandidata v sistem\n",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Dolocanje novega termina",
+      "head": "Izvajanje razgovora",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ustvarjanje spremnega pisma in CVja",
+      "head": "Pregled vloge",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Vodja oddelka",
+      "id": "Vodja oddelka",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Ustvarjanje zahtevka po novem kadru"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Kadrovska služba",
+      "id": "Kadrovska služba",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Objavljanje razpisa za prosto delovno mesto",
+        "Pregled vloge",
+        "Ocena kandidata",
+        "Exclusive_Databased_Gateway_1",
+        "Zavracanje kandidata",
+        "EndEvent_1",
+        "Dolocanje termina",
+        "Izvajanje razgovora",
+        "Analiziranje razgovora",
+        "Exclusive_Databased_Gateway_2",
+        "EndEvent_2",
+        "Task_1",
+        "Sprejemanje kandidata",
+        "Vpisovanje kandidata v sistem\n",
+        "EndEvent_3",
+        "Dolocanje novega termina"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "kandidat",
+      "id": "kandidat",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "Ustvarjanje spremnega pisma in CVja"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "text": "application for opening bank account received",
+      "id": "application for opening bank account received",
+      "class": "event"
+    },
+    {
+      "text": "evaluate application",
+      "id": "evaluate application",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Send notification",
+      "id": "Send notification",
+      "class": "task"
+    },
+    {
+      "text": "create\nbank account",
+      "id": "create\nbank account",
+      "class": "task"
+    },
+    {
+      "text": "send welcome pack",
+      "id": "send welcome pack",
+      "class": "task"
+    },
+    {
+      "text": "send bank card",
+      "id": "send bank card",
+      "class": "task"
+    },
+    {
+      "text": "send PIN number",
+      "id": "send PIN number",
+      "class": "task"
+    },
+    {
+      "text": "bank account created",
+      "id": "bank account created",
+      "class": "event"
+    },
+    {
+      "text": "Application rejected",
+      "id": "Application rejected",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "send PIN number",
+      "head": "bank account created",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send bank card",
+      "head": "send PIN number",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send welcome pack",
+      "head": "send bank card",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create\nbank account",
+      "head": "send welcome pack",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "application for opening bank account received",
+      "head": "evaluate application",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "evaluate application",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "Send notification",
+      "class": "sequenceFlow",
+      "label": "rejected"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "create\nbank account",
+      "class": "sequenceFlow",
+      "label": "approved"
+    },
+    {
+      "tail": "Send notification",
+      "head": "Application rejected",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

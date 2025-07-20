@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Patient arrives practice",
+      "id": "Patient arrives practice",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Patient goes home",
+      "id": "Patient goes home",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Diagnosis",
+      "id": "Diagnosis",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Therapy",
+      "id": "Therapy",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Handover to pharmacy",
+      "id": "Handover to pharmacy",
+      "class": "CollapsedSubprocess"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Patient arrives practice",
+      "head": "Diagnosis",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Diagnosis",
+      "head": "Therapy",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Therapy",
+      "head": "Handover to pharmacy",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Handover to pharmacy",
+      "head": "Patient goes home",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Patient Care General Practitioner",
+      "id": "Patient Care General Practitioner",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Patient arrives practice",
+        "Patient goes home",
+        "Diagnosis",
+        "Therapy",
+        "Handover to pharmacy"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

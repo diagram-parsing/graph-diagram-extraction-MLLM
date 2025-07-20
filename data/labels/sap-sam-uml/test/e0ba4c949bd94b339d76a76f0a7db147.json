@@ -1,0 +1,258 @@
+{
+  "nodes": [
+    {
+      "text": "PR1:Proveedor",
+      "attributes": [
+        "idProveedores: 1",
+        "nombre: Pullmantour",
+        "telefono: 954323266"
+      ],
+      "methods": null,
+      "id": "PR1:Proveedor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PR2:Proveedor",
+      "attributes": [
+        "idProveedores: 2",
+        "nombre: Balearía",
+        "telefono: 953323212"
+      ],
+      "methods": null,
+      "id": "PR2:Proveedor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PR3:Proveedor",
+      "attributes": [
+        "idProveedores: 3",
+        "nombre: Solole",
+        "telefono: 954199395"
+      ],
+      "methods": null,
+      "id": "PR3:Proveedor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "V1:Viaje",
+      "attributes": [
+        "idViaje: 1",
+        "nombre: Madrid/Barcelona",
+        "tipoViaje: Tour"
+      ],
+      "methods": null,
+      "id": "V1:Viaje",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "V2:Viaje",
+      "attributes": [
+        "idViaje: 2",
+        "nombre: Sevilla/Londres",
+        "tipoViaje: Vuelo"
+      ],
+      "methods": null,
+      "id": "V2:Viaje",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "C1:Catálogo",
+      "attributes": [
+        "idCatalogo: 1",
+        "catálogoRenovado: false",
+        "actualizaCatálogo: 23/11/2016"
+      ],
+      "methods": null,
+      "id": "C1:Catálogo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pe1:Pedido",
+      "attributes": [
+        "idPedido: 7732",
+        "estado: cancelado",
+        "fecha_reserva: 13/4/2016",
+        "ultimoDíaCancelación: 16/12/2016"
+      ],
+      "methods": null,
+      "id": "Pe1:Pedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pe2:Pedido",
+      "attributes": [
+        "idPedido: 2",
+        "estado: reservado",
+        "fecha_reserva: 20/3/2015",
+        "ultimoDíaCancelación: 13/10/2015"
+      ],
+      "methods": null,
+      "id": "Pe2:Pedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "LP1:LineaPedido",
+      "attributes": [
+        "CantidadPedida: 4",
+        "PrecioTotal: 130€"
+      ],
+      "methods": null,
+      "id": "LP1:LineaPedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "LP2:LineaPedido",
+      "attributes": [
+        "CantidadPedida: 2",
+        "PrecioTotal: 180€"
+      ],
+      "methods": null,
+      "id": "LP2:LineaPedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "C1:Cancelación",
+      "attributes": [
+        "idCancelación: 1",
+        "esFalloTecnico: false",
+        "seguro_activo: true"
+      ],
+      "methods": null,
+      "id": "C1:Cancelación",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "A1:Albaran",
+      "attributes": [
+        "idAlbaran: 1",
+        "fechaAlbaran: 5/6/2016",
+        "precio_total: 0€",
+        "PedidoCancelado: true",
+        "FacturaArchivada: true"
+      ],
+      "methods": null,
+      "id": "A1:Albaran",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "A2:Albaran",
+      "attributes": [
+        "idAlbaran: 2",
+        "fechaAlbaran: 5/6/2015",
+        "precio_total: 180€",
+        "PedidoCancelado: false",
+        "FacturaArchivada: true"
+      ],
+      "methods": null,
+      "id": "A2:Albaran",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "RN-1: No archivar facturas hasta no haber sido pagadas completamente por el cliente..",
+      "attributes": null,
+      "methods": null,
+      "id": "RN-1: No archivar facturas hasta no haber sido pagadas completamente por el cliente..",
+      "class": "Note"
+    },
+    {
+      "text": "RN-4: Renovación de catálogo.",
+      "attributes": null,
+      "methods": null,
+      "id": "RN-4: Renovación de catálogo.",
+      "class": "Note"
+    },
+    {
+      "text": "Pe2:Pedido",
+      "attributes": [
+        "idPedido: 2",
+        "estado: reservado",
+        "fecha_reserva: 20/3/2015",
+        "ultimoDíaCancelación: 13/10/2015"
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "V1:Viaje",
+      "head": "PR1:Proveedor",
+      "class": "UndirectedAssociation",
+      "label": "AdquiridoPor►"
+    },
+    {
+      "tail": "V2:Viaje",
+      "head": "PR2:Proveedor",
+      "class": "UndirectedAssociation",
+      "label": "AdquiridoPor►"
+    },
+    {
+      "tail": "V2:Viaje",
+      "head": "PR3:Proveedor",
+      "class": "UndirectedAssociation",
+      "label": "◄AdquiridoPor"
+    },
+    {
+      "tail": "V2:Viaje",
+      "head": "Pe2:Pedido",
+      "class": "UndirectedAssociation",
+      "label": "◄Referencia"
+    },
+    {
+      "tail": "C1:Catálogo",
+      "head": "V2:Viaje",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "C1:Catálogo",
+      "head": "V1:Viaje",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Pe1:Pedido",
+      "head": "V1:Viaje",
+      "class": "UndirectedAssociation",
+      "label": "◄Referencia"
+    },
+    {
+      "tail": "Pe1:Pedido",
+      "head": "A1:Albaran",
+      "class": "UndirectedAssociation",
+      "label": "Genera►"
+    },
+    {
+      "tail": "Pe2:Pedido",
+      "head": "A2:Albaran",
+      "class": "UndirectedAssociation",
+      "label": "Genera►"
+    },
+    {
+      "tail": "C1:Cancelación",
+      "head": "Pe1:Pedido",
+      "class": "UndirectedAssociation",
+      "label": "◄QuiereLa"
+    },
+    {
+      "tail": "RN-1: No archivar facturas hasta no haber sido pagadas completamente por el cliente..",
+      "head": "A2:Albaran",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "RN-1: No archivar facturas hasta no haber sido pagadas completamente por el cliente..",
+      "head": "A1:Albaran",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "RN-4: Renovación de catálogo.",
+      "head": "C1:Catálogo",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

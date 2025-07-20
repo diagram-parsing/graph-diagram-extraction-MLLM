@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Check for supliers\n",
+      "id": "Check for supliers\n",
+      "class": "Task"
+    },
+    {
+      "text": "Any suplier ? \n",
+      "id": "Any suplier ? \n",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "No supplier found\n",
+      "id": "No supplier found\n",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Find optimal quote\n",
+      "id": "Find optimal quote\n",
+      "class": "Task"
+    },
+    {
+      "text": "FIQ Fullfiled\n",
+      "id": "FIQ Fullfiled\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Analyse quote\n",
+      "id": "Analyse quote\n",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "IntermediateTimerEvent_1",
+      "class": "IntermediateTimerEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Check for supliers\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check for supliers\n",
+      "head": "Any suplier ? \n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Any suplier ? \n",
+      "head": "No supplier found\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Any suplier ? \n",
+      "head": "Analyse quote\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Find optimal quote\n",
+      "head": "FIQ Fullfiled\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Find optimal quote\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Analyse quote\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

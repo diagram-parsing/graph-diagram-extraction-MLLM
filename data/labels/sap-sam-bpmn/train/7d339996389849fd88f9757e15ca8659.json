@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "text": "Vstop v garderobo",
+      "id": "Vstop v garderobo",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Oddaja oblačil",
+      "id": "Oddaja oblačil",
+      "class": "Task"
+    },
+    {
+      "text": "Prejem številke garderobe",
+      "id": "Prejem številke garderobe",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Sprejem oblačil",
+      "id": "Sprejem oblačil",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Shranjevanje oblačil",
+      "id": "Shranjevanje oblačil",
+      "class": "Task"
+    },
+    {
+      "text": "Oddaja številke garderobe",
+      "id": "Oddaja številke garderobe",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Vstop v garderobo",
+      "head": "Oddaja oblačil",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Oddaja oblačil",
+      "head": "Sprejem oblačil",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Oddaja oblačil",
+      "head": "Prejem številke garderobe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prejem številke garderobe",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Sprejem oblačil",
+      "head": "Shranjevanje oblačil",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Shranjevanje oblačil",
+      "head": "Oddaja številke garderobe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Oddaja številke garderobe",
+      "head": "Prejem številke garderobe",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Oddaja številke garderobe",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Študent",
+      "id": "Študent",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Vstop v garderobo",
+        "Oddaja oblačil",
+        "Prejem številke garderobe",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Knjižnica",
+      "id": "Knjižnica",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Sprejem oblačil",
+        "Shranjevanje oblačil",
+        "Oddaja številke garderobe",
+        "EndEvent_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

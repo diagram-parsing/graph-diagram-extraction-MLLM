@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Contains issued date?",
+      "id": "Contains issued date?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Contains patient name and address?",
+      "id": "Contains patient name and address?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Contains name, strength of drug? ",
+      "id": "Contains name, strength of drug? ",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Contain number of repeats?",
+      "id": "Contain number of repeats?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Correct prescriber's signature? ",
+      "id": "Correct prescriber's signature? ",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_4",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_5",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Contains issued date?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Contains issued date?",
+      "head": "Contains patient name and address?",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Contains issued date?",
+      "head": "EndEvent_4",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Contains patient name and address?",
+      "head": "Contains name, strength of drug? ",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Contains patient name and address?",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Contains name, strength of drug? ",
+      "head": "Contain number of repeats?",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Contains name, strength of drug? ",
+      "head": "EndEvent_5",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Contain number of repeats?",
+      "head": "Correct prescriber's signature? ",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Contain number of repeats?",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Correct prescriber's signature? ",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

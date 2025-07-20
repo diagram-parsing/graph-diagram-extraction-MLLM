@@ -1,0 +1,300 @@
+{
+  "nodes": [
+    {
+      "text": "Application Reccieved\n",
+      "id": "Application Reccieved\n",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Check Application",
+      "id": "Check Application",
+      "class": "Task"
+    },
+    {
+      "text": "Reject Applicant\n",
+      "id": "Reject Applicant\n",
+      "class": "Task"
+    },
+    {
+      "text": "Prepare Contract",
+      "id": "Prepare Contract",
+      "class": "Task"
+    },
+    {
+      "text": "Binding Period Exceeded",
+      "id": "Binding Period Exceeded",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Review Application\n",
+      "id": "Review Application\n",
+      "class": "Task"
+    },
+    {
+      "text": "Suitable Applicant?",
+      "id": "Suitable Applicant?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Conduct Interview\n",
+      "id": "Conduct Interview\n",
+      "class": "Task"
+    },
+    {
+      "text": "Suitable Applicant?",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Applicant Rejected",
+      "id": "Applicant Rejected",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Sign Contract",
+      "id": "Sign Contract",
+      "class": "Task"
+    },
+    {
+      "text": "Contract Signed",
+      "id": "Contract Signed",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Binding Period-2 Wochen",
+      "id": "Binding Period-2 Wochen",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Communicate with Applicant",
+      "id": "Communicate with Applicant",
+      "class": "Task"
+    },
+    {
+      "text": "Give more Time?",
+      "id": "Give more Time?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Application Reccieved\n",
+      "head": "Check Application",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check Application",
+      "head": "Review Application\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reject Applicant\n",
+      "head": "Applicant Rejected",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prepare Contract",
+      "head": "Binding Period Exceeded",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Binding Period Exceeded",
+      "head": "Binding Period-2 Wochen",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Binding Period Exceeded",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Review Application\n",
+      "head": "Suitable Applicant?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Suitable Applicant?",
+      "head": "Reject Applicant\n",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Suitable Applicant?",
+      "head": "Conduct Interview\n",
+      "class": "SequenceFlow",
+      "label": "Yes\n\n"
+    },
+    {
+      "tail": "Conduct Interview\n",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Reject Applicant\n",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Prepare Contract",
+      "class": "SequenceFlow",
+      "label": "Yes\n"
+    },
+    {
+      "tail": "Sign Contract",
+      "head": "Contract Signed",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Binding Period-2 Wochen",
+      "head": "Communicate with Applicant",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Communicate with Applicant",
+      "head": "Give more Time?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Give more Time?",
+      "head": "Reject Applicant\n",
+      "class": "SequenceFlow",
+      "label": "No\n"
+    },
+    {
+      "tail": "Give more Time?",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Sign Contract",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "HR Recruiter",
+      "id": "HR Recruiter",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Application Reccieved\n",
+        "Check Application",
+        "Reject Applicant\n",
+        "Prepare Contract",
+        "Binding Period Exceeded"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Recruiting Responsible",
+      "id": "Recruiting Responsible",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Review Application\n",
+        "Suitable Applicant?"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Interviewer",
+      "id": "Interviewer",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "Conduct Interview\n",
+        "Exclusive_Databased_Gateway_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Contact Person",
+      "id": "Contact Person",
+      "nodes": [
+        "Lane_4"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_4",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "Applicant",
+      "id": "Applicant",
+      "nodes": [
+        "Lane_5"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_5",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "Recruiting Process",
+      "id": "Recruiting Process",
+      "nodes": [
+        "Lane_6"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_6",
+      "nodes": [
+        "Applicant Rejected",
+        "Sign Contract",
+        "Contract Signed",
+        "Binding Period-2 Wochen",
+        "Communicate with Applicant",
+        "Give more Time?",
+        "Exclusive_Databased_Gateway_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

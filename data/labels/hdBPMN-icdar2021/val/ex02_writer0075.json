@@ -1,0 +1,191 @@
+{
+  "nodes": [
+    {
+      "text": "register claim to cutomer",
+      "id": "register claim to cutomer",
+      "class": "task"
+    },
+    {
+      "text": "examine claim",
+      "id": "examine claim",
+      "class": "task"
+    },
+    {
+      "text": "write settlement recommendation",
+      "id": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "text": "check claim recommendation of customer",
+      "id": "check claim recommendation of customer",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "claim info",
+      "id": "claim info",
+      "class": "dataObject"
+    },
+    {
+      "text": "claims DB",
+      "id": "claims DB",
+      "class": "dataStore"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "claim received",
+      "id": "claim received",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "Recommendation info",
+      "id": "Recommendation info",
+      "class": "dataObject"
+    },
+    {
+      "text": "claim proceeded",
+      "id": "claim proceeded",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "register claim to cutomer",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "examine claim",
+      "class": "sequenceFlow",
+      "label": "recommendation is not okay"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "claim proceeded",
+      "class": "sequenceFlow",
+      "label": "recommendation is okay"
+    },
+    {
+      "tail": "check claim recommendation of customer",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write settlement recommendation",
+      "head": "check claim recommendation of customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "write settlement recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "examine claim",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "examine claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "register claim to cutomer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim received",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register claim to cutomer",
+      "head": "claims DB",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "examine claim",
+      "head": "claim info",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "claim info",
+      "head": "write settlement recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "check claim recommendation of customer",
+      "head": "Recommendation info",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Insurer",
+      "nodes": [
+        "senior claim officer",
+        "claim officer",
+        "ERP system"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "senior claim officer",
+      "nodes": [
+        "check claim recommendation of customer",
+        "exclusiveGateway_1",
+        "Recommendation info",
+        "claim proceeded"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "claim officer",
+      "nodes": [
+        "examine claim",
+        "write settlement recommendation",
+        "claim info",
+        "parallelGateway_2"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "ERP system",
+      "nodes": [
+        "register claim to cutomer",
+        "claims DB",
+        "parallelGateway_1",
+        "claim received"
+      ],
+      "class": "lane"
+    }
+  ]
+}

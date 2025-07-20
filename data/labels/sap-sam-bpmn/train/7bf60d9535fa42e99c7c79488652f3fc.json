@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "text": "A DSI Separa \nas Atividades mais Simples",
+      "id": "A DSI Separa \nas Atividades mais Simples",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Repassa\nas Atividades para a G&P",
+      "id": "Repassa\nas Atividades para a G&P",
+      "class": "Task"
+    },
+    {
+      "text": "A G&P Executa as Customizações Determinadas pela DSI",
+      "id": "A G&P Executa as Customizações Determinadas pela DSI",
+      "class": "Task"
+    },
+    {
+      "text": "Customização Realizada",
+      "id": "Customização Realizada",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "A DSI Separa \nas Atividades mais Simples",
+      "head": "Repassa\nas Atividades para a G&P",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Repassa\nas Atividades para a G&P",
+      "head": "A G&P Executa as Customizações Determinadas pela DSI",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A G&P Executa as Customizações Determinadas pela DSI",
+      "head": "Customização Realizada",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Työstä eri maiden SQL-kannat.",
+      "id": "Työstä eri maiden SQL-kannat.",
+      "class": "Task"
+    },
+    {
+      "text": "Toimita tiedot maakohtaisiin toimistoihin.",
+      "id": "Toimita tiedot maakohtaisiin toimistoihin.",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_2",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Vastaanota tiedot.",
+      "id": "Vastaanota tiedot.",
+      "class": "Task"
+    },
+    {
+      "text": "Analysoi tiedot Excelin avulla.",
+      "id": "Analysoi tiedot Excelin avulla.",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Työstä eri maiden SQL-kannat.",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Työstä eri maiden SQL-kannat.",
+      "head": "Toimita tiedot maakohtaisiin toimistoihin.",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Toimita tiedot maakohtaisiin toimistoihin.",
+      "head": "Vastaanota tiedot.",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "Vastaanota tiedot.",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Vastaanota tiedot.",
+      "head": "Analysoi tiedot Excelin avulla.",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Analysoi tiedot Excelin avulla.",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Digital Dilemma Oyj",
+      "id": "Digital Dilemma Oyj",
+      "nodes": [
+        "Palvelukeskus",
+        "Maakohtainen toimisto"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Palvelukeskus",
+      "id": "Palvelukeskus",
+      "nodes": [
+        "StartEvent_1",
+        "Työstä eri maiden SQL-kannat.",
+        "Toimita tiedot maakohtaisiin toimistoihin."
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Maakohtainen toimisto",
+      "id": "Maakohtainen toimisto",
+      "nodes": [
+        "StartEvent_2",
+        "Vastaanota tiedot.",
+        "Analysoi tiedot Excelin avulla.",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

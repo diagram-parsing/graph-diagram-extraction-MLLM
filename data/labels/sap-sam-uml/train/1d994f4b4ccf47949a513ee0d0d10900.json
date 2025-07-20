@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "text": "CITTADINO",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "DataNascita: string",
+        "luogoNascita: string",
+        "CF: string",
+        "via: string",
+        "numero: string",
+        "DocumentoIdentità: string"
+      ],
+      "methods": null,
+      "id": "CITTADINO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "VEICOLO",
+      "attributes": [
+        "Targa: string",
+        "modello: string",
+        "marca: string ",
+        "omologazione: string",
+        "alimentazione: string",
+        "TipoProprietà: string"
+      ],
+      "methods": null,
+      "id": "VEICOLO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PERMESSO ",
+      "attributes": [
+        "scadenza: date"
+      ],
+      "methods": null,
+      "id": "PERMESSO ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ZONA",
+      "attributes": [
+        "nome: string",
+        "costo: double",
+        ": "
+      ],
+      "methods": null,
+      "id": "ZONA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TRATTO",
+      "attributes": [
+        "via: string",
+        "N_Inizio: string",
+        "N_fine: string"
+      ],
+      "methods": null,
+      "id": "TRATTO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "UN VEICOLO PUO' AVERE ZERO PERMESSI, SE E' NUOVO O PIU' PERMESSI(OGNI VOLTA CHE RINNOVO) MENTRE IL PERMESSO E' RELATIVO AD UN SOLO VEICOLO ",
+      "attributes": null,
+      "methods": null,
+      "id": "UN VEICOLO PUO' AVERE ZERO PERMESSI, SE E' NUOVO O PIU' PERMESSI(OGNI VOLTA CHE RINNOVO) MENTRE IL PERMESSO E' RELATIVO AD UN SOLO VEICOLO ",
+      "class": "Note"
+    },
+    {
+      "text": "il permesso è relativo ad una zona ",
+      "attributes": null,
+      "methods": null,
+      "id": "il permesso è relativo ad una zona ",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "CITTADINO",
+      "head": "VEICOLO",
+      "class": "UndirectedAssociation",
+      "label": "POSSIEDE"
+    },
+    {
+      "tail": "CITTADINO",
+      "head": "ZONA",
+      "class": "UndirectedAssociation",
+      "label": "RISIEDE IN "
+    },
+    {
+      "tail": "VEICOLO",
+      "head": "PERMESSO ",
+      "class": "UndirectedAssociation",
+      "label": "PER "
+    },
+    {
+      "tail": "VEICOLO",
+      "head": "UN VEICOLO PUO' AVERE ZERO PERMESSI, SE E' NUOVO O PIU' PERMESSI(OGNI VOLTA CHE RINNOVO) MENTRE IL PERMESSO E' RELATIVO AD UN SOLO VEICOLO ",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "PERMESSO ",
+      "head": "ZONA",
+      "class": "UndirectedAssociation",
+      "label": "VALIDO PER "
+    },
+    {
+      "tail": "ZONA",
+      "head": "TRATTO",
+      "class": "UndirectedAssociation",
+      "label": "INCLUDE"
+    },
+    {
+      "tail": "il permesso è relativo ad una zona ",
+      "head": "PERMESSO ",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

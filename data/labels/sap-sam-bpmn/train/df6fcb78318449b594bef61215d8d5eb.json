@@ -1,0 +1,279 @@
+{
+  "nodes": [
+    {
+      "text": "Request Created",
+      "id": "Request Created",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Create completed form ",
+      "id": "Create completed form ",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_1",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Receive notification of completness from Tehnician",
+      "id": "Receive notification of completness from Tehnician",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_2",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "Request form ",
+      "id": "Request form ",
+      "class": "DataObject"
+    },
+    {
+      "text": "Approved requested receieved",
+      "id": "Approved requested receieved",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Action towards \nrequest",
+      "id": "Action towards \nrequest",
+      "class": "Task"
+    },
+    {
+      "text": "Send feedback",
+      "id": "Send feedback",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_3",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "Request form ",
+      "id": "DataObject_1",
+      "class": "DataObject"
+    },
+    {
+      "text": "Request form revieved",
+      "id": "Request form revieved",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_1",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "End",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndMessageEvent_1",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Find an approval ",
+      "id": "Find an approval ",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_4",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "Request form",
+      "id": "Request form",
+      "class": "DataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Request Created",
+      "head": "Create completed form ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Create completed form ",
+      "head": "IntermediateMessageEventThrowing_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Create completed form ",
+      "head": "Request form ",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Request form revieved",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Receive notification of completness from Tehnician",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive notification of completness from Tehnician",
+      "head": "End",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive notification of completness from Tehnician",
+      "head": "TextAnnotation_1",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "TextAnnotation_2",
+      "head": "Receive notification of completness from Tehnician",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "Approved requested receieved",
+      "head": "Action towards \nrequest",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Action towards \nrequest",
+      "head": "Send feedback",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Action towards \nrequest",
+      "head": "TextAnnotation_3",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "Action towards \nrequest",
+      "head": "DataObject_1",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Send feedback",
+      "head": "Receive notification of completness from Tehnician",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Request form revieved",
+      "head": "Find an approval ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "EndMessageEvent_1",
+      "class": "SequenceFlow",
+      "label": "Approve request"
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": "Reject request"
+    },
+    {
+      "tail": "EndMessageEvent_1",
+      "head": "Approved requested receieved",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Find an approval ",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Find an approval ",
+      "head": "TextAnnotation_4",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "Find an approval ",
+      "head": "Request form",
+      "class": "Association_Unidirectional",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "TG-Approving flow on OIC form",
+      "id": "TG-Approving flow on OIC form",
+      "nodes": [
+        "Requester (Who and what request)",
+        "Technician",
+        "Approve"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Requester (Who and what request)",
+      "id": "Requester (Who and what request)",
+      "nodes": [
+        "Request Created",
+        "Create completed form ",
+        "IntermediateMessageEventThrowing_1",
+        "End",
+        "Receive notification of completness from Tehnician",
+        "TextAnnotation_1",
+        "TextAnnotation_2",
+        "Request form "
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Technician",
+      "id": "Technician",
+      "nodes": [
+        "Approved requested receieved",
+        "Action towards \nrequest",
+        "Send feedback",
+        "TextAnnotation_3",
+        "DataObject_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Approve ",
+      "id": "Approve",
+      "nodes": [
+        "Request form revieved",
+        "OR_Gateway_1",
+        "EndEvent_1",
+        "EndMessageEvent_1",
+        "Find an approval ",
+        "TextAnnotation_4",
+        "Request form"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

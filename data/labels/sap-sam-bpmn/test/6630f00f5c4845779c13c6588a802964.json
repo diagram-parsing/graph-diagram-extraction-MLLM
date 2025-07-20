@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Festivali \nkorraldamise algus",
+      "id": "Festivali \nkorraldamise algus",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Info kodulehele ja muudesse kanalitesse ",
+      "id": "Info kodulehele ja muudesse kanalitesse ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Rohkem kampaaniaid, teavitust",
+      "id": "Rohkem kampaaniaid, teavitust",
+      "class": "Task"
+    },
+    {
+      "text": "Piletihindade tõus vastavalt planeeritule\n",
+      "id": "Piletihindade tõus vastavalt planeeritule\n",
+      "class": "Task"
+    },
+    {
+      "text": "Müügi-\nkampaaniate läbimõtlemine",
+      "id": "Müügi-\nkampaaniate läbimõtlemine",
+      "class": "Task"
+    },
+    {
+      "text": "Piletid müüki!",
+      "id": "Piletid müüki!",
+      "class": "Task"
+    },
+    {
+      "text": "Festivali alal piletimüügi korraldamine",
+      "id": "Festivali alal piletimüügi korraldamine",
+      "class": "Task"
+    },
+    {
+      "text": "Piletid müügis",
+      "id": "Piletid müügis",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Kontrollida müügiseisu järjepidevalt",
+      "id": "Kontrollida müügiseisu järjepidevalt",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Festivali \nkorraldamise algus",
+      "head": "Müügi-\nkampaaniate läbimõtlemine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Info kodulehele ja muudesse kanalitesse ",
+      "head": "Kontrollida müügiseisu järjepidevalt",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Rohkem kampaaniaid, teavitust",
+      "class": "SequenceFlow",
+      "label": "Ei"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Piletihindade tõus vastavalt planeeritule\n",
+      "class": "SequenceFlow",
+      "label": "Jah\n"
+    },
+    {
+      "tail": "Rohkem kampaaniaid, teavitust",
+      "head": "Piletihindade tõus vastavalt planeeritule\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Piletihindade tõus vastavalt planeeritule\n",
+      "head": "Festivali alal piletimüügi korraldamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Müügi-\nkampaaniate läbimõtlemine",
+      "head": "Piletid müüki!",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Piletid müüki!",
+      "head": "Info kodulehele ja muudesse kanalitesse ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Festivali alal piletimüügi korraldamine",
+      "head": "Piletid müügis",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kontrollida müügiseisu järjepidevalt",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "Piletite müük \nläheb hästi?"
+    }
+  ],
+  "groups": []
+}

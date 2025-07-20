@@ -1,0 +1,209 @@
+{
+  "nodes": [
+    {
+      "text": "Aproba vanzarea",
+      "id": "Aproba vanzarea",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Verifica datele",
+      "id": "Verifica datele",
+      "class": "Task"
+    },
+    {
+      "text": "Date valide?",
+      "id": "Date valide?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Anunta clientul",
+      "id": "Anunta clientul",
+      "class": "Task"
+    },
+    {
+      "text": "Verifica accesibilitate",
+      "id": "Verifica accesibilitate",
+      "class": "Task"
+    },
+    {
+      "text": "Exista accesibilitate?",
+      "id": "Exista accesibilitate?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Calculeaza pretul",
+      "id": "Calculeaza pretul",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Anunta clientul",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Introduce datele",
+      "id": "Introduce datele",
+      "class": "Task"
+    },
+    {
+      "text": "Reintroduce date?",
+      "id": "Reintroduce date?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Aproba vanzarea",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica datele",
+      "head": "Date valide?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Date valide?",
+      "head": "Verifica accesibilitate",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Date valide?",
+      "head": "Anunta clientul",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica accesibilitate",
+      "head": "Exista accesibilitate?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exista accesibilitate?",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exista accesibilitate?",
+      "head": "Calculeaza pretul",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Calculeaza pretul",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": "Aproba vanzarea",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Introduce datele",
+      "head": "Verifica datele",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reintroduce date?",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reintroduce date?",
+      "head": "Verifica datele",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Angajat",
+      "id": "Angajat",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Aproba vanzarea",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Sistem",
+      "id": "Sistem",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Verifica datele",
+        "Date valide?",
+        "Anunta clientul",
+        "Verifica accesibilitate",
+        "Exista accesibilitate?",
+        "Calculeaza pretul",
+        "EndEvent_2",
+        "Task_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Client",
+      "id": "Client",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "StartEvent_1",
+        "Introduce datele",
+        "Reintroduce date?",
+        "EndEvent_3"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

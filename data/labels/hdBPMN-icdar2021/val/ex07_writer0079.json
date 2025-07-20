@@ -1,0 +1,195 @@
+{
+  "nodes": [
+    {
+      "text": "evaluation required",
+      "id": "evaluation required",
+      "class": "event"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "forward review",
+      "id": "forward review",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "request reviewed",
+      "id": "request reviewed",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "pay expenses",
+      "id": "pay expenses",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": "file results",
+      "id": "file results",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "event_2",
+      "class": "event"
+    },
+    {
+      "text": "interview patients",
+      "id": "interview patients",
+      "class": "subProcess"
+    },
+    {
+      "text": "review forwarded",
+      "id": "review forwarded",
+      "class": "messageEvent"
+    },
+    {
+      "text": "review received",
+      "id": "review received",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "create report",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file results",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "review forwarded",
+      "head": "file results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "review forwarded",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pay expenses",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "pay expenses",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward review",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "review received",
+      "head": "forward review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "request reviewed",
+      "head": "review received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "request reviewed",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "interview patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "evaluation required",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Expert",
+      "head": "review received",
+      "class": "messageFlow",
+      "label": "review"
+    },
+    {
+      "tail": "request reviewed",
+      "head": "Expert",
+      "class": "messageFlow",
+      "label": "request for review"
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "nodes": [
+        "managing director",
+        "QA specialist"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "managing director",
+      "nodes": [
+        "forward review",
+        "request reviewed",
+        "parallelGateway_2",
+        "pay expenses",
+        "event_1",
+        "review received"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "QA specialist",
+      "nodes": [
+        "evaluation required",
+        "create report",
+        "parallelGateway_1",
+        "file results",
+        "event_2",
+        "interview patients",
+        "review forwarded"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

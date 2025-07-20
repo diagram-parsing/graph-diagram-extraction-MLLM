@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "text": "PIATTO\n",
+      "attributes": [
+        "Nome: string",
+        "immagine: string",
+        "kcal: string",
+        "tempo di prep: time",
+        "prezzo: currency",
+        "descrizione: string"
+      ],
+      "methods": null,
+      "id": "PIATTO\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CLIENTE",
+      "attributes": [
+        "Nome: string",
+        "Numero di tel: string",
+        "indirizzo: string",
+        "cognome: string",
+        "email: string"
+      ],
+      "methods": null,
+      "id": "CLIENTE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ORDINE",
+      "attributes": [
+        "tempo di consegna: time",
+        "pagato: boolean",
+        "pagamentoabuonfine: boolean",
+        "incarico: boolean",
+        "inconsegna: boolean",
+        "concluso: boolean"
+      ],
+      "methods": null,
+      "id": "ORDINE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "INGREDIENTE\n",
+      "attributes": [
+        "Nome: string",
+        "Tipo: string"
+      ],
+      "methods": null,
+      "id": "INGREDIENTE\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ALLERGENE\n",
+      "attributes": [
+        "Nome: string",
+        "Categoria: string"
+      ],
+      "methods": null,
+      "id": "ALLERGENE\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Comprende\n",
+      "attributes": [
+        "Quantità: int"
+      ],
+      "methods": null,
+      "id": "Comprende\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "PIATTO\n",
+      "head": "ORDINE",
+      "class": "UndirectedAssociation",
+      "label": "comprende"
+    },
+    {
+      "tail": "ORDINE",
+      "head": "CLIENTE",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "INGREDIENTE\n",
+      "head": "PIATTO\n",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    },
+    {
+      "tail": "ALLERGENE\n",
+      "head": "PIATTO\n",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    }
+  ],
+  "groups": []
+}

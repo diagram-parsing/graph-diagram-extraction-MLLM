@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "text": "Asiakas",
+      "attributes": [
+        "Nimi: ",
+        "Osoite: "
+      ],
+      "methods": [
+        "haeKirja()",
+        "maksaKirja()",
+        "teeTilaus()",
+        "peruutaTilaus()"
+      ],
+      "id": "Asiakas",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kirjatietokanta",
+      "attributes": [
+        "Kirjan nimi: ",
+        "Kirjoittaja: ",
+        "Määrä: "
+      ],
+      "methods": [
+        "päivitys()"
+      ],
+      "id": "Kirjatietokanta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Nettisivu",
+      "attributes": [
+        "URL-osoite: ",
+        "Graafinen käyttöliittymä: "
+      ],
+      "methods": [
+        "ylläpidä()"
+      ],
+      "id": "Nettisivu",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tilaus",
+      "attributes": [
+        "Kuljetusaika: ",
+        "Hinta: "
+      ],
+      "methods": [
+        "teeTilaus()",
+        "peruutaTilaus()",
+        "pyydäMaksu()",
+        "lähetäKirja()"
+      ],
+      "id": "Tilaus",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Asiakkaan Tili",
+      "attributes": [
+        "Nimi: ",
+        "Käyttäjätunnus: ",
+        "Osoite: ",
+        "Puhelinnumero: "
+      ],
+      "methods": [
+        "maksaKirja()"
+      ],
+      "id": "Asiakkaan Tili",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Asiakas",
+      "head": "Asiakkaan Tili",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kirjatietokanta",
+      "head": "Nettisivu",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kirjatietokanta",
+      "head": "Asiakas",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Nettisivu",
+      "head": "Tilaus",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Tilaus",
+      "head": "Asiakas",
+      "class": "DirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

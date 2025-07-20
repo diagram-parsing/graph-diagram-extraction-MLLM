@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "text": "elezione",
+      "attributes": [
+        "data: Date",
+        "ora: Time",
+        "numero max preferenze: int",
+        "numero eletti: int",
+        "quorum: int",
+        "dipartimento attivo: String",
+        "fascia attivo: String",
+        "dipartimento passivo: String",
+        "dipartimento passivo: String"
+      ],
+      "methods": null,
+      "id": "elezione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "elettorato attivo",
+      "attributes": [
+        "OTP: String",
+        "votato: boolean"
+      ],
+      "methods": null,
+      "id": "elettorato attivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "elettorato passivo",
+      "attributes": [
+        "voti ricevuti: int",
+        "numero voti: int",
+        "eletto: boolean"
+      ],
+      "methods": null,
+      "id": "elettorato passivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "quorum= vale 0 nel caso di elezioni che non devono avere il quorum",
+      "attributes": null,
+      "methods": null,
+      "id": "quorum= vale 0 nel caso di elezioni che non devono avere il quorum",
+      "class": "Note"
+    },
+    {
+      "text": "dipendende",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "e-mail: String",
+        "telefono: String",
+        "CF: String",
+        "dipartimeto: String",
+        "fascia: int"
+      ],
+      "methods": null,
+      "id": "dipendende",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "si ipotizza che per ogni criterio sia stabilito un dipartimento (attivo/passivo) e una fascia di livello per l'attivo e l'attivo",
+      "attributes": null,
+      "methods": null,
+      "id": "si ipotizza che per ogni criterio sia stabilito un dipartimento (attivo/passivo) e una fascia di livello per l'attivo e l'attivo",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "elezione",
+      "head": "quorum= vale 0 nel caso di elezioni che non devono avere il quorum",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "elezione",
+      "head": "si ipotizza che per ogni criterio sia stabilito un dipartimento (attivo/passivo) e una fascia di livello per l'attivo e l'attivo",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "elezione",
+      "head": "dipendende",
+      "class": "UndirectedAssociation",
+      "label": "elettorato passivo"
+    },
+    {
+      "tail": "dipendende",
+      "head": "elezione",
+      "class": "UndirectedAssociation",
+      "label": "elettorato attivo"
+    }
+  ],
+  "groups": []
+}

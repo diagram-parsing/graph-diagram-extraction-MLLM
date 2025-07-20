@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "text": "Receive TurnItIn\nReport",
+      "id": "Receive TurnItIn\nReport",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Discuss Assignment",
+      "id": "Discuss Assignment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Receive TurnItIn\nReport",
+      "head": "Discuss Assignment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Discuss Assignment",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Disciplinary Committee",
+      "id": "Disciplinary Committee",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Receive TurnItIn\nReport",
+        "Discuss Assignment",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

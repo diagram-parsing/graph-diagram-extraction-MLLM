@@ -1,0 +1,183 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Receive Order",
+      "id": "Receive Order",
+      "class": "Task"
+    },
+    {
+      "text": "Ship to Amsterdam warehouse",
+      "id": "Ship to Amsterdam warehouse",
+      "class": "Task"
+    },
+    {
+      "text": "Ship to Hamburg warehouse",
+      "id": "Ship to Hamburg warehouse",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_1",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_2",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "Register Products",
+      "id": "Register Products",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Check Products Location",
+      "id": "Check Products Location",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_2",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Send questionnaire to claimant",
+      "id": "Send questionnaire to claimant",
+      "class": "Task"
+    },
+    {
+      "text": "Send reminder",
+      "id": "Send reminder",
+      "class": "Task"
+    },
+    {
+      "text": "Wait for response from claimant",
+      "id": "Wait for response from claimant",
+      "class": "Task"
+    },
+    {
+      "text": "After 5 days",
+      "id": "After 5 days",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Questionnaire completed?",
+      "id": "Questionnaire completed?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Receive Order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive Order",
+      "head": "Check Products Location",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ship to Amsterdam warehouse",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ship to Hamburg warehouse",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Ship to Amsterdam warehouse",
+      "class": "SequenceFlow",
+      "label": "When the order contains Amsterdam products"
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Ship to Hamburg warehouse",
+      "class": "SequenceFlow",
+      "label": "When the order contains Hamburg products"
+    },
+    {
+      "tail": "OR_Gateway_2",
+      "head": "Register Products",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Register Products",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Check Products Location",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "Send questionnaire to claimant",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send questionnaire to claimant",
+      "head": "Wait for response from claimant",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send reminder",
+      "head": "Wait for response from claimant",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Wait for response from claimant",
+      "head": "After 5 days",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "After 5 days",
+      "head": "Questionnaire completed?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Questionnaire completed?",
+      "head": "Send reminder",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Questionnaire completed?",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

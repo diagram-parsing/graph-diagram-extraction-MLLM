@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "text": "Percorso",
+      "attributes": [
+        "etichetta: String",
+        "descrizione: String",
+        "tracciaGps: String",
+        "livelloDifficolta: int",
+        "durataMin: String",
+        "durataMax: String"
+      ],
+      "methods": null,
+      "id": "Percorso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rifugio",
+      "attributes": [
+        "codice: String",
+        "nome: String",
+        "longitudine: double",
+        "latitudine: double",
+        "email: string",
+        "numTelefono: string",
+        "parcheggio: boolean "
+      ],
+      "methods": null,
+      "id": "Rifugio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Escursionista",
+      "attributes": [
+        "cf: string",
+        "nome: string",
+        "cognome: string",
+        "dataNascita: date",
+        "email: string",
+        "numTelefono: string"
+      ],
+      "methods": null,
+      "id": "Escursionista",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Escursione",
+      "attributes": [
+        "numPartecipanti: int",
+        "fineEscursione: boolean",
+        "segnalaRitardo: String",
+        "partenza: time"
+      ],
+      "methods": null,
+      "id": "Escursione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Parcheggio",
+      "attributes": [
+        "targa: String"
+      ],
+      "methods": null,
+      "id": "Parcheggio",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Percorso",
+      "head": "Rifugio",
+      "class": "UndirectedAssociation",
+      "label": "arriva a "
+    },
+    {
+      "tail": "Percorso",
+      "head": "Rifugio",
+      "class": "UndirectedAssociation",
+      "label": "parte da"
+    },
+    {
+      "tail": "Escursionista",
+      "head": "Escursione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Escursione",
+      "head": "Parcheggio",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Escursione",
+      "head": "Percorso",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

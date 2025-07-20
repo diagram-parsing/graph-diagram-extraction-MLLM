@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "text": "Gast kommt an",
+      "id": "Gast kommt an",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Reservierung überprüfen",
+      "id": "Reservierung überprüfen",
+      "class": "Task"
+    },
+    {
+      "text": "Rücksprachen halten",
+      "id": "Rücksprachen halten",
+      "class": "Task"
+    },
+    {
+      "text": "Schlüssel/ Karte aushändigen",
+      "id": "Schlüssel/ Karte aushändigen",
+      "class": "Task"
+    },
+    {
+      "text": "Gast begrüßen",
+      "id": "Gast begrüßen",
+      "class": "Task"
+    },
+    {
+      "text": "Gast informieren (Zimmernr., Service, Hausordnung)",
+      "id": "Gast informieren (Zimmernr., Service, Hausordnung)",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Rückfragen entgegennehmen",
+      "id": "Rückfragen entgegennehmen",
+      "class": "Task"
+    },
+    {
+      "text": "angenehmnen Aufenthalt wünschen",
+      "id": "angenehmnen Aufenthalt wünschen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Fragen beantworten",
+      "id": "Fragen beantworten",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Gast kommt an",
+      "head": "Gast begrüßen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reservierung überprüfen",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Rücksprachen halten",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Schlüssel/ Karte aushändigen",
+      "head": "Gast informieren (Zimmernr., Service, Hausordnung)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Gast begrüßen",
+      "head": "Reservierung überprüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Gast informieren (Zimmernr., Service, Hausordnung)",
+      "head": "Rückfragen entgegennehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "keine Fragen \nvorhanden "
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Fragen beantworten",
+      "class": "SequenceFlow",
+      "label": "Fragen \nvorhanden"
+    },
+    {
+      "tail": "Rückfragen entgegennehmen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "angenehmnen Aufenthalt wünschen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Fragen beantworten",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Schlüssel/ Karte aushändigen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Rücksprachen halten",
+      "class": "SequenceFlow",
+      "label": "Reservierung fehlerhaft/ \nnicht vorhanden"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": "Reservierung stimmt"
+    }
+  ],
+  "groups": []
+}

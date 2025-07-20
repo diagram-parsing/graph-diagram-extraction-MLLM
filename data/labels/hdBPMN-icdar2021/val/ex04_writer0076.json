@@ -1,0 +1,173 @@
+{
+  "nodes": [
+    {
+      "text": "request for compensation",
+      "id": "request for compensation",
+      "class": "messageEvent"
+    },
+    {
+      "text": "retrieve file",
+      "id": "retrieve file",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "check both acceptable and compliant",
+      "id": "check both acceptable and compliant",
+      "class": "task"
+    },
+    {
+      "text": "check payment of fee",
+      "id": "check payment of fee",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "allocate hearing date",
+      "id": "allocate hearing date",
+      "class": "task"
+    },
+    {
+      "text": "end of process",
+      "id": "end of process",
+      "class": "event"
+    },
+    {
+      "text": "produce fees notice",
+      "id": "produce fees notice",
+      "class": "task"
+    },
+    {
+      "text": "file system",
+      "id": "file system",
+      "class": "dataStore"
+    },
+    {
+      "text": "Calender",
+      "id": "Calender",
+      "class": "dataStore"
+    },
+    {
+      "text": "set hearing date",
+      "id": "set hearing date",
+      "class": "task"
+    },
+    {
+      "text": "wait for payment",
+      "id": "wait for payment",
+      "class": "timerEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "request for compensation",
+      "head": "retrieve file",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "retrieve file",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "check both acceptable and compliant",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check both acceptable and compliant",
+      "head": "set hearing date",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "set hearing date",
+      "head": "check payment of fee",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check payment of fee",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "allocate hearing date",
+      "class": "sequenceFlow",
+      "label": "paid"
+    },
+    {
+      "tail": "allocate hearing date",
+      "head": "end of process",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "produce fees notice",
+      "class": "sequenceFlow",
+      "label": "not paid"
+    },
+    {
+      "tail": "produce fees notice",
+      "head": "wait for payment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "wait for payment",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file system",
+      "head": "retrieve file",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Calender",
+      "head": "set hearing date",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "produce fees notice",
+      "head": "OWNER",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "OWNER",
+      "head": "request for compensation",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "TRIBUNAL",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "OWNER",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

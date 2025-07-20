@@ -1,0 +1,126 @@
+{
+  "nodes": [
+    {
+      "text": "User",
+      "attributes": [
+        "name: string",
+        "email: string",
+        "password: string",
+        "role: role[]",
+        "mocoUser: MocoUser"
+      ],
+      "methods": null,
+      "id": "User",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Collection",
+      "attributes": [
+        "emails: Email[]",
+        "project: Project",
+        "user: User",
+        "tags: Tag[]",
+        "name: string",
+        "project: Project"
+      ],
+      "methods": null,
+      "id": "Collection",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Email",
+      "attributes": [
+        "header: Header",
+        "body: Body",
+        "originalFile: file",
+        "tags: Tag[]"
+      ],
+      "methods": null,
+      "id": "Email",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Company",
+      "attributes": [
+        "type: CompanyType",
+        "name: string",
+        "email: string",
+        "projects: Project",
+        "contacts: Contact[]"
+      ],
+      "methods": null,
+      "id": "Company",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Project",
+      "attributes": [
+        "identifier: string",
+        "name: string",
+        "active: bool",
+        "leader: MocoUser",
+        "contact: contact",
+        "labels: Label[]"
+      ],
+      "methods": null,
+      "id": "Project",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "MocoUser",
+      "attributes": [
+        "firstname: string",
+        "lastname: string",
+        "email: string"
+      ],
+      "methods": null,
+      "id": "MocoUser",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Contact",
+      "attributes": [
+        "firstname: string",
+        "lastname: string",
+        "workEmail: string",
+        "homeEmail: string",
+        "company: Company"
+      ],
+      "methods": null,
+      "id": "Contact",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Label\n",
+      "attributes": [
+        "name: string"
+      ],
+      "methods": null,
+      "id": "Label\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Role",
+      "attributes": null,
+      "methods": null,
+      "id": "Role",
+      "class": "Enumeration"
+    },
+    {
+      "text": "CompayType",
+      "attributes": null,
+      "methods": null,
+      "id": "CompayType",
+      "class": "Enumeration"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "User",
+      "head": "MocoUser",
+      "class": "Aggregation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

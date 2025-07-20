@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "text": "Company",
+      "attributes": null,
+      "methods": null,
+      "id": "Company",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Employee",
+      "attributes": [
+        "First_Name: ",
+        "Last_Name: ",
+        "ID: ",
+        "Position: ",
+        "Joining_Date: "
+      ],
+      "methods": null,
+      "id": "Employee",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Department",
+      "attributes": null,
+      "methods": null,
+      "id": "Department",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Team",
+      "attributes": null,
+      "methods": null,
+      "id": "Team",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Company",
+      "head": "Department",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Department",
+      "head": "Team",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Department",
+      "head": "Employee",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Team",
+      "head": "Employee",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    {
+      "text": "sondaggio",
+      "attributes": [
+        "argomento: string",
+        "titolo: string",
+        "url: string",
+        "aperto: boolean"
+      ],
+      "methods": null,
+      "id": "sondaggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "organizzatore",
+      "attributes": [
+        "nome: string",
+        "cognome: string"
+      ],
+      "methods": null,
+      "id": "organizzatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "partecipante",
+      "attributes": [
+        "nome: string",
+        "cognome: string"
+      ],
+      "methods": null,
+      "id": "partecipante",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "sondaggio",
+      "head": "organizzatore",
+      "class": "UndirectedAssociation",
+      "label": "organizza"
+    },
+    {
+      "tail": "sondaggio",
+      "head": "partecipante",
+      "class": "UndirectedAssociation",
+      "label": "partecipa"
+    }
+  ],
+  "groups": []
+}

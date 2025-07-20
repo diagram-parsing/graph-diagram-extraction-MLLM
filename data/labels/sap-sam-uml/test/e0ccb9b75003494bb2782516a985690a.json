@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "text": "Cliente",
+      "attributes": [
+        "Nome: string",
+        "telefono: string"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prenotazione",
+      "attributes": [
+        "giorno: date",
+        "ora: time",
+        "numero persone: integer",
+        "fumatori: boolean= NO"
+      ],
+      "methods": null,
+      "id": "Prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tavolo",
+      "attributes": [
+        "numero posti: integer",
+        "fumatori: boolean = NO"
+      ],
+      "methods": null,
+      "id": "Tavolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cameriere",
+      "attributes": [
+        "nome: string",
+        "anni servizio: integer"
+      ],
+      "methods": null,
+      "id": "Cameriere",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Portate",
+      "attributes": [
+        "nome: string",
+        "prezzo: currency"
+      ],
+      "methods": null,
+      "id": "Portate",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "inConto",
+      "attributes": [
+        "numero: integer"
+      ],
+      "methods": null,
+      "id": "inConto",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Prenotazione",
+      "head": "Cliente",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    },
+    {
+      "tail": "Prenotazione",
+      "head": "Tavolo",
+      "class": "UndirectedAssociation",
+      "label": "relativa a"
+    },
+    {
+      "tail": "Cameriere",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Portate",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Portate",
+      "head": "inConto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

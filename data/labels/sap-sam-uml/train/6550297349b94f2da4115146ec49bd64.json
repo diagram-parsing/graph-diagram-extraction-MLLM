@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Cambio",
+      "attributes": [
+        "Nombre: String",
+        "Situación_base: Text",
+        "Situación_replicación: Text",
+        "Proposito_cambio: Text",
+        "Comentario: Text"
+      ],
+      "methods": null,
+      "id": "Cambio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cambio_Operacionalización_",
+      "attributes": [
+        "afectado: {Tratamiento, Medidas, Procedimienetos medida}"
+      ],
+      "methods": null,
+      "id": "Cambio_Operacionalización_",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cambio_Población",
+      "attributes": [
+        "propiedad: String"
+      ],
+      "methods": null,
+      "id": "Cambio_Población",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cambio_Protocolo",
+      "attributes": [
+        "elementoProtocolo: Protocolo"
+      ],
+      "methods": null,
+      "id": "Cambio_Protocolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cambio_Protocolo",
+      "attributes": [
+        "elementoProtocolo: Protocolo"
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cambio",
+      "head": "Cambio_Operacionalización_",
+      "class": "Generalization",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,205 @@
+{
+  "nodes": [
+    {
+      "text": "Fornitore",
+      "attributes": null,
+      "methods": null,
+      "id": "Fornitore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dipendente",
+      "attributes": null,
+      "methods": null,
+      "id": "Dipendente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Fondo spesa",
+      "attributes": [
+        "codice: String",
+        "saldo: Currency"
+      ],
+      "methods": null,
+      "id": "Fondo spesa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bando",
+      "attributes": [
+        "codice: String",
+        "acquisto: Acquisto",
+        "dataInizio: DateTime",
+        "dataFine: DateTime",
+        "approvato: boolean"
+      ],
+      "methods": null,
+      "id": "Bando",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ufficio acquisti",
+      "attributes": null,
+      "methods": null,
+      "id": "Ufficio acquisti",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Preventivo\n",
+      "attributes": [
+        "codice: String",
+        "descrizione b/s: String",
+        "fondo: FondoSpesa",
+        "fornitore: Fornitore"
+      ],
+      "methods": null,
+      "id": "Preventivo\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ordine",
+      "attributes": null,
+      "methods": null,
+      "id": "Ordine",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Offerta",
+      "attributes": null,
+      "methods": null,
+      "id": "Offerta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Acquisto",
+      "attributes": [
+        "codice: String",
+        "valore: Currency",
+        "Preventivi []: Preventivo",
+        "approvato: boolean",
+        "sottoSoglia: boolean"
+      ],
+      "methods": null,
+      "id": "Acquisto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dipartimento",
+      "attributes": null,
+      "methods": null,
+      "id": "Dipartimento",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Fornitore",
+      "head": "Preventivo\n",
+      "class": "UndirectedAssociation",
+      "label": "RelativoA"
+    },
+    {
+      "tail": "Fornitore",
+      "head": "Offerta",
+      "class": "UndirectedAssociation",
+      "label": "Crea offerta"
+    },
+    {
+      "tail": "Dipendente",
+      "head": "Acquisto",
+      "class": "UndirectedAssociation",
+      "label": "Definisce"
+    },
+    {
+      "tail": "Dipendente",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "Verifica"
+    },
+    {
+      "tail": "Dipendente",
+      "head": "Dipartimento",
+      "class": "UndirectedAssociation",
+      "label": "Appartiene"
+    },
+    {
+      "tail": "Dipendente",
+      "head": "Dipartimento",
+      "class": "UndirectedAssociation",
+      "label": "aCapoDi"
+    },
+    {
+      "tail": "Dipendente",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "(Se direttore) Approva"
+    },
+    {
+      "tail": "Fondo spesa",
+      "head": "Dipendente",
+      "class": "UndirectedAssociation",
+      "label": "gestisce"
+    },
+    {
+      "tail": "Ufficio acquisti",
+      "head": "Acquisto",
+      "class": "UndirectedAssociation",
+      "label": "Valuta"
+    },
+    {
+      "tail": "Ufficio acquisti",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "Predispone"
+    },
+    {
+      "tail": "Ufficio acquisti",
+      "head": "Offerta",
+      "class": "UndirectedAssociation",
+      "label": "Valuta"
+    },
+    {
+      "tail": "Ufficio acquisti",
+      "head": "Dipartimento",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Ordine",
+      "head": "Fornitore",
+      "class": "UndirectedAssociation",
+      "label": "inviato"
+    },
+    {
+      "tail": "Offerta",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "Viene inserita"
+    },
+    {
+      "tail": "Acquisto",
+      "head": "Ordine",
+      "class": "UndirectedAssociation",
+      "label": "Relativo A"
+    },
+    {
+      "tail": "Acquisto",
+      "head": "Preventivo\n",
+      "class": "UndirectedAssociation",
+      "label": "Relativo A"
+    },
+    {
+      "tail": "Acquisto",
+      "head": "Fondo spesa",
+      "class": "UndirectedAssociation",
+      "label": "grava su"
+    },
+    {
+      "tail": "Acquisto",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "relativo A"
+    }
+  ],
+  "groups": []
+}

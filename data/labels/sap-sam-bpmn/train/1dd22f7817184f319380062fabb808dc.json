@@ -1,0 +1,219 @@
+{
+  "nodes": [
+    {
+      "text": "Complete\nForm",
+      "id": "Complete\nForm",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Display Premium",
+      "id": "Display Premium",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Validates User Inputs ",
+      "id": "Validates User Inputs ",
+      "class": "Task"
+    },
+    {
+      "text": "Errors ?",
+      "id": "Errors ?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Send Error Message ",
+      "id": "Send Error Message ",
+      "class": "Task"
+    },
+    {
+      "text": "Calculate Premium  ",
+      "id": "Calculate Premium  ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_1",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_1",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_2",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_2",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Save Premium",
+      "id": "Save Premium",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Complete\nForm",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Complete\nForm",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Display Premium",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Validates User Inputs ",
+      "head": "Errors ?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Errors ?",
+      "head": "Send Error Message ",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Errors ?",
+      "head": "Calculate Premium  ",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Send Error Message ",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Calculate Premium  ",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_1",
+      "head": "Validates User Inputs ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Display Premium",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "IntermediateMessageEventThrowing_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "IntermediateMessageEventThrowing_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_2",
+      "head": "IntermediateMessageEventCatching_2",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_2",
+      "head": "Save Premium",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Django application",
+      "id": "Django application",
+      "nodes": [
+        "User",
+        "Quote calculator",
+        "SQLite DB"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "User",
+      "id": "User",
+      "nodes": [
+        "Complete\nForm",
+        "StartEvent_1",
+        "Display Premium",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Quote calculator",
+      "id": "Quote calculator",
+      "nodes": [
+        "Validates User Inputs ",
+        "Errors ?",
+        "Send Error Message ",
+        "Calculate Premium  ",
+        "EndEvent_2",
+        "IntermediateMessageEventCatching_1",
+        "IntermediateMessageEventThrowing_1",
+        "AND_Gateway_1",
+        "IntermediateMessageEventThrowing_2"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "SQLite DB",
+      "id": "SQLite DB",
+      "nodes": [
+        "IntermediateMessageEventCatching_2",
+        "EndEvent_3",
+        "Save Premium"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Send package",
+      "id": "Send package",
+      "class": "Task"
+    },
+    {
+      "text": "Receive ID",
+      "id": "Receive ID",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Received package",
+      "id": "Received package",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Determines price",
+      "id": "Determines price",
+      "class": "Task"
+    },
+    {
+      "text": "ID check",
+      "id": "ID check",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "ID stamped",
+      "id": "ID stamped",
+      "class": "Task"
+    },
+    {
+      "text": "ID sent back",
+      "id": "ID sent back",
+      "class": "EndMessageEvent"
+    },
+    {
+      "text": "Based on the filled-in application form",
+      "id": "Based on the filled-in application form",
+      "class": "DataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Send package",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send package",
+      "head": "Received package",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Send package",
+      "head": "Receive ID",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive ID",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Received package",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Determines price",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "ID check",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Determines price",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Determines price",
+      "head": "Based on the filled-in application form",
+      "class": "Association_Bidirectional",
+      "label": ""
+    },
+    {
+      "tail": "ID check",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "ID stamped",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ID stamped",
+      "head": "ID sent back",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "ID sent back",
+      "head": "Receive ID",
+      "class": "MessageFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Applicant",
+      "id": "Applicant",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Send package",
+        "Receive ID",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Consulate",
+      "id": "Consulate",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Received package",
+        "AND_Gateway_1",
+        "Determines price",
+        "ID check",
+        "AND_Gateway_2",
+        "ID stamped",
+        "ID sent back"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

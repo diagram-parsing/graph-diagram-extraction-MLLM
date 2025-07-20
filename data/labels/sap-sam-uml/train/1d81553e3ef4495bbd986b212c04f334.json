@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "text": "AREA",
+      "attributes": [
+        "Costoorario: currency",
+        "Nome: string"
+      ],
+      "methods": null,
+      "id": "AREA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CITTADINO",
+      "attributes": [
+        "Indirizzo: string",
+        "Nome: string",
+        "Cognome: string",
+        "Luogodinascita: string",
+        "Datadinascita: date",
+        "Telefono: string",
+        "C.f: string",
+        "Cap: int",
+        ": "
+      ],
+      "methods": null,
+      "id": "CITTADINO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "VEICOLO",
+      "attributes": [
+        "Targa: string",
+        "Modello: string",
+        "Alimentazione: string",
+        "Omologazione: string"
+      ],
+      "methods": null,
+      "id": "VEICOLO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": " PERMESSO",
+      "attributes": [
+        "DataRilascio: date",
+        "Pagato: boolean",
+        "DataScadenza: date",
+        "Convalidato: boolean",
+        "Darettificare: boolean"
+      ],
+      "methods": null,
+      "id": " PERMESSO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "TRATTO",
+      "attributes": [
+        "Via: string",
+        "Ninizio: int",
+        "Nfine: int"
+      ],
+      "methods": null,
+      "id": "TRATTO",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "AREA",
+      "head": " PERMESSO",
+      "class": "UndirectedAssociation",
+      "label": "relativo a"
+    },
+    {
+      "tail": "AREA",
+      "head": "TRATTO",
+      "class": "UndirectedAssociation",
+      "label": "include"
+    },
+    {
+      "tail": "CITTADINO",
+      "head": "VEICOLO",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "CITTADINO",
+      "head": "AREA",
+      "class": "UndirectedAssociation",
+      "label": "risiede in"
+    },
+    {
+      "tail": "CITTADINO",
+      "head": " PERMESSO",
+      "class": "UndirectedAssociation",
+      "label": "esegue "
+    },
+    {
+      "tail": "VEICOLO",
+      "head": " PERMESSO",
+      "class": "UndirectedAssociation",
+      "label": "associata a"
+    }
+  ],
+  "groups": []
+}

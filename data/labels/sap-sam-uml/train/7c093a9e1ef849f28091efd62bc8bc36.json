@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "text": "Cliente",
+      "attributes": null,
+      "methods": null,
+      "id": "Cliente",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Devolución",
+      "attributes": [
+        "Producto: string",
+        "Fecha_compra: Date",
+        "Motivo: string",
+        "Método_devolución: Tipo_devolución",
+        ": ",
+        ": "
+      ],
+      "methods": null,
+      "id": "Devolución",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tipo_devolución",
+      "attributes": null,
+      "methods": null,
+      "id": "Tipo_devolución",
+      "class": "Enumeration"
+    },
+    {
+      "text": "RN-004: el periodo máximo para devolver un producto es de 15 días",
+      "attributes": null,
+      "methods": null,
+      "id": "RN-004: el periodo máximo para devolver un producto es de 15 días",
+      "class": "Note"
+    },
+    {
+      "text": "Empresa de transporte",
+      "attributes": [
+        "Nombre: string",
+        "Teléfono: numérico"
+      ],
+      "methods": null,
+      "id": "Empresa de transporte",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "trabajador",
+      "attributes": [
+        "Salario: money",
+        "Puesto: tipo_puesto"
+      ],
+      "methods": null,
+      "id": "trabajador",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cliente",
+      "head": "Devolución",
+      "class": "UndirectedAssociation",
+      "label": "inicia"
+    },
+    {
+      "tail": "Devolución",
+      "head": "Tipo_devolución",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "Devolución",
+      "head": "RN-004: el periodo máximo para devolver un producto es de 15 días",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Devolución",
+      "head": "trabajador",
+      "class": "UndirectedAssociation",
+      "label": "recibe"
+    },
+    {
+      "tail": "Empresa de transporte",
+      "head": "Cliente",
+      "class": "UndirectedAssociation",
+      "label": "contacta_con"
+    },
+    {
+      "tail": "trabajador",
+      "head": "Empresa de transporte",
+      "class": "UndirectedAssociation",
+      "label": "avisa_a"
+    }
+  ],
+  "groups": []
+}

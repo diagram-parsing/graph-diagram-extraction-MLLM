@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Identify Client's Issue",
+      "id": "Identify Client's Issue",
+      "class": "Task"
+    },
+    {
+      "text": "Investigate the Issue",
+      "id": "Investigate the Issue",
+      "class": "Task"
+    },
+    {
+      "text": "Provide Solution",
+      "id": "Provide Solution",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Identify Client's Issue",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Identify Client's Issue",
+      "head": "Investigate the Issue",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Investigate the Issue",
+      "head": "Provide Solution",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Provide Solution",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

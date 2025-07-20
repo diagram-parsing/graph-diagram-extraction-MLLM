@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "text": "Prodotto ",
+      "attributes": [
+        "nome: String",
+        "annoProduzione: int",
+        "pdf: String",
+        "autore: String",
+        "titolo: String"
+      ],
+      "methods": null,
+      "id": "Prodotto ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ricercatore",
+      "attributes": [
+        "centro : String"
+      ],
+      "methods": null,
+      "id": "Ricercatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pubblicazione ",
+      "attributes": [
+        "numCitazioni: int",
+        "quartile: String",
+        "codiceDOI: String"
+      ],
+      "methods": null,
+      "id": "Pubblicazione ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Brevetto ",
+      "attributes": [
+        "numBrevetti: int"
+      ],
+      "methods": null,
+      "id": "Brevetto ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esperto ",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "email: String"
+      ],
+      "methods": null,
+      "id": "Esperto ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "valuta",
+      "attributes": [
+        "esito : String"
+      ],
+      "methods": null,
+      "id": "valuta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Centro",
+      "attributes": [
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "Centro",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Valutazione ",
+      "attributes": [
+        "punteggio: int",
+        "relazione: String"
+      ],
+      "methods": null,
+      "id": "Valutazione ",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Prodotto ",
+      "head": "Pubblicazione ",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Prodotto ",
+      "head": "Brevetto ",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Prodotto ",
+      "class": "UndirectedAssociation",
+      "label": "seleziona"
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Centro",
+      "class": "UndirectedAssociation",
+      "label": "lavoraPer"
+    },
+    {
+      "tail": "Esperto ",
+      "head": "Brevetto ",
+      "class": "UndirectedAssociation",
+      "label": "valuta"
+    },
+    {
+      "tail": "Centro",
+      "head": "Valutazione ",
+      "class": "UndirectedAssociation",
+      "label": "riferitaA"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "text": "Customer account\n",
+      "attributes": [
+        "CustomerID:: ",
+        "CustomerName:: ",
+        "BankDetails: "
+      ],
+      "methods": [
+        "EditAccount()",
+        "BuyProduct:()",
+        "ViewOrder:()"
+      ],
+      "id": "Customer account\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Online Communication",
+      "attributes": [
+        "SocialMedias: ",
+        "ChatbotFunction:: "
+      ],
+      "methods": [
+        "GoToSocialMedia:()",
+        "EnterChatRoom:()"
+      ],
+      "id": "Online Communication",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Product",
+      "attributes": [
+        "ProductID:: ",
+        "ProductName:: ",
+        "Price:: ",
+        "StockAvalibilty: "
+      ],
+      "methods": null,
+      "id": "Product",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Service\n",
+      "attributes": [
+        "PaymentOption:: ",
+        "LevelOfSupport: ",
+        "LevelOfPersonalisation:: ",
+        "PersonalDeliveryDetails:: "
+      ],
+      "methods": null,
+      "id": "Service\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Social Media",
+      "attributes": [
+        "SocialMediaType:: ",
+        "SocialMediaName: "
+      ],
+      "methods": [
+        "ViewSocialMedia()",
+        "MsgSocialMedia()",
+        "RateSocialMedia()",
+        "FollowSocialMedia()"
+      ],
+      "id": "Social Media",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Online Chat\n",
+      "attributes": [
+        "ChatBotAI:: ",
+        "CustomerSpeech:: "
+      ],
+      "methods": [
+        "DefineProblem:()",
+        "KeyboardType:()"
+      ],
+      "id": "Online Chat\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "1",
+      "attributes": null,
+      "methods": null,
+      "id": "1",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "1..*",
+      "attributes": null,
+      "methods": null,
+      "id": "1..*",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "1..*",
+      "attributes": null,
+      "methods": null,
+      "id": "SimpleClass_1",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "0..*",
+      "attributes": null,
+      "methods": null,
+      "id": "0..*",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "1..*",
+      "attributes": null,
+      "methods": null,
+      "id": "SimpleClass_2",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "1",
+      "attributes": null,
+      "methods": null,
+      "id": "SimpleClass_3",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "1..*",
+      "attributes": null,
+      "methods": null,
+      "id": "SimpleClass_4",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "1..*",
+      "attributes": null,
+      "methods": null,
+      "id": "SimpleClass_5",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Customer account\n",
+      "head": "Online Communication",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Customer account\n",
+      "head": "Product",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Customer account\n",
+      "head": "Service\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Online Communication",
+      "head": "Social Media",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Online Communication",
+      "head": "Online Chat\n",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Product",
+      "head": "Service\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "text": "ricercatore",
+      "attributes": [
+        "OrcidID: String",
+        "nome: String",
+        "cognome: String",
+        "DataNascita: Date",
+        "Affiliazione: String"
+      ],
+      "methods": null,
+      "id": "ricercatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "articolo",
+      "attributes": [
+        "titolo: String",
+        "abstract: String",
+        "corpo: String"
+      ],
+      "methods": null,
+      "id": "articolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "rivista",
+      "attributes": [
+        "nome: String",
+        "settore: String",
+        "publisher: String"
+      ],
+      "methods": null,
+      "id": "rivista",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "keyword",
+      "attributes": [
+        "codice: String",
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "keyword",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "comunemente un articolo può avere più autori ma nel testo è usato sempre il singolare (1)",
+      "attributes": null,
+      "methods": null,
+      "id": "comunemente un articolo può avere più autori ma nel testo è usato sempre il singolare (1)",
+      "class": "Note"
+    },
+    {
+      "text": "allegato",
+      "attributes": [
+        "ID: String",
+        "nome: String",
+        "url: String"
+      ],
+      "methods": null,
+      "id": "allegato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ogni articolo deve avere almeno una keyword",
+      "attributes": null,
+      "methods": null,
+      "id": "ogni articolo deve avere almeno una keyword",
+      "class": "Note"
+    },
+    {
+      "text": "ogni articolo è appositamente scritto per una rivista in particolare",
+      "attributes": null,
+      "methods": null,
+      "id": "ogni articolo è appositamente scritto per una rivista in particolare",
+      "class": "Note"
+    },
+    {
+      "text": "editorDi",
+      "attributes": [
+        "verdetto: String"
+      ],
+      "methods": null,
+      "id": "editorDi",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "non impedisce ad un ricercatore di essere editor del suo stesso articolo",
+      "attributes": null,
+      "methods": null,
+      "id": "non impedisce ad un ricercatore di essere editor del suo stesso articolo",
+      "class": "Note"
+    },
+    {
+      "text": "review",
+      "attributes": [
+        "commento: String"
+      ],
+      "methods": null,
+      "id": "review",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "collegamanto diretto tra editor e rivista per evitare di trarre i nomi dall'elenco degli articoli assegnati (dati ripetuti se ad esempio un ricercatore è editor di 50 articoli diversi)",
+      "attributes": null,
+      "methods": null,
+      "id": "collegamanto diretto tra editor e rivista per evitare di trarre i nomi dall'elenco degli articoli assegnati (dati ripetuti se ad esempio un ricercatore è editor di 50 articoli diversi)",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "ricercatore",
+      "head": "articolo",
+      "class": "UndirectedAssociation",
+      "label": "scrittoDa"
+    },
+    {
+      "tail": "ricercatore",
+      "head": "articolo",
+      "class": "UndirectedAssociation",
+      "label": "editorDi"
+    },
+    {
+      "tail": "ricercatore",
+      "head": "rivista",
+      "class": "UndirectedAssociation",
+      "label": "ediotorPresso"
+    },
+    {
+      "tail": "ricercatore",
+      "head": "review",
+      "class": "UndirectedAssociation",
+      "label": "scrive"
+    },
+    {
+      "tail": "articolo",
+      "head": "rivista",
+      "class": "UndirectedAssociation",
+      "label": "sottomessoA"
+    },
+    {
+      "tail": "articolo",
+      "head": "allegato",
+      "class": "UndirectedAssociation",
+      "label": "contiene"
+    },
+    {
+      "tail": "articolo",
+      "head": "keyword",
+      "class": "UndirectedAssociation",
+      "label": "associatoA"
+    },
+    {
+      "tail": "review",
+      "head": "articolo",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    }
+  ],
+  "groups": []
+}

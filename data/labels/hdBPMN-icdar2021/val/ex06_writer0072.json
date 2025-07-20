@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "text": "order received",
+      "id": "order received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "receive order by Lieferando",
+      "id": "receive order by Lieferando",
+      "class": "task"
+    },
+    {
+      "text": "takeorder by phone",
+      "id": "takeorder by phone",
+      "class": "task"
+    },
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "print out order note",
+      "id": "print out order note",
+      "class": "task"
+    },
+    {
+      "text": "attach order note to pinboard",
+      "id": "attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "text": "order attached",
+      "id": "order attached",
+      "class": "event"
+    },
+    {
+      "text": "order",
+      "id": "order",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [attached]",
+      "id": "order [attached]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [taken by phone]",
+      "id": "order [taken by phone]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [received by Lieferando]",
+      "id": "order [received by Lieferando]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [confirmed]",
+      "id": "order [confirmed]",
+      "class": "dataObject"
+    },
+    {
+      "text": "receive order by Website",
+      "id": "receive order by Website",
+      "class": "task"
+    },
+    {
+      "text": "how to deal with the order",
+      "id": "how to deal with the order",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "printed order",
+      "id": "printed order",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [received by website]",
+      "id": "order [received by website]",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "receive order by Website",
+      "head": "print out order note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attach order note to pinboard",
+      "head": "order attached",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order note",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "print out order note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive order by Lieferando",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "takeorder by phone",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "how to deal with the order",
+      "head": "takeorder by phone",
+      "class": "sequenceFlow",
+      "label": "phone"
+    },
+    {
+      "tail": "how to deal with the order",
+      "head": "receive order by Website",
+      "class": "sequenceFlow",
+      "label": "website"
+    },
+    {
+      "tail": "how to deal with the order",
+      "head": "receive order by Lieferando",
+      "class": "sequenceFlow",
+      "label": "Lieferando"
+    },
+    {
+      "tail": "order received",
+      "head": "how to deal with the order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order received",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "printed order",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "client",
+      "head": "order received",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Pizzeria",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "client",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

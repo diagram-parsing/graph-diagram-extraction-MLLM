@@ -1,0 +1,272 @@
+{
+  "nodes": [
+    {
+      "text": "attach order note to pinboard",
+      "id": "attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "text": "write down order note",
+      "id": "write down order note",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "take order by phone",
+      "id": "take order by phone",
+      "class": "task"
+    },
+    {
+      "text": "receive order by Website",
+      "id": "receive order by Website",
+      "class": "task"
+    },
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "dataObject_1",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "dataObject_2",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": "order\n[by phone]",
+      "id": "order\n[by phone]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order\n[on paper]",
+      "id": "order\n[on paper]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order\n[received]",
+      "id": "order\n[received]",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "receive order by Lieferando",
+      "id": "receive order by Lieferando",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "receive order by Website",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive order by Website",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "take order by phone",
+      "head": "write down order note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "take order by phone",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive order by Lieferando",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "receive order by Lieferando",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order\n[on paper]",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order\n[by phone]",
+      "head": "write down order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "order\n[on paper]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "order\n[on paper]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "dataObject_2",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order\n[received]",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "order\n[on paper]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "dataObject_1",
+      "head": "take order by phone",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "take order by phone",
+      "head": "order\n[by phone]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "dataObject_1",
+      "head": "receive order by Website",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "receive order by Website",
+      "head": "order\n[received]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order\n[received]",
+      "head": "confirm order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "dataObject_2",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "dataObject_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "dataObject_1",
+      "head": "receive order by Lieferando",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "receive order by Lieferando",
+      "head": "order\n[received]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "customer",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": "order"
+    }
+  ],
+  "groups": [
+    {
+      "name": "pizzeria employee",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "customer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "text": "DIPENDENTE",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "ricercatore: boolean"
+      ],
+      "methods": null,
+      "id": "DIPENDENTE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PRODOTTO",
+      "attributes": [
+        "pdfProdotto: string",
+        "nomiautori: string",
+        "titolo: string"
+      ],
+      "methods": null,
+      "id": "PRODOTTO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "BREVETTO",
+      "attributes": [
+        "numero: string"
+      ],
+      "methods": null,
+      "id": "BREVETTO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PUBBLICAZIONE",
+      "attributes": [
+        "numeroCit: int",
+        "quartile: string",
+        "codiceDOI: string"
+      ],
+      "methods": null,
+      "id": "PUBBLICAZIONE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "LISTA PRODOTTI",
+      "attributes": null,
+      "methods": null,
+      "id": "LISTA PRODOTTI",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ESPERTO",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "id: string"
+      ],
+      "methods": null,
+      "id": "ESPERTO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CENTRO DI RICERCA",
+      "attributes": [
+        "nomeEnte: string",
+        "idEnte: int"
+      ],
+      "methods": null,
+      "id": "CENTRO DI RICERCA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "valuta",
+      "attributes": [
+        "voto: int",
+        ": "
+      ],
+      "methods": null,
+      "id": "valuta",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PUNTEGGIO",
+      "attributes": [
+        "valore: int",
+        "relazione: string"
+      ],
+      "methods": null,
+      "id": "PUNTEGGIO",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "DIPENDENTE",
+      "head": "PRODOTTO",
+      "class": "UndirectedAssociation",
+      "label": "sceglie"
+    },
+    {
+      "tail": "DIPENDENTE",
+      "head": "CENTRO DI RICERCA",
+      "class": "UndirectedAssociation",
+      "label": "lavora presso"
+    },
+    {
+      "tail": "PRODOTTO",
+      "head": "BREVETTO",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "PRODOTTO",
+      "head": "PUBBLICAZIONE",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "BREVETTO",
+      "head": "ESPERTO",
+      "class": "UndirectedAssociation",
+      "label": "valuta"
+    },
+    {
+      "tail": "LISTA PRODOTTI",
+      "head": "PRODOTTO",
+      "class": "UndirectedAssociation",
+      "label": "appartenete a "
+    },
+    {
+      "tail": "CENTRO DI RICERCA",
+      "head": "PUNTEGGIO",
+      "class": "UndirectedAssociation",
+      "label": "riceve"
+    }
+  ],
+  "groups": []
+}

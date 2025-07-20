@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "text": "Kund",
+      "attributes": [
+        "Namn: ",
+        "TelNr: ",
+        "KundNr: ",
+        ": "
+      ],
+      "methods": [
+        "skapa()",
+        "ändra()",
+        "ta bort()"
+      ],
+      "id": "Kund",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Personal",
+      "attributes": [
+        "Namn: ",
+        "PNr: ",
+        "Tjänstgöringsgrad (%): ",
+        "Roll: "
+      ],
+      "methods": [
+        "Skapa ny personal()",
+        "Ta bort personal()",
+        "Ändra personal()",
+        "hämtaNamn ()",
+        "hämtaRoll()"
+      ],
+      "id": "Personal",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bokning",
+      "attributes": [
+        "datum: ",
+        "starttid: ",
+        "sluttid: ",
+        "Kund []: ",
+        "Personal []: ",
+        "totalpris: ",
+        "Behandling []: "
+      ],
+      "methods": [
+        "skapaBokning ()",
+        "taBortBokning()"
+      ],
+      "id": "Bokning",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Behandling\n",
+      "attributes": [
+        "Namn: ",
+        "Tid (i min): ",
+        "Pris: "
+      ],
+      "methods": [
+        "skapa()",
+        "ta bort()",
+        "ändra()"
+      ],
+      "id": "Behandling\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Arbetspass",
+      "attributes": [
+        "datum: ",
+        "startTid: ",
+        "slutTid: ",
+        "Bokning []: ",
+        "Personal []: "
+      ],
+      "methods": [
+        "metod 1()",
+        "metod 2()",
+        "metod 3()"
+      ],
+      "id": "Arbetspass",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Schema",
+      "attributes": [
+        "från datum: ",
+        "till datum: ",
+        "Arbetspass []: "
+      ],
+      "methods": [
+        "metod 1()",
+        "metod 2()",
+        "metod 3()"
+      ],
+      "id": "Schema",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Personal",
+      "head": "Schema",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bokning",
+      "head": "Kund",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Bokning",
+      "head": "Behandling\n",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Bokning",
+      "head": "Personal",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Arbetspass",
+      "head": "Bokning",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Arbetspass",
+      "head": "Personal",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Schema",
+      "head": "Arbetspass",
+      "class": "Composition",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "text": "Famiglia",
+      "attributes": [
+        "cognome: String",
+        "cognomeMadre: String",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Famiglia",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Figlio",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "codFisc: String",
+        "dataNascita: Data",
+        "luogoNascita: String"
+      ],
+      "methods": null,
+      "id": "Figlio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Vaccinazione",
+      "attributes": [
+        "dataEsecuzione: Date",
+        "tipoInoculazione: enum",
+        "effettiRiscontrati: String",
+        "PDF: String",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Vaccinazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tipo Inoculazione:\n- iniziale\n- richiamo",
+      "attributes": null,
+      "methods": null,
+      "id": "tipo Inoculazione:\n- iniziale\n- richiamo",
+      "class": "Note"
+    },
+    {
+      "text": "Vaccino",
+      "attributes": [
+        "codice: String",
+        "nome: String",
+        "obbligatorio: boolean",
+        "etàRichiesta: int"
+      ],
+      "methods": null,
+      "id": "Vaccino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Visita",
+      "attributes": [
+        "codiceVisita: String",
+        "Data: Date",
+        "esenzione: boolean"
+      ],
+      "methods": null,
+      "id": "Visita",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Medico",
+      "attributes": [
+        "nome: String",
+        "cognome: String",
+        "codFisc: String",
+        "email: String"
+      ],
+      "methods": null,
+      "id": "Medico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esenzione",
+      "attributes": [
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Esenzione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Famiglia",
+      "head": "Figlio",
+      "class": "UndirectedAssociation",
+      "label": "responsabile Di"
+    },
+    {
+      "tail": "Figlio",
+      "head": "Vaccino",
+      "class": "UndirectedAssociation",
+      "label": "è esente da"
+    },
+    {
+      "tail": "Figlio",
+      "head": "Visita",
+      "class": "UndirectedAssociation",
+      "label": "relativa a "
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "Figlio",
+      "class": "UndirectedAssociation",
+      "label": "ha eseguito"
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "tipo Inoculazione:\n- iniziale\n- richiamo",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Vaccino",
+      "head": "Vaccinazione",
+      "class": "UndirectedAssociation",
+      "label": "relativo a"
+    },
+    {
+      "tail": "Visita",
+      "head": "Medico",
+      "class": "UndirectedAssociation",
+      "label": "effettua"
+    }
+  ],
+  "groups": []
+}

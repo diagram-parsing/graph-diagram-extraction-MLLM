@@ -1,0 +1,278 @@
+{
+  "nodes": [
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "event_2",
+      "class": "event"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "eventBasedGateway_1",
+      "class": "eventBasedGateway"
+    },
+    {
+      "text": "expert rating received",
+      "id": "expert rating received",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "file results",
+      "id": "file results",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_3",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "expert rating ended to QA - specialist",
+      "id": "expert rating ended to QA - specialist",
+      "class": "messageEvent"
+    },
+    {
+      "text": "expect rating received",
+      "id": "expect rating received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "pay expenses by filling cheque",
+      "id": "pay expenses by filling cheque",
+      "class": "task"
+    },
+    {
+      "text": "cheque sent",
+      "id": "cheque sent",
+      "class": "messageEvent"
+    },
+    {
+      "text": "new responding time",
+      "id": "new responding time",
+      "class": "timerEvent"
+    },
+    {
+      "text": "ask for review",
+      "id": "ask for review",
+      "class": "task"
+    },
+    {
+      "text": "interview patient",
+      "id": "interview patient",
+      "class": "subProcess"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_2",
+      "head": "file results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_1",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pay expenses by filling cheque",
+      "head": "cheque sent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "pay expenses by filling cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expect rating received",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expert rating ended to QA - specialist",
+      "head": "expect rating received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "expert rating ended to QA - specialist",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "expert rating received",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file results",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patient",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "expert rating received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "new responding time",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "new responding time",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask for review",
+      "head": "eventBasedGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "ask for review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "interview patient",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "cheque sent",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": "cheque"
+    },
+    {
+      "tail": "external expert",
+      "head": "expert rating received",
+      "class": "messageFlow",
+      "label": "expert rating"
+    },
+    {
+      "tail": "ask for review",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": "request for review"
+    },
+    {
+      "tail": "interview patient",
+      "head": "patient",
+      "class": "messageFlow",
+      "label": "interview"
+    },
+    {
+      "tail": "patient",
+      "head": "interview patient",
+      "class": "messageFlow",
+      "label": "answer"
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "nodes": [
+        "managing director",
+        "QA - depatement"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "managing director",
+      "nodes": [
+        "exclusiveGateway_1",
+        "eventBasedGateway_1",
+        "expert rating received",
+        "parallelGateway_3",
+        "expert rating ended to QA - specialist",
+        "pay expenses by filling cheque",
+        "cheque sent",
+        "new responding time",
+        "ask for review"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "QA - depatement",
+      "nodes": [
+        "event_1",
+        "event_2",
+        "create report",
+        "parallelGateway_1",
+        "parallelGateway_2",
+        "file results",
+        "expect rating received",
+        "interview patient"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "patient",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "external expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

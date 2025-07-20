@@ -1,0 +1,198 @@
+{
+  "nodes": [
+    {
+      "text": "Inizio processo\n",
+      "id": "Inizio processo\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Un mese prima della\nscadenza del contratto",
+      "id": "Un mese prima della\nscadenza del contratto",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Controllo permesso\ndei residenti",
+      "id": "Controllo permesso\ndei residenti",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "No rinnovo\n",
+      "id": "No rinnovo\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Invio mail \nai residenti",
+      "id": "Invio mail \nai residenti",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "Controllo \ndocumento \ncaricato\ndal residente",
+      "id": "Controllo \ndocumento \ncaricato\ndal residente",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Invio mail al relativo \nresidente",
+      "id": "Invio mail al relativo \nresidente",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_1",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Compilazione \nmodulo \nonline\n",
+      "id": "Compilazione \nmodulo \nonline\n",
+      "class": "Task"
+    },
+    {
+      "text": "Carico \ncopia\ncarta di identità",
+      "id": "Carico \ncopia\ncarta di identità",
+      "class": "Task"
+    },
+    {
+      "text": "Pagare il\ndovuto\n",
+      "id": "Pagare il\ndovuto\n",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_2",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Rettificare le \ninformazioni\n",
+      "id": "Rettificare le \ninformazioni\n",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Un mese prima della\nscadenza del contratto",
+      "head": "Controllo permesso\ndei residenti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Controllo permesso\ndei residenti",
+      "head": "No rinnovo\n",
+      "class": "SequenceFlow",
+      "label": "Non in scadenza\n"
+    },
+    {
+      "tail": "Controllo permesso\ndei residenti",
+      "head": "Invio mail \nai residenti",
+      "class": "SequenceFlow",
+      "label": "In scadenza\n"
+    },
+    {
+      "tail": "Invio mail \nai residenti",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Controllo \ndocumento \ncaricato\ndal residente",
+      "head": "Invio mail al relativo \nresidente",
+      "class": "SequenceFlow",
+      "label": "Irregolarità nel \ndocumento"
+    },
+    {
+      "tail": "Invio mail al relativo \nresidente",
+      "head": "IntermediateMessageEventCatching_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_1",
+      "head": "Compilazione \nmodulo \nonline\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Compilazione \nmodulo \nonline\n",
+      "head": "Carico \ncopia\ncarta di identità",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Carico \ncopia\ncarta di identità",
+      "head": "Pagare il\ndovuto\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pagare il\ndovuto\n",
+      "head": "Controllo \ndocumento \ncaricato\ndal residente",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_2",
+      "head": "Rettificare le \ninformazioni\n",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "GTT",
+      "id": "GTT",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "OPERATORE GTT"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "OPERATORE GTT",
+      "id": "OPERATORE GTT",
+      "nodes": [
+        "Inizio processo\n",
+        "Un mese prima della\nscadenza del contratto",
+        "Controllo permesso\ndei residenti",
+        "No rinnovo\n",
+        "Invio mail \nai residenti",
+        "Controllo \ndocumento \ncaricato\ndal residente",
+        "Invio mail al relativo \nresidente"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "",
+      "id": "Pool_1",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "RESIDENTE"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "RESIDENTE",
+      "id": "RESIDENTE",
+      "nodes": [
+        "IntermediateMessageEventCatching_1",
+        "Compilazione \nmodulo \nonline\n",
+        "Carico \ncopia\ncarta di identità",
+        "Pagare il\ndovuto\n",
+        "IntermediateMessageEventCatching_2",
+        "Rettificare le \ninformazioni\n"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

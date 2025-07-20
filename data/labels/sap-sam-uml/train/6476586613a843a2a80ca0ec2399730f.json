@@ -1,0 +1,215 @@
+{
+  "nodes": [
+    {
+      "text": "EInwohner",
+      "attributes": [
+        "name: String",
+        "einkommen: int"
+      ],
+      "methods": null,
+      "id": "EInwohner",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mensch",
+      "attributes": [
+        "alter: int"
+      ],
+      "methods": null,
+      "id": "Mensch",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mutant",
+      "attributes": null,
+      "methods": null,
+      "id": "Mutant",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bürger",
+      "attributes": null,
+      "methods": null,
+      "id": "Bürger",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Superheld",
+      "attributes": null,
+      "methods": null,
+      "id": "Superheld",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Schurke",
+      "attributes": null,
+      "methods": null,
+      "id": "Schurke",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Richter",
+      "attributes": null,
+      "methods": null,
+      "id": "Richter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Unternehmen",
+      "attributes": null,
+      "methods": null,
+      "id": "Unternehmen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "PersonenG",
+      "attributes": null,
+      "methods": null,
+      "id": "PersonenG",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "KapitalG",
+      "attributes": null,
+      "methods": null,
+      "id": "KapitalG",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Metropolis",
+      "attributes": null,
+      "methods": null,
+      "id": "Metropolis",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Syndikat",
+      "attributes": null,
+      "methods": null,
+      "id": "Syndikat",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Steuerpflichtig",
+      "attributes": null,
+      "methods": null,
+      "id": "Steuerpflichtig",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Körperschaftssteuer",
+      "attributes": null,
+      "methods": null,
+      "id": "Körperschaftssteuer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Gewerbesteuer",
+      "attributes": null,
+      "methods": null,
+      "id": "Gewerbesteuer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Einkommenssteuer",
+      "attributes": null,
+      "methods": null,
+      "id": "Einkommenssteuer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Finanzamt",
+      "attributes": null,
+      "methods": null,
+      "id": "Finanzamt",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "EInwohner",
+      "head": "Mutant",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "EInwohner",
+      "head": "Mensch",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Mensch",
+      "head": "Richter",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Mensch",
+      "head": "Bürger",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Mutant",
+      "head": "Superheld",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Mutant",
+      "head": "Schurke",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Bürger",
+      "head": "Unternehmen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Unternehmen",
+      "head": "KapitalG",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Unternehmen",
+      "head": "PersonenG",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Metropolis",
+      "head": "EInwohner",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Syndikat",
+      "head": "Schurke",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Steuerpflichtig",
+      "head": "Körperschaftssteuer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Steuerpflichtig",
+      "head": "Gewerbesteuer",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Steuerpflichtig",
+      "head": "Einkommenssteuer",
+      "class": "Generalization",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

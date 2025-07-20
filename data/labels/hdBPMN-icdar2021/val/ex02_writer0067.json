@@ -1,0 +1,261 @@
+{
+  "nodes": [
+    {
+      "text": "claim received",
+      "id": "claim received",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "register application",
+      "id": "register application",
+      "class": "task"
+    },
+    {
+      "text": "write settlement recommendation",
+      "id": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "text": "check recommendation",
+      "id": "check recommendation",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "mark as ok",
+      "id": "mark as ok",
+      "class": "task"
+    },
+    {
+      "text": "claim handles process",
+      "id": "claim handles process",
+      "class": "task"
+    },
+    {
+      "text": "settlement recommendation [rejected]",
+      "id": "settlement recommendation [rejected]",
+      "class": "dataObject"
+    },
+    {
+      "text": "process\nproceed",
+      "id": "process\nproceed",
+      "class": "event"
+    },
+    {
+      "text": "send recommendation",
+      "id": "send recommendation",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "settlement recommendation",
+      "id": "settlement recommendation",
+      "class": "dataObject"
+    },
+    {
+      "text": "settlement recommendation [approved]",
+      "id": "settlement recommendation [approved]",
+      "class": "dataObject"
+    },
+    {
+      "text": "mark as not ok",
+      "id": "mark as not ok",
+      "class": "task"
+    },
+    {
+      "text": "send back to claim officer",
+      "id": "send back to claim officer",
+      "class": "task"
+    },
+    {
+      "text": "examine application",
+      "id": "examine application",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "send recommendation",
+      "head": "check recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim received",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "register application",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "examine application",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register application",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "examine application",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "write settlement recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write settlement recommendation",
+      "head": "send recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check recommendation",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "mark as not ok",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "mark as not ok",
+      "head": "send back to claim officer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send back to claim officer",
+      "head": "write settlement recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "mark as ok",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "mark as ok",
+      "head": "claim handles process",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim handles process",
+      "head": "process\nproceed",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "settlement recommendation [rejected]",
+      "head": "write settlement recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write settlement recommendation",
+      "head": "settlement recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "settlement recommendation",
+      "head": "check recommendation",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "mark as not ok",
+      "head": "settlement recommendation [rejected]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "mark as ok",
+      "head": "settlement recommendation [approved]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "customer",
+      "head": "claim received",
+      "class": "messageFlow",
+      "label": "insurance claim"
+    }
+  ],
+  "groups": [
+    {
+      "name": "insurer",
+      "nodes": [
+        "claim officer",
+        "senior claim officer"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "claim officer",
+      "nodes": [
+        "claim received",
+        "parallelGateway_1",
+        "register application",
+        "write settlement recommendation",
+        "send recommendation",
+        "parallelGateway_2",
+        "settlement recommendation",
+        "examine application"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "senior claim officer",
+      "nodes": [
+        "check recommendation",
+        "exclusiveGateway_1",
+        "mark as ok",
+        "claim handles process",
+        "settlement recommendation [rejected]",
+        "process\nproceed",
+        "settlement recommendation [approved]",
+        "mark as not ok",
+        "send back to claim officer"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "customer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "text": "Cliente",
+      "attributes": [
+        "nome: string",
+        "cognome: string",
+        "dataNascita: date",
+        "indirizzo: string",
+        "città: string",
+        "CAP: string",
+        "citofono: string",
+        "telefono: string"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prodotto",
+      "attributes": [
+        "fotografia: string",
+        "titolo: string",
+        "prezzo: currency",
+        "descrizione: string"
+      ],
+      "methods": null,
+      "id": "Prodotto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "servizio",
+      "attributes": [
+        "qualitàMerce: String",
+        "Velocità: string",
+        "cortesiaRider: string"
+      ],
+      "methods": null,
+      "id": "servizio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Consegna",
+      "attributes": [
+        "citofono: string",
+        "tel: string",
+        "oraInizio: time",
+        "oraFine: time",
+        "BarCode: string"
+      ],
+      "methods": null,
+      "id": "Consegna",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rider",
+      "attributes": [
+        "disponibile: Boolean"
+      ],
+      "methods": null,
+      "id": "Rider",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Gestore",
+      "attributes": [
+        "nome: string",
+        "cognome: string"
+      ],
+      "methods": null,
+      "id": "Gestore",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cliente",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "seleziona"
+    },
+    {
+      "tail": "Cliente",
+      "head": "servizio",
+      "class": "UndirectedAssociation",
+      "label": "Richiede"
+    },
+    {
+      "tail": "Prodotto",
+      "head": "Gestore",
+      "class": "UndirectedAssociation",
+      "label": "Carica"
+    },
+    {
+      "tail": "servizio",
+      "head": "Consegna",
+      "class": "UndirectedAssociation",
+      "label": "DiTipo"
+    },
+    {
+      "tail": "Consegna",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "RelativaA"
+    },
+    {
+      "tail": "Consegna",
+      "head": "Rider",
+      "class": "UndirectedAssociation",
+      "label": "Effettua"
+    },
+    {
+      "tail": "Gestore",
+      "head": "Rider",
+      "class": "UndirectedAssociation",
+      "label": "Seleziona"
+    }
+  ],
+  "groups": []
+}

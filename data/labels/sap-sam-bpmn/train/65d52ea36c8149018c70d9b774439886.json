@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Rezept aussuchen",
+      "id": "Rezept aussuchen",
+      "class": "Task"
+    },
+    {
+      "text": "Mahlzeit zubereiten",
+      "id": "Mahlzeit zubereiten",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Rezept aussuchen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Rezept aussuchen",
+      "head": "Mahlzeit zubereiten",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Mahlzeit zubereiten",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

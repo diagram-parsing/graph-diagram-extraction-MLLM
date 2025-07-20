@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "SUA",
+      "attributes": [
+        "AnnoAccademico: String",
+        "QuadroA: String",
+        "QuadroB: String",
+        "QuadroC: String"
+      ],
+      "methods": null,
+      "id": "SUA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CdS",
+      "attributes": [
+        "Nome: String",
+        "tipo: enum"
+      ],
+      "methods": null,
+      "id": "CdS",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "enum:\nTriennale/\nMagistrale",
+      "attributes": null,
+      "methods": null,
+      "id": "enum:\nTriennale/\nMagistrale",
+      "class": "Note"
+    },
+    {
+      "text": "Collegio",
+      "attributes": [
+        "Nome: String"
+      ],
+      "methods": null,
+      "id": "Collegio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Docente",
+      "attributes": [
+        "NMatricola: String",
+        "Nome: String",
+        "Cognome: String",
+        "CF: String"
+      ],
+      "methods": null,
+      "id": "Docente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Insegnamento",
+      "attributes": [
+        "scheda: String",
+        "CFU: String",
+        "nome:  String",
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "Insegnamento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Approvazione",
+      "attributes": [
+        "Data: date",
+        "esito: boolean",
+        "organo: String"
+      ],
+      "methods": null,
+      "id": "Approvazione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "CdS",
+      "head": "SUA",
+      "class": "UndirectedAssociation",
+      "label": "riferitaA"
+    },
+    {
+      "tail": "CdS",
+      "head": "Approvazione",
+      "class": "UndirectedAssociation",
+      "label": "soggetto A"
+    },
+    {
+      "tail": "enum:\nTriennale/\nMagistrale",
+      "head": "CdS",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Collegio",
+      "head": "CdS",
+      "class": "UndirectedAssociation",
+      "label": "gestisce"
+    },
+    {
+      "tail": "Collegio",
+      "head": "Docente",
+      "class": "UndirectedAssociation",
+      "label": "comprende"
+    },
+    {
+      "tail": "Docente",
+      "head": "Insegnamento",
+      "class": "UndirectedAssociation",
+      "label": "titolari"
+    },
+    {
+      "tail": "Insegnamento",
+      "head": "CdS",
+      "class": "UndirectedAssociation",
+      "label": "comprende"
+    }
+  ],
+  "groups": []
+}

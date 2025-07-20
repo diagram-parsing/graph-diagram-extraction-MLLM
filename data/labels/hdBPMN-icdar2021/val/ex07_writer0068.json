@@ -1,0 +1,297 @@
+{
+  "nodes": [
+    {
+      "text": "new case started",
+      "id": "new case started",
+      "class": "event"
+    },
+    {
+      "text": "proceeded process",
+      "id": "proceeded process",
+      "class": "event"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "fill cheque",
+      "id": "fill cheque",
+      "class": "task"
+    },
+    {
+      "text": "fill expertise",
+      "id": "fill expertise",
+      "class": "task"
+    },
+    {
+      "text": "forward expertise",
+      "id": "forward expertise",
+      "class": "task"
+    },
+    {
+      "text": "fill results",
+      "id": "fill results",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": "received\nexpertise",
+      "id": "received\nexpertise",
+      "class": "messageEvent"
+    },
+    {
+      "text": "ask external expert to review worte of doctor under rating",
+      "id": "ask external expert to review worte of doctor under rating",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "eventBasedGateway_1",
+      "class": "eventBasedGateway"
+    },
+    {
+      "text": "permitted responding time expired",
+      "id": "permitted responding time expired",
+      "class": "timerEvent"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_3",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_4",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_5",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "interview patients",
+      "id": "interview patients",
+      "class": "subProcess"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "permitted responding time expired",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received\nexpertise",
+      "head": "forward expertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "eventBasedGateway_1",
+      "head": "received\nexpertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask external expert to review worte of doctor under rating",
+      "head": "eventBasedGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_5",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "proceeded process",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill cheque",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "fill cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward expertise",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill expertise",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill results",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "fill results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "fill expertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patients",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_5",
+      "head": "interview patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "new case started",
+      "head": "parallelGateway_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "ask external expert to review worte of doctor under rating",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "permitted responding time expired",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask external expert to review worte of doctor under rating",
+      "head": "external experts",
+      "class": "messageFlow",
+      "label": "request"
+    },
+    {
+      "tail": "external experts",
+      "head": "received\nexpertise",
+      "class": "messageFlow",
+      "label": "expertise"
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "external experts",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "nodes": [
+        "quality assurance specialist",
+        "Managing director"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "quality assurance specialist",
+      "nodes": [
+        "new case started",
+        "create report",
+        "fill expertise",
+        "fill results",
+        "parallelGateway_1",
+        "parallelGateway_4",
+        "parallelGateway_5",
+        "interview patients"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Managing director",
+      "nodes": [
+        "proceeded process",
+        "fill cheque",
+        "forward expertise",
+        "parallelGateway_2",
+        "messageEvent_1",
+        "received\nexpertise",
+        "ask external expert to review worte of doctor under rating",
+        "exclusiveGateway_1",
+        "eventBasedGateway_1",
+        "permitted responding time expired",
+        "parallelGateway_3"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "external experts",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

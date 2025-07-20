@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "text": "Produkt",
+      "attributes": null,
+      "methods": null,
+      "id": "Produkt",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Baugruppen",
+      "attributes": null,
+      "methods": null,
+      "id": "Baugruppen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bauteile",
+      "attributes": null,
+      "methods": null,
+      "id": "Bauteile",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Werk",
+      "attributes": null,
+      "methods": null,
+      "id": "Werk",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Produktmanager",
+      "attributes": null,
+      "methods": null,
+      "id": "Produktmanager",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Zulieferer",
+      "attributes": null,
+      "methods": null,
+      "id": "Zulieferer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Schrauben",
+      "attributes": null,
+      "methods": null,
+      "id": "Schrauben",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Mutter",
+      "attributes": null,
+      "methods": null,
+      "id": "Mutter",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Aluprofile",
+      "attributes": null,
+      "methods": null,
+      "id": "Aluprofile",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Produkt",
+      "head": "Baugruppen",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Produkt",
+      "head": "Produktmanager",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Baugruppen",
+      "head": "Bauteile",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Bauteile",
+      "head": "Schrauben",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Bauteile",
+      "head": "Aluprofile",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Werk",
+      "head": "Produkt",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Zulieferer",
+      "head": "Baugruppen",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Zulieferer",
+      "head": "Bauteile",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

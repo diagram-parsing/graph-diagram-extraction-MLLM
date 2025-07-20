@@ -1,0 +1,145 @@
+{
+  "nodes": [
+    {
+      "text": "Assess risk",
+      "id": "Assess risk",
+      "class": "Task"
+    },
+    {
+      "text": "New credit request \nreceived ",
+      "id": "New credit request \nreceived ",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Carry out advanced risk assessment",
+      "id": "Carry out advanced risk assessment",
+      "class": "Task"
+    },
+    {
+      "text": "Carry out simple risk assessment",
+      "id": "Carry out simple risk assessment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Complete assessment",
+      "id": "Complete assessment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Notify costumer with result of assessment",
+      "id": "Notify costumer with result of assessment",
+      "class": "Task"
+    },
+    {
+      "text": "Organise disbursement",
+      "id": "Organise disbursement",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Result of assessment\n is positive",
+      "id": "Result of assessment\n is positive",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Assess risk",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "New credit request \nreceived ",
+      "head": "Assess risk",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Carry out advanced risk assessment",
+      "class": "SequenceFlow",
+      "label": "Risk is above treshold"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Carry out simple risk assessment",
+      "class": "SequenceFlow",
+      "label": "Risk is beneath treshold"
+    },
+    {
+      "tail": "Carry out advanced risk assessment",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Carry out simple risk assessment",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Complete assessment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Complete assessment",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Notify costumer with result of assessment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Organise disbursement",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notify costumer with result of assessment",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Organise disbursement",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Result of assessment\n is positive",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

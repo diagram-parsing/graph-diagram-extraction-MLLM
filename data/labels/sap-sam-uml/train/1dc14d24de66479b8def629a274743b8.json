@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "text": "Antrag",
+      "attributes": [
+        "antragsID: String"
+      ],
+      "methods": null,
+      "id": "Antrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Sozialleistungsträger",
+      "attributes": [
+        "trägerName: String"
+      ],
+      "methods": [
+        "rehaantragPrüfen()",
+        "abrechnungErstellen()",
+        "kostenAntragErmitteln()",
+        "antragAnnehmen()",
+        "antragAblehnen()",
+        "anreisePlanen()"
+      ],
+      "id": "Sozialleistungsträger",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Patient\n",
+      "attributes": [
+        "patientenID: String",
+        "name: String",
+        "vorname: String"
+      ],
+      "methods": [
+        "widerspruchEinlegen()",
+        "antragAusfüllen()"
+      ],
+      "id": "Patient\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Arzt",
+      "attributes": [
+        "arztID: String",
+        "name: String",
+        "vorname: String"
+      ],
+      "methods": [
+        "antragUnterschreiben()",
+        "therapieDurchführen()",
+        "aufnahmeDiagnoseErstellen()",
+        "körperlichUntersuchen()",
+        "therapiezielFestlegen()",
+        "rehabilitationPrüfen()",
+        "therapieziel()",
+        "behandlungBeenden()"
+      ],
+      "id": "Arzt",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "RehaKlinik",
+      "attributes": null,
+      "methods": [
+        "rehabilitationsPlanung()",
+        "patientAufnehmen()",
+        "patientEntlassen()",
+        "behandlungsplanErstellen()",
+        "artztErgebnisseMitteilen ()",
+        "aufenthaltVerlängern()"
+      ],
+      "id": "RehaKlinik",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Alle Beteiligten können als Klasse modeliert werden. Ihre für die Abwicklung relevanten Eigenschaften werden in Form von Methoden und Attributen berücksichtigt. Ebenfalls berüksichtigt werden alle Beziehungen von Rollen zueinander.\nNach Erstellung des Ablaufplans kann der Prozess online mit Beispieldaten simuliert werden.",
+      "attributes": null,
+      "methods": null,
+      "id": "Alle Beteiligten können als Klasse modeliert werden. Ihre für die Abwicklung relevanten Eigenschaften werden in Form von Methoden und Attributen berücksichtigt. Ebenfalls berüksichtigt werden alle Beziehungen von Rollen zueinander.\nNach Erstellung des Ablaufplans kann der Prozess online mit Beispieldaten simuliert werden.",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Antrag",
+      "head": "Sozialleistungsträger",
+      "class": "UndirectedAssociation",
+      "label": "wird bearbeitet"
+    },
+    {
+      "tail": "Antrag",
+      "head": "Arzt",
+      "class": "UndirectedAssociation",
+      "label": "unterschreibt"
+    },
+    {
+      "tail": "Patient\n",
+      "head": "Arzt",
+      "class": "UndirectedAssociation",
+      "label": "wird behandelt"
+    },
+    {
+      "tail": "Patient\n",
+      "head": "Sozialleistungsträger",
+      "class": "UndirectedAssociation",
+      "label": "ist versichert bei"
+    },
+    {
+      "tail": "Patient\n",
+      "head": "Antrag",
+      "class": "UndirectedAssociation",
+      "label": "hat"
+    },
+    {
+      "tail": "Arzt",
+      "head": "RehaKlinik",
+      "class": "UndirectedAssociation",
+      "label": "arbeitet"
+    }
+  ],
+  "groups": []
+}

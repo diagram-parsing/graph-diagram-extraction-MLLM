@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "vaccinazione ",
+      "attributes": [
+        "data: date"
+      ],
+      "methods": null,
+      "id": "vaccinazione ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "bambino",
+      "attributes": null,
+      "methods": null,
+      "id": "bambino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "esenzione",
+      "attributes": null,
+      "methods": null,
+      "id": "esenzione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "famiglia ",
+      "attributes": null,
+      "methods": null,
+      "id": "famiglia ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "scuola",
+      "attributes": null,
+      "methods": null,
+      "id": "scuola",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "obbligo vaccinale",
+      "attributes": null,
+      "methods": null,
+      "id": "obbligo vaccinale",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "vaccinazione ",
+      "head": "obbligo vaccinale",
+      "class": "UndirectedAssociation",
+      "label": "riferita a "
+    },
+    {
+      "tail": "bambino",
+      "head": "scuola",
+      "class": "UndirectedAssociation",
+      "label": "frequenta"
+    },
+    {
+      "tail": "bambino",
+      "head": "esenzione",
+      "class": "UndirectedAssociation",
+      "label": "possiede"
+    },
+    {
+      "tail": "bambino",
+      "head": "vaccinazione ",
+      "class": "UndirectedAssociation",
+      "label": "ha sostenuto"
+    },
+    {
+      "tail": "esenzione",
+      "head": "obbligo vaccinale",
+      "class": "UndirectedAssociation",
+      "label": "per"
+    },
+    {
+      "tail": "famiglia ",
+      "head": "bambino",
+      "class": "UndirectedAssociation",
+      "label": "responsabile per "
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,163 @@
+{
+  "nodes": [
+    {
+      "text": "E-Paper anlegen",
+      "id": "E-Paper anlegen",
+      "class": "Task"
+    },
+    {
+      "text": "neues Magazin benötigt",
+      "id": "neues Magazin benötigt",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Inhalt planen",
+      "id": "Inhalt planen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Kampagne ",
+      "id": "Kampagne ",
+      "class": "DataObject"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Magazin designen ",
+      "id": "Magazin designen ",
+      "class": "Task"
+    },
+    {
+      "text": "Fertiges Magazin",
+      "id": "Fertiges Magazin",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Kampagne einfügen",
+      "id": "Kampagne einfügen",
+      "class": "Task"
+    },
+    {
+      "text": "auf Artikel warten",
+      "id": "auf Artikel warten",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Artikel erstellen",
+      "id": "Artikel erstellen",
+      "class": "CollapsedSubprocess"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "E-Paper anlegen",
+      "head": "Fertiges Magazin",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "neues Magazin benötigt",
+      "head": "Inhalt planen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inhalt planen",
+      "head": "Artikel erstellen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Kampagne einfügen",
+      "class": "SequenceFlow",
+      "label": "Kampagne"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": "keine Kampagne"
+    },
+    {
+      "tail": "Kampagne ",
+      "head": "Kampagne einfügen",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Magazin designen ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Magazin designen ",
+      "head": "E-Paper anlegen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kampagne einfügen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "auf Artikel warten",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Artikel erstellen",
+      "head": "auf Artikel warten",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Fachzeitschriften",
+      "id": "Fachzeitschriften",
+      "nodes": [
+        "i-Info Portal",
+        "Redaktion"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "i-Info Portal",
+      "id": "i-Info Portal",
+      "nodes": [
+        "E-Paper anlegen"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Redaktion",
+      "id": "Redaktion",
+      "nodes": [
+        "neues Magazin benötigt",
+        "Inhalt planen",
+        "Exclusive_Databased_Gateway_1",
+        "Kampagne ",
+        "Exclusive_Databased_Gateway_2",
+        "Magazin designen ",
+        "Fertiges Magazin",
+        "Kampagne einfügen",
+        "auf Artikel warten",
+        "Artikel erstellen"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

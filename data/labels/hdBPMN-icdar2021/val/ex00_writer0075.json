@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "text": "online appplication received",
+      "id": "online appplication received",
+      "class": "event"
+    },
+    {
+      "text": "evaluate application",
+      "id": "evaluate application",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "notify customer",
+      "id": "notify customer",
+      "class": "task"
+    },
+    {
+      "text": "prepare welcome pack",
+      "id": "prepare welcome pack",
+      "class": "task"
+    },
+    {
+      "text": "send bank card",
+      "id": "send bank card",
+      "class": "task"
+    },
+    {
+      "text": "send PIN number",
+      "id": "send PIN number",
+      "class": "task"
+    },
+    {
+      "text": "application approved",
+      "id": "application approved",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "application rejected",
+      "id": "application rejected",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "notify customer",
+      "head": "application rejected",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "evaluate application",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "online appplication received",
+      "head": "evaluate application",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "application approved",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send PIN number",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "send PIN number",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send bank card",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "send bank card",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "prepare welcome pack",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "prepare welcome pack",
+      "class": "sequenceFlow",
+      "label": "approve application"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "notify customer",
+      "class": "sequenceFlow",
+      "label": "reject application"
+    }
+  ],
+  "groups": []
+}

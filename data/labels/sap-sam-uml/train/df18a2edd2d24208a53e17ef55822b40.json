@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "text": "Acquisto",
+      "attributes": [
+        "valore: Currency",
+        "autorizzato: Boolean",
+        "descrizione: String"
+      ],
+      "methods": null,
+      "id": "Acquisto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Preventivo",
+      "attributes": null,
+      "methods": null,
+      "id": "Preventivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ordine",
+      "attributes": [
+        "fornitore: String"
+      ],
+      "methods": null,
+      "id": "Ordine",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Fondo",
+      "attributes": [
+        "disponibile: boolean"
+      ],
+      "methods": null,
+      "id": "Fondo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bando",
+      "attributes": [
+        "dataApertura: Date",
+        "dataChiusura: Date",
+        "verificatoProponente: boolean",
+        "approvazioneDirettore: boolean",
+        "esitoCorteConti: String"
+      ],
+      "methods": null,
+      "id": "Bando",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Offerta",
+      "attributes": null,
+      "methods": null,
+      "id": "Offerta",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Acquisto",
+      "head": "Preventivo",
+      "class": "UndirectedAssociation",
+      "label": "caratterizzato da"
+    },
+    {
+      "tail": "Acquisto",
+      "head": "Fondo",
+      "class": "UndirectedAssociation",
+      "label": "grava su"
+    },
+    {
+      "tail": "Acquisto",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "origina"
+    },
+    {
+      "tail": "Ordine",
+      "head": "Acquisto",
+      "class": "UndirectedAssociation",
+      "label": "di"
+    },
+    {
+      "tail": "Ordine",
+      "head": "Offerta",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Offerta",
+      "head": "Bando",
+      "class": "UndirectedAssociation",
+      "label": "relativa a "
+    }
+  ],
+  "groups": []
+}

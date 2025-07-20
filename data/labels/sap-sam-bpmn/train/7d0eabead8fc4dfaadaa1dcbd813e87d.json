@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "un mese prima\n",
+      "id": "un mese prima\n",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "invia email a residenti per rinnovo",
+      "id": "invia email a residenti per rinnovo",
+      "class": "Task"
+    },
+    {
+      "text": "Ha intenzione di rinnovare?",
+      "id": "Ha intenzione di rinnovare?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "compila il modulo\n",
+      "id": "Task_1",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "compila il modulo\n",
+      "id": "Task_1",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "un mese prima\n",
+      "head": "invia email a residenti per rinnovo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "invia email a residenti per rinnovo",
+      "head": "Ha intenzione di rinnovare?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ha intenzione di rinnovare?",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": "no\n"
+    },
+    {
+      "tail": "Ha intenzione di rinnovare?",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "sì\n"
+    }
+  ],
+  "groups": [
+    {
+      "name": "gtt",
+      "id": "gtt",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "un mese prima\n",
+        "invia email a residenti per rinnovo",
+        "Ha intenzione di rinnovare?",
+        "EndEvent_1",
+        "Task_1",
+        "Task_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

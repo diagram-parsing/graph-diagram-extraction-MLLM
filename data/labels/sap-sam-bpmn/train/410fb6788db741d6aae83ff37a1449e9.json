@@ -1,0 +1,278 @@
+{
+  "nodes": [
+    {
+      "text": "auf vorhandene Datensätze prüfen",
+      "id": "auf vorhandene Datensätze prüfen",
+      "class": "Task"
+    },
+    {
+      "text": "neuer Mitarbeiter\n-datensatz erforderlich",
+      "id": "neuer Mitarbeiter\n-datensatz erforderlich",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "KID aus Mitarbeiterdatensatz übernehmen",
+      "id": "KID aus Mitarbeiterdatensatz übernehmen",
+      "class": "Task"
+    },
+    {
+      "text": "Mitarbeiterdatensatz anlegen (inkl. Personalnummernvergabe)",
+      "id": "Mitarbeiterdatensatz anlegen (inkl. Personalnummernvergabe)",
+      "class": "Task"
+    },
+    {
+      "text": "Daten aus Personalfragebogen erfassen",
+      "id": "Daten aus Personalfragebogen erfassen",
+      "class": "Task"
+    },
+    {
+      "text": "Daten aus personeller EInzelmaßname übernehmen",
+      "id": "Daten aus personeller EInzelmaßname übernehmen",
+      "class": "Task"
+    },
+    {
+      "text": "Daten gemäß vorgelegter Nachweise erfassen",
+      "id": "Daten gemäß vorgelegter Nachweise erfassen",
+      "class": "Task"
+    },
+    {
+      "text": "erfasste Daten prüfen",
+      "id": "erfasste Daten prüfen",
+      "class": "Task"
+    },
+    {
+      "text": "Daten korrigieren",
+      "id": "Daten korrigieren",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Abrechnung simulieren",
+      "id": "Abrechnung simulieren",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Personalabrechnung",
+      "id": "Personalabrechnung",
+      "class": "IntermediateLinkEventThrowing"
+    },
+    {
+      "text": "Anlage externe Person \nmit beschränkten Rechten",
+      "id": "Anlage externe Person \nmit beschränkten Rechten",
+      "class": "IntermediateLinkEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventCatching_1",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Personalnummern ohne KID identifizieren",
+      "id": "Personalnummern ohne KID identifizieren",
+      "class": "Task"
+    },
+    {
+      "text": "KID generieren",
+      "id": "KID generieren",
+      "class": "Task"
+    },
+    {
+      "text": "KID und Mitarbeiterstammdaten übertragen (AD)",
+      "id": "KID und Mitarbeiterstammdaten übertragen (AD)",
+      "class": "Task"
+    },
+    {
+      "text": "MA angelegt im AD",
+      "id": "MA angelegt im AD",
+      "class": "IntermediateLinkEventThrowing"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "auf vorhandene Datensätze prüfen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "neuer Mitarbeiter\n-datensatz erforderlich",
+      "head": "auf vorhandene Datensätze prüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "KID aus Mitarbeiterdatensatz übernehmen",
+      "class": "SequenceFlow",
+      "label": "Datensatz\n vorhanden"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Mitarbeiterdatensatz anlegen (inkl. Personalnummernvergabe)",
+      "class": "SequenceFlow",
+      "label": "kein \nDatensatz\n vorhanden"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Anlage externe Person \nmit beschränkten Rechten",
+      "class": "SequenceFlow",
+      "label": "externe Person"
+    },
+    {
+      "tail": "KID aus Mitarbeiterdatensatz übernehmen",
+      "head": "Daten aus Personalfragebogen erfassen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Mitarbeiterdatensatz anlegen (inkl. Personalnummernvergabe)",
+      "head": "IntermediateMessageEventCatching_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Daten aus Personalfragebogen erfassen",
+      "head": "Daten aus personeller EInzelmaßname übernehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Daten aus personeller EInzelmaßname übernehmen",
+      "head": "Daten gemäß vorgelegter Nachweise erfassen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Daten gemäß vorgelegter Nachweise erfassen",
+      "head": "erfasste Daten prüfen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "erfasste Daten prüfen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Daten korrigieren",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Daten korrigieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Abrechnung simulieren",
+      "head": "Personalabrechnung",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Abrechnung simulieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventCatching_1",
+      "head": "Personalnummern ohne KID identifizieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Personalnummern ohne KID identifizieren",
+      "head": "KID generieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "KID generieren",
+      "head": "KID und Mitarbeiterstammdaten übertragen (AD)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "KID und Mitarbeiterstammdaten übertragen (AD)",
+      "head": "MA angelegt im AD",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "SB Personalmanagement",
+      "id": "SB Personalmanagement",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "auf vorhandene Datensätze prüfen",
+        "neuer Mitarbeiter\n-datensatz erforderlich",
+        "Exclusive_Databased_Gateway_1",
+        "KID aus Mitarbeiterdatensatz übernehmen",
+        "Mitarbeiterdatensatz anlegen (inkl. Personalnummernvergabe)",
+        "Daten aus Personalfragebogen erfassen",
+        "Daten aus personeller EInzelmaßname übernehmen",
+        "Daten gemäß vorgelegter Nachweise erfassen",
+        "erfasste Daten prüfen",
+        "Daten korrigieren",
+        "Exclusive_Databased_Gateway_2",
+        "Abrechnung simulieren",
+        "Exclusive_Databased_Gateway_3",
+        "Personalabrechnung",
+        "Anlage externe Person \nmit beschränkten Rechten",
+        "IntermediateMessageEventCatching_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "IDM",
+      "id": "IDM",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Personalnummern ohne KID identifizieren",
+        "KID generieren",
+        "KID und Mitarbeiterstammdaten übertragen (AD)",
+        "MA angelegt im AD"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

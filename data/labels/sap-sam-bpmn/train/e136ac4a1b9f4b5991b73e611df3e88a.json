@@ -1,0 +1,291 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Depositar",
+      "id": "Depositar",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Reponer",
+      "id": "Reponer",
+      "class": "Task"
+    },
+    {
+      "text": "Comprobar doc.",
+      "id": "Comprobar doc.",
+      "class": "Task"
+    },
+    {
+      "text": "correcta?",
+      "id": "correcta?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Remitir a terceiro ciclo",
+      "id": "Remitir a terceiro ciclo",
+      "class": "Task"
+    },
+    {
+      "text": "Autorizar",
+      "id": "Autorizar",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Comprobar documentación",
+      "id": "Comprobar documentación",
+      "class": "Task"
+    },
+    {
+      "text": "Enviar comunicado",
+      "id": "Enviar comunicado",
+      "class": "Task"
+    },
+    {
+      "text": "Enviar tese avaliadores",
+      "id": "Enviar tese avaliadores",
+      "class": "Task"
+    },
+    {
+      "text": "Autorizar defensa",
+      "id": "Autorizar defensa",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Enviar informe",
+      "id": "Enviar informe",
+      "class": "Task"
+    },
+    {
+      "text": "Enviar actas",
+      "id": "Enviar actas",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_3",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Depositar",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Depositar",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Comprobar doc.",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Reponer",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Comprobar doc.",
+      "head": "correcta?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "correcta?",
+      "head": "Reponer",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "correcta?",
+      "head": "Autorizar",
+      "class": "SequenceFlow",
+      "label": "si"
+    },
+    {
+      "tail": "Remitir a terceiro ciclo",
+      "head": "Comprobar documentación",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Autorizar",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Remitir a terceiro ciclo",
+      "class": "SequenceFlow",
+      "label": "si"
+    },
+    {
+      "tail": "Comprobar documentación",
+      "head": "Enviar comunicado",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Enviar comunicado",
+      "head": "Enviar tese avaliadores",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Enviar tese avaliadores",
+      "head": "Enviar informe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Autorizar defensa",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Enviar actas",
+      "class": "SequenceFlow",
+      "label": "si"
+    },
+    {
+      "tail": "Enviar informe",
+      "head": "Autorizar defensa",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Enviar actas",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Tese Doutoramento",
+      "id": "Tese Doutoramento",
+      "nodes": [
+        "Estudiante",
+        "Unidad administartiva",
+        "Coordinador doctoramiento",
+        "Tercer ciclo",
+        "Avaliadores",
+        "Secretario tribunal"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Estudiante",
+      "id": "Estudiante",
+      "nodes": [
+        "StartEvent_1",
+        "Depositar",
+        "Exclusive_Databased_Gateway_1",
+        "Reponer"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Unidad administartiva",
+      "id": "Unidad administartiva",
+      "nodes": [
+        "Comprobar doc.",
+        "correcta?",
+        "Remitir a terceiro ciclo"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Coordinador doctoramiento",
+      "id": "Coordinador doctoramiento",
+      "nodes": [
+        "Autorizar",
+        "Exclusive_Databased_Gateway_2",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Tercer ciclo",
+      "id": "Tercer ciclo",
+      "nodes": [
+        "Comprobar documentación",
+        "Enviar comunicado",
+        "Enviar tese avaliadores",
+        "Autorizar defensa",
+        "Exclusive_Databased_Gateway_3",
+        "EndEvent_2"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Avaliadores",
+      "id": "Avaliadores",
+      "nodes": [
+        "Enviar informe"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Secretario tribunal",
+      "id": "Secretario tribunal",
+      "nodes": [
+        "Enviar actas",
+        "EndEvent_3"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "text": "beim Kunden nachfragen",
+      "id": "beim Kunden nachfragen",
+      "class": "Task"
+    },
+    {
+      "text": "Alte Kunde befragen",
+      "id": "Alte Kunde befragen",
+      "class": "Task"
+    },
+    {
+      "text": "neue Kunden gewinnen",
+      "id": "neue Kunden gewinnen",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Aktuelle Kunden befragen",
+      "id": "Aktuelle Kunden befragen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Informationsmaterial und Referenzen senden",
+      "id": "Informationsmaterial und Referenzen senden",
+      "class": "Task"
+    },
+    {
+      "text": "Neue Kunden gewinnen",
+      "id": "Neue Kunden gewinnen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Protokoll führen",
+      "id": "Protokoll führen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_3",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Protokoll ablegen",
+      "id": "Protokoll ablegen",
+      "class": "Task"
+    },
+    {
+      "text": "Projektordner",
+      "id": "Projektordner",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "beim Kunden nachfragen",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Alte Kunde befragen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "neue Kunden gewinnen",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Alte Kunde befragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Aktuelle Kunden befragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aktuelle Kunden befragen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Neue Kunden gewinnen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Informationsmaterial und Referenzen senden",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Neue Kunden gewinnen",
+      "head": "Informationsmaterial und Referenzen senden",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "beim Kunden nachfragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Protokoll führen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "beim Kunden nachfragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Protokoll führen",
+      "head": "AND_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_3",
+      "head": "Protokoll ablegen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Protokoll ablegen",
+      "head": "Projektordner",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Projektordner",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "N.Nader",
+      "id": "N.Nader",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "neue Kunden gewinnen",
+        "AND_Gateway_1",
+        "Aktuelle Kunden befragen",
+        "Exclusive_Databased_Gateway_1",
+        "Informationsmaterial und Referenzen senden",
+        "Neue Kunden gewinnen",
+        "AND_Gateway_2",
+        "Protokoll führen",
+        "AND_Gateway_3",
+        "Protokoll ablegen",
+        "Projektordner",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

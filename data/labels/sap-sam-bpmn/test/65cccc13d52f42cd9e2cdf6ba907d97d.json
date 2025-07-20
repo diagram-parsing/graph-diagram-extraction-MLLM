@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Auftragseingang",
+      "id": "Auftragseingang",
+      "class": "Task"
+    },
+    {
+      "text": "Bonitätscheck",
+      "id": "Bonitätscheck",
+      "class": "Task"
+    },
+    {
+      "text": "Auftragsbestätigung/Ware bestellen",
+      "id": "Auftragsbestätigung/Ware bestellen",
+      "class": "Task"
+    },
+    {
+      "text": "Kundeninformation/Rechnung erstellen",
+      "id": "Kundeninformation/Rechnung erstellen",
+      "class": "Task"
+    },
+    {
+      "text": "Abholung der Ware",
+      "id": "Abholung der Ware",
+      "class": "Task"
+    },
+    {
+      "text": "Ende",
+      "id": "Ende",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Wareneingang",
+      "id": "Wareneingang",
+      "class": "IntermediateEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Auftragseingang",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftragseingang",
+      "head": "Bonitätscheck",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bonitätscheck",
+      "head": "Auftragsbestätigung/Ware bestellen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auftragsbestätigung/Ware bestellen",
+      "head": "Wareneingang",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kundeninformation/Rechnung erstellen",
+      "head": "Abholung der Ware",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Abholung der Ware",
+      "head": "Ende",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Wareneingang",
+      "head": "Kundeninformation/Rechnung erstellen",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

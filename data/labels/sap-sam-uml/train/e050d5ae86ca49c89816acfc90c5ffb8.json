@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "text": "scuola",
+      "attributes": [
+        "codice: string",
+        "livello: string",
+        "info: string",
+        ": ",
+        ": "
+      ],
+      "methods": null,
+      "id": "scuola",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "modulo",
+      "attributes": [
+        "ore: int"
+      ],
+      "methods": null,
+      "id": "modulo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "genitore",
+      "attributes": [
+        "valido: boolean"
+      ],
+      "methods": null,
+      "id": "genitore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "domanda",
+      "attributes": null,
+      "methods": null,
+      "id": "domanda",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "bambino",
+      "attributes": [
+        ": ",
+        ": ",
+        ": ",
+        ": ",
+        ": "
+      ],
+      "methods": null,
+      "id": "bambino",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "classe",
+      "attributes": null,
+      "methods": null,
+      "id": "classe",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "preferenza",
+      "attributes": [
+        "preferenza: enum"
+      ],
+      "methods": null,
+      "id": "preferenza",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "scuola",
+      "head": "modulo",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "modulo",
+      "head": "classe",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "genitore",
+      "head": "domanda",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "domanda",
+      "head": "bambino",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "domanda",
+      "head": "scuola",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "domanda",
+      "head": "modulo",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "bambino",
+      "head": "scuola",
+      "class": "UndirectedAssociation",
+      "label": "proviene da"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,157 @@
+{
+  "nodes": [
+    {
+      "text": "studente",
+      "attributes": [
+        "nome: String",
+        "matricola: String"
+      ],
+      "methods": null,
+      "id": "studente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "azienda convenzionata",
+      "attributes": [
+        "nome: String",
+        "IDazienda: String"
+      ],
+      "methods": null,
+      "id": "azienda convenzionata",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "docente",
+      "attributes": [
+        "nome: String",
+        "IDdocente: String",
+        ": "
+      ],
+      "methods": null,
+      "id": "docente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "questionario valutazione tutor aziendale",
+      "attributes": [
+        "dataCompilazione: Date"
+      ],
+      "methods": null,
+      "id": "questionario valutazione tutor aziendale",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "progetto formativo",
+      "attributes": [
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "progetto formativo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tirocinio",
+      "attributes": [
+        "dataInizio: Date",
+        "dataFine: Date",
+        "voto: Int",
+        "correttezzaFormale: boolean",
+        "firmaTutoreAziendale: String",
+        "firmaTutoreAccademico: String",
+        "registrato: boolean"
+      ],
+      "methods": null,
+      "id": "tirocinio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "dipendente",
+      "attributes": [
+        "IDdipendente: String"
+      ],
+      "methods": null,
+      "id": "dipendente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tutor aziendale non ancora assegnato a quel progetto: 0",
+      "attributes": null,
+      "methods": null,
+      "id": "tutor aziendale non ancora assegnato a quel progetto: 0",
+      "class": "Note"
+    },
+    {
+      "text": "questionario valutazione studente",
+      "attributes": [
+        "dataCompilazione: Date"
+      ],
+      "methods": null,
+      "id": "questionario valutazione studente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "presenza",
+      "attributes": [
+        "giorno: Date",
+        "oraInizio: time",
+        "oraFine: time",
+        "firmaStudente: boolean",
+        "firmaTutore: boolean"
+      ],
+      "methods": null,
+      "id": "presenza",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "studente",
+      "head": "tirocinio",
+      "class": "UndirectedAssociation",
+      "label": "richiede"
+    },
+    {
+      "tail": "docente",
+      "head": "tirocinio",
+      "class": "UndirectedAssociation",
+      "label": "tutoreNel"
+    },
+    {
+      "tail": "questionario valutazione tutor aziendale",
+      "head": "tirocinio",
+      "class": "UndirectedAssociation",
+      "label": "valutazioneDi"
+    },
+    {
+      "tail": "progetto formativo",
+      "head": "azienda convenzionata",
+      "class": "UndirectedAssociation",
+      "label": "predispostoDa"
+    },
+    {
+      "tail": "progetto formativo",
+      "head": "tirocinio",
+      "class": "UndirectedAssociation",
+      "label": "riferitoA"
+    },
+    {
+      "tail": "dipendente",
+      "head": "progetto formativo",
+      "class": "UndirectedAssociation",
+      "label": "tutoreNel"
+    },
+    {
+      "tail": "questionario valutazione studente",
+      "head": "tirocinio",
+      "class": "UndirectedAssociation",
+      "label": "valutazioneDi"
+    },
+    {
+      "tail": "presenza",
+      "head": "tirocinio",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,189 @@
+{
+  "nodes": [
+    {
+      "text": "order received",
+      "id": "order received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "receive order via Lieferando",
+      "id": "receive order via Lieferando",
+      "class": "task"
+    },
+    {
+      "text": "receive order via Website",
+      "id": "receive order via Website",
+      "class": "task"
+    },
+    {
+      "text": "take order by phone",
+      "id": "take order by phone",
+      "class": "task"
+    },
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "write note",
+      "id": "write note",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "attach order",
+      "id": "attach order",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "Order note",
+      "id": "Order note",
+      "class": "dataObject"
+    },
+    {
+      "text": "Order print out",
+      "id": "Order print out",
+      "class": "dataObject"
+    },
+    {
+      "text": "Order document",
+      "id": "Order document",
+      "class": "dataObject"
+    },
+    {
+      "text": "Pinboard",
+      "id": "Pinboard",
+      "class": "dataStore"
+    },
+    {
+      "text": "Order accepted",
+      "id": "Order accepted",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "receive order via Website",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write note",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "take order by phone",
+      "head": "write note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "take order by phone",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "receive order via Website",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attach order",
+      "head": "Order accepted",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "attach order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive order via Lieferando",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "receive order via Lieferando",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order received",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write note",
+      "head": "Order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "Order print out",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Order document",
+      "head": "attach order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "attach order",
+      "head": "Pinboard",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

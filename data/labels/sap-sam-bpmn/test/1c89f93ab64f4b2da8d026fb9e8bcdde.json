@@ -1,0 +1,278 @@
+{
+  "nodes": [
+    {
+      "text": "Kunde möchte Mitarbeiter fördern\n",
+      "id": "Kunde möchte Mitarbeiter fördern\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Kunde formuliert Anforderungen an Seminar\n",
+      "id": "Kunde formuliert Anforderungen an Seminar\n",
+      "class": "Task"
+    },
+    {
+      "text": "Kunde versendet Anfrage",
+      "id": "Kunde versendet Anfrage",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "Kunde erwartet Angebot",
+      "id": "Kunde erwartet Angebot",
+      "class": "Task"
+    },
+    {
+      "text": "Erhält Angebot\n",
+      "id": "Erhält Angebot\n",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Nimmt Angebot an?",
+      "id": "Nimmt Angebot an?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_1",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_2",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Anfrage abgeschlossen",
+      "id": "Anfrage abgeschlossen",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Erhält Anfrage",
+      "id": "Erhält Anfrage",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Erarbeitet ein Angebot\n",
+      "id": "Erarbeitet ein Angebot\n",
+      "class": "Task"
+    },
+    {
+      "text": "Versendet Angebot",
+      "id": "Versendet Angebot",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_1",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "Zusage",
+      "id": "Zusage",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "Absage",
+      "id": "Absage",
+      "class": "IntermediateMessageEventCatching"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde möchte Mitarbeiter fördern\n",
+      "head": "Kunde formuliert Anforderungen an Seminar\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunde formuliert Anforderungen an Seminar\n",
+      "head": "Kunde versendet Anfrage",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunde versendet Anfrage",
+      "head": "Erhält Anfrage",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunde versendet Anfrage",
+      "head": "Kunde erwartet Angebot",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunde erwartet Angebot",
+      "head": "Erhält Angebot\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Erhält Angebot\n",
+      "head": "Nimmt Angebot an?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Nimmt Angebot an?",
+      "head": "IntermediateMessageEventThrowing_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Nimmt Angebot an?",
+      "head": "IntermediateMessageEventThrowing_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Zusage",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_2",
+      "head": "Absage",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_2",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Anfrage abgeschlossen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Erhält Anfrage",
+      "head": "Erarbeitet ein Angebot\n",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Erarbeitet ein Angebot\n",
+      "head": "Versendet Angebot",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Versendet Angebot",
+      "head": "Erhält Angebot\n",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Versendet Angebot",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Absage",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Zusage",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Zusage",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Absage",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Kunde",
+      "id": "Kunde",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Kunde möchte Mitarbeiter fördern\n",
+        "Kunde formuliert Anforderungen an Seminar\n",
+        "Kunde versendet Anfrage",
+        "Kunde erwartet Angebot",
+        "Erhält Angebot\n",
+        "Nimmt Angebot an?",
+        "IntermediateMessageEventThrowing_1",
+        "IntermediateMessageEventThrowing_2",
+        "Exclusive_Databased_Gateway_1",
+        "Anfrage abgeschlossen"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Unversität",
+      "id": "Unversität",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Erhält Anfrage",
+        "Erarbeitet ein Angebot\n",
+        "Versendet Angebot",
+        "Exclusive_Eventbased_Gateway_1",
+        "Zusage",
+        "Absage",
+        "Exclusive_Databased_Gateway_2",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

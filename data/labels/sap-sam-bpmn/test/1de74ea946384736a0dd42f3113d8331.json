@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "text": "i",
+      "id": "i",
+      "class": "Task"
+    },
+    {
+      "text": "c1 + c2",
+      "id": "c1 + c2",
+      "class": "Task"
+    },
+    {
+      "text": "C1 + C4",
+      "id": "C1 + C4",
+      "class": "Task"
+    },
+    {
+      "text": "C2 + C3",
+      "id": "C2 + C3",
+      "class": "Task"
+    },
+    {
+      "text": "C1 + C6",
+      "id": "C1 + C6",
+      "class": "Task"
+    },
+    {
+      "text": "C1 + C7",
+      "id": "C1 + C7",
+      "class": "Task"
+    },
+    {
+      "text": "C3 + C4",
+      "id": "C3 + C4",
+      "class": "Task"
+    },
+    {
+      "text": "C2 + C5",
+      "id": "C2 + C5",
+      "class": "Task"
+    },
+    {
+      "text": "C4 + C5",
+      "id": "C4 + C5",
+      "class": "Task"
+    },
+    {
+      "text": "c3 + C7",
+      "id": "c3 + C7",
+      "class": "Task"
+    },
+    {
+      "text": "C3 + C6",
+      "id": "C3 + C6",
+      "class": "Task"
+    },
+    {
+      "text": "C5 + C7",
+      "id": "C5 + C7",
+      "class": "Task"
+    },
+    {
+      "text": "C5 + C8",
+      "id": "C5 + C8",
+      "class": "Task"
+    },
+    {
+      "text": "C5 + C9",
+      "id": "C5 + C9",
+      "class": "Task"
+    },
+    {
+      "text": "C5 + C6",
+      "id": "C5 + C6",
+      "class": "Task"
+    },
+    {
+      "text": "o",
+      "id": "o",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "i",
+      "head": "c1 + c2",
+      "class": "SequenceFlow",
+      "label": "t1"
+    },
+    {
+      "tail": "c1 + c2",
+      "head": "C1 + C4",
+      "class": "SequenceFlow",
+      "label": "t3"
+    },
+    {
+      "tail": "c1 + c2",
+      "head": "C2 + C3",
+      "class": "SequenceFlow",
+      "label": "t2"
+    },
+    {
+      "tail": "C1 + C4",
+      "head": "C1 + C6",
+      "class": "SequenceFlow",
+      "label": "t7"
+    },
+    {
+      "tail": "C1 + C4",
+      "head": "C1 + C7",
+      "class": "SequenceFlow",
+      "label": "t9"
+    },
+    {
+      "tail": "C1 + C4",
+      "head": "C3 + C4",
+      "class": "SequenceFlow",
+      "label": "t2"
+    },
+    {
+      "tail": "C2 + C3",
+      "head": "C3 + C4",
+      "class": "SequenceFlow",
+      "label": "t3"
+    },
+    {
+      "tail": "C2 + C3",
+      "head": "C2 + C5",
+      "class": "SequenceFlow",
+      "label": "t4"
+    },
+    {
+      "tail": "C1 + C6",
+      "head": "C3 + C6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C1 + C7",
+      "head": "c3 + C7",
+      "class": "SequenceFlow",
+      "label": "t2"
+    },
+    {
+      "tail": "C3 + C4",
+      "head": "C4 + C5",
+      "class": "SequenceFlow",
+      "label": "t4"
+    },
+    {
+      "tail": "C3 + C4",
+      "head": "c3 + C7",
+      "class": "SequenceFlow",
+      "label": "t9"
+    },
+    {
+      "tail": "C3 + C4",
+      "head": "C3 + C6",
+      "class": "SequenceFlow",
+      "label": "t7"
+    },
+    {
+      "tail": "C2 + C5",
+      "head": "C2 + C3",
+      "class": "SequenceFlow",
+      "label": "t5"
+    },
+    {
+      "tail": "C2 + C5",
+      "head": "C4 + C5",
+      "class": "SequenceFlow",
+      "label": "t3"
+    },
+    {
+      "tail": "C4 + C5",
+      "head": "C3 + C4",
+      "class": "SequenceFlow",
+      "label": "t5"
+    },
+    {
+      "tail": "C4 + C5",
+      "head": "C5 + C7",
+      "class": "SequenceFlow",
+      "label": "t9"
+    },
+    {
+      "tail": "C4 + C5",
+      "head": "C5 + C9",
+      "class": "SequenceFlow",
+      "label": "t7"
+    },
+    {
+      "tail": "c3 + C7",
+      "head": "C5 + C7",
+      "class": "SequenceFlow",
+      "label": "t4"
+    },
+    {
+      "tail": "c3 + C7",
+      "head": "C5 + C7",
+      "class": "SequenceFlow",
+      "label": "t5"
+    },
+    {
+      "tail": "C3 + C6",
+      "head": "C5 + C6",
+      "class": "SequenceFlow",
+      "label": "t4"
+    },
+    {
+      "tail": "C3 + C6",
+      "head": "C5 + C6",
+      "class": "SequenceFlow",
+      "label": "t5"
+    },
+    {
+      "tail": "C5 + C7",
+      "head": "C5 + C8",
+      "class": "SequenceFlow",
+      "label": "t10"
+    },
+    {
+      "tail": "C5 + C8",
+      "head": "C5 + C9",
+      "class": "SequenceFlow",
+      "label": "11"
+    },
+    {
+      "tail": "C5 + C9",
+      "head": "C5 + C6",
+      "class": "SequenceFlow",
+      "label": "t8"
+    },
+    {
+      "tail": "C5 + C9",
+      "head": "C5 + C7",
+      "class": "SequenceFlow",
+      "label": "t12"
+    },
+    {
+      "tail": "C5 + C6",
+      "head": "o",
+      "class": "SequenceFlow",
+      "label": "t6"
+    }
+  ],
+  "groups": []
+}

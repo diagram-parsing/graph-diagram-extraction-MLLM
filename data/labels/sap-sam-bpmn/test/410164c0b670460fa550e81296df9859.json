@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "text": "CRS checks the defects",
+      "id": "CRS checks the defects",
+      "class": "Task"
+    },
+    {
+      "text": "Customer Brought a defective comp[uter",
+      "id": "Customer Brought a defective comp[uter",
+      "class": "StartEvent"
+    },
+    {
+      "text": "hand out repair cost calculation to customer",
+      "id": "hand out repair cost calculation to customer",
+      "class": "Task"
+    },
+    {
+      "text": "Customer decides if the cost acceptable",
+      "id": "Customer decides if the cost acceptable",
+      "class": "Task"
+    },
+    {
+      "text": "Acceptable?",
+      "id": "Acceptable?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Customer takes computer unimpaired ",
+      "id": "Customer takes computer unimpaired ",
+      "class": "Task"
+    },
+    {
+      "text": "Process continues",
+      "id": "Process continues",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "CRS checks the defects",
+      "head": "hand out repair cost calculation to customer",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Customer Brought a defective comp[uter",
+      "head": "CRS checks the defects",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "hand out repair cost calculation to customer",
+      "head": "Customer decides if the cost acceptable",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Customer decides if the cost acceptable",
+      "head": "Acceptable?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Acceptable?",
+      "head": "Customer takes computer unimpaired ",
+      "class": "SequenceFlow",
+      "label": "No"
+    },
+    {
+      "tail": "Acceptable?",
+      "head": "Process continues",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

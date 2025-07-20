@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "text": "Prozentual reduzierte \nPerformance der \nUse Case Gruppe \nim Fehlerfall",
+      "id": "Prozentual reduzierte \nPerformance der \nUse Case Gruppe \nim Fehlerfall",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Prozentuale Performancegrenze für Use Case Gruppen festlegen",
+      "id": "Prozentuale Performancegrenze für Use Case Gruppen festlegen",
+      "class": "Task"
+    },
+    {
+      "text": "Performance im \nFehlerfall höher \nals Performancegrenze?",
+      "id": "Performance im \nFehlerfall höher \nals Performancegrenze?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Use Case Gruppe auf Reaktion \"Vollabschaltung\" setzen",
+      "id": "Use Case Gruppe auf Reaktion \"Vollabschaltung\" setzen",
+      "class": "Task"
+    },
+    {
+      "text": "K.O. Kriterium überprüfen",
+      "id": "K.O. Kriterium überprüfen",
+      "class": "Task"
+    },
+    {
+      "text": "Alle Use Cases mit \nK.O. Kriterium innerhalb \nder Use Case Gruppe \nnoch möglich?",
+      "id": "Alle Use Cases mit \nK.O. Kriterium innerhalb \nder Use Case Gruppe \nnoch möglich?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Use Case Gruppe auf Reaktion \"Vollabschaltung\" setzen",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": "Use Case Gruppe auf Reaktion \"Volle Funktion\" setzen",
+      "id": "Use Case Gruppe auf Reaktion \"Volle Funktion\" setzen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Reaktion der\n Use Case Gruppe",
+      "id": "Reaktion der\n Use Case Gruppe",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Prozentual reduzierte \nPerformance der \nUse Case Gruppe \nim Fehlerfall",
+      "head": "Prozentuale Performancegrenze für Use Case Gruppen festlegen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prozentuale Performancegrenze für Use Case Gruppen festlegen",
+      "head": "Performance im \nFehlerfall höher \nals Performancegrenze?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Performance im \nFehlerfall höher \nals Performancegrenze?",
+      "head": "Use Case Gruppe auf Reaktion \"Vollabschaltung\" setzen",
+      "class": "SequenceFlow",
+      "label": "Nein"
+    },
+    {
+      "tail": "Performance im \nFehlerfall höher \nals Performancegrenze?",
+      "head": "K.O. Kriterium überprüfen",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "Use Case Gruppe auf Reaktion \"Vollabschaltung\" setzen",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "K.O. Kriterium überprüfen",
+      "head": "Alle Use Cases mit \nK.O. Kriterium innerhalb \nder Use Case Gruppe \nnoch möglich?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Alle Use Cases mit \nK.O. Kriterium innerhalb \nder Use Case Gruppe \nnoch möglich?",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "Nein"
+    },
+    {
+      "tail": "Alle Use Cases mit \nK.O. Kriterium innerhalb \nder Use Case Gruppe \nnoch möglich?",
+      "head": "Use Case Gruppe auf Reaktion \"Volle Funktion\" setzen",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "Task_1",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Use Case Gruppe auf Reaktion \"Volle Funktion\" setzen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Reaktion der\n Use Case Gruppe",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

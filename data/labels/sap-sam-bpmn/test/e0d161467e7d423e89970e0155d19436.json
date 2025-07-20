@@ -1,0 +1,217 @@
+{
+  "nodes": [
+    {
+      "text": "Claim received",
+      "id": "Claim received",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Create claim",
+      "id": "Create claim",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Record claim",
+      "id": "Record claim",
+      "class": "Task"
+    },
+    {
+      "text": "Decide on \nclaim",
+      "id": "Decide on \nclaim",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Reject claim",
+      "id": "Reject claim",
+      "class": "Task"
+    },
+    {
+      "text": "Review claim\nrejection",
+      "id": "Review claim\nrejection",
+      "class": "Task"
+    },
+    {
+      "text": "Offer benefit",
+      "id": "Offer benefit",
+      "class": "Task"
+    },
+    {
+      "text": "Prepare claim\ndischarge",
+      "id": "Prepare claim\ndischarge",
+      "class": "Task"
+    },
+    {
+      "text": "Record benefit\npayment",
+      "id": "Record benefit\npayment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "Operate outgoing payment",
+      "id": "Operate outgoing payment",
+      "class": "Task"
+    },
+    {
+      "text": "Close claim",
+      "id": "Close claim",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Claim handled",
+      "id": "Claim handled",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Claim received",
+      "head": "Create claim",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Create claim",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Record claim",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Record claim",
+      "head": "Decide on \nclaim",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Decide on \nclaim",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Offer benefit",
+      "class": "SequenceFlow",
+      "label": "Claim\nto be \naccepted"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Reject claim",
+      "class": "SequenceFlow",
+      "label": "Claim to \nbe rejected"
+    },
+    {
+      "tail": "Reject claim",
+      "head": "Review claim\nrejection",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Review claim\nrejection",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Offer benefit",
+      "head": "Prepare claim\ndischarge",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prepare claim\ndischarge",
+      "head": "Record benefit\npayment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Record benefit\npayment",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": "claim rejection accepted"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "claim rejection not accepted"
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Operate outgoing payment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "Close claim",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Operate outgoing payment",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Close claim",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_4",
+      "head": "Claim handled",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

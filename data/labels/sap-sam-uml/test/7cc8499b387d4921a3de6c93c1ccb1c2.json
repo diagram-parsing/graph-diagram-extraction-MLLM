@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Assegnazione",
+      "attributes": [
+        "nome risorsa: ",
+        "nome assegnazione: ",
+        "start assegnazione: ",
+        "stop assegnazione: "
+      ],
+      "methods": null,
+      "id": "Assegnazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Risorsa",
+      "attributes": [
+        "nome risorsa: ",
+        "assegnazioni: lista"
+      ],
+      "methods": null,
+      "id": "Risorsa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Attività",
+      "attributes": [
+        "nome attivita: ",
+        "assegnazioni: Lista"
+      ],
+      "methods": null,
+      "id": "Attività",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Manager",
+      "attributes": [
+        "risorse: TreeMap",
+        "attività: TreeMap",
+        "assegnazioni: Lista"
+      ],
+      "methods": [
+        "addRisorsa()",
+        "addAttività()",
+        "addAssegnazione()"
+      ],
+      "id": "Manager",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Main",
+      "attributes": null,
+      "methods": null,
+      "id": "Main",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Assegnazione",
+      "head": "Attività",
+      "class": "DirectedAssociation",
+      "label": "riferita a una"
+    },
+    {
+      "tail": "Assegnazione",
+      "head": "Risorsa",
+      "class": "DirectedAssociation",
+      "label": "riferita a una"
+    },
+    {
+      "tail": "Manager",
+      "head": "Assegnazione",
+      "class": "DirectedAssociation",
+      "label": "crea la"
+    },
+    {
+      "tail": "Manager",
+      "head": "Attività",
+      "class": "DirectedAssociation",
+      "label": "crea la"
+    },
+    {
+      "tail": "Manager",
+      "head": "Risorsa",
+      "class": "DirectedAssociation",
+      "label": "crea la "
+    },
+    {
+      "tail": "Main",
+      "head": "Manager",
+      "class": "DirectedAssociation",
+      "label": "istanzia un"
+    }
+  ],
+  "groups": []
+}

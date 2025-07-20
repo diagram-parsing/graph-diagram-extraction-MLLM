@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "text": "parte in \nRichiesta \ndi Rimborso\n",
+      "id": "parte in \nRichiesta \ndi Rimborso\n",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Creazione account",
+      "id": "Creazione account",
+      "class": "Task"
+    },
+    {
+      "text": "account\n esiste?",
+      "id": "account\n esiste?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Verifica esistenza account",
+      "id": "Verifica esistenza account",
+      "class": "Task"
+    },
+    {
+      "text": "Approvazione automatica",
+      "id": "Approvazione automatica",
+      "class": "Task"
+    },
+    {
+      "text": "Importo \n< 200€?",
+      "id": "Importo \n< 200€?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Trasferimento credito",
+      "id": "Trasferimento credito",
+      "class": "Task"
+    },
+    {
+      "text": "Approvazione superiore",
+      "id": "Approvazione superiore",
+      "class": "Task"
+    },
+    {
+      "text": "Notifica Rifiuto\nEvento \"send message\"\nNon sappiamo chi la\ninvia comunque",
+      "id": "Notifica Rifiuto\nEvento \"send message\"\nNon sappiamo chi la\ninvia comunque",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "Approvato?",
+      "id": "Approvato?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parte in \nRichiesta \ndi Rimborso\n",
+      "head": "Verifica esistenza account",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Creazione account",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "account\n esiste?",
+      "head": "Creazione account",
+      "class": "SequenceFlow",
+      "label": "no\n"
+    },
+    {
+      "tail": "account\n esiste?",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": "si\n"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Importo \n< 200€?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica esistenza account",
+      "head": "account\n esiste?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approvazione automatica",
+      "head": "Trasferimento credito",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Importo \n< 200€?",
+      "head": "Approvazione automatica",
+      "class": "SequenceFlow",
+      "label": "si\n"
+    },
+    {
+      "tail": "Importo \n< 200€?",
+      "head": "Approvazione superiore",
+      "class": "SequenceFlow",
+      "label": "no"
+    },
+    {
+      "tail": "Trasferimento credito",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approvazione superiore",
+      "head": "Approvato?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notifica Rifiuto\nEvento \"send message\"\nNon sappiamo chi la\ninvia comunque",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approvato?",
+      "head": "Notifica Rifiuto\nEvento \"send message\"\nNon sappiamo chi la\ninvia comunque",
+      "class": "SequenceFlow",
+      "label": "no\n"
+    },
+    {
+      "tail": "Approvato?",
+      "head": "Trasferimento credito",
+      "class": "SequenceFlow",
+      "label": "si"
+    }
+  ],
+  "groups": []
+}

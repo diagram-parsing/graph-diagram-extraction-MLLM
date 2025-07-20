@@ -1,0 +1,172 @@
+{
+  "nodes": [
+    {
+      "text": "Patient",
+      "attributes": [
+        "birthday: int",
+        "homeAdress: string",
+        "phoneNumber: string",
+        "nationality: enum",
+        "alive: boolean",
+        "patientNumber: int"
+      ],
+      "methods": [
+        "setPatientNumber()",
+        "find()"
+      ],
+      "id": "Patient",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Person",
+      "attributes": [
+        "firstName: string",
+        "lastName: string",
+        "nationality: enum"
+      ],
+      "methods": [
+        "find=0()"
+      ],
+      "id": "Person",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Staff",
+      "attributes": [
+        "jobRole: enum",
+        "eMail: string",
+        "serielNumber: int"
+      ],
+      "methods": [
+        "setEmail()",
+        "setSerialNumber()",
+        "find()"
+      ],
+      "id": "Staff",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Doctor",
+      "attributes": null,
+      "methods": null,
+      "id": "Doctor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Nurse",
+      "attributes": null,
+      "methods": null,
+      "id": "Nurse",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Inpatient",
+      "attributes": null,
+      "methods": null,
+      "id": "Inpatient",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Outpatient",
+      "attributes": null,
+      "methods": null,
+      "id": "Outpatient",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Clerk",
+      "attributes": null,
+      "methods": null,
+      "id": "Clerk",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ICT Officer",
+      "attributes": null,
+      "methods": null,
+      "id": "ICT Officer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Department",
+      "attributes": [
+        "Staff: "
+      ],
+      "methods": null,
+      "id": "Department",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "",
+      "attributes": null,
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Hospital",
+      "attributes": [
+        "Staff: Staff[]",
+        "Patients: Patient[]",
+        "Departments: Department[]"
+      ],
+      "methods": null,
+      "id": "Hospital",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bed",
+      "attributes": null,
+      "methods": null,
+      "id": "Bed",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "GUI",
+      "attributes": null,
+      "methods": null,
+      "id": "GUI",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "",
+      "attributes": null,
+      "methods": null,
+      "id": "ComplexClass_2",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Patient",
+      "head": "Person",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Staff",
+      "head": "Person",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Hospital",
+      "head": "Patient",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Hospital",
+      "head": "Department",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Bed",
+      "head": "Department",
+      "class": "Composition",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Gehäuse ist\nbereit zur\nBearbeitung\n",
+      "id": "Gehäuse ist\nbereit zur\nBearbeitung\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Prozedur auswählen",
+      "id": "Prozedur auswählen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_1",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "Lackieren",
+      "id": "Lackieren",
+      "class": "Task"
+    },
+    {
+      "text": "Fräsen",
+      "id": "Fräsen",
+      "class": "Task"
+    },
+    {
+      "text": "Bohren",
+      "id": "Bohren",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "OR_Gateway_2",
+      "class": "OR_Gateway"
+    },
+    {
+      "text": "Montage durchführen",
+      "id": "Montage durchführen",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Montage ist \ndurchgeführt",
+      "id": "Montage ist \ndurchgeführt",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Gehäuse ist\nbereit zur\nBearbeitung\n",
+      "head": "Prozedur auswählen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prozedur auswählen",
+      "head": "OR_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Lackieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Fräsen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_1",
+      "head": "Bohren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lackieren",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Fräsen",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bohren",
+      "head": "OR_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "OR_Gateway_2",
+      "head": "Montage durchführen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Montage durchführen",
+      "head": "Montage ist \ndurchgeführt",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

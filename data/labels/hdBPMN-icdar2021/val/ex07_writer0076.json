@@ -1,0 +1,195 @@
+{
+  "nodes": [
+    {
+      "text": "response of an expert received",
+      "id": "response of an expert received",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": "fill cheque",
+      "id": "fill cheque",
+      "class": "task"
+    },
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "file the results",
+      "id": "file the results",
+      "class": "task"
+    },
+    {
+      "text": "interview patients by integrating interview in already existing patient interview workflow",
+      "id": "interview patients by integrating interview in already existing patient interview workflow",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "event_2",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "event_3",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_2",
+      "class": "messageEvent"
+    },
+    {
+      "text": "forward response",
+      "id": "forward response",
+      "class": "messageEvent"
+    },
+    {
+      "text": "send\ncheque",
+      "id": "send\ncheque",
+      "class": "messageEvent"
+    },
+    {
+      "text": "no response in time",
+      "id": "no response in time",
+      "class": "timerEvent"
+    },
+    {
+      "text": "wait for files from the director",
+      "id": "wait for files from the director",
+      "class": "timerEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "no response in time",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill cheque",
+      "head": "send\ncheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "response of an expert received",
+      "head": "fill cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "no response in time",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "forward response",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "messageEvent_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file the results",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "wait for files from the director",
+      "head": "file the results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patients by integrating interview in already existing patient interview workflow",
+      "head": "wait for files from the director",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_3",
+      "head": "interview patients by integrating interview in already existing patient interview workflow",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward response",
+      "head": "file the results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "external expert",
+      "head": "messageEvent_2",
+      "class": "messageFlow",
+      "label": "response received"
+    },
+    {
+      "tail": "send\ncheque",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "external expert",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "external expert",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

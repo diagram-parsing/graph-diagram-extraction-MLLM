@@ -1,0 +1,219 @@
+{
+  "nodes": [
+    {
+      "text": "E_cargo",
+      "attributes": null,
+      "methods": null,
+      "id": "E_cargo",
+      "class": "Enumeration"
+    },
+    {
+      "text": "Vehículo",
+      "attributes": [
+        "Matricula: string",
+        "Marca: string",
+        "Modelo: string",
+        "Color: string",
+        "Motor: String",
+        "Año: date",
+        "Kms: double",
+        "Radio: boolean",
+        "RuedaRepuesto: boolean"
+      ],
+      "methods": null,
+      "id": "Vehículo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Reparación",
+      "attributes": [
+        "Id_reparacion: integer",
+        "FechaInicio: date",
+        "FechaFin: date",
+        "Reparación: string"
+      ],
+      "methods": null,
+      "id": "Reparación",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "OrdenDeReparacion",
+      "attributes": [
+        "Id_orden: string",
+        "Motivo: string",
+        "Estado: string",
+        "Fecha: date"
+      ],
+      "methods": null,
+      "id": "OrdenDeReparacion",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Persona",
+      "attributes": null,
+      "methods": null,
+      "id": "Persona",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Empresa",
+      "attributes": null,
+      "methods": null,
+      "id": "Empresa",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Mecanico",
+      "attributes": [
+        "id_mec: string",
+        "Nombre: string",
+        "Apellidos: string",
+        "Dirección: string",
+        "Telefono: integer",
+        "Email: string",
+        "PrecioHora: double",
+        "Cargo: E_cargo"
+      ],
+      "methods": null,
+      "id": "Mecanico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Repuesto",
+      "attributes": [
+        "Id_Repuesto: integer",
+        "FechaEntrada: date",
+        "Descripción: string",
+        "Fabricante: string",
+        "PrecioCompra: double",
+        "PrecioBase: double"
+      ],
+      "methods": null,
+      "id": "Repuesto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "No se puede asignar un operario a una orden de reparación si éste ya se encuentra ocupado en otras reparaciones.",
+      "attributes": null,
+      "methods": null,
+      "id": "No se puede asignar un operario a una orden de reparación si éste ya se encuentra ocupado en otras reparaciones.",
+      "class": "Note"
+    },
+    {
+      "text": "La orden de reparación debe estar cerrada para poder emitir la factura",
+      "attributes": null,
+      "methods": null,
+      "id": "La orden de reparación debe estar cerrada para poder emitir la factura",
+      "class": "Note"
+    },
+    {
+      "text": "No se admite mas de 1 vehículo a la vez de un mismo cliente",
+      "attributes": null,
+      "methods": null,
+      "id": "No se admite mas de 1 vehículo a la vez de un mismo cliente",
+      "class": "Note"
+    },
+    {
+      "text": "RepuestoNecesario",
+      "attributes": [
+        "Cantidad: integer",
+        "Importe: double"
+      ],
+      "methods": null,
+      "id": "RepuestoNecesario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cliente",
+      "attributes": [
+        "NIF: string",
+        "Nombre: string",
+        "Apellidos: string",
+        "Dirección: string",
+        "Telefono: integer",
+        "Email: string"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Acción",
+      "attributes": [
+        "HorasEmpleadas: integer"
+      ],
+      "methods": null,
+      "id": "Acción",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Vehículo",
+      "head": "OrdenDeReparacion",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Reparación",
+      "head": "Repuesto",
+      "class": "UndirectedAssociation",
+      "label": "Necesita"
+    },
+    {
+      "tail": "Reparación",
+      "head": "Mecanico",
+      "class": "UndirectedAssociation",
+      "label": "ResponsableDe"
+    },
+    {
+      "tail": "OrdenDeReparacion",
+      "head": "Reparación",
+      "class": "Composition",
+      "label": ""
+    },
+    {
+      "tail": "Mecanico",
+      "head": "E_cargo",
+      "class": "Realization",
+      "label": ""
+    },
+    {
+      "tail": "No se puede asignar un operario a una orden de reparación si éste ya se encuentra ocupado en otras reparaciones.",
+      "head": "Mecanico",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "La orden de reparación debe estar cerrada para poder emitir la factura",
+      "head": "OrdenDeReparacion",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "No se admite mas de 1 vehículo a la vez de un mismo cliente",
+      "head": "Vehículo",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Cliente",
+      "head": "Empresa",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Cliente",
+      "head": "Persona",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Cliente",
+      "head": "Vehículo",
+      "class": "UndirectedAssociation",
+      "label": "PropietarioDe"
+    }
+  ],
+  "groups": []
+}

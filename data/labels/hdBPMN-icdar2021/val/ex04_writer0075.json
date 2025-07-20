@@ -1,0 +1,238 @@
+{
+  "nodes": [
+    {
+      "text": "request received",
+      "id": "request received",
+      "class": "event"
+    },
+    {
+      "text": "retrive files for particular premises",
+      "id": "retrive files for particular premises",
+      "class": "task"
+    },
+    {
+      "text": "check that request is acceptable for filing and decription compliant with",
+      "id": "check that request is acceptable for filing and decription compliant with",
+      "class": "task"
+    },
+    {
+      "text": "set hearing date",
+      "id": "set hearing date",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "produce fees notice for owner",
+      "id": "produce fees notice for owner",
+      "class": "task"
+    },
+    {
+      "text": "reassess the document compliance",
+      "id": "reassess the document compliance",
+      "class": "task"
+    },
+    {
+      "text": "Request document",
+      "id": "Request document",
+      "class": "dataObject"
+    },
+    {
+      "text": "Premise Description",
+      "id": "Premise Description",
+      "class": "dataObject"
+    },
+    {
+      "text": "Request info",
+      "id": "Request info",
+      "class": "dataObject"
+    },
+    {
+      "text": "fee incurs",
+      "id": "fee incurs",
+      "class": "task"
+    },
+    {
+      "text": "retrieve fees notice",
+      "id": "retrieve fees notice",
+      "class": "task"
+    },
+    {
+      "text": "pay fee",
+      "id": "pay fee",
+      "class": "task"
+    },
+    {
+      "text": "fees notice",
+      "id": "fees notice",
+      "class": "dataObject"
+    },
+    {
+      "text": "file DB",
+      "id": "file DB",
+      "class": "dataStore"
+    },
+    {
+      "text": "process finished",
+      "id": "process finished",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "request received",
+      "head": "retrive files for particular premises",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "retrive files for particular premises",
+      "head": "check that request is acceptable for filing and decription compliant with",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check that request is acceptable for filing and decription compliant with",
+      "head": "set hearing date",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "produce fees notice for owner",
+      "class": "sequenceFlow",
+      "label": "Owner didn't pay"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "reassess the document compliance",
+      "class": "sequenceFlow",
+      "label": "Owner paid"
+    },
+    {
+      "tail": "reassess the document compliance",
+      "head": "process finished",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "set hearing date",
+      "head": "fee incurs",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fee incurs",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "produce fees notice for owner",
+      "head": "retrieve fees notice",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "retrieve fees notice",
+      "head": "pay fee",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pay fee",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file DB",
+      "head": "retrive files for particular premises",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Premise Description",
+      "head": "check that request is acceptable for filing and decription compliant with",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "check that request is acceptable for filing and decription compliant with",
+      "head": "Request info",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Request info",
+      "head": "set hearing date",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "set hearing date",
+      "head": "Request document",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "produce fees notice for owner",
+      "head": "fees notice",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Request document",
+      "head": "reassess the document compliance",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "fees notice",
+      "head": "retrieve fees notice",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "tenant",
+      "nodes": [
+        "owner",
+        "tribunal cashier"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "owner",
+      "nodes": [
+        "fee incurs",
+        "retrieve fees notice",
+        "pay fee"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "tribunal cashier",
+      "nodes": [
+        "request received",
+        "retrive files for particular premises",
+        "check that request is acceptable for filing and decription compliant with",
+        "set hearing date",
+        "exclusiveGateway_1",
+        "produce fees notice for owner",
+        "reassess the document compliance",
+        "Request document",
+        "Premise Description",
+        "Request info",
+        "fees notice",
+        "file DB",
+        "process finished"
+      ],
+      "class": "lane"
+    }
+  ]
+}

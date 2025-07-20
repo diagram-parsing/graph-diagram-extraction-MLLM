@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "text": "Elezione",
+      "attributes": [
+        "Data: Date",
+        "Ora: Time",
+        "numeletti: int",
+        "maxpreferenze: int",
+        "quorum: float",
+        "livelloattivo: String",
+        "dipartimentoattivo: String",
+        "livellopassivo: string",
+        "dipartimento passivo: String"
+      ],
+      "methods": null,
+      "id": "Elezione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dipendenti",
+      "attributes": [
+        "Nome: String",
+        "Cognome: String",
+        "email: String",
+        "dipartimento: String",
+        "livello: String",
+        "cellulare: String"
+      ],
+      "methods": null,
+      "id": "Dipendenti",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "elettorato attivo",
+      "attributes": [
+        "codice: String",
+        "confermato: boolean"
+      ],
+      "methods": null,
+      "id": "elettorato attivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "elettorato passivo",
+      "attributes": [
+        "eletto: boolean",
+        "voti: int"
+      ],
+      "methods": null,
+      "id": "elettorato passivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "il livello e il dipartimento devono essere specificati in quanto ad ogni elezione solo quelli appartenenti ad un certo dipartimento e livello possono partecipare",
+      "attributes": null,
+      "methods": null,
+      "id": "il livello e il dipartimento devono essere specificati in quanto ad ogni elezione solo quelli appartenenti ad un certo dipartimento e livello possono partecipare",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Elezione",
+      "head": "il livello e il dipartimento devono essere specificati in quanto ad ogni elezione solo quelli appartenenti ad un certo dipartimento e livello possono partecipare",
+      "class": "Annotation Edge",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

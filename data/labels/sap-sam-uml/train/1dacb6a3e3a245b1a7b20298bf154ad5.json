@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Pianta\n",
+      "attributes": [
+        "codice: string",
+        "nomeLatino: string",
+        "nomeComune: string",
+        "appartamento: boolean",
+        "giardino: boolean",
+        "esotica: boolean"
+      ],
+      "methods": null,
+      "id": "Pianta\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prezzo\n",
+      "attributes": [
+        "valore: currency",
+        "validoDal: date",
+        ": "
+      ],
+      "methods": null,
+      "id": "Prezzo\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "se non si dovesse tenere lo storico dei prezzi, il prezzo potrebbe essere un attributo di pianta",
+      "attributes": null,
+      "methods": null,
+      "id": "se non si dovesse tenere lo storico dei prezzi, il prezzo potrebbe essere un attributo di pianta",
+      "class": "Note"
+    },
+    {
+      "text": "Fornitore\n\n",
+      "attributes": [
+        "codice: string",
+        "nome: string",
+        "CF: string",
+        "indirizzo: string"
+      ],
+      "methods": null,
+      "id": "Fornitore\n\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Da appartamento, Da giardino potevano essere modelllizzate con una generalizzazione, ma è inutile, perchè non portano informazioni aggiuntive. ",
+      "attributes": null,
+      "methods": null,
+      "id": "Da appartamento, Da giardino potevano essere modelllizzate con una generalizzazione, ma è inutile, perchè non portano informazioni aggiuntive. ",
+      "class": "Note"
+    },
+    {
+      "text": "il prezzo è legato a una pianta, la pianta può essere venduta a più prezzi.\n",
+      "attributes": null,
+      "methods": null,
+      "id": "il prezzo è legato a una pianta, la pianta può essere venduta a più prezzi.\n",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Pianta\n",
+      "head": "Prezzo\n",
+      "class": "UndirectedAssociation",
+      "label": "venduta a "
+    },
+    {
+      "tail": "Pianta\n",
+      "head": "Fornitore\n\n",
+      "class": "UndirectedAssociation",
+      "label": "fornitaDa"
+    }
+  ],
+  "groups": []
+}

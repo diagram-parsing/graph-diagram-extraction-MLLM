@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "text": "YISA5882_API_WS",
+      "attributes": [
+        "WS_ID: ",
+        "PATH: ",
+        "HTTP_METHOD: ",
+        "VERSION: ",
+        "SERVICE_ID: ",
+        "HANDLER_CLASS: "
+      ],
+      "methods": null,
+      "id": "YISA5882_API_WS",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "YISA5882_API_SVC",
+      "attributes": [
+        "SERVICE_ID: ",
+        "API_CLASS: ",
+        "CLASS: ",
+        "CLASS_METHOD: ",
+        "FUNCTION_MODULE: ",
+        "REPORT: "
+      ],
+      "methods": null,
+      "id": "YISA5882_API_SVC",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "YISA5882_APIMAPJ",
+      "attributes": [
+        "SERVICE_ID: ",
+        "JSON_NAME: ",
+        "ABAP_NAME: "
+      ],
+      "methods": null,
+      "id": "YISA5882_APIMAPJ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "YISA5882_API_LOG",
+      "attributes": [
+        "SERVICE_ID: ",
+        "LOGTIME: ",
+        "REQ_DATE: ",
+        "REQ_TIME: ",
+        "REQUEST: ",
+        "RESPONSE: ",
+        "ERROR: ",
+        "DURATION: ",
+        "HTTP_METHOD: ",
+        "REQUEST_URL: "
+      ],
+      "methods": null,
+      "id": "YISA5882_API_LOG",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "YISA5882_APIMAPU",
+      "attributes": [
+        "SERVICE_ID: ",
+        "NAME: ",
+        "ABAP_NAME: "
+      ],
+      "methods": null,
+      "id": "YISA5882_APIMAPU",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "YISA5882_API_WS",
+      "head": "YISA5882_API_SVC",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "YISA5882_API_SVC",
+      "head": "YISA5882_APIMAPJ",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "YISA5882_API_LOG",
+      "head": "YISA5882_API_SVC",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "YISA5882_APIMAPU",
+      "head": "YISA5882_API_SVC",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

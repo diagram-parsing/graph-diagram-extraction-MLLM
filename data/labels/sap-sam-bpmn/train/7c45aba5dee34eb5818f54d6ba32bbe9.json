@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start\n",
+      "id": "Start\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Ende",
+      "id": "Ende",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Informatikstrategie ausarbeiten (3 Jahre)",
+      "id": "Informatikstrategie ausarbeiten (3 Jahre)",
+      "class": "Task"
+    },
+    {
+      "text": "Einführung neuer Informationssystemen ",
+      "id": "Einführung neuer Informationssystemen ",
+      "class": "Task"
+    },
+    {
+      "text": "Täglicher Betrieb sämtlicher Informationssysteme",
+      "id": "Täglicher Betrieb sämtlicher Informationssysteme",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start\n",
+      "head": "Informatikstrategie ausarbeiten (3 Jahre)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Start\n",
+      "head": "Täglicher Betrieb sämtlicher Informationssysteme",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Informatikstrategie ausarbeiten (3 Jahre)",
+      "head": "Einführung neuer Informationssystemen ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Einführung neuer Informationssystemen ",
+      "head": "Ende",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Täglicher Betrieb sämtlicher Informationssysteme",
+      "head": "Ende",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

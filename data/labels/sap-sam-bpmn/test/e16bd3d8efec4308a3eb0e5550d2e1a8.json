@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Projekt-Kozeption abgeschlossen",
+      "id": "Projekt-Kozeption abgeschlossen",
+      "class": "StartEvent"
+    },
+    {
+      "text": "automatische Beauftragung der Beteiligten",
+      "id": "automatische Beauftragung der Beteiligten",
+      "class": "Task"
+    },
+    {
+      "text": "Entwerfen und überarbeiten der Einzelteile",
+      "id": "Entwerfen und überarbeiten der Einzelteile",
+      "class": "Task"
+    },
+    {
+      "text": "Erstellen und überarbeiten der Baugruppe",
+      "id": "Erstellen und überarbeiten der Baugruppe",
+      "class": "Task"
+    },
+    {
+      "text": "Erstellern der technischen Zeichnung-ableitungen",
+      "id": "Erstellern der technischen Zeichnung-ableitungen",
+      "class": "Task"
+    },
+    {
+      "text": "Starten des automatischen Signaturantrags und Weiterleitung an die Fertigung",
+      "id": "Starten des automatischen Signaturantrags und Weiterleitung an die Fertigung",
+      "class": "Task"
+    },
+    {
+      "text": "Beginn der Fertigung",
+      "id": "Beginn der Fertigung",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "automatische Beauftragung der Beteiligten",
+      "head": "Entwerfen und überarbeiten der Einzelteile",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Entwerfen und überarbeiten der Einzelteile",
+      "head": "Erstellen und überarbeiten der Baugruppe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Erstellen und überarbeiten der Baugruppe",
+      "head": "Erstellern der technischen Zeichnung-ableitungen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Erstellern der technischen Zeichnung-ableitungen",
+      "head": "Starten des automatischen Signaturantrags und Weiterleitung an die Fertigung",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Starten des automatischen Signaturantrags und Weiterleitung an die Fertigung",
+      "head": "Beginn der Fertigung",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

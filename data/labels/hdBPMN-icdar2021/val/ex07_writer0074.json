@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "text": "create report",
+      "id": "create report",
+      "class": "task"
+    },
+    {
+      "text": "report created",
+      "id": "report created",
+      "class": "event"
+    },
+    {
+      "text": "new case",
+      "id": "new case",
+      "class": "event"
+    },
+    {
+      "text": "fill cheque",
+      "id": "fill cheque",
+      "class": "task"
+    },
+    {
+      "text": "cheque sent",
+      "id": "cheque sent",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "file results",
+      "id": "file results",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "event_1",
+      "class": "event"
+    },
+    {
+      "text": "ask for review",
+      "id": "ask for review",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "event_2",
+      "class": "event"
+    },
+    {
+      "text": "interview patients",
+      "id": "interview patients",
+      "class": "subProcess"
+    },
+    {
+      "text": "reveiew sent",
+      "id": "reveiew sent",
+      "class": "messageEvent"
+    },
+    {
+      "text": "create review",
+      "id": "create review",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "messageEvent_1",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_2",
+      "head": "fill cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "reveiew sent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_1",
+      "head": "ask for review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file results",
+      "head": "create report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "file results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview patients",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "new case",
+      "head": "interview patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill cheque",
+      "head": "cheque sent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create report",
+      "head": "report created",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask for review",
+      "head": "create review",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "create review",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": "review received"
+    },
+    {
+      "tail": "cheque sent",
+      "head": "external experts",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Hospital",
+      "nodes": [
+        "director",
+        "QA"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "director",
+      "nodes": [
+        "fill cheque",
+        "cheque sent",
+        "event_1",
+        "ask for review",
+        "messageEvent_1",
+        "event_2",
+        "reveiew sent"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "QA",
+      "nodes": [
+        "create report",
+        "report created",
+        "new case",
+        "parallelGateway_1",
+        "file results",
+        "interview patients"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "external experts",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

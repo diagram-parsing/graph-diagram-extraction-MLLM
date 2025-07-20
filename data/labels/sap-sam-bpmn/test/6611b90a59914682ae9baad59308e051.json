@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "text": "Claim documentation lodged",
+      "id": "Claim documentation lodged",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Database Search",
+      "id": "Database Search",
+      "class": "Task"
+    },
+    {
+      "text": "Calculate claim estimate",
+      "id": "Calculate claim estimate",
+      "class": "Task"
+    },
+    {
+      "text": "Create an Action Plan",
+      "id": "Create an Action Plan",
+      "class": "Task"
+    },
+    {
+      "text": "Negotiate Settlement ",
+      "id": "Negotiate Settlement ",
+      "class": "Task"
+    },
+    {
+      "text": "Inform Claimant",
+      "id": "Inform Claimant",
+      "class": "Task"
+    },
+    {
+      "text": "Claimant has been informed ",
+      "id": "Claimant has been informed ",
+      "class": "EndEvent"
+    },
+    {
+      "text": "New credit request received",
+      "id": "New credit request received",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Assess risk ",
+      "id": "Assess risk ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Conduct high level risk assessment",
+      "id": "Conduct high level risk assessment",
+      "class": "Task"
+    },
+    {
+      "text": "Conduct low level risk assessment",
+      "id": "Conduct low level risk assessment",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Notify customer",
+      "id": "Notify customer",
+      "class": "Task"
+    },
+    {
+      "text": "Organise disbursement ",
+      "id": "Organise disbursement ",
+      "class": "Task"
+    },
+    {
+      "text": "Disbursement organised",
+      "id": "Disbursement organised",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Conduct high level risk assessment",
+      "class": "SequenceFlow",
+      "label": "Risk above threshold"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Conduct low level risk assessment",
+      "class": "SequenceFlow",
+      "label": "Risk below threshold"
+    },
+    {
+      "tail": "Conduct high level risk assessment",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Conduct low level risk assessment",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

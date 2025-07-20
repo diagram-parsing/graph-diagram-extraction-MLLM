@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "text": "Buch",
+      "attributes": [
+        "titel: ",
+        "jahr: "
+      ],
+      "methods": null,
+      "id": "Buch",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Verlag",
+      "attributes": [
+        "hauptsitz: ",
+        "name: "
+      ],
+      "methods": null,
+      "id": "Verlag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Format",
+      "attributes": null,
+      "methods": null,
+      "id": "Format",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "E-Book-Plattform",
+      "attributes": null,
+      "methods": null,
+      "id": "E-Book-Plattform",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Sammelband",
+      "attributes": null,
+      "methods": null,
+      "id": "Sammelband",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Monographie",
+      "attributes": null,
+      "methods": null,
+      "id": "Monographie",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Buchkapitel",
+      "attributes": null,
+      "methods": null,
+      "id": "Buchkapitel",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Autor",
+      "attributes": null,
+      "methods": null,
+      "id": "Autor",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Herausgeber",
+      "attributes": null,
+      "methods": null,
+      "id": "Herausgeber",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Veröffentlichung",
+      "attributes": [
+        "titel: "
+      ],
+      "methods": null,
+      "id": "Veröffentlichung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Person",
+      "attributes": null,
+      "methods": null,
+      "id": "Person",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Buch",
+      "head": "Verlag",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Buch",
+      "head": "Format",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Buch",
+      "head": "Sammelband",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Buch",
+      "head": "Monographie",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "E-Book-Plattform",
+      "head": "Buch",
+      "class": "UndirectedAssociation",
+      "label": "gelistet-auf"
+    },
+    {
+      "tail": "E-Book-Plattform",
+      "head": "Format",
+      "class": "UndirectedAssociation",
+      "label": "unterstützt"
+    },
+    {
+      "tail": "Sammelband",
+      "head": "Buchkapitel",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Monographie",
+      "head": "Autor",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Autor",
+      "head": "Buchkapitel",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Herausgeber",
+      "head": "Sammelband",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Veröffentlichung",
+      "head": "Buch",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Veröffentlichung",
+      "head": "Buchkapitel",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Veröffentlichung",
+      "head": "Autor",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Monographie",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Veröffentlichung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Sammelband",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Person",
+      "head": "Buchkapitel",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

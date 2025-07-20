@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "text": "Vorlegen des Vetrags",
+      "id": "Vorlegen des Vetrags",
+      "class": "Task"
+    },
+    {
+      "text": "Zusage Beiersdorf AG",
+      "id": "Zusage Beiersdorf AG",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Vertrag kommt an ",
+      "id": "Vertrag kommt an ",
+      "class": "StartMessageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Zusage Beiersdorf AG",
+      "head": "Vorlegen des Vetrags",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Studierender",
+      "id": "Studierender",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Vorlegen des Vetrags",
+        "Zusage Beiersdorf AG"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "HSAS",
+      "id": "HSAS",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Vertrag kommt an "
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Beiersdorf AG",
+      "id": "Beiersdorf AG",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [],
+      "class": "Lane"
+    },
+    {
+      "name": "Freunde/Bekannte",
+      "id": "Freunde/Bekannte",
+      "nodes": [
+        "Lane_4"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_4",
+      "nodes": [],
+      "class": "Lane"
+    }
+  ]
+}

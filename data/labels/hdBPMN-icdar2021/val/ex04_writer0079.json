@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "text": "check file for compliance",
+      "id": "check file for compliance",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "request paid",
+      "id": "request paid",
+      "class": "task"
+    },
+    {
+      "text": "set hearing date",
+      "id": "set hearing date",
+      "class": "task"
+    },
+    {
+      "text": "request\n\u00c2\u00a0handled",
+      "id": "request\n\u00c2\u00a0handled",
+      "class": "event"
+    },
+    {
+      "text": "compensation request received",
+      "id": "compensation request received",
+      "class": "messageEvent"
+    },
+    {
+      "text": "promises file",
+      "id": "promises file",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "payment received",
+      "id": "payment received",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "payment received",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "set hearing date",
+      "head": "request\n\u00c2\u00a0handled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "set hearing date",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "request paid",
+      "class": "sequenceFlow",
+      "label": "fees not paid"
+    },
+    {
+      "tail": "check file for compliance",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "compensation request received",
+      "head": "check file for compliance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": "fees paid"
+    },
+    {
+      "tail": "promises file",
+      "head": "check file for compliance",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Owner",
+      "head": "compensation request received",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "request paid",
+      "head": "Owner",
+      "class": "messageFlow",
+      "label": "fees notice"
+    },
+    {
+      "tail": "Owner",
+      "head": "payment received",
+      "class": "messageFlow",
+      "label": "payment"
+    }
+  ],
+  "groups": [
+    {
+      "name": "tribunal",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "Owner",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

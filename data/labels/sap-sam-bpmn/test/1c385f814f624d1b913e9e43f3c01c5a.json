@@ -1,0 +1,159 @@
+{
+  "nodes": [
+    {
+      "text": "zu Kunden liefern",
+      "id": "zu Kunden liefern",
+      "class": "Task"
+    },
+    {
+      "text": "Smartphone richtig geliefert",
+      "id": "Smartphone richtig geliefert",
+      "class": "Task"
+    },
+    {
+      "text": "Bestellung geschlossen",
+      "id": "Bestellung geschlossen",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Kunden bestellen sich ein Smartphone",
+      "id": "Kunden bestellen sich ein Smartphone",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Bestell-informationen bekommen",
+      "id": "Bestell-informationen bekommen",
+      "class": "Task"
+    },
+    {
+      "text": "Kuden benachrichten",
+      "id": "Kuden benachrichten",
+      "class": "Task"
+    },
+    {
+      "text": "Lagerbestand gucken",
+      "id": "Lagerbestand gucken",
+      "class": "Task"
+    },
+    {
+      "text": "genug Lagerbestand?",
+      "id": "genug Lagerbestand?",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Smartphone packen",
+      "id": "Smartphone packen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "zu Kunden liefern",
+      "head": "Smartphone richtig geliefert",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Smartphone richtig geliefert",
+      "head": "Bestellung geschlossen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunden bestellen sich ein Smartphone",
+      "head": "Bestell-informationen bekommen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bestell-informationen bekommen",
+      "head": "Lagerbestand gucken",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kuden benachrichten",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lagerbestand gucken",
+      "head": "genug Lagerbestand?",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "genug Lagerbestand?",
+      "head": "Kuden benachrichten",
+      "class": "SequenceFlow",
+      "label": "Nein"
+    },
+    {
+      "tail": "genug Lagerbestand?",
+      "head": "Smartphone packen",
+      "class": "SequenceFlow",
+      "label": "Ja"
+    },
+    {
+      "tail": "Smartphone packen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "zu Kunden liefern",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Aliexpress ",
+      "id": "Aliexpress",
+      "nodes": [
+        "Logistik",
+        "Absatzabteilung",
+        "Lager"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Logistik",
+      "id": "Logistik",
+      "nodes": [
+        "zu Kunden liefern",
+        "Smartphone richtig geliefert",
+        "Bestellung geschlossen"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Absatzabteilung",
+      "id": "Absatzabteilung",
+      "nodes": [
+        "Kunden bestellen sich ein Smartphone",
+        "Bestell-informationen bekommen",
+        "Kuden benachrichten"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Lager",
+      "id": "Lager",
+      "nodes": [
+        "Lagerbestand gucken",
+        "genug Lagerbestand?",
+        "Smartphone packen",
+        "Exclusive_Databased_Gateway_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

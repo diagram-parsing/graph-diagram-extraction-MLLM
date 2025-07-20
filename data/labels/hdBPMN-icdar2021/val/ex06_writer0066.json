@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "text": "confirm order",
+      "id": "confirm order",
+      "class": "task"
+    },
+    {
+      "text": "write down order note",
+      "id": "write down order note",
+      "class": "task"
+    },
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "attach order note",
+      "id": "attach order note",
+      "class": "task"
+    },
+    {
+      "text": "end order",
+      "id": "end order",
+      "class": "event"
+    },
+    {
+      "text": "received order by Lieferando",
+      "id": "received order by Lieferando",
+      "class": "event"
+    },
+    {
+      "text": "received order by Website",
+      "id": "received order by Website",
+      "class": "event"
+    },
+    {
+      "text": "received order by phone",
+      "id": "received order by phone",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "order note",
+      "id": "order note",
+      "class": "dataObject"
+    },
+    {
+      "text": "order muti",
+      "id": "order muti",
+      "class": "dataObject"
+    },
+    {
+      "text": "Order note",
+      "id": "Order note",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attach order note",
+      "head": "end order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "attach order note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received order by phone",
+      "head": "write down order note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm order",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received order by Website",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "received order by Lieferando",
+      "head": "confirm order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order note",
+      "head": "order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "Order note",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order muti",
+      "head": "attach order note",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "enregistrer la demande ",
+      "id": "enregistrer la demande ",
+      "class": "Task"
+    },
+    {
+      "text": "saisir les information ",
+      "id": "saisir les information ",
+      "class": "Task"
+    },
+    {
+      "text": "étude de la décision ",
+      "id": "étude de la décision ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "informer le client ",
+      "id": "informer le client ",
+      "class": "Task"
+    },
+    {
+      "text": "informer le client ",
+      "id": "Task_1",
+      "class": "Task"
+    },
+    {
+      "text": " inviter a singer le contrat ",
+      "id": " inviter a singer le contrat ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "enregistrer la demande ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "enregistrer la demande ",
+      "head": "saisir les information ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "saisir les information ",
+      "head": "étude de la décision ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "étude de la décision ",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "informer le client ",
+      "class": "SequenceFlow",
+      "label": "rejeter "
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Task_1",
+      "class": "SequenceFlow",
+      "label": "accepter"
+    },
+    {
+      "tail": "informer le client ",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Task_1",
+      "head": " inviter a singer le contrat ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": " inviter a singer le contrat ",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

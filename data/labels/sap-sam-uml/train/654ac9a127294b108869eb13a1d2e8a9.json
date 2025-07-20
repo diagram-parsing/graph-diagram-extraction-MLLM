@@ -1,0 +1,290 @@
+{
+  "nodes": [
+    {
+      "text": "Auftrag",
+      "attributes": [
+        "Auftragsnummer: ",
+        "User: ",
+        "Typ: ",
+        "EAV: ",
+        "EAV Titel: ",
+        "EVA Hinweis: ",
+        "gew. Leistungsdatum: ",
+        "Quelle: ",
+        "Transport: ",
+        "Ziel: ",
+        "Dokument: ",
+        "Auftragsbestätigung: boolean"
+      ],
+      "methods": null,
+      "id": "Auftrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Auftragsvorlage",
+      "attributes": [
+        "Auftragsnummer: ",
+        "User: ",
+        "Typ: ",
+        "EAV: ",
+        "EAV Titel: ",
+        "EVA Hinweis: ",
+        "Quelle: ",
+        "Transport: ",
+        "Ziel: ",
+        "Dokument: ",
+        "gültig ab: ",
+        "gültig bis: "
+      ],
+      "methods": null,
+      "id": "Auftragsvorlage",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Turnusaufträge",
+      "attributes": [
+        "Auftragsnummer: ",
+        "User: ",
+        "Typ: ",
+        "EAV: ",
+        "EAV Titel: ",
+        "EAV Hinweis: ",
+        "Turnus (Tg.): ",
+        "gültig ab: ",
+        "gültig bis: ",
+        "Quelle: ",
+        "Transport: ",
+        "Ziel: "
+      ],
+      "methods": null,
+      "id": "Turnusaufträge",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "User",
+      "attributes": [
+        "ID: ",
+        "Vorname: ",
+        "Nachname: ",
+        "Anrede: ",
+        "Email: ",
+        "Eintrittsdatum: ",
+        "Passwort: ",
+        "Userprivileges: "
+      ],
+      "methods": [
+        "erstellen,update()"
+      ],
+      "id": "User",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adresse",
+      "attributes": [
+        "Adresse ID: ",
+        "Strasse: ",
+        "Hausnummer: ",
+        "PLZ: ",
+        "Ort: ",
+        "Aktualisiert: "
+      ],
+      "methods": [
+        "erstellen,updaten()"
+      ],
+      "id": "Adresse",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Akte",
+      "attributes": [
+        "Dokumente: "
+      ],
+      "methods": null,
+      "id": "Akte",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "Kundenartikelbezeichnung: ",
+        "Aktion: ",
+        "Art Behälter: ",
+        "Kapazität Behälter: ",
+        "Einheit: ",
+        "Material: ",
+        "Kundenartikelbezeichnung: ",
+        "Hinweis im Auftrag: ",
+        "ID: "
+      ],
+      "methods": null,
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Partner",
+      "attributes": [
+        "Partnerprivilegien: "
+      ],
+      "methods": null,
+      "id": "Partner",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rechnung",
+      "attributes": null,
+      "methods": null,
+      "id": "Rechnung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mahnung",
+      "attributes": null,
+      "methods": null,
+      "id": "Mahnung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Zahlungstransaktion",
+      "attributes": null,
+      "methods": null,
+      "id": "Zahlungstransaktion",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Auftragstatus",
+      "attributes": null,
+      "methods": null,
+      "id": "Auftragstatus",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "IstBeendet",
+      "attributes": [
+        "BeendetVon: ",
+        "AbholDatum: "
+      ],
+      "methods": null,
+      "id": "IstBeendet",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "WirdBearbeitet",
+      "attributes": [
+        "WirdBearbeitetVon: ",
+        "EndeBearbeitungsDatum: "
+      ],
+      "methods": null,
+      "id": "WirdBearbeitet",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "InVorbereitung",
+      "attributes": [
+        "BeginnBearbeitungsDatum: ",
+        "EndeBearbeitung: "
+      ],
+      "methods": null,
+      "id": "InVorbereitung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Auftragsposition",
+      "attributes": [
+        "Menge: ",
+        "Artikel_Material: ",
+        "Artikel_Einheit: ",
+        "Artikel_ID: "
+      ],
+      "methods": null,
+      "id": "Auftragsposition",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Auftrag",
+      "head": "Rechnung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Auftragsvorlage",
+      "head": "Auftrag",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Turnusaufträge",
+      "head": "Auftrag",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "User",
+      "head": "Adresse",
+      "class": "UndirectedAssociation",
+      "label": "1,*...........1"
+    },
+    {
+      "tail": "User",
+      "head": "Auftrag",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Akte",
+      "head": "Auftrag",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Partner",
+      "head": "User",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rechnung",
+      "head": "Mahnung",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rechnung",
+      "head": "Zahlungstransaktion",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Auftragstatus",
+      "head": "WirdBearbeitet",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Auftragstatus",
+      "head": "IstBeendet",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Auftragstatus",
+      "head": "InVorbereitung",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Auftragsposition",
+      "head": "Auftrag",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Auftragsposition",
+      "head": "Artikel",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

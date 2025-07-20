@@ -1,0 +1,136 @@
+{
+  "nodes": [
+    {
+      "text": "Ricercatore",
+      "attributes": [
+        "nome: string",
+        ": ",
+        ": ",
+        ": ",
+        ": "
+      ],
+      "methods": null,
+      "id": "Ricercatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prodotto",
+      "attributes": [
+        "filePdf: string",
+        "titolo: string",
+        "codDOI: string"
+      ],
+      "methods": null,
+      "id": "Prodotto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "CentroRicerca",
+      "attributes": null,
+      "methods": null,
+      "id": "CentroRicerca",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pubblicazione",
+      "attributes": [
+        "numDiCitazioni: string",
+        "Quartile: string",
+        ": "
+      ],
+      "methods": null,
+      "id": "Pubblicazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Brevetto",
+      "attributes": [
+        "nome: string",
+        "Data: date",
+        "numBrevetto: string"
+      ],
+      "methods": null,
+      "id": "Brevetto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Esperto",
+      "attributes": [
+        "nome : string",
+        "cognome: ",
+        "cf: "
+      ],
+      "methods": null,
+      "id": "Esperto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "giudizio",
+      "attributes": [
+        "esito: int",
+        "descrizione: string",
+        ": "
+      ],
+      "methods": null,
+      "id": "giudizio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Punteggio",
+      "attributes": [
+        "criteri: ",
+        "motivazioni: ",
+        ": ",
+        ": "
+      ],
+      "methods": null,
+      "id": "Punteggio",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Ricercatore",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "seleziona"
+    },
+    {
+      "tail": "Ricercatore",
+      "head": "Prodotto",
+      "class": "UndirectedAssociation",
+      "label": "produttoreDi"
+    },
+    {
+      "tail": "Prodotto",
+      "head": "Pubblicazione",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Prodotto",
+      "head": "Brevetto",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "CentroRicerca",
+      "head": "Ricercatore",
+      "class": "UndirectedAssociation",
+      "label": "appartieneAl"
+    },
+    {
+      "tail": "CentroRicerca",
+      "head": "Punteggio",
+      "class": "UndirectedAssociation",
+      "label": "riferitoA"
+    },
+    {
+      "tail": "Brevetto",
+      "head": "Esperto",
+      "class": "UndirectedAssociation",
+      "label": "giudizio"
+    }
+  ],
+  "groups": []
+}

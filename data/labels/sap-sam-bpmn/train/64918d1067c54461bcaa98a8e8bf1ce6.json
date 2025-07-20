@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "text": "Negotiate pricing with suppliers\n",
+      "id": "Negotiate pricing with suppliers\n",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Physically Count  the Inventory",
+      "id": "Physically Count  the Inventory",
+      "class": "Task"
+    },
+    {
+      "text": "Place Order with Supplier ",
+      "id": "Place Order with Supplier ",
+      "class": "Task"
+    },
+    {
+      "text": "Perpetual Inventory System Updates Inventory",
+      "id": "Perpetual Inventory System Updates Inventory",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Negotiate pricing with suppliers\n",
+      "head": "Physically Count  the Inventory",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Physically Count  the Inventory",
+      "head": "Place Order with Supplier ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Place Order with Supplier ",
+      "head": "Perpetual Inventory System Updates Inventory",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Perpetual Inventory System Updates Inventory",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

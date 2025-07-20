@@ -1,0 +1,260 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "id": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "class": "Task"
+    },
+    {
+      "text": "Registro elettronico",
+      "id": "Registro elettronico",
+      "class": "DataObject"
+    },
+    {
+      "text": "analisi completezza informazioni immesse",
+      "id": "analisi completezza informazioni immesse",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "firma registro e invia modulistica",
+      "id": "firma registro e invia modulistica",
+      "class": "Task"
+    },
+    {
+      "text": "segnala anomalie con info mancanti",
+      "id": "segnala anomalie con info mancanti",
+      "class": "Task"
+    },
+    {
+      "text": "Documentazione esame e studente",
+      "id": "Documentazione esame e studente",
+      "class": "DataObject"
+    },
+    {
+      "text": "Analizza modulistica",
+      "id": "Analizza modulistica",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Segnala anomalia",
+      "id": "Segnala anomalia",
+      "class": "Task"
+    },
+    {
+      "text": "Immetti nella base di dati ",
+      "id": "Immetti nella base di dati ",
+      "class": "Task"
+    },
+    {
+      "text": "Notifica studente via mail",
+      "id": "Notifica studente via mail",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartMessageEvent_1",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Base di dati dei verbali esame",
+      "id": "Base di dati dei verbali esame",
+      "class": "DataObject"
+    },
+    {
+      "text": "Registro e modulistica",
+      "id": "Registro e modulistica",
+      "class": "DataObject"
+    },
+    {
+      "text": "",
+      "id": "IntermediateEvent_1",
+      "class": "IntermediateEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateEvent_2",
+      "class": "IntermediateEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "head": "Registro elettronico",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "head": "analisi completezza informazioni immesse",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "analisi completezza informazioni immesse",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "analisi completezza informazioni immesse",
+      "head": "Documentazione esame e studente",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "firma registro e invia modulistica",
+      "class": "SequenceFlow",
+      "label": "informazioni al completo"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "segnala anomalie con info mancanti",
+      "class": "SequenceFlow",
+      "label": "informazioni mancanti"
+    },
+    {
+      "tail": "firma registro e invia modulistica",
+      "head": "StartMessageEvent_1",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "segnala anomalie con info mancanti",
+      "head": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Analizza modulistica",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Analizza modulistica",
+      "head": "Registro e modulistica",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Segnala anomalia",
+      "class": "SequenceFlow",
+      "label": "anomalia pervenuta"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Immetti nella base di dati ",
+      "class": "SequenceFlow",
+      "label": "tutto regolare"
+    },
+    {
+      "tail": "Segnala anomalia",
+      "head": "inserisci :\nnome - cognome - matricola\ncodice esame",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Segnala anomalia",
+      "head": "IntermediateEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Immetti nella base di dati ",
+      "head": "Base di dati dei verbali esame",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Immetti nella base di dati ",
+      "head": "Notifica studente via mail",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Notifica studente via mail",
+      "head": "IntermediateEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartMessageEvent_1",
+      "head": "Analizza modulistica",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Docente",
+      "id": "Docente",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "inserisci :\nnome - cognome - matricola\ncodice esame",
+        "Registro elettronico",
+        "analisi completezza informazioni immesse",
+        "Exclusive_Databased_Gateway_1",
+        "firma registro e invia modulistica",
+        "segnala anomalie con info mancanti",
+        "Documentazione esame e studente"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Segreterie",
+      "id": "Segreterie",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Analizza modulistica",
+        "Exclusive_Databased_Gateway_2",
+        "Segnala anomalia",
+        "Immetti nella base di dati ",
+        "Notifica studente via mail",
+        "StartMessageEvent_1",
+        "Base di dati dei verbali esame",
+        "Registro e modulistica",
+        "IntermediateEvent_1",
+        "IntermediateEvent_2"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

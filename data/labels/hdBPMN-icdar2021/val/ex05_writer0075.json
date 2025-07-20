@@ -1,0 +1,293 @@
+{
+  "nodes": [
+    {
+      "text": "check documents for completness",
+      "id": "check documents for completness",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "register claim",
+      "id": "register claim",
+      "class": "task"
+    },
+    {
+      "text": "pick up DB",
+      "id": "pick up DB",
+      "class": "task"
+    },
+    {
+      "text": "cgeck insurance",
+      "id": "cgeck insurance",
+      "class": "task"
+    },
+    {
+      "text": "perform assessment",
+      "id": "perform assessment",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "phone garage to authorize repairs",
+      "id": "phone garage to authorize repairs",
+      "class": "task"
+    },
+    {
+      "text": "send letter to customer",
+      "id": "send letter to customer",
+      "class": "task"
+    },
+    {
+      "text": "reject claim",
+      "id": "reject claim",
+      "class": "task"
+    },
+    {
+      "text": "send letter to customer",
+      "id": "send letter to customer",
+      "class": "task"
+    },
+    {
+      "text": "claim info",
+      "id": "claim info",
+      "class": "dataObject"
+    },
+    {
+      "text": "claims DB",
+      "id": "claims DB",
+      "class": "dataStore"
+    },
+    {
+      "text": "insurance info",
+      "id": "insurance info",
+      "class": "dataObject"
+    },
+    {
+      "text": "Rejection info",
+      "id": "Rejection info",
+      "class": "dataObject"
+    },
+    {
+      "text": "receive letter",
+      "id": "receive letter",
+      "class": "task"
+    },
+    {
+      "text": "claim rejected",
+      "id": "claim rejected",
+      "class": "event"
+    },
+    {
+      "text": "claim submitted",
+      "id": "claim submitted",
+      "class": "event"
+    },
+    {
+      "text": "reject claim",
+      "id": "reject claim",
+      "class": "task"
+    },
+    {
+      "text": "payment schedule",
+      "id": "payment schedule",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "reject claim",
+      "head": "send letter to customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "reject claim",
+      "class": "sequenceFlow",
+      "label": "documents not complete"
+    },
+    {
+      "tail": "reject claim",
+      "head": "send letter to customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "reject claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "phone garage to authorize repairs",
+      "head": "payment schedule",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "phone garage to authorize repairs",
+      "class": "sequenceFlow",
+      "label": "assessment is positive"
+    },
+    {
+      "tail": "perform assessment",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "cgeck insurance",
+      "head": "perform assessment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pick up DB",
+      "head": "cgeck insurance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register claim",
+      "head": "pick up DB",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "register claim",
+      "class": "sequenceFlow",
+      "label": "documents complete"
+    },
+    {
+      "tail": "check documents for completness",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "claim submitted",
+      "head": "check documents for completness",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive letter",
+      "head": "claim rejected",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check documents for completness",
+      "head": "claim info",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "claim info",
+      "head": "register claim",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "register claim",
+      "head": "claims DB",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "claims DB",
+      "head": "pick up DB",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "cgeck insurance",
+      "head": "insurance info",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "insurance info",
+      "head": "perform assessment",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send letter to customer",
+      "head": "Rejection info",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "send letter to customer",
+      "head": "Rejection info",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Rejection info",
+      "head": "receive letter",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Car insurer",
+      "nodes": [
+        "customer",
+        "Notification Department",
+        "Handling Department"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "customer",
+      "nodes": [
+        "receive letter",
+        "claim rejected",
+        "claim submitted"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Notification Department",
+      "nodes": [
+        "check documents for completness",
+        "exclusiveGateway_1",
+        "register claim",
+        "reject claim",
+        "send letter to customer",
+        "claim info",
+        "Rejection info"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Handling Department",
+      "nodes": [
+        "pick up DB",
+        "cgeck insurance",
+        "perform assessment",
+        "exclusiveGateway_2",
+        "phone garage to authorize repairs",
+        "send letter to customer",
+        "claims DB",
+        "insurance info",
+        "reject claim",
+        "payment schedule"
+      ],
+      "class": "lane"
+    }
+  ]
+}

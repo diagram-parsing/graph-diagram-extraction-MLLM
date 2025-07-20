@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "text": "Kunde",
+      "attributes": [
+        "ID: ",
+        "Name: ",
+        "Straße: ",
+        "PLZ: ",
+        "Stadt: ",
+        "Geburtsdatum: "
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellung\n",
+      "attributes": [
+        "ID: ",
+        "Kunde_ID: ",
+        "Betrag: ",
+        "Datum: "
+      ],
+      "methods": null,
+      "id": "Bestellung\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellposition",
+      "attributes": [
+        "ID: ",
+        "Bestellung_ID: ",
+        "Artikel_ID: ",
+        "Menge: "
+      ],
+      "methods": null,
+      "id": "Bestellposition",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "ID: ",
+        "Bezeichnung: ",
+        "Beschreibung: ",
+        "Preis: ",
+        "Kategorie: ",
+        "Restmenge: "
+      ],
+      "methods": null,
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rechnung\n",
+      "attributes": [
+        "ID: ",
+        "Bestellung_ID: ",
+        "Kunde_ID: ",
+        "Datum: ",
+        "Betrag: ",
+        "bezahlt: "
+      ],
+      "methods": null,
+      "id": "Rechnung\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kunde",
+      "attributes": [
+        "ID: ",
+        "Adress_ID: ",
+        "Vorname: ",
+        "Nachname: ",
+        "Geburtsdatum: "
+      ],
+      "methods": null,
+      "id": "ComplexClass_1",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adresse",
+      "attributes": null,
+      "methods": [
+        "ID()",
+        "Kunde_ID()",
+        "Straße()",
+        "Hausnummer()",
+        "PLZ()",
+        "Stadt()",
+        "Bundesland()",
+        "Land()"
+      ],
+      "id": "Adresse",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellung\n",
+      "attributes": [
+        "ID: ",
+        "Kunde_ID: ",
+        "Summe: ",
+        "Datum: ",
+        "Artikel1_ID: ",
+        "Artikel2_ID: ",
+        "Artikel3_ID: ",
+        "Artikel4_ID: "
+      ],
+      "methods": null,
+      "id": "ComplexClass_2",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Reklamation",
+      "attributes": [
+        "ID: ",
+        "Kunde_ID: ",
+        "Bestellung_ID: ",
+        "Rechnung_ID: ",
+        "Artikel_ID: ",
+        "Datum: ",
+        "behoben: "
+      ],
+      "methods": null,
+      "id": "Reklamation",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "ID: ",
+        "Bezeichnung: ",
+        "Beschreibung: ",
+        "Preis: ",
+        "Kategorie: ",
+        "Restmenge: "
+      ],
+      "methods": null,
+      "id": "ComplexClass_3",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rechnung\n",
+      "attributes": [
+        "ID: ",
+        "Bestellung_ID: ",
+        "Kunde_ID: ",
+        "Datum: ",
+        "Betrag: ",
+        "bezahlt: "
+      ],
+      "methods": null,
+      "id": "ComplexClass_4",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde",
+      "head": "Bestellung\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kunde",
+      "head": "Rechnung\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kunde",
+      "head": "Reklamation",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung\n",
+      "head": "Bestellposition",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung\n",
+      "head": "Rechnung\n",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bestellung\n",
+      "head": "Reklamation",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Bestellposition",
+      "head": "Artikel",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Rechnung\n",
+      "head": "Reklamation",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "Adresse",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "ComplexClass_2",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_1",
+      "head": "ComplexClass_4",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_2",
+      "head": "ComplexClass_3",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ComplexClass_2",
+      "head": "ComplexClass_4",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

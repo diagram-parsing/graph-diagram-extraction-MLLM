@@ -1,0 +1,153 @@
+{
+  "nodes": [
+    {
+      "text": "FarbEnum",
+      "attributes": [
+        "Blue: ",
+        "Red: ",
+        "Green: ",
+        "Yellow: "
+      ],
+      "methods": null,
+      "id": "FarbEnum",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Spieler\n",
+      "attributes": [
+        "name: String",
+        "spielerNummer: int",
+        "isBot: boolean",
+        "spielhand: Karte[]"
+      ],
+      "methods": [
+        "toString()"
+      ],
+      "id": "Spieler\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Karte",
+      "attributes": [
+        "wert: int",
+        "farbe: FarbEnum",
+        "schonAusgeteilt: boolean"
+      ],
+      "methods": null,
+      "id": "Karte",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kartenstapel",
+      "attributes": [
+        "kartenstapel: Karte"
+      ],
+      "methods": null,
+      "id": "Kartenstapel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Spiel",
+      "attributes": [
+        "spListe: Spieler[]",
+        "trumpfKarte: Karte",
+        "spielerAnzahl: int",
+        "kStapel: Kartenstapel",
+        "kZiehen: KarteZiehen",
+        "bDW: BlockDerWahrheit"
+      ],
+      "methods": [
+        "spielStarten()",
+        "spielernameEingabe()",
+        "spielVerlauf()",
+        "kartenZiehen()",
+        "spielerInitialisierung()",
+        "blockDerWahrheitInitialisierung()",
+        "ausgabeTrumpfFarbe()",
+        "ausgabeSpielhandAllerSpieler()",
+        "ausgabeSpielhandSpieler()",
+        "stichSetzen()",
+        "stichGesamtZahl()",
+        "botStichSetzen()",
+        "switchTippZeile()",
+        "stechen()",
+        "karteAuswaehlenKI()",
+        "kartenNummerZurueckGeben()",
+        "()",
+        "trumpfKarteAufHandPruefen()",
+        "geforderteFarbeAufHandPruefen()",
+        "stichGewinnerErmitteln()",
+        "punktzahlErmitteln()",
+        "gesamtErgebnisErmitteln()"
+      ],
+      "id": "Spiel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "KI",
+      "attributes": null,
+      "methods": [
+        "karteAussuchen()",
+        "sticheVorhersagen()",
+        "nameVergeben()"
+      ],
+      "id": "KI",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "KarteZiehen\n",
+      "attributes": null,
+      "methods": [
+        "karteZiehen()",
+        "trumpfKarteZiehen()",
+        "kartenMischen()"
+      ],
+      "id": "KarteZiehen\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "BlockDerWahrheit",
+      "attributes": [
+        "blockDerWahrheit: String[][]"
+      ],
+      "methods": [
+        "printBlockDerWahrheit()"
+      ],
+      "id": "BlockDerWahrheit",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "FarbEnum",
+      "head": "Karte",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Spieler\n",
+      "head": "Karte",
+      "class": "DirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Kartenstapel",
+      "head": "Karte",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Spiel",
+      "head": "Spieler\n",
+      "class": "Aggregation",
+      "label": ""
+    },
+    {
+      "tail": "Spiel",
+      "head": "Kartenstapel",
+      "class": "Aggregation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

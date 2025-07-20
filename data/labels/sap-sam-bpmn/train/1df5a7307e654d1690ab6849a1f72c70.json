@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "1",
+      "id": "1",
+      "class": "Task"
+    },
+    {
+      "text": "2",
+      "id": "2",
+      "class": "Task"
+    },
+    {
+      "text": "3",
+      "id": "3",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "2",
+      "head": "3",
+      "class": "MessageFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "test",
+      "id": "test",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "1"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "test2",
+      "id": "test2",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "2",
+        "3"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

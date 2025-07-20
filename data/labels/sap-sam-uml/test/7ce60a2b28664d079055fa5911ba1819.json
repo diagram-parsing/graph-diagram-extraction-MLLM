@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "text": "Viaggiatore",
+      "attributes": [
+        "nome : String",
+        "cognome: String",
+        "nascita: Date",
+        "e-mail: String",
+        "nazionalità: String",
+        "CF: String",
+        "cellulare: String"
+      ],
+      "methods": null,
+      "id": "Viaggiatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ingresso ",
+      "attributes": [
+        "arrivo previsto: DateTime",
+        "codice: String",
+        "mezzo: Enum"
+      ],
+      "methods": null,
+      "id": "Ingresso ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Località",
+      "attributes": [
+        "nome: String",
+        "provincia (distretto): String",
+        "regione (stato): String"
+      ],
+      "methods": null,
+      "id": "Località",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Indirizzo",
+      "attributes": [
+        "via: String",
+        "n civico: Int",
+        "cap: String",
+        "città: String",
+        "provincia : String",
+        "regione: String"
+      ],
+      "methods": null,
+      "id": "Indirizzo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "mezzo:\n- bus\n- treno\n- traghetto\n- aereo\n- mezzo prorpio",
+      "attributes": null,
+      "methods": null,
+      "id": "mezzo:\n- bus\n- treno\n- traghetto\n- aereo\n- mezzo prorpio",
+      "class": "Note"
+    },
+    {
+      "text": "Presidio ",
+      "attributes": [
+        "nome: String",
+        "indirizzo: String"
+      ],
+      "methods": null,
+      "id": "Presidio ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Nazione ",
+      "attributes": [
+        "nome: String"
+      ],
+      "methods": null,
+      "id": "Nazione ",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rischio",
+      "attributes": [
+        "inizio : Date",
+        "fine: Date"
+      ],
+      "methods": null,
+      "id": "Rischio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Test",
+      "attributes": [
+        "data: Date",
+        "esito: String"
+      ],
+      "methods": null,
+      "id": "Test",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Viaggiatore",
+      "head": "Indirizzo",
+      "class": "UndirectedAssociation",
+      "label": "reperibile all'"
+    },
+    {
+      "tail": "Viaggiatore",
+      "head": "Ingresso ",
+      "class": "UndirectedAssociation",
+      "label": "registra "
+    },
+    {
+      "tail": "Viaggiatore",
+      "head": "Test",
+      "class": "UndirectedAssociation",
+      "label": "relativo a "
+    },
+    {
+      "tail": "Ingresso ",
+      "head": "Località",
+      "class": "UndirectedAssociation",
+      "label": "proviene da "
+    },
+    {
+      "tail": "Ingresso ",
+      "head": "mezzo:\n- bus\n- treno\n- traghetto\n- aereo\n- mezzo prorpio",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Località",
+      "head": "Nazione ",
+      "class": "UndirectedAssociation",
+      "label": "in"
+    },
+    {
+      "tail": "Presidio ",
+      "head": "Viaggiatore",
+      "class": "UndirectedAssociation",
+      "label": "deve recarsi"
+    },
+    {
+      "tail": "Nazione ",
+      "head": "Rischio",
+      "class": "UndirectedAssociation",
+      "label": "soggetta a "
+    }
+  ],
+  "groups": []
+}

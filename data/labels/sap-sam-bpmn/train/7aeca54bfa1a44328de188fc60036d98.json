@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Open\nEnvelope",
+      "id": "Open\nEnvelope",
+      "class": "Task"
+    },
+    {
+      "text": "Categorise\nMail",
+      "id": "Categorise\nMail",
+      "class": "Task"
+    },
+    {
+      "text": "Mail Opened",
+      "id": "Mail Opened",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Open\nEnvelope",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Open\nEnvelope",
+      "head": "Categorise\nMail",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Categorise\nMail",
+      "head": "Mail Opened",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "SSP",
+      "id": "SSP",
+      "nodes": [
+        "Mail Centre Staff"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "Mail Centre Staff",
+      "id": "Mail Centre Staff",
+      "nodes": [
+        "StartEvent_1",
+        "Open\nEnvelope",
+        "Categorise\nMail",
+        "Mail Opened"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

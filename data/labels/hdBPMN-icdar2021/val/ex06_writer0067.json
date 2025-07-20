@@ -1,0 +1,247 @@
+{
+  "nodes": [
+    {
+      "text": "print out order",
+      "id": "print out order",
+      "class": "task"
+    },
+    {
+      "text": "receive roder",
+      "id": "receive roder",
+      "class": "messageEvent"
+    },
+    {
+      "text": "write down order",
+      "id": "write down order",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "pinboard",
+      "id": "pinboard",
+      "class": "dataStore"
+    },
+    {
+      "text": "order",
+      "id": "order",
+      "class": "dataObject"
+    },
+    {
+      "text": "order",
+      "id": "order",
+      "class": "dataObject"
+    },
+    {
+      "text": "receive order",
+      "id": "receive order",
+      "class": "messageEvent"
+    },
+    {
+      "text": "order [confirmed]",
+      "id": "order [confirmed]",
+      "class": "dataObject"
+    },
+    {
+      "text": "order [printed]",
+      "id": "order [printed]",
+      "class": "dataObject"
+    },
+    {
+      "text": "end order",
+      "id": "end order",
+      "class": "event"
+    },
+    {
+      "text": "receive order",
+      "id": "receive order",
+      "class": "messageEvent"
+    },
+    {
+      "text": "order",
+      "id": "order",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "dataObject_1",
+      "class": "dataObject"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "attach order note to pinboard",
+      "id": "attach order note to pinboard",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "print out order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive order",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attach order note to pinboard",
+      "head": "end order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "attach order note to pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive roder",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive order",
+      "head": "write down order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write down order",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order [confirmed]",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order",
+      "head": "print out order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "print out order",
+      "head": "order [printed]",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "receive roder",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "write down order",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "receive order",
+      "head": "order",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order",
+      "head": "messageEvent_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "order [printed]",
+      "head": "attach order note to pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "attach order note to pinboard",
+      "head": "dataObject_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "attach order note to pinboard",
+      "head": "pinboard",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "Customer",
+      "head": "receive order",
+      "class": "messageFlow",
+      "label": "order by phone"
+    },
+    {
+      "tail": "Customer",
+      "head": "receive roder",
+      "class": "messageFlow",
+      "label": "order by website"
+    },
+    {
+      "tail": "Customer",
+      "head": "receive order",
+      "class": "messageFlow",
+      "label": "order by lieferando"
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "Customer",
+      "class": "messageFlow",
+      "label": "confirm order"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Pizzeria",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "Customer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

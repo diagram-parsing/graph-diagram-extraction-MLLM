@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "text": "Kontrollo performancën\n",
+      "attributes": null,
+      "methods": [
+        "Kontrollo pjesëmarrjen()"
+      ],
+      "id": "Kontrollo performancën\n",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Klient\n",
+      "attributes": [
+        "ClientID: ",
+        "UserName: ",
+        "RegistrationDate: ",
+        "Age: ",
+        "AtendenceNumber: ",
+        "Score: "
+      ],
+      "methods": null,
+      "id": "Klient\n",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kontrollo performancën\n",
+      "head": "Klient\n",
+      "class": "Dependency",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

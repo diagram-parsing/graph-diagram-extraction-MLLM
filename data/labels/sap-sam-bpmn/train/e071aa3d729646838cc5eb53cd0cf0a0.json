@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartTimerEvent_1",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Teaching par 1 ",
+      "id": "Teaching par 1 ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartTimerEvent_2",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Break ",
+      "id": "Break ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartTimerEvent_3",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Teaching part 2 ",
+      "id": "Teaching part 2 ",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartTimerEvent_4",
+      "class": "StartTimerEvent"
+    },
+    {
+      "text": "Back to office ",
+      "id": "Back to office ",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartTimerEvent_1",
+      "head": "Teaching par 1 ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartTimerEvent_2",
+      "head": "Break ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartTimerEvent_3",
+      "head": "Teaching part 2 ",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartTimerEvent_4",
+      "head": "Back to office ",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

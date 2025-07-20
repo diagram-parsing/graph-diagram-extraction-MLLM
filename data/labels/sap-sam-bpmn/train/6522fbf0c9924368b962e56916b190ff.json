@@ -1,0 +1,224 @@
+{
+  "nodes": [
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Пријава преко корисничког имена и лозинке",
+      "id": "Пријава преко корисничког имена и лозинке",
+      "class": "Task"
+    },
+    {
+      "text": "Порука о успешности регистрације",
+      "id": "Порука о успешности регистрације",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Повезивање са сертификатом",
+      "id": "Повезивање са сертификатом",
+      "class": "Task"
+    },
+    {
+      "text": "Избор корисника",
+      "id": "Избор корисника",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Регистрација",
+      "id": "Регистрација",
+      "class": "Task"
+    },
+    {
+      "text": "Порука о успешности ажурирања",
+      "id": "Порука о успешности ажурирања",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Провера валиданости корисничког имена и лозинке",
+      "id": "Провера валиданости корисничког имена и лозинке",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Провера података",
+      "id": "Провера података",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Ажурирање података",
+      "id": "Ажурирање података",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Пријава преко корисничког имена и лозинке",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Пријава преко корисничког имена и лозинке",
+      "head": "Провера валиданости корисничког имена и лозинке",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Порука о успешности регистрације",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Повезивање са сертификатом",
+      "head": "Провера података",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Избор корисника",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Ажурирање података",
+      "class": "SequenceFlow",
+      "label": "Са сертификата"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Регистрација",
+      "class": "SequenceFlow",
+      "label": "Постојеће име и презиме"
+    },
+    {
+      "tail": "Регистрација",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Порука о успешности ажурирања",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Провера валиданости корисничког имена и лозинке",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Повезивање са сертификатом",
+      "class": "SequenceFlow",
+      "label": "Да"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Пријава преко корисничког имена и лозинке",
+      "class": "SequenceFlow",
+      "label": "Не"
+    },
+    {
+      "tail": "Провера података",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Порука о успешности регистрације",
+      "class": "SequenceFlow",
+      "label": "Да"
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Избор корисника",
+      "class": "SequenceFlow",
+      "label": "Не"
+    },
+    {
+      "tail": "Ажурирање података",
+      "head": "Порука о успешности ажурирања",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Корисник",
+      "id": "Корисник",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "StartEvent_1",
+        "Пријава преко корисничког имена и лозинке",
+        "Порука о успешности регистрације",
+        "EndEvent_1",
+        "Повезивање са сертификатом",
+        "Избор корисника",
+        "Exclusive_Databased_Gateway_1",
+        "Регистрација",
+        "Порука о успешности ажурирања",
+        "EndEvent_2"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Систем",
+      "id": "Систем",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Провера валиданости корисничког имена и лозинке",
+        "Exclusive_Databased_Gateway_2",
+        "Провера података",
+        "Exclusive_Databased_Gateway_3",
+        "Ажурирање података"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

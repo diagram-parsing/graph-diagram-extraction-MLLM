@@ -1,0 +1,212 @@
+{
+  "nodes": [
+    {
+      "text": "u1: Usuario",
+      "attributes": [
+        "Correo Electrónico = jane.doe@dummy.com: ",
+        "Contraseña = pepeperez123: ",
+        "Nombre = Pepe: ",
+        "Apellidos = Pérez: "
+      ],
+      "methods": null,
+      "id": "u1: Usuario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "p1: Paciente",
+      "attributes": [
+        "Antecedentes Familiares = Ninguno: ",
+        "Antecedentes Personales = Ninguno: ",
+        "Fecha de Nacimiento = 1979/11/07: ",
+        "Sexo = Hombre: "
+      ],
+      "methods": null,
+      "id": "p1: Paciente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "c2: Cita Médica",
+      "attributes": [
+        "Fecha = 2016/11/11 12:00:00: ",
+        "Duración = 15: ",
+        "Laser = false: "
+      ],
+      "methods": null,
+      "id": "c2: Cita Médica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "f2: Factura",
+      "attributes": null,
+      "methods": null,
+      "id": "f2: Factura",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "d2: Dinero",
+      "attributes": [
+        "Importe = 500$: ",
+        "Concepto = Consulta y Tratamiento: "
+      ],
+      "methods": null,
+      "id": "d2: Dinero",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "pr1: Prueba Complementaria",
+      "attributes": [
+        "Descripción = Radiografía: "
+      ],
+      "methods": null,
+      "id": "pr1: Prueba Complementaria",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "e1: enfermedad",
+      "attributes": [
+        "Nombre = Cancer: ",
+        "Fecha de Diagnosis = 1999/6/17: ",
+        "Detalles = Benigno: "
+      ],
+      "methods": null,
+      "id": "e1: enfermedad",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "c1: Cita Médica",
+      "attributes": [
+        "Fecha y Hora = 2016/08/11 12:30:00: ",
+        "Duración = 15: ",
+        "Laser = false: "
+      ],
+      "methods": null,
+      "id": "c1: Cita Médica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "t1: Tratamiento",
+      "attributes": [
+        "Descripción = Radiación: ",
+        "Fecha de Comienzo = 16/12/1: ",
+        "Fecha de Fin = 16/12/25: ",
+        "Medicamentos = Paracetamol: "
+      ],
+      "methods": null,
+      "id": "t1: Tratamiento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ev1: Evolución",
+      "attributes": [
+        "Análisis: Tumor no ha empeorado: ",
+        "Diagnóstico: Leves Nauseas: "
+      ],
+      "methods": null,
+      "id": "ev1: Evolución",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Teléfono",
+      "attributes": [
+        "Número = 696948857: "
+      ],
+      "methods": null,
+      "id": "Teléfono",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "te1: Tratamiento Estándar",
+      "attributes": null,
+      "methods": null,
+      "id": "te1: Tratamiento Estándar",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "u1: Usuario",
+      "head": "p1: Paciente",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "p1: Paciente",
+      "head": "pr1: Prueba Complementaria",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "p1: Paciente",
+      "head": "e1: enfermedad",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "c2: Cita Médica",
+      "head": "p1: Paciente",
+      "class": "UndirectedAssociation",
+      "label": "solicita"
+    },
+    {
+      "tail": "c2: Cita Médica",
+      "head": "ev1: Evolución",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "c2: Cita Médica",
+      "head": "pr1: Prueba Complementaria",
+      "class": "UndirectedAssociation",
+      "label": "cerrada en"
+    },
+    {
+      "tail": "f2: Factura",
+      "head": "c2: Cita Médica",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "f2: Factura",
+      "head": "t1: Tratamiento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "d2: Dinero",
+      "head": "f2: Factura",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "e1: enfermedad",
+      "head": "t1: Tratamiento",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "e1: enfermedad",
+      "head": "ev1: Evolución",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "c1: Cita Médica",
+      "head": "pr1: Prueba Complementaria",
+      "class": "UndirectedAssociation",
+      "label": "abierta en"
+    },
+    {
+      "tail": "t1: Tratamiento",
+      "head": "te1: Tratamiento Estándar",
+      "class": "Generalization",
+      "label": ""
+    },
+    {
+      "tail": "Teléfono",
+      "head": "u1: Usuario",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,185 @@
+{
+  "nodes": [
+    {
+      "text": "Chor\nbuchen",
+      "id": "Chor\nbuchen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Auftrag",
+      "id": "Auftrag",
+      "class": "DataObject"
+    },
+    {
+      "text": "Chor-\nmitglieder informieren",
+      "id": "Chor-\nmitglieder informieren",
+      "class": "Task"
+    },
+    {
+      "text": "Lieder-\nauswahl",
+      "id": "Lieder-\nauswahl",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Proben-\nplanung",
+      "id": "Proben-\nplanung",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Chorproben",
+      "id": "Chorproben",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Stellprobe",
+      "id": "Stellprobe",
+      "class": "CollapsedSubprocess"
+    },
+    {
+      "text": "Tag des\nKonzerts",
+      "id": "Tag des\nKonzerts",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "text": "Singen bei Konzert",
+      "id": "Singen bei Konzert",
+      "class": "Task"
+    },
+    {
+      "text": "Einsingen",
+      "id": "Einsingen",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Chor\nbuchen",
+      "head": "Chor-\nmitglieder informieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Chor\nbuchen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Chor-\nmitglieder informieren",
+      "head": "Lieder-\nauswahl",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lieder-\nauswahl",
+      "head": "Proben-\nplanung",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Proben-\nplanung",
+      "head": "Chorproben",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Chorproben",
+      "head": "Tag des\nKonzerts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stellprobe",
+      "head": "Einsingen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Tag des\nKonzerts",
+      "head": "Stellprobe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Singen bei Konzert",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Einsingen",
+      "head": "Singen bei Konzert",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Veranstalter",
+      "id": "Veranstalter",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Chor\nbuchen",
+        "StartEvent_1",
+        "Auftrag"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Chorleiter",
+      "id": "Chorleiter",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Chor-\nmitglieder informieren",
+        "Lieder-\nauswahl",
+        "Proben-\nplanung",
+        "Chorproben",
+        "Stellprobe",
+        "Tag des\nKonzerts"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Chormitglied",
+      "id": "Chormitglied",
+      "nodes": [
+        "Lane_3"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_3",
+      "nodes": [
+        "Singen bei Konzert",
+        "Einsingen",
+        "EndEvent_1"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

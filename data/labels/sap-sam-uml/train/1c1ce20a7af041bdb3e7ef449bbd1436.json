@@ -1,0 +1,140 @@
+{
+  "nodes": [
+    {
+      "text": "semaforo",
+      "attributes": [
+        "codice : String",
+        "semaforoaggiuntivo: boolean",
+        "lat: double",
+        "long: double"
+      ],
+      "methods": null,
+      "id": "semaforo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "lampadina",
+      "attributes": [
+        "tipo: enum"
+      ],
+      "methods": null,
+      "id": "lampadina",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "segnalazione",
+      "attributes": [
+        "codice: String",
+        "confermata: boolean",
+        "descrizione: String",
+        "interventoeffettuato: boolean",
+        "datRisoluzione: Date",
+        "dataApertura: Date"
+      ],
+      "methods": null,
+      "id": "segnalazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "tipodiguasto",
+      "attributes": [
+        "tipo: String",
+        "descrizione: String",
+        "etichetta: String"
+      ],
+      "methods": null,
+      "id": "tipodiguasto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "SQUADRA",
+      "attributes": [
+        "codice: String"
+      ],
+      "methods": null,
+      "id": "SQUADRA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Operaio",
+      "attributes": null,
+      "methods": null,
+      "id": "Operaio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "compostaDa",
+      "attributes": [
+        "capo-squadra: String"
+      ],
+      "methods": null,
+      "id": "compostaDa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "UTENTE",
+      "attributes": null,
+      "methods": null,
+      "id": "UTENTE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ZONA",
+      "attributes": null,
+      "methods": null,
+      "id": "ZONA",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "semaforo",
+      "head": "lampadina",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "semaforo",
+      "head": "segnalazione",
+      "class": "UndirectedAssociation",
+      "label": "relativaA"
+    },
+    {
+      "tail": "semaforo",
+      "head": "ZONA",
+      "class": "UndirectedAssociation",
+      "label": "appartienaA"
+    },
+    {
+      "tail": "segnalazione",
+      "head": "tipodiguasto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "segnalazione",
+      "head": "SQUADRA",
+      "class": "UndirectedAssociation",
+      "label": "propostaA"
+    },
+    {
+      "tail": "SQUADRA",
+      "head": "Operaio",
+      "class": "UndirectedAssociation",
+      "label": "composta"
+    },
+    {
+      "tail": "UTENTE",
+      "head": "segnalazione",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "ZONA",
+      "head": "SQUADRA",
+      "class": "UndirectedAssociation",
+      "label": "operaIn"
+    }
+  ],
+  "groups": []
+}

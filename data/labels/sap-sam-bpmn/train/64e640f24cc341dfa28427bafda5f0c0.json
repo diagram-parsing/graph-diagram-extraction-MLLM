@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "text": "Prejem\n e-maila",
+      "id": "Prejem\n e-maila",
+      "class": "StartMessageEvent"
+    },
+    {
+      "text": "Obravnavanje prošnje",
+      "id": "Obravnavanje prošnje",
+      "class": "Task"
+    },
+    {
+      "text": "Objava na internetu",
+      "id": "Objava na internetu",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Odobritev za ponavljanje letnika",
+      "id": "Odobritev za ponavljanje letnika",
+      "class": "Task"
+    },
+    {
+      "text": "Napiše prošnjo z dokazilom preko emaila",
+      "id": "Napiše prošnjo z dokazilom preko emaila",
+      "class": "Task"
+    },
+    {
+      "text": "Prošnja\n + \ndokazila",
+      "id": "Prošnja\n + \ndokazila",
+      "class": "DataObject"
+    },
+    {
+      "text": "Pošlje \ne-mail",
+      "id": "Pošlje \ne-mail",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "TextAnnotation_1",
+      "class": "TextAnnotation"
+    },
+    {
+      "text": "Pregled na internetu",
+      "id": "Pregled na internetu",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Želi ponavljati\nletnik",
+      "id": "Želi ponavljati\nletnik",
+      "class": "StartEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Prejem\n e-maila",
+      "head": "Obravnavanje prošnje",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Obravnavanje prošnje",
+      "head": "Odobritev za ponavljanje letnika",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Objava na internetu",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Odobritev za ponavljanje letnika",
+      "head": "Objava na internetu",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Napiše prošnjo z dokazilom preko emaila",
+      "head": "Prošnja\n + \ndokazila",
+      "class": "Association_Unidirectional",
+      "label": ""
+    },
+    {
+      "tail": "Napiše prošnjo z dokazilom preko emaila",
+      "head": "Pošlje \ne-mail",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Napiše prošnjo z dokazilom preko emaila",
+      "head": "TextAnnotation_1",
+      "class": "Association_Undirected",
+      "label": ""
+    },
+    {
+      "tail": "Pošlje \ne-mail",
+      "head": "Prejem\n e-maila",
+      "class": "MessageFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pošlje \ne-mail",
+      "head": "Pregled na internetu",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pregled na internetu",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Želi ponavljati\nletnik",
+      "head": "Napiše prošnjo z dokazilom preko emaila",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Komisija za študijske zadeve ",
+      "id": "Komisija za študijske zadeve",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Prejem\n e-maila",
+        "Obravnavanje prošnje",
+        "Objava na internetu",
+        "EndEvent_1",
+        "Odobritev za ponavljanje letnika"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Študent",
+      "id": "Študent",
+      "nodes": [
+        "Lane_2"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_2",
+      "nodes": [
+        "Napiše prošnjo z dokazilom preko emaila",
+        "Prošnja\n + \ndokazila",
+        "Pošlje \ne-mail",
+        "TextAnnotation_1",
+        "Pregled na internetu",
+        "EndEvent_2",
+        "Želi ponavljati\nletnik"
+      ],
+      "class": "Lane"
+    }
+  ]
+}

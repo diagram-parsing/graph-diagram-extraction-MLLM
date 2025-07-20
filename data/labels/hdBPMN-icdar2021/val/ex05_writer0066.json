@@ -1,0 +1,332 @@
+{
+  "nodes": [
+    {
+      "text": "checks cumplete of documentation",
+      "id": "checks cumplete of documentation",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_1",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_2",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": "send rejection letter",
+      "id": "send rejection letter",
+      "class": "task"
+    },
+    {
+      "text": "end claim",
+      "id": "end claim",
+      "class": "event"
+    },
+    {
+      "text": "register claim",
+      "id": "register claim",
+      "class": "task"
+    },
+    {
+      "text": "check insurance",
+      "id": "check insurance",
+      "class": "task"
+    },
+    {
+      "text": "assessment of claim",
+      "id": "assessment of claim",
+      "class": "task"
+    },
+    {
+      "text": "authorize repair",
+      "id": "authorize repair",
+      "class": "task"
+    },
+    {
+      "text": "send rejection",
+      "id": "send rejection",
+      "class": "task"
+    },
+    {
+      "text": "schedule payment",
+      "id": "schedule payment",
+      "class": "task"
+    },
+    {
+      "text": "send letter",
+      "id": "send letter",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_1",
+      "class": "messageEvent"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_1",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "end claim",
+      "id": "end claim",
+      "class": "event"
+    },
+    {
+      "text": "send rejection letter",
+      "id": "send rejection letter",
+      "class": "task"
+    },
+    {
+      "text": null,
+      "id": "exclusiveGateway_3",
+      "class": "exclusiveGateway"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_2",
+      "class": "parallelGateway"
+    },
+    {
+      "text": "end claim",
+      "id": "end claim",
+      "class": "event"
+    },
+    {
+      "text": "end claim",
+      "id": "end claim",
+      "class": "event"
+    },
+    {
+      "text": null,
+      "id": "parallelGateway_3",
+      "class": "parallelGateway"
+    },
+    {
+      "text": null,
+      "id": "messageEvent_2",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "parallelGateway_3",
+      "head": "end claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "send rejection letter",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send letter",
+      "head": "end claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "schedule payment",
+      "head": "send letter",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "authorize repair",
+      "head": "schedule payment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "end claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "send rejection",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": "negative assessment"
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "authorize repair",
+      "class": "sequenceFlow",
+      "label": "positive assessment"
+    },
+    {
+      "tail": "assessment of claim",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "assessment of claim",
+      "class": "sequenceFlow",
+      "label": "check positive"
+    },
+    {
+      "tail": "check insurance",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "check insurance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register claim",
+      "head": "messageEvent_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "register claim",
+      "class": "sequenceFlow",
+      "label": "cumplete"
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "end claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "send rejection letter",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "checks cumplete of documentation",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "checks cumplete of documentation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "customer",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": "Claim relevant documentation"
+    },
+    {
+      "tail": "send rejection letter",
+      "head": "customer",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "customer",
+      "head": "send rejection letter",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "authorize repair",
+      "head": "garage",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "send letter",
+      "head": "customer",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "send rejection",
+      "head": "customer",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "car insurer",
+      "nodes": [
+        "Handling Department",
+        "notifiaction department"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "Handling Department",
+      "nodes": [
+        "exclusiveGateway_2",
+        "check insurance",
+        "assessment of claim",
+        "authorize repair",
+        "send rejection",
+        "schedule payment",
+        "send letter",
+        "end claim",
+        "send rejection letter",
+        "exclusiveGateway_3",
+        "parallelGateway_2",
+        "end claim",
+        "end claim",
+        "parallelGateway_3",
+        "messageEvent_2"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "notifiaction department",
+      "nodes": [
+        "checks cumplete of documentation",
+        "exclusiveGateway_1",
+        "send rejection letter",
+        "end claim",
+        "register claim",
+        "messageEvent_1",
+        "parallelGateway_1"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "garage",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "customer",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "text": "Elezione",
+      "attributes": [
+        "Data: date",
+        "Ora: time",
+        "NMaxPref: int",
+        "NPersElette: int"
+      ],
+      "methods": null,
+      "id": "Elezione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Risultato",
+      "attributes": [
+        "Quorum: boolean",
+        "Elenco votanti: string",
+        "elencoPreferenze: string"
+      ],
+      "methods": null,
+      "id": "Risultato",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Dipendente",
+      "attributes": [
+        "Nome: string",
+        "Cognome: string",
+        "Dipartimento: string",
+        "Livello: string"
+      ],
+      "methods": null,
+      "id": "Dipendente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "elettorato attivo",
+      "attributes": [
+        "HaVotato: Boolean"
+      ],
+      "methods": null,
+      "id": "elettorato attivo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Elettorato passivo",
+      "attributes": [
+        "nVoti: int",
+        "eletto: boolean"
+      ],
+      "methods": null,
+      "id": "Elettorato passivo",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Elezione",
+      "head": "Risultato",
+      "class": "UndirectedAssociation",
+      "label": "da"
+    },
+    {
+      "tail": "Elezione",
+      "head": "Dipendente",
+      "class": "UndirectedAssociation",
+      "label": "Elettorato attivo"
+    },
+    {
+      "tail": "Elezione",
+      "head": "Dipendente",
+      "class": "UndirectedAssociation",
+      "label": "Elettorato passivo"
+    }
+  ],
+  "groups": []
+}

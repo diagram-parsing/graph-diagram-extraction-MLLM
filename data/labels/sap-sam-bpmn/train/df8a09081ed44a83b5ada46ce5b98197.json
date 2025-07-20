@@ -1,0 +1,197 @@
+{
+  "nodes": [
+    {
+      "text": "Mitarbeiter Zufriedenheit feststellen",
+      "id": "Mitarbeiter Zufriedenheit feststellen",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Mitarbeiter Zufriedenheit feststellen",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Mitarbeiter Gespräche durchführen",
+      "id": "Mitarbeiter Gespräche durchführen",
+      "class": "Task"
+    },
+    {
+      "text": "Alles In Ordnung",
+      "id": "Alles In Ordnung",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Keine Änderungen sind notwendig\n",
+      "id": "Keine Änderungen sind notwendig\n",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Mitarbeiter Umfragen starten",
+      "id": "Mitarbeiter Umfragen starten",
+      "class": "Task"
+    },
+    {
+      "text": "welche Änderungen muss durchgeführt werden",
+      "id": "welche Änderungen muss durchgeführt werden",
+      "class": "Task"
+    },
+    {
+      "text": "Änderungen durchführbar",
+      "id": "Änderungen durchführbar",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Umfrage teilnehmen",
+      "id": "Umfrage teilnehmen",
+      "class": "Task"
+    },
+    {
+      "text": "Auswerten",
+      "id": "Auswerten",
+      "class": "Task"
+    },
+    {
+      "text": "Probleme erkennbar",
+      "id": "Probleme erkennbar",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Probleme melden",
+      "id": "Probleme melden",
+      "class": "Task"
+    },
+    {
+      "text": "weitere Untersuchen notwenig\n",
+      "id": "weitere Untersuchen notwenig\n",
+      "class": "Task"
+    },
+    {
+      "text": "Probleme lösen",
+      "id": "Probleme lösen",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Problem lösen",
+      "id": "Problem lösen",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Mitarbeiter Zufriedenheit feststellen",
+      "head": "Mitarbeiter Umfragen starten",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_1",
+      "head": "Mitarbeiter Gespräche durchführen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Mitarbeiter Gespräche durchführen",
+      "head": "Alles In Ordnung",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Alles In Ordnung",
+      "head": "welche Änderungen muss durchgeführt werden",
+      "class": "SequenceFlow",
+      "label": "nein\n"
+    },
+    {
+      "tail": "Alles In Ordnung",
+      "head": "Keine Änderungen sind notwendig\n",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Mitarbeiter Umfragen starten",
+      "head": "Umfrage teilnehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Änderungen durchführbar",
+      "head": "Problem lösen",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Änderungen durchführbar",
+      "head": "weitere Untersuchen notwenig\n",
+      "class": "SequenceFlow",
+      "label": "nein\n"
+    },
+    {
+      "tail": "Umfrage teilnehmen",
+      "head": "Auswerten",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Auswerten",
+      "head": "Probleme erkennbar",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Probleme erkennbar",
+      "head": "Probleme melden",
+      "class": "SequenceFlow",
+      "label": "ja"
+    },
+    {
+      "tail": "Probleme erkennbar",
+      "head": "weitere Untersuchen notwenig\n",
+      "class": "SequenceFlow",
+      "label": "nein\n"
+    },
+    {
+      "tail": "Probleme melden",
+      "head": "Probleme lösen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "weitere Untersuchen notwenig\n",
+      "head": "Umfrage teilnehmen",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "test",
+      "id": "test",
+      "nodes": [
+        "Lane_1"
+      ],
+      "class": "Pool"
+    },
+    {
+      "name": "",
+      "id": "Lane_1",
+      "nodes": [
+        "Mitarbeiter Zufriedenheit feststellen",
+        "StartEvent_1",
+        "Mitarbeiter Gespräche durchführen",
+        "Alles In Ordnung",
+        "Keine Änderungen sind notwendig\n",
+        "Mitarbeiter Umfragen starten",
+        "welche Änderungen muss durchgeführt werden",
+        "Änderungen durchführbar",
+        "Umfrage teilnehmen",
+        "Auswerten",
+        "Probleme erkennbar",
+        "Probleme melden",
+        "weitere Untersuchen notwenig\n",
+        "Probleme lösen",
+        "Problem lösen"
+      ],
+      "class": "Lane"
+    }
+  ]
+}
