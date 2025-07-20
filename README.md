@@ -61,5 +61,5 @@ The following table reports group recognition scores for the hdBPMN and SAM-BPMN
 | hdBPMN   | 2-Shot | 0.448        | 0.656         | 0.262         | 0.162        |
 |          | PEFT   | 0.621        | 0.796         | 0.408         | 0.356        |
 
-* Group (Texts) refers to the nodes contained inside a group. 
+&#42 Group (Texts) refers to the nodes contained inside a group. 
 
