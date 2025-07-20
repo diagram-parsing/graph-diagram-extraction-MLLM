@@ -41,13 +41,24 @@ The tables below shows F1 scores for diagram recognition across several datasets
 | SAM-UML  | 0.843       | 0.289        | 0.253       | 0.377       | 0.179        | 0.508        | 0.021       |
 | SAM-BPMN | 0.606       | 0.796        | 0.527       | 0.318       | 0.872        | 0.735        | 0.240       |
 
-### UML 
-The following table also report scores on methods and attributes and evalute node recognition including those. 
+### SAM-UML 
+The following table reports scores for the SAM-UML dataset, including methods and attributes, as well as edge cardinalities.
 
-| Method | Node (Text) | Node (Class) | Node (Methods) | Node (Attributes) | Node (Full) | Edge (Path) | Edge (Class) | Edge (Label) | Edge (Cardinality) | Edge (Full) |
-| ------ | ----------- | ------------ | -------------- | ----------------- | ----------- | ----------- | ------------ | ------------ | ------------------ | ----------- |
-| 2-Shot | 0.847       | 0.942        | 0.340          | 0.074             | 0.044       | 0.441       | 0.546        | 0.452        | 0.307              | 0.100       |
-| PEFT   | 0.843       | 0.289        | 0.355          | 0.170             | 0.056       | 0.377       | 0.179        | 0.508        | 0.859              | 0.021       |
+| Method | Node (Text) | Node (Class) | Node (Methods) | Node (Attributes) | Node (Full)\* | Edge (Path) | Edge (Class) | Edge (Label) | Edge (Cardinality) | Edge (Full) |
+| ------ | ----------- | ------------ | -------------- | ----------------- | ------------- | ----------- | ------------ | ------------ | ------------------ | ----------- |
+| 2-Shot | 0.847       | 0.942        | 0.340          | 0.074             | 0.044         | 0.441       | 0.546        | 0.452        | 0.307              | 0.100       |
+| PEFT   | 0.843       | 0.289        | 0.355          | 0.170             | 0.056         | 0.377       | 0.179        | 0.508        | 0.859              | 0.021       |
+* For UML-specific node recognition, a node is considered correctly matched only if its text, class, methods, and attributes all match the ground truth.
 
+### hdBPMN and SAM-BPMN
+The following table reports group recognition scores for the hdBPMN and SAM-BPMN dataset. 
 
+| Dataset  | Method | Group (Name) | Group (Class) | Group (Texts)\* | Group (Full) |
+| -------- | ------ | ------------ | ------------- | ------------- | ------------ |
+| SAM BPMN | 2-Shot | 0.268        | 0.371         | 0.000         | 0.000        |
+|          | PEFT   | 0.378        | 0.567         | 0.142         | 0.016        |
+| hdBPMN   | 2-Shot | 0.448        | 0.656         | 0.262         | 0.162        |
+|          | PEFT   | 0.621        | 0.796         | 0.408         | 0.356        |
+
+* Group (Texts) refers to the nodes contained inside a group. 
 
