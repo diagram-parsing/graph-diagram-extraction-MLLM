@@ -10,7 +10,8 @@ This project explores both prompting-based and PEFT-finetuned strategies.
 ## Repository Structure
 
 - `data/labels/`: ground-truth JSON annotations for the diagram datasets used in our study. Note: Results for SEM and CBD are not included due to licensing constraints.
-- `evaluation/`: Evaluation scripts 
+- `evaluation/`: Evaluation scripts
+- `results/`: CSV files for our results 
 
 ---
 
