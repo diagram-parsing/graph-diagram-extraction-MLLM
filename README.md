@@ -41,4 +41,13 @@ The tables below shows F1 scores for diagram recognition across several datasets
 | SAM-UML  | 0.843       | 0.289        | 0.253       | 0.377       | 0.179        | 0.508        | 0.021       |
 | SAM-BPMN | 0.606       | 0.796        | 0.527       | 0.318       | 0.872        | 0.735        | 0.240       |
 
+### UML 
+The following table also report scores on methods and attributes and evalute node recognition including those. 
+
+| Method | Node (Text) | Node (Class) | Node (Methods) | Node (Attributes) | Node (Full) | Edge (Path) | Edge (Class) | Edge (Label) | Edge (Cardinality) | Edge (Full) |
+| ------ | ----------- | ------------ | -------------- | ----------------- | ----------- | ----------- | ------------ | ------------ | ------------------ | ----------- |
+| 2-Shot | 0.847       | 0.942        | 0.340          | 0.074             | 0.044       | 0.441       | 0.546        | 0.452        | 0.307              | 0.100       |
+| PEFT   | 0.843       | 0.289        | 0.355          | 0.170             | 0.056       | 0.377       | 0.179        | 0.508        | 0.859              | 0.021       |
+
+
 
