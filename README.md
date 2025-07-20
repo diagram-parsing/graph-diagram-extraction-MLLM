@@ -1,3 +1,16 @@
-## 🧠 Abstract
+#Multimodal large language models for information extraction
+from graph-structured diagrams
 
-Graph-structured diagrams are widely used to represent processes and relationships visually. We explore the use of a multimodal large language model (MLLM), InternVL3-14B, for information extraction from such diagrams, comparing prompting strategies and parameter-efficient fine-tuning (PEFT). Our experiments demonstrate that MLLMs can compete with traditional CV models on simple diagrams and highlight where further improvements are needed.
+This repository contains the code, data, and evaluation scripts for our research on extracting structured information from diagram images using multimodal large language models (MLLMs).
+
+## Overview
+
+We investigate the use of InternVL3-14B, a multimodal large language model (MLLM), for extracting structured information from graph-based diagrams (e.g., flowcharts, BPMN, etc.).  
+This project explores both prompting-based and PEFT-finetuned strategies.
+
+## Repository Structure
+
+- `data/`: ground-truth JSON annotations for the diagram datasets used in our study
+- `evaluation/`: Evaluation scripts and manual review
+
+---
