@@ -1,0 +1,78 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": "terminator"
+    },
+    {
+      "id": "Input n,m",
+      "text": "Input n,m",
+      "class": "data"
+    },
+    {
+      "id": "r=n%m",
+      "text": "r=n%m",
+      "class": "process"
+    },
+    {
+      "id": "r=0",
+      "text": "r=0",
+      "class": "decision"
+    },
+    {
+      "id": "Output m",
+      "text": "Output m",
+      "class": "data"
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": "terminator"
+    },
+    {
+      "id": "n=m",
+      "text": "n=m",
+      "class": "process"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input n,m",
+      "label": null
+    },
+    {
+      "tail": "Input n,m",
+      "head": "r=n%m",
+      "label": null
+    },
+    {
+      "tail": "r=n%m",
+      "head": "r=0",
+      "label": null
+    },
+    {
+      "tail": "r=0",
+      "head": "Output m",
+      "label": "true"
+    },
+    {
+      "tail": "Output m",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "r=0",
+      "head": "n=m",
+      "label": "false"
+    },
+    {
+      "tail": "n=m",
+      "head": "r=n%m",
+      "label": null
+    }
+  ]
+}
+```

@@ -1,0 +1,104 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "E-Mail lesen und verstehen",
+        "text": "E-Mail lesen und verstehen",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Prüfen, ob neuer User angelegt werden muss",
+        "text": "Prüfen, ob neuer User angelegt werden muss",
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Neuen User anlegen",
+        "text": "Neuen User anlegen",
+        "class": "Task"
+      },
+      {
+        "id": "IMAC-Hülle erstellen",
+        "text": "IMAC-Hülle erstellen",
+        "class": "Task"
+      },
+      {
+        "id": "Komplettieren mit 'General Services'",
+        "text": "Komplettieren mit 'General Services'",
+        "class": "Task"
+      },
+      {
+        "id": "Auswahl SID-Produkte",
+        "text": "Auswahl SID-Produkte",
+        "class": "Task"
+      },
+      {
+        "id": "Transferred geschäftlicher Anforderungen in technische An",
+        "text": "Transferred geschäftlicher Anforderungen in technische An",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent2",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "E-Mail lesen und verstehen",
+        "head": "Prüfen, ob neuer User angelegt werden muss",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Prüfen, ob neuer User angelegt werden muss",
+        "head": "Neuen User anlegen",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Prüfen, ob neuer User angelegt werden muss",
+        "head": "IMAC-Hülle erstellen",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "IMAC-Hülle erstellen",
+        "head": "Transferred geschäftlicher Anforderungen in technische An",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Transferred geschäftlicher Anforderungen in technische An",
+        "head": "Komplettieren mit 'General Services'",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Transferred geschäftlicher Anforderungen in technische An",
+        "head": "Auswahl SID-Produkte",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Auswahl SID-Produkte",
+        "head": "EndEvent2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Komplettieren mit 'General Services'",
+        "head": "EndEvent1",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,148 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "startEvent1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "task1",
+        "text": null,
+        "class": "Task"
+      },
+      {
+        "id": "task2",
+        "text": null,
+        "class": "Task"
+      },
+      {
+        "id": "task3",
+        "text": null,
+        "class": "Task"
+      },
+      {
+        "id": "task4",
+        "text": null,
+        "class": "Task"
+      },
+      {
+        "id": "task5",
+        "text": null,
+        "class": "Task"
+      },
+      {
+        "id": "task6",
+        "text": null,
+        "class": "Task"
+      },
+      {
+        "id": "endEvent1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "endEvent2",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "endEvent3",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "endEvent4",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "endEvent5",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "endEvent6",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "startEvent1",
+        "head": "task1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task1",
+        "head": "task2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task2",
+        "head": "endEvent1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task1",
+        "head": "task3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task3",
+        "head": "endEvent2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task1",
+        "head": "task4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task4",
+        "head": "endEvent3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task1",
+        "head": "task5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task5",
+        "head": "endEvent4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task1",
+        "head": "task6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task6",
+        "head": "endEvent5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task6",
+        "head": "endEvent6",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,103 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "Decision1",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "Process1",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "Process2",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "Process3",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "Decision2",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "Decision3",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "Process4",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Decision1",
+      "label": null
+    },
+    {
+      "tail": "Decision1",
+      "head": "Process1",
+      "label": null
+    },
+    {
+      "tail": "Process1",
+      "head": "Process2",
+      "label": null
+    },
+    {
+      "tail": "Process2",
+      "head": "Decision2",
+      "label": null
+    },
+    {
+      "tail": "Decision2",
+      "head": "Process3",
+      "label": null
+    },
+    {
+      "tail": "Decision2",
+      "head": "Decision3",
+      "label": null
+    },
+    {
+      "tail": "Decision3",
+      "head": "Process4",
+      "label": null
+    },
+    {
+      "tail": "Process4",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Decision3",
+      "head": "Process2",
+      "label": null
+    },
+    {
+      "tail": "Process3",
+      "head": "Process2",
+      "label": null
+    }
+  ]
+}
+```

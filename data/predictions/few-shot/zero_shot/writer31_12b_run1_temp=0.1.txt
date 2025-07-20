@@ -1,0 +1,103 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "input_n",
+      "text": "Input n",
+      "class": "input"
+    },
+    {
+      "id": "initialize",
+      "text": "T[1] = T[2] = 1\ni = 3",
+      "class": "process"
+    },
+    {
+      "id": "decision",
+      "text": "i < n",
+      "class": "decision"
+    },
+    {
+      "id": "compute",
+      "text": "T[i] = T[i-1] + T[i-2]",
+      "class": "process"
+    },
+    {
+      "id": "increment",
+      "text": "i++",
+      "class": "process"
+    },
+    {
+      "id": "output",
+      "text": "Output T[n]",
+      "class": "output"
+    },
+    {
+      "id": "end",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "input_n",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "input_n",
+      "head": "initialize",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "initialize",
+      "head": "decision",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "decision",
+      "head": "compute",
+      "class": null,
+      "label": "Y"
+    },
+    {
+      "tail": "decision",
+      "head": "increment",
+      "class": null,
+      "label": "N"
+    },
+    {
+      "tail": "compute",
+      "head": "increment",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "increment",
+      "head": "decision",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "decision",
+      "head": "output",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "output",
+      "head": "end",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,66 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway_1",
+        "text": "X",
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task_1",
+        "text": "Prescribe Further Medication",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent_1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "Task_2",
+        "text": "Discharge patient",
+        "class": "Task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Exclusive_Databased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Task_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_1",
+        "head": "EndEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Task_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_2",
+        "head": "EndEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

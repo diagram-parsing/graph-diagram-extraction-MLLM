@@ -1,0 +1,103 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": null
+    },
+    {
+      "id": "Order",
+      "text": "Order",
+      "class": null
+    },
+    {
+      "id": "Want fries?",
+      "text": "Want fries?",
+      "class": null
+    },
+    {
+      "id": "Order fries",
+      "text": "Order fries",
+      "class": null
+    },
+    {
+      "id": "Want drink?",
+      "text": "Want drink?",
+      "class": null
+    },
+    {
+      "id": "Order drink",
+      "text": "Order drink",
+      "class": null
+    },
+    {
+      "id": "Pay",
+      "text": "Pay",
+      "class": null
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Order",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Order",
+      "head": "Want fries?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Want fries?",
+      "head": "Order fries",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Want fries?",
+      "head": "Want drink?",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Want drink?",
+      "head": "Order drink",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Want drink?",
+      "head": "Pay",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Order fries",
+      "head": "Pay",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Order drink",
+      "head": "Pay",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Pay",
+      "head": "End",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

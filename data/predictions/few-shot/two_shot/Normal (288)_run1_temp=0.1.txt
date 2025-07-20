@@ -1,0 +1,54 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Fix the object",
+      "id": "Fix the object",
+      "class": null
+    },
+    {
+      "text": "Measure the part",
+      "id": "Measure the part",
+      "class": null
+    },
+    {
+      "text": "Fulfill?",
+      "id": "Fulfill?",
+      "class": null
+    },
+    {
+      "text": "Modify",
+      "id": "Modify",
+      "class": null
+    },
+    {
+      "text": "Place fixture into production",
+      "id": "Place fixture into production",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Fix the object",
+      "head": "Measure the part",
+      "label": null
+    },
+    {
+      "tail": "Measure the part",
+      "head": "Fulfill?",
+      "label": null
+    },
+    {
+      "tail": "Fulfill?",
+      "head": "Modify",
+      "label": "No"
+    },
+    {
+      "tail": "Fulfill?",
+      "head": "Place fixture into production",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}
+```

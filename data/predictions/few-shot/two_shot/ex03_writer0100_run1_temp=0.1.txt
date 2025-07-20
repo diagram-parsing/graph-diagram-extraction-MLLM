@@ -1,0 +1,277 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "check if claimant is customer",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "evaluate severity of claim",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "send reject message",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "send relevant forms (simple)",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "send relevant forms (complex)",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "send info to update forms",
+      "class": "task"
+    },
+    {
+      "id": "task_7",
+      "text": "check completeness",
+      "class": "task"
+    },
+    {
+      "id": "task_8",
+      "text": "register in system",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_4",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "dataObject_1",
+      "text": "rejection info",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_2",
+      "text": "forms (simple)",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_3",
+      "text": "forms (complex)",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_4",
+      "text": "info to update forms",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_5",
+      "text": "forms checked",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_6",
+      "text": "claim",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_7",
+      "text": "customer DB",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_8",
+      "text": "management system",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": "no customer"
+    },
+    {
+      "tail": "task_1",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "dataObject_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": "claim rejected"
+    },
+    {
+      "tail": "task_6",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "dataObject_2",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "dataObject_3",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": "not complete"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_8",
+      "class": "sequenceFlow",
+      "label": "complete"
+    },
+    {
+      "tail": "task_7",
+      "head": "dataObject_4",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_8",
+      "head": "dataObject_5",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_8",
+      "head": "event_1",
+      "class": "sequenceFlow",
+      "label": "claim process finished"
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": "simple claim"
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": "complex claim"
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "task_8",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Claimant",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "Insurer",
+      "nodes": [
+        "task_1",
+        "task_2",
+        "task_3",
+        "task_4",
+        "task_5",
+        "task_7",
+        "task_8",
+        "exclusiveGateway_1",
+        "exclusiveGateway_2",
+        "exclusiveGateway_3",
+        "exclusiveGateway_4",
+        "dataObject_1",
+        "dataObject_2",
+        "dataObject_3",
+        "dataObject_4",
+        "dataObject_5"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "SAP System",
+      "nodes": [
+        "dataObject_6",
+        "dataObject_7",
+        "dataObject_8"
+      ],
+      "class": "lane"
+    }
+  ]
+}
+```

@@ -1,0 +1,93 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "Input m",
+      "text": "Input m",
+      "class": "data"
+    },
+    {
+      "id": "Initialize",
+      "text": "T[1] = T[2] = 1\ni = 3",
+      "class": "process"
+    },
+    {
+      "id": "Loop Condition",
+      "text": "i < m",
+      "class": "decision"
+    },
+    {
+      "id": "Increment i",
+      "text": "i++",
+      "class": "process"
+    },
+    {
+      "id": "Calculate T[i]",
+      "text": "T[i] = T[i-1] + T[i-2]",
+      "class": "process"
+    },
+    {
+      "id": "Output T[n]",
+      "text": "Output T[n]",
+      "class": "data"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input m",
+      "label": null
+    },
+    {
+      "tail": "Input m",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Loop Condition",
+      "label": null
+    },
+    {
+      "tail": "Loop Condition",
+      "head": "Increment i",
+      "label": "N"
+    },
+    {
+      "tail": "Loop Condition",
+      "head": "Calculate T[i]",
+      "label": "Y"
+    },
+    {
+      "tail": "Increment i",
+      "head": "Loop Condition",
+      "label": null
+    },
+    {
+      "tail": "Calculate T[i]",
+      "head": "Loop Condition",
+      "label": null
+    },
+    {
+      "tail": "Loop Condition",
+      "head": "Output T[n]",
+      "label": null
+    },
+    {
+      "tail": "Output T[n]",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

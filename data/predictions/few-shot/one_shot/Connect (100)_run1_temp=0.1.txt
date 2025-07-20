@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": null
+      },
+      {
+        "id": "Total patients",
+        "text": "Total patients",
+        "class": null
+      },
+      {
+        "id": "Serious patients",
+        "text": "Serious patients",
+        "class": null
+      },
+      {
+        "id": "Operation needed",
+        "text": "Operation needed",
+        "class": null
+      },
+      {
+        "id": "Doctor needed",
+        "text": "Doctor needed",
+        "class": null
+      },
+      {
+        "id": "No operation needed",
+        "text": "No operation needed",
+        "class": null
+      },
+      {
+        "id": "PACC Group",
+        "text": "PACC Group",
+        "class": null
+      },
+      {
+        "id": "Get well soon",
+        "text": "Get well soon",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Total patients",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Total patients",
+        "head": "Serious patients",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Serious patients",
+        "head": "Operation needed",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Operation needed",
+        "head": "PACC Group",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Serious patients",
+        "head": "Doctor needed",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Doctor needed",
+        "head": "Get well soon",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Serious patients",
+        "head": "No operation needed",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "No operation needed",
+        "head": "Get well soon",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,48 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "ICar",
+        "text": "ICar",
+        "methods": ["accelerate () :void", "shiftUp () :void", "shiftDown () :void"],
+        "attributes": null,
+        "class": "Interface"
+      },
+      {
+        "id": "Car",
+        "text": "Car",
+        "methods": null,
+        "attributes": ["speed :int", "gear :int"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ElectricCar",
+        "text": "ElectricCar",
+        "methods": null,
+        "attributes": ["speed :int"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Car",
+        "head": "ICar",
+        "class": "Realization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "ElectricCar",
+        "head": "ICar",
+        "class": "Realization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,88 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": null
+      },
+      {
+        "id": "READ N",
+        "text": "READ N",
+        "class": null
+      },
+      {
+        "id": "M=1 F=1",
+        "text": "M=1 F=1",
+        "class": null
+      },
+      {
+        "id": "F=F*M",
+        "text": "F=F*M",
+        "class": null
+      },
+      {
+        "id": "M=N?",
+        "text": "M=N?",
+        "class": null
+      },
+      {
+        "id": "PRINT F",
+        "text": "PRINT F",
+        "class": null
+      },
+      {
+        "id": "M=M+1",
+        "text": "M=M+1",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "READ N",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "READ N",
+        "head": "M=1 F=1",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "M=1 F=1",
+        "head": "F=F*M",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "F=F*M",
+        "head": "M=N?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "M=N?",
+        "head": "PRINT F",
+        "class": null,
+        "label": "YES"
+      },
+      {
+        "tail": "M=N?",
+        "head": "M=M+1",
+        "class": null,
+        "label": "NO"
+      },
+      {
+        "tail": "M=M+1",
+        "head": "F=F*M",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

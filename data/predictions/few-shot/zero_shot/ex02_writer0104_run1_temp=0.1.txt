@@ -1,0 +1,170 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "Customer",
+      "class": "dataObject"
+    },
+    {
+      "id": "insurerDB",
+      "text": "insurer DB",
+      "class": "dataStore"
+    },
+    {
+      "id": "claimReceived",
+      "text": "claim is received",
+      "class": "event"
+    },
+    {
+      "id": "registerClaim",
+      "text": "register claim",
+      "class": "task"
+    },
+    {
+      "id": "examineClaim",
+      "text": "examine claim",
+      "class": "task"
+    },
+    {
+      "id": "examinedClaim",
+      "text": "examined claim",
+      "class": "dataObject"
+    },
+    {
+      "id": "writeSettlementRecommendation",
+      "text": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "id": "notOKRecommendation",
+      "text": "not OK recommendation",
+      "class": "dataObject"
+    },
+    {
+      "id": "sendBackRecommendation",
+      "text": "send back recommendation",
+      "class": "task"
+    },
+    {
+      "id": "checkRecommendation",
+      "text": "check recommendation",
+      "class": "task"
+    },
+    {
+      "id": "checkedRecommendation",
+      "text": "checked recommendation",
+      "class": "dataObject"
+    },
+    {
+      "id": "proceedHandlingProcess",
+      "text": "proceed handling process",
+      "class": "task"
+    },
+    {
+      "id": "processTerminated",
+      "text": "process terminated",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "customer",
+      "head": "claimReceived",
+      "class": "sequenceFlow",
+      "label": "claim"
+    },
+    {
+      "tail": "claimReceived",
+      "head": "registerClaim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "registerClaim",
+      "head": "insurerDB",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "registerClaim",
+      "head": "examineClaim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "examineClaim",
+      "head": "examinedClaim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "examinedClaim",
+      "head": "writeSettlementRecommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "writeSettlementRecommendation",
+      "head": "notOKRecommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "notOKRecommendation",
+      "head": "sendBackRecommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "sendBackRecommendation",
+      "head": "checkRecommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "checkRecommendation",
+      "head": "checkedRecommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "checkedRecommendation",
+      "head": "proceedHandlingProcess",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "proceedHandlingProcess",
+      "head": "processTerminated",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Customer",
+      "class": "pool",
+      "nodes": ["customer"]
+    },
+    {
+      "name": "Insurer",
+      "class": "pool",
+      "nodes": [
+        "claimReceived",
+        "registerClaim",
+        "insurerDB",
+        "examineClaim",
+        "examinedClaim",
+        "writeSettlementRecommendation",
+        "notOKRecommendation",
+        "sendBackRecommendation",
+        "checkRecommendation",
+        "checkedRecommendation",
+        "proceedHandlingProcess",
+        "processTerminated"
+      ]
+    }
+  ]
+}
+```

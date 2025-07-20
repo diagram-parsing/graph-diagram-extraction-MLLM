@@ -1,0 +1,89 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Add slack variables to inequality constraints",
+      "id": "Add slack variables to inequality constraints",
+      "class": null
+    },
+    {
+      "text": "Calculate variables",
+      "id": "Calculate variables",
+      "class": null
+    },
+    {
+      "text": "Calculate reduced gradient",
+      "id": "Calculate reduced gradient",
+      "class": null
+    },
+    {
+      "text": "Determine search vector",
+      "id": "Determine search vector",
+      "class": null
+    },
+    {
+      "text": "Perform operations",
+      "id": "Perform operations",
+      "class": null
+    },
+    {
+      "text": "Converged ?",
+      "id": "Converged ?",
+      "class": null
+    },
+    {
+      "text": "Exit",
+      "id": "Exit",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Add slack variables to inequality constraints",
+      "label": null
+    },
+    {
+      "tail": "Add slack variables to inequality constraints",
+      "head": "Calculate variables",
+      "label": null
+    },
+    {
+      "tail": "Calculate variables",
+      "head": "Calculate reduced gradient",
+      "label": null
+    },
+    {
+      "tail": "Calculate reduced gradient",
+      "head": "Determine search vector",
+      "label": null
+    },
+    {
+      "tail": "Determine search vector",
+      "head": "Perform operations",
+      "label": null
+    },
+    {
+      "tail": "Perform operations",
+      "head": "Converged ?",
+      "label": null
+    },
+    {
+      "tail": "Converged ?",
+      "head": "Exit",
+      "label": "Yes"
+    },
+    {
+      "tail": "Converged ?",
+      "head": "Calculate variables",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

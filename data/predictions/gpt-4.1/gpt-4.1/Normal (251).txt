@@ -1,0 +1,64 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": null
+    },
+    {
+      "id": "Step 1",
+      "text": "Step 1",
+      "class": null
+    },
+    {
+      "id": "Decision",
+      "text": "Decision",
+      "class": null
+    },
+    {
+      "id": "Step 2",
+      "text": "Step 2",
+      "class": null
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Step 1",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Step 1",
+      "head": "Decision",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Step 2",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Step 2",
+      "head": "End",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Step 1",
+      "class": null,
+      "label": "No"
+    }
+  ],
+  "groups": []
+}]
+```

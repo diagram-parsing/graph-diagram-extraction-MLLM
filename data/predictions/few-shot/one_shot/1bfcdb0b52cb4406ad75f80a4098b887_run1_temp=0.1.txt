@@ -1,0 +1,161 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Select Option",
+        "text": "Select Option",
+        "class": "Task"
+      },
+      {
+        "id": "Select Staff",
+        "text": "Select \"Staff\"",
+        "class": "Task"
+      },
+      {
+        "id": "Select Supplier",
+        "text": "Select \"Supplier\"",
+        "class": "Task"
+      },
+      {
+        "id": "Select Inventory",
+        "text": "Select \"Inventory\"",
+        "class": "Task"
+      },
+      {
+        "id": "Enter Details",
+        "text": "Enter Details",
+        "class": "Task"
+      },
+      {
+        "id": "Display Administrator Main page",
+        "text": "Display Administrator Main page",
+        "class": "Task"
+      },
+      {
+        "id": "Display relevant Interface",
+        "text": "Display relevant Interface",
+        "class": "Task"
+      },
+      {
+        "id": "Verify Details Format",
+        "text": "Verify Details Format",
+        "class": "Task"
+      },
+      {
+        "id": "Display Error Message",
+        "text": "Display Error Message",
+        "class": "Task"
+      },
+      {
+        "id": "Display Successful Message",
+        "text": "Display Successful Message",
+        "class": "Task"
+      },
+      {
+        "id": "Insert / Update Details",
+        "text": "Insert / Update Details",
+        "class": "Task"
+      },
+      {
+        "id": "Return Setups Pages",
+        "text": "Return Setups Pages",
+        "class": "Task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Select Option",
+        "head": "Select Staff",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Select Option",
+        "head": "Select Supplier",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Select Option",
+        "head": "Select Inventory",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Select Staff",
+        "head": "Enter Details",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Select Supplier",
+        "head": "Enter Details",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Select Inventory",
+        "head": "Enter Details",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Enter Details",
+        "head": "Display relevant Interface",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Display Administrator Main page",
+        "head": "Display relevant Interface",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Display relevant Interface",
+        "head": "Verify Details Format",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Verify Details Format",
+        "head": "Display Error Message",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Verify Details Format",
+        "head": "Display Successful Message",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Display Error Message",
+        "head": "Display relevant Interface",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Display Successful Message",
+        "head": "Insert / Update Details",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Insert / Update Details",
+        "head": "Return Setups Pages",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Return Setups Pages",
+        "head": "Display Administrator Main page",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

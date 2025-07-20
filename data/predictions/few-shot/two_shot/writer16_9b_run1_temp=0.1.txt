@@ -1,0 +1,58 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "T=Y",
+      "id": "T=Y",
+      "class": "process"
+    },
+    {
+      "text": "Y=X\nX=T",
+      "id": "Y=X\nX=T",
+      "class": "process"
+    },
+    {
+      "text": "X>Y",
+      "id": "X>Y",
+      "class": "decision"
+    },
+    {
+      "text": null,
+      "id": "Start",
+      "class": "terminator"
+    },
+    {
+      "text": null,
+      "id": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "X>Y",
+      "label": null
+    },
+    {
+      "tail": "X>Y",
+      "head": "T=Y",
+      "label": "then"
+    },
+    {
+      "tail": "T=Y",
+      "head": "Y=X\nX=T",
+      "label": null
+    },
+    {
+      "tail": "X>Y",
+      "head": "End",
+      "label": "else"
+    },
+    {
+      "tail": "Y=X\nX=T",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

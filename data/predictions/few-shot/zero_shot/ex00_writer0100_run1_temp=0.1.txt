@@ -1,0 +1,126 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "application_received",
+        "text": "application received",
+        "class": "event"
+      },
+      {
+        "id": "evaluate_application",
+        "text": "evaluate application",
+        "class": "task"
+      },
+      {
+        "id": "application_approved",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "application_rejected",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "notify_customer_by_email",
+        "text": "notify customer by e-mail",
+        "class": "task"
+      },
+      {
+        "id": "rejection_finished",
+        "text": "rejection finished",
+        "class": "event"
+      },
+      {
+        "id": "create_new_bank_account",
+        "text": "create new bank account",
+        "class": "task"
+      },
+      {
+        "id": "approval_finished",
+        "text": "approval finished",
+        "class": "event"
+      },
+      {
+        "id": "send_welcome_pack_letter_to_customer",
+        "text": "Send welcome pack letter to customer",
+        "class": "task"
+      },
+      {
+        "id": "send_letter_with_bank_card_to_customer",
+        "text": "Send letter with bank card to customer",
+        "class": "task"
+      },
+      {
+        "id": "send_letter_with_PIN_number_to_customer",
+        "text": "send letter with PIN number to customer",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "application_received",
+        "head": "evaluate_application",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "evaluate_application",
+        "head": "application_approved",
+        "class": "sequenceFlow",
+        "label": "application approved"
+      },
+      {
+        "tail": "evaluate_application",
+        "head": "application_rejected",
+        "class": "sequenceFlow",
+        "label": "application rejected"
+      },
+      {
+        "tail": "application_rejected",
+        "head": "notify_customer_by_email",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "notify_customer_by_email",
+        "head": "rejection_finished",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "application_approved",
+        "head": "create_new_bank_account",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "create_new_bank_account",
+        "head": "approval_finished",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "create_new_bank_account",
+        "head": "send_welcome_pack_letter_to_customer",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "create_new_bank_account",
+        "head": "send_letter_with_bank_card_to_customer",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "create_new_bank_account",
+        "head": "send_letter_with_PIN_number_to_customer",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

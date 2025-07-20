@@ -1,0 +1,88 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Input",
+        "text": "Input",
+        "class": null
+      },
+      {
+        "id": "Power modulator",
+        "text": "Power modulator",
+        "class": null
+      },
+      {
+        "id": "Motor",
+        "text": "Motor",
+        "class": null
+      },
+      {
+        "id": "Load",
+        "text": "Load",
+        "class": null
+      },
+      {
+        "id": "Control unit",
+        "text": "Control unit",
+        "class": null
+      },
+      {
+        "id": "Sensing unit",
+        "text": "Sensing unit",
+        "class": null
+      },
+      {
+        "id": "Input command",
+        "text": "Input command",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Input",
+        "head": "Power modulator",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Power modulator",
+        "head": "Motor",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Motor",
+        "head": "Load",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Motor",
+        "head": "Sensing unit",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Sensing unit",
+        "head": "Control unit",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Control unit",
+        "head": "Power modulator",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Input command",
+        "head": "Control unit",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

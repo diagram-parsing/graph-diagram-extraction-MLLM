@@ -1,0 +1,171 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "claim is received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "register claim",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "examine claim",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_3",
+      "text": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "check recommendation",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_4",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_5",
+      "text": "proceed handling process",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "process terminated",
+      "class": "event"
+    },
+    {
+      "id": "dataStore_1",
+      "text": "insurer DB",
+      "class": "dataStore"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "Not OK"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "Not OK"
+    },
+    {
+      "tail": "task_5",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "dataStore_1",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Customer",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "Insurer",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "exclusiveGateway_1",
+        "task_2",
+        "exclusiveGateway_2",
+        "task_3",
+        "exclusiveGateway_3",
+        "task_4",
+        "exclusiveGateway_4",
+        "task_5",
+        "event_2",
+        "dataStore_1"
+      ],
+      "class": "pool"
+    }
+  ]
+}
+```

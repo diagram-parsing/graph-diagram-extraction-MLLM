@@ -1,0 +1,103 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Main",
+      "attributes": null,
+      "methods": null,
+      "id": "Main",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Manager",
+      "attributes": [
+        "- risorse: TreeMap",
+        "- attività: TreeMap",
+        "- assegnazioni: Lista"
+      ],
+      "methods": [
+        "addRisorsa ()",
+        "addAttività ()",
+        "addAssegnazione ()"
+      ],
+      "id": "Manager",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Attività",
+      "attributes": [
+        "- nome attività",
+        "- assegnazioni: Lista"
+      ],
+      "methods": null,
+      "id": "Attività",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Risorsa",
+      "attributes": [
+        "- nome risorsa",
+        "- assegnazioni: Lista"
+      ],
+      "methods": null,
+      "id": "Risorsa",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Assegnazione",
+      "attributes": [
+        "- nome risorsa",
+        "- nome assegnazione",
+        "- start assegnazione",
+        "- stop assegnazione"
+      ],
+      "methods": null,
+      "id": "Assegnazione",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Main",
+      "head": "Manager",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Manager",
+      "head": "Attività",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Attività",
+      "head": "Assegnazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Manager",
+      "head": "Risorsa",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Risorsa",
+      "head": "Assegnazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

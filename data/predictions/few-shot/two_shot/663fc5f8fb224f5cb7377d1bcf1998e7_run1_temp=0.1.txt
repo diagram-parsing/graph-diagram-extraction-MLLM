@@ -1,0 +1,97 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "FIGLIO",
+      "attributes": [
+        "- ESENTE: BOOLEAN",
+        "- IN REGOLA: BOOLEAN",
+        "- CODICE ESENZIONE: STRING",
+        "- DATA DI NASCITA: DATE"
+      ],
+      "methods": null,
+      "id": "FIGLIO",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "FAMILGLIA",
+      "attributes": [
+        "- INDIRIZZO",
+        "- COD FAMILGLIA: STRING",
+        "- ELENCO FIGLI: STRING",
+        "- ANOMALIE: STRING"
+      ],
+      "methods": null,
+      "id": "FAMILGLIA",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ESENZIONE",
+      "attributes": [
+        "- COD ESSENZIONE: STRING"
+      ],
+      "methods": null,
+      "id": "ESENZIONE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "VACCINAZIONE",
+      "attributes": [
+        "- DATA: STRING",
+        "- ETÀ RICHIESTA: INT",
+        "- EFFETTI",
+        "- RISCONTRATI: STRING",
+        "- TIPO INOCULAZIONE: STRING"
+      ],
+      "methods": null,
+      "id": "VACCINAZIONE",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "VACCINO",
+      "attributes": [
+        "- NOME: STRING",
+        "- ETÀ RICHIESTA: INT"
+      ],
+      "methods": null,
+      "id": "VACCINO",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "FIGLIO",
+      "head": "ESENZIONE",
+      "class": "Composition",
+      "label": "ha",
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "FIGLIO",
+      "head": "FAMILGLIA",
+      "class": "Composition",
+      "label": "appartiene a",
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "FIGLIO",
+      "head": "VACCINAZIONE",
+      "class": "Composition",
+      "label": "ha",
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "VACCINAZIONE",
+      "head": "VACCINO",
+      "class": "Composition",
+      "label": "è",
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

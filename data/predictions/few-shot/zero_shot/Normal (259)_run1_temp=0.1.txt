@@ -1,0 +1,91 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Receive New Order",
+      "text": "Receive New Order",
+      "class": null
+    },
+    {
+      "id": "Check Size",
+      "text": "Check Size",
+      "class": null
+    },
+    {
+      "id": "Check Stock Levels",
+      "text": "Check Stock Levels",
+      "class": null
+    },
+    {
+      "id": "Print manuals",
+      "text": "Print manuals",
+      "class": null
+    },
+    {
+      "id": "Despatch The Goods",
+      "text": "Despatch The Goods",
+      "class": null
+    },
+    {
+      "id": "Confirm Bill",
+      "text": "Confirm Bill",
+      "class": null
+    },
+    {
+      "id": "Receive Payment",
+      "text": "Receive Payment",
+      "class": null
+    },
+    {
+      "id": "Update Records",
+      "text": "Update Records",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Receive New Order",
+      "head": "Check Size",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Check Size",
+      "head": "Check Stock Levels",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Check Stock Levels",
+      "head": "Print manuals",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Print manuals",
+      "head": "Despatch The Goods",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Despatch The Goods",
+      "head": "Confirm Bill",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Confirm Bill",
+      "head": "Receive Payment",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Receive Payment",
+      "head": "Update Records",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

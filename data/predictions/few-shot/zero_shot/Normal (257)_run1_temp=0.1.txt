@@ -1,0 +1,75 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": null
+    },
+    {
+      "id": "count=0",
+      "text": "count = 0",
+      "class": null
+    },
+    {
+      "id": "Print count",
+      "text": "Print count",
+      "class": null
+    },
+    {
+      "id": "count=count+1",
+      "text": "count = count + 1",
+      "class": null
+    },
+    {
+      "id": "Is count < 10",
+      "text": "Is count < 10",
+      "class": null
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "count=0",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "count=0",
+      "head": "Print count",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Print count",
+      "head": "count=count+1",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "count=count+1",
+      "head": "Is count < 10",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Is count < 10",
+      "head": "Print count",
+      "class": null,
+      "label": "YES"
+    },
+    {
+      "tail": "Is count < 10",
+      "head": "End",
+      "class": null,
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}
+```

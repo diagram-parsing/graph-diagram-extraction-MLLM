@@ -1,0 +1,140 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Web-order received",
+        "text": "Web-order received",
+        "class": "event"
+      },
+      {
+        "id": "Phone call order received",
+        "text": "Phone call order received",
+        "class": "event"
+      },
+      {
+        "id": "Confirm Order",
+        "text": "Confirm Order",
+        "class": "task"
+      },
+      {
+        "id": "PrintOut order",
+        "text": "PrintOut order",
+        "class": "task"
+      },
+      {
+        "id": "Printed Order",
+        "text": "Printed Order",
+        "class": "dataObject"
+      },
+      {
+        "id": "Attach order to Pinboard",
+        "text": "Attach order to Pinboard",
+        "class": "task"
+      },
+      {
+        "id": "Pinboard",
+        "text": "Pinboard",
+        "class": "dataObject"
+      },
+      {
+        "id": "Take Order",
+        "text": "Take Order",
+        "class": "task"
+      },
+      {
+        "id": "Write down order note",
+        "text": "Write down order note",
+        "class": "task"
+      },
+      {
+        "id": "written order",
+        "text": "written order",
+        "class": "dataObject"
+      },
+      {
+        "id": "phone order",
+        "text": "phone order",
+        "class": "dataObject"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Web-order received",
+        "head": "Confirm Order",
+        "class": "sequenceFlow",
+        "label": "via Liefertando"
+      },
+      {
+        "tail": "Confirm Order",
+        "head": "PrintOut order",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "PrintOut order",
+        "head": "Printed Order",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "Printed Order",
+        "head": "Attach order to Pinboard",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "Attach order to Pinboard",
+        "head": "Pinboard",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "Phone call order received",
+        "head": "Take Order",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "Take Order",
+        "head": "Write down order note",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "Write down order note",
+        "head": "written order",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "Write down order note",
+        "head": "phone order",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "phone order",
+        "head": "Attach order to Pinboard",
+        "class": "sequenceFlow"
+      }
+    ],
+    "groups": [
+      {
+        "name": "website",
+        "class": "pool",
+        "nodes": [
+          "Web-order received",
+          "Confirm Order",
+          "PrintOut order",
+          "Printed Order",
+          "Attach order to Pinboard"
+        ]
+      },
+      {
+        "name": "Pizzeria Phone",
+        "class": "pool",
+        "nodes": [
+          "Phone call order received",
+          "Take Order",
+          "Write down order note",
+          "written order",
+          "phone order"
+        ]
+      }
+    ]
+  }
+]
+```

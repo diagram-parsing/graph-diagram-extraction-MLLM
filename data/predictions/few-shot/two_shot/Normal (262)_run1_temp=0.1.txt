@@ -1,0 +1,94 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Has 5 attempts",
+      "id": "Has 5 attempts",
+      "class": null
+    },
+    {
+      "text": "Block",
+      "id": "Block",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Authorized",
+      "id": "Authorized",
+      "class": null
+    },
+    {
+      "text": "Alert",
+      "id": "Alert",
+      "class": null
+    },
+    {
+      "text": "Allow",
+      "id": "Allow",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Has 5 attempts",
+      "label": null
+    },
+    {
+      "tail": "Has 5 attempts",
+      "head": "Block",
+      "label": "Yes"
+    },
+    {
+      "tail": "Has 5 attempts",
+      "head": "Login",
+      "label": "No"
+    },
+    {
+      "tail": "Login",
+      "head": "Authorized",
+      "label": null
+    },
+    {
+      "tail": "Authorized",
+      "head": "Allow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Authorized",
+      "head": "Alert",
+      "label": "No"
+    },
+    {
+      "tail": "Block",
+      "head": "Alert",
+      "label": null
+    },
+    {
+      "tail": "Alert",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Allow",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "StartEvent",
+      "text": null,
+      "class": "StartEvent"
+    },
+    {
+      "id": "B",
+      "text": "B",
+      "class": "Task"
+    },
+    {
+      "id": "A",
+      "text": "A",
+      "class": "Task"
+    },
+    {
+      "id": "C",
+      "text": "C",
+      "class": "Task"
+    },
+    {
+      "id": "D",
+      "text": "D",
+      "class": "Task"
+    },
+    {
+      "id": "EndEvent",
+      "text": null,
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B",
+      "head": "A",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "D",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "D",
+      "head": "EndEvent",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

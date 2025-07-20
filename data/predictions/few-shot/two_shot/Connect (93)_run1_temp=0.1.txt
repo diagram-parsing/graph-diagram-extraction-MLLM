@@ -1,0 +1,49 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Log In",
+      "id": "Log In",
+      "class": null
+    },
+    {
+      "text": "Logged In",
+      "id": "Logged In",
+      "class": null
+    },
+    {
+      "text": "OpenID log in",
+      "id": "OpenID log in",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Log In",
+      "head": "Logged In",
+      "label": "OpenID login"
+    },
+    {
+      "tail": "Logged In",
+      "head": "OpenID log in",
+      "label": "No"
+    },
+    {
+      "tail": "OpenID log in",
+      "head": "Logged In",
+      "label": null
+    },
+    {
+      "tail": "Logged In",
+      "head": "End",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}
+```

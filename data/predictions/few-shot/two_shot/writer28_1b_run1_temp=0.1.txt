@@ -1,0 +1,88 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": "terminator"
+    },
+    {
+      "text": "ImpurX",
+      "id": "ImpurX",
+      "class": "decision"
+    },
+    {
+      "text": "m=1 R=1",
+      "id": "m=1 R=1",
+      "class": "process"
+    },
+    {
+      "text": "R=R*m",
+      "id": "R=R*m",
+      "class": "process"
+    },
+    {
+      "text": "m=x",
+      "id": "m=x",
+      "class": "decision"
+    },
+    {
+      "text": "Disp R",
+      "id": "Disp R",
+      "class": "process"
+    },
+    {
+      "text": "m=m+1",
+      "id": "m=m+1",
+      "class": "process"
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "ImpurX",
+      "label": null
+    },
+    {
+      "tail": "ImpurX",
+      "head": "m=1 R=1",
+      "label": null
+    },
+    {
+      "tail": "m=1 R=1",
+      "head": "R=R*m",
+      "label": null
+    },
+    {
+      "tail": "R=R*m",
+      "head": "m=x",
+      "label": null
+    },
+    {
+      "tail": "m=x",
+      "head": "Disp R",
+      "label": "Y"
+    },
+    {
+      "tail": "m=x",
+      "head": "m=m+1",
+      "label": "N"
+    },
+    {
+      "tail": "Disp R",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "m=m+1",
+      "head": "R=R*m",
+      "label": null
+    }
+  ]
+}
+```

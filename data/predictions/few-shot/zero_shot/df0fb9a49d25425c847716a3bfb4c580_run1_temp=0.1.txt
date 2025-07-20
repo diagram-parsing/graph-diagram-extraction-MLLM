@@ -1,0 +1,182 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Kunde",
+        "text": "Kunde",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Konfigurator",
+        "text": "Konfigurator",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Kontaktinfo",
+        "text": "Kontaktinfo",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Berater",
+        "text": "Berater",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Auftragsprüfer",
+        "text": "Auftragsprüfer",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Bestellung",
+        "text": "Bestellung",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Flugzeug",
+        "text": "Flugzeug",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Lieferant",
+        "text": "Lieferant",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Baueteile",
+        "text": "Baueteile",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Termin",
+        "text": "Termin",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Liefertermin",
+        "text": "Liefertermin",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Bestelltermin",
+        "text": "Bestelltermin",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Kundennummer",
+        "text": "Kundennummer",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Bestellnummer",
+        "text": "Bestellnummer",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Seriennummer",
+        "text": "Seriennummer",
+        "class": "SimpleClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Kunde",
+        "head": "Konfigurator",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Kunde",
+        "head": "Berater",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Kunde",
+        "head": "Kontaktinfo",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Konfigurator",
+        "head": "Auftragsprüfer",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bestellung",
+        "head": "Kunde",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bestellung",
+        "head": "Auftragsprüfer",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bestellung",
+        "head": "Flugzeug",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Flugzeug",
+        "head": "Lieferant",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Flugzeug",
+        "head": "Baueteile",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Termin",
+        "head": "Bestellung",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Termin",
+        "head": "Liefertermin",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Termin",
+        "head": "Bestelltermin",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

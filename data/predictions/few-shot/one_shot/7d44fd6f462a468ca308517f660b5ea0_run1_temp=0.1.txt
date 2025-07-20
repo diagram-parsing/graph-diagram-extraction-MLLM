@@ -1,0 +1,101 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "a1",
+        "text": "Alumno",
+        "methods": null,
+        "attributes": [
+          "nombre = 'Diego'",
+          "apellidos = 'Al Macho Linchen'",
+          "telefono = '666666666'",
+          "email = 'jane.doe@dummy.com'",
+          "titulacion = Tecnologías Informáticas",
+          "curso = 2",
+          "grupo = 1"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "a2",
+        "text": "Alumno",
+        "methods": null,
+        "attributes": [
+          "nombre = 'Raúl'",
+          "apellidos = 'Marey y Algo'",
+          "telefono = '696969696'",
+          "email = 'jane.doe@dummy.com'",
+          "titulacion = Tecnologías Informáticas",
+          "curso = 2",
+          "grupo = 1"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ct1",
+        "text": "Cita",
+        "methods": null,
+        "attributes": [
+          "motivo = 'Orientación en la escuela'",
+          "fecha = 10/09/2016",
+          "hora = 12:15",
+          "duración: 40"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ct2",
+        "text": "Cita",
+        "methods": null,
+        "attributes": [
+          "motivo = 'Dudas permaturas'",
+          "fecha = 17/11/2016",
+          "hora = 13:15",
+          "duración: 15"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ct3",
+        "text": "Cita",
+        "methods": null,
+        "attributes": [
+          "motivo = 'Información Matrícula'",
+          "fecha = 15/10/2016",
+          "hora = 17:45",
+          "duración: 15"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "a1",
+        "head": "ct1",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "a2",
+        "head": "ct2",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "a2",
+        "head": "ct3",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

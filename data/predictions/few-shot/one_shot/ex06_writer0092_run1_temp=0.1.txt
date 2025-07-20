@@ -1,0 +1,125 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "OrderReceivedWebsite",
+        "text": "Order received via Website",
+        "class": "event"
+      },
+      {
+        "id": "OrderReceivedPhone",
+        "text": "Order received via Phone",
+        "class": "event"
+      },
+      {
+        "id": "ConfirmOrder",
+        "text": "Confirm order",
+        "class": "task"
+      },
+      {
+        "id": "WriteDownOrder",
+        "text": "Write down order",
+        "class": "task"
+      },
+      {
+        "id": "PrintOutOrder",
+        "text": "Print out order",
+        "class": "task"
+      },
+      {
+        "id": "AttachOrderNoteToPinboard",
+        "text": "Attach order note to pinboard",
+        "class": "task"
+      },
+      {
+        "id": "OrderNote",
+        "text": "Order note",
+        "class": "dataObject"
+      },
+      {
+        "id": "PrintedOrder",
+        "text": "Printed order",
+        "class": "dataObject"
+      },
+      {
+        "id": "UpdatedPinboard",
+        "text": "Updated pinboard",
+        "class": "dataObject"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "OrderReceivedWebsite",
+        "head": "ConfirmOrder",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "OrderReceivedPhone",
+        "head": "ConfirmOrder",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "ConfirmOrder",
+        "head": "PrintOutOrder",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "ConfirmOrder",
+        "head": "WriteDownOrder",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "WriteDownOrder",
+        "head": "AttachOrderNoteToPinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "PrintOutOrder",
+        "head": "PrintedOrder",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "AttachOrderNoteToPinboard",
+        "head": "UpdatedPinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "WriteDownOrder",
+        "head": "OrderNote",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "bakery",
+        "class": "pool",
+        "nodes": [
+          "OrderReceivedWebsite",
+          "OrderReceivedPhone",
+          "ConfirmOrder",
+          "WriteDownOrder",
+          "PrintOutOrder",
+          "AttachOrderNoteToPinboard",
+          "OrderNote",
+          "PrintedOrder",
+          "UpdatedPinboard"
+        ]
+      },
+      {
+        "name": "customer",
+        "class": "lane",
+        "nodes": []
+      }
+    ]
+  }
+]
+```

@@ -1,0 +1,91 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "online_application",
+      "text": "Online application",
+      "class": "event"
+    },
+    {
+      "id": "evaluate",
+      "text": "Evaluate",
+      "class": "task"
+    },
+    {
+      "id": "exclusive_gateway",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "send_notification_mail",
+      "text": "Send notification mail",
+      "class": "task"
+    },
+    {
+      "id": "create_new_bank_account",
+      "text": "Create new bank account",
+      "class": "task"
+    },
+    {
+      "id": "send_welcome_pack",
+      "text": "Send welcome pack",
+      "class": "task"
+    },
+    {
+      "id": "send_bank_card",
+      "text": "Send bank card",
+      "class": "task"
+    },
+    {
+      "id": "send_PIN_number",
+      "text": "Send PIN number",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "online_application",
+      "head": "evaluate",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "evaluate",
+      "head": "exclusive_gateway",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusive_gateway",
+      "head": "send_notification_mail",
+      "class": "sequenceFlow",
+      "label": "rejected"
+    },
+    {
+      "tail": "exclusive_gateway",
+      "head": "create_new_bank_account",
+      "class": "sequenceFlow",
+      "label": "approved"
+    },
+    {
+      "tail": "create_new_bank_account",
+      "head": "send_welcome_pack",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create_new_bank_account",
+      "head": "send_bank_card",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create_new_bank_account",
+      "head": "send_PIN_number",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

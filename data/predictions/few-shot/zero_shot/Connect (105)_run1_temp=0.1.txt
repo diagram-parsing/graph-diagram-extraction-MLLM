@@ -1,0 +1,97 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": null
+    },
+    {
+      "id": "If Condition",
+      "text": "If Condition",
+      "class": null
+    },
+    {
+      "id": "Nested If Condition",
+      "text": "Nested If Condition",
+      "class": null
+    },
+    {
+      "id": "If Body",
+      "text": "If Body",
+      "class": null
+    },
+    {
+      "id": "Nested If Body",
+      "text": "Nested If Body",
+      "class": null
+    },
+    {
+      "id": "Statement just below if",
+      "text": "Statement just below if",
+      "class": null
+    },
+    {
+      "id": "Exit",
+      "text": "Exit",
+      "class": null
+    },
+    {
+      "id": "Pass",
+      "text": "Pass",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "If Condition",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "If Condition",
+      "head": "If Body",
+      "class": null,
+      "label": "True"
+    },
+    {
+      "tail": "If Condition",
+      "head": "Nested If Condition",
+      "class": null,
+      "label": "False"
+    },
+    {
+      "tail": "Nested If Condition",
+      "head": "Nested If Body",
+      "class": null,
+      "label": "True"
+    },
+    {
+      "tail": "Nested If Condition",
+      "head": "Pass",
+      "class": null,
+      "label": "False"
+    },
+    {
+      "tail": "If Body",
+      "head": "Statement just below if",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Nested If Body",
+      "head": "Statement just below if",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Statement just below if",
+      "head": "Exit",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

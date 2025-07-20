@@ -1,0 +1,110 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": null
+      },
+      {
+        "id": "Entry Users Personal ID",
+        "text": "Entry Users Personal ID",
+        "class": null
+      },
+      {
+        "id": "Login Success",
+        "text": "Login Success",
+        "class": null
+      },
+      {
+        "id": "Read to-n Answer",
+        "text": "Read to-n Answer",
+        "class": null
+      },
+      {
+        "id": "Start Loop",
+        "text": "Start Loop",
+        "class": null
+      },
+      {
+        "id": "Inference Process",
+        "text": "Inference Process",
+        "class": null
+      },
+      {
+        "id": "Conclusion",
+        "text": "Conclusion",
+        "class": null
+      },
+      {
+        "id": "Positioning Detection for monitoring",
+        "text": "Positioning Detection for monitoring",
+        "class": null
+      },
+      {
+        "id": "Stop",
+        "text": "Stop",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "Entry Users Personal ID",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Entry Users Personal ID",
+        "head": "Login Success",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Login Success",
+        "head": "Read to-n Answer",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Read to-n Answer",
+        "head": "Start Loop",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Start Loop",
+        "head": "Inference Process",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Inference Process",
+        "head": "Conclusion",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Conclusion",
+        "head": "Positioning Detection for monitoring",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "Conclusion",
+        "head": "Start Loop",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "Positioning Detection for monitoring",
+        "head": "Stop",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

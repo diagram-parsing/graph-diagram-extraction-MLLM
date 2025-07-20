@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": "Seadmele järele tulmine",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_1",
+        "text": "Arve esitamine",
+        "class": "Task"
+      },
+      {
+        "id": "Task_2",
+        "text": "Arve vastavuse kontrollimine",
+        "class": "Task"
+      },
+      {
+        "id": "Task_3",
+        "text": "Töötajalt kinnitusu küsimumine",
+        "class": "Task"
+      },
+      {
+        "id": "Task_4",
+        "text": "Arve tasumine",
+        "class": "Task"
+      },
+      {
+        "id": "Task_5",
+        "text": "Arve saatmine parandamiseks",
+        "class": "Task"
+      },
+      {
+        "id": "Task_6",
+        "text": "Arve kontrollimine",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway_1",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Task_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_1",
+        "head": "Task_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_2",
+        "head": "Task_3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_3",
+        "head": "Exclusive_Eventbased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_1",
+        "head": "Task_4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_1",
+        "head": "Task_6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_6",
+        "head": "Task_5",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Pakkujaja",
+        "class": "Lane",
+        "nodes": ["StartEvent_1", "Task_1", "Task_2", "Task_3", "Task_4", "Task_5", "Task_6", "Exclusive_Eventbased_Gateway_1"]
+      }
+    ]
+  }
+]
+```

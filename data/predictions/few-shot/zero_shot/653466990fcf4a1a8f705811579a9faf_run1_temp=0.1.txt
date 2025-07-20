@@ -1,0 +1,54 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Cliente",
+        "text": "Cliente",
+        "class": "TextAnnotation"
+      },
+      {
+        "id": "StartEvent",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Verifica existencias",
+        "text": "Verifica existencias",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Rechaza OC",
+        "text": "Rechaza OC",
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent",
+        "head": "Verifica existencias",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Verifica existencias",
+        "head": "Exclusive_Eventbased_Gateway",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway",
+        "head": "Rechaza OC",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

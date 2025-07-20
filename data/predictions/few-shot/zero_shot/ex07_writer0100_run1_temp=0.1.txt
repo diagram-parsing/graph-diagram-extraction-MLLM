@@ -1,0 +1,140 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start",
+      "text": "start doctor rating process",
+      "class": "task"
+    },
+    {
+      "id": "interview",
+      "text": "interview patients",
+      "class": "task"
+    },
+    {
+      "id": "file_review",
+      "text": "file review and result of patient interview",
+      "class": "task"
+    },
+    {
+      "id": "create_report",
+      "text": "create report",
+      "class": "task"
+    },
+    {
+      "id": "doctor_rating_finished",
+      "text": "doctor rating finished",
+      "class": "event"
+    },
+    {
+      "id": "ask_review",
+      "text": "ask to review work of doctor under rating",
+      "class": "task"
+    },
+    {
+      "id": "review_received",
+      "text": "review received",
+      "class": "event"
+    },
+    {
+      "id": "forward_review",
+      "text": "forward review",
+      "class": "task"
+    },
+    {
+      "id": "fill_send_cheque",
+      "text": "fill and send cheque",
+      "class": "task"
+    },
+    {
+      "id": "e_responds_in_time",
+      "text": "e. responds in time",
+      "class": "event"
+    },
+    {
+      "id": "e_responds_not_in_time",
+      "text": "e. responds not in time",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "interview",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "interview",
+      "head": "file_review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file_review",
+      "head": "create_report",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "create_report",
+      "head": "doctor_rating_finished",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file_review",
+      "head": "ask_review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask_review",
+      "head": "e_responds_in_time",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "e_responds_in_time",
+      "head": "review_received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "review_received",
+      "head": "forward_review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward_review",
+      "head": "fill_send_cheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask_review",
+      "head": "e_responds_not_in_time",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "class": "pool",
+      "nodes": ["interview", "file_review", "create_report"]
+    },
+    {
+      "name": "expert",
+      "class": "pool",
+      "nodes": ["ask_review", "e_responds_in_time", "e_responds_not_in_time", "review_received", "forward_review"]
+    },
+    {
+      "name": "directou",
+      "class": "lane",
+      "nodes": ["fill_send_cheque"]
+    }
+  ]
+}
+```

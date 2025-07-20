@@ -1,0 +1,64 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "A",
+      "id": "A",
+      "class": null
+    },
+    {
+      "text": "Process step 3",
+      "id": "Process step 3",
+      "class": null
+    },
+    {
+      "text": "Process step 4",
+      "id": "Process step 4",
+      "class": null
+    },
+    {
+      "text": "Process step 5",
+      "id": "Process step 5",
+      "class": null
+    },
+    {
+      "text": "Process step 6",
+      "id": "Process step 6",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "A",
+      "head": "Process step 3",
+      "label": null
+    },
+    {
+      "tail": "Process step 3",
+      "head": "Process step 4",
+      "label": null
+    },
+    {
+      "tail": "Process step 4",
+      "head": "Process step 5",
+      "label": null
+    },
+    {
+      "tail": "Process step 5",
+      "head": "Process step 6",
+      "label": null
+    },
+    {
+      "tail": "Process step 6",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

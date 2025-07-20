@@ -1,0 +1,171 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "process started",
+      "class": "event"
+    },
+    {
+      "id": "messageEvent_1",
+      "text": "Lieferando order received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent_2",
+      "text": "website order received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent_3",
+      "text": "phone order received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_1",
+      "text": "confirm order",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "print out order",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "write down order note",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "attach order to pin wall",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "artefact_1",
+      "text": "Order",
+      "class": "artefact"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "messageEvent_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "messageEvent_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_3",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "artefact_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "artefact_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "artefact_1",
+      "head": "exclusiveGateway_2",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Pizza Service",
+      "class": "pool",
+      "nodes": [
+        "event_1",
+        "exclusiveGateway_1",
+        "messageEvent_1",
+        "messageEvent_2",
+        "messageEvent_3",
+        "task_1",
+        "task_2",
+        "task_3",
+        "exclusiveGateway_2",
+        "task_4",
+        "event_2",
+        "artefact_1"
+      ]
+    },
+    {
+      "name": "Customer",
+      "class": "pool",
+      "nodes": []
+    }
+  ]
+}]
+```

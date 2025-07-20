@@ -1,0 +1,93 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task1",
+        "text": "automatische Beauftragung der Beteiligten",
+        "class": "Task"
+      },
+      {
+        "id": "Task2",
+        "text": "Entwerfen und überarbeiten der Einzelteile",
+        "class": "Task"
+      },
+      {
+        "id": "Task3",
+        "text": "Erstellen und überarbeiten der Baugruppe",
+        "class": "Task"
+      },
+      {
+        "id": "Task4",
+        "text": "Erstellen der technischen Zeichnung-ableitungen",
+        "class": "Task"
+      },
+      {
+        "id": "Task5",
+        "text": "Starten des automatischen Signaturtrags und Weiterleitung an die Fertigung",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent2",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent1",
+        "head": "Task1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task1",
+        "head": "Task2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task2",
+        "head": "Task3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task3",
+        "head": "Task4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task4",
+        "head": "Task5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task5",
+        "head": "EndEvent1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task3",
+        "head": "EndEvent2",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

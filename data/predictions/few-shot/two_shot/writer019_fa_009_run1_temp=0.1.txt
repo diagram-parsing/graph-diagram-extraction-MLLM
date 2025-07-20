@@ -1,0 +1,108 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "S",
+      "id": "S",
+      "class": "state"
+    },
+    {
+      "text": "Q",
+      "id": "Q",
+      "class": "state"
+    },
+    {
+      "text": "R",
+      "id": "R",
+      "class": "state"
+    },
+    {
+      "text": "G",
+      "id": "G",
+      "class": "final state"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "state"
+    },
+    {
+      "text": "F",
+      "id": "F",
+      "class": "final state"
+    }
+  ],
+  "relations": [
+    {
+      "tail": null,
+      "head": "S",
+      "label": null
+    },
+    {
+      "tail": "S",
+      "head": "Q",
+      "label": "a"
+    },
+    {
+      "tail": "S",
+      "head": "E",
+      "label": "b,c"
+    },
+    {
+      "tail": "Q",
+      "head": "R",
+      "label": "c"
+    },
+    {
+      "tail": "Q",
+      "head": "F",
+      "label": "b"
+    },
+    {
+      "tail": "Q",
+      "head": "Q",
+      "label": "a"
+    },
+    {
+      "tail": "R",
+      "head": "G",
+      "label": "a,b"
+    },
+    {
+      "tail": "R",
+      "head": "F",
+      "label": "a"
+    },
+    {
+      "tail": "R",
+      "head": "R",
+      "label": "c"
+    },
+    {
+      "tail": "G",
+      "head": "F",
+      "label": "a"
+    },
+    {
+      "tail": "F",
+      "head": "Q",
+      "label": "c"
+    },
+    {
+      "tail": "F",
+      "head": "R",
+      "label": "a"
+    },
+    {
+      "tail": "F",
+      "head": "E",
+      "label": "b"
+    },
+    {
+      "tail": "E",
+      "head": "F",
+      "label": "a,b,c"
+    }
+  ]
+}
+```

@@ -1,0 +1,149 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Kunde",
+        "text": "Kunde",
+        "attributes": ["ID", "Name", "Straße", "PLZ", "Stadt", "Geburtsdatum"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Bestellung",
+        "text": "Bestellung",
+        "attributes": ["ID", "Kunde_ID", "Betrag", "Datum"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Bestellposition",
+        "text": "Bestellposition",
+        "attributes": ["ID", "Bestellung_ID", "Artikel_ID", "Menge"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Artikel",
+        "text": "Artikel",
+        "attributes": ["ID", "Bezeichnung", "Beschreibung", "Preis", "Kategorie", "Restmenge"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Rechnung",
+        "text": "Rechnung",
+        "attributes": ["ID", "Bestellung_ID", "Kunde_ID", "Datum", "Betrag", "bezahlt"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Reklamation",
+        "text": "Reklamation",
+        "attributes": ["ID", "Kunde_ID", "Bestellung_ID", "Rechnung_ID", "Artikel_ID", "Datum", "behandelt"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Kunde2",
+        "text": "Kunde",
+        "attributes": ["ID", "Address_ID", "Vorname", "Nachname", "Geburtsdatum"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Adresse",
+        "text": "Adresse",
+        "attributes": ["ID", "Kunde_ID", "Straße", "Hausnummer", "PLZ", "Stadt", "Bundesland", "Land"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Bestellung2",
+        "text": "Bestellung",
+        "attributes": ["ID", "Kunde_ID", "Summe", "Datum", "Artikel1_ID", "Artikel2_ID", "Artikel3_ID", "Artikel4_ID"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Artikel2",
+        "text": "Artikel",
+        "attributes": ["ID", "Bezeichnung", "Beschreibung", "Preis", "Kategorie", "Restmenge"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Rechnung2",
+        "text": "Rechnung",
+        "attributes": ["ID", "Bestellung_ID", "Kunde_ID", "Datum", "Betrag", "bezahlt"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Kunde",
+        "head": "Bestellung",
+        "class": "Composition",
+        "label": "Kunde_ID"
+      },
+      {
+        "tail": "Bestellung",
+        "head": "Bestellposition",
+        "class": "Composition",
+        "label": "Bestellung_ID"
+      },
+      {
+        "tail": "Bestellposition",
+        "head": "Artikel",
+        "class": "Composition",
+        "label": "Artikel_ID"
+      },
+      {
+        "tail": "Bestellung",
+        "head": "Rechnung",
+        "class": "Composition",
+        "label": "Bestellung_ID"
+      },
+      {
+        "tail": "Rechnung",
+        "head": "Reklamation",
+        "class": "Composition",
+        "label": "Rechnung_ID"
+      },
+      {
+        "tail": "Kunde2",
+        "head": "Adresse",
+        "class": "Composition",
+        "label": "Address_ID"
+      },
+      {
+        "tail": "Adresse",
+        "head": "Bestellung2",
+        "class": "Composition",
+        "label": "Kunde_ID"
+      },
+      {
+        "tail": "Bestellung2",
+        "head": "Artikel2",
+        "class": "Composition",
+        "label": "Artikel1_ID"
+      },
+      {
+        "tail": "Bestellung2",
+        "head": "Artikel2",
+        "class": "Composition",
+        "label": "Artikel2_ID"
+      },
+      {
+        "tail": "Bestellung2",
+        "head": "Artikel2",
+        "class": "Composition",
+        "label": "Artikel3_ID"
+      },
+      {
+        "tail": "Bestellung2",
+        "head": "Artikel2",
+        "class": "Composition",
+        "label": "Artikel4_ID"
+      },
+      {
+        "tail": "Bestellung2",
+        "head": "Rechnung2",
+        "class": "Composition",
+        "label": "Bestellung_ID"
+      }
+    ],
+    "groups": []
+  }
+]
+```

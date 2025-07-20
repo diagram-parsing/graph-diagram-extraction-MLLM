@@ -1,0 +1,159 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent",
+        "text": "Introduce datele",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task1",
+        "text": "Verifica datele",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway1",
+        "text": "X",
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task2",
+        "text": "Anunta clientului",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway2",
+        "text": "X",
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task3",
+        "text": "Verifica accesibilitate",
+        "class": "Task"
+      },
+      {
+        "id": "Task4",
+        "text": "Calculeaza pretul",
+        "class": "Task"
+      },
+      {
+        "id": "Task5",
+        "text": "Aproba vanzarea",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent2",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent3",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent4",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent",
+        "head": "Task1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task1",
+        "head": "Exclusive_Databased_Gateway1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway1",
+        "head": "Task2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway1",
+        "head": "Task3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task2",
+        "head": "Exclusive_Databased_Gateway2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task3",
+        "head": "Exclusive_Databased_Gateway2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway2",
+        "head": "Task4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task4",
+        "head": "Task5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task5",
+        "head": "EndEvent1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task2",
+        "head": "EndEvent2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task3",
+        "head": "EndEvent3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "StartEvent",
+        "head": "EndEvent4",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Angajat",
+        "class": "Lane",
+        "nodes": ["Task5"]
+      },
+      {
+        "name": "Sistem",
+        "class": "Lane",
+        "nodes": ["Task1", "Task2", "Task3", "Task4"]
+      },
+      {
+        "name": "Client",
+        "class": "Lane",
+        "nodes": ["StartEvent"]
+      }
+    ]
+  }
+]
+```

@@ -1,0 +1,115 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "newCOSP",
+        "text": "new COSP received",
+        "class": "event"
+      },
+      {
+        "id": "patientInterview",
+        "text": "patient interview workflow",
+        "class": "task"
+      },
+      {
+        "id": "fileResult",
+        "text": "file result interview",
+        "class": "task"
+      },
+      {
+        "id": "createsReport",
+        "text": "creates report",
+        "class": "task"
+      },
+      {
+        "id": "asksExternal",
+        "text": "asks external expert to review",
+        "class": "task"
+      },
+      {
+        "id": "receiveExpertise",
+        "text": "receive expertise",
+        "class": "task"
+      },
+      {
+        "id": "fileExpertise",
+        "text": "file expertise",
+        "class": "task"
+      },
+      {
+        "id": "fillCheck",
+        "text": "fill check",
+        "class": "task"
+      },
+      {
+        "id": "check",
+        "text": "check",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "newCOSP",
+        "head": "patientInterview",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "patientInterview",
+        "head": "fileResult",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "fileResult",
+        "head": "createsReport",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "newCOSP",
+        "head": "asksExternal",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "asksExternal",
+        "head": "receiveExpertise",
+        "class": "sequenceFlow",
+        "label": "Count in time response"
+      },
+      {
+        "tail": "receiveExpertise",
+        "head": "fileExpertise",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "fileExpertise",
+        "head": "fillCheck",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "fillCheck",
+        "head": "check",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "QA Specialist",
+        "class": "lane",
+        "nodes": ["newCOSP", "patientInterview", "fileResult", "createsReport"]
+      },
+      {
+        "name": "Hospital",
+        "class": "lane",
+        "nodes": ["asksExternal", "receiveExpertise", "fileExpertise", "fillCheck", "check"]
+      }
+    ]
+  }
+]
+```

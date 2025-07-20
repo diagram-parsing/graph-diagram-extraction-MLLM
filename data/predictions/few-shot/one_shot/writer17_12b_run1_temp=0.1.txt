@@ -1,0 +1,105 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": null,
+        "class": "terminator"
+      },
+      {
+        "id": "input_n",
+        "text": "Input n",
+        "class": "process"
+      },
+      {
+        "id": "initialize",
+        "text": "T[1] = T[2] = 1\ni = 3",
+        "class": "process"
+      },
+      {
+        "id": "decision",
+        "text": "i < n",
+        "class": "decision"
+      },
+      {
+        "id": "increment_i",
+        "text": "i++",
+        "class": "process"
+      },
+      {
+        "id": "calculate_T",
+        "text": "T[i] = T[i-1] + T[i-2]",
+        "class": "process"
+      },
+      {
+        "id": "output_Tn",
+        "text": "Output T[n]",
+        "class": "process"
+      },
+      {
+        "id": "end",
+        "text": null,
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "input_n",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "input_n",
+        "head": "initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "initialize",
+        "head": "decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "decision",
+        "head": "increment_i",
+        "class": null,
+        "label": "Y"
+      },
+      {
+        "tail": "decision",
+        "head": "calculate_T",
+        "class": null,
+        "label": "Y"
+      },
+      {
+        "tail": "calculate_T",
+        "head": "decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "decision",
+        "head": "output_Tn",
+        "class": null,
+        "label": "N"
+      },
+      {
+        "tail": "output_Tn",
+        "head": "end",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "increment_i",
+        "head": "calculate_T",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

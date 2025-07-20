@@ -1,0 +1,328 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "event_1",
+        "text": "claim arrived",
+        "class": "messageEvent"
+      },
+      {
+        "id": "gateway_1",
+        "text": null,
+        "class": "parallelGateway"
+      },
+      {
+        "id": "task_1",
+        "text": "check completeness",
+        "class": "task"
+      },
+      {
+        "id": "task_2",
+        "text": "register claim",
+        "class": "task"
+      },
+      {
+        "id": "gateway_2",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_3",
+        "text": "reject claim",
+        "class": "task"
+      },
+      {
+        "id": "task_4",
+        "text": "send letter to customer",
+        "class": "task"
+      },
+      {
+        "id": "event_2",
+        "text": null,
+        "class": "event"
+      },
+      {
+        "id": "task_5",
+        "text": "check insurance",
+        "class": "task"
+      },
+      {
+        "id": "gateway_3",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_6",
+        "text": "reject claim",
+        "class": "task"
+      },
+      {
+        "id": "task_7",
+        "text": "send letter to customer",
+        "class": "task"
+      },
+      {
+        "id": "event_3",
+        "text": null,
+        "class": "event"
+      },
+      {
+        "id": "task_8",
+        "text": "perform assessment",
+        "class": "task"
+      },
+      {
+        "id": "gateway_4",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_9",
+        "text": "reject claim",
+        "class": "task"
+      },
+      {
+        "id": "task_10",
+        "text": "send letter to customer",
+        "class": "task"
+      },
+      {
+        "id": "task_11",
+        "text": "inform garage",
+        "class": "task"
+      },
+      {
+        "id": "task_12",
+        "text": "schedule payment",
+        "class": "task"
+      },
+      {
+        "id": "task_13",
+        "text": "send letter to customer",
+        "class": "task"
+      },
+      {
+        "id": "event_4",
+        "text": null,
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "event_1",
+        "head": "gateway_1",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway_1",
+        "head": "task_1",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway_1",
+        "head": "task_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_1",
+        "head": "gateway_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway_2",
+        "head": "task_3",
+        "class": "sequenceFlow",
+        "label": "incomplete"
+      },
+      {
+        "tail": "gateway_2",
+        "head": "task_5",
+        "class": "sequenceFlow",
+        "label": "complete"
+      },
+      {
+        "tail": "task_3",
+        "head": "task_4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_4",
+        "head": "event_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_5",
+        "head": "gateway_3",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway_3",
+        "head": "task_6",
+        "class": "sequenceFlow",
+        "label": "not insured"
+      },
+      {
+        "tail": "gateway_3",
+        "head": "task_8",
+        "class": "sequenceFlow",
+        "label": "insured"
+      },
+      {
+        "tail": "task_6",
+        "head": "task_7",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_7",
+        "head": "event_3",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_8",
+        "head": "gateway_4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway_4",
+        "head": "task_9",
+        "class": "sequenceFlow",
+        "label": "negative"
+      },
+      {
+        "tail": "gateway_4",
+        "head": "task_11",
+        "class": "sequenceFlow",
+        "label": "positive"
+      },
+      {
+        "tail": "task_9",
+        "head": "task_10",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_10",
+        "head": "event_4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_11",
+        "head": "task_12",
+        "class": "sequenceFlow",
+        "label": "phone call"
+      },
+      {
+        "tail": "task_12",
+        "head": "task_13",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_13",
+        "head": "event_4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "event_1",
+        "head": "customer",
+        "class": "messageFlow",
+        "label": "claim"
+      },
+      {
+        "tail": "task_4",
+        "head": "customer",
+        "class": "messageFlow",
+        "label": "letter"
+      },
+      {
+        "tail": "task_7",
+        "head": "customer",
+        "class": "messageFlow",
+        "label": "letter"
+      },
+      {
+        "tail": "task_10",
+        "head": "customer",
+        "class": "messageFlow",
+        "label": "letter"
+      },
+      {
+        "tail": "task_13",
+        "head": "customer",
+        "class": "messageFlow",
+        "label": "letter"
+      },
+      {
+        "tail": "task_11",
+        "head": "garage",
+        "class": "messageFlow",
+        "label": "phone call"
+      }
+    ],
+    "groups": [
+      {
+        "name": "car insurer",
+        "class": "pool",
+        "nodes": [
+          "Notification department",
+          "Handling department"
+        ]
+      },
+      {
+        "name": "Notification department",
+        "class": "lane",
+        "nodes": [
+          "event_1",
+          "gateway_1",
+          "task_1",
+          "task_2",
+          "gateway_2"
+        ]
+      },
+      {
+        "name": "Handling department",
+        "class": "lane",
+        "nodes": [
+          "task_5",
+          "gateway_3",
+          "task_6",
+          "task_7",
+          "event_3",
+          "task_8",
+          "gateway_4",
+          "task_9",
+          "task_10",
+          "task_11",
+          "task_12",
+          "task_13",
+          "event_2",
+          "event_4"
+        ]
+      },
+      {
+        "name": "customer",
+        "class": "pool",
+        "nodes": []
+      },
+      {
+        "name": "garage",
+        "class": "pool",
+        "nodes": []
+      }
+    ]
+  }
+]
+```

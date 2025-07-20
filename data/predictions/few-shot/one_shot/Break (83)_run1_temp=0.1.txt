@@ -1,0 +1,132 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": null
+      },
+      {
+        "id": "Calculate total travelling-periods EV Distance for each EV",
+        "text": "Calculate total travelling-periods EV Distance for each EV",
+        "class": null
+      },
+      {
+        "id": "Calculate Each Step",
+        "text": "Calculate Each Step",
+        "class": null
+      },
+      {
+        "id": "Available cars to simulate?",
+        "text": "Available cars to simulate?",
+        "class": null
+      },
+      {
+        "id": "Return generated scenario",
+        "text": "Return generated scenario",
+        "class": null
+      },
+      {
+        "id": "Randomly generate Steps",
+        "text": "Randomly generate Steps",
+        "class": null
+      },
+      {
+        "id": "Random trial is higher than 100?",
+        "text": "Random trial is higher than 100?",
+        "class": null
+      },
+      {
+        "id": "Discard car from scenario",
+        "text": "Discard car from scenario",
+        "class": null
+      },
+      {
+        "id": "Is it possible?",
+        "text": "Is it possible?",
+        "class": null
+      },
+      {
+        "id": "Allocate cars",
+        "text": "Allocate cars",
+        "class": null
+      },
+      {
+        "id": "Get next car and reduce used available trips per step of last car scenario.",
+        "text": "Get next car and reduce used available trips per step of last car scenario.",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Calculate total travelling-periods EV Distance for each EV",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Calculate total travelling-periods EV Distance for each EV",
+        "head": "Calculate Each Step",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Calculate Each Step",
+        "head": "Available cars to simulate?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Available cars to simulate?",
+        "head": "Return generated scenario",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "Available cars to simulate?",
+        "head": "Randomly generate Steps",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "Randomly generate Steps",
+        "head": "Random trial is higher than 100?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Random trial is higher than 100?",
+        "head": "Discard car from scenario",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "Random trial is higher than 100?",
+        "head": "Is it possible?",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "Is it possible?",
+        "head": "Allocate cars",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "Allocate cars",
+        "head": "Get next car and reduce used available trips per step of last car scenario.",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Get next car and reduce used available trips per step of last car scenario.",
+        "head": "Randomly generate Steps",
+        "class": null,
+        "label": "No"
+      }
+    ],
+    "groups": []
+  }
+]
+```

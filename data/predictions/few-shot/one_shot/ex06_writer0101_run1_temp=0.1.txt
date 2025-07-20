@@ -1,0 +1,144 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "order_received",
+        "text": "order received",
+        "class": "event"
+      },
+      {
+        "id": "order",
+        "text": "order",
+        "class": "dataObject"
+      },
+      {
+        "id": "Write down order note",
+        "text": "Write down order note",
+        "class": "task"
+      },
+      {
+        "id": "Phone",
+        "text": "Phone",
+        "class": "task"
+      },
+      {
+        "id": "Website",
+        "text": "Website",
+        "class": "task"
+      },
+      {
+        "id": "Lieferrando",
+        "text": "Lieferrando",
+        "class": "task"
+      },
+      {
+        "id": "confirm order",
+        "text": "confirm order",
+        "class": "task"
+      },
+      {
+        "id": "Print out order",
+        "text": "Print out order",
+        "class": "task"
+      },
+      {
+        "id": "order attached",
+        "text": "order attached",
+        "class": "event"
+      },
+      {
+        "id": "order physic",
+        "text": "order physic",
+        "class": "dataObject"
+      },
+      {
+        "id": "Attach order note to pin board",
+        "text": "Attach order note to pin board",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "order_received",
+        "head": "order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order",
+        "head": "Write down order note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order",
+        "head": "Phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order",
+        "head": "Website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Website",
+        "head": "Lieferrando",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Lieferrando",
+        "head": "confirm order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm order",
+        "head": "Print out order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Print out order",
+        "head": "order physic",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order physic",
+        "head": "Attach order note to pin board",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Attach order note to pin board",
+        "head": "order attached",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Customer",
+        "class": "pool",
+        "nodes": [
+          "order_received",
+          "order",
+          "Write down order note",
+          "Phone",
+          "Website",
+          "Lieferrando",
+          "confirm order",
+          "Print out order",
+          "order physic",
+          "Attach order note to pin board",
+          "order attached"
+        ]
+      }
+    ]
+  }
+]
+```

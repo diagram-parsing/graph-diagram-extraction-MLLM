@@ -1,0 +1,136 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "startEvent",
+      "text": "Now our application received",
+      "class": "event"
+    },
+    {
+      "id": "taskEvaluate",
+      "text": "Evaluate to Aecols",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "taskCreateAccount",
+      "text": "Create new bank Account",
+      "class": "task"
+    },
+    {
+      "id": "taskNotifyCustomer",
+      "text": "Notify customer by email",
+      "class": "task"
+    },
+    {
+      "id": "endEventApplicationHandled",
+      "text": "Application handled",
+      "class": "event"
+    },
+    {
+      "id": "endEventProcessEnded",
+      "text": "Process ended -> Application handled",
+      "class": "event"
+    },
+    {
+      "id": "parallelGateway",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "taskSendWelcomePack",
+      "text": "send welcome pack",
+      "class": "task"
+    },
+    {
+      "id": "taskSendBankCard",
+      "text": "send bank card",
+      "class": "task"
+    },
+    {
+      "id": "taskSendPIN",
+      "text": "send PIN",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "startEvent",
+      "head": "taskEvaluate",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "taskEvaluate",
+      "head": "exclusiveGateway",
+      "class": "sequenceFlow",
+      "label": "Application rejected"
+    },
+    {
+      "tail": "exclusiveGateway",
+      "head": "taskNotifyCustomer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway",
+      "head": "taskCreateAccount",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "taskCreateAccount",
+      "head": "parallelGateway",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway",
+      "head": "taskSendWelcomePack",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway",
+      "head": "taskSendBankCard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway",
+      "head": "taskSendPIN",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "taskSendWelcomePack",
+      "head": "endEventApplicationHandled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "taskSendBankCard",
+      "head": "endEventApplicationHandled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "taskSendPIN",
+      "head": "endEventApplicationHandled",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "taskNotifyCustomer",
+      "head": "endEventProcessEnded",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

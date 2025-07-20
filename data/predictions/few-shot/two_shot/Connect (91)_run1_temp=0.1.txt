@@ -1,0 +1,89 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Read Parameters",
+      "id": "Read Parameters",
+      "class": null
+    },
+    {
+      "text": "Perform operations",
+      "id": "Perform operations",
+      "class": null
+    },
+    {
+      "text": "Update Values",
+      "id": "Update Values",
+      "class": null
+    },
+    {
+      "text": "Update the position and velocity for all the particles",
+      "id": "Update the position and velocity for all the particles",
+      "class": null
+    },
+    {
+      "text": "Termination condition satisfied ?",
+      "id": "Termination condition satisfied ?",
+      "class": null
+    },
+    {
+      "text": "Print Output",
+      "id": "Print Output",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Read Parameters",
+      "label": null
+    },
+    {
+      "tail": "Read Parameters",
+      "head": "Perform operations",
+      "label": null
+    },
+    {
+      "tail": "Perform operations",
+      "head": "Update Values",
+      "label": null
+    },
+    {
+      "tail": "Update Values",
+      "head": "Update the position and velocity for all the particles",
+      "label": null
+    },
+    {
+      "tail": "Update the position and velocity for all the particles",
+      "head": "Termination condition satisfied ?",
+      "label": null
+    },
+    {
+      "tail": "Termination condition satisfied ?",
+      "head": "Print Output",
+      "label": "Yes"
+    },
+    {
+      "tail": "Termination condition satisfied ?",
+      "head": "Update Values",
+      "label": "No"
+    },
+    {
+      "tail": "Print Output",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

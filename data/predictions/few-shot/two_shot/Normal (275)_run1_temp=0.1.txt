@@ -1,0 +1,79 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Create a swarm of particles",
+      "id": "Create a swarm of particles",
+      "class": null
+    },
+    {
+      "text": "Calculate each particle's fitness",
+      "id": "Calculate each particle's fitness",
+      "class": null
+    },
+    {
+      "text": "Determine best value",
+      "id": "Determine best value",
+      "class": null
+    },
+    {
+      "text": "Update Value",
+      "id": "Update Value",
+      "class": null
+    },
+    {
+      "text": "Termination",
+      "id": "Termination",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Create a swarm of particles",
+      "label": null
+    },
+    {
+      "tail": "Create a swarm of particles",
+      "head": "Calculate each particle's fitness",
+      "label": null
+    },
+    {
+      "tail": "Calculate each particle's fitness",
+      "head": "Determine best value",
+      "label": null
+    },
+    {
+      "tail": "Determine best value",
+      "head": "Update Value",
+      "label": null
+    },
+    {
+      "tail": "Update Value",
+      "head": "Termination",
+      "label": null
+    },
+    {
+      "tail": "Termination",
+      "head": "Calculate each particle's fitness",
+      "label": "No"
+    },
+    {
+      "tail": "Termination",
+      "head": "End",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}
+```

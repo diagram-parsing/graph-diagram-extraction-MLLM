@@ -1,0 +1,190 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "Case started",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "Patient interview workflow",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "ask external expert to review work of doctor under rating",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "expert does not respond in time",
+      "class": "event"
+    },
+    {
+      "id": "task_3",
+      "text": "ask expert",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "receive expertise and forward to Qt specialist",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "file results containing patient interviews and expertise",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "create report",
+      "class": "task"
+    },
+    {
+      "id": "event_3",
+      "text": "report created",
+      "class": "event"
+    },
+    {
+      "id": "task_7",
+      "text": "file cheque",
+      "class": "task"
+    },
+    {
+      "id": "task_8",
+      "text": "send cheque to expert",
+      "class": "task"
+    },
+    {
+      "id": "event_4",
+      "text": "paid of expenses of expert",
+      "class": "event"
+    },
+    {
+      "id": "task_9",
+      "text": "send expertise",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_2",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_7",
+      "head": "task_8",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_8",
+      "head": "event_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_9",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Hospital",
+      "class": "pool",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "exclusiveGateway_1",
+        "task_2",
+        "event_2",
+        "task_3",
+        "task_4",
+        "task_5",
+        "task_6",
+        "event_3",
+        "task_7",
+        "task_8",
+        "event_4"
+      ]
+    },
+    {
+      "name": "external expert",
+      "class": "pool",
+      "nodes": [
+        "task_9"
+      ]
+    }
+  ]
+}
+```

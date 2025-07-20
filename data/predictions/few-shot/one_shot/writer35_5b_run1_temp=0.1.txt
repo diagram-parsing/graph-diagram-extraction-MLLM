@@ -1,0 +1,150 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "No_sample?",
+        "text": "No sample?",
+        "class": "decision"
+      },
+      {
+        "id": "Next_samp",
+        "text": "Next_samp",
+        "class": "process"
+      },
+      {
+        "id": "Update_weights",
+        "text": "Update weights",
+        "class": "process"
+      },
+      {
+        "id": "Err<best_err",
+        "text": "Err<best_err",
+        "class": "decision"
+      },
+      {
+        "id": "best_err=err",
+        "text": "best_err=err",
+        "class": "process"
+      },
+      {
+        "id": "Save_weights",
+        "text": "Save weights",
+        "class": "process"
+      },
+      {
+        "id": "R++",
+        "text": "R++",
+        "class": "process"
+      },
+      {
+        "id": "R<limit",
+        "text": "R<limit",
+        "class": "decision"
+      },
+      {
+        "id": "Back to point sample",
+        "text": "Back to point sample",
+        "class": "process"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "No_sample?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "No_sample?",
+        "head": "Next_samp",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "No_sample?",
+        "head": "Begin",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "Next_samp",
+        "head": "Update_weights",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Update_weights",
+        "head": "No_sample?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Update_weights",
+        "head": "Err<best_err",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Err<best_err",
+        "head": "best_err=err",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "Err<best_err",
+        "head": "R++",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "best_err=err",
+        "head": "Save_weights",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Save_weights",
+        "head": "R++",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "R++",
+        "head": "R<limit",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "R<limit",
+        "head": "Back to point sample",
+        "class": null,
+        "label": "then"
+      },
+      {
+        "tail": "R<limit",
+        "head": "End",
+        "class": null,
+        "label": "else"
+      },
+      {
+        "tail": "Back to point sample",
+        "head": "No_sample?",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

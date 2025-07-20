@@ -1,0 +1,47 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Take Order",
+      "text": "Take Order",
+      "class": null
+    },
+    {
+      "id": "Order Meets Specifications",
+      "text": "Order Meets Specifications",
+      "class": null
+    },
+    {
+      "id": "Take Payment",
+      "text": "Take Payment",
+      "class": null
+    },
+    {
+      "id": "Order Decline",
+      "text": "Order Decline",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Take Order",
+      "head": "Order Meets Specifications",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Order Meets Specifications",
+      "head": "Take Payment",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Order Meets Specifications",
+      "head": "Order Decline",
+      "class": null,
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

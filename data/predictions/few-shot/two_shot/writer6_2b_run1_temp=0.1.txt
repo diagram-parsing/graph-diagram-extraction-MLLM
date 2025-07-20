@@ -1,0 +1,53 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "Read N",
+      "text": "Read N",
+      "class": "data"
+    },
+    {
+      "id": "N=N*N",
+      "text": "N=N*N",
+      "class": "process"
+    },
+    {
+      "id": "Print N",
+      "text": "Print N",
+      "class": "data"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read N",
+      "label": null
+    },
+    {
+      "tail": "Read N",
+      "head": "N=N*N",
+      "label": null
+    },
+    {
+      "tail": "N=N*N",
+      "head": "Print N",
+      "label": null
+    },
+    {
+      "tail": "Print N",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

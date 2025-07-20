@@ -1,0 +1,187 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "i",
+        "text": "i",
+        "class": "StartEvent"
+      },
+      {
+        "id": "c1+c2",
+        "text": "c1 + c2",
+        "class": "Task"
+      },
+      {
+        "id": "c1+c4",
+        "text": "c1 + c4",
+        "class": "Task"
+      },
+      {
+        "id": "c1+c6",
+        "text": "c1 + c6",
+        "class": "Task"
+      },
+      {
+        "id": "c1+c7",
+        "text": "c1 + c7",
+        "class": "Task"
+      },
+      {
+        "id": "c2+c3",
+        "text": "c2 + c3",
+        "class": "Task"
+      },
+      {
+        "id": "c2+c5",
+        "text": "c2 + c5",
+        "class": "Task"
+      },
+      {
+        "id": "c3+c4",
+        "text": "c3 + c4",
+        "class": "Task"
+      },
+      {
+        "id": "c3+c6",
+        "text": "c3 + c6",
+        "class": "Task"
+      },
+      {
+        "id": "c3+c7",
+        "text": "c3 + c7",
+        "class": "Task"
+      },
+      {
+        "id": "c4+c5",
+        "text": "c4 + c5",
+        "class": "Task"
+      },
+      {
+        "id": "c5+c6",
+        "text": "c5 + c6",
+        "class": "Task"
+      },
+      {
+        "id": "c5+c7",
+        "text": "c5 + c7",
+        "class": "Task"
+      },
+      {
+        "id": "c5+c8",
+        "text": "c5 + c8",
+        "class": "Task"
+      },
+      {
+        "id": "c5+c9",
+        "text": "c5 + c9",
+        "class": "Task"
+      },
+      {
+        "id": "o",
+        "text": "o",
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "i",
+        "head": "c1+c2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c1+c2",
+        "head": "c1+c4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c1+c2",
+        "head": "c2+c3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c1+c4",
+        "head": "c1+c7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c1+c6",
+        "head": "c3+c6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c2+c3",
+        "head": "c3+c4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c2+c3",
+        "head": "c3+c7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c3+c4",
+        "head": "c4+c5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c3+c6",
+        "head": "c5+c6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c3+c7",
+        "head": "c5+c7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c4+c5",
+        "head": "c5+c7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c5+c6",
+        "head": "c5+c7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c5+c7",
+        "head": "c5+c8",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c5+c7",
+        "head": "c5+c9",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c5+c8",
+        "head": "o",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "c5+c9",
+        "head": "o",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

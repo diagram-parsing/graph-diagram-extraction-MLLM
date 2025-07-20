@@ -1,0 +1,82 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_1",
+        "text": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+        "class": "Task"
+      },
+      {
+        "id": "Task_2",
+        "text": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen, die zu Regionen um stabile Übergänge gehören",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway_1",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway_2",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task_3",
+        "text": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent_1",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Task_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_1",
+        "head": "Task_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_2",
+        "head": "Exclusive_Databased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Exclusive_Databased_Gateway_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_2",
+        "head": "Task_3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_3",
+        "head": "EndEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

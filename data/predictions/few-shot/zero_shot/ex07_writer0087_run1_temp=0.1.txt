@@ -1,0 +1,169 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "1",
+      "text": "New Expense",
+      "class": "event"
+    },
+    {
+      "id": "2",
+      "text": "Review Policies",
+      "class": "task"
+    },
+    {
+      "id": "3",
+      "text": "Expense Request",
+      "class": "event"
+    },
+    {
+      "id": "4",
+      "text": "Forward Expense",
+      "class": "task"
+    },
+    {
+      "id": "5",
+      "text": "Expense Received",
+      "class": "event"
+    },
+    {
+      "id": "6",
+      "text": "External Expert for Review",
+      "class": "task"
+    },
+    {
+      "id": "7",
+      "text": "Expense",
+      "class": "dataObject"
+    },
+    {
+      "id": "8",
+      "text": "Expense Submitted",
+      "class": "event"
+    },
+    {
+      "id": "9",
+      "text": "Fill Check",
+      "class": "task"
+    },
+    {
+      "id": "10",
+      "text": "Send Check to Expert",
+      "class": "task"
+    },
+    {
+      "id": "11",
+      "text": "Expense Approved",
+      "class": "event"
+    },
+    {
+      "id": "12",
+      "text": "Report Created",
+      "class": "event"
+    },
+    {
+      "id": "13",
+      "text": "Director",
+      "class": "event"
+    },
+    {
+      "id": "14",
+      "text": "Check",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "1",
+      "head": "2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "2",
+      "head": "3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "3",
+      "head": "4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "4",
+      "head": "5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "5",
+      "head": "6",
+      "class": "sequenceFlow",
+      "label": "in turn"
+    },
+    {
+      "tail": "6",
+      "head": "5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "5",
+      "head": "7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "7",
+      "head": "8",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "8",
+      "head": "9",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "9",
+      "head": "10",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "10",
+      "head": "11",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "11",
+      "head": "12",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "12",
+      "head": "13",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "13",
+      "head": "14",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Expense Department",
+      "class": "pool",
+      "nodes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
+    }
+  ]
+}
+```

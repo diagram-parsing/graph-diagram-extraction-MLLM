@@ -1,0 +1,217 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "order check",
+      "text": "order check",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Inizio",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "Inizio Notifica Rifiuto",
+      "text": "Inizio Notifica Rifiuto",
+      "class": "Task"
+    },
+    {
+      "id": "Inizio Richiesta Anticipo",
+      "text": "Inizio Richiesta Anticipo",
+      "class": "Task"
+    },
+    {
+      "id": "Cancellazione ordine",
+      "text": "Cancellazione ordine",
+      "class": "Task"
+    },
+    {
+      "id": "Acquisizione parte da magazzino",
+      "text": "Acquisizione parte da magazzino",
+      "class": "Task"
+    },
+    {
+      "id": "Assemblaggio parti",
+      "text": "Assemblaggio parti",
+      "class": "Task"
+    },
+    {
+      "id": "Inizio messaggio inizio produzione",
+      "text": "Inizio messaggio inizio produzione",
+      "class": "Task"
+    },
+    {
+      "id": "Inizio richiesta pagamento",
+      "text": "Inizio richiesta pagamento",
+      "class": "Task"
+    },
+    {
+      "id": "EndEvent_1",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_2",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_3",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_4",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_5",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "IntermediateTimerEvent_1",
+      "text": "",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "id": "IntermediateTimerEvent_2",
+      "text": "",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "id": "IntermediateTimerEvent_3",
+      "text": "",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "id": "IntermediateEvent_1",
+      "text": "",
+      "class": "IntermediateEvent"
+    },
+    {
+      "id": "IntermediateEvent_2",
+      "text": "",
+      "class": "IntermediateEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Inizio",
+      "head": "order check",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "order check",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Inizio Notifica Rifiuto",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Inizio Richiesta Anticipo",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inizio Notifica Rifiuto",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inizio Richiesta Anticipo",
+      "head": "IntermediateTimerEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "Cancellazione ordine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cancellazione ordine",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_1",
+      "head": "Acquisizione parte da magazzino",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Acquisizione parte da magazzino",
+      "head": "Assemblaggio parti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Assemblaggio parti",
+      "head": "IntermediateEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateEvent_1",
+      "head": "Inizio messaggio inizio produzione",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inizio messaggio inizio produzione",
+      "head": "IntermediateTimerEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_2",
+      "head": "Inizio richiesta pagamento",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Inizio richiesta pagamento",
+      "head": "EndEvent_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateEvent_1",
+      "head": "IntermediateEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateEvent_2",
+      "head": "EndEvent_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateTimerEvent_3",
+      "head": "EndEvent_5",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

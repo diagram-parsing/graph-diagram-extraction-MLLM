@@ -1,0 +1,125 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start",
+      "text": "start",
+      "class": "terminator"
+    },
+    {
+      "id": "input",
+      "text": "Input a,b,c",
+      "class": "process"
+    },
+    {
+      "id": "delta",
+      "text": "Δ = b² - 4ac",
+      "class": "process"
+    },
+    {
+      "id": "decision1",
+      "text": "Δ < 0",
+      "class": "decision"
+    },
+    {
+      "id": "no_solution",
+      "text": "No solution",
+      "class": "process"
+    },
+    {
+      "id": "decision2",
+      "text": "Δ = 0",
+      "class": "decision"
+    },
+    {
+      "id": "output1",
+      "text": "Output -b/2a",
+      "class": "process"
+    },
+    {
+      "id": "output2",
+      "text": "Output -b + √Δ / 2a",
+      "class": "process"
+    },
+    {
+      "id": "output3",
+      "text": "Output -b - √Δ / 2a",
+      "class": "process"
+    },
+    {
+      "id": "end",
+      "text": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "input",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "input",
+      "head": "delta",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "delta",
+      "head": "decision1",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "decision1",
+      "head": "no_solution",
+      "class": null,
+      "label": "Y"
+    },
+    {
+      "tail": "decision1",
+      "head": "decision2",
+      "class": null,
+      "label": "N"
+    },
+    {
+      "tail": "no_solution",
+      "head": "end",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "decision2",
+      "head": "output1",
+      "class": null,
+      "label": "Y"
+    },
+    {
+      "tail": "decision2",
+      "head": "output2",
+      "class": null,
+      "label": "N"
+    },
+    {
+      "tail": "output1",
+      "head": "end",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "output2",
+      "head": "output3",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "output3",
+      "head": "end",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

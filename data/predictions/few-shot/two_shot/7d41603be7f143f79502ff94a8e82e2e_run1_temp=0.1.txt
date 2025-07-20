@@ -1,0 +1,285 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "E-Mail lesen und verstehen",
+      "id": "E-Mail lesen und verstehen",
+      "class": "Task"
+    },
+    {
+      "text": "Prüfen, ob neuer User angelegt werden muss",
+      "id": "Prüfen, ob neuer User angelegt werden muss",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Neuen User anlegen",
+      "id": "Neuen User anlegen",
+      "class": "Task"
+    },
+    {
+      "text": "IMAC-Hülle erstellen",
+      "id": "IMAC-Hülle erstellen",
+      "class": "Task"
+    },
+    {
+      "text": "Komplettieren mit 'General Services'",
+      "id": "Komplettieren mit 'General Services'",
+      "class": "Task"
+    },
+    {
+      "text": "Auswahl SID-Produkte",
+      "id": "Auswahl SID-Produkte",
+      "class": "Task"
+    },
+    {
+      "text": "Transferred geschäftlicher Anforderungen in technische An",
+      "id": "Transferred geschäftlicher Anforderungen in technische An",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_4",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_5",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_6",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_7",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_8",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_9",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_10",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_11",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_12",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_13",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_14",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_15",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_16",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_17",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_18",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_19",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_20",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_21",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_22",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_23",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_24",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_25",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_26",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_27",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_28",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_29",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_30",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_31",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_32",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_33",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_34",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_35",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_36",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_37",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_38",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_39",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_40",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_41",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_42",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_43",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_44",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_45",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_46",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_47",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_48",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_49",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text":

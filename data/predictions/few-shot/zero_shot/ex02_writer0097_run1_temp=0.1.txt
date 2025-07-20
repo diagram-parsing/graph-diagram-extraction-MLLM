@@ -1,0 +1,116 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Customer",
+        "text": "Customer",
+        "class": "pool"
+      },
+      {
+        "id": "register_claim",
+        "text": "register claim",
+        "class": "task"
+      },
+      {
+        "id": "examine_claim",
+        "text": "examine claim",
+        "class": "task"
+      },
+      {
+        "id": "write_recommendation",
+        "text": "write recommendation",
+        "class": "task"
+      },
+      {
+        "id": "check_recommendation",
+        "text": "check recommendation",
+        "class": "task"
+      },
+      {
+        "id": "send_back_to_claims_office",
+        "text": "send back to claims office",
+        "class": "task"
+      },
+      {
+        "id": "proceed_handling_process",
+        "text": "proceed handling process",
+        "class": "task"
+      },
+      {
+        "id": "claims_office",
+        "text": "claims office",
+        "class": "lane"
+      },
+      {
+        "id": "senior_claims_officer",
+        "text": "senior claims officer",
+        "class": "lane"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Customer",
+        "head": "register_claim",
+        "class": "sequenceFlow",
+        "label": "claim"
+      },
+      {
+        "tail": "register_claim",
+        "head": "examine_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "examine_claim",
+        "head": "write_recommendation",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_recommendation",
+        "head": "check_recommendation",
+        "class": "sequenceFlow",
+        "label": "recommendation"
+      },
+      {
+        "tail": "check_recommendation",
+        "head": "send_back_to_claims_office",
+        "class": "sequenceFlow",
+        "label": "Not OK"
+      },
+      {
+        "tail": "check_recommendation",
+        "head": "proceed_handling_process",
+        "class": "sequenceFlow",
+        "label": "OK"
+      },
+      {
+        "tail": "proceed_handling_process",
+        "head": "Customer",
+        "class": "sequenceFlow",
+        "label": "claim processed"
+      },
+      {
+        "tail": "Customer",
+        "head": "claims_office",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "claims_office",
+        "head": "senior_claims_officer",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Insurer",
+        "class": "pool",
+        "nodes": ["register_claim", "examine_claim", "write_recommendation", "check_recommendation", "send_back_to_claims_office", "proceed_handling_process", "claims_office", "senior_claims_officer"]
+      }
+    ]
+  }
+]
+```

@@ -1,0 +1,158 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Business management",
+        "text": "Business management",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Operations management",
+        "text": "Operations management",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Agent control",
+        "text": "Agent control",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Process management system",
+        "text": "Process management system",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Orchestration system",
+        "text": "Orchestration system",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Resource",
+        "text": "Resource\n// name: string [1]\n// class: string [1]",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Object",
+        "text": "Object\n+ name: string [1]\n+ type: string [1]",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Object_type",
+        "text": "<enumeration>\nObject_type\nproduct\nmaterial\ntool",
+        "class": "Enumeration"
+      },
+      {
+        "id": "Agent",
+        "text": "Agent\n+ ability: integer [52]\n+ role: string [1..n]\n+ status: string [1]\n// type: agent_type [1]",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "agent_type",
+        "text": "<enumeration>\nagent_type\nhuman\nactuating\nsensing\nstorage\ntransport\nprinting",
+        "class": "Enumeration"
+      },
+      {
+        "id": "Printing agent",
+        "text": "Printing agent",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Actuating agent",
+        "text": "Actuating agent",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Sensing agent",
+        "text": "Sensing agent",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Human agent",
+        "text": "Human agent",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Transport agent",
+        "text": "Transport agent",
+        "class": "SimpleClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Business management",
+        "head": "Operations management",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Operations management",
+        "head": "Agent control",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent control",
+        "head": "Resource",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Resource",
+        "head": "Object",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent control",
+        "head": "Agent",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent",
+        "head": "Printing agent",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent",
+        "head": "Actuating agent",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent",
+        "head": "Sensing agent",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent",
+        "head": "Human agent",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Agent",
+        "head": "Transport agent",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "Business management",
+        "head": "Process management system",
+        "class": "Dependency",
+        "label": null
+      },
+      {
+        "tail": "Business management",
+        "head": "Orchestration system",
+        "class": "Dependency",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

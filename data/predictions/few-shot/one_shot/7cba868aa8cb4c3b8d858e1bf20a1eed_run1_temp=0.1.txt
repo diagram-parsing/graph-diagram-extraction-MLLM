@@ -1,0 +1,142 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "confirmarea_comenzi",
+        "text": "confirmarea comenzi",
+        "class": "StartEvent"
+      },
+      {
+        "id": "selectare_profil_client",
+        "text": "selectare profil client",
+        "class": "Task"
+      },
+      {
+        "id": "selectare_data_si_ora_livrari",
+        "text": "selectare data si ora livrari",
+        "class": "Task"
+      },
+      {
+        "id": "numarul_cartii_de_credit",
+        "text": "numarul cartii de credit",
+        "class": "Task"
+      },
+      {
+        "id": "trimitere_confirmare_client",
+        "text": "trimitere confirmare client",
+        "class": "Task"
+      },
+      {
+        "id": "verificare_comanda",
+        "text": "verificare comanda",
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "preluare_din_depozit_produse",
+        "text": "preluare din depozit produse",
+        "class": "Task"
+      },
+      {
+        "id": "preparare_produse",
+        "text": "preparare produse",
+        "class": "Task"
+      },
+      {
+        "id": "expediere_comanda_la_client",
+        "text": "expediere comanda la client",
+        "class": "Task"
+      },
+      {
+        "id": "trimitere_e-mail_de_feedback",
+        "text": "trimitere e-mail de feedback",
+        "class": "EndEvent"
+      },
+      {
+        "id": "client",
+        "text": null,
+        "class": "Lane"
+      },
+      {
+        "id": "company_de_catering",
+        "text": null,
+        "class": "Lane"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "confirmarea_comenzi",
+        "head": "selectare_profil_client",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "selectare_profil_client",
+        "head": "selectare_data_si_ora_livrari",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "selectare_data_si_ora_livrari",
+        "head": "numarul_cartii_de_credit",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "numarul_cartii_de_credit",
+        "head": "trimitere_confirmare_client",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "trimitere_confirmare_client",
+        "head": "verificare_comanda",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "verificare_comanda",
+        "head": "preluare_din_depozit_produse",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "verificare_comanda",
+        "head": "preparare_produse",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "preluare_din_depozit_produse",
+        "head": "expediere_comanda_la_client",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "preparare_produse",
+        "head": "expediere_comanda_la_client",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "expediere_comanda_la_client",
+        "head": "trimitere_e-mail_de_feedback",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": null,
+        "class": "Lane",
+        "nodes": ["confirmarea_comenzi", "selectare_profil_client", "selectare_data_si_ora_livrari", "numarul_cartii_de_credit"]
+      },
+      {
+        "name": null,
+        "class": "Lane",
+        "nodes": ["trimitere_confirmare_client", "verificare_comanda", "preluare_din_depozit_produse", "preparare_produse", "expediere_comanda_la_client", "trimitere_e-mail_de_feedback"]
+      }
+    ]
+  }
+]
+```

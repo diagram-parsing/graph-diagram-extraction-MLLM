@@ -1,0 +1,198 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "order_check",
+        "text": "order check",
+        "class": "Task"
+      },
+      {
+        "id": "gateway1",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Invio Notifica Rifuto",
+        "text": "Invio Notifica Rifuto",
+        "class": "Task"
+      },
+      {
+        "id": "Invio Richiesta Anticipo",
+        "text": "Invio Richiesta Anticipo",
+        "class": "Task"
+      },
+      {
+        "id": "Cancellazione ordine",
+        "text": "Cancellazione ordine",
+        "class": "Task"
+      },
+      {
+        "id": "Acquisizione parte da magazzino",
+        "text": "Acquisizione parte da magazzino",
+        "class": "Task"
+      },
+      {
+        "id": "Assemblaggio parti",
+        "text": "Assemblaggio parti",
+        "class": "Task"
+      },
+      {
+        "id": "Invio messaggio inizio produzione",
+        "text": "Invio messaggio inizio produzione",
+        "class": "Task"
+      },
+      {
+        "id": "Inizio produzione",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Inizio produzione timer",
+        "text": null,
+        "class": "IntermediateTimerEvent"
+      },
+      {
+        "id": "Inizio produzione gateway",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Inizio produzione end",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "Inizio pagamento",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Inizio pagamento timer",
+        "text": null,
+        "class": "IntermediateTimerEvent"
+      },
+      {
+        "id": "Inizio pagamento gateway",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Inizio pagamento end",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "order_check",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order_check",
+        "head": "gateway1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway1",
+        "head": "Invio Notifica Rifuto",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "gateway1",
+        "head": "Invio Richiesta Anticipo",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Invio Notifica Rifuto",
+        "head": "Inizio produzione",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Invio Richiesta Anticipo",
+        "head": "Cancellazione ordine",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Cancellazione ordine",
+        "head": "Inizio produzione",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio produzione",
+        "head": "Acquisizione parte da magazzino",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Acquisizione parte da magazzino",
+        "head": "Assemblaggio parti",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Assemblaggio parti",
+        "head": "Inizio messaggio inizio produzione",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio messaggio inizio produzione",
+        "head": "Inizio produzione timer",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio produzione timer",
+        "head": "Inizio produzione gateway",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio produzione gateway",
+        "head": "Inizio produzione end",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio produzione end",
+        "head": "Inizio pagamento",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio pagamento",
+        "head": "Inizio pagamento timer",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio pagamento timer",
+        "head": "Inizio pagamento gateway",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Inizio pagamento gateway",
+        "head": "Inizio pagamento end",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

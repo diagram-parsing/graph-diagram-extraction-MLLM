@@ -1,0 +1,143 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "claim_received",
+        "text": "claim received",
+        "class": "event"
+      },
+      {
+        "id": "register_claim",
+        "text": "register claim",
+        "class": "task"
+      },
+      {
+        "id": "examine_claim",
+        "text": "examine claim",
+        "class": "task"
+      },
+      {
+        "id": "write_settlement_recommendation",
+        "text": "write settlement recommendation",
+        "class": "task"
+      },
+      {
+        "id": "check_recommendation",
+        "text": "check recommendation",
+        "class": "task"
+      },
+      {
+        "id": "mark_claim",
+        "text": "mark claim",
+        "class": "task"
+      },
+      {
+        "id": "proceed_claim_handling_process",
+        "text": "proceed claim handling process",
+        "class": "task"
+      },
+      {
+        "id": "claim_finished",
+        "text": "claim finished",
+        "class": "event"
+      },
+      {
+        "id": "settlement_recommendation",
+        "text": "settlement recommendation",
+        "class": "dataObject"
+      },
+      {
+        "id": "customer",
+        "text": "Customer",
+        "class": "pool"
+      },
+      {
+        "id": "insurer_office",
+        "text": "insurer office",
+        "class": "pool"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "claim_received",
+        "head": "register_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "register_claim",
+        "head": "examine_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "examine_claim",
+        "head": "write_settlement_recommendation",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_settlement_recommendation",
+        "head": "check_recommendation",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_recommendation",
+        "head": "mark_claim",
+        "class": "sequenceFlow",
+        "label": "OK"
+      },
+      {
+        "tail": "mark_claim",
+        "head": "proceed_claim_handling_process",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "proceed_claim_handling_process",
+        "head": "claim_finished",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_recommendation",
+        "head": "settlement_recommendation",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "claim_received",
+        "head": "customer",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "customer",
+        "head": "register_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "claim_finished",
+        "head": "customer",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": null,
+        "class": "pool",
+        "nodes": ["customer"]
+      },
+      {
+        "name": null,
+        "class": "pool",
+        "nodes": ["insurer_office"]
+      }
+    ]
+  }
+]
+```

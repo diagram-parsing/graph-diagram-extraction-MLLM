@@ -1,0 +1,136 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "evaluate application",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "notify customer by e-mail",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "task_3",
+      "text": "create new bank account",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "Send welcome pack letter to customer",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "Send letter with bank card to customer",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "send letter with PIN number to customer",
+      "class": "task"
+    },
+    {
+      "id": "event_3",
+      "text": null,
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": "application rejected"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "application approved"
+    },
+    {
+      "tail": "task_2",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

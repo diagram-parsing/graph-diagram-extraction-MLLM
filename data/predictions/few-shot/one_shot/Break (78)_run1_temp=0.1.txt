@@ -1,0 +1,82 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": null
+      },
+      {
+        "id": "Check Software",
+        "text": "Check Software",
+        "class": null
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "class": null
+      },
+      {
+        "id": "Check all the needs",
+        "text": "Check all the needs",
+        "class": null
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "class": null
+      },
+      {
+        "id": "Good Needs",
+        "text": "Good Needs",
+        "class": null
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "Check Software",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Check Software",
+        "head": "B",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "Check Software",
+        "head": "Check all the needs",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "Check all the needs",
+        "head": "C",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "Check all the needs",
+        "head": "Good Needs",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "Good Needs",
+        "head": "End",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

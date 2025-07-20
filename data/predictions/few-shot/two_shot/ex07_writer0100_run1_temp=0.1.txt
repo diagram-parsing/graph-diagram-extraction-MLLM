@@ -1,0 +1,196 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "start doctor rating process",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "interview patients",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "file review and result of patient interview",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "create report",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "doctor rating finished",
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_4",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "messageEvent_1",
+      "text": "ask to review the work of doctor under rating",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent_2",
+      "text": "forward review",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent_3",
+      "text": "fill and send cheque",
+      "class": "messageEvent"
+    },
+    {
+      "id": "event_3",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "event_4",
+      "text": null,
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": "e. responds in time"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "messageEvent_2",
+      "class": "sequenceFlow",
+      "label": "review received"
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "messageEvent_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_3",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": "e. responds not in time"
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "class": "pool",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "task_2",
+        "task_3",
+        "event_2",
+        "exclusiveGateway_1",
+        "exclusiveGateway_2",
+        "exclusiveGateway_3",
+        "exclusiveGateway_4",
+        "messageEvent_1",
+        "messageEvent_2",
+        "messageEvent_3"
+      ]
+    },
+    {
+      "name": "expert",
+      "class": "pool",
+      "nodes": [
+        "event_3",
+        "event_4"
+      ]
+    }
+  ]
+}
+```

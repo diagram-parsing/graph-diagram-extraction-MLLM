@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Work on problem",
+      "id": "Work on problem",
+      "class": null
+    },
+    {
+      "text": "Assess their Situation and the",
+      "id": "Assess their Situation and the",
+      "class": null
+    },
+    {
+      "text": "Present Solution(s)",
+      "id": "Present Solution(s)",
+      "class": null
+    },
+    {
+      "text": "Sign up",
+      "id": "Sign up",
+      "class": null
+    },
+    {
+      "text": "Retain relationship",
+      "id": "Retain relationship",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Work on problem",
+      "label": null
+    },
+    {
+      "tail": "Work on problem",
+      "head": "Assess their Situation and the",
+      "label": null
+    },
+    {
+      "tail": "Assess their Situation and the",
+      "head": "Present Solution(s)",
+      "label": null
+    },
+    {
+      "tail": "Present Solution(s)",
+      "head": "Sign up",
+      "label": null
+    },
+    {
+      "tail": "Sign up",
+      "head": "Retain relationship",
+      "label": null
+    },
+    {
+      "tail": "Retain relationship",
+      "head": "Work on problem",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

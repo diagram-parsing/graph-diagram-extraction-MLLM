@@ -1,0 +1,171 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": "Selezione lingua",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_1",
+        "text": "Inserimento dati",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway_1",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Task_2",
+        "text": "Verifica dati",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway_2",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Task_3",
+        "text": "scelta posto a sedere",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway_3",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Task_4",
+        "text": "inserimento numero bagagli e verifica peso",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway_4",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Task_5",
+        "text": "paga supplemento",
+        "class": "Task"
+      },
+      {
+        "id": "Task_6",
+        "text": "riepilogo e stampa",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent_1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent_2",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent_3",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Task_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_1",
+        "head": "Exclusive_Eventbased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_1",
+        "head": "Task_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_1",
+        "head": "EndEvent_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_2",
+        "head": "Exclusive_Eventbased_Gateway_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_2",
+        "head": "Task_3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_2",
+        "head": "EndEvent_3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_3",
+        "head": "Exclusive_Eventbased_Gateway_3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_3",
+        "head": "Task_4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_3",
+        "head": "Exclusive_Eventbased_Gateway_4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_4",
+        "head": "Exclusive_Eventbased_Gateway_4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_4",
+        "head": "Task_5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_4",
+        "head": "Task_6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_5",
+        "head": "Exclusive_Eventbased_Gateway_4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_6",
+        "head": "EndEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

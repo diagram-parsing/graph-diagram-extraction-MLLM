@@ -1,0 +1,105 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": null,
+        "class": "terminator"
+      },
+      {
+        "id": "input_m",
+        "text": "Input m",
+        "class": "input"
+      },
+      {
+        "id": "initialize",
+        "text": "TC[1] = TC[2] = 1\ni = 3",
+        "class": "process"
+      },
+      {
+        "id": "decision",
+        "text": "i < m",
+        "class": "decision"
+      },
+      {
+        "id": "increment",
+        "text": "i ++",
+        "class": "process"
+      },
+      {
+        "id": "calculate",
+        "text": "TC[i] = TC[i-1] + TC[i-2]",
+        "class": "process"
+      },
+      {
+        "id": "output",
+        "text": "Output TC[n]",
+        "class": "output"
+      },
+      {
+        "id": "end",
+        "text": null,
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "input_m",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "input_m",
+        "head": "initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "initialize",
+        "head": "decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "decision",
+        "head": "increment",
+        "class": null,
+        "label": "N"
+      },
+      {
+        "tail": "decision",
+        "head": "calculate",
+        "class": null,
+        "label": "Y"
+      },
+      {
+        "tail": "increment",
+        "head": "decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "calculate",
+        "head": "decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "decision",
+        "head": "output",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "output",
+        "head": "end",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

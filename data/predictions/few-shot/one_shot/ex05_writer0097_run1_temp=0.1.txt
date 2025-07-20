@@ -1,0 +1,225 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Claim received",
+        "class": "task"
+      },
+      {
+        "id": "2",
+        "text": "Check completeness",
+        "class": "task"
+      },
+      {
+        "id": "3",
+        "text": "Register the Claim",
+        "class": "task"
+      },
+      {
+        "id": "4",
+        "text": "Claim checked",
+        "class": "event"
+      },
+      {
+        "id": "5",
+        "text": "Check insurance",
+        "class": "task"
+      },
+      {
+        "id": "6",
+        "text": "Perform assessment",
+        "class": "task"
+      },
+      {
+        "id": "7",
+        "text": "Phone garage",
+        "class": "task"
+      },
+      {
+        "id": "8",
+        "text": "Schedule payment",
+        "class": "task"
+      },
+      {
+        "id": "9",
+        "text": "Send letter",
+        "class": "task"
+      },
+      {
+        "id": "10",
+        "text": "Claim approved",
+        "class": "event"
+      },
+      {
+        "id": "11",
+        "text": "Claim rejected",
+        "class": "event"
+      },
+      {
+        "id": "12",
+        "text": "Process completed",
+        "class": "event"
+      },
+      {
+        "id": "13",
+        "text": "Negative",
+        "class": "event"
+      },
+      {
+        "id": "14",
+        "text": "Positive",
+        "class": "event"
+      },
+      {
+        "id": "15",
+        "text": "Authorization received",
+        "class": "event"
+      },
+      {
+        "id": "16",
+        "text": "Documentation",
+        "class": "dataObject"
+      },
+      {
+        "id": "17",
+        "text": "Claim with relevant documentation",
+        "class": "dataObject"
+      },
+      {
+        "id": "18",
+        "text": "Send letter",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": "sequenceFlow",
+        "label": "complete"
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": "sequenceFlow",
+        "label": "Ja"
+      },
+      {
+        "tail": "6",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": "Positive"
+      },
+      {
+        "tail": "7",
+        "head": "8",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "8",
+        "head": "9",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "9",
+        "head": "10",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "9",
+        "head": "11",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "11",
+        "head": "12",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "13",
+        "class": "sequenceFlow",
+        "label": "Nein"
+      },
+      {
+        "tail": "13",
+        "head": "14",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "14",
+        "head": "15",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "15",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "1",
+        "head": "16",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "16",
+        "head": "17",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "17",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Customer",
+        "class": "pool",
+        "nodes": ["1", "2", "3", "4", "16", "17"]
+      },
+      {
+        "name": "Car insurance department",
+        "class": "lane",
+        "nodes": ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+      },
+      {
+        "name": "Garage",
+        "class": "lane",
+        "nodes": ["7", "8"]
+      }
+    ]
+  }
+]
+```

@@ -1,0 +1,181 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "videoelezione",
+        "text": "videoelezione",
+        "attributes": [
+          "codice videoelezione",
+          "numero",
+          "data",
+          "ora inizio",
+          "docente",
+          "descrizione",
+          "caricata : boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "insegnamento",
+        "text": "insegnamento",
+        "attributes": [
+          "codice",
+          "nome"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "docente",
+        "text": "docente",
+        "attributes": [
+          "nome",
+          "cognome",
+          "matricola"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "studente",
+        "text": "studente",
+        "attributes": [
+          "nome : string",
+          "matricola : string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "materiale",
+        "text": "materiale",
+        "attributes": [
+          "descrizione"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "modulo",
+        "text": "modulo",
+        "attributes": [
+          "da : time",
+          "a : time",
+          "descrizione : string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "sottotitolo",
+        "text": "sottotitolo",
+        "attributes": [
+          "convalidato : boolean",
+          "scelta migliore : boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "segmento",
+        "text": "segmento",
+        "attributes": [
+          "tempo inizio : time",
+          "tempo fine : time",
+          "testo : string"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "videoelezione",
+        "head": "insegnamento",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "insegnamento",
+        "head": "docente",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "insegnamento",
+        "head": "studente",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "videoelezione",
+        "head": "modulo",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "modulo",
+        "head": "sottotitolo",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "modulo",
+        "head": "segmento",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "videoelezione",
+        "head": "materiale",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "*"
+      }
+    ],
+    "groups": [
+      {
+        "name": null,
+        "class": null,
+        "nodes": [
+          "videoelezione",
+          "insegnamento",
+          "docente"
+        ]
+      },
+      {
+        "name": null,
+        "class": null,
+        "nodes": [
+          "insegnamento",
+          "studente"
+        ]
+      },
+      {
+        "name": null,
+        "class": null,
+        "nodes": [
+          "modulo",
+          "sottotitolo",
+          "segmento"
+        ]
+      },
+      {
+        "name": null,
+        "class": null,
+        "nodes": [
+          "videoelezione",
+          "materiale"
+        ]
+      }
+    ]
+  }
+]
+```

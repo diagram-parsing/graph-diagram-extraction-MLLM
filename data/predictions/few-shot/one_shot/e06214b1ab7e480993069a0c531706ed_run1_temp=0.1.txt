@@ -1,0 +1,113 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Adulto",
+        "text": "Adulto",
+        "attributes": [
+          "Nome:string",
+          "Cognome:string",
+          "DataNascita:date",
+          "LuogoNascita:string",
+          "CodiceFiscale:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Bambino",
+        "text": "Bambino",
+        "attributes": [
+          "Nome:string",
+          "Cognome:string",
+          "DataNascita:date",
+          "LuogoNascita:string",
+          "CodiceFiscale:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vaccinazione",
+        "text": "Vaccinazione",
+        "attributes": [
+          "Tipolnocolazione:enum",
+          "DataEsecuzione:date",
+          "Effettuventuali:string",
+          "CertificatoPDF:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Esenzione",
+        "text": "Esenzione",
+        "attributes": [
+          "TipoVacino:string",
+          "Codice:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vaccino",
+        "text": "Vaccino",
+        "attributes": [
+          "Nome:string",
+          "EtàRichiesta:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Tipolnocolazione",
+        "text": "Tipolnocolazione",
+        "attributes": [
+          "Iniziale",
+          "Richiamo"
+        ],
+        "class": "Enumeration"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Adulto",
+        "head": "Vaccinazione",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bambino",
+        "head": "Vaccinazione",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bambino",
+        "head": "Esenzione",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vaccinazione",
+        "head": "Vaccino",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vaccinazione",
+        "head": "Tipolnocolazione",
+        "class": "Dependency",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

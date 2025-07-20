@@ -1,0 +1,350 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "StartEvent_1",
+      "text": null,
+      "class": "StartEvent"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": null,
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Task_1",
+      "text": "Alte Kunden befragen",
+      "class": "Task"
+    },
+    {
+      "id": "Task_2",
+      "text": "Aktuelle Kunden befragen",
+      "class": "Task"
+    },
+    {
+      "id": "Task_3",
+      "text": "Neue Kunden gewinnen",
+      "class": "Task"
+    },
+    {
+      "id": "Task_4",
+      "text": "Informationsmaterial und Referenzen senden",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": null,
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Task_5",
+      "text": "beim Kunden nachfragen",
+      "class": "Task"
+    },
+    {
+      "id": "Task_6",
+      "text": "Protokoll führen",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_3",
+      "text": null,
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Task_7",
+      "text": "Protokoll ablegen",
+      "class": "Task"
+    },
+    {
+      "id": "EndEvent_1",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_2",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_3",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_4",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_5",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_6",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_7",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_8",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_9",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_10",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_11",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_12",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_13",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_14",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_15",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_16",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_17",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_18",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_19",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_20",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_21",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_22",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_23",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_24",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_25",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_26",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_27",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_28",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_29",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_30",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_31",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_32",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_33",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_34",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_35",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_36",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_37",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_38",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_39",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_40",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_41",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_42",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_43",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_44",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_45",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_46",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_47",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_48",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_49",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_50",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_51",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_52",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_53",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_54",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_55",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_56",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_57",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_58",
+      "text": null,
+      "class": "EndEvent"
+    },
+    {
+      "id":

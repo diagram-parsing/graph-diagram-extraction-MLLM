@@ -1,0 +1,60 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "Input X, Y",
+        "text": "Input X, Y",
+        "class": "data"
+      },
+      {
+        "id": "X>=Y",
+        "text": "X>=Y",
+        "class": "decision"
+      },
+      {
+        "id": "Display Y",
+        "text": "Display Y",
+        "class": "data"
+      },
+      {
+        "id": "Display X",
+        "text": "Display X",
+        "class": "data"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Input X, Y",
+        "class": "flow",
+        "label": null
+      },
+      {
+        "tail": "Input X, Y",
+        "head": "X>=Y",
+        "class": "flow",
+        "label": null
+      },
+      {
+        "tail": "X>=Y",
+        "head": "Display Y",
+        "class": "flow",
+        "label": "0"
+      },
+      {
+        "tail": "X>=Y",
+        "head": "Display X",
+        "class": "flow",
+        "label": "1"
+      }
+    ],
+    "groups": []
+  }
+]
+```

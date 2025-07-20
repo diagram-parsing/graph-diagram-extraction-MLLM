@@ -1,0 +1,111 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start_event",
+        "text": "Start event",
+        "class": "event"
+      },
+      {
+        "id": "task_assess_risk",
+        "text": "assess risk",
+        "class": "task"
+      },
+      {
+        "id": "exclusive_gateway_risk_threshold",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_carry_out_advanced_risk_assessment",
+        "text": "Carry out advanced risk assessment",
+        "class": "task"
+      },
+      {
+        "id": "task_carry_out_simple_risk_assessment",
+        "text": "Carry out simple risk assessment",
+        "class": "task"
+      },
+      {
+        "id": "task_notify_customer",
+        "text": "notify customer",
+        "class": "task"
+      },
+      {
+        "id": "task_organize_disbursement",
+        "text": "Organize disbursement",
+        "class": "task"
+      },
+      {
+        "id": "end_event",
+        "text": "End event",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start_event",
+        "head": "task_assess_risk",
+        "class": "sequenceFlow",
+        "label": "request received"
+      },
+      {
+        "tail": "task_assess_risk",
+        "head": "exclusive_gateway_risk_threshold",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusive_gateway_risk_threshold",
+        "head": "task_carry_out_advanced_risk_assessment",
+        "class": "sequenceFlow",
+        "label": "Risk above threshold"
+      },
+      {
+        "tail": "exclusive_gateway_risk_threshold",
+        "head": "task_carry_out_simple_risk_assessment",
+        "class": "sequenceFlow",
+        "label": "Risk below threshold"
+      },
+      {
+        "tail": "task_carry_out_advanced_risk_assessment",
+        "head": "exclusive_gateway_risk_threshold",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_carry_out_simple_risk_assessment",
+        "head": "exclusive_gateway_risk_threshold",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusive_gateway_risk_threshold",
+        "head": "task_notify_customer",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusive_gateway_risk_threshold",
+        "head": "task_organize_disbursement",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_notify_customer",
+        "head": "end_event",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_organize_disbursement",
+        "head": "end_event",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

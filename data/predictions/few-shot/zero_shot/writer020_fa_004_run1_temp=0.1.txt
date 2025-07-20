@@ -1,0 +1,45 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "q0",
+        "text": "q0",
+        "class": "state"
+      },
+      {
+        "id": "q1",
+        "text": "q1",
+        "class": "state"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "q0",
+        "head": "q1",
+        "class": null,
+        "label": "0"
+      },
+      {
+        "tail": "q0",
+        "head": "q0",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "q1",
+        "head": "q1",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "q0",
+        "head": "q1",
+        "class": null,
+        "label": "8"
+      }
+    ],
+    "groups": []
+  }
+]
+```

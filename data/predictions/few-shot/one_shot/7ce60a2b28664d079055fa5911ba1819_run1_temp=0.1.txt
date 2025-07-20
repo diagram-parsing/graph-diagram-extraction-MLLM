@@ -1,0 +1,121 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Presidio",
+        "text": "Presidio",
+        "attributes": ["nome:String", "indirizzo:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Test",
+        "text": "Test",
+        "attributes": ["data:Date", "esto:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Viaggiatore",
+        "text": "Viaggiatore",
+        "attributes": ["nome:String", "nascita:Date", "email:String", "CF:String", "cellulare:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Indirizzo",
+        "text": "Indirizzo",
+        "attributes": ["via:String", "n civico:int", "citta:String", "provincia:String", "regione:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Ingresso",
+        "text": "Ingresso",
+        "attributes": ["arrivo previsto:DateTime", "mezzo:Enum"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "mezzo",
+        "text": "mezzo",
+        "attributes": ["bus:String", "treno:String", "aereo:String", "mezzo proprio:String"],
+        "class": "Enumeration"
+      },
+      {
+        "id": "Localita",
+        "text": "Localita",
+        "attributes": ["nome:String", "provincia (distretto):String", "regione (stato):String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Nazione",
+        "text": "Nazione",
+        "attributes": ["nome:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Rischio",
+        "text": "Rischio",
+        "attributes": ["inizio:Date", "fine:Date"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Presidio",
+        "head": "Viaggiatore",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Viaggiatore",
+        "head": "Indirizzo",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Viaggiatore",
+        "head": "Ingresso",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Ingresso",
+        "head": "Localita",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Localita",
+        "head": "Nazione",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Nazione",
+        "head": "Rischio",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Test",
+        "head": "Viaggiatore",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

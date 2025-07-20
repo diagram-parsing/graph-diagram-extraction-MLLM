@@ -1,0 +1,36 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Factura",
+      "text": "Factura",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Producto",
+      "text": "Producto",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Línea_factura",
+      "text": "Línea_factura",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Factura",
+      "head": "Línea_factura",
+      "class": "UndirectedAssociation",
+      "label": ""
+    },
+    {
+      "tail": "Línea_factura",
+      "head": "Producto",
+      "class": "UndirectedAssociation",
+      "label": ""
+    }
+  ],
+  "groups": []
+}]
+```

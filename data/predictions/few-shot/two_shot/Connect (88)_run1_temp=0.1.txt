@@ -1,0 +1,89 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "READ num1",
+      "id": "READ num1",
+      "class": null
+    },
+    {
+      "text": "I=1 bun = 1",
+      "id": "I=1 bun = 1",
+      "class": null
+    },
+    {
+      "text": "Is I < num1",
+      "id": "Is I < num1",
+      "class": null
+    },
+    {
+      "text": "I = I + 1",
+      "id": "I = I + 1",
+      "class": null
+    },
+    {
+      "text": "bun = bun*I",
+      "id": "bun = bun*I",
+      "class": null
+    },
+    {
+      "text": "PRINT bun",
+      "id": "PRINT bun",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "READ num1",
+      "label": null
+    },
+    {
+      "tail": "READ num1",
+      "head": "I=1 bun = 1",
+      "label": null
+    },
+    {
+      "tail": "I=1 bun = 1",
+      "head": "Is I < num1",
+      "label": null
+    },
+    {
+      "tail": "Is I < num1",
+      "head": "I = I + 1",
+      "label": "True"
+    },
+    {
+      "tail": "Is I < num1",
+      "head": "PRINT bun",
+      "label": "False"
+    },
+    {
+      "tail": "I = I + 1",
+      "head": "bun = bun*I",
+      "label": null
+    },
+    {
+      "tail": "bun = bun*I",
+      "head": "Is I < num1",
+      "label": null
+    },
+    {
+      "tail": "PRINT bun",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

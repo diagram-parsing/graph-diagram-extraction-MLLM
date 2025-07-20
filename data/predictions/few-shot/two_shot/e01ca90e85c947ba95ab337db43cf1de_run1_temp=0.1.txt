@@ -1,0 +1,123 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Chor buchen",
+      "text": "Chor buchen",
+      "class": "Task"
+    },
+    {
+      "id": "Auftrag",
+      "text": "Auftrag",
+      "class": "TextAnnotation"
+    },
+    {
+      "id": "Chormitglieder informieren",
+      "text": "Chormitglieder informieren",
+      "class": "Task"
+    },
+    {
+      "id": "Lieder auswählen",
+      "text": "Lieder auswählen",
+      "class": "Task"
+    },
+    {
+      "id": "Probenplanung",
+      "text": "Probenplanung",
+      "class": "Task"
+    },
+    {
+      "id": "Chorproben",
+      "text": "Chorproben",
+      "class": "Task"
+    },
+    {
+      "id": "Stellprobe",
+      "text": "Stellprobe",
+      "class": "Task"
+    },
+    {
+      "id": "Einsingen",
+      "text": "Einsingen",
+      "class": "Task"
+    },
+    {
+      "id": "Singen bei Konzert",
+      "text": "Singen bei Konzert",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Chor buchen",
+      "head": "Chormitglieder informieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Chormitglieder informieren",
+      "head": "Lieder auswählen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Lieder auswählen",
+      "head": "Probenplanung",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Probenplanung",
+      "head": "Chorproben",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Chorproben",
+      "head": "Stellprobe",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Stellprobe",
+      "head": "Einsingen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Einsingen",
+      "head": "Singen bei Konzert",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Veranstalter",
+      "class": "Lane",
+      "nodes": [
+        "Chor buchen"
+      ]
+    },
+    {
+      "name": "Chorleiter",
+      "class": "Lane",
+      "nodes": [
+        "Chormitglieder informieren",
+        "Lieder auswählen",
+        "Probenplanung",
+        "Chorproben"
+      ]
+    },
+    {
+      "name": "Chormitglied",
+      "class": "Lane",
+      "nodes": [
+        "Stellprobe",
+        "Einsingen",
+        "Singen bei Konzert"
+      ]
+    }
+  ]
+}
+```

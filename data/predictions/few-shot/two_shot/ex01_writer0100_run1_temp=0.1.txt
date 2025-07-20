@@ -1,0 +1,114 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "assess risk",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "carry out advanced risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "carry out simple risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "notify customer with result",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "organize disbursement",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": null,
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": "risk above threshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "risk below threshold"
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": "assessment completed"
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": "assessment completed"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

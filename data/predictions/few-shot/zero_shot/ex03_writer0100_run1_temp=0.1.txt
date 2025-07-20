@@ -1,0 +1,198 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "claimant",
+      "text": "Claimant",
+      "class": "event"
+    },
+    {
+      "id": "send_reject_message",
+      "text": "Send reject message",
+      "class": "task"
+    },
+    {
+      "id": "send_relevant_forms_simple",
+      "text": "Send relevant forms (simple)",
+      "class": "task"
+    },
+    {
+      "id": "send_relevant_forms_complex",
+      "text": "Send relevant forms (complex)",
+      "class": "task"
+    },
+    {
+      "id": "send_info_to_update_forms",
+      "text": "Send info to update forms",
+      "class": "task"
+    },
+    {
+      "id": "check_if_claimant_is_customer",
+      "text": "Check if claimant is customer",
+      "class": "task"
+    },
+    {
+      "id": "evaluate_severity_of_claim",
+      "text": "Evaluate severity of claim",
+      "class": "task"
+    },
+    {
+      "id": "check_completeness",
+      "text": "Check completeness",
+      "class": "task"
+    },
+    {
+      "id": "register_in_system",
+      "text": "Register in system",
+      "class": "task"
+    },
+    {
+      "id": "claim_rejected",
+      "text": "Claim rejected",
+      "class": "event"
+    },
+    {
+      "id": "forms_checked",
+      "text": "Forms checked",
+      "class": "event"
+    },
+    {
+      "id": "claim_process_finished",
+      "text": "Claim process finished",
+      "class": "event"
+    },
+    {
+      "id": "customer_db",
+      "text": "Customer DB",
+      "class": "dataStore"
+    },
+    {
+      "id": "management_system",
+      "text": "Management system",
+      "class": "dataStore"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "claimant",
+      "head": "send_reject_message",
+      "class": "sequenceFlow",
+      "label": "claim rejected message"
+    },
+    {
+      "tail": "send_reject_message",
+      "head": "claim_rejected",
+      "class": "sequenceFlow",
+      "label": "rejected"
+    },
+    {
+      "tail": "claimant",
+      "head": "send_relevant_forms_simple",
+      "class": "sequenceFlow",
+      "label": "forms"
+    },
+    {
+      "tail": "claimant",
+      "head": "send_relevant_forms_complex",
+      "class": "sequenceFlow",
+      "label": "forms"
+    },
+    {
+      "tail": "send_relevant_forms_simple",
+      "head": "send_info_to_update_forms",
+      "class": "sequenceFlow",
+      "label": "info to update forms"
+    },
+    {
+      "tail": "send_relevant_forms_complex",
+      "head": "send_info_to_update_forms",
+      "class": "sequenceFlow",
+      "label": "info to update forms"
+    },
+    {
+      "tail": "claimant",
+      "head": "check_if_claimant_is_customer",
+      "class": "sequenceFlow",
+      "label": "no customer"
+    },
+    {
+      "tail": "check_if_claimant_is_customer",
+      "head": "evaluate_severity_of_claim",
+      "class": "sequenceFlow",
+      "label": "claim checked"
+    },
+    {
+      "tail": "evaluate_severity_of_claim",
+      "head": "send_reject_message",
+      "class": "sequenceFlow",
+      "label": "simple claim"
+    },
+    {
+      "tail": "evaluate_severity_of_claim",
+      "head": "check_completeness",
+      "class": "sequenceFlow",
+      "label": "complex claim"
+    },
+    {
+      "tail": "check_completeness",
+      "head": "forms_checked",
+      "class": "sequenceFlow",
+      "label": "not complete"
+    },
+    {
+      "tail": "forms_checked",
+      "head": "register_in_system",
+      "class": "sequenceFlow",
+      "label": "complete"
+    },
+    {
+      "tail": "register_in_system",
+      "head": "claim_process_finished",
+      "class": "sequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "customer_db",
+      "head": "check_if_claimant_is_customer",
+      "class": "sequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "management_system",
+      "head": "register_in_system",
+      "class": "sequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "SAP System",
+      "class": "pool",
+      "nodes": [
+        "send_reject_message",
+        "send_relevant_forms_simple",
+        "send_relevant_forms_complex",
+        "send_info_to_update_forms"
+      ]
+    },
+    {
+      "name": "Insurance Office",
+      "class": "pool",
+      "nodes": [
+        "check_if_claimant_is_customer",
+        "evaluate_severity_of_claim",
+        "customer_db"
+      ]
+    },
+    {
+      "name": "Senior Claims",
+      "class": "pool",
+      "nodes": [
+        "check_completeness",
+        "management_system",
+        "register_in_system"
+      ]
+    }
+  ]
+}
+```

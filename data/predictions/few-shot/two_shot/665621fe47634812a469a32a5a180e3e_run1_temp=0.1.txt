@@ -1,0 +1,109 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Messaging",
+      "attributes": [
+        "- user",
+        "- instant message",
+        "- converse ()",
+        "- interact ()",
+        "- update ()",
+        "- exchange (Facebook)"
+      ],
+      "methods": null,
+      "id": "Messaging",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Chatbot (AI bot)",
+      "attributes": [
+        "- customer service",
+        "- information acquisition",
+        "- ask question ()",
+        "- receive help ()",
+        "- simulate ()",
+        "- inform ()"
+      ],
+      "methods": null,
+      "id": "Chatbot (AI bot)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Highly interactive social media (Facebook)",
+      "attributes": [
+        "- friend",
+        "- profile",
+        "- like ()",
+        "- comment ()",
+        "- post photo ()",
+        "- join group ()"
+      ],
+      "methods": null,
+      "id": "Highly interactive social media (Facebook)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mobile communication app (text message)",
+      "attributes": [
+        "- phone number",
+        "- contacts",
+        "- use emoji ()",
+        "- send image ()",
+        "- send gif ()"
+      ],
+      "methods": null,
+      "id": "Mobile communication app (text message)",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "App for collaboration (for staff) (Slack)",
+      "attributes": [
+        "- document",
+        "- channels",
+        "- collaborate ()",
+        "- share documents ()",
+        "- add thread ()"
+      ],
+      "methods": null,
+      "id": "App for collaboration (for staff) (Slack)",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Chatbot (AI bot)",
+      "head": "Messaging",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Highly interactive social media (Facebook)",
+      "head": "Messaging",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Mobile communication app (text message)",
+      "head": "Messaging",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "App for collaboration (for staff) (Slack)",
+      "head": "Messaging",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    }
+  ],
+  "groups": []
+}
+```

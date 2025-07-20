@@ -1,0 +1,88 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "null"
+      },
+      {
+        "id": "Create a swarm of particles",
+        "text": "Create a swarm of particles",
+        "class": "null"
+      },
+      {
+        "id": "Calculate each particle's fitness",
+        "text": "Calculate each particle's fitness",
+        "class": "null"
+      },
+      {
+        "id": "Determine best value",
+        "text": "Determine best value",
+        "class": "null"
+      },
+      {
+        "id": "Update Value",
+        "text": "Update Value",
+        "class": "null"
+      },
+      {
+        "id": "Termination",
+        "text": "Termination",
+        "class": "null"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "null"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Create a swarm of particles",
+        "class": "null",
+        "label": null
+      },
+      {
+        "tail": "Create a swarm of particles",
+        "head": "Calculate each particle's fitness",
+        "class": "null",
+        "label": null
+      },
+      {
+        "tail": "Calculate each particle's fitness",
+        "head": "Determine best value",
+        "class": "null",
+        "label": null
+      },
+      {
+        "tail": "Determine best value",
+        "head": "Update Value",
+        "class": "null",
+        "label": null
+      },
+      {
+        "tail": "Update Value",
+        "head": "Termination",
+        "class": "null",
+        "label": null
+      },
+      {
+        "tail": "Termination",
+        "head": "Calculate each particle's fitness",
+        "class": "null",
+        "label": "No"
+      },
+      {
+        "tail": "Termination",
+        "head": "End",
+        "class": "null",
+        "label": "Yes"
+      }
+    ],
+    "groups": []
+  }
+]
+```

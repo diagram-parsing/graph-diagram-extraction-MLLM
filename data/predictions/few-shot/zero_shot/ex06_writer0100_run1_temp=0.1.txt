@@ -1,0 +1,172 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "incoming_order",
+        "text": "incoming order",
+        "class": "event"
+      },
+      {
+        "id": "Receive_order_by_Liefvando",
+        "text": "Receive order by Liefvando",
+        "class": "task"
+      },
+      {
+        "id": "Confirm_order",
+        "text": "Confirm order",
+        "class": "task"
+      },
+      {
+        "id": "Receive_order_by_website",
+        "text": "Receive order by website",
+        "class": "task"
+      },
+      {
+        "id": "Take_order_by_phone",
+        "text": "Take order by phone",
+        "class": "task"
+      },
+      {
+        "id": "Write_down_order_note",
+        "text": "Write down order note",
+        "class": "task"
+      },
+      {
+        "id": "print_out_order",
+        "text": "print out order",
+        "class": "task"
+      },
+      {
+        "id": "Attach_order_note_to_pinboard",
+        "text": "Attach order note to pinboard",
+        "class": "task"
+      },
+      {
+        "id": "order_process_finished",
+        "text": "order process finished",
+        "class": "event"
+      },
+      {
+        "id": "order_Liefvando",
+        "text": "order [Liefvando]",
+        "class": "dataObject"
+      },
+      {
+        "id": "confirmed_order_Liefvando",
+        "text": "confirmed order [Liefvando]",
+        "class": "dataObject"
+      },
+      {
+        "id": "order_website",
+        "text": "order [website]",
+        "class": "dataObject"
+      },
+      {
+        "id": "order_note",
+        "text": "order note",
+        "class": "dataObject"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "incoming_order",
+        "head": "Receive_order_by_Liefvando",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Receive_order_by_Liefvando",
+        "head": "Confirm_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Confirm_order",
+        "head": "order_Liefvando",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "Confirm_order",
+        "head": "confirmed_order_Liefvando",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "Confirm_order",
+        "head": "Receive_order_by_website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Receive_order_by_website",
+        "head": "order_website",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "Receive_order_by_website",
+        "head": "Write_down_order_note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Write_down_order_note",
+        "head": "order_note",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "Write_down_order_note",
+        "head": "print_out_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "print_out_order",
+        "head": "order_note",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "print_out_order",
+        "head": "Attach_order_note_to_pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Attach_order_note_to_pinboard",
+        "head": "order_note",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "Attach_order_note_to_pinboard",
+        "head": "order_process_finished",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "incoming_order",
+        "head": "Receive_order_by_website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "incoming_order",
+        "head": "Take_order_by_phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Take_order_by_phone",
+        "head": "Write_down_order_note",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

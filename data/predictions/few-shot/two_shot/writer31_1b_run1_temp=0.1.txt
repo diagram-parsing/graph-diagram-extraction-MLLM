@@ -1,0 +1,88 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "begin",
+      "id": "begin",
+      "class": "terminator"
+    },
+    {
+      "text": "Input X",
+      "id": "Input X",
+      "class": "data"
+    },
+    {
+      "text": "n = 1\nR = 1",
+      "id": "n = 1\nR = 1",
+      "class": "process"
+    },
+    {
+      "text": "R = R * n",
+      "id": "R = R * n",
+      "class": "process"
+    },
+    {
+      "text": "n = n + 1",
+      "id": "n = n + 1",
+      "class": "process"
+    },
+    {
+      "text": "n = X",
+      "id": "n = X",
+      "class": "decision"
+    },
+    {
+      "text": "Disp R",
+      "id": "Disp R",
+      "class": "data"
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "begin",
+      "head": "Input X",
+      "label": null
+    },
+    {
+      "tail": "Input X",
+      "head": "n = 1\nR = 1",
+      "label": null
+    },
+    {
+      "tail": "n = 1\nR = 1",
+      "head": "R = R * n",
+      "label": null
+    },
+    {
+      "tail": "R = R * n",
+      "head": "n = X",
+      "label": null
+    },
+    {
+      "tail": "n = X",
+      "head": "Disp R",
+      "label": "Y"
+    },
+    {
+      "tail": "Disp R",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "n = X",
+      "head": "n = n + 1",
+      "label": "N"
+    },
+    {
+      "tail": "n = n + 1",
+      "head": "R = R * n",
+      "label": null
+    }
+  ]
+}
+```

@@ -1,0 +1,139 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Create claim",
+        "text": "Create claim",
+        "class": "Task"
+      },
+      {
+        "id": "Record claim",
+        "text": "Record claim",
+        "class": "Task"
+      },
+      {
+        "id": "Decide on claim",
+        "text": "Decide on claim",
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Offer benefit",
+        "text": "Offer benefit",
+        "class": "Task"
+      },
+      {
+        "id": "Prepare claim discharge",
+        "text": "Prepare claim discharge",
+        "class": "Task"
+      },
+      {
+        "id": "Record benefit payment",
+        "text": "Record benefit payment",
+        "class": "Task"
+      },
+      {
+        "id": "Close claim",
+        "text": "Close claim",
+        "class": "Task"
+      },
+      {
+        "id": "Reject claim",
+        "text": "Reject claim",
+        "class": "Task"
+      },
+      {
+        "id": "Review claim rejection",
+        "text": "Review claim rejection",
+        "class": "Task"
+      },
+      {
+        "id": "Operate outgoing payment",
+        "text": "Operate outgoing payment",
+        "class": "Task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Create claim",
+        "head": "Record claim",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Record claim",
+        "head": "Decide on claim",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Decide on claim",
+        "head": "Offer benefit",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Decide on claim",
+        "head": "Reject claim",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Offer benefit",
+        "head": "Prepare claim discharge",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Prepare claim discharge",
+        "head": "Record benefit payment",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Record benefit payment",
+        "head": "Close claim",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Reject claim",
+        "head": "Review claim rejection",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Review claim rejection",
+        "head": "Operate outgoing payment",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Operate outgoing payment",
+        "head": "Close claim",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Close claim",
+        "head": "EndEvent",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Create claim",
+        "head": "Exclusive_Eventbased_Gateway",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway",
+        "head": "EndEvent",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,136 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": null
+    },
+    {
+      "id": "Initialize Variable",
+      "text": "Initialize Variable",
+      "class": null
+    },
+    {
+      "id": "Enter Variables",
+      "text": "Enter Variables",
+      "class": null
+    },
+    {
+      "id": "HourWorked > MaxNoOverTime ?",
+      "text": "HourWorked > MaxNoOverTime ?",
+      "class": null
+    },
+    {
+      "id": "GrossPay = HoursWorked * HourRate",
+      "text": "GrossPay = HoursWorked * HourRate",
+      "class": null
+    },
+    {
+      "id": "Update Grosspay",
+      "text": "Update Grosspay",
+      "class": null
+    },
+    {
+      "id": "GrossPay > MaxDue ?",
+      "text": "GrossPay > MaxDue ?",
+      "class": null
+    },
+    {
+      "id": "NetPay = GrossPay",
+      "text": "NetPay = GrossPay",
+      "class": null
+    },
+    {
+      "id": "Update Netpay",
+      "text": "Update Netpay",
+      "class": null
+    },
+    {
+      "id": "Display GrossPay, NetPay",
+      "text": "Display GrossPay, NetPay",
+      "class": null
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialize Variable",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Initialize Variable",
+      "head": "Enter Variables",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Enter Variables",
+      "head": "HourWorked > MaxNoOverTime ?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "HourWorked > MaxNoOverTime ?",
+      "head": "GrossPay = HoursWorked * HourRate",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "HourWorked > MaxNoOverTime ?",
+      "head": "Update Grosspay",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "GrossPay = HoursWorked * HourRate",
+      "head": "GrossPay > MaxDue ?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Update Grosspay",
+      "head": "GrossPay > MaxDue ?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "GrossPay > MaxDue ?",
+      "head": "NetPay = GrossPay",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "GrossPay > MaxDue ?",
+      "head": "Update Netpay",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "NetPay = GrossPay",
+      "head": "Display GrossPay, NetPay",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Update Netpay",
+      "head": "Display GrossPay, NetPay",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Display GrossPay, NetPay",
+      "head": "Stop",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

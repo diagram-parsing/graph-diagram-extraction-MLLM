@@ -1,0 +1,89 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Initialize AG",
+      "id": "Initialize AG",
+      "class": null
+    },
+    {
+      "text": "Generate initial population",
+      "id": "Generate initial population",
+      "class": null
+    },
+    {
+      "text": "Selection based on the fitness values",
+      "id": "Selection based on the fitness values",
+      "class": null
+    },
+    {
+      "text": "Connection",
+      "id": "Connection",
+      "class": null
+    },
+    {
+      "text": "Mutation",
+      "id": "Mutation",
+      "class": null
+    },
+    {
+      "text": "Implementation of the fitness function",
+      "id": "Implementation of the fitness function",
+      "class": null
+    },
+    {
+      "text": "update fitness value",
+      "id": "update fitness value",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initialize AG",
+      "head": "Generate initial population",
+      "label": null
+    },
+    {
+      "tail": "Generate initial population",
+      "head": "Selection based on the fitness values",
+      "label": null
+    },
+    {
+      "tail": "Selection based on the fitness values",
+      "head": "Connection",
+      "label": null
+    },
+    {
+      "tail": "Connection",
+      "head": "Mutation",
+      "label": null
+    },
+    {
+      "tail": "Mutation",
+      "head": "Implementation of the fitness function",
+      "label": null
+    },
+    {
+      "tail": "Implementation of the fitness function",
+      "head": "update fitness value",
+      "label": null
+    },
+    {
+      "tail": "update fitness value",
+      "head": "Mutation",
+      "label": "No"
+    },
+    {
+      "tail": "update fitness value",
+      "head": "Finish",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}
+```

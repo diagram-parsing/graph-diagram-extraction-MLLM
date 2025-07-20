@@ -1,0 +1,125 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "startEvent",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "messageEvent1",
+      "text": "Order by Letter received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent2",
+      "text": "Order by Website received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent3",
+      "text": "Order by Phone Taken",
+      "class": "messageEvent"
+    },
+    {
+      "id": "task1",
+      "text": "Confirm Order",
+      "class": "task"
+    },
+    {
+      "id": "task2",
+      "text": "Print out Order",
+      "class": "task"
+    },
+    {
+      "id": "task3",
+      "text": "Write down Order note",
+      "class": "task"
+    },
+    {
+      "id": "task4",
+      "text": "Attach ordernote to pinboard",
+      "class": "task"
+    },
+    {
+      "id": "endEvent",
+      "text": null,
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "startEvent",
+      "head": "exclusiveGateway",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway",
+      "head": "messageEvent1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway",
+      "head": "messageEvent2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway",
+      "head": "messageEvent3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent1",
+      "head": "task1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task1",
+      "head": "task2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task2",
+      "head": "task4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task4",
+      "head": "endEvent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent2",
+      "head": "task2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent3",
+      "head": "task3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task3",
+      "head": "task2",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

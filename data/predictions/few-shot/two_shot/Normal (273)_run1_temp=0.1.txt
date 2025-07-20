@@ -1,0 +1,99 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Pour Cold Water",
+      "id": "Pour Cold Water",
+      "class": null
+    },
+    {
+      "text": "Set Water Reached?",
+      "id": "Set Water Reached?",
+      "class": null
+    },
+    {
+      "text": "Pour Hot Water",
+      "id": "Pour Hot Water",
+      "class": null
+    },
+    {
+      "text": "Check Water Temperature",
+      "id": "Check Water Temperature",
+      "class": null
+    },
+    {
+      "text": "Washing Process (Pump ON)",
+      "id": "Washing Process (Pump ON)",
+      "class": null
+    },
+    {
+      "text": "Check Time Limit",
+      "id": "Check Time Limit",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Pour Cold Water",
+      "label": null
+    },
+    {
+      "tail": "Pour Cold Water",
+      "head": "Set Water Reached?",
+      "label": null
+    },
+    {
+      "tail": "Set Water Reached?",
+      "head": "Pour Hot Water",
+      "label": "Yes"
+    },
+    {
+      "tail": "Set Water Reached?",
+      "head": "Pour Cold Water",
+      "label": "No"
+    },
+    {
+      "tail": "Pour Hot Water",
+      "head": "Check Water Temperature",
+      "label": null
+    },
+    {
+      "tail": "Check Water Temperature",
+      "head": "Washing Process (Pump ON)",
+      "label": "Yes"
+    },
+    {
+      "tail": "Check Water Temperature",
+      "head": "Pour Hot Water",
+      "label": "No"
+    },
+    {
+      "tail": "Washing Process (Pump ON)",
+      "head": "Check Time Limit",
+      "label": null
+    },
+    {
+      "tail": "Check Time Limit",
+      "head": "End",
+      "label": "Yes"
+    },
+    {
+      "tail": "Check Time Limit",
+      "head": "Washing Process (Pump ON)",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

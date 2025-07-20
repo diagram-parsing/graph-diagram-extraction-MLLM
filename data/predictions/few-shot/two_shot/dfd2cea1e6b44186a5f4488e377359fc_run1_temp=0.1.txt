@@ -1,0 +1,97 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "A",
+      "id": "A",
+      "class": "Task"
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": "Task"
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_1",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "",
+      "id": "AND_Gateway_2",
+      "class": "AND_Gateway"
+    },
+    {
+      "text": "E",
+      "id": "E",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "A",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A",
+      "head": "AND_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "B",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_1",
+      "head": "C",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "B",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "C",
+      "head": "AND_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "AND_Gateway_2",
+      "head": "E",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "E",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

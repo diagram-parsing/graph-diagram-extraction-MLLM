@@ -1,0 +1,170 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "order",
+        "text": "order",
+        "class": "dataObject"
+      },
+      {
+        "id": "received_order",
+        "text": "received order",
+        "class": "dataObject"
+      },
+      {
+        "id": "checked_order",
+        "text": "checked order",
+        "class": "dataObject"
+      },
+      {
+        "id": "received_by_Lieferrande",
+        "text": "received by Lieferrande",
+        "class": "task"
+      },
+      {
+        "id": "confirm_order",
+        "text": "confirm order",
+        "class": "task"
+      },
+      {
+        "id": "received_by_website",
+        "text": "received by website",
+        "class": "task"
+      },
+      {
+        "id": "print_out_order",
+        "text": "print out order",
+        "class": "task"
+      },
+      {
+        "id": "received_by_phone",
+        "text": "received by phone",
+        "class": "task"
+      },
+      {
+        "id": "write_down_order_note",
+        "text": "write down order note",
+        "class": "task"
+      },
+      {
+        "id": "printed_order",
+        "text": "printed order",
+        "class": "dataObject"
+      },
+      {
+        "id": "written_order",
+        "text": "written order",
+        "class": "dataObject"
+      },
+      {
+        "id": "attach_order_note_to_pinboard",
+        "text": "attach order note to pinboard",
+        "class": "task"
+      },
+      {
+        "id": "pinboard",
+        "text": "pinboard",
+        "class": "dataStore"
+      },
+      {
+        "id": "pinned_order",
+        "text": "pinned order",
+        "class": "event"
+      },
+      {
+        "id": "check_receivement",
+        "text": "check receivement",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "order",
+        "head": "received_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "received_order",
+        "head": "received_by_Lieferrande",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "received_by_Lieferrande",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm_order",
+        "head": "received_by_website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "received_by_website",
+        "head": "print_out_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "print_out_order",
+        "head": "printed_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "received_order",
+        "head": "received_by_phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "received_by_phone",
+        "head": "write_down_order_note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_down_order_note",
+        "head": "written_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "written_order",
+        "head": "attach_order_note_to_pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "attach_order_note_to_pinboard",
+        "head": "pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "pinboard",
+        "head": "pinned_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "received_order",
+        "head": "check_receivement",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_receivement",
+        "head": "checked_order",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

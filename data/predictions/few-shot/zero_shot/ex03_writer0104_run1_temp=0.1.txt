@@ -1,0 +1,229 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "Claim is received",
+      "class": "task"
+    },
+    {
+      "id": "n2",
+      "text": "check if claim is insured",
+      "class": "task"
+    },
+    {
+      "id": "n3",
+      "text": "not insured",
+      "class": "event"
+    },
+    {
+      "id": "n4",
+      "text": "inform claimant",
+      "class": "task"
+    },
+    {
+      "id": "n5",
+      "text": "check for completeness",
+      "class": "task"
+    },
+    {
+      "id": "n6",
+      "text": "incomplete",
+      "class": "event"
+    },
+    {
+      "id": "n7",
+      "text": "inform claimant to update",
+      "class": "task"
+    },
+    {
+      "id": "n8",
+      "text": "complete",
+      "class": "event"
+    },
+    {
+      "id": "n9",
+      "text": "register claim",
+      "class": "task"
+    },
+    {
+      "id": "n10",
+      "text": "evaluate severity of claim",
+      "class": "task"
+    },
+    {
+      "id": "n11",
+      "text": "sent relevant forms to",
+      "class": "task"
+    },
+    {
+      "id": "n12",
+      "text": "SAP system",
+      "class": "dataStore"
+    },
+    {
+      "id": "n13",
+      "text": "claims management system",
+      "class": "dataStore"
+    },
+    {
+      "id": "n14",
+      "text": "filled forms",
+      "class": "dataObject"
+    },
+    {
+      "id": "n15",
+      "text": "relevant forms",
+      "class": "dataObject"
+    },
+    {
+      "id": "n16",
+      "text": "updated forms",
+      "class": "dataObject"
+    },
+    {
+      "id": "n17",
+      "text": "checked claim",
+      "class": "task"
+    },
+    {
+      "id": "n18",
+      "text": "notification",
+      "class": "messageEvent"
+    },
+    {
+      "id": "n19",
+      "text": "update message",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "n1",
+      "head": "n2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n2",
+      "head": "n3",
+      "class": "sequenceFlow",
+      "label": "not insured"
+    },
+    {
+      "tail": "n2",
+      "head": "n4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n4",
+      "head": "n12",
+      "class": "dataAssociation",
+      "label": "notification"
+    },
+    {
+      "tail": "n4",
+      "head": "n14",
+      "class": "dataAssociation",
+      "label": "relevant forms"
+    },
+    {
+      "tail": "n4",
+      "head": "n15",
+      "class": "dataAssociation",
+      "label": "filled forms"
+    },
+    {
+      "tail": "n4",
+      "head": "n5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n5",
+      "head": "n6",
+      "class": "sequenceFlow",
+      "label": "incomplete"
+    },
+    {
+      "tail": "n6",
+      "head": "n7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n7",
+      "head": "n12",
+      "class": "dataAssociation",
+      "label": "inform claimant to update"
+    },
+    {
+      "tail": "n7",
+      "head": "n16",
+      "class": "dataAssociation",
+      "label": "updated forms"
+    },
+    {
+      "tail": "n5",
+      "head": "n8",
+      "class": "sequenceFlow",
+      "label": "complete"
+    },
+    {
+      "tail": "n8",
+      "head": "n9",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n9",
+      "head": "n13",
+      "class": "dataAssociation",
+      "label": "register claim"
+    },
+    {
+      "tail": "n9",
+      "head": "n19",
+      "class": "messageFlow",
+      "label": "update message"
+    },
+    {
+      "tail": "n3",
+      "head": "n17",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n17",
+      "head": "n10",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n10",
+      "head": "n11",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "n11",
+      "head": "n12",
+      "class": "dataAssociation",
+      "label": "sent relevant forms to"
+    }
+  ],
+  "groups": [
+    {
+      "name": "customer",
+      "class": "pool",
+      "nodes": ["n14", "n15", "n16", "n18", "n19"]
+    },
+    {
+      "name": "insurer",
+      "class": "pool",
+      "nodes": ["n1", "n2", "n3", "n4", "n5", "n6", "n7", "n8", "n9", "n10", "n11", "n12", "n13", "n17"]
+    }
+  ]
+}
+```

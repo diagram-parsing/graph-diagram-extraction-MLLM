@@ -1,0 +1,116 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Start",
+        "class": "terminator"
+      },
+      {
+        "id": "2",
+        "text": "Process 1",
+        "class": "process"
+      },
+      {
+        "id": "3",
+        "text": "Process 2",
+        "class": "process"
+      },
+      {
+        "id": "4",
+        "text": "Decision 1",
+        "class": "decision"
+      },
+      {
+        "id": "5",
+        "text": "Process 3",
+        "class": "process"
+      },
+      {
+        "id": "6",
+        "text": "Process 4",
+        "class": "process"
+      },
+      {
+        "id": "7",
+        "text": "Decision 2",
+        "class": "decision"
+      },
+      {
+        "id": "8",
+        "text": "Process 5",
+        "class": "process"
+      },
+      {
+        "id": "9",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "4",
+        "head": "6",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "5",
+        "head": "7",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "7",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "8",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "7",
+        "head": "3",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "8",
+        "head": "9",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

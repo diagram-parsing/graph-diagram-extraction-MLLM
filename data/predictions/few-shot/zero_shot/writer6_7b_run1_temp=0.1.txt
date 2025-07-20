@@ -1,0 +1,94 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": "begin",
+        "class": "terminator"
+      },
+      {
+        "id": "initialize",
+        "text": "i = 0\nchanged = false",
+        "class": "process"
+      },
+      {
+        "id": "increment",
+        "text": "i = i + 1",
+        "class": "process"
+      },
+      {
+        "id": "length_check",
+        "text": "k = length(T) - 2",
+        "class": "decision"
+      },
+      {
+        "id": "swap",
+        "text": "swap(T[i], T[i+1])",
+        "class": "process"
+      },
+      {
+        "id": "changed_check",
+        "text": "changed?",
+        "class": "decision"
+      },
+      {
+        "id": "stop",
+        "text": "stop",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "initialize",
+        "head": "increment",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "increment",
+        "head": "length_check",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "length_check",
+        "head": "swap",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "length_check",
+        "head": "changed_check",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "swap",
+        "head": "initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "changed_check",
+        "head": "stop",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "changed_check",
+        "head": "initialize",
+        "class": null,
+        "label": "true"
+      }
+    ],
+    "groups": []
+  }
+]
+```

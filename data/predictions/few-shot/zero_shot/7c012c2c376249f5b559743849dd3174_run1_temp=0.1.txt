@@ -1,0 +1,109 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "ricercatore",
+        "text": "ricercatore",
+        "attributes": ["OrCID:String", "nome:String", "cognome:String", "DataNascita:Date", "Affiliazione:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "articolo",
+        "text": "articolo",
+        "attributes": ["titolo:String", "abstract:String", "corpo:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "allegato",
+        "text": "allegato",
+        "attributes": ["ID:String", "nome:String", "url:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "review",
+        "text": "review",
+        "attributes": ["commento:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "keyword",
+        "text": "keyword",
+        "attributes": ["codice:String", "nome:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "rivista",
+        "text": "rivista",
+        "attributes": ["nome:String", "settore:String", "publisher:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "editorDi",
+        "text": "editorDi",
+        "attributes": ["verdetto:String"],
+        "class": "SimpleClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "ricercatore",
+        "head": "articolo",
+        "class": "Composition",
+        "label": "comunemente un articolo può avere più autori ma nel testo è usato sempre il singolare (1)",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "articolo",
+        "head": "allegato",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "articolo",
+        "head": "review",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "articolo",
+        "head": "keyword",
+        "class": "Composition",
+        "label": "ogni articolo deve avere almeno una keyword",
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "articolo",
+        "head": "rivista",
+        "class": "Composition",
+        "label": "ogni articolo è appositamente scritto per una rivista in particolare",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "ricercatore",
+        "head": "editorDi",
+        "class": "Composition",
+        "label": "non impedisce ad un ricercatore di essere editor del suo stesso articolo",
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "editorDi",
+        "head": "rivista",
+        "class": "Composition",
+        "label": "collegamento diretto tra editor e rivista per evitare di trarre i nomi dall'elenco degli articoli assegnati (dati ripetuti e ad esempio un ricercatore e editor di 50 articoli diversi)",
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      }
+    ],
+    "groups": []
+  }
+]
+```

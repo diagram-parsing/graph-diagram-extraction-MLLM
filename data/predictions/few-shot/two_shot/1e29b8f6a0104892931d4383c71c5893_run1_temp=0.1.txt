@@ -1,0 +1,300 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "customer",
+      "attributes": [
+        "- customer ID",
+        "- Name",
+        "- address",
+        "- phone",
+        "- e-mail"
+      ],
+      "methods": [
+        "+ register ()",
+        "+ update personal profile ()",
+        "+ search catalog ()",
+        "+ purchase product ()"
+      ],
+      "id": "customer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "user",
+      "attributes": [
+        "- login ID",
+        "- Password"
+      ],
+      "methods": [
+        "+ login ()",
+        "+ logout ()"
+      ],
+      "id": "user",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "payment",
+      "attributes": [
+        "- payment type",
+        "- payment option",
+        "- pay date",
+        "- amount"
+      ],
+      "methods": [
+        "+ choose ()"
+      ],
+      "id": "payment",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "payment detail",
+      "attributes": [
+        "- credit card detail",
+        "- bank account detail",
+        "- paid date",
+        "- amount"
+      ],
+      "methods": [
+        "+ display ()"
+      ],
+      "id": "payment detail",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "order",
+      "attributes": [
+        "- order create date",
+        "- product No.",
+        "- quantity",
+        "- customer ID"
+      ],
+      "methods": [
+        "+ add product ()",
+        "+ remove ()",
+        "+ cancel ()",
+        "+ update ()"
+      ],
+      "id": "order",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "order detail",
+      "attributes": [
+        "- order ID",
+        "- order status",
+        "- order date",
+        "- subtotal price"
+      ],
+      "methods": [
+        "+ display ()"
+      ],
+      "id": "order detail",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "product",
+      "attributes": [
+        "- product No.",
+        "- Name",
+        "- price",
+        "- description",
+        "- stock"
+      ],
+      "methods": [
+        "+ add product ()",
+        "+ update ()",
+        "+ remove ()",
+        "+ display ()"
+      ],
+      "id": "product",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "catalog",
+      "attributes": [
+        "- product categories",
+        "- product Name"
+      ],
+      "methods": [
+        "+ update ()",
+        "+ search ()",
+        "+ display ()"
+      ],
+      "id": "catalog",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "feedback",
+      "attributes": [
+        "- product No.",
+        "- date create",
+        "- rating value",
+        "- customer ID",
+        "- comment"
+      ],
+      "methods": [
+        "+ add feedback ()",
+        "+ delete ()",
+        "+ display ()"
+      ],
+      "id": "feedback",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "shipping",
+      "attributes": [
+        "- shipping type",
+        "- cost",
+        "- shipping Ref No.",
+        "- shipping address"
+      ],
+      "methods": [
+        "+ choose ()"
+      ],
+      "id": "shipping",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "shipping detail",
+      "attributes": [
+        "- shipping Ref No.",
+        "- receiver Name",
+        "- receiver address",
+        "- receiver date",
+        "- status"
+      ],
+      "methods": [
+        "+ display ()"
+      ],
+      "id": "shipping detail",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "staff",
+      "attributes": [
+        "- staff No.",
+        "- Name"
+      ],
+      "methods": [
+        "+ add ()",
+        "+ remove ()"
+      ],
+      "id": "staff",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "customer service",
+      "attributes": [
+        "- FAQ database",
+        "- online chat",
+        "- phone call",
+        "- chatbot"
+      ],
+      "methods": [
+        "+ use ()"
+      ],
+      "id": "customer service",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "customer",
+      "head": "user",
+      "class": "Realization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "customer",
+      "head": "order",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "order",
+      "head": "payment",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "payment",
+      "head": "payment detail",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "order",
+      "head": "order detail",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "order",
+      "head": "product",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "product",
+      "head": "catalog",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "product",
+      "head": "feedback",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "order",
+      "head": "shipping",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "shipping",
+      "head": "shipping detail",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "staff",
+      "head": "product",
+      "class": "Dependency",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "customer service",
+      "head": "customer",
+      "class": "Dependency",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    }
+  ],
+  "groups": []
+}
+```

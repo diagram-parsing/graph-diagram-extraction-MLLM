@@ -1,0 +1,239 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "start doctor rating process",
+      "class": "event"
+    },
+    {
+      "id": "parallelGateway_1",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_1",
+      "text": "interview patients",
+      "class": "task"
+    },
+    {
+      "id": "parallelGateway_2",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "parallelGateway_3",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "file review and result of patient interview",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "create report",
+      "class": "task"
+    },
+    {
+      "id": "parallelGateway_4",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "event_2",
+      "text": "doctor rating finished",
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "ask to review the work of doctor under rating",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": "e. responds in time",
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "messageEvent_1",
+      "text": "review received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "task_5",
+      "text": "forward review",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "fill and send cheque",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": "there is always a different expert asked"
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": "e. responds in time"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": "e. responds not in time"
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "export",
+      "class": "messageFlow",
+      "label": "cheque"
+    },
+    {
+      "tail": "task_4",
+      "head": "export",
+      "class": "messageFlow",
+      "label": "request"
+    },
+    {
+      "tail": "export",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": "review"
+    }
+  ],
+  "groups": [
+    {
+      "name": "hospital",
+      "class": "pool",
+      "nodes": [
+        "quality assurance department",
+        "managing director"
+      ]
+    },
+    {
+      "name": "quality assurance department",
+      "class": "lane",
+      "nodes": [
+        "event_1",
+        "parallelGateway_1",
+        "task_1",
+        "parallelGateway_2",
+        "parallelGateway_3",
+        "task_2",
+        "task_3",
+        "parallelGateway_4",
+        "event_2"
+      ]
+    },
+    {
+      "name": "managing director",
+      "class": "lane",
+      "nodes": [
+        "exclusiveGateway_1",
+        "task_4",
+        "exclusiveGateway_2",
+        "messageEvent_1",
+        "task_5",
+        "task_6"
+      ]
+    },
+    {
+      "name": "export",
+      "class": "pool",
+      "nodes": []
+    }
+  ]
+}]
+```

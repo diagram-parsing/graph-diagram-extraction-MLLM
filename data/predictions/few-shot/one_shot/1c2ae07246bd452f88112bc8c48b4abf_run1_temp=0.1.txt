@@ -1,0 +1,104 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_GetIdea",
+        "text": "Get idea",
+        "class": "Task"
+      },
+      {
+        "id": "MessageEvent_1",
+        "text": null,
+        "class": "IntermediateMessageEventThrowing"
+      },
+      {
+        "id": "StartEvent_2",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_EvaluateIdea",
+        "text": "Evaluate idea",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway_1",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "EndEvent_RejectAgreement",
+        "text": "Reject agreement",
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent_ProposeAgreement",
+        "text": "Propose agreement",
+        "class": "EndEvent"
+      },
+      {
+        "id": "MessageEvent_2",
+        "text": null,
+        "class": "IntermediateMessageEventCatching"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Task_GetIdea",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_GetIdea",
+        "head": "MessageEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "MessageEvent_1",
+        "head": "StartEvent_2",
+        "class": "MessageFlow",
+        "label": null
+      },
+      {
+        "tail": "StartEvent_2",
+        "head": "Task_EvaluateIdea",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_EvaluateIdea",
+        "head": "MessageEvent_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "MessageEvent_2",
+        "head": "Exclusive_Eventbased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_1",
+        "head": "EndEvent_RejectAgreement",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway_1",
+        "head": "EndEvent_ProposeAgreement",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

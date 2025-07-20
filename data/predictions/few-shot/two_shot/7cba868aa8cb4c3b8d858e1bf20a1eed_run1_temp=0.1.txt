@@ -1,0 +1,205 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "confirmarea comenzi",
+      "text": "confirmarea comenzi",
+      "class": "Task"
+    },
+    {
+      "id": "selectare profil client",
+      "text": "selectare profil client",
+      "class": "Task"
+    },
+    {
+      "id": "selectare data si ora livrari",
+      "text": "selectare data si ora livrari",
+      "class": "Task"
+    },
+    {
+      "id": "numarul de credit",
+      "text": "numarul de credit",
+      "class": "Task"
+    },
+    {
+      "id": "trimitere confirmare client",
+      "text": "trimitere confirmare client",
+      "class": "Task"
+    },
+    {
+      "id": "verificare comanda",
+      "text": "verificare comanda",
+      "class": "Task"
+    },
+    {
+      "id": "preluare din depozit produse",
+      "text": "preluare din depozit produse",
+      "class": "Task"
+    },
+    {
+      "id": "preparare produse",
+      "text": "preparare produse",
+      "class": "Task"
+    },
+    {
+      "id": "expediere comanda la client",
+      "text": "expediere comanda la client",
+      "class": "Task"
+    },
+    {
+      "id": "trimitere e-mail de feedback",
+      "text": "trimitere e-mail de feedback",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "EndEvent_1",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "EndEvent_2",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "StartEvent_1",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "StartEvent_2",
+      "text": "",
+      "class": "StartEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "confirmarea comenzi",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "confirmarea comenzi",
+      "head": "selectare profil client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "selectare profil client",
+      "head": "selectare data si ora livrari",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "selectare data si ora livrari",
+      "head": "numarul de credit",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "numarul de credit",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "StartEvent_2",
+      "head": "trimitere confirmare client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "trimitere confirmare client",
+      "head": "verificare comanda",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "verificare comanda",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "preluare din depozit produse",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "preparare produse",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "preluare din depozit produse",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "preparare produse",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "expediere comanda la client",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "expediere comanda la client",
+      "head": "trimitere e-mail de feedback",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "trimitere e-mail de feedback",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "client",
+      "class": "Lane",
+      "nodes": [
+        "confirmarea comenzi",
+        "selectare profil client",
+        "selectare data si ora livrari",
+        "numarul de credit",
+        "EndEvent_1"
+      ]
+    },
+    {
+      "name": "companie de catering",
+      "class": "Lane",
+      "nodes": [
+        "trimitere confirmare client",
+        "verificare comanda",
+        "preluare din depozit produse",
+        "preparare produse",
+        "expediere comanda la client",
+        "trimitere e-mail de feedback",
+        "EndEvent_2",
+        "StartEvent_2"
+      ]
+    }
+  ]
+}
+```

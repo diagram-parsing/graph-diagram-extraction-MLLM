@@ -1,0 +1,142 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "request_to_raisedoc",
+      "text": "request to raisedoc",
+      "class": "event"
+    },
+    {
+      "id": "request_for_review",
+      "text": "request for review",
+      "class": "event"
+    },
+    {
+      "id": "ask_expert_for_review",
+      "text": "ask expert for review",
+      "class": "task"
+    },
+    {
+      "id": "receive_review",
+      "text": "receive review",
+      "class": "task"
+    },
+    {
+      "id": "forward_to_QA",
+      "text": "forward to QA",
+      "class": "task"
+    },
+    {
+      "id": "fill_clague",
+      "text": "fill clague",
+      "class": "task"
+    },
+    {
+      "id": "send_to_expert",
+      "text": "send to expert",
+      "class": "task"
+    },
+    {
+      "id": "Doctor_rated",
+      "text": "Doctor rated",
+      "class": "event"
+    },
+    {
+      "id": "Interview_Patients",
+      "text": "Interview Patients",
+      "class": "task"
+    },
+    {
+      "id": "file_results",
+      "text": "file results",
+      "class": "task"
+    },
+    {
+      "id": "Create_report",
+      "text": "Create report",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "request_to_raisedoc",
+      "head": "Interview_Patients",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Interview_Patients",
+      "head": "ask_expert_for_review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ask_expert_for_review",
+      "head": "receive_review",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive_review",
+      "head": "forward_to_QA",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "forward_to_QA",
+      "head": "fill_clague",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "fill_clague",
+      "head": "send_to_expert",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_to_expert",
+      "head": "Doctor_rated",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_to_expert",
+      "head": "file_results",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "file_results",
+      "head": "Create_report",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "External Expert",
+      "class": "pool",
+      "nodes": [
+        "request_for_review",
+        "receive_review",
+        "forward_to_QA",
+        "fill_clague",
+        "send_to_expert",
+        "Doctor_rated"
+      ]
+    },
+    {
+      "name": "Hosp OA",
+      "class": "pool",
+      "nodes": [
+        "request_to_raisedoc",
+        "Interview_Patients",
+        "ask_expert_for_review",
+        "file_results",
+        "Create_report"
+      ]
+    }
+  ]
+}
+```

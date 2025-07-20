@@ -1,0 +1,82 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": null
+      },
+      {
+        "id": "DetermineSEUsenergyinputs/outputs",
+        "text": "Determine SEUs energy inputs/outputs",
+        "class": null
+      },
+      {
+        "id": "Determineprocess",
+        "text": "Determine process",
+        "class": null
+      },
+      {
+        "id": "Determine measurement period (EnB process)",
+        "text": "Determine measurement period (EnB process)",
+        "class": null
+      },
+      {
+        "id": "Normalize",
+        "text": "Normalize",
+        "class": null
+      },
+      {
+        "id": "Check",
+        "text": "Check",
+        "class": null
+      },
+      {
+        "id": "Report",
+        "text": "Report",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "DetermineSEUsenergyinputs/outputs",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "DetermineSEUsenergyinputs/outputs",
+        "head": "Determineprocess",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Determineprocess",
+        "head": "Determine measurement period (EnB process)",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Determine measurement period (EnB process)",
+        "head": "Normalize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Normalize",
+        "head": "Check",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Check",
+        "head": "Report",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

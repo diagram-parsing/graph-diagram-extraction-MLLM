@@ -1,0 +1,177 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "New case received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "Interview patients",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "Interview established",
+      "class": "event"
+    },
+    {
+      "id": "task_2",
+      "text": "Ask an external expertise",
+      "class": "task"
+    },
+    {
+      "id": "event_3",
+      "text": "Expertise received",
+      "class": "event"
+    },
+    {
+      "id": "task_3",
+      "text": "Fill a cheque",
+      "class": "task"
+    },
+    {
+      "id": "event_4",
+      "text": "Expertise sent",
+      "class": "event"
+    },
+    {
+      "id": "event_5",
+      "text": "Expertise received",
+      "class": "event"
+    },
+    {
+      "id": "task_4",
+      "text": "File the results containing the patient interviews",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "File the expertise",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "Create a report",
+      "class": "task"
+    },
+    {
+      "id": "event_6",
+      "text": "Report created",
+      "class": "event"
+    },
+    {
+      "id": "event_7",
+      "text": "Doctor undersigned received",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_2",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": "until all interviews established"
+    },
+    {
+      "tail": "event_3",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "event_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_4",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "event_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_5",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "event_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_2",
+      "head": "event_7",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Doctors III",
+      "class": "pool",
+      "nodes": []
+    },
+    {
+      "name": "Quality assurance department",
+      "class": "lane",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "event_2",
+        "task_4",
+        "task_5",
+        "task_6",
+        "event_6"
+      ]
+    },
+    {
+      "name": "Managing director",
+      "class": "lane",
+      "nodes": [
+        "event_7"
+      ]
+    },
+    {
+      "name": "External experts III",
+      "class": "pool",
+      "nodes": []
+    }
+  ]
+}
+```

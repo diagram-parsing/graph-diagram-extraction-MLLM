@@ -1,0 +1,123 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": "terminator"
+    },
+    {
+      "text": "More samples?",
+      "id": "More samples?",
+      "class": "decision"
+    },
+    {
+      "text": "Next sample",
+      "id": "Next sample",
+      "class": "process"
+    },
+    {
+      "text": "Update Weights",
+      "id": "Update Weights",
+      "class": "process"
+    },
+    {
+      "text": "bestEn = en",
+      "id": "bestEn = en",
+      "class": "process"
+    },
+    {
+      "text": "Save weights",
+      "id": "Save weights",
+      "class": "process"
+    },
+    {
+      "text": "i++",
+      "id": "i++",
+      "class": "process"
+    },
+    {
+      "text": "i < limit",
+      "id": "i < limit",
+      "class": "decision"
+    },
+    {
+      "text": "Back to first sample",
+      "id": "Back to first sample",
+      "class": "process"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "terminator"
+    },
+    {
+      "text": "Em < bestEn",
+      "id": "Em < bestEn",
+      "class": "decision"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "More samples?",
+      "label": null
+    },
+    {
+      "tail": "More samples?",
+      "head": "Next sample",
+      "label": "True"
+    },
+    {
+      "tail": "More samples?",
+      "head": "Update Weights",
+      "label": "False"
+    },
+    {
+      "tail": "Update Weights",
+      "head": "bestEn = en",
+      "label": null
+    },
+    {
+      "tail": "bestEn = en",
+      "head": "Save weights",
+      "label": null
+    },
+    {
+      "tail": "Save weights",
+      "head": "i++",
+      "label": null
+    },
+    {
+      "tail": "i++",
+      "head": "i < limit",
+      "label": null
+    },
+    {
+      "tail": "i < limit",
+      "head": "Back to first sample",
+      "label": "True"
+    },
+    {
+      "tail": "i < limit",
+      "head": "End",
+      "label": "Else"
+    },
+    {
+      "tail": "Em < bestEn",
+      "head": "Back to first sample",
+      "label": "Yes"
+    },
+    {
+      "tail": "Em < bestEn",
+      "head": "i++",
+      "label": "No"
+    },
+    {
+      "tail": "Back to first sample",
+      "head": "More samples?",
+      "label": null
+    }
+  ]
+}
+```

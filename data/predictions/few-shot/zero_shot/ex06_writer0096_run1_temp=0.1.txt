@@ -1,0 +1,116 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "order_received",
+        "text": "order received",
+        "class": "event"
+      },
+      {
+        "id": "exclusive_gateway",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "receive_order_by_website",
+        "text": "Receive order by website",
+        "class": "task"
+      },
+      {
+        "id": "receive_order_by_lifando",
+        "text": "Receive order by Lifando",
+        "class": "task"
+      },
+      {
+        "id": "take_order_by_phone",
+        "text": "Take order by phone",
+        "class": "task"
+      },
+      {
+        "id": "write_down_order_note",
+        "text": "Write down order note",
+        "class": "task"
+      },
+      {
+        "id": "attach_order_note_to_pinboard",
+        "text": "Attach order note to pinboard",
+        "class": "task"
+      },
+      {
+        "id": "confirm_order",
+        "text": "Confirm order",
+        "class": "task"
+      },
+      {
+        "id": "print_out_order",
+        "text": "Print out order",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "order_received",
+        "head": "exclusive_gateway",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusive_gateway",
+        "head": "receive_order_by_website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusive_gateway",
+        "head": "receive_order_by_lifando",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusive_gateway",
+        "head": "take_order_by_phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_website",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_lifando",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "take_order_by_phone",
+        "head": "write_down_order_note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_down_order_note",
+        "head": "attach_order_note_to_pinboard",
+        "class": "sequenceFlow",
+        "label": "order [written]"
+      },
+      {
+        "tail": "confirm_order",
+        "head": "print_out_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "print_out_order",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": "order [printed]"
+      }
+    ],
+    "groups": []
+  }
+]
+```

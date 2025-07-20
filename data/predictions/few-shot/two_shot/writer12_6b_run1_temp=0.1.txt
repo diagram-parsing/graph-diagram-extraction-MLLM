@@ -1,0 +1,88 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "begin",
+      "id": "begin",
+      "class": "terminator"
+    },
+    {
+      "text": "Input m",
+      "id": "Input m",
+      "class": "data"
+    },
+    {
+      "text": "h = 1\nsum = 0",
+      "id": "h = 1\nsum = 0",
+      "class": "process"
+    },
+    {
+      "text": "sum = sum + k",
+      "id": "sum = sum + k",
+      "class": "process"
+    },
+    {
+      "text": "k = k + 1",
+      "id": "k = k + 1",
+      "class": "process"
+    },
+    {
+      "text": "k == m?",
+      "id": "k == m?",
+      "class": "decision"
+    },
+    {
+      "text": "disp sum",
+      "id": "disp sum",
+      "class": "data"
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "begin",
+      "head": "Input m",
+      "label": null
+    },
+    {
+      "tail": "Input m",
+      "head": "h = 1\nsum = 0",
+      "label": null
+    },
+    {
+      "tail": "h = 1\nsum = 0",
+      "head": "sum = sum + k",
+      "label": null
+    },
+    {
+      "tail": "sum = sum + k",
+      "head": "k == m?",
+      "label": null
+    },
+    {
+      "tail": "k == m?",
+      "head": "k = k + 1",
+      "label": "No"
+    },
+    {
+      "tail": "k = k + 1",
+      "head": "sum = sum + k",
+      "label": null
+    },
+    {
+      "tail": "k == m?",
+      "head": "disp sum",
+      "label": "Yes"
+    },
+    {
+      "tail": "disp sum",
+      "head": "Finish",
+      "label": null
+    }
+  ]
+}
+```

@@ -1,0 +1,103 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Introduce datele",
+      "text": "Introduce datele",
+      "class": "StartEvent"
+    },
+    {
+      "id": "Verifica datele",
+      "text": "Verifica datele",
+      "class": "Task"
+    },
+    {
+      "id": "Anunta clientului",
+      "text": "Anunta clientului",
+      "class": "Task"
+    },
+    {
+      "id": "Aproba vanzarea",
+      "text": "Aproba vanzarea",
+      "class": "Task"
+    },
+    {
+      "id": "Calcula pretul",
+      "text": "Calcula pretul",
+      "class": "Task"
+    },
+    {
+      "id": "Verifica accesibilitate",
+      "text": "Verifica accesibilitate",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Introduce datele",
+      "head": "Verifica datele",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica datele",
+      "head": "Anunta clientului",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Anunta clientului",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Aproba vanzarea",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Verifica accesibilitate",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica accesibilitate",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Calcula pretul",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Calcula pretul",
+      "head": "Anunta clientului",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aproba vanzarea",
+      "head": "Aproba vanzarea",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

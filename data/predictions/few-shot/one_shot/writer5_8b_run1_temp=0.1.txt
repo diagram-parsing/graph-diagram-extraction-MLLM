@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "2",
+        "text": "Input n, m",
+        "class": "process"
+      },
+      {
+        "id": "3",
+        "text": "r = n % m",
+        "class": "process"
+      },
+      {
+        "id": "4",
+        "text": "r = 0 ?",
+        "class": "decision"
+      },
+      {
+        "id": "5",
+        "text": "n = m",
+        "class": "process"
+      },
+      {
+        "id": "6",
+        "text": "m = r",
+        "class": "process"
+      },
+      {
+        "id": "7",
+        "text": "Output m",
+        "class": "process"
+      },
+      {
+        "id": "8",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "3",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "7",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "7",
+        "head": "8",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

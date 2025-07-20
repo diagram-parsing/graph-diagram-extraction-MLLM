@@ -1,0 +1,27 @@
+Method,Match Type,Category,F1 Score
+overall,exact,node_texts,0.631
+overall,exact,node_classes,0.718
+overall,exact,node_text_and_class,0.416
+overall,exact,arrow_path,0.339
+overall,exact,arrow_classes,0.796
+overall,exact,arrow_labels,0.754
+overall,exact,arrow_path_and_label,0.291
+overall,exact,arrow_path_label_class,0.277
+overall,exact,group_names,0.222
+overall,exact,group_classes,0.222
+overall,exact,group_texts,0.0
+overall,exact,group_name_class_texts,0.0
+overall,exact,diagram_recognition,0.0
+overall,normalized,node_texts,0.731
+overall,normalized,node_classes,0.718
+overall,normalized,node_text_and_class,0.503
+overall,normalized,arrow_path,0.408
+overall,normalized,arrow_classes,0.796
+overall,normalized,arrow_labels,0.754
+overall,normalized,arrow_path_and_label,0.36
+overall,normalized,arrow_path_label_class,0.346
+overall,normalized,group_names,0.222
+overall,normalized,group_classes,0.222
+overall,normalized,group_texts,0.0
+overall,normalized,group_name_class_texts,0.0
+overall,normalized,diagram_recognition,0.0

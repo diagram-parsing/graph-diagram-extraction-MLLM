@@ -1,0 +1,172 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "startEvent_1",
+      "text": "claim received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "task_1",
+      "text": "register claim",
+      "class": "task"
+    },
+    {
+      "id": "dataStore_1",
+      "text": "Insurance claims DB",
+      "class": "dataStore"
+    },
+    {
+      "id": "task_2",
+      "text": "Examine claim",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_3",
+      "text": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "id": "dataObj_1",
+      "text": "claim examined",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObj_2",
+      "text": "recommendation claim",
+      "class": "dataObject"
+    },
+    {
+      "id": "task_4",
+      "text": "check recommendation",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_5",
+      "text": "return recommendation (back to claim adjuster)",
+      "class": "task"
+    },
+    {
+      "id": "intermediateEvent_1",
+      "text": "proceed claim handling process",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "startEvent_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "dataStore_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "dataObj_1",
+      "class": "dataAssociation",
+      "label": "claim examined"
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "dataObj_2",
+      "class": "dataAssociation",
+      "label": "recommendation claim"
+    },
+    {
+      "tail": "task_3",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": "Not OK"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "intermediateEvent_1",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "task_5",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Customer",
+      "head": "startEvent_1",
+      "class": "messageFlow",
+      "label": "claim"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Customer",
+      "class": "pool",
+      "nodes": [
+        "startEvent_1"
+      ]
+    },
+    {
+      "name": "Claims office",
+      "class": "pool",
+      "nodes": [
+        "task_1",
+        "dataStore_1",
+        "task_2",
+        "exclusiveGateway_1",
+        "task_3",
+        "dataObj_1",
+        "dataObj_2",
+        "task_4",
+        "exclusiveGateway_2",
+        "task_5",
+        "intermediateEvent_1"
+      ]
+    }
+  ]
+}]
+```

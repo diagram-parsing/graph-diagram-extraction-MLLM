@@ -1,0 +1,130 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "Credit request received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "Assess the risk",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "Carry out advanced risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "Carry out simple risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "Notify customer with result",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_5",
+      "text": "Organize disbursement",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_4",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "event_2",
+      "text": "Request handled",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": "risk above threshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "risk below threshold"
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

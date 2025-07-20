@@ -1,0 +1,166 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "send_simple_documents",
+        "text": "send simple documents",
+        "class": "task"
+      },
+      {
+        "id": "send_complex_documents",
+        "text": "send complex documents",
+        "class": "task"
+      },
+      {
+        "id": "receive_documents",
+        "text": "receive documents",
+        "class": "task"
+      },
+      {
+        "id": "check_completeness",
+        "text": "check completeness",
+        "class": "task"
+      },
+      {
+        "id": "evaluate_security",
+        "text": "evaluate security",
+        "class": "task"
+      },
+      {
+        "id": "send_update_request",
+        "text": "send update request",
+        "class": "task"
+      },
+      {
+        "id": "claim_received",
+        "text": "claim received",
+        "class": "event"
+      },
+      {
+        "id": "notification_received",
+        "text": "notification received",
+        "class": "event"
+      },
+      {
+        "id": "check_insured",
+        "text": "check insured",
+        "class": "task"
+      },
+      {
+        "id": "evaluate_security",
+        "text": "evaluate security",
+        "class": "task"
+      },
+      {
+        "id": "complete_claim",
+        "text": "complete claim",
+        "class": "task"
+      },
+      {
+        "id": "process_complete",
+        "text": "process complete",
+        "class": "event"
+      },
+      {
+        "id": "no",
+        "text": "No",
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "yes",
+        "text": "Yes",
+        "class": "exclusiveGateway"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "claim_received",
+        "head": "check_insured",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "check_insured",
+        "head": "no",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "no",
+        "head": "notification_received",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "notification_received",
+        "head": "send_simple_documents",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "send_simple_documents",
+        "head": "receive_documents",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "receive_documents",
+        "head": "check_completeness",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "check_completeness",
+        "head": "complete_claim",
+        "class": "sequenceFlow",
+        "label": "complete"
+      },
+      {
+        "tail": "check_completeness",
+        "head": "send_update_request",
+        "class": "sequenceFlow",
+        "label": "incomplete"
+      },
+      {
+        "tail": "send_update_request",
+        "head": "receive_documents",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "yes",
+        "head": "evaluate_security",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "evaluate_security",
+        "head": "complete_claim",
+        "class": "sequenceFlow"
+      },
+      {
+        "tail": "complete_claim",
+        "head": "process_complete",
+        "class": "sequenceFlow"
+      }
+    ],
+    "groups": [
+      {
+        "name": "claimant",
+        "class": "pool",
+        "nodes": [
+          "send_simple_documents",
+          "send_complex_documents",
+          "receive_documents",
+          "send_update_request"
+        ]
+      },
+      {
+        "name": "insurer",
+        "class": "pool",
+        "nodes": [
+          "claim_received",
+          "notification_received",
+          "check_insured",
+          "evaluate_security",
+          "complete_claim",
+          "process_complete"
+        ]
+      }
+    ]
+  }
+]
+```

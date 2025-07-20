@@ -1,0 +1,126 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "request_received",
+        "text": "request received",
+        "class": "event"
+      },
+      {
+        "id": "retrieve_file",
+        "text": "retrieve file",
+        "class": "task"
+      },
+      {
+        "id": "check_acceptability_for_filing",
+        "text": "check acceptability for filing",
+        "class": "task"
+      },
+      {
+        "id": "check_compliance",
+        "text": "check compliance",
+        "class": "task"
+      },
+      {
+        "id": "set_hearing_date",
+        "text": "set hearing date",
+        "class": "task"
+      },
+      {
+        "id": "allocate_hearing_date",
+        "text": "allocate hearing date",
+        "class": "task"
+      },
+      {
+        "id": "owner_has_already_paid",
+        "text": "owner has already paid",
+        "class": "event"
+      },
+      {
+        "id": "owner_has_not_paid",
+        "text": "owner has not paid",
+        "class": "event"
+      },
+      {
+        "id": "produce_fee_notice",
+        "text": "produce fee notice",
+        "class": "task"
+      },
+      {
+        "id": "wait_that_owner_pays",
+        "text": "wait that owner pays",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "request_received",
+        "head": "retrieve_file",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "retrieve_file",
+        "head": "check_acceptability_for_filing",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_acceptability_for_filing",
+        "head": "check_compliance",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_compliance",
+        "head": "set_hearing_date",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "set_hearing_date",
+        "head": "allocate_hearing_date",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "allocate_hearing_date",
+        "head": "owner_has_already_paid",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "allocate_hearing_date",
+        "head": "owner_has_not_paid",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "owner_has_not_paid",
+        "head": "produce_fee_notice",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "produce_fee_notice",
+        "head": "wait_that_owner_pays",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "cashier",
+        "class": "lane",
+        "nodes": ["request_received", "retrieve_file", "check_acceptability_for_filing", "check_compliance", "set_hearing_date"]
+      },
+      {
+        "name": "owner",
+        "class": "lane",
+        "nodes": ["allocate_hearing_date", "owner_has_already_paid", "owner_has_not_paid", "produce_fee_notice", "wait_that_owner_pays"]
+      }
+    ]
+  }
+]
+```

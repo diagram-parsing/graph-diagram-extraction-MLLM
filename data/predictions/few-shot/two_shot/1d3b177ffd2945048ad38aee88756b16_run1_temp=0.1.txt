@@ -1,0 +1,136 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Verifica esistenza account",
+      "id": "Verifica esistenza account",
+      "class": "Task"
+    },
+    {
+      "text": "Creazione account",
+      "id": "Creazione account",
+      "class": "Task"
+    },
+    {
+      "text": "Approvazione superiore",
+      "id": "Approvazione superiore",
+      "class": "Task"
+    },
+    {
+      "text": "Approvazione automatica",
+      "id": "Approvazione automatica",
+      "class": "Task"
+    },
+    {
+      "text": "Trasferimento credito",
+      "id": "Trasferimento credito",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_1",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_2",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_3",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_4",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "StartEvent_1",
+      "class": "StartEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "Verifica esistenza account",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Verifica esistenza account",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Creazione account",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "Exclusive_Eventbased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Creazione account",
+      "head": "Exclusive_Eventbased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "Exclusive_Eventbased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_3",
+      "head": "Approvazione superiore",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_3",
+      "head": "Approvazione automatica",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approvazione superiore",
+      "head": "Exclusive_Eventbased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Approvazione automatica",
+      "head": "Trasferimento credito",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_4",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Trasferimento credito",
+      "head": "Exclusive_Eventbased_Gateway_4",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

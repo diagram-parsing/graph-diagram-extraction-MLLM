@@ -1,0 +1,165 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "calcolo ore effettive di lavoro di ogni dipendente",
+      "text": "calcolo ore effettive di lavoro di ogni dipendente",
+      "class": "Task"
+    },
+    {
+      "id": "consegna buste e paga ai dipendenti",
+      "text": "consegna buste e paga ai dipendenti",
+      "class": "Task"
+    },
+    {
+      "id": "pagamenti",
+      "text": "pagamenti",
+      "class": "Task"
+    },
+    {
+      "id": "modifica busta paga, correzioni",
+      "text": "modifica busta paga, correzioni",
+      "class": "Task"
+    },
+    {
+      "id": "controllo buste paga",
+      "text": "controllo buste paga",
+      "class": "Task"
+    },
+    {
+      "id": "compilazione buste paga",
+      "text": "compilazione buste paga",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_3",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "StartEvent_1",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "EndEvent_1",
+      "text": "",
+      "class": "EndEvent"
+    },
+    {
+      "id": "StartEvent_2",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "EndEvent_2",
+      "text": "",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent_1",
+      "head": "calcolo ore effettive di lavoro di ogni dipendente",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "calcolo ore effettive di lavoro di ogni dipendente",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "consegna buste e paga ai dipendenti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "pagamenti",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "pagamenti",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "modifica busta paga, correzioni",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "controllo buste paga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "controllo buste paga",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "compilazione buste paga",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "compilazione buste paga",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "modifica busta paga, correzioni",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Amministratore Delegato",
+      "class": "Lane",
+      "nodes": [
+        "calcolo ore effettive di lavoro di ogni dipendente",
+        "consegna buste e paga ai dipendenti",
+        "pagamenti",
+        "modifica busta paga, correzioni",
+        "controllo buste paga"
+      ]
+    },
+    {
+      "name": "Consulente del lavoro",
+      "class": "Lane",
+      "nodes": [
+        "compilazione buste paga"
+      ]
+    }
+  ]
+}
+```

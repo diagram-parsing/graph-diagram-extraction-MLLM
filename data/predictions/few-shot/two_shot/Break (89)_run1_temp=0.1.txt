@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Read A",
+      "id": "Read A",
+      "class": null
+    },
+    {
+      "text": "A>0",
+      "id": "A>0",
+      "class": null
+    },
+    {
+      "text": "Positive",
+      "id": "Positive",
+      "class": null
+    },
+    {
+      "text": "Negative",
+      "id": "Negative",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Read A",
+      "label": null
+    },
+    {
+      "tail": "Read A",
+      "head": "A>0",
+      "label": null
+    },
+    {
+      "tail": "A>0",
+      "head": "Positive",
+      "label": "Yes"
+    },
+    {
+      "tail": "A>0",
+      "head": "Negative",
+      "label": "No"
+    },
+    {
+      "tail": "Positive",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Negative",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

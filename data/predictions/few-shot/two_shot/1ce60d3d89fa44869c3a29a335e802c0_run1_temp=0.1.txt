@@ -1,0 +1,158 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "StartEvent"
+    },
+    {
+      "id": "Login Apple Store",
+      "text": "Login Apple Store",
+      "class": "Task"
+    },
+    {
+      "id": "Select Category",
+      "text": "Select Category",
+      "class": "Task"
+    },
+    {
+      "id": "Learn more about product",
+      "text": "Learn more about product",
+      "class": "Task"
+    },
+    {
+      "id": "Add to Bag",
+      "text": "Add to Bag",
+      "class": "Task"
+    },
+    {
+      "id": "Checkout",
+      "text": "Checkout",
+      "class": "Task"
+    },
+    {
+      "id": "Select Deliver",
+      "text": "Select Deliver",
+      "class": "Task"
+    },
+    {
+      "id": "Select Pickup",
+      "text": "Select Pickup",
+      "class": "Task"
+    },
+    {
+      "id": "Select Location",
+      "text": "Select Location",
+      "class": "Task"
+    },
+    {
+      "id": "Pay Online",
+      "text": "Pay Online",
+      "class": "Task"
+    },
+    {
+      "id": "Receive Receipt",
+      "text": "Receive Receipt",
+      "class": "EndEvent"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Login Apple Store",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Login Apple Store",
+      "head": "Select Category",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Category",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Learn more about product",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Add to Bag",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Learn more about product",
+      "head": "Add to Bag",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Add to Bag",
+      "head": "Checkout",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Checkout",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Select Deliver",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Select Pickup",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Deliver",
+      "head": "Select Location",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Pickup",
+      "head": "Select Location",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Select Location",
+      "head": "Pay Online",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Pay Online",
+      "head": "Receive Receipt",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

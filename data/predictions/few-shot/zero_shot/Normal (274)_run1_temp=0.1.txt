@@ -1,0 +1,125 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "User",
+      "text": "User",
+      "class": null
+    },
+    {
+      "id": "Selection of problem area/problem",
+      "text": "Selection of problem area/problem",
+      "class": null
+    },
+    {
+      "id": "Symptom selection",
+      "text": "Symptom selection",
+      "class": null
+    },
+    {
+      "id": "Answer queries on selected symptoms",
+      "text": "Answer queries on selected symptoms",
+      "class": null
+    },
+    {
+      "id": "Determine probable diseases",
+      "text": "Determine probable diseases",
+      "class": null
+    },
+    {
+      "id": "Filter determined diseases",
+      "text": "Filter determined diseases",
+      "class": null
+    },
+    {
+      "id": "Is Top probability?",
+      "text": "Is Top probability?",
+      "class": null
+    },
+    {
+      "id": "Is history question?",
+      "text": "Is history question?",
+      "class": null
+    },
+    {
+      "id": "Add catalyst factor",
+      "text": "Add catalyst factor",
+      "class": null
+    },
+    {
+      "id": "Output",
+      "text": "Output",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "User",
+      "head": "Selection of problem area/problem",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Selection of problem area/problem",
+      "head": "Symptom selection",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Symptom selection",
+      "head": "Answer queries on selected symptoms",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Answer queries on selected symptoms",
+      "head": "Determine probable diseases",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Determine probable diseases",
+      "head": "Filter determined diseases",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Filter determined diseases",
+      "head": "Is Top probability?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Is Top probability?",
+      "head": "Is history question?",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Is Top probability?",
+      "head": "Output",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Is history question?",
+      "head": "Output",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Is history question?",
+      "head": "Add catalyst factor",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Add catalyst factor",
+      "head": "Output",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

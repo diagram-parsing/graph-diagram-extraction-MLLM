@@ -1,0 +1,216 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "<<boundary>> Untereite Jobangebot einstellen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<boundary>> Untereite Jobangebot einstellen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<dto>> Jobangebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<dto>> Jobangebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Jobangebot",
+      "attributes": [
+        "- beschreibung: Text",
+        "- betrag: Betrag",
+        "- arbeitgeber: Arbeitgeber"
+      ],
+      "methods": null,
+      "id": "<<entity>> Jobangebot",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "<<entity>> Freelander Angebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Freelaner Angebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Praktika Angebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Praktika Angebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Festanstellung Angebot",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Festanstellung Angebot",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<entity>> Unternehmen",
+      "attributes": [
+        "- ID: Integer",
+        "- Name: String",
+        "- Firma: String",
+        "- liste: List<Jobangebot>",
+        "- liste: List<Bankdaten>"
+      ],
+      "methods": null,
+      "id": "<<entity>> Unternehmen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "<<entity>> Bankdaten",
+      "attributes": [
+        "- kontonummer: String",
+        "- arbeitgeber: Arbeitgeber"
+      ],
+      "methods": null,
+      "id": "<<entity>> Bankdaten",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "<<entity>> Bestätigung",
+      "attributes": null,
+      "methods": null,
+      "id": "<<entity>> Bestätigung",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<boundary>> externes Informationssystem",
+      "attributes": null,
+      "methods": null,
+      "id": "<<boundary>> externes Informationssystem",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> Jobangebot einstellen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> Jobangebot einstellen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> Bankinzug durchführen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> Bankinzug durchführen",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> Bankdaten ermitteln",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> Bankdaten ermitteln",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "<<control>> nicht korrektes Angebot ablehnen",
+      "attributes": null,
+      "methods": null,
+      "id": "<<control>> nicht korrektes Angebot ablehnen",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "<<entity>> Jobangebot",
+      "head": "<<entity>> Freelaner Angebot",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<entity>> Jobangebot",
+      "head": "<<entity>> Praktika Angebot",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<entity>> Jobangebot",
+      "head": "<<entity>> Festanstellung Angebot",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<boundary>> Untereite Jobangebot einstellen",
+      "head": "<<entity>> Jobangebot",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<dto>> Jobangebot",
+      "head": "<<entity>> Jobangebot",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<control>> Jobangebot einstellen",
+      "head": "<<entity>> Jobangebot",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<control>> Bankinzug durchführen",
+      "head": "<<entity>> Bankdaten",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<control>> Bankdaten ermitteln",
+      "head": "<<entity>> Bankdaten",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<control>> nicht korrektes Angebot ablehnen",
+      "head": "<<entity>> Jobangebot",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<boundary>> externes Informationssystem",
+      "head": "<<entity>> Unternehmen",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "<<entity>> Unternehmen",
+      "head": "<<entity>> Jobangebot",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "<<entity>> Unternehmen",
+      "head": "<<entity>> Bankdaten",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

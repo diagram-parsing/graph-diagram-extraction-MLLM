@@ -1,0 +1,106 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "IV",
+      "text": "IV",
+      "class": "final state"
+    },
+    {
+      "id": "I",
+      "text": "I",
+      "class": "state"
+    },
+    {
+      "id": "III",
+      "text": "III",
+      "class": "state"
+    },
+    {
+      "id": "II",
+      "text": "II",
+      "class": "state"
+    },
+    {
+      "id": "V",
+      "text": "V",
+      "class": "final state"
+    }
+  ],
+  "relations": [
+    {
+      "tail": null,
+      "head": "IV",
+      "class": "initial",
+      "label": null
+    },
+    {
+      "tail": "IV",
+      "head": "IV",
+      "class": "transition",
+      "label": "c"
+    },
+    {
+      "tail": "IV",
+      "head": "I",
+      "class": "transition",
+      "label": "a"
+    },
+    {
+      "tail": "IV",
+      "head": "V",
+      "class": "transition",
+      "label": "b,c"
+    },
+    {
+      "tail": "I",
+      "head": "III",
+      "class": "transition",
+      "label": "b"
+    },
+    {
+      "tail": "I",
+      "head": "I",
+      "class": "transition",
+      "label": "a"
+    },
+    {
+      "tail": "I",
+      "head": "V",
+      "class": "transition",
+      "label": "a,c"
+    },
+    {
+      "tail": "III",
+      "head": "II",
+      "class": "transition",
+      "label": "b"
+    },
+    {
+      "tail": "III",
+      "head": "I",
+      "class": "transition",
+      "label": "a"
+    },
+    {
+      "tail": "II",
+      "head": "V",
+      "class": "transition",
+      "label": "a,c"
+    },
+    {
+      "tail": "II",
+      "head": "II",
+      "class": "transition",
+      "label": "b"
+    },
+    {
+      "tail": "V",
+      "head": "V",
+      "class": "transition",
+      "label": "a,b,c"
+    }
+  ],
+  "groups": []
+}]
+```

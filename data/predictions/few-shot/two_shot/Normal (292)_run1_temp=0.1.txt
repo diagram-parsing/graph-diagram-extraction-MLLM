@@ -1,0 +1,114 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Edit video",
+      "id": "Edit video",
+      "class": null
+    },
+    {
+      "text": "Smaller than 2GB?",
+      "id": "Smaller than 2GB?",
+      "class": null
+    },
+    {
+      "text": "Click to upload",
+      "id": "Click to upload",
+      "class": null
+    },
+    {
+      "text": "Have an account already?",
+      "id": "Have an account already?",
+      "class": null
+    },
+    {
+      "text": "Register",
+      "id": "Register",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Find on computer",
+      "id": "Find on computer",
+      "class": null
+    },
+    {
+      "text": "Add description and tags",
+      "id": "Add description and tags",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Edit video",
+      "label": null
+    },
+    {
+      "tail": "Edit video",
+      "head": "Smaller than 2GB?",
+      "label": null
+    },
+    {
+      "tail": "Smaller than 2GB?",
+      "head": "Click to upload",
+      "label": "YES"
+    },
+    {
+      "tail": "Smaller than 2GB?",
+      "head": "Edit video",
+      "label": "NO"
+    },
+    {
+      "tail": "Click to upload",
+      "head": "Have an account already?",
+      "label": null
+    },
+    {
+      "tail": "Have an account already?",
+      "head": "Register",
+      "label": "NO"
+    },
+    {
+      "tail": "Have an account already?",
+      "head": "Login",
+      "label": "YES"
+    },
+    {
+      "tail": "Register",
+      "head": "Login",
+      "label": null
+    },
+    {
+      "tail": "Login",
+      "head": "Find on computer",
+      "label": null
+    },
+    {
+      "tail": "Find on computer",
+      "head": "Add description and tags",
+      "label": null
+    },
+    {
+      "tail": "Add description and tags",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

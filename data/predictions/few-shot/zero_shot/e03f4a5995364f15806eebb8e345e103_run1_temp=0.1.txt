@@ -1,0 +1,128 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_A",
+        "text": "A",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway_1",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task_B",
+        "text": "B",
+        "class": "Task"
+      },
+      {
+        "id": "Task_C",
+        "text": "C",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway_2",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task_F",
+        "text": "F",
+        "class": "Task"
+      },
+      {
+        "id": "Task_G",
+        "text": "G",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent_1",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Exclusive_Databased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Task_A",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Exclusive_Databased_Gateway_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_A",
+        "head": "Exclusive_Databased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_2",
+        "head": "Task_B",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_2",
+        "head": "Task_C",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_B",
+        "head": "Exclusive_Databased_Gateway_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_C",
+        "head": "Exclusive_Databased_Gateway_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_2",
+        "head": "Exclusive_Databased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Task_F",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_F",
+        "head": "Task_G",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_G",
+        "head": "EndEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

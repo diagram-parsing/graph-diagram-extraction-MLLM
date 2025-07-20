@@ -1,0 +1,71 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Start",
+        "class": "terminator"
+      },
+      {
+        "id": "input_v",
+        "text": "Input V",
+        "class": "data"
+      },
+      {
+        "id": "compute_f_v",
+        "text": "Compute f(V)",
+        "class": "process"
+      },
+      {
+        "id": "compute_g_v",
+        "text": "Compute g(V)",
+        "class": "process"
+      },
+      {
+        "id": "output_f_v_plus_g_v",
+        "text": "Output f(V) + g(V)",
+        "class": "data"
+      },
+      {
+        "id": "stop",
+        "text": "Stop",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "input_v",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "input_v",
+        "head": "compute_f_v",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "compute_f_v",
+        "head": "compute_g_v",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "compute_g_v",
+        "head": "output_f_v_plus_g_v",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "output_f_v_plus_g_v",
+        "head": "stop",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

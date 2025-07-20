@@ -1,0 +1,71 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Source",
+        "text": "Source",
+        "class": null
+      },
+      {
+        "id": "Module",
+        "text": "Module",
+        "class": null
+      },
+      {
+        "id": "Motor",
+        "text": "Motor",
+        "class": null
+      },
+      {
+        "id": "Load",
+        "text": "Load",
+        "class": null
+      },
+      {
+        "id": "Control unit",
+        "text": "Control unit",
+        "class": null
+      },
+      {
+        "id": "Sensing unit",
+        "text": "Sensing unit",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Source",
+        "head": "Module",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Module",
+        "head": "Motor",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Motor",
+        "head": "Load",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Motor",
+        "head": "Control unit",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Sensing unit",
+        "head": "Control unit",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

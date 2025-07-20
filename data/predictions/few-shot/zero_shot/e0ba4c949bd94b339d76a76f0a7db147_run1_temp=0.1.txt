@@ -1,0 +1,195 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "A1:Albaran",
+        "text": "idAlbaran: 1\nfechaAlbaran: 5/6/2016\nprecio_total: 0€\nPedidoCancelado: true\nFacturaArchivada: true",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "A2:Albaran",
+        "text": "idAlbaran: 2\nfechaAlbaran: 5/6/2015\nprecio_total: 180€\nPedidoCancelado: false\nFacturaArchivada: true",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "C1:Catalogo",
+        "text": "idCatalogo: 1\ncatalogoRenovado: false\nactualizaCatalogo: 23/11/2016",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "C1:Cancelacion",
+        "text": "idCancelacion: 1\nesFallitoTecnico: false\nseguro_activo: true",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "LP1:LineaPedido",
+        "text": "CantidadPedida: 4\nPrecioTotal: 130€",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "LP2:LineaPedido",
+        "text": "CantidadPedida: 2\nPrecioTotal: 180€",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Pe1:Pedido",
+        "text": "idPedido: 7732\nestado: cancelado\nfecha_reserva: 13/4/2016\nultimoDiaCancelacion: 16/12/2016",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Pe2:Pedido",
+        "text": "idPedido: 2\nestado: reservado\nfecha_reserva: 20/3/2015\nultimoDiaCancelacion: 13/10/2015",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Pe2:Pedido",
+        "text": "idPedido: 2\nestado: reservado\nfecha_reserva: 20/3/2015\nultimoDiaCancelacion: 13/10/2015",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "PR1:Proveedor",
+        "text": "idProveedores: 1\nnombre: Pullmantour\ntelefono: 9543323266",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "PR2:Proveedor",
+        "text": "idProveedores: 2\nnombre: Balearia\ntelefono: 9533232112",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "PR3:Proveedor",
+        "text": "idProveedores: 3\nnombre: Sole\ntelefono: 954199395",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "RN-1",
+        "text": "RN-1: No archivar facturas hasta no haber sido pagadas completamente por el cliente.",
+        "class": "Note"
+      },
+      {
+        "id": "RN-4",
+        "text": "RN-4: Renovación de catálogo.",
+        "class": "Note"
+      },
+      {
+        "id": "V1:Viaje",
+        "text": "idViaje: 1\nnombre: Madrid/Barcelona\ntipoViaje: Tour",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "V2:Viaje",
+        "text": "idViaje: 2\nnombre: Sevilla/Londres\ntipoViaje: Vuelo",
+        "class": "SimpleClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "A1:Albaran",
+        "head": "Pe1:Pedido",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "A2:Albaran",
+        "head": "Pe2:Pedido",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "C1:Catalogo",
+        "head": "V1:Viaje",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "C1:Catalogo",
+        "head": "V2:Viaje",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Pe1:Pedido",
+        "head": "LP1:LineaPedido",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Pe2:Pedido",
+        "head": "LP2:LineaPedido",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Pe1:Pedido",
+        "head": "C1:Cancelacion",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "V1:Viaje",
+        "head": "PR1:Proveedor",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "V2:Viaje",
+        "head": "PR2:Proveedor",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "V2:Viaje",
+        "head": "PR3:Proveedor",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "C1:Catalogo",
+        "head": "RN-4",
+        "class": "Annotation Edge",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "A1:Albaran",
+        "head": "RN-1",
+        "class": "Annotation Edge",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "A2:Albaran",
+        "head": "RN-1",
+        "class": "Annotation Edge",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

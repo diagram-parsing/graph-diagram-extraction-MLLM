@@ -1,0 +1,127 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Customer",
+        "text": "Customer",
+        "attributes": [
+          "CustomerArea",
+          "CustomerPONumber",
+          "OrderDate",
+          "OrderTotal"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Sales order",
+        "text": "Sales order",
+        "attributes": [
+          "OrderDate",
+          "SalesOrderID"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Sales Document Items",
+        "text": "Sales Document Items",
+        "attributes": [
+          "ItemID",
+          "Description",
+          "Quantity"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Material",
+        "text": "Material",
+        "attributes": [
+          "MaterialID",
+          "MaterialDescription",
+          "MaterialQuantity"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Invoice Document",
+        "text": "Invoice Document",
+        "attributes": [
+          "InvoiceNumber",
+          "InvoiceDate",
+          "InvoiceAmount"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Shipping document",
+        "text": "Shipping document",
+        "attributes": [
+          "ShippingAddress",
+          "ShippingID"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Schedule Line",
+        "text": "Schedule Line",
+        "attributes": [
+          "DeliveryQuantity",
+          "DeliveryDate"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Customer",
+        "head": "Sales order",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Sales order",
+        "head": "Sales Document Items",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "n"
+      },
+      {
+        "tail": "Sales Document Items",
+        "head": "Material",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "n"
+      },
+      {
+        "tail": "Customer",
+        "head": "Invoice Document",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Sales order",
+        "head": "Invoice Document",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Sales Document Items",
+        "head": "Schedule Line",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "n"
+      }
+    ],
+    "groups": []
+  }
+]
+```

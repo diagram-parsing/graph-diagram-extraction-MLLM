@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "ALLERGENE",
+        "text": "ALLERGENE",
+        "attributes": ["Nome:string", "Categoria:string"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "INGREDIENTE",
+        "text": "INGREDIENTE",
+        "attributes": ["Nome:string", "Tipo:string"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "PIATTO",
+        "text": "PIATTO",
+        "attributes": [
+          "Nome:string",
+          "immagine:string",
+          "kcal:string",
+          "tempo di prep:time",
+          "prezzo:currency",
+          "descrizione:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ORDINE",
+        "text": "ORDINE",
+        "attributes": [
+          "tempo di consegna:time",
+          "pagato:boolean",
+          "pagamentoabbonfine:boolean",
+          "incarico:boolean",
+          "inconsegna:boolean",
+          "concluso:boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Comprende",
+        "text": "Comprende",
+        "attributes": ["Quantita:int"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "CLiente",
+        "text": "CLiente",
+        "attributes": [
+          "Nome:string",
+          "Numero di tel:string",
+          "indirizzo:string",
+          "cognome:string",
+          "email:string"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "ALLERGENE",
+        "head": "PIATTO",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "INGREDIENTE",
+        "head": "PIATTO",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "PIATTO",
+        "head": "ORDINE",
+        "class": "Composition",
+        "label": "Comprende",
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "ORDINE",
+        "head": "CLiente",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      }
+    ],
+    "groups": []
+  }
+]
+```

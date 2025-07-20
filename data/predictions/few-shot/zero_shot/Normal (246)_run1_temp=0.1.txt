@@ -1,0 +1,60 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": null
+      },
+      {
+        "id": "Input F",
+        "text": "Input F",
+        "class": null
+      },
+      {
+        "id": "C=5/9*(F-32)",
+        "text": "C=5/9*(F-32)",
+        "class": null
+      },
+      {
+        "id": "Print C",
+        "text": "Print C",
+        "class": null
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "Input F",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Input F",
+        "head": "C=5/9*(F-32)",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "C=5/9*(F-32)",
+        "head": "Print C",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Print C",
+        "head": "End",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

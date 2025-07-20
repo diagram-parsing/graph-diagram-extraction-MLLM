@@ -1,0 +1,125 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "start",
+      "text": "start",
+      "class": "terminator"
+    },
+    {
+      "id": "input a,b,c",
+      "text": "input a,b,c",
+      "class": "data"
+    },
+    {
+      "id": "delta_expr",
+      "text": "Δ = b^2 - 4ac",
+      "class": "process"
+    },
+    {
+      "id": "delta_lt_0",
+      "text": "Δ < 0",
+      "class": "decision"
+    },
+    {
+      "id": "No solution",
+      "text": "No solution",
+      "class": "data"
+    },
+    {
+      "id": "delta_eq_0",
+      "text": "Δ = 0",
+      "class": "decision"
+    },
+    {
+      "id": "output_-b_over_2a",
+      "text": "output -b/2a",
+      "class": "process"
+    },
+    {
+      "id": "output_plus",
+      "text": "output (-b+√Δ)/2a",
+      "class": "process"
+    },
+    {
+      "id": "output_minus",
+      "text": "output (-b-√Δ)/2a",
+      "class": "process"
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "input a,b,c",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "input a,b,c",
+      "head": "delta_expr",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "delta_expr",
+      "head": "delta_lt_0",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "delta_lt_0",
+      "head": "No solution",
+      "class": "flow",
+      "label": "Y"
+    },
+    {
+      "tail": "No solution",
+      "head": "End",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "delta_lt_0",
+      "head": "delta_eq_0",
+      "class": "flow",
+      "label": "N"
+    },
+    {
+      "tail": "delta_eq_0",
+      "head": "output_-b_over_2a",
+      "class": "flow",
+      "label": "Y"
+    },
+    {
+      "tail": "output_-b_over_2a",
+      "head": "End",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "delta_eq_0",
+      "head": "output_plus",
+      "class": "flow",
+      "label": "N"
+    },
+    {
+      "tail": "output_plus",
+      "head": "output_minus",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "output_minus",
+      "head": "End",
+      "class": "flow",
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

@@ -1,0 +1,54 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Factura",
+      "attributes": [
+        "- fecha"
+      ],
+      "methods": null,
+      "id": "Factura",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Producto",
+      "attributes": [
+        "- producto",
+        "- tipo_IVA"
+      ],
+      "methods": null,
+      "id": "Producto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Linea_factura",
+      "attributes": [
+        "- cantidad",
+        "- precio"
+      ],
+      "methods": null,
+      "id": "Linea_factura",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Factura",
+      "head": "Producto",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Factura",
+      "head": "Linea_factura",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

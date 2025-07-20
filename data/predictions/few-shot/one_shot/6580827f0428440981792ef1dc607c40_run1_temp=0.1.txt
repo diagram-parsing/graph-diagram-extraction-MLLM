@@ -1,0 +1,254 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Product_Categories",
+        "text": "Product_Categories",
+        "attributes": [
+          "Product_category_number :PK",
+          "Product_category_description",
+          "Product_category_manager",
+          "Product_category_numberes",
+          "Partner_number :FK"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Products",
+        "text": "Products",
+        "attributes": [
+          "Product_number :PK",
+          "Product_description",
+          "Product_price",
+          "Product_unit_of_sale",
+          "Product_quantity_on_hand",
+          "Product_notes",
+          "Product_category_number :FK"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Quote",
+        "text": "Quote",
+        "attributes": [
+          "Quote_number :PK",
+          "Quote_date",
+          "Quote_amount",
+          "Partner_number :FK",
+          "Customer_number :FK"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Quote-Products",
+        "text": "Quote-Products",
+        "attributes": [
+          "Product_number :PK",
+          "Quote_number :PK",
+          "Quote_quantity",
+          "Quote_price",
+          "Quote_notes"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Order",
+        "text": "Order",
+        "attributes": [
+          "Order_number :PK",
+          "Order_date",
+          "Order_required_by",
+          "Order_delivered",
+          "Order_total_amount",
+          "Order_instructions",
+          "Quote_number :FK",
+          "Order_status_code :FK",
+          "Partner_number :FK",
+          "Customer_number :FK",
+          "Receipt_number :FK"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Order-Products",
+        "text": "Order-Products",
+        "attributes": [
+          "Product_number :PK",
+          "Order_number :PK",
+          "Order_quantity",
+          "Order_price"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Order_Status",
+        "text": "Order_Status",
+        "attributes": [
+          "Order_status_code :PK",
+          "Order_status_description"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Sunset Partner",
+        "text": "Sunset Partner",
+        "attributes": [
+          "Partner_number :PK",
+          "Partner_first_name",
+          "Partner_last_name",
+          "Partner_hire_date",
+          "Partner_SocSecNo",
+          "Partner_Address",
+          "Partner_Address2",
+          "Partner_City",
+          "Partner_State",
+          "Partner_Zip",
+          "Partner_phone",
+          "Partner_cellphone"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Customer",
+        "text": "Customer",
+        "attributes": [
+          "Customer_number :PK",
+          "Customer_name",
+          "Customer_address",
+          "Customer_address_2",
+          "Customer_city",
+          "Customer_state",
+          "Customer_zip",
+          "Customer_contact",
+          "Customer_phone",
+          "Customer_established_date",
+          "Customer_last_activity",
+          "Customer_balance"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Cash",
+        "text": "Cash",
+        "attributes": [
+          "Account_number :PK",
+          "Bank_routing_number",
+          "Bank_balance",
+          "Bank_name",
+          "Bank_branch",
+          "Bank_phone_number"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Cash Receipt",
+        "text": "Cash Receipt",
+        "attributes": [
+          "Receipt_number :PK",
+          "Receipt_date",
+          "Receipt_amount",
+          "Customer_check_number",
+          "Bank_account_number",
+          "Receipt_deposit_date",
+          "Account_number :FK",
+          "Customer_number :FK",
+          "Partner_number :FK"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Product_Categories",
+        "head": "Products",
+        "class": "Composition",
+        "label": "Product_category_number",
+        "cardinality_start": "1",
+        "cardinality_end": "0..*"
+      },
+      {
+        "tail": "Quote",
+        "head": "Quote-Products",
+        "class": "Composition",
+        "label": "Quote_number",
+        "cardinality_start": "1",
+        "cardinality_end": "0..*"
+      },
+      {
+        "tail": "Quote",
+        "head": "Order",
+        "class": "DirectedAssociation",
+        "label": "Quote_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Order",
+        "head": "Order-Products",
+        "class": "Composition",
+        "label": "Order_number",
+        "cardinality_start": "1",
+        "cardinality_end": "0..*"
+      },
+      {
+        "tail": "Order",
+        "head": "Order_Status",
+        "class": "DirectedAssociation",
+        "label": "Order_status_code",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Order",
+        "head": "Cash Receipt",
+        "class": "DirectedAssociation",
+        "label": "Receipt_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Cash Receipt",
+        "head": "Cash",
+        "class": "DirectedAssociation",
+        "label": "Bank_account_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Order",
+        "head": "Customer",
+        "class": "DirectedAssociation",
+        "label": "Customer_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Order",
+        "head": "Sunset Partner",
+        "class": "DirectedAssociation",
+        "label": "Partner_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Cash Receipt",
+        "head": "Customer",
+        "class": "DirectedAssociation",
+        "label": "Customer_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "Cash Receipt",
+        "head": "Sunset Partner",
+        "class": "DirectedAssociation",
+        "label": "Partner_number",
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      }
+    ],
+    "groups": []
+  }
+]
+```

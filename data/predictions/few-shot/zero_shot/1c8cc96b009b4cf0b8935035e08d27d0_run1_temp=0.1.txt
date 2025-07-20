@@ -1,0 +1,115 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Medewerker",
+        "text": "Medewerker",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Helpdesk",
+        "text": "Helpdesk",
+        "class": "Task"
+      },
+      {
+        "id": "Escaleren via TOPDesk",
+        "text": "Escaleren via TOPDesk",
+        "class": "Task"
+      },
+      {
+        "id": "Ticket in Jira",
+        "text": "Ticket in Jira",
+        "class": "Task"
+      },
+      {
+        "id": "'On the fly' verhelpen",
+        "text": "'On the fly' verhelpen",
+        "class": "Task"
+      },
+      {
+        "id": "Verhelpen in tweede lijn",
+        "text": "Verhelpen in tweede lijn",
+        "class": "Task"
+      },
+      {
+        "id": "Nieuwe feature",
+        "text": "Nieuwe feature",
+        "class": "Task"
+      },
+      {
+        "id": "Bug",
+        "text": "Bug",
+        "class": "Task"
+      },
+      {
+        "id": "Naar normale swimlane",
+        "text": "Naar normale swimlane",
+        "class": "EndEvent"
+      },
+      {
+        "id": "Naar Fastlane",
+        "text": "Naar Fastlane",
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Medewerker",
+        "head": "Helpdesk",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Helpdesk",
+        "head": "'On the fly' verhelpen",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Helpdesk",
+        "head": "Escaleren via TOPDesk",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Escaleren via TOPDesk",
+        "head": "Ticket in Jira",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Ticket in Jira",
+        "head": "Nieuwe feature",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Ticket in Jira",
+        "head": "Bug",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Bug",
+        "head": "Naar Fastlane",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "'On the fly' verhelpen",
+        "head": "Verhelpen in tweede lijn",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Verhelpen in tweede lijn",
+        "head": "Naar normale swimlane",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

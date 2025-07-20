@@ -1,0 +1,160 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "give course description",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "collect all descriptions",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "enter in CIS",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "send list of students 2 weeks before start",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "choose students",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "send back to secretary",
+      "class": "task"
+    },
+    {
+      "id": "task_7",
+      "text": "assign students",
+      "class": "task"
+    },
+    {
+      "id": "task_8",
+      "text": "rebook in CIS",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "event_2",
+      "text": null,
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_7",
+      "head": "task_8",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_8",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Teacher",
+      "nodes": [
+        "event_1",
+        "task_1"
+      ],
+      "class": "lane"
+    },
+    {
+      "name": "Office",
+      "nodes": [
+        "task_2",
+        "task_3",
+        "task_4",
+        "exclusiveGateway_1",
+        "exclusiveGateway_2",
+        "task_5",
+        "task_6",
+        "task_7",
+        "task_8",
+        "event_2"
+      ],
+      "class": "lane"
+    }
+  ]
+}
+```

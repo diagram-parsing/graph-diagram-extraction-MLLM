@@ -1,0 +1,97 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Initialize AG",
+      "text": "Initialize AG",
+      "class": null
+    },
+    {
+      "id": "Generate initial population",
+      "text": "Generate initial population",
+      "class": null
+    },
+    {
+      "id": "Selection based on the fitness values",
+      "text": "Selection based on the fitness values",
+      "class": null
+    },
+    {
+      "id": "Connection",
+      "text": "Connection",
+      "class": null
+    },
+    {
+      "id": "Mutation",
+      "text": "Mutation",
+      "class": null
+    },
+    {
+      "id": "Implementation of the fitness function",
+      "text": "Implementation of the fitness function",
+      "class": null
+    },
+    {
+      "id": "update fitness value",
+      "text": "update fitness value",
+      "class": null
+    },
+    {
+      "id": "Finish",
+      "text": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initialize AG",
+      "head": "Generate initial population",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Generate initial population",
+      "head": "Selection based on the fitness values",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Selection based on the fitness values",
+      "head": "Connection",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Connection",
+      "head": "Mutation",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Mutation",
+      "head": "Implementation of the fitness function",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Implementation of the fitness function",
+      "head": "update fitness value",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "update fitness value",
+      "head": "Mutation",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "update fitness value",
+      "head": "Finish",
+      "class": null,
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}
+```

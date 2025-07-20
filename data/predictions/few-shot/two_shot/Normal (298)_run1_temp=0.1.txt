@@ -1,0 +1,134 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Algorithm",
+      "id": "Algorithm",
+      "class": null
+    },
+    {
+      "text": "Set N = Length of Array",
+      "id": "Set N = Length of Array",
+      "class": null
+    },
+    {
+      "text": "Set I = 0",
+      "id": "Set I = 0",
+      "class": null
+    },
+    {
+      "text": "Set Value = Array[I]",
+      "id": "Set Value = Array[I]",
+      "class": null
+    },
+    {
+      "text": "Set J = I - 1",
+      "id": "Set J = I - 1",
+      "class": null
+    },
+    {
+      "text": "J >= 0 AND Array[J] > Value",
+      "id": "J >= 0 AND Array[J] > Value",
+      "class": null
+    },
+    {
+      "text": "Set Array[J + 1] = Array[J]",
+      "id": "Set Array[J + 1] = Array[J]",
+      "class": null
+    },
+    {
+      "text": "Decrement J (J--)",
+      "id": "Decrement J (J--)",
+      "class": null
+    },
+    {
+      "text": "Update Value",
+      "id": "Update Value",
+      "class": null
+    },
+    {
+      "text": "Increment I (I++)",
+      "id": "Increment I (I++)",
+      "class": null
+    },
+    {
+      "text": "I < N",
+      "id": "I < N",
+      "class": null
+    },
+    {
+      "text": "Sorted Array",
+      "id": "Sorted Array",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Algorithm",
+      "head": "Set N = Length of Array",
+      "label": null
+    },
+    {
+      "tail": "Set N = Length of Array",
+      "head": "Set I = 0",
+      "label": null
+    },
+    {
+      "tail": "Set I = 0",
+      "head": "Set Value = Array[I]",
+      "label": null
+    },
+    {
+      "tail": "Set Value = Array[I]",
+      "head": "Set J = I - 1",
+      "label": null
+    },
+    {
+      "tail": "Set J = I - 1",
+      "head": "J >= 0 AND Array[J] > Value",
+      "label": null
+    },
+    {
+      "tail": "J >= 0 AND Array[J] > Value",
+      "head": "Set Array[J + 1] = Array[J]",
+      "label": "Yes"
+    },
+    {
+      "tail": "Set Array[J + 1] = Array[J]",
+      "head": "Decrement J (J--)",
+      "label": null
+    },
+    {
+      "tail": "Decrement J (J--)",
+      "head": "J >= 0 AND Array[J] > Value",
+      "label": "No"
+    },
+    {
+      "tail": "J >= 0 AND Array[J] > Value",
+      "head": "Update Value",
+      "label": "No"
+    },
+    {
+      "tail": "Update Value",
+      "head": "Increment I (I++)",
+      "label": null
+    },
+    {
+      "tail": "Increment I (I++)",
+      "head": "I < N",
+      "label": null
+    },
+    {
+      "tail": "I < N",
+      "head": "Update Value",
+      "label": "Yes"
+    },
+    {
+      "tail": "I < N",
+      "head": "Sorted Array",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

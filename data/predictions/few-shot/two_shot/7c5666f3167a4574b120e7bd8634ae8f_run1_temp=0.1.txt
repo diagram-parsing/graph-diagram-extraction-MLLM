@@ -1,0 +1,138 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Kunde",
+      "attributes": [
+        "- ID",
+        "- Name",
+        "- Telefonnummer",
+        "- Adresse",
+        "- ArtikelBestellen ()",
+        "- ArtikelWarten ()",
+        "- ArtikelErhalten ()"
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kundenauftrag",
+      "attributes": [
+        "- ID",
+        "- Bearbeitungsdatum",
+        "- Status"
+      ],
+      "methods": null,
+      "id": "Kundenauftrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kundenauftragsposition",
+      "attributes": [
+        "- ID",
+        "- Auftragspositionsnr",
+        "- Anzahl"
+      ],
+      "methods": null,
+      "id": "Kundenauftragsposition",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mitglied",
+      "attributes": [
+        "- ID",
+        "- Rolle",
+        "- Vorname"
+      ],
+      "methods": null,
+      "id": "Mitglied",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel",
+      "attributes": [
+        "- ID",
+        "- Beschreibung"
+      ],
+      "methods": null,
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Getränk",
+      "attributes": [
+        "- Qualität",
+        "- Größe",
+        "- Preis"
+      ],
+      "methods": null,
+      "id": "Getränk",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Taschenuch",
+      "attributes": [
+        "- Marke",
+        "- Größe",
+        "- Farbe",
+        "- Preis"
+      ],
+      "methods": null,
+      "id": "Taschenuch",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde",
+      "head": "Kundenauftrag",
+      "class": "UndirectedAssociation",
+      "label": "hat",
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Kundenauftrag",
+      "head": "Mitglied",
+      "class": "UndirectedAssociation",
+      "label": "bearbeitet von",
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Kundenauftrag",
+      "head": "Kundenauftragsposition",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Kundenauftragsposition",
+      "head": "Artikel",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Artikel",
+      "head": "Getränk",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Artikel",
+      "head": "Taschenuch",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

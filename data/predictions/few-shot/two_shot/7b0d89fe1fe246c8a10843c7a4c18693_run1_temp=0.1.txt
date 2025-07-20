@@ -1,0 +1,107 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Seadmelle järele tulenine",
+      "text": "Seadmelle järele tulenine",
+      "class": "StartEvent"
+    },
+    {
+      "id": "Arve esitamine",
+      "text": "Arve esitamine",
+      "class": "Task"
+    },
+    {
+      "id": "Arve vastavuse kontrollimine",
+      "text": "Arve vastavuse kontrollimine",
+      "class": "Task"
+    },
+    {
+      "id": "Töötajalt kinnitusu küsimine",
+      "text": "Töötajalt kinnitusu küsimine",
+      "class": "Task"
+    },
+    {
+      "id": "Arve kontrollimine",
+      "text": "Arve kontrollimine",
+      "class": "Task"
+    },
+    {
+      "id": "Arve tasumine",
+      "text": "Arve tasumine",
+      "class": "EndEvent"
+    },
+    {
+      "id": "Arve saatmine parandamiseks",
+      "text": "Arve saatmine parandamiseks",
+      "class": "EndEvent"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Seadmelle järele tulenine",
+      "head": "Arve esitamine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arve esitamine",
+      "head": "Arve vastavuse kontrollimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arve vastavuse kontrollimine",
+      "head": "Töötajalt kinnitusu küsimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Töötajalt kinnitusu küsimine",
+      "head": "Arve kontrollimine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Arve kontrollimine",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Arve tasumine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Arve saatmine parandamiseks",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Pakkujaja",
+      "id": "Pakkujaja",
+      "nodes": [
+        "Seadmelle järele tulenine",
+        "Arve esitamine",
+        "Arve vastavuse kontrollimine",
+        "Töötajalt kinnitusu küsimine",
+        "Arve kontrollimine",
+        "Exclusive_Databased_Gateway_1",
+        "Arve tasumine",
+        "Arve saatmine parandamiseks"
+      ],
+      "class": "Lane"
+    }
+  ]
+}
+```

@@ -1,0 +1,54 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Condition",
+      "id": "Condition",
+      "class": null
+    },
+    {
+      "text": "Loop Body",
+      "id": "Loop Body",
+      "class": null
+    },
+    {
+      "text": "End of loop",
+      "id": "End of loop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Condition",
+      "label": null
+    },
+    {
+      "tail": "Condition",
+      "head": "Loop Body",
+      "label": "True"
+    },
+    {
+      "tail": "Loop Body",
+      "head": "Condition",
+      "label": null
+    },
+    {
+      "tail": "Condition",
+      "head": "End of loop",
+      "label": "False"
+    },
+    {
+      "tail": "Loop Body",
+      "head": "End of loop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

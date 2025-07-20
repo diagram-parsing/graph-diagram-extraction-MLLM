@@ -1,0 +1,93 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Bestell-informationen bekommen",
+        "text": "Bestell-informationen bekommen",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Lagerbestand gucken",
+        "text": "Lagerbestand gucken",
+        "class": "Task"
+      },
+      {
+        "id": "Kunden benachrichtigen",
+        "text": "Kunden benachrichtigen",
+        "class": "Task"
+      },
+      {
+        "id": "Smartphone packen",
+        "text": "Smartphone packen",
+        "class": "Task"
+      },
+      {
+        "id": "zu Kunden liefern",
+        "text": "zu Kunden liefern",
+        "class": "Task"
+      },
+      {
+        "id": "Smartphone richtig geliefert",
+        "text": "Smartphone richtig geliefert",
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent",
+        "head": "Bestell-informationen bekommen",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Bestell-informationen bekommen",
+        "head": "Lagerbestand gucken",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Bestell-informationen bekommen",
+        "head": "Kunden benachrichtigen",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Lagerbestand gucken",
+        "head": "Smartphone packen",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Smartphone packen",
+        "head": "zu Kunden liefern",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "zu Kunden liefern",
+        "head": "Smartphone richtig geliefert",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Kunden benachrichtigen",
+        "head": "Smartphone packen",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

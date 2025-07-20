@@ -1,0 +1,184 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Person",
+        "text": "Person",
+        "methods": null,
+        "attributes": [
+          "name:String",
+          "vorname:String",
+          "geburtsDatum:Datatum",
+          "Telefon:ArrayList(INT)"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Adresse",
+        "text": "Adresse",
+        "methods": null,
+        "attributes": [
+          "hausNummer:int",
+          "strasse:String",
+          "wohnort:String",
+          "plz:int",
+          "land:String",
+          "Zusatz:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Kunde",
+        "text": "Kunde",
+        "methods": null,
+        "attributes": [
+          "kundenID:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Mitarbeiter",
+        "text": "Mitarbeiter",
+        "methods": null,
+        "attributes": [
+          "mailD:int",
+          "login:String",
+          "berechtigung:String",
+          "person:Person",
+          "password:char []",
+          "urlaubstage:int",
+          "aktiv:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Auftrag",
+        "text": "Auftrag",
+        "methods": null,
+        "attributes": [
+          "auftragID:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Baueteile",
+        "text": "Baueteile",
+        "methods": null,
+        "attributes": [
+          "bautieleListe:ArrayList"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Partnumber",
+        "text": "Partnumber",
+        "methods": null,
+        "attributes": [
+          "partNumberID:int",
+          "bezeichnung:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "HighSpeed_Main",
+        "text": "HighSpeed_Main",
+        "methods": null,
+        "attributes": [
+          "+ user:User"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Login",
+        "text": "Login",
+        "methods": null,
+        "attributes": null,
+        "class": "ComplexClass"
+      },
+      {
+        "id": "JPanel1,JPanel2,JPanel3...",
+        "text": "JPanel1,JPanel2,JPanel3...",
+        "methods": null,
+        "attributes": null,
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Person",
+        "head": "Kunde",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Person",
+        "head": "Mitarbeiter",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Kunde",
+        "head": "Auftrag",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Auftrag",
+        "head": "Baueteile",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Baueteile",
+        "head": "Partnumber",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Mitarbeiter",
+        "head": "HighSpeed_Main",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "HighSpeed_Main",
+        "head": "Login",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "HighSpeed_Main",
+        "head": "JPanel1,JPanel2,JPanel3...",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Person",
+        "head": "Adresse",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

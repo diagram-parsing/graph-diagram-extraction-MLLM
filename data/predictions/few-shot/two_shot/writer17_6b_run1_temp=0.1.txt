@@ -1,0 +1,88 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": "terminator"
+    },
+    {
+      "text": "Input n",
+      "id": "Input n",
+      "class": "data"
+    },
+    {
+      "text": "K=1 sum=0",
+      "id": "K=1 sum=0",
+      "class": "process"
+    },
+    {
+      "text": "Sum=sum+K",
+      "id": "Sum=sum+K",
+      "class": "process"
+    },
+    {
+      "text": "k=k+1",
+      "id": "k=k+1",
+      "class": "process"
+    },
+    {
+      "text": "k==n ?",
+      "id": "k==n ?",
+      "class": "decision"
+    },
+    {
+      "text": "disp sum",
+      "id": "disp sum",
+      "class": "data"
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input n",
+      "label": null
+    },
+    {
+      "tail": "Input n",
+      "head": "K=1 sum=0",
+      "label": null
+    },
+    {
+      "tail": "K=1 sum=0",
+      "head": "Sum=sum+K",
+      "label": null
+    },
+    {
+      "tail": "Sum=sum+K",
+      "head": "k=k+1",
+      "label": "1"
+    },
+    {
+      "tail": "Sum=sum+K",
+      "head": "k==n ?",
+      "label": null
+    },
+    {
+      "tail": "k==n ?",
+      "head": "disp sum",
+      "label": "1"
+    },
+    {
+      "tail": "disp sum",
+      "head": "Finish",
+      "label": null
+    },
+    {
+      "tail": "k==n ?",
+      "head": "k=k+1",
+      "label": "0"
+    }
+  ]
+}
+```

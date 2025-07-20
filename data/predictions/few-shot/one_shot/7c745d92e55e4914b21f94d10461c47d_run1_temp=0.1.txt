@@ -1,0 +1,48 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Kunde",
+        "text": "Kunde",
+        "methods": ["zahlfähigkeit()", "akt_kaufer()"],
+        "attributes": ["Geburtsdatum", "Kunden-Nr."],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Verkäufe",
+        "text": "Verkäufe",
+        "methods": ["bezahlen()", "verpacken()"],
+        "attributes": ["Artikelbezeichnung", "Menge"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Produkte",
+        "text": "Produkte",
+        "methods": ["klassifizierung()", "altersbegrenzung()"],
+        "attributes": ["Artikel-Nr.", "Gewicht", "Größe"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Kunde",
+        "head": "Verkäufe",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Produkte",
+        "head": "Verkäufe",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

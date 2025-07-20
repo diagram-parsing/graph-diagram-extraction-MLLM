@@ -1,0 +1,191 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Ente",
+      "attributes": [
+        "- Nome: String",
+        "- CampoCompetenze: String"
+      ],
+      "methods": null,
+      "id": "Ente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "operatore",
+      "attributes": [
+        "- Nome: String",
+        "- Cognome: String",
+        "- Identificativo: String"
+      ],
+      "methods": null,
+      "id": "operatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Diario sociale",
+      "attributes": [
+        "- Note: String",
+        "- Allegati: String",
+        "- AssociazioneIncaricata: String",
+        "- AppuntamentoPrenotato: boolean",
+        "- DataAppu: Date",
+        "- OraAppu: Time",
+        "- Chiuso: boolean"
+      ],
+      "methods": null,
+      "id": "Diario sociale",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Intervento",
+      "attributes": [
+        "- TipolIntervento: String",
+        "- DecisioniPres: String",
+        "- Motivazioni: String",
+        "- EsitoPositivo: boolean",
+        "- DataIntervento: Date",
+        "- OraIntervento: Time"
+      ],
+      "methods": null,
+      "id": "Intervento",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Utente",
+      "attributes": [
+        "- Nome: String",
+        "- Cognome: String",
+        "- CF: String"
+      ],
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Associazione",
+      "attributes": [
+        "- Nome: String",
+        "- CampoCompetenze: String"
+      ],
+      "methods": null,
+      "id": "Associazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "gli attributi non sono corretti secondo me ma non saprei come metterli",
+      "attributes": null,
+      "methods": null,
+      "id": "gli attributi non sono corretti secondo me ma non saprei come metterli",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Ente",
+      "head": "Diario sociale",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Ente",
+      "head": "Intervento",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Ente",
+      "head": "Utente",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Ente",
+      "head": "Associazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "operatore",
+      "head": "Diario sociale",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "operatore",
+      "head": "Intervento",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "operatore",
+      "head": "Utente",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "operatore",
+      "head": "Associazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Utente",
+      "head": "Diario sociale",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Utente",
+      "head": "Intervento",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Utente",
+      "head": "Associazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Associazione",
+      "head": "Diario sociale",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Associazione",
+      "head": "Intervento",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "*"
+    }
+  ],
+  "groups": []
+}
+```

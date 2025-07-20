@@ -1,0 +1,143 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "studente",
+        "text": "studente",
+        "attributes": ["nome: String", "matricola: String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "docente",
+        "text": "docente",
+        "attributes": ["nome: String", "IDdocente: String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "progetto formativo",
+        "text": "progetto formativo",
+        "attributes": ["nome: String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "azienda convenzionata",
+        "text": "azienda convenzionata",
+        "attributes": ["nome: String", "IDazienda: String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "dipendente",
+        "text": "dipendente",
+        "attributes": ["IDdipendente: String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "tirocinio",
+        "text": "tirocinio",
+        "attributes": [
+          "dataInizio: Date",
+          "dataFine: Date",
+          "voto: int",
+          "votoFormale: boolean",
+          "firmaTutoreAziendale: String",
+          "firmaTutoreAccademico: String",
+          "registro: boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "presenza",
+        "text": "presenza",
+        "attributes": [
+          "giorno: Date",
+          "orarioInizio: time",
+          "orarioFine: time",
+          "booleanStudente: boolean",
+          "firmaTutore: boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "questionario valutazione studente",
+        "text": "questionario valutazione studente",
+        "attributes": ["dataCompilazione: Date"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "questionario valutazione tutor aziendale",
+        "text": "questionario valutazione tutor aziendale",
+        "attributes": ["dataCompilazione: Date"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "studente",
+        "head": "tirocinio",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "docente",
+        "head": "tirocinio",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "progetto formativo",
+        "head": "tirocinio",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "azienda convenzionata",
+        "head": "tirocinio",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "dipendente",
+        "head": "tirocinio",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "tirocinio",
+        "head": "questionario valutazione studente",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "tirocinio",
+        "head": "questionario valutazione tutor aziendale",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "tirocinio",
+        "head": "presenza",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      }
+    ],
+    "groups": []
+  }
+]
+```

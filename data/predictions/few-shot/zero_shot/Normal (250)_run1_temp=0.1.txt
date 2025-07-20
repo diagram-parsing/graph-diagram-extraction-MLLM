@@ -1,0 +1,75 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": null
+    },
+    {
+      "id": "Process 1",
+      "text": "Process 1",
+      "class": null
+    },
+    {
+      "id": "Decision",
+      "text": "Decision",
+      "class": null
+    },
+    {
+      "id": "Process 2",
+      "text": "Process 2",
+      "class": null
+    },
+    {
+      "id": "Process 3",
+      "text": "Process 3",
+      "class": null
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Process 1",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Process 1",
+      "head": "Decision",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Process 2",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Decision",
+      "head": "Process 3",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Process 3",
+      "head": "Stop",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Process 2",
+      "head": "Process 1",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

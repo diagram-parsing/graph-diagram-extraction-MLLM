@@ -1,0 +1,60 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": null
+      },
+      {
+        "id": "SourceProcessor",
+        "text": "Source Processor",
+        "class": null
+      },
+      {
+        "id": "Processor",
+        "text": "Processor",
+        "class": null
+      },
+      {
+        "id": "SinkProcessor",
+        "text": "Sink Processor",
+        "class": null
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "SourceProcessor",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "SourceProcessor",
+        "head": "Processor",
+        "class": null,
+        "label": "Stream"
+      },
+      {
+        "tail": "Processor",
+        "head": "SinkProcessor",
+        "class": null,
+        "label": "Stream"
+      },
+      {
+        "tail": "SinkProcessor",
+        "head": "End",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

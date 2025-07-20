@@ -1,0 +1,99 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Bill",
+      "id": "Bill",
+      "class": null
+    },
+    {
+      "text": "Review Bill",
+      "id": "Review Bill",
+      "class": null
+    },
+    {
+      "text": "Invoice Meets Requirements?",
+      "id": "Invoice Meets Requirements?",
+      "class": null
+    },
+    {
+      "text": "Return",
+      "id": "Return",
+      "class": null
+    },
+    {
+      "text": "Information Required",
+      "id": "Information Required",
+      "class": null
+    },
+    {
+      "text": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "id": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "class": null
+    },
+    {
+      "text": "Action Taken, Issue Resolved?",
+      "id": "Action Taken, Issue Resolved?",
+      "class": null
+    },
+    {
+      "text": "Invoice Placed in Payment Queue",
+      "id": "Invoice Placed in Payment Queue",
+      "class": null
+    },
+    {
+      "text": "Payment Processed",
+      "id": "Payment Processed",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Bill",
+      "head": "Review Bill",
+      "label": null
+    },
+    {
+      "tail": "Review Bill",
+      "head": "Invoice Meets Requirements?",
+      "label": null
+    },
+    {
+      "tail": "Invoice Meets Requirements?",
+      "head": "Return",
+      "label": "No"
+    },
+    {
+      "tail": "Invoice Meets Requirements?",
+      "head": "Information Required",
+      "label": "Yes"
+    },
+    {
+      "tail": "Information Required",
+      "head": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "label": "No"
+    },
+    {
+      "tail": "Information Required",
+      "head": "Invoice Placed in Payment Queue",
+      "label": "Yes"
+    },
+    {
+      "tail": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "head": "Action Taken, Issue Resolved?",
+      "label": null
+    },
+    {
+      "tail": "Action Taken, Issue Resolved?",
+      "head": "Information Required",
+      "label": "Yes"
+    },
+    {
+      "tail": "Invoice Placed in Payment Queue",
+      "head": "Payment Processed",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

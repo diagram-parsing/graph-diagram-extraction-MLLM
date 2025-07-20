@@ -1,0 +1,91 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Example",
+      "text": "Example",
+      "class": null
+    },
+    {
+      "id": "Does the computer turn on?",
+      "text": "Does the computer turn on?",
+      "class": null
+    },
+    {
+      "id": "Any Report",
+      "text": "Any Report",
+      "class": null
+    },
+    {
+      "id": "Is the computer power light on?",
+      "text": "Is the computer power light on?",
+      "class": null
+    },
+    {
+      "id": "Perform a search for the error message",
+      "text": "Perform a search for the error message",
+      "class": null
+    },
+    {
+      "id": "Computer Okay",
+      "text": "Computer Okay",
+      "class": null
+    },
+    {
+      "id": "PC ON",
+      "text": "PC ON",
+      "class": null
+    },
+    {
+      "id": "Check the computer power cord",
+      "text": "Check the computer power cord",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Example",
+      "head": "Does the computer turn on?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Does the computer turn on?",
+      "head": "Any Report",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Does the computer turn on?",
+      "head": "Is the computer power light on?",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Any Report",
+      "head": "Perform a search for the error message",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Any Report",
+      "head": "Computer Okay",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Is the computer power light on?",
+      "head": "PC ON",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the computer power light on?",
+      "head": "Check the computer power cord",
+      "class": null,
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

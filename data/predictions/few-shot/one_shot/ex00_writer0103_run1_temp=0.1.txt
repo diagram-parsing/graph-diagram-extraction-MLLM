@@ -1,0 +1,138 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "startEvent",
+        "text": "new online application received",
+        "class": "event"
+      },
+      {
+        "id": "evaluateApplication",
+        "text": "evaluate application",
+        "class": "task"
+      },
+      {
+        "id": "approveApplication",
+        "text": "approve application",
+        "class": "task"
+      },
+      {
+        "id": "rejectApplication",
+        "text": "reject application",
+        "class": "task"
+      },
+      {
+        "id": "notifyCustomer",
+        "text": "notify customer by mail",
+        "class": "task"
+      },
+      {
+        "id": "createNewBankAccount",
+        "text": "create new bank account",
+        "class": "task"
+      },
+      {
+        "id": "sendWelcomePouch",
+        "text": "send welcome pouch",
+        "class": "task"
+      },
+      {
+        "id": "sendBankCard",
+        "text": "send bank card",
+        "class": "task"
+      },
+      {
+        "id": "sendPIN",
+        "text": "send PIN number",
+        "class": "task"
+      },
+      {
+        "id": "accountCreated",
+        "text": "account created",
+        "class": "event"
+      },
+      {
+        "id": "applicationRejected",
+        "text": "application rejected",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "startEvent",
+        "head": "evaluateApplication",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "evaluateApplication",
+        "head": "approveApplication",
+        "class": "sequenceFlow",
+        "label": "T"
+      },
+      {
+        "tail": "evaluateApplication",
+        "head": "rejectApplication",
+        "class": "sequenceFlow",
+        "label": "F"
+      },
+      {
+        "tail": "rejectApplication",
+        "head": "notifyCustomer",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "notifyCustomer",
+        "head": "applicationRejected",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "approveApplication",
+        "head": "createNewBankAccount",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "createNewBankAccount",
+        "head": "sendWelcomePouch",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "createNewBankAccount",
+        "head": "sendBankCard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "createNewBankAccount",
+        "head": "sendPIN",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "sendWelcomePouch",
+        "head": "accountCreated",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "sendBankCard",
+        "head": "accountCreated",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "sendPIN",
+        "head": "accountCreated",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

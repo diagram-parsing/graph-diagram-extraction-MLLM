@@ -1,0 +1,87 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Cliente",
+        "text": "Cliente",
+        "attributes": ["Nome :string", "telefono :string"],
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Prenotazione",
+        "text": "Prenotazione",
+        "attributes": ["giorno :date", "ora :time", "numero persone :integer", "fumatori :boolean=NO"],
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Tavolo",
+        "text": "Tavolo",
+        "attributes": ["numero posti :integer", "fumatori :boolean = NO"],
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Portate",
+        "text": "Portate",
+        "attributes": ["nome :string", "prezzo :currency"],
+        "class": "SimpleClass"
+      },
+      {
+        "id": "Cameriere",
+        "text": "Cameriere",
+        "attributes": ["nome :string", "anni servizio :integer"],
+        "class": "SimpleClass"
+      },
+      {
+        "id": "inConto",
+        "text": "inConto",
+        "attributes": ["numero :integer"],
+        "class": "SimpleClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Cliente",
+        "head": "Prenotazione",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Prenotazione",
+        "head": "Tavolo",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Prenotazione",
+        "head": "Portate",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Prenotazione",
+        "head": "Cameriere",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Portate",
+        "head": "inConto",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

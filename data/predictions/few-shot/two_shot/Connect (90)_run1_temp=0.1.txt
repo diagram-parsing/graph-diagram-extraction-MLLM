@@ -1,0 +1,94 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Right",
+      "id": "Right",
+      "class": null
+    },
+    {
+      "text": "Left",
+      "id": "Left1",
+      "class": null
+    },
+    {
+      "text": "Go straight",
+      "id": "Go straight",
+      "class": null
+    },
+    {
+      "text": "Turn Right",
+      "id": "Turn Right",
+      "class": null
+    },
+    {
+      "text": "Left",
+      "id": "Left2",
+      "class": null
+    },
+    {
+      "text": "Turn Left",
+      "id": "Turn Left",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Right",
+      "label": null
+    },
+    {
+      "tail": "Right",
+      "head": "Left1",
+      "label": "Yes"
+    },
+    {
+      "tail": "Right",
+      "head": "Left2",
+      "label": "No"
+    },
+    {
+      "tail": "Left1",
+      "head": "Go straight",
+      "label": "Yes"
+    },
+    {
+      "tail": "Left1",
+      "head": "Turn Right",
+      "label": "No"
+    },
+    {
+      "tail": "Left2",
+      "head": "Turn Left",
+      "label": "Yes"
+    },
+    {
+      "tail": "Left2",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "Turn Right",
+      "head": "Right",
+      "label": null
+    },
+    {
+      "tail": "Turn Left",
+      "head": "Left1",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

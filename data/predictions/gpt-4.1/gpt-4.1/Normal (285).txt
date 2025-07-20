@@ -1,0 +1,82 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Image1",
+        "text": "Image",
+        "class": null
+      },
+      {
+        "id": "3Dpointcloud",
+        "text": "3D point cloud",
+        "class": null
+      },
+      {
+        "id": "Threshold",
+        "text": "Threshold",
+        "class": null
+      },
+      {
+        "id": "Preprocessing",
+        "text": "Preprocessing",
+        "class": null
+      },
+      {
+        "id": "Information",
+        "text": "Information",
+        "class": null
+      },
+      {
+        "id": "Gesturerecognition",
+        "text": "Gesture recognition",
+        "class": null
+      },
+      {
+        "id": "Image2",
+        "text": "Image",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Image1",
+        "head": "3Dpointcloud",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "3Dpointcloud",
+        "head": "Threshold",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Threshold",
+        "head": "Preprocessing",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Preprocessing",
+        "head": "Information",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Information",
+        "head": "Gesturerecognition",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Gesturerecognition",
+        "head": "Image2",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

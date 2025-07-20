@@ -1,0 +1,93 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent1",
+        "text": "automatische Beauftragung der Beteiligten",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task1",
+        "text": "Entwerfen und überarbeiten der Einzelteile",
+        "class": "Task"
+      },
+      {
+        "id": "Task2",
+        "text": "Erstellen und überarbeiten der Baugruppe",
+        "class": "Task"
+      },
+      {
+        "id": "Task3",
+        "text": "Erstellen der technischen Zeichnung-ableitungen",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Eventbased_Gateway1",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Task4",
+        "text": "Starten des automatischen Signaturtrags und Weiterleitung an die Fertigung",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent2",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent1",
+        "head": "Task1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task1",
+        "head": "Task2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task2",
+        "head": "Exclusive_Eventbased_Gateway1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway1",
+        "head": "Task3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Eventbased_Gateway1",
+        "head": "Task4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task3",
+        "head": "EndEvent1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task4",
+        "head": "EndEvent2",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

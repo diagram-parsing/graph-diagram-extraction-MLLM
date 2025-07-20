@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "Input n",
+        "text": "Input n",
+        "class": "process"
+      },
+      {
+        "id": "Initialize",
+        "text": "k = 1\nSum = 0",
+        "class": "process"
+      },
+      {
+        "id": "Sum = Sum + k",
+        "text": "Sum = Sum + k",
+        "class": "process"
+      },
+      {
+        "id": "k = k + 1",
+        "text": "k = k + 1",
+        "class": "process"
+      },
+      {
+        "id": "Decision",
+        "text": "k = n?",
+        "class": "decision"
+      },
+      {
+        "id": "Display Sum",
+        "text": "disp Sum",
+        "class": "process"
+      },
+      {
+        "id": "Finish",
+        "text": "Finish",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Input n",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Input n",
+        "head": "Initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Initialize",
+        "head": "Sum = Sum + k",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Sum = Sum + k",
+        "head": "Decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Decision",
+        "head": "Display Sum",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "Decision",
+        "head": "k = k + 1",
+        "class": null,
+        "label": "0"
+      },
+      {
+        "tail": "k = k + 1",
+        "head": "Sum = Sum + k",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Display Sum",
+        "head": "Finish",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,102 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Werk",
+      "text": "Werk",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Produkt",
+      "text": "Produkt",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Produktmanager",
+      "text": "Produktmanager",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Lieferant",
+      "text": "Lieferant",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Baugruppe",
+      "text": "Baugruppe",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Bauteil",
+      "text": "Bauteil",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Schraube",
+      "text": "Schraube",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Mutter",
+      "text": "Mutter",
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Aluprofil",
+      "text": "Aluprofil",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Werk",
+      "head": "Produkt",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Produkt",
+      "head": "Produktmanager",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Produkt",
+      "head": "Lieferant",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Produkt",
+      "head": "Baugruppe",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Baugruppe",
+      "head": "Bauteil",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Bauteil",
+      "head": "Schraube",
+      "class": "DirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Bauteil",
+      "head": "Mutter",
+      "class": "DirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Bauteil",
+      "head": "Aluprofil",
+      "class": "DirectedAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

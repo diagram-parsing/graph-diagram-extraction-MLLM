@@ -1,0 +1,157 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Enter hospital and locate the Ticket Issue Counter",
+      "id": "Enter hospital and locate the Ticket Issue Counter",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Wait in Ticket Counter Queue",
+      "id": "Wait in Ticket Counter Queue",
+      "class": "Task"
+    },
+    {
+      "text": "Ticket Counter Clerk issues 'Prescription Form' to patient",
+      "id": "Ticket Counter Clerk issues 'Prescription Form' to patient",
+      "class": "Task"
+    },
+    {
+      "text": "New patient fills out form with personal details: Name, Age, Gender, Place of Birth & Occupation",
+      "id": "New patient fills out form with personal details: Name, Age, Gender, Place of Birth & Occupation",
+      "class": "Task"
+    },
+    {
+      "text": "Prescription Form is handed back to Ticket Counter Clerk for processing",
+      "id": "Prescription Form is handed back to Ticket Counter Clerk for processing",
+      "class": "Task"
+    },
+    {
+      "text": "Ticket Counter Clerk issues Registration number",
+      "id": "Ticket Counter Clerk issues Registration number",
+      "class": "Task"
+    },
+    {
+      "text": "Ticket Counter Clerk issues Registration form",
+      "id": "Ticket Counter Clerk issues Registration form",
+      "class": "Task"
+    },
+    {
+      "text": "Patient is directed to Outpatient Department (OPD)",
+      "id": "Patient is directed to Outpatient Department (OPD)",
+      "class": "Task"
+    },
+    {
+      "text": "Patient registration form is submitted to ticket clerk",
+      "id": "Patient registration form is submitted to ticket clerk",
+      "class": "Task"
+    },
+    {
+      "text": "Ticket Counter clerk retrieves patient record",
+      "id": "Ticket Counter clerk retrieves patient record",
+      "class": "Task"
+    },
+    {
+      "text": "Patient is directed to clinical waiting room near consultation chamber",
+      "id": "Patient is directed to clinical waiting room near consultation chamber",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Enter hospital and locate the Ticket Issue Counter",
+      "head": "Wait in Ticket Counter Queue",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Wait in Ticket Counter Queue",
+      "head": "Ticket Counter Clerk issues 'Prescription Form' to patient",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket Counter Clerk issues 'Prescription Form' to patient",
+      "head": "New patient fills out form with personal details: Name, Age, Gender, Place of Birth & Occupation",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "New patient fills out form with personal details: Name, Age, Gender, Place of Birth & Occupation",
+      "head": "Prescription Form is handed back to Ticket Counter Clerk for processing",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prescription Form is handed back to Ticket Counter Clerk for processing",
+      "head": "Ticket Counter Clerk issues Registration number",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Prescription Form is handed back to Ticket Counter Clerk for processing",
+      "head": "Ticket Counter Clerk issues Registration form",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket Counter Clerk issues Registration number",
+      "head": "Patient is directed to Outpatient Department (OPD)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket Counter Clerk issues Registration form",
+      "head": "Patient is directed to Outpatient Department (OPD)",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Enter hospital and locate the Ticket Issue Counter",
+      "head": "Patient registration form is submitted to ticket clerk",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Patient registration form is submitted to ticket clerk",
+      "head": "Ticket Counter clerk retrieves patient record",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket Counter clerk retrieves patient record",
+      "head": "Patient is directed to clinical waiting room near consultation chamber",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "New Patient",
+      "id": "New Patient",
+      "nodes": [
+        "Enter hospital and locate the Ticket Issue Counter",
+        "Wait in Ticket Counter Queue",
+        "Ticket Counter Clerk issues 'Prescription Form' to patient",
+        "New patient fills out form with personal details: Name, Age, Gender, Place of Birth & Occupation",
+        "Prescription Form is handed back to Ticket Counter Clerk for processing",
+        "Ticket Counter Clerk issues Registration number",
+        "Ticket Counter Clerk issues Registration form",
+        "Patient is directed to Outpatient Department (OPD)"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Repeat Patient",
+      "id": "Repeat Patient",
+      "nodes": [
+        "Enter hospital and locate the Ticket Issue Counter",
+        "Patient registration form is submitted to ticket clerk",
+        "Ticket Counter clerk retrieves patient record",
+        "Patient is directed to clinical waiting room near consultation chamber"
+      ],
+      "class": "Lane"
+    }
+  ]
+}
+```

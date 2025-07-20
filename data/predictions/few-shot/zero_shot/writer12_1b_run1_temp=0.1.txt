@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "input_x",
+        "text": "Input X",
+        "class": "input"
+      },
+      {
+        "id": "initialize",
+        "text": "n = 1\nR = 1",
+        "class": "process"
+      },
+      {
+        "id": "calculate_r",
+        "text": "R = R^x_n",
+        "class": "process"
+      },
+      {
+        "id": "decision",
+        "text": "n = X",
+        "class": "decision"
+      },
+      {
+        "id": "update_n",
+        "text": "n = n + 1",
+        "class": "process"
+      },
+      {
+        "id": "display_r",
+        "text": "Display R",
+        "class": "output"
+      },
+      {
+        "id": "stop",
+        "text": "Stop",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "input_x",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "input_x",
+        "head": "initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "initialize",
+        "head": "calculate_r",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "calculate_r",
+        "head": "decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "decision",
+        "head": "display_r",
+        "class": null,
+        "label": "Y"
+      },
+      {
+        "tail": "decision",
+        "head": "update_n",
+        "class": null,
+        "label": "N"
+      },
+      {
+        "tail": "update_n",
+        "head": "calculate_r",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "display_r",
+        "head": "stop",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

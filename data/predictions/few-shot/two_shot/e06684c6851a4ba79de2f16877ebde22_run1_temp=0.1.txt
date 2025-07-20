@@ -1,0 +1,111 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Clinica",
+      "attributes": [
+        "- nombre",
+        "- dirección"
+      ],
+      "methods": null,
+      "id": "Clinica",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Distribuidor",
+      "attributes": [
+        "- nombre",
+        "- dirección",
+        "- e-mail",
+        "- teléfono"
+      ],
+      "methods": null,
+      "id": "Distribuidor",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pedido",
+      "attributes": [
+        "- código",
+        "- fecha"
+      ],
+      "methods": null,
+      "id": "Pedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "ProductoInventario",
+      "attributes": [
+        "- nombre",
+        "- cantidad",
+        "- máximo",
+        "- mínimo",
+        "- descripción"
+      ],
+      "methods": null,
+      "id": "ProductoInventario",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "LíneaDePedido",
+      "attributes": [
+        "- cantidadPedida",
+        "- precioPorUnidad"
+      ],
+      "methods": null,
+      "id": "LíneaDePedido",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "minimo>cantidadd>máximo\nminimo>0",
+      "attributes": null,
+      "methods": null,
+      "id": "minimo>cantidadd>máximo\nminimo>0",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Clinica",
+      "head": "Pedido",
+      "class": "UndirectedAssociation",
+      "label": "realiza",
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Distribuidor",
+      "head": "Pedido",
+      "class": "UndirectedAssociation",
+      "label": "envía",
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "ProductoInventario",
+      "head": "LíneaDePedido",
+      "class": "UndirectedAssociation",
+      "label": "tiene",
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "LíneaDePedido",
+      "head": "Pedido",
+      "class": "Composition",
+      "label": "contiene",
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "ProductoInventario",
+      "head": "minimo>cantidadd>máximo\nminimo>0",
+      "class": "Annotation Edge",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,78 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": "terminator"
+    },
+    {
+      "text": "Input n,m",
+      "id": "Input n,m",
+      "class": "data"
+    },
+    {
+      "text": "r = n % m",
+      "id": "r = n % m",
+      "class": "process"
+    },
+    {
+      "text": "r = 0 ?",
+      "id": "r = 0 ?",
+      "class": "decision"
+    },
+    {
+      "text": "n = m\nm = r",
+      "id": "n = m\nm = r",
+      "class": "process"
+    },
+    {
+      "text": "output m",
+      "id": "output m",
+      "class": "data"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input n,m",
+      "label": null
+    },
+    {
+      "tail": "Input n,m",
+      "head": "r = n % m",
+      "label": null
+    },
+    {
+      "tail": "r = n % m",
+      "head": "r = 0 ?",
+      "label": null
+    },
+    {
+      "tail": "r = 0 ?",
+      "head": "n = m\nm = r",
+      "label": "false"
+    },
+    {
+      "tail": "r = 0 ?",
+      "head": "output m",
+      "label": "true"
+    },
+    {
+      "tail": "n = m\nm = r",
+      "head": "r = n % m",
+      "label": null
+    },
+    {
+      "tail": "output m",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

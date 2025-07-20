@@ -1,0 +1,212 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "start_event",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "order_check",
+      "text": "order check",
+      "class": "Task"
+    },
+    {
+      "id": "exclusive_gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Invio_Notifica_Rifiuto",
+      "text": "Invio Notifica Rifiuto",
+      "class": "Task"
+    },
+    {
+      "id": "message_end_1",
+      "text": "",
+      "class": "MessageEndEvent"
+    },
+    {
+      "id": "Invio_Richiesta_Anticipo",
+      "text": "Invio Richiesta Anticipo",
+      "class": "Task"
+    },
+    {
+      "id": "parallel_gateway_1",
+      "text": "",
+      "class": "Parallel_Gateway"
+    },
+    {
+      "id": "timer_intermediate_1",
+      "text": "",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "id": "event_based_gateway_1",
+      "text": "",
+      "class": "Event_Based_Gateway"
+    },
+    {
+      "id": "Cancellazione_ordine",
+      "text": "Cancellazione ordine",
+      "class": "Task"
+    },
+    {
+      "id": "message_end_2",
+      "text": "",
+      "class": "MessageEndEvent"
+    },
+    {
+      "id": "Acquisizione_parti_da_magazzino",
+      "text": "Acquisizione parti da magazzino",
+      "class": "Task"
+    },
+    {
+      "id": "Assemblaggio_parti",
+      "text": "Assemblaggio parti",
+      "class": "Task"
+    },
+    {
+      "id": "send_intermediate_1",
+      "text": "",
+      "class": "IntermediateSendEvent"
+    },
+    {
+      "id": "Invio_messaggio_inizio_produzione",
+      "text": "Invio messaggio inizio produzione",
+      "class": "Task"
+    },
+    {
+      "id": "exclusive_gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "timer_intermediate_2",
+      "text": "",
+      "class": "IntermediateTimerEvent"
+    },
+    {
+      "id": "Invio_richiesta_pagamento",
+      "text": "Invio richiesta pagamento",
+      "class": "Task"
+    },
+    {
+      "id": "end_event",
+      "text": "",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start_event",
+      "head": "order_check",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order_check",
+      "head": "exclusive_gateway_1",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusive_gateway_1",
+      "head": "Invio_Notifica_Rifiuto",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Invio_Notifica_Rifiuto",
+      "head": "message_end_1",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusive_gateway_1",
+      "head": "Invio_Richiesta_Anticipo",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Invio_Richiesta_Anticipo",
+      "head": "parallel_gateway_1",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallel_gateway_1",
+      "head": "timer_intermediate_1",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "timer_intermediate_1",
+      "head": "Invio_Notifica_Rifiuto",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallel_gateway_1",
+      "head": "event_based_gateway_1",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_based_gateway_1",
+      "head": "Cancellazione_ordine",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Cancellazione_ordine",
+      "head": "message_end_2",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_based_gateway_1",
+      "head": "Acquisizione_parti_da_magazzino",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Acquisizione_parti_da_magazzino",
+      "head": "Assemblaggio_parti",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallel_gateway_1",
+      "head": "send_intermediate_1",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_intermediate_1",
+      "head": "Invio_messaggio_inizio_produzione",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Invio_messaggio_inizio_produzione",
+      "head": "exclusive_gateway_2",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusive_gateway_2",
+      "head": "timer_intermediate_2",
+      "class": "SequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "timer_intermediate_2",
+      "head": "Invio_richiesta_pagamento",
+      "class": "SequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

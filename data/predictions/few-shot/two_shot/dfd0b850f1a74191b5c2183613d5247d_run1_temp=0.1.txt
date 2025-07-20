@@ -1,0 +1,210 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "c1: Cita Médica",
+      "text": "FechayHora = 2016/08/11 12:30:00\nDuración = 15\nLaser = false",
+      "methods": null,
+      "attributes": [
+        "- FechayHora: DateTime",
+        "- Duración: int",
+        "- Laser: Boolean"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "pr1: Prueba Complementaria",
+      "text": "Descripción = Radiografía",
+      "methods": null,
+      "attributes": [
+        "- Descripción: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "u1: Usuario",
+      "text": "Correo Electrónico = jane.doe@dummym.com\nContraseña = pepeperez123\nNombre = Pepe\nApellidos = Pérez",
+      "methods": null,
+      "attributes": [
+        "- Correo Electrónico: string",
+        "- Contraseña: string",
+        "- Nombre: string",
+        "- Apellidos: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Teléfono",
+      "text": "Número = 696948857",
+      "methods": null,
+      "attributes": [
+        "- Número: int"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "p1: Paciente",
+      "text": "Antecedentes Familiares = Ninguno\nAntecedentes Personales = Ninguno\nFecha de Nacimiento = 1979/11/07\nSexo = Hombre",
+      "methods": null,
+      "attributes": [
+        "- Antecedentes Familiares: string",
+        "- Antecedentes Personales: string",
+        "- Fecha de Nacimiento: DateTime",
+        "- Sexo: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "e1: enfermedad",
+      "text": "Nombre = Cáncer\nFecha de Diagnóstico = 1999/6/17\nDetalles = Benigno",
+      "methods": null,
+      "attributes": [
+        "- Nombre: string",
+        "- Fecha de Diagnóstico: DateTime",
+        "- Detalles: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "ev1: Evolución",
+      "text": "Análisis: Tumor no ha empeorado\nDiagnóstico: Leves Náuseas",
+      "methods": null,
+      "attributes": [
+        "- Análisis: string",
+        "- Diagnóstico: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "c2: Cita Médica",
+      "text": "Fecha = 2016/11/11 12:00:00\nDuración = 15\nLaser = false",
+      "methods": null,
+      "attributes": [
+        "- Fecha: DateTime",
+        "- Duración: int",
+        "- Laser: Boolean"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "f2: Factura",
+      "text": null,
+      "methods": null,
+      "attributes": null,
+      "class": "SimpleClass"
+    },
+    {
+      "id": "d2: Dinero",
+      "text": "Importe = 500$\nConcepto = Consulta y Tratamiento",
+      "methods": null,
+      "attributes": [
+        "- Importe: string",
+        "- Concepto: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "t1: Tratamiento",
+      "text": "Descripción = Radiación\nFecha de Comienzo = 16/12/1\nFecha de Fin = 16/12/25\nMedicamentos = Paracetamol",
+      "methods": null,
+      "attributes": [
+        "- Descripción: string",
+        "- Fecha de Comienzo: DateTime",
+        "- Fecha de Fin: DateTime",
+        "- Medicamentos: string"
+      ],
+      "class": "ComplexClass"
+    },
+    {
+      "id": "te1: Tratamiento Estándar",
+      "text": null,
+      "methods": null,
+      "attributes": null,
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "c1: Cita Médica",
+      "head": "pr1: Prueba Complementaria",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "u1: Usuario",
+      "head": "Teléfono",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "p1: Paciente",
+      "head": "c1: Cita Médica",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "p1: Paciente",
+      "head": "pr1: Prueba Complementaria",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "p1: Paciente",
+      "head": "e1: enfermedad",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "e1: enfermedad",
+      "head": "ev1: Evolución",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "c2: Cita Médica",
+      "head": "f2: Factura",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "f2: Factura",
+      "head": "d2: Dinero",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "c2: Cita Médica",
+      "head": "t1: Tratamiento",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "t1: Tratamiento",
+      "head": "te1: Tratamiento Estándar",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

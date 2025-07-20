@@ -1,0 +1,64 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Acetyl-CoA",
+      "id": "Acetyl-CoA",
+      "class": null
+    },
+    {
+      "text": "Citric Acid",
+      "id": "Citric Acid",
+      "class": null
+    },
+    {
+      "text": "Mevalonic acid",
+      "id": "Mevalonic acid",
+      "class": null
+    },
+    {
+      "text": "Methyl Acid",
+      "id": "Methyl Acid",
+      "class": null
+    },
+    {
+      "text": "Geranyl-PP",
+      "id": "Geranyl-PP",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Acetyl-CoA",
+      "head": "Citric Acid",
+      "label": null
+    },
+    {
+      "tail": "Citric Acid",
+      "head": "Mevalonic acid",
+      "label": null
+    },
+    {
+      "tail": "Mevalonic acid",
+      "head": "Methyl Acid",
+      "label": null
+    },
+    {
+      "tail": "Methyl Acid",
+      "head": "Geranyl-PP",
+      "label": null
+    },
+    {
+      "tail": "Geranyl-PP",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

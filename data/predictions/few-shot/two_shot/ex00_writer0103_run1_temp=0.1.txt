@@ -1,0 +1,147 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "new online application received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "evaluate application",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "approve application",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "reject application",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "Create new bank account",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "Send welcome pack",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "Send bank card",
+      "class": "task"
+    },
+    {
+      "id": "task_7",
+      "text": "Send PIN number",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "application rejected",
+      "class": "event"
+    },
+    {
+      "id": "event_3",
+      "text": "account created",
+      "class": "event"
+    },
+    {
+      "id": "task_8",
+      "text": "notify customer by mail",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_7",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "task_8",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_8",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

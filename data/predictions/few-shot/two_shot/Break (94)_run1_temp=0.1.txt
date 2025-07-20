@@ -1,0 +1,54 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "ROI",
+      "id": "ROI",
+      "class": null
+    },
+    {
+      "text": "Input image",
+      "id": "Input image",
+      "class": null
+    },
+    {
+      "text": "Information",
+      "id": "Information",
+      "class": null
+    },
+    {
+      "text": "Classification",
+      "id": "Classification",
+      "class": null
+    },
+    {
+      "text": "Obstacle/Non-obstacle decision",
+      "id": "Obstacle/Non-obstacle decision",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "ROI",
+      "head": "Input image",
+      "label": null
+    },
+    {
+      "tail": "Input image",
+      "head": "Information",
+      "label": null
+    },
+    {
+      "tail": "Information",
+      "head": "Classification",
+      "label": null
+    },
+    {
+      "tail": "Classification",
+      "head": "Obstacle/Non-obstacle decision",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

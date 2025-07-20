@@ -1,0 +1,66 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "initialisation",
+        "text": "Initialisation",
+        "class": null
+      },
+      {
+        "id": "geometric_modelling",
+        "text": "GEOMETRIC MODELLING OF THE RECONSTRUCTED OBJECT",
+        "class": null
+      },
+      {
+        "id": "control_measurements",
+        "text": "CONTROL MEASUREMENTS",
+        "class": null
+      },
+      {
+        "id": "performance",
+        "text": "Performance?",
+        "class": null
+      },
+      {
+        "id": "stop",
+        "text": "Stop",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "initialisation",
+        "head": "geometric_modelling",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "geometric_modelling",
+        "head": "control_measurements",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "control_measurements",
+        "head": "performance",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "performance",
+        "head": "geometric_modelling",
+        "class": null,
+        "label": "NO"
+      },
+      {
+        "tail": "performance",
+        "head": "stop",
+        "class": null,
+        "label": "YES"
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,150 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "ubaci 20",
+        "text": "ubaci 20",
+        "class": "Transition"
+      },
+      {
+        "id": "place1",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "ubaci 10",
+        "text": "ubaci 10",
+        "class": "Transition"
+      },
+      {
+        "id": "place2",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "ubaci 5",
+        "text": "ubaci 5",
+        "class": "Transition"
+      },
+      {
+        "id": "place3",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "ubaci 10_2",
+        "text": "ubaci 10",
+        "class": "Transition"
+      },
+      {
+        "id": "ubaci 5_2",
+        "text": "ubaci 5",
+        "class": "Transition"
+      },
+      {
+        "id": "place4",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "kupi kafu",
+        "text": "kupi kafu",
+        "class": "Transition"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "ubaci 20",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "ubaci 20",
+        "head": "place1",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "start",
+        "head": "ubaci 10",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "ubaci 10",
+        "head": "place2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "place2",
+        "head": "ubaci 10_2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "ubaci 10_2",
+        "head": "place1",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "start",
+        "head": "ubaci 5",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "ubaci 5",
+        "head": "place3",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "place3",
+        "head": "ubaci 5_2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "ubaci 5_2",
+        "head": "place2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "place1",
+        "head": "kupi kafu",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "kupi kafu",
+        "head": "start",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "place1",
+        "head": "place4",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "place4",
+        "head": "start",
+        "class": "Arc",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,140 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "claim",
+      "text": "claim",
+      "class": "dataObject"
+    },
+    {
+      "id": "check completeness",
+      "text": "check completeness",
+      "class": "task"
+    },
+    {
+      "id": "register claim",
+      "text": "register claim",
+      "class": "task"
+    },
+    {
+      "id": "reject claim and send letter",
+      "text": "reject claim and send letter",
+      "class": "task"
+    },
+    {
+      "id": "pick up claim and check insurance",
+      "text": "pick up claim and check insurance",
+      "class": "task"
+    },
+    {
+      "id": "perform assessment",
+      "text": "perform assessment",
+      "class": "task"
+    },
+    {
+      "id": "phone garage to authorize repairs",
+      "text": "phone garage to authorize repairs",
+      "class": "task"
+    },
+    {
+      "id": "schedule payment and send letter",
+      "text": "schedule payment and send letter",
+      "class": "task"
+    },
+    {
+      "id": "rejected",
+      "text": "rejected",
+      "class": "event"
+    },
+    {
+      "id": "approved",
+      "text": "approved",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "claim",
+      "head": "check completeness",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "check completeness",
+      "head": "register claim",
+      "class": "sequenceFlow",
+      "label": "Complete"
+    },
+    {
+      "tail": "check completeness",
+      "head": "reject claim and send letter",
+      "class": "sequenceFlow",
+      "label": "not complete"
+    },
+    {
+      "tail": "reject claim and send letter",
+      "head": "rejected",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register claim",
+      "head": "pick up claim and check insurance",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "pick up claim and check insurance",
+      "head": "perform assessment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "perform assessment",
+      "head": "phone garage to authorize repairs",
+      "class": "sequenceFlow",
+      "label": "positive"
+    },
+    {
+      "tail": "perform assessment",
+      "head": "reject claim and send letter",
+      "class": "sequenceFlow",
+      "label": "negative"
+    },
+    {
+      "tail": "phone garage to authorize repairs",
+      "head": "schedule payment and send letter",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "schedule payment and send letter",
+      "head": "approved",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Customer",
+      "class": "pool",
+      "nodes": ["claim", "rejected", "approved"]
+    },
+    {
+      "name": "Insurance",
+      "class": "pool",
+      "nodes": ["check completeness", "register claim", "reject claim and send letter"]
+    },
+    {
+      "name": "Handling",
+      "class": "pool",
+      "nodes": ["pick up claim and check insurance", "perform assessment", "phone garage to authorize repairs"]
+    },
+    {
+      "name": "Garage",
+      "class": "pool",
+      "nodes": ["schedule payment and send letter"]
+    }
+  ]
+}
+```

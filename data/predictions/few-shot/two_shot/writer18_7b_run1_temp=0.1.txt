@@ -1,0 +1,103 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "begin",
+      "id": "begin",
+      "class": "terminator"
+    },
+    {
+      "text": "i=0 changed=false",
+      "id": "i=0 changed=false",
+      "class": "process"
+    },
+    {
+      "text": "i=i+1",
+      "id": "i=i+1",
+      "class": "process"
+    },
+    {
+      "text": "i<=length? Yes",
+      "id": "i<=length? Yes",
+      "class": "decision"
+    },
+    {
+      "text": "T[i] > T[i+1]",
+      "id": "T[i] > T[i+1]",
+      "class": "decision"
+    },
+    {
+      "text": "Swap(T[i], T[i+1])",
+      "id": "Swap(T[i], T[i+1])",
+      "class": "process"
+    },
+    {
+      "text": "changed=true",
+      "id": "changed=true",
+      "class": "process"
+    },
+    {
+      "text": "changed?",
+      "id": "changed?",
+      "class": "decision"
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "begin",
+      "head": "i=0 changed=false",
+      "label": null
+    },
+    {
+      "tail": "i=0 changed=false",
+      "head": "i=i+1",
+      "label": null
+    },
+    {
+      "tail": "i=i+1",
+      "head": "i<=length? Yes",
+      "label": null
+    },
+    {
+      "tail": "i<=length? Yes",
+      "head": "T[i] > T[i+1]",
+      "label": "Yes"
+    },
+    {
+      "tail": "T[i] > T[i+1]",
+      "head": "Swap(T[i], T[i+1])",
+      "label": "Yes"
+    },
+    {
+      "tail": "Swap(T[i], T[i+1])",
+      "head": "changed=true",
+      "label": null
+    },
+    {
+      "tail": "changed=true",
+      "head": "i=0 changed=false",
+      "label": null
+    },
+    {
+      "tail": "i<=length? Yes",
+      "head": "changed?",
+      "label": "No"
+    },
+    {
+      "tail": "changed?",
+      "head": "Stop",
+      "label": "False"
+    },
+    {
+      "tail": "changed?",
+      "head": "i=0 changed=false",
+      "label": "True"
+    }
+  ]
+}
+```

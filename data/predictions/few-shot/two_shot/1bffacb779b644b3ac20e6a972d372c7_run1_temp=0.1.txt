@@ -1,0 +1,182 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Person",
+      "attributes": [
+        "- name: String",
+        "- vorname: String",
+        "- geburtsDatum: Datum",
+        "- Telefon: ArrayList(INT)"
+      ],
+      "methods": null,
+      "id": "Person",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Adresse",
+      "attributes": [
+        "- hausNummer: int",
+        "- strasse: String",
+        "- wohnort: String",
+        "- plz: int",
+        "- land: String",
+        "- Zusatz: String"
+      ],
+      "methods": null,
+      "id": "Adresse",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Kunde",
+      "attributes": [
+        "- kundenID: int"
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mitarbeiter",
+      "attributes": [
+        "- malD: int",
+        "- login: String",
+        "- berechtigung: String",
+        "- person: Person",
+        "- password: char []",
+        "- urlaubstage: int",
+        "- aktiv: int"
+      ],
+      "methods": null,
+      "id": "Mitarbeiter",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Auftrag",
+      "attributes": [
+        "- auftragID: int"
+      ],
+      "methods": null,
+      "id": "Auftrag",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Baueteile",
+      "attributes": [
+        "- baueteileListe: ArrayList"
+      ],
+      "methods": null,
+      "id": "Baueteile",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Partnumber",
+      "attributes": [
+        "- partNumberID: int",
+        "- bezeichnung: String"
+      ],
+      "methods": null,
+      "id": "Partnumber",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "HighSpeed_Main",
+      "attributes": [
+        "+ user: User"
+      ],
+      "methods": null,
+      "id": "HighSpeed_Main",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Login",
+      "attributes": null,
+      "methods": null,
+      "id": "Login",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "JPanel1, JPanel2, JPanel3...",
+      "attributes": null,
+      "methods": null,
+      "id": "JPanel1, JPanel2, JPanel3...",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Person",
+      "head": "Adresse",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Person",
+      "head": "Kunde",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Person",
+      "head": "Mitarbeiter",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Kunde",
+      "head": "Auftrag",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Auftrag",
+      "head": "Baueteile",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Baueteile",
+      "head": "Partnumber",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Mitarbeiter",
+      "head": "HighSpeed_Main",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "HighSpeed_Main",
+      "head": "Login",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "HighSpeed_Main",
+      "head": "JPanel1, JPanel2, JPanel3...",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,74 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Cashew shell",
+      "id": "Cashew shell",
+      "class": null
+    },
+    {
+      "text": "Sizing",
+      "id": "Sizing",
+      "class": null
+    },
+    {
+      "text": "Expelling",
+      "id": "Expelling",
+      "class": null
+    },
+    {
+      "text": "Cashew shell oil",
+      "id": "Cashew shell oil",
+      "class": null
+    },
+    {
+      "text": "Dirt",
+      "id": "Dirt",
+      "class": null
+    },
+    {
+      "text": "Reactor",
+      "id": "Reactor",
+      "class": null
+    },
+    {
+      "text": "Cashew Shell oil Commercial Grate",
+      "id": "Cashew Shell oil Commercial Grate",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cashew shell",
+      "head": "Sizing",
+      "label": null
+    },
+    {
+      "tail": "Sizing",
+      "head": "Expelling",
+      "label": null
+    },
+    {
+      "tail": "Expelling",
+      "head": "Cashew shell oil",
+      "label": null
+    },
+    {
+      "tail": "Expelling",
+      "head": "Dirt",
+      "label": null
+    },
+    {
+      "tail": "Cashew shell oil",
+      "head": "Reactor",
+      "label": null
+    },
+    {
+      "tail": "Reactor",
+      "head": "Cashew Shell oil Commercial Grate",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

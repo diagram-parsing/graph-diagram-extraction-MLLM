@@ -1,0 +1,109 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Input A,B,C",
+      "id": "Input A,B,C",
+      "class": null
+    },
+    {
+      "text": "IS B>C?",
+      "id": "IS B>C?",
+      "class": null
+    },
+    {
+      "text": "IS A>B?",
+      "id": "IS A>B?",
+      "class": null
+    },
+    {
+      "text": "IS A>C?",
+      "id": "IS A>C?",
+      "class": null
+    },
+    {
+      "text": "PRINT B",
+      "id": "PRINT B",
+      "class": null
+    },
+    {
+      "text": "PRINT C",
+      "id": "PRINT C",
+      "class": null
+    },
+    {
+      "text": "PRINT A",
+      "id": "PRINT A",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Input A,B,C",
+      "label": null
+    },
+    {
+      "tail": "Input A,B,C",
+      "head": "IS B>C?",
+      "label": null
+    },
+    {
+      "tail": "IS B>C?",
+      "head": "PRINT B",
+      "label": "YES"
+    },
+    {
+      "tail": "IS B>C?",
+      "head": "IS A>B?",
+      "label": "NO"
+    },
+    {
+      "tail": "IS A>B?",
+      "head": "IS A>C?",
+      "label": "YES"
+    },
+    {
+      "tail": "IS A>B?",
+      "head": "PRINT C",
+      "label": "NO"
+    },
+    {
+      "tail": "IS A>C?",
+      "head": "PRINT A",
+      "label": "YES"
+    },
+    {
+      "tail": "IS A>C?",
+      "head": "PRINT C",
+      "label": "NO"
+    },
+    {
+      "tail": "PRINT B",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "PRINT C",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "PRINT A",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

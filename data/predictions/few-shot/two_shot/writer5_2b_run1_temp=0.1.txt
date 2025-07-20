@@ -1,0 +1,53 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "Read n",
+      "text": "Read n",
+      "class": "process"
+    },
+    {
+      "id": "n = n + n",
+      "text": "n = n + n",
+      "class": "process"
+    },
+    {
+      "id": "Ri * ln",
+      "text": "Ri * ln",
+      "class": "process"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read n",
+      "label": null
+    },
+    {
+      "tail": "Read n",
+      "head": "n = n + n",
+      "label": null
+    },
+    {
+      "tail": "n = n + n",
+      "head": "Ri * ln",
+      "label": null
+    },
+    {
+      "tail": "Ri * ln",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

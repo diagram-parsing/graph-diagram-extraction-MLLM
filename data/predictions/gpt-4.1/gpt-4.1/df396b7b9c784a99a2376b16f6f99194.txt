@@ -1,0 +1,197 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "Prijava",
+      "text": "Prijava",
+      "class": "Transition"
+    },
+    {
+      "id": "P_after_Prijava_1",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "P_after_Prijava_2",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "P_after_Prijava_3",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "Raspored",
+      "text": "Raspored",
+      "class": "Transition"
+    },
+    {
+      "id": "P_after_Raspored",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "Prvi",
+      "text": "Prvi",
+      "class": "Transition"
+    },
+    {
+      "id": "Drugi",
+      "text": "Drugi",
+      "class": "Transition"
+    },
+    {
+      "id": "P_after_Prv",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "P_after_Drugi",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "Uradjene predis. obaveze",
+      "text": "Uradjene predis. obaveze",
+      "class": "Transition"
+    },
+    {
+      "id": "P_after_Obaveze",
+      "text": null,
+      "class": "Place"
+    },
+    {
+      "id": "Seminarski",
+      "text": "Seminarski",
+      "class": "Transition"
+    },
+    {
+      "id": "Projekat",
+      "text": "Projekat",
+      "class": "Transition"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "Place"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Prijava",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Prijava",
+      "head": "P_after_Prijava_1",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Prijava",
+      "head": "P_after_Prijava_2",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Prijava",
+      "head": "P_after_Prijava_3",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Prijava_1",
+      "head": "Raspored",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Raspored",
+      "head": "P_after_Raspored",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Prijava_2",
+      "head": "P_after_Raspored",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Raspored",
+      "head": "Prvi",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Prvi",
+      "head": "P_after_Prv",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Prijava_3",
+      "head": "Drugi",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Drugi",
+      "head": "P_after_Drugi",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Prv",
+      "head": "Uradjene predis. obaveze",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Drugi",
+      "head": "Uradjene predis. obaveze",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Uradjene predis. obaveze",
+      "head": "P_after_Obaveze",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Obaveze",
+      "head": "Seminarski",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "P_after_Obaveze",
+      "head": "Projekat",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Seminarski",
+      "head": "End",
+      "class": "Arc",
+      "label": null
+    },
+    {
+      "tail": "Projekat",
+      "head": "End",
+      "class": "Arc",
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

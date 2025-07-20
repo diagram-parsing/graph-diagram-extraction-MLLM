@@ -1,0 +1,258 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "rating started",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "interview patients",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "ask external expert",
+      "class": "task"
+    },
+    {
+      "id": "timerEvent_1",
+      "text": "Time expired",
+      "class": "timerEvent"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_3",
+      "text": "forward expert to QA Specialist",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "fill out creque",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "rating completed",
+      "class": "event"
+    },
+    {
+      "id": "task_5",
+      "text": "create report",
+      "class": "task"
+    },
+    {
+      "id": "dataObject_1",
+      "text": "file results",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_2",
+      "text": "file expense",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_3",
+      "text": "creque",
+      "class": "dataObject"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_4",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_5",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_6",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_7",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_8",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_9",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_10",
+      "text": null,
+      "class": "exclusiveGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": "ask for review"
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "exclusiveGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_4",
+      "head": "exclusiveGateway_5",
+      "class": "sequenceFlow",
+      "label": "expense received"
+    },
+    {
+      "tail": "exclusiveGateway_5",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_6",
+      "class": "sequenceFlow",
+      "label": "forward expert"
+    },
+    {
+      "tail": "exclusiveGateway_6",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_7",
+      "class": "sequenceFlow",
+      "label": "creque sent"
+    },
+    {
+      "tail": "exclusiveGateway_7",
+      "head": "exclusiveGateway_8",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_8",
+      "head": "exclusiveGateway_9",
+      "class": "sequenceFlow",
+      "label": "expense"
+    },
+    {
+      "tail": "exclusiveGateway_9",
+      "head": "exclusiveGateway_10",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_10",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "timerEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "dataObject_1",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_5",
+      "head": "dataObject_2",
+      "class": "dataAssociation",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_7",
+      "head": "dataObject_3",
+      "class": "dataAssociation",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "QA Specialist",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "exclusiveGateway_1",
+        "task_2",
+        "exclusiveGateway_2",
+        "exclusiveGateway_3",
+        "exclusiveGateway_4",
+        "task_3",
+        "exclusiveGateway_5",
+        "exclusiveGateway_6",
+        "task_4",
+        "exclusiveGateway_7",
+        "exclusiveGateway_8",
+        "exclusiveGateway_9",
+        "exclusiveGateway_10",
+        "task_5",
+        "event_2"
+      ],
+      "class": "pool"
+    }
+  ]
+}
+```

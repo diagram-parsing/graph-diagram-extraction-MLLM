@@ -1,0 +1,114 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "startEvent_1",
+      "text": "Start event",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "assess risk",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "Carry out advanced risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "Carry out simple risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "notify Customer",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "Organize disbursement",
+      "class": "task"
+    },
+    {
+      "id": "endEvent_1",
+      "text": "End event",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "startEvent_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": "request received"
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": "Risk above threshold"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "Risk below threshold"
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "endEvent_1",
+      "class": "sequenceFlow",
+      "label": "process ends"
+    },
+    {
+      "tail": "task_5",
+      "head": "endEvent_1",
+      "class": "sequenceFlow",
+      "label": "process ends"
+    }
+  ],
+  "groups": []
+}
+```

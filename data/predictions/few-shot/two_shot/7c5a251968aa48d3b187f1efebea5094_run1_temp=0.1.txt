@@ -1,0 +1,207 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Artikel",
+      "attributes": [
+        "+ Name",
+        "+ Preis",
+        "+ Hersteller",
+        "+ Produktdetails"
+      ],
+      "methods": null,
+      "id": "Artikel",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bewertung/Rezensionen",
+      "attributes": [
+        "+ Titel",
+        "+ Rezension",
+        "+ Sterne"
+      ],
+      "methods": null,
+      "id": "Bewertung/Rezensionen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Bestellung durchführen",
+      "attributes": [
+        "+ Konto",
+        "+ Artikel"
+      ],
+      "methods": null,
+      "id": "Bestellung durchführen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Retro",
+      "attributes": [
+        "+ Name",
+        "+ Artikel",
+        "+ Grund",
+        "+ Adresse"
+      ],
+      "methods": null,
+      "id": "Retro",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Konto",
+      "attributes": [
+        "+ Name",
+        "+ Alter",
+        "+ Adresse",
+        "+ Zahlungsinformationen"
+      ],
+      "methods": null,
+      "id": "Konto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Newsletter abonnieren",
+      "attributes": [
+        "+ Konto"
+      ],
+      "methods": null,
+      "id": "Newsletter abonnieren",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mahnungen",
+      "attributes": [
+        "+ Name/Konto",
+        "+ Grund"
+      ],
+      "methods": null,
+      "id": "Mahnungen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Artikel in Shop stellen",
+      "attributes": [
+        "+ Name",
+        "+ Preis",
+        "+ Hersteller",
+        "+ Produktdetails"
+      ],
+      "methods": null,
+      "id": "Artikel in Shop stellen",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Webseite",
+      "attributes": [
+        "+ Shop",
+        "+ Kundenservice"
+      ],
+      "methods": null,
+      "id": "Webseite",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Werbung",
+      "attributes": [
+        "+ Name",
+        "+ Dauer"
+      ],
+      "methods": null,
+      "id": "Werbung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Amazon Prime Mitglied",
+      "attributes": [
+        "+ Konto",
+        "+ Zahlungsinformationen"
+      ],
+      "methods": null,
+      "id": "Amazon Prime Mitglied",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Artikel",
+      "head": "Bewertung/Rezensionen",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Artikel",
+      "head": "Bestellung durchführen",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "*"
+    },
+    {
+      "tail": "Artikel",
+      "head": "Artikel in Shop stellen",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Artikel",
+      "head": "Webseite",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Webseite",
+      "head": "Retro",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Webseite",
+      "head": "Konto",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Webseite",
+      "head": "Newsletter abonnieren",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Webseite",
+      "head": "Mahnungen",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Webseite",
+      "head": "Werbung",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Konto",
+      "head": "Amazon Prime Mitglied",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,90 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "I",
+        "text": "I",
+        "class": "state"
+      },
+      {
+        "id": "II",
+        "text": "II",
+        "class": "state"
+      },
+      {
+        "id": "III",
+        "text": "III",
+        "class": "state"
+      },
+      {
+        "id": "IV",
+        "text": "IV",
+        "class": "final state"
+      },
+      {
+        "id": "V",
+        "text": "V",
+        "class": "final state"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "I",
+        "head": "IV",
+        "class": null,
+        "label": "a"
+      },
+      {
+        "tail": "I",
+        "head": "V",
+        "class": null,
+        "label": "a,c"
+      },
+      {
+        "tail": "I",
+        "head": "III",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "III",
+        "head": "II",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "II",
+        "head": "V",
+        "class": null,
+        "label": "a,c"
+      },
+      {
+        "tail": "II",
+        "head": "II",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "III",
+        "head": "I",
+        "class": null,
+        "label": "a"
+      },
+      {
+        "tail": "IV",
+        "head": "V",
+        "class": null,
+        "label": "b,c"
+      },
+      {
+        "tail": "V",
+        "head": "IV",
+        "class": null,
+        "label": "a,b,c"
+      }
+    ],
+    "groups": []
+  }
+]
+```

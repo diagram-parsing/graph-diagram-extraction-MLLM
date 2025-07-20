@@ -1,0 +1,132 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "insurance claim",
+        "class": "event"
+      },
+      {
+        "id": "2",
+        "text": "register and examine claim",
+        "class": "task"
+      },
+      {
+        "id": "3",
+        "text": "write settlement recommendation",
+        "class": "task"
+      },
+      {
+        "id": "4",
+        "text": "check recommendation",
+        "class": "task"
+      },
+      {
+        "id": "5",
+        "text": "recommendation approved",
+        "class": "event"
+      },
+      {
+        "id": "6",
+        "text": "recommendation not approved",
+        "class": "event"
+      },
+      {
+        "id": "7",
+        "text": "mark claim as 'OK'",
+        "class": "task"
+      },
+      {
+        "id": "8",
+        "text": "mark claim as 'NOT OK'",
+        "class": "task"
+      },
+      {
+        "id": "9",
+        "text": "send to claim offer",
+        "class": "task"
+      },
+      {
+        "id": "10",
+        "text": "process proceeded",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "6",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "5",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "8",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "9",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "8",
+        "head": "9",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "9",
+        "head": "10",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Customer",
+        "class": "pool",
+        "nodes": ["1"]
+      },
+      {
+        "name": "Insurer",
+        "class": "pool",
+        "nodes": ["2", "3", "4", "5", "6", "7", "8", "9", "10"]
+      }
+    ]
+  }
+]
+```

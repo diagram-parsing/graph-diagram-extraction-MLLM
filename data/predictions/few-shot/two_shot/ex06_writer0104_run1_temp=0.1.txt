@@ -1,0 +1,195 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "received order",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "check reception",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "confirm order",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "print out order",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "write down order note",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "pinned order",
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "dataObject_1",
+      "text": "order",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_2",
+      "text": "checked order",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_3",
+      "text": "confirmed order",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_4",
+      "text": "printed order",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_5",
+      "text": "written order",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_6",
+      "text": "received by Lieferande",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_7",
+      "text": "received by website",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_8",
+      "text": "received by phone",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "dataObject_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "dataObject_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "dataObject_7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "dataObject_8",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_6",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_7",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_8",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "dataObject_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "dataObject_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "dataObject_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_4",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_5",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

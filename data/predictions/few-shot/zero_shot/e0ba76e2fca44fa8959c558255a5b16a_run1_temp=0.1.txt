@@ -1,0 +1,199 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Adresse",
+        "text": "Adresse",
+        "attributes": ["strasse:String", "hausnr:String", "plz:int", "ort:String"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Gebäude",
+        "text": "Gebäude",
+        "attributes": ["name:String", "adresse:Adresse", "fläche:int"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Rathäuser",
+        "text": "Rathäuser",
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Wohnhäuser",
+        "text": "Wohnhäuser",
+        "attributes": ["bewohner:Einwohner"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Bürgermeister",
+        "text": "Bürgermeister",
+        "attributes": ["anzahlAktuelleAmtsZeiten:int"],
+        "methods": ["organisiereEvent()", "schlichtetStreit()", "besuchtEinwohner()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Verwaltungsmitarbeiter",
+        "text": "Verwaltungsmitarbeiter",
+        "attributes": ["zugeordneteEinwohner:Einwohner[]"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Lehrer",
+        "text": "Lehrer",
+        "attributes": ["unterrichtetFächer:Fächer[]"],
+        "methods": ["hausaufgabenKorrigieren()", "klausurenErstellen()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Arzt",
+        "text": "Arzt",
+        "attributes": ["Spezialisierung:Einwohner"],
+        "methods": ["diagnoseErstellen()", "patientBehandeln()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Polizist",
+        "text": "Polizist",
+        "methods": ["ermittleFälle()", "patrouillierenStadt()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Berufe",
+        "text": "{abstract} Berufe",
+        "attributes": ["Gehalt:double"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Einwohner",
+        "text": "{abstract} Einwohner",
+        "attributes": ["name:String", "alter:int", "beruf:Berufe", "verwaltungsmitarbeiter:Verwaltungsmitarbeiter", "arzt:Arzt", "wohnung:Wohnhaus"],
+        "methods": ["sprechen()", "laufen()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Hase",
+        "text": "Hase",
+        "methods": ["springen()", "rennen()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vogel",
+        "text": "{abstract} Vogel",
+        "methods": ["fliegen()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Ente",
+        "text": "Ente",
+        "methods": ["schwimmen()"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Storch",
+        "text": "Storch",
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Adresse",
+        "head": "Gebäude",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "Gebäude",
+        "head": "Rathäuser",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Gebäude",
+        "head": "Wohnhäuser",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bürgermeister",
+        "head": "Verwaltungsmitarbeiter",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Verwaltungsmitarbeiter",
+        "head": "Lehrer",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Verwaltungsmitarbeiter",
+        "head": "Arzt",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Verwaltungsmitarbeiter",
+        "head": "Polizist",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Einwohner",
+        "head": "Berufe",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Einwohner",
+        "head": "Hase",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Einwohner",
+        "head": "Vogel",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vogel",
+        "head": "Ente",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vogel",
+        "head": "Storch",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

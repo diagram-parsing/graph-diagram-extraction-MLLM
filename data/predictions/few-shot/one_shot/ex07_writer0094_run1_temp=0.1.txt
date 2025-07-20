@@ -1,0 +1,171 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": "start",
+        "class": "event"
+      },
+      {
+        "id": "interview patients",
+        "text": "interview patients",
+        "class": "task"
+      },
+      {
+        "id": "integrate workflow",
+        "text": "integrate workflow",
+        "class": "task"
+      },
+      {
+        "id": "file results",
+        "text": "file results",
+        "class": "task"
+      },
+      {
+        "id": "create report",
+        "text": "create report",
+        "class": "task"
+      },
+      {
+        "id": "end",
+        "text": "end",
+        "class": "event"
+      },
+      {
+        "id": "request expertise",
+        "text": "request expertise",
+        "class": "task"
+      },
+      {
+        "id": "receive expertise",
+        "text": "receive expertise",
+        "class": "task"
+      },
+      {
+        "id": "forward expertise",
+        "text": "forward expertise",
+        "class": "task"
+      },
+      {
+        "id": "send expertise",
+        "text": "send expertise",
+        "class": "task"
+      },
+      {
+        "id": "answer direct questions",
+        "text": "answer direct questions",
+        "class": "task"
+      },
+      {
+        "id": "pilot out and send cheque",
+        "text": "pilot out and send cheque",
+        "class": "task"
+      },
+      {
+        "id": "stew close",
+        "text": "stew close",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "interview patients",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "interview patients",
+        "head": "integrate workflow",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "integrate workflow",
+        "head": "file results",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "file results",
+        "head": "create report",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "create report",
+        "head": "end",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "request expertise",
+        "head": "receive expertise",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive expertise",
+        "head": "forward expertise",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "forward expertise",
+        "head": "send expertise",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "send expertise",
+        "head": "answer direct questions",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "answer direct questions",
+        "head": "pilot out and send cheque",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "pilot out and send cheque",
+        "head": "stew close",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "interview patients",
+        "head": "request expertise",
+        "class": "sequenceFlow",
+        "label": "request expertise"
+      },
+      {
+        "tail": "request expertise",
+        "head": "integrate workflow",
+        "class": "sequenceFlow",
+        "label": "receive expertise"
+      },
+      {
+        "tail": "request expertise",
+        "head": "file results",
+        "class": "sequenceFlow",
+        "label": "forward expertise"
+      }
+    ],
+    "groups": [
+      {
+        "name": "Directora",
+        "class": "pool",
+        "nodes": ["interview patients", "integrate workflow", "file results", "create report", "stew close"]
+      },
+      {
+        "name": "Expert",
+        "class": "pool",
+        "nodes": ["request expertise", "receive expertise", "forward expertise", "send expertise", "answer direct questions", "pilot out and send cheque"]
+      }
+    ]
+  }
+]
+```

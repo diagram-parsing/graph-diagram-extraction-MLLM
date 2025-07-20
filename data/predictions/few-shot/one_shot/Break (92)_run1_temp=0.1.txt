@@ -1,0 +1,105 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Flowchart Example",
+        "class": null
+      },
+      {
+        "id": "2",
+        "text": "Check monitor",
+        "class": null
+      },
+      {
+        "id": "3",
+        "text": "Switch on",
+        "class": null
+      },
+      {
+        "id": "4",
+        "text": "Is the computer power light on?",
+        "class": null
+      },
+      {
+        "id": "5",
+        "text": "Turn the computer monitor on",
+        "class": null
+      },
+      {
+        "id": "6",
+        "text": "Check the power cord",
+        "class": null
+      },
+      {
+        "id": "7",
+        "text": "Perform a search for the error message",
+        "class": null
+      },
+      {
+        "id": "8",
+        "text": "Computer is fine",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "2",
+        "head": "4",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "3",
+        "head": "5",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "3",
+        "head": "8",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "4",
+        "head": "6",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "5",
+        "head": "3",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "4",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

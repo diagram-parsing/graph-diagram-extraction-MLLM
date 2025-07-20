@@ -1,0 +1,164 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": null
+    },
+    {
+      "id": "Sending and Receiving a Ultrasound to measure distance",
+      "text": "Sending and Receiving a Ultrasound to measure distance",
+      "class": null
+    },
+    {
+      "id": "Operations",
+      "text": "Operations",
+      "class": null
+    },
+    {
+      "id": "Sending the measured data to the microcontroller",
+      "text": "Sending the measured data to the microcontroller",
+      "class": null
+    },
+    {
+      "id": "Bluetooth available?",
+      "text": "Bluetooth available?",
+      "class": null
+    },
+    {
+      "id": "Internet available?",
+      "text": "Internet available?",
+      "class": null
+    },
+    {
+      "id": "Result in negative response, no data will be sent",
+      "text": "Result in negative response, no data will be sent",
+      "class": null
+    },
+    {
+      "id": "Sending the data to a Cloud Server",
+      "text": "Sending the data to a Cloud Server",
+      "class": null
+    },
+    {
+      "id": "Data Check",
+      "text": "Data Check",
+      "class": null
+    },
+    {
+      "id": "Data Incoming",
+      "text": "Data Incoming",
+      "class": null
+    },
+    {
+      "id": "Over Threshold level?",
+      "text": "Over Threshold level?",
+      "class": null
+    },
+    {
+      "id": "Empty recycle bin",
+      "text": "Empty recycle bin",
+      "class": null
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Sending and Receiving a Ultrasound to measure distance",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Sending and Receiving a Ultrasound to measure distance",
+      "head": "Operations",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Operations",
+      "head": "Sending the measured data to the microcontroller",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Sending the measured data to the microcontroller",
+      "head": "Bluetooth available?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Bluetooth available?",
+      "head": "Internet available?",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Bluetooth available?",
+      "head": "Sending the data to a Cloud Server",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Internet available?",
+      "head": "Result in negative response, no data will be sent",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Internet available?",
+      "head": "Sending the data to a Cloud Server",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Sending the data to a Cloud Server",
+      "head": "Data Check",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Data Check",
+      "head": "Data Incoming",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Data Incoming",
+      "head": "Over Threshold level?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Over Threshold level?",
+      "head": "Empty recycle bin",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Over Threshold level?",
+      "head": "End",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Empty recycle bin",
+      "head": "End",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Result in negative response, no data will be sent",
+      "head": "End",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,88 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "Input_m_m",
+        "text": "Input m, m",
+        "class": "input"
+      },
+      {
+        "id": "r_m_m",
+        "text": "r = m % m",
+        "class": "process"
+      },
+      {
+        "id": "M_m_r",
+        "text": "m = m\nr = m",
+        "class": "process"
+      },
+      {
+        "id": "Decision",
+        "text": "r = 0 ?",
+        "class": "decision"
+      },
+      {
+        "id": "Output_m",
+        "text": "Output m",
+        "class": "output"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Input_m_m",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Input_m_m",
+        "head": "r_m_m",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "r_m_m",
+        "head": "Decision",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Decision",
+        "head": "Output_m",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "Decision",
+        "head": "M_m_r",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "M_m_r",
+        "head": "r_m_m",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Output_m",
+        "head": "End",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

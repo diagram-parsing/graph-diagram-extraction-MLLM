@@ -1,0 +1,75 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": null
+    },
+    {
+      "id": "Check needs for project",
+      "text": "Check needs for project",
+      "class": null
+    },
+    {
+      "id": "Is project well-defined?",
+      "text": "Is project well-defined?",
+      "class": null
+    },
+    {
+      "id": "Re-evaluate needs",
+      "text": "Re-evaluate needs",
+      "class": null
+    },
+    {
+      "id": "Build prototype",
+      "text": "Build prototype",
+      "class": null
+    },
+    {
+      "id": "END",
+      "text": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Check needs for project",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Check needs for project",
+      "head": "Is project well-defined?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Is project well-defined?",
+      "head": "Re-evaluate needs",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Is project well-defined?",
+      "head": "Build prototype",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Re-evaluate needs",
+      "head": "Check needs for project",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Build prototype",
+      "head": "END",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

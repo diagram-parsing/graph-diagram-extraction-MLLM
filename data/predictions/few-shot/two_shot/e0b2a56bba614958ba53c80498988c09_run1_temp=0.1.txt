@@ -1,0 +1,108 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "negozio",
+      "attributes": [
+        "- nome: string",
+        "- indirizzo: string"
+      ],
+      "methods": null,
+      "id": "negozio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "lista nozze",
+      "attributes": [
+        "- sposa: string",
+        "- sposo: string"
+      ],
+      "methods": null,
+      "id": "lista nozze",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "articolo",
+      "attributes": [
+        "- Nome: string",
+        "- Descrizione: string",
+        "- Immagine: string",
+        "- Prezzo: Currency"
+      ],
+      "methods": null,
+      "id": "articolo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "regalo",
+      "attributes": null,
+      "methods": null,
+      "id": "regalo",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "amico",
+      "attributes": [
+        "- nome: string",
+        "- email: string"
+      ],
+      "methods": null,
+      "id": "amico",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "prenota",
+      "attributes": [
+        "- data: date",
+        "- acquistato: boolean"
+      ],
+      "methods": null,
+      "id": "prenota",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "negozio",
+      "head": "regalo",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "lista nozze",
+      "head": "regalo",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "regalo",
+      "head": "articolo",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "regalo",
+      "head": "amico",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "regalo",
+      "head": "prenota",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

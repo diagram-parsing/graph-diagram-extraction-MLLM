@@ -1,0 +1,91 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Famiglia",
+      "text": "Famiglia",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Figlio",
+      "text": "Figlio",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Vaccinazione",
+      "text": "Vaccinazione",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Vaccino",
+      "text": "Vaccino",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Medico",
+      "text": "Medico",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Visita",
+      "text": "Visita",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Esenzione",
+      "text": "Esenzione",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "tipo Inoculazione: iniziale, richiamo",
+      "text": "tipo Inoculazione:\n- iniziale\n- richiamo",
+      "class": "Note"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Famiglia",
+      "head": "Figlio",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Figlio",
+      "head": "Vaccinazione",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Figlio",
+      "head": "Visita",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "Vaccino",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Vaccinazione",
+      "head": "tipo Inoculazione: iniziale, richiamo",
+      "class": "Annotation Edge",
+      "label": ""
+    },
+    {
+      "tail": "Visita",
+      "head": "Medico",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Visita",
+      "head": "Esenzione",
+      "class": "UndirectedAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

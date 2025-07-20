@@ -1,0 +1,136 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Check Stock Availability",
+      "text": "Check Stock Availability",
+      "class": "Task"
+    },
+    {
+      "id": "Reject Order",
+      "text": "Reject Order",
+      "class": "EndEvent"
+    },
+    {
+      "id": "Retrieve Product from Warehouse",
+      "text": "Retrieve Product from Warehouse",
+      "class": "Task"
+    },
+    {
+      "id": "Confirm Order",
+      "text": "Confirm Order",
+      "class": "Task"
+    },
+    {
+      "id": "Get Shipment Address",
+      "text": "Get Shipment Address",
+      "class": "Task"
+    },
+    {
+      "id": "Ship Product",
+      "text": "Ship Product",
+      "class": "Task"
+    },
+    {
+      "id": "Emit Invoice",
+      "text": "Emit Invoice",
+      "class": "Task"
+    },
+    {
+      "id": "Receive Payment",
+      "text": "Receive Payment",
+      "class": "Task"
+    },
+    {
+      "id": "Archive Order",
+      "text": "Archive Order",
+      "class": "EndEvent"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Check Stock Availability",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Reject Order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Retrieve Product from Warehouse",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Retrieve Product from Warehouse",
+      "head": "Confirm Order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Confirm Order",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Get Shipment Address",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Emit Invoice",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Receive Payment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Get Shipment Address",
+      "head": "Ship Product",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ship Product",
+      "head": "Archive Order",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Emit Invoice",
+      "head": "Receive Payment",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Receive Payment",
+      "head": "Archive Order",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

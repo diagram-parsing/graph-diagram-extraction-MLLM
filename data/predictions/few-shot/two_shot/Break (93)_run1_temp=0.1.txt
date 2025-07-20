@@ -1,0 +1,79 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Greet customer",
+      "id": "Greet customer",
+      "class": null
+    },
+    {
+      "text": "Talk with them",
+      "id": "Talk with them",
+      "class": null
+    },
+    {
+      "text": "Need help",
+      "id": "Need help",
+      "class": null
+    },
+    {
+      "text": "Call manager",
+      "id": "Call manager",
+      "class": null
+    },
+    {
+      "text": "Manager assist",
+      "id": "Manager assist",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Greet customer",
+      "label": null
+    },
+    {
+      "tail": "Greet customer",
+      "head": "Talk with them",
+      "label": null
+    },
+    {
+      "tail": "Talk with them",
+      "head": "Need help",
+      "label": null
+    },
+    {
+      "tail": "Need help",
+      "head": "Call manager",
+      "label": "Yes"
+    },
+    {
+      "tail": "Need help",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "Call manager",
+      "head": "Manager assist",
+      "label": null
+    },
+    {
+      "tail": "Manager assist",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,60 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": null
+      },
+      {
+        "id": "Pick up item",
+        "text": "Pick up item",
+        "class": null
+      },
+      {
+        "id": "Does this item spark joy for me?",
+        "text": "Does this item spark joy for me?",
+        "class": null
+      },
+      {
+        "id": "Delete",
+        "text": "Delete",
+        "class": null
+      },
+      {
+        "id": "Save",
+        "text": "Save",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Pick up item",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Pick up item",
+        "head": "Does this item spark joy for me?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Does this item spark joy for me?",
+        "head": "Delete",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "Does this item spark joy for me?",
+        "head": "Save",
+        "class": null,
+        "label": "Yes"
+      }
+    ],
+    "groups": []
+  }
+]
+```

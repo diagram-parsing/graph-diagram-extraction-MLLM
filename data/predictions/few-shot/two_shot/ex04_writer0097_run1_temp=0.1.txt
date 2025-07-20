@@ -1,0 +1,153 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "request for compensation received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "Check if acceptable for filing",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "Check if compliant with the description",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_3",
+      "text": "Check if owner paid the fees",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "Produce a fee notice",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "Allocate a hearing date",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "request for compensation [Checked]",
+      "class": "event"
+    },
+    {
+      "id": "event_3",
+      "text": "request for compensation [Not Paid]",
+      "class": "event"
+    },
+    {
+      "id": "event_4",
+      "text": "request for compensation approved",
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": "paid"
+    },
+    {
+      "tail": "task_3",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": "not paid"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Cashier Tribunal",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "task_2",
+        "exclusiveGateway_1",
+        "task_3",
+        "task_4",
+        "task_5",
+        "event_2",
+        "event_3",
+        "event_4",
+        "exclusiveGateway_2"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "Owner",
+      "nodes": [],
+      "class": "lane"
+    }
+  ]
+}
+```

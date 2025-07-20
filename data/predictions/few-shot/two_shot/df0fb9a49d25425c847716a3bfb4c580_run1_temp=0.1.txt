@@ -1,0 +1,187 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Kunde",
+      "attributes": [
+        "- Kundennummer"
+      ],
+      "methods": null,
+      "id": "Kunde",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Berater",
+      "attributes": null,
+      "methods": null,
+      "id": "Berater",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Konfigurator",
+      "attributes": null,
+      "methods": null,
+      "id": "Konfigurator",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Auftragsprüfer",
+      "attributes": null,
+      "methods": null,
+      "id": "Auftragsprüfer",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bestellung",
+      "attributes": [
+        "- Bestellnummer"
+      ],
+      "methods": null,
+      "id": "Bestellung",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Flugzeug",
+      "attributes": [
+        "- Seriennummer"
+      ],
+      "methods": null,
+      "id": "Flugzeug",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Lieferant",
+      "attributes": null,
+      "methods": null,
+      "id": "Lieferant",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Baueteile",
+      "attributes": null,
+      "methods": null,
+      "id": "Baueteile",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Kontaktinfo",
+      "attributes": null,
+      "methods": null,
+      "id": "Kontaktinfo",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Termin",
+      "attributes": null,
+      "methods": null,
+      "id": "Termin",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Liefertermin",
+      "attributes": null,
+      "methods": null,
+      "id": "Liefertermin",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Bestelltermin",
+      "attributes": null,
+      "methods": null,
+      "id": "Bestelltermin",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde",
+      "head": "Berater",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Kunde",
+      "head": "Konfigurator",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Kunde",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Auftragsprüfer",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Flugzeug",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Lieferant",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Flugzeug",
+      "head": "Baueteile",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Kunde",
+      "head": "Kontaktinfo",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Bestellung",
+      "head": "Termin",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Termin",
+      "head": "Liefertermin",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Termin",
+      "head": "Bestelltermin",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

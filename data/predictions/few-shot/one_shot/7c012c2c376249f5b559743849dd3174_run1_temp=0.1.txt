@@ -1,0 +1,118 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "ricercatore",
+        "text": "ricercatore",
+        "attributes": [
+          "OrCID:String",
+          "nome:String",
+          "cognome:String",
+          "DataNascita:Date",
+          "Affiliazione:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "articolo",
+        "text": "articolo",
+        "attributes": [
+          "titolo:String",
+          "abstract:String",
+          "corpo:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "allegato",
+        "text": "allegato",
+        "attributes": [
+          "ID:String",
+          "nome:String",
+          "url:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "review",
+        "text": "review",
+        "attributes": [
+          "commento:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "keyword",
+        "text": "keyword",
+        "attributes": [
+          "codice:String",
+          "nome:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "rivista",
+        "text": "rivista",
+        "attributes": [
+          "nome:String",
+          "settore:String",
+          "publisher:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "editorDi",
+        "text": "editorDi",
+        "attributes": [
+          "verdetto:String"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "ricercatore",
+        "head": "articolo",
+        "class": "UndirectedAssociation",
+        "label": "comunemente un articolo può avere più autori ma nel testo è usato sempre il singolare (1)"
+      },
+      {
+        "tail": "ricercatore",
+        "head": "editorDi",
+        "class": "UndirectedAssociation",
+        "label": "non impedisce ad un ricercatore di essere editor del suo stesso articolo"
+      },
+      {
+        "tail": "editorDi",
+        "head": "rivista",
+        "class": "UndirectedAssociation",
+        "label": "collegamento diretto tra editor e rivista per evitare ripetere i nomi dall'elenco degli articoli assegnati (dati ripetuti e ad esempio un ricercatore e editor di 50 articoli diversi)"
+      },
+      {
+        "tail": "articolo",
+        "head": "allegato",
+        "class": "UndirectedAssociation"
+      },
+      {
+        "tail": "articolo",
+        "head": "keyword",
+        "class": "UndirectedAssociation",
+        "label": "ogni articolo deve avere almeno una keyword"
+      },
+      {
+        "tail": "articolo",
+        "head": "rivista",
+        "class": "UndirectedAssociation",
+        "label": "ogni articolo è appositamente scritto per una rivista in particolare"
+      },
+      {
+        "tail": "articolo",
+        "head": "review",
+        "class": "UndirectedAssociation"
+      }
+    ],
+    "groups": []
+  }
+]
+```

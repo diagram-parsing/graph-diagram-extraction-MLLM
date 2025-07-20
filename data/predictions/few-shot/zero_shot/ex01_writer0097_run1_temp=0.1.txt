@@ -1,0 +1,108 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Credit request received",
+      "text": "Credit request received",
+      "class": "event"
+    },
+    {
+      "id": "assess risk",
+      "text": "assess risk",
+      "class": "task"
+    },
+    {
+      "id": "risk above threshold",
+      "text": "risk above threshold",
+      "class": "event"
+    },
+    {
+      "id": "Carry out advanced risk assessment",
+      "text": "Carry out advanced risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "Simple risk assessment",
+      "text": "Simple risk assessment",
+      "class": "task"
+    },
+    {
+      "id": "approve credit request",
+      "text": "approve credit request",
+      "class": "task"
+    },
+    {
+      "id": "organize disbursement",
+      "text": "organize disbursement",
+      "class": "task"
+    },
+    {
+      "id": "Notify Customer",
+      "text": "Notify Customer",
+      "class": "task"
+    },
+    {
+      "id": "Credit request approved",
+      "text": "Credit request approved",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Credit request received",
+      "head": "assess risk",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "assess risk",
+      "head": "risk above threshold",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "risk above threshold",
+      "head": "Carry out advanced risk assessment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Carry out advanced risk assessment",
+      "head": "approve credit request",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "assess risk",
+      "head": "Simple risk assessment",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Simple risk assessment",
+      "head": "approve credit request",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "approve credit request",
+      "head": "organize disbursement",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "organize disbursement",
+      "head": "Notify Customer",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Notify Customer",
+      "head": "Credit request approved",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

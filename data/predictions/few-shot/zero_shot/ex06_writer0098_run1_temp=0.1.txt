@@ -1,0 +1,160 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "order_received",
+        "text": "order received",
+        "class": "event"
+      },
+      {
+        "id": "receive_order_by_Liefanda",
+        "text": "Receive order by Liefanda",
+        "class": "task"
+      },
+      {
+        "id": "receive_order_by_Website",
+        "text": "Receive order by Website",
+        "class": "task"
+      },
+      {
+        "id": "receive_order_by_phone",
+        "text": "Receive order by phone",
+        "class": "task"
+      },
+      {
+        "id": "Onhim_order",
+        "text": "Onhim order",
+        "class": "task"
+      },
+      {
+        "id": "Website",
+        "text": "Website",
+        "class": "dataObject"
+      },
+      {
+        "id": "phone",
+        "text": "phone",
+        "class": "dataObject"
+      },
+      {
+        "id": "order_note",
+        "text": "order note",
+        "class": "dataObject"
+      },
+      {
+        "id": "Printout_order",
+        "text": "Print out order",
+        "class": "task"
+      },
+      {
+        "id": "Attach_order_note_on_pinboard",
+        "text": "Attach order note on pinboard",
+        "class": "task"
+      },
+      {
+        "id": "order_attached",
+        "text": "order attached",
+        "class": "event"
+      },
+      {
+        "id": "pinboard",
+        "text": "pinboard",
+        "class": "dataObject"
+      },
+      {
+        "id": "Write_down_order_on_note",
+        "text": "Write down order on note",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "order_received",
+        "head": "receive_order_by_Liefanda",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_Liefanda",
+        "head": "Onhim_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_Liefanda",
+        "head": "receive_order_by_Website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_Website",
+        "head": "Onhim_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_Website",
+        "head": "Write_down_order_on_note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_phone",
+        "head": "Write_down_order_on_note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Write_down_order_on_note",
+        "head": "order_note",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Write_down_order_on_note",
+        "head": "Printout_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Printout_order",
+        "head": "Attach_order_note_on_pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Attach_order_note_on_pinboard",
+        "head": "order_attached",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Website",
+        "head": "receive_order_by_Website",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "phone",
+        "head": "receive_order_by_phone",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "order_note",
+        "head": "Attach_order_note_on_pinboard",
+        "class": "dataAssociation",
+        "label": null
+      },
+      {
+        "tail": "pinboard",
+        "head": "Attach_order_note_on_pinboard",
+        "class": "dataAssociation",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

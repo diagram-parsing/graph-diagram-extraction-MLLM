@@ -1,0 +1,64 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "X>Y",
+      "text": "X > Y",
+      "class": "decision"
+    },
+    {
+      "id": "T=Y",
+      "text": "T = Y",
+      "class": "process"
+    },
+    {
+      "id": "Y=X\nX=T",
+      "text": "Y = X\nX = T",
+      "class": "process"
+    },
+    {
+      "id": "end",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "X>Y",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "X>Y",
+      "head": "T=Y",
+      "class": "flow",
+      "label": "then"
+    },
+    {
+      "tail": "T=Y",
+      "head": "Y=X\nX=T",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "Y=X\nX=T",
+      "head": "end",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "X>Y",
+      "head": "end",
+      "class": "flow",
+      "label": "else"
+    }
+  ],
+  "groups": []
+}]
+```

@@ -1,0 +1,168 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "Customer",
+      "class": "pool"
+    },
+    {
+      "id": "place_order",
+      "text": "Place Order",
+      "class": "event"
+    },
+    {
+      "id": "order_received",
+      "text": "Order Received",
+      "class": "event"
+    },
+    {
+      "id": "confirm_order",
+      "text": "Confirm Order",
+      "class": "task"
+    },
+    {
+      "id": "printout_order",
+      "text": "Printout Order",
+      "class": "task"
+    },
+    {
+      "id": "write_down_order",
+      "text": "Write Down Order",
+      "class": "task"
+    },
+    {
+      "id": "attach_order",
+      "text": "Attach Order",
+      "class": "task"
+    },
+    {
+      "id": "note_to_pinboard",
+      "text": "Note to Pinboard",
+      "class": "task"
+    },
+    {
+      "id": "phone_call",
+      "text": "Phone Call",
+      "class": "event"
+    },
+    {
+      "id": "web_order",
+      "text": "Web Order",
+      "class": "event"
+    },
+    {
+      "id": "phone_order",
+      "text": "Phone Order",
+      "class": "event"
+    },
+    {
+      "id": "web_received",
+      "text": "Web Received",
+      "class": "event"
+    },
+    {
+      "id": "phone_received",
+      "text": "Phone Received",
+      "class": "event"
+    },
+    {
+      "id": "order_confirmation",
+      "text": "Order Confirmation",
+      "class": "event"
+    },
+    {
+      "id": "pinboard",
+      "text": "Pinboard",
+      "class": "dataStore"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "customer",
+      "head": "place_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "place_order",
+      "head": "order_received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order_received",
+      "head": "confirm_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm_order",
+      "head": "printout_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "printout_order",
+      "head": "write_down_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write_down_order",
+      "head": "attach_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attach_order",
+      "head": "note_to_pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "note_to_pinboard",
+      "head": "pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "phone_call",
+      "head": "phone_received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "web_order",
+      "head": "web_received",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "web_received",
+      "head": "confirm_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "phone_received",
+      "head": "confirm_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm_order",
+      "head": "order_confirmation",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Customer",
+      "class": "pool",
+      "nodes": ["customer", "place_order", "phone_call", "web_order", "phone_received", "web_received", "order_received", "confirm_order", "order_confirmation"]
+    }
+  ]
+}
+```

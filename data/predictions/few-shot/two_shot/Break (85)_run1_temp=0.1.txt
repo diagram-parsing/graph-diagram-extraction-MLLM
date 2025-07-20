@@ -1,0 +1,49 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Login correct?",
+      "id": "Login correct?",
+      "class": null
+    },
+    {
+      "text": "Front Page",
+      "id": "Front Page",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Login",
+      "label": null
+    },
+    {
+      "tail": "Login",
+      "head": "Login correct?",
+      "label": null
+    },
+    {
+      "tail": "Login correct?",
+      "head": "Front Page",
+      "label": null
+    },
+    {
+      "tail": "Login correct?",
+      "head": "Login",
+      "label": "Correct"
+    }
+  ],
+  "groups": []
+}
+```

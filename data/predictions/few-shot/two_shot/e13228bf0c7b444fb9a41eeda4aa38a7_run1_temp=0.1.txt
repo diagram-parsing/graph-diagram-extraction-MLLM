@@ -1,0 +1,147 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Kundenbefragung",
+      "id": "Kundenbefragung",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Alte Kunden befragen",
+      "id": "Alte Kunden befragen",
+      "class": "Task"
+    },
+    {
+      "text": "Aktuelle Kunden befragen",
+      "id": "Aktuelle Kunden befragen",
+      "class": "Task"
+    },
+    {
+      "text": "Neue Kunden gewinnen",
+      "id": "Neue Kunden gewinnen",
+      "class": "Task"
+    },
+    {
+      "text": "Informationsmaterial und Referenzen senden",
+      "id": "Informationsmaterial und Referenzen senden",
+      "class": "Task"
+    },
+    {
+      "text": "beim Kunden nachfragen",
+      "id": "beim Kunden nachfragen",
+      "class": "Task"
+    },
+    {
+      "text": "Protokoll führen",
+      "id": "Protokoll führen",
+      "class": "Task"
+    },
+    {
+      "text": "Protokoll ablegen",
+      "id": "Protokoll ablegen",
+      "class": "Task"
+    },
+    {
+      "text": "Projektdokumentation",
+      "id": "Projektdokumentation",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_1",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_2",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Databased_Gateway_3",
+      "class": "Exclusive_Databased_Gateway"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kundenbefragung",
+      "head": "Alte Kunden befragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kundenbefragung",
+      "head": "Aktuelle Kunden befragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Alte Kunden befragen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Aktuelle Kunden befragen",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Neue Kunden gewinnen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Informationsmaterial und Referenzen senden",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Informationsmaterial und Referenzen senden",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "beim Kunden nachfragen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Protokoll führen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "beim Kunden nachfragen",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Protokoll führen",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Protokoll ablegen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "Projektdokumentation",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,132 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Doctor rating required",
+        "class": "event"
+      },
+      {
+        "id": "2",
+        "text": "Interviewing Patients",
+        "class": "task"
+      },
+      {
+        "id": "3",
+        "text": "File results",
+        "class": "task"
+      },
+      {
+        "id": "4",
+        "text": "create a report",
+        "class": "task"
+      },
+      {
+        "id": "5",
+        "text": "Doctor reviewed",
+        "class": "event"
+      },
+      {
+        "id": "6",
+        "text": "fill a cheque to the expert",
+        "class": "task"
+      },
+      {
+        "id": "7",
+        "text": "send Payment",
+        "class": "task"
+      },
+      {
+        "id": "8",
+        "text": "Ask for expertise regarding the Doctor",
+        "class": "task"
+      },
+      {
+        "id": "9",
+        "text": "Complete when one expertise is received",
+        "class": "eventBasedGateway"
+      },
+      {
+        "id": "10",
+        "text": "send expertise",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": "send Payment"
+      },
+      {
+        "tail": "1",
+        "head": "8",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "8",
+        "head": "9",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "9",
+        "head": "10",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "10",
+        "head": "8",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Quality Assurance Department",
+        "class": "pool",
+        "nodes": ["1", "2", "3", "4", "5", "6", "7"]
+      },
+      {
+        "name": "Experts",
+        "class": "pool",
+        "nodes": ["8", "9", "10"]
+      }
+    ]
+  }
+]
+```

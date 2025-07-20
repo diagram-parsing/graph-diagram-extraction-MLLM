@@ -1,0 +1,80 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "StartEvent",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "text": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "class": "Task"
+    },
+    {
+      "id": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "text": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "text": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "class": "Task"
+    },
+    {
+      "id": "EndEvent",
+      "text": "",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent",
+      "head": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Logischer Vektor trans_region mit markierten Epochen der Regionen um stabile Übergänge erstellen",
+      "head": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "TDS-Diagramm, trans_new und trans_moments_new mit nur den Epochen erstellen, die zu Regionen um stabile Übergänge gehören",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "A9: Mittelwerte der pregion und fregion in Sammel Array preg und freg für stabilen Übergang hinzufügen",
+      "head": "EndEvent",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

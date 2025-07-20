@@ -1,0 +1,150 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Famiglia",
+        "text": "Famiglia",
+        "attributes": [
+          "-cognome:String",
+          "-cognomeMadre:String",
+          "-codice:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Figlio",
+        "text": "Figlio",
+        "attributes": [
+          "-nome:String",
+          "-cognome:String",
+          "-codFisc:String",
+          "-dataNascita:Data",
+          "-luogoNascita:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Visita",
+        "text": "Visita",
+        "attributes": [
+          "-codiceVisita:String",
+          "-Data:Date",
+          "-esenzione:boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Medico",
+        "text": "Medico",
+        "attributes": [
+          "-nome:String",
+          "-cognome:String",
+          "-codFisc:String",
+          "-email:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Esenzione",
+        "text": "Esenzione",
+        "attributes": [
+          "-codice:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vaccinazione",
+        "text": "Vaccinazione",
+        "attributes": [
+          "-dataEsecuzione:Date",
+          "-tipoInoculazione:enum",
+          "-effettiRiscontrati:String",
+          "-PDF:String",
+          "-codice:String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vaccino",
+        "text": "Vaccino",
+        "attributes": [
+          "-codice:String",
+          "-nome:String",
+          "-obbligatorio:boolean",
+          "-etàRichiesta:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "tipoInoculazione",
+        "text": "tipoInoculazione",
+        "attributes": [
+          "-iniziale",
+          "-richiamo"
+        ],
+        "class": "Enumeration"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Famiglia",
+        "head": "Figlio",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Figlio",
+        "head": "Visita",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Visita",
+        "head": "Medico",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Visita",
+        "head": "Esenzione",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Visita",
+        "head": "Vaccinazione",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vaccinazione",
+        "head": "Vaccino",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vaccinazione",
+        "head": "tipoInoculazione",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

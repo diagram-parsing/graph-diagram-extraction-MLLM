@@ -1,0 +1,66 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "node1",
+        "text": "App Front page",
+        "class": null
+      },
+      {
+        "id": "node2",
+        "text": "Launch",
+        "class": null
+      },
+      {
+        "id": "node3",
+        "text": "Enter password",
+        "class": null
+      },
+      {
+        "id": "node4",
+        "text": "Login Page",
+        "class": null
+      },
+      {
+        "id": "node5",
+        "text": "Home Page User Logged In",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "node1",
+        "head": "node2",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "node2",
+        "head": "node3",
+        "class": null,
+        "label": "Yes"
+      },
+      {
+        "tail": "node2",
+        "head": "node4",
+        "class": null,
+        "label": "No"
+      },
+      {
+        "tail": "node3",
+        "head": "node4",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "node4",
+        "head": "node5",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

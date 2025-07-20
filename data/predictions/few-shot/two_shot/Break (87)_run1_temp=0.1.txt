@@ -1,0 +1,44 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Are you okay",
+      "id": "Are you okay",
+      "class": null
+    },
+    {
+      "text": "DO SOMETHING",
+      "id": "DO SOMETHING",
+      "class": null
+    },
+    {
+      "text": "DO SOMETHING",
+      "id": "DO SOMETHING 2",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Are you okay",
+      "label": null
+    },
+    {
+      "tail": "Are you okay",
+      "head": "DO SOMETHING",
+      "label": "YES"
+    },
+    {
+      "tail": "Are you okay",
+      "head": "DO SOMETHING 2",
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}
+```

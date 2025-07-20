@@ -1,0 +1,114 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "order received",
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_1",
+      "text": "Receive order by Cifredo",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "Receive order by website",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "Take order by phone",
+      "class": "task"
+    },
+    {
+      "id": "task_4",
+      "text": "Write down order note",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "Confirm order",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "Print out order",
+      "class": "task"
+    },
+    {
+      "id": "task_7",
+      "text": "Attach order note to pinboard",
+      "class": "task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

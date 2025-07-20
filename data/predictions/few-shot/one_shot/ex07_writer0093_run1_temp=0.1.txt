@@ -1,0 +1,368 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Doctor review",
+        "class": "task"
+      },
+      {
+        "id": "2",
+        "text": "interview patient",
+        "class": "task"
+      },
+      {
+        "id": "3",
+        "text": "file results",
+        "class": "task"
+      },
+      {
+        "id": "4",
+        "text": "create report",
+        "class": "task"
+      },
+      {
+        "id": "5",
+        "text": "Ask external Expert to review the work of two doctors",
+        "class": "task"
+      },
+      {
+        "id": "6",
+        "text": "responding in time",
+        "class": "event"
+      },
+      {
+        "id": "7",
+        "text": "not responding in time",
+        "class": "event"
+      },
+      {
+        "id": "8",
+        "text": "Rating request",
+        "class": "event"
+      },
+      {
+        "id": "9",
+        "text": "file opinion",
+        "class": "task"
+      },
+      {
+        "id": "10",
+        "text": "experts",
+        "class": "group"
+      },
+      {
+        "id": "11",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "12",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "13",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "14",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "15",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "16",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "17",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "18",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "19",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "20",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "21",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "22",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "23",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "24",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "25",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "26",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "27",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "28",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "29",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "30",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "31",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "32",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "33",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "34",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "35",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "36",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "37",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "38",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "39",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "40",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "41",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "42",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "43",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "44",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "45",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "46",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "47",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "48",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "49",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "50",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "51",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "52",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "53",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "54",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "55",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "56",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "57",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "58",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "59",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "60",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "61",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "62",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "63",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "64",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "65",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "66",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "67",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "68",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "69",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "70",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "71",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "72",
+        "text": "experts",
+        "class": "dataObject"
+      },
+      {
+        "id": "73",
+        "text": "experts",
+        "class": "dataObject"

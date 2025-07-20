@@ -1,0 +1,154 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "incoming_order",
+        "text": "incoming order",
+        "class": "dataObject"
+      },
+      {
+        "id": "receive_order",
+        "text": "Receive order",
+        "class": "event"
+      },
+      {
+        "id": "receive_order_by_lietendo",
+        "text": "Receive order by Liefendo",
+        "class": "task"
+      },
+      {
+        "id": "receive_order_by_website",
+        "text": "Receive order by website",
+        "class": "task"
+      },
+      {
+        "id": "take_order_by_phone",
+        "text": "Take order by phone",
+        "class": "task"
+      },
+      {
+        "id": "confirm_order",
+        "text": "Confirm order",
+        "class": "task"
+      },
+      {
+        "id": "write_down_order",
+        "text": "Write down order",
+        "class": "task"
+      },
+      {
+        "id": "print_out_order",
+        "text": "Print out order",
+        "class": "task"
+      },
+      {
+        "id": "attach_order",
+        "text": "Attach order",
+        "class": "task"
+      },
+      {
+        "id": "order_processed",
+        "text": "order processed",
+        "class": "event"
+      },
+      {
+        "id": "incoming_order_approved",
+        "text": "Incoming order approved",
+        "class": "dataObject"
+      },
+      {
+        "id": "printer",
+        "text": "printer",
+        "class": "dataObject"
+      },
+      {
+        "id": "attach_order_to_pinboard",
+        "text": "Attach order to pinboard",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "incoming_order",
+        "head": "receive_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order",
+        "head": "receive_order_by_lietendo",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order",
+        "head": "receive_order_by_website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_lietendo",
+        "head": "take_order_by_phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_order_by_website",
+        "head": "take_order_by_phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "take_order_by_phone",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm_order",
+        "head": "write_down_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_down_order",
+        "head": "print_out_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "print_out_order",
+        "head": "attach_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "attach_order",
+        "head": "order_processed",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "incoming_order",
+        "head": "incoming_order_approved",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "incoming_order_approved",
+        "head": "printer",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "printer",
+        "head": "attach_order_to_pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

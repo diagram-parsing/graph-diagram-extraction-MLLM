@@ -1,0 +1,44 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Go for shopping",
+      "id": "Go for shopping",
+      "class": null
+    },
+    {
+      "text": "Do I have enough money?",
+      "id": "Do I have enough money?",
+      "class": null
+    },
+    {
+      "text": "Buy it",
+      "id": "Buy it",
+      "class": null
+    },
+    {
+      "text": "Don't buy the item",
+      "id": "Don't buy the item",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Go for shopping",
+      "head": "Do I have enough money?",
+      "label": null
+    },
+    {
+      "tail": "Do I have enough money?",
+      "head": "Buy it",
+      "label": "Yes"
+    },
+    {
+      "tail": "Do I have enough money?",
+      "head": "Don't buy the item",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,89 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Input Data",
+      "id": "Input Data",
+      "class": null
+    },
+    {
+      "text": "Looking for Entropy",
+      "id": "Looking for Entropy",
+      "class": null
+    },
+    {
+      "text": "Gain",
+      "id": "Gain",
+      "class": null
+    },
+    {
+      "text": "Highest Gain",
+      "id": "Highest Gain",
+      "class": null
+    },
+    {
+      "text": "Creating a Node Branch",
+      "id": "Creating a Node Branch",
+      "class": null
+    },
+    {
+      "text": "Finished",
+      "id": "Finished",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input Data",
+      "label": null
+    },
+    {
+      "tail": "Input Data",
+      "head": "Looking for Entropy",
+      "label": null
+    },
+    {
+      "tail": "Looking for Entropy",
+      "head": "Gain",
+      "label": null
+    },
+    {
+      "tail": "Gain",
+      "head": "Highest Gain",
+      "label": null
+    },
+    {
+      "tail": "Highest Gain",
+      "head": "Creating a Node Branch",
+      "label": null
+    },
+    {
+      "tail": "Creating a Node Branch",
+      "head": "Finished",
+      "label": null
+    },
+    {
+      "tail": "Finished",
+      "head": "Stop",
+      "label": "Yes"
+    },
+    {
+      "tail": "Finished",
+      "head": "Gain",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

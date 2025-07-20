@@ -1,0 +1,99 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Define Optimization Problem",
+      "id": "Define Optimization Problem",
+      "class": null
+    },
+    {
+      "text": "Calculate matrix",
+      "id": "Calculate matrix",
+      "class": null
+    },
+    {
+      "text": "Obtain result",
+      "id": "Obtain result",
+      "class": null
+    },
+    {
+      "text": "Perform Data Mining Algorithms",
+      "id": "Perform Data Mining Algorithms",
+      "class": null
+    },
+    {
+      "text": "Evaluate",
+      "id": "Evaluate",
+      "class": null
+    },
+    {
+      "text": "Meet Design Requirements?",
+      "id": "Meet Design Requirements?",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    },
+    {
+      "text": "Modify Mining Rules",
+      "id": "Modify Mining Rules",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Define Optimization Problem",
+      "label": null
+    },
+    {
+      "tail": "Define Optimization Problem",
+      "head": "Calculate matrix",
+      "label": null
+    },
+    {
+      "tail": "Calculate matrix",
+      "head": "Obtain result",
+      "label": null
+    },
+    {
+      "tail": "Obtain result",
+      "head": "Perform Data Mining Algorithms",
+      "label": null
+    },
+    {
+      "tail": "Perform Data Mining Algorithms",
+      "head": "Evaluate",
+      "label": null
+    },
+    {
+      "tail": "Evaluate",
+      "head": "Meet Design Requirements?",
+      "label": null
+    },
+    {
+      "tail": "Meet Design Requirements?",
+      "head": "Stop",
+      "label": "Yes"
+    },
+    {
+      "tail": "Meet Design Requirements?",
+      "head": "Modify Mining Rules",
+      "label": "No"
+    },
+    {
+      "tail": "Modify Mining Rules",
+      "head": "Perform Data Mining Algorithms",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,27 @@
+Method,Match Type,Category,F1 Score
+two-shot_run1,exact,node_texts,0.468
+two-shot_run1,exact,node_classes,0.882
+two-shot_run1,exact,node_text_and_class,0.395
+two-shot_run1,exact,arrow_path,0.205
+two-shot_run1,exact,arrow_classes,0.974
+two-shot_run1,exact,arrow_labels,0.887
+two-shot_run1,exact,arrow_path_and_label,0.197
+two-shot_run1,exact,arrow_path_label_class,0.197
+two-shot_run1,exact,group_names,0.0
+two-shot_run1,exact,group_classes,0.0
+two-shot_run1,exact,group_texts,0.0
+two-shot_run1,exact,group_name_class_texts,0.0
+two-shot_run1,exact,diagram_recognition,0.055
+two-shot_run1,normalized,node_texts,0.78
+two-shot_run1,normalized,node_classes,0.882
+two-shot_run1,normalized,node_text_and_class,0.688
+two-shot_run1,normalized,arrow_path,0.573
+two-shot_run1,normalized,arrow_classes,0.974
+two-shot_run1,normalized,arrow_labels,0.934
+two-shot_run1,normalized,arrow_path_and_label,0.549
+two-shot_run1,normalized,arrow_path_label_class,0.549
+two-shot_run1,normalized,group_names,0.0
+two-shot_run1,normalized,group_classes,0.0
+two-shot_run1,normalized,group_texts,0.0
+two-shot_run1,normalized,group_name_class_texts,0.0
+two-shot_run1,normalized,diagram_recognition,0.226

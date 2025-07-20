@@ -1,0 +1,115 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Addetto",
+      "attributes": [
+        "- ID: String"
+      ],
+      "methods": null,
+      "id": "Addetto",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Cliente",
+      "attributes": [
+        "- Nome: String",
+        "- Estremo IDcard: String",
+        "- Indirizzo: String",
+        "- email: String"
+      ],
+      "methods": null,
+      "id": "Cliente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Noleggio",
+      "attributes": [
+        "- Materiale affittato: String",
+        "- Supporto: String",
+        "- Data restituzione: Date"
+      ],
+      "methods": null,
+      "id": "Noleggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prenotazione",
+      "attributes": [
+        "- Ora: time",
+        "- Data: date",
+        "- Noleggiare string",
+        "- Generalita cliente: String",
+        "- QR: String"
+      ],
+      "methods": null,
+      "id": "Prenotazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pezzi",
+      "attributes": [
+        "- Misura: Float",
+        "- Codice pezzo: String"
+      ],
+      "methods": null,
+      "id": "Pezzi",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Tipo pezzo",
+      "attributes": [
+        "- Marca: String",
+        "- Modello: String",
+        "- Prezzo: String"
+      ],
+      "methods": null,
+      "id": "Tipo pezzo",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Addetto",
+      "head": "Noleggio",
+      "class": "UndirectedAssociation",
+      "label": "gestisce",
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Noleggio",
+      "head": "Pezzi",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Pezzi",
+      "head": "Tipo pezzo",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Noleggio",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": "relativo a",
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Cliente",
+      "head": "Prenotazione",
+      "class": "UndirectedAssociation",
+      "label": "effettua",
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

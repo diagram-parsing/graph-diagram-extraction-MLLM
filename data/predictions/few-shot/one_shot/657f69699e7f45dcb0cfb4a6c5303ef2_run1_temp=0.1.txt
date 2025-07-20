@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "A",
+        "text": "A",
+        "class": "Task"
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "class": "Task"
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "class": "Task"
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "class": "Task"
+      },
+      {
+        "id": "Gateway1",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "Gateway2",
+        "text": null,
+        "class": "Exclusive_Eventbased_Gateway"
+      },
+      {
+        "id": "StartEvent1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "EndEvent1",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent1",
+        "head": "A",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "A",
+        "head": "Gateway1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Gateway1",
+        "head": "B",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Gateway1",
+        "head": "C",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "B",
+        "head": "Gateway2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "C",
+        "head": "Gateway2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Gateway2",
+        "head": "D",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "D",
+        "head": "EndEvent1",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

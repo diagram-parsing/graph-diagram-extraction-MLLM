@@ -1,0 +1,127 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": "terminator"
+      },
+      {
+        "id": "input a, b, C",
+        "text": "input a, b, C",
+        "class": "process"
+      },
+      {
+        "id": "Δ = b² - 4a C",
+        "text": "Δ = b² - 4a C",
+        "class": "process"
+      },
+      {
+        "id": "Δ < 0",
+        "text": "Δ < 0",
+        "class": "decision"
+      },
+      {
+        "id": "No Solution",
+        "text": "No Solution",
+        "class": "process"
+      },
+      {
+        "id": "Δ = 0",
+        "text": "Δ = 0",
+        "class": "decision"
+      },
+      {
+        "id": "Output -b/2a",
+        "text": "Output -b/2a",
+        "class": "process"
+      },
+      {
+        "id": "Output -b+√Δ/2a",
+        "text": "Output -b+√Δ/2a",
+        "class": "process"
+      },
+      {
+        "id": "Output -b-√Δ/2a",
+        "text": "Output -b-√Δ/2a",
+        "class": "process"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "input a, b, C",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "input a, b, C",
+        "head": "Δ = b² - 4a C",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Δ = b² - 4a C",
+        "head": "Δ < 0",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Δ < 0",
+        "head": "No Solution",
+        "class": null,
+        "label": "Y"
+      },
+      {
+        "tail": "Δ < 0",
+        "head": "Δ = 0",
+        "class": null,
+        "label": "N"
+      },
+      {
+        "tail": "Δ = 0",
+        "head": "Output -b/2a",
+        "class": null,
+        "label": "Y"
+      },
+      {
+        "tail": "Δ = 0",
+        "head": "End",
+        "class": null,
+        "label": "N"
+      },
+      {
+        "tail": "Δ = 0",
+        "head": "Output -b+√Δ/2a",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Output -b+√Δ/2a",
+        "head": "End",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Output -b-√Δ/2a",
+        "head": "End",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "No Solution",
+        "head": "End",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,205 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "new case started",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "Obtain interview from Patients",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "Create Report",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "case finished",
+      "class": "event"
+    },
+    {
+      "id": "task_3",
+      "text": "Create inquiry for expert",
+      "class": "task"
+    },
+    {
+      "id": "event_3",
+      "text": "Expert received",
+      "class": "event"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "Create inquiry for another expert",
+      "class": "task"
+    },
+    {
+      "id": "timerEvent_1",
+      "text": "expense not in time",
+      "class": "timerEvent"
+    },
+    {
+      "id": "task_5",
+      "text": "forward expense",
+      "class": "task"
+    },
+    {
+      "id": "event_4",
+      "text": "cheque received",
+      "class": "event"
+    },
+    {
+      "id": "task_6",
+      "text": "Send cheque to expert",
+      "class": "task"
+    },
+    {
+      "id": "event_5",
+      "text": "An inquiry for expert",
+      "class": "event"
+    },
+    {
+      "id": "event_6",
+      "text": "17.11 cheque",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "timerEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "timerEvent_1",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "event_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_4",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "event_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_5",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "event_6",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Patients",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "Hospital",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "exclusiveGateway_1",
+        "task_2",
+        "task_3",
+        "event_3",
+        "exclusiveGateway_2",
+        "task_4",
+        "timerEvent_1",
+        "task_5",
+        "event_4",
+        "task_6",
+        "event_5",
+        "event_6"
+      ],
+      "class": "pool"
+    },
+    {
+      "name": "Experts",
+      "nodes": [],
+      "class": "pool"
+    }
+  ]
+}
+```

@@ -1,0 +1,66 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": "start",
+        "class": "terminator"
+      },
+      {
+        "id": "Impar V",
+        "text": "Impar V",
+        "class": "process"
+      },
+      {
+        "id": "V > 0",
+        "text": "V > 0",
+        "class": "decision"
+      },
+      {
+        "id": "Output V",
+        "text": "Output V",
+        "class": "process"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "Impar V",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Impar V",
+        "head": "V > 0",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "V > 0",
+        "head": "Output V",
+        "class": null,
+        "label": "True"
+      },
+      {
+        "tail": "V > 0",
+        "head": "Impar V",
+        "class": null,
+        "label": "False"
+      },
+      {
+        "tail": "Output V",
+        "head": "End",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

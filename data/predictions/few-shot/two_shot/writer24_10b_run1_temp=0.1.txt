@@ -1,0 +1,58 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": "terminator"
+    },
+    {
+      "id": "Input V",
+      "text": "Input V",
+      "class": "process"
+    },
+    {
+      "id": "V>0",
+      "text": "V>0",
+      "class": "decision"
+    },
+    {
+      "id": "Output Y",
+      "text": "Output Y",
+      "class": "process"
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input V",
+      "label": null
+    },
+    {
+      "tail": "Input V",
+      "head": "V>0",
+      "label": null
+    },
+    {
+      "tail": "V>0",
+      "head": "Output Y",
+      "label": "True"
+    },
+    {
+      "tail": "Output Y",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "V>0",
+      "head": "Start",
+      "label": "False"
+    }
+  ]
+}
+```

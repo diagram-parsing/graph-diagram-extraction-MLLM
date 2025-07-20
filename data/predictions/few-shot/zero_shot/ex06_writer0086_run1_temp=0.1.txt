@@ -1,0 +1,150 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "pizza_order",
+        "text": "pizza order",
+        "class": "dataObject"
+      },
+      {
+        "id": "order_received",
+        "text": "order received",
+        "class": "event"
+      },
+      {
+        "id": "receive_by_Lieferrando",
+        "text": "receive by Lieferrando",
+        "class": "task"
+      },
+      {
+        "id": "confirm_order",
+        "text": "confirm order",
+        "class": "task"
+      },
+      {
+        "id": "receive_by_website",
+        "text": "receive by website",
+        "class": "task"
+      },
+      {
+        "id": "take_order_by_phone",
+        "text": "take order by phone",
+        "class": "task"
+      },
+      {
+        "id": "write_down_order",
+        "text": "write down order",
+        "class": "task"
+      },
+      {
+        "id": "print_order",
+        "text": "print order",
+        "class": "task"
+      },
+      {
+        "id": "attach_to_pinboard",
+        "text": "attach to pinboard",
+        "class": "task"
+      },
+      {
+        "id": "order_token",
+        "text": "order token",
+        "class": "dataObject"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "pizza_order",
+        "head": "order_received",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order_received",
+        "head": "receive_by_Lieferrando",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_by_Lieferrando",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm_order",
+        "head": "print_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm_order",
+        "head": "attach_to_pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order_received",
+        "head": "receive_by_website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive_by_website",
+        "head": "print_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "order_received",
+        "head": "take_order_by_phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "take_order_by_phone",
+        "head": "write_down_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_down_order",
+        "head": "print_order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "print_order",
+        "head": "attach_to_pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "attach_to_pinboard",
+        "head": "order_token",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "CUSTOMER",
+        "class": "pool",
+        "nodes": [
+          "pizza_order",
+          "order_received",
+          "receive_by_Lieferrando",
+          "confirm_order",
+          "receive_by_website",
+          "take_order_by_phone",
+          "write_down_order",
+          "print_order",
+          "attach_to_pinboard",
+          "order_token"
+        ]
+      }
+    ]
+  }
+]
+```

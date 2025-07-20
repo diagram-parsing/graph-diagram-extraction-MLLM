@@ -1,0 +1,164 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Test",
+      "attributes": [
+        "+ data: Date",
+        "+ esito: String"
+      ],
+      "methods": null,
+      "id": "Test",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Prestid",
+      "attributes": [
+        "+ nome: String",
+        "+ indirizzo: String"
+      ],
+      "methods": null,
+      "id": "Prestid",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Viaggiatore",
+      "attributes": [
+        "+ nome: String",
+        "+ nascita: Date",
+        "+ email: String",
+        "+ CF: String",
+        "+ cellulare: String"
+      ],
+      "methods": null,
+      "id": "Viaggiatore",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Indirizzo",
+      "attributes": [
+        "+ via: String",
+        "+ n civico: int",
+        "+ bus: String",
+        "+ citta: String",
+        "+ provincia: String",
+        "+ regione: String"
+      ],
+      "methods": null,
+      "id": "Indirizzo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ingresso",
+      "attributes": [
+        "+ arrivo previsto: DateTime",
+        "+ mezzo: Enum"
+      ],
+      "methods": null,
+      "id": "Ingresso",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "mezzo: String",
+      "attributes": [
+        "- bus",
+        "- taxi",
+        "- aereo",
+        "- mezzo proprio"
+      ],
+      "methods": null,
+      "id": "mezzo: String",
+      "class": "Note"
+    },
+    {
+      "text": "Localita",
+      "attributes": [
+        "+ nome: String",
+        "+ provincia (distretto): String",
+        "+ regione (stato): String"
+      ],
+      "methods": null,
+      "id": "Localita",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Nazione",
+      "attributes": [
+        "+ nome: String"
+      ],
+      "methods": null,
+      "id": "Nazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Rischio",
+      "attributes": [
+        "+ inizio: Date",
+        "+ fine: Date"
+      ],
+      "methods": null,
+      "id": "Rischio",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Viaggiatore",
+      "head": "Test",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Viaggiatore",
+      "head": "Indirizzo",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Viaggiatore",
+      "head": "Ingresso",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Ingresso",
+      "head": "Localita",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Localita",
+      "head": "Nazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Nazione",
+      "head": "Rischio",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Prestid",
+      "head": "Viaggiatore",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

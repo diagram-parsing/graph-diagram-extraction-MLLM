@@ -1,0 +1,118 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": "terminator"
+    },
+    {
+      "id": "input a.b.c",
+      "text": "input a.b.c",
+      "class": "data"
+    },
+    {
+      "id": "Δ = b² - 4ac",
+      "text": "Δ = b² - 4ac",
+      "class": "process"
+    },
+    {
+      "id": "Δ < 0",
+      "text": "Δ < 0",
+      "class": "decision"
+    },
+    {
+      "id": "No solution",
+      "text": "No solution",
+      "class": "data"
+    },
+    {
+      "id": "Δ = 0",
+      "text": "Δ = 0",
+      "class": "decision"
+    },
+    {
+      "id": "output -b/2a",
+      "text": "output -b/2a",
+      "class": "data"
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": "terminator"
+    },
+    {
+      "id": "output -b+√Δ/2a",
+      "text": "output -b+√Δ/2a",
+      "class": "data"
+    },
+    {
+      "id": "output -b-√Δ/2a",
+      "text": "output -b-√Δ/2a",
+      "class": "data"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "input a.b.c",
+      "label": null
+    },
+    {
+      "tail": "input a.b.c",
+      "head": "Δ = b² - 4ac",
+      "label": null
+    },
+    {
+      "tail": "Δ = b² - 4ac",
+      "head": "Δ < 0",
+      "label": null
+    },
+    {
+      "tail": "Δ < 0",
+      "head": "No solution",
+      "label": "Y"
+    },
+    {
+      "tail": "No solution",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Δ < 0",
+      "head": "Δ = 0",
+      "label": "N"
+    },
+    {
+      "tail": "Δ = 0",
+      "head": "output -b/2a",
+      "label": "Y"
+    },
+    {
+      "tail": "output -b/2a",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Δ = 0",
+      "head": "output -b+√Δ/2a",
+      "label": null
+    },
+    {
+      "tail": "output -b+√Δ/2a",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Δ = 0",
+      "head": "output -b-√Δ/2a",
+      "label": null
+    },
+    {
+      "tail": "output -b-√Δ/2a",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

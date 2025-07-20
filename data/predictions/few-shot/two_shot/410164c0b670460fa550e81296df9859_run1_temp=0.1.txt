@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": "StartEvent"
+    },
+    {
+      "text": "CRS checks the defects",
+      "id": "CRS checks the defects",
+      "class": "Task"
+    },
+    {
+      "text": "hand out repair cost calculation to customer",
+      "id": "hand out repair cost calculation to customer",
+      "class": "Task"
+    },
+    {
+      "text": "Customer decides if the cost acceptable",
+      "id": "Customer decides if the cost acceptable",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "text": "Customer takes computer unimpaired",
+      "id": "Customer takes computer unimpaired",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Process continues",
+      "id": "Process continues",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "CRS checks the defects",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "CRS checks the defects",
+      "head": "hand out repair cost calculation to customer",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "hand out repair cost calculation to customer",
+      "head": "Customer decides if the cost acceptable",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Customer decides if the cost acceptable",
+      "head": "Customer takes computer unimpaired",
+      "class": "SequenceFlow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Customer decides if the cost acceptable",
+      "head": "Process continues",
+      "class": "SequenceFlow",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

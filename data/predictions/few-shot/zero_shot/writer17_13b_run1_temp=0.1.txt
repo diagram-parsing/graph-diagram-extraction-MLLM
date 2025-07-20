@@ -1,0 +1,108 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "process1",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "process2",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "process3",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "decision1",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "process4",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "decision2",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "process5",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "end",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "process1",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "process1",
+      "head": "process2",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "process2",
+      "head": "decision1",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "decision1",
+      "head": "process3",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "decision1",
+      "head": "process4",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "process3",
+      "head": "decision2",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "decision2",
+      "head": "process5",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "decision2",
+      "head": "process2",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "process5",
+      "head": "end",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

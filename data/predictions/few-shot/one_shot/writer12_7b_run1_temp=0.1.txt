@@ -1,0 +1,116 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "begin",
+        "class": "terminator"
+      },
+      {
+        "id": "2",
+        "text": "i = 0\nchanged = false",
+        "class": "process"
+      },
+      {
+        "id": "3",
+        "text": "i <= length(T)-2",
+        "class": "decision"
+      },
+      {
+        "id": "4",
+        "text": "T[i] > T[i+1]",
+        "class": "decision"
+      },
+      {
+        "id": "5",
+        "text": "swap(T[i], T[i+1])",
+        "class": "process"
+      },
+      {
+        "id": "6",
+        "text": "changed = true",
+        "class": "process"
+      },
+      {
+        "id": "7",
+        "text": "i = i + 1",
+        "class": "process"
+      },
+      {
+        "id": "8",
+        "text": "changed",
+        "class": "decision"
+      },
+      {
+        "id": "9",
+        "text": "Stop",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": null,
+        "label": "a"
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "7",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "3",
+        "class": null,
+        "label": "z"
+      },
+      {
+        "tail": "3",
+        "head": "8",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "8",
+        "head": "9",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "8",
+        "head": "2",
+        "class": null,
+        "label": "true"
+      }
+    ],
+    "groups": []
+  }
+]
+```

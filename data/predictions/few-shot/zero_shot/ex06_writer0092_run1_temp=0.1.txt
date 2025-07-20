@@ -1,0 +1,136 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "orderReceivedWebsite",
+      "text": "Order received via Website",
+      "class": "event"
+    },
+    {
+      "id": "orderReceivedPhone",
+      "text": "Order received via Phone",
+      "class": "event"
+    },
+    {
+      "id": "orderReceivedLetter",
+      "text": "Order received via Letter",
+      "class": "event"
+    },
+    {
+      "id": "confirmOrder",
+      "text": "Confirm order",
+      "class": "task"
+    },
+    {
+      "id": "writeDownOrder",
+      "text": "Write down order",
+      "class": "task"
+    },
+    {
+      "id": "printoutOrder",
+      "text": "Printout order",
+      "class": "task"
+    },
+    {
+      "id": "attachOrderNote",
+      "text": "Attach order note to pinboard",
+      "class": "task"
+    },
+    {
+      "id": "orderNote",
+      "text": "Order note",
+      "class": "dataObject"
+    },
+    {
+      "id": "printedOrder",
+      "text": "Printed order",
+      "class": "dataObject"
+    },
+    {
+      "id": "updatedPinboard",
+      "text": "Updated pinboard",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "orderReceivedWebsite",
+      "head": "confirmOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "orderReceivedPhone",
+      "head": "confirmOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "orderReceivedLetter",
+      "head": "confirmOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirmOrder",
+      "head": "writeDownOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "writeDownOrder",
+      "head": "printoutOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "printoutOrder",
+      "head": "attachOrderNote",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "writeDownOrder",
+      "head": "orderNote",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "orderNote",
+      "head": "attachOrderNote",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "printoutOrder",
+      "head": "printedOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attachOrderNote",
+      "head": "updatedPinboard",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "bakery",
+      "class": "pool",
+      "nodes": [
+        "orderReceivedWebsite",
+        "orderReceivedPhone",
+        "orderReceivedLetter",
+        "confirmOrder",
+        "writeDownOrder",
+        "printoutOrder",
+        "attachOrderNote",
+        "orderNote",
+        "printedOrder",
+        "updatedPinboard"
+      ]
+    }
+  ]
+}
+```

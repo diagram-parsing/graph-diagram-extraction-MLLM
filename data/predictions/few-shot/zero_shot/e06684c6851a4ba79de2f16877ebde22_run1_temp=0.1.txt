@@ -1,0 +1,73 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Clinica",
+        "text": "Clinica",
+        "attributes": ["nombre", "dirección"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Distribuidor",
+        "text": "Distribuidor",
+        "attributes": ["nombre", "dirección", "e-mail", "teléfono"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Pedido",
+        "text": "Pedido",
+        "attributes": ["código", "fecha"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ProductoInventario",
+        "text": "ProductoInventario",
+        "attributes": ["nombre", "cantidad", "máximo", "mínimo", "descripción"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "LíneaDePedido",
+        "text": "LíneaDePedido",
+        "attributes": ["cantidadPedida", "precioPorUnidad"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Clinica",
+        "head": "Pedido",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "Distribuidor",
+        "head": "Pedido",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "Pedido",
+        "head": "LíneaDePedido",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "ProductoInventario",
+        "head": "LíneaDePedido",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "*"
+      }
+    ],
+    "groups": []
+  }
+]
+```

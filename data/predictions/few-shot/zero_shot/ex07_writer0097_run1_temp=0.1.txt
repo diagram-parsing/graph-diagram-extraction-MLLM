@@ -1,0 +1,178 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "NewCaseReceived",
+      "text": "New case received",
+      "class": "task"
+    },
+    {
+      "id": "Interview",
+      "text": "Interview",
+      "class": "task"
+    },
+    {
+      "id": "InterviewEstablished",
+      "text": "Interview established",
+      "class": "event"
+    },
+    {
+      "id": "ExpertiseReceived",
+      "text": "Expertise received",
+      "class": "event"
+    },
+    {
+      "id": "FileResults",
+      "text": "File the results containing the patient interviews",
+      "class": "task"
+    },
+    {
+      "id": "FileExpertise",
+      "text": "File the expertise",
+      "class": "task"
+    },
+    {
+      "id": "CreateReport",
+      "text": "Create a report",
+      "class": "task"
+    },
+    {
+      "id": "ReportCreated",
+      "text": "Report created",
+      "class": "event"
+    },
+    {
+      "id": "DoctorUnderratingReceived",
+      "text": "Doctor underrating received",
+      "class": "event"
+    },
+    {
+      "id": "AskExternalExpertise",
+      "text": "Ask an external expertise",
+      "class": "task"
+    },
+    {
+      "id": "ExternalExpertiseReceived",
+      "text": "External expertise received",
+      "class": "event"
+    },
+    {
+      "id": "ExpertiseSent",
+      "text": "Expertise sent",
+      "class": "event"
+    },
+    {
+      "id": "FillCheque",
+      "text": "Fill a cheque",
+      "class": "task"
+    },
+    {
+      "id": "ExpensesSent",
+      "text": "Expenses sent",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "NewCaseReceived",
+      "head": "Interview",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "Interview",
+      "head": "InterviewEstablished",
+      "class": "sequenceFlow",
+      "label": "Until all interviews established"
+    },
+    {
+      "tail": "InterviewEstablished",
+      "head": "ExpertiseReceived",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ExpertiseReceived",
+      "head": "FileResults",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "FileResults",
+      "head": "FileExpertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "FileExpertise",
+      "head": "CreateReport",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "CreateReport",
+      "head": "ReportCreated",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "InterviewEstablished",
+      "head": "DoctorUnderratingReceived",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "DoctorUnderratingReceived",
+      "head": "AskExternalExpertise",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "AskExternalExpertise",
+      "head": "ExternalExpertiseReceived",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ExternalExpertiseReceived",
+      "head": "ExpertiseSent",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ExpertiseSent",
+      "head": "FillCheque",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "FillCheque",
+      "head": "ExpensesSent",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Doctors III",
+      "class": "pool",
+      "nodes": [
+        "NewCaseReceived",
+        "Interview",
+        "InterviewEstablished",
+        "ExpertiseReceived",
+        "FileResults",
+        "FileExpertise",
+        "CreateReport",
+        "ReportCreated",
+        "DoctorUnderratingReceived",
+        "AskExternalExpertise",
+        "ExternalExpertiseReceived",
+        "ExpertiseSent",
+        "FillCheque",
+        "ExpensesSent"
+      ]
+    }
+  ]
+}
+```

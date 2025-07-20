@@ -1,0 +1,238 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "New case received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "interview Patients",
+      "class": "task"
+    },
+    {
+      "id": "timerEvent_1",
+      "text": "interview established",
+      "class": "timerEvent"
+    },
+    {
+      "id": "messageEvent_1",
+      "text": "expertise received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "parallelGateway_1",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "File the results containing the patient interviews",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "File the expertise",
+      "class": "task"
+    },
+    {
+      "id": "parallelGateway_2",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "Create a report",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "report created",
+      "class": "event"
+    },
+    {
+      "id": "task_5",
+      "text": "doctor undertaking received",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "Ask an external expertise",
+      "class": "task"
+    },
+    {
+      "id": "messageEvent_2",
+      "text": "Expertise received",
+      "class": "messageEvent"
+    },
+    {
+      "id": "messageEvent_3",
+      "text": "Expertise sent",
+      "class": "messageEvent"
+    },
+    {
+      "id": "task_7",
+      "text": "Fill a cheque",
+      "class": "task"
+    },
+    {
+      "id": "messageEvent_4",
+      "text": "expenses sent",
+      "class": "messageEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "timerEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "timerEvent_1",
+      "head": "messageEvent_1",
+      "class": "sequenceFlow",
+      "label": "until all interviews established"
+    },
+    {
+      "tail": "messageEvent_1",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_1",
+      "head": "task_5",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "messageEvent_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "messageEvent_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_3",
+      "head": "task_7",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_7",
+      "head": "messageEvent_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "messageEvent_2",
+      "head": "messageEvent_1",
+      "class": "messageFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Hospital",
+      "class": "pool",
+      "nodes": [
+        "QA",
+        "Management director"
+      ]
+    },
+    {
+      "name": "QA",
+      "class": "lane",
+      "nodes": [
+        "event_1",
+        "task_1",
+        "timerEvent_1",
+        "messageEvent_1",
+        "parallelGateway_1",
+        "task_2",
+        "task_3",
+        "parallelGateway_2",
+        "task_4",
+        "event_2"
+      ]
+    },
+    {
+      "name": "Management director",
+      "class": "lane",
+      "nodes": [
+        "task_5",
+        "task_6",
+        "messageEvent_2",
+        "messageEvent_3",
+        "task_7",
+        "messageEvent_4"
+      ]
+    },
+    {
+      "name": "external experts",
+      "class": "pool",
+      "nodes": []
+    },
+    {
+      "name": "Doctors",
+      "class": "pool",
+      "nodes": []
+    }
+  ]
+}]
+```

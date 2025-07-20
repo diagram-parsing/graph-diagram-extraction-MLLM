@@ -1,0 +1,179 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "Claim received",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "Check if claimant is insured",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "event_2",
+      "text": "Send rejection via SAP system",
+      "class": "event"
+    },
+    {
+      "id": "task_2",
+      "text": "Forms received",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_2",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_3",
+      "text": "Check for completion",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_3",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "Evaluate Severity",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_4",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "event_3",
+      "text": "Send to SAP system",
+      "class": "event"
+    },
+    {
+      "id": "dataObject_1",
+      "text": "Forms [simple]",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_2",
+      "text": "Forms [complex]",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_3",
+      "text": "Claims Management System",
+      "class": "dataObject"
+    },
+    {
+      "id": "dataObject_4",
+      "text": "POCM Bendo",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": "Not insured"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": "Insured"
+    },
+    {
+      "tail": "task_2",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "dataObject_3",
+      "class": "sequenceFlow",
+      "label": "Incomplete"
+    },
+    {
+      "tail": "exclusiveGateway_2",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": "Complete"
+    },
+    {
+      "tail": "task_4",
+      "head": "exclusiveGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "dataObject_1",
+      "class": "sequenceFlow",
+      "label": "Simple"
+    },
+    {
+      "tail": "exclusiveGateway_3",
+      "head": "dataObject_2",
+      "class": "sequenceFlow",
+      "label": "Complex"
+    },
+    {
+      "tail": "dataObject_1",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_2",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "dataObject_3",
+      "head": "dataObject_4",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "Claimant",
+      "class": "pool",
+      "nodes": []
+    },
+    {
+      "name": "Insurer",
+      "class": "pool",
+      "nodes": []
+    }
+  ]
+}
+```

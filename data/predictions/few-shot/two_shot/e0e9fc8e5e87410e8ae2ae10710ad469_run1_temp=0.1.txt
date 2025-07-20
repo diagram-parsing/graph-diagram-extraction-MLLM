@@ -1,0 +1,178 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Utente",
+      "attributes": [
+        "- nome: String",
+        "- cognome: String",
+        "- email: String",
+        "- cell: String",
+        "- via: String",
+        "- num: String",
+        "- città: String",
+        "- dataNascita: Date"
+      ],
+      "methods": null,
+      "id": "Utente",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Luogo",
+      "attributes": [
+        "- nome: String"
+      ],
+      "methods": null,
+      "id": "Luogo",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Segnalazione",
+      "attributes": [
+        "- hPartenza: DateTime",
+        "- mezzo: enum"
+      ],
+      "methods": null,
+      "id": "Segnalazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Viaggio",
+      "attributes": [
+        "- costo: Currency",
+        "- hPart: DateTime"
+      ],
+      "methods": null,
+      "id": "Viaggio",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Credito",
+      "attributes": [
+        "- valore: Currency",
+        "- data: Date"
+      ],
+      "methods": null,
+      "id": "Credito",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Operazione",
+      "attributes": [
+        "- data: Date",
+        "- valore: Currency",
+        "- causale: String"
+      ],
+      "methods": null,
+      "id": "Operazione",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "coinvolge",
+      "attributes": [
+        "- guidatore: boolean",
+        "- stato: enum"
+      ],
+      "methods": null,
+      "id": "coinvolge",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ricarica",
+      "attributes": null,
+      "methods": null,
+      "id": "Ricarica",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Riscossione",
+      "attributes": null,
+      "methods": null,
+      "id": "Riscossione",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Pagamento",
+      "attributes": null,
+      "methods": null,
+      "id": "Pagamento",
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Utente",
+      "head": "Segnalazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Segnalazione",
+      "head": "Luogo",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Segnalazione",
+      "head": "Viaggio",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Utente",
+      "head": "Credito",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Credito",
+      "head": "Operazione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1..*"
+    },
+    {
+      "tail": "Operazione",
+      "head": "Ricarica",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Operazione",
+      "head": "Riscossione",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Operazione",
+      "head": "Pagamento",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1..*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Viaggio",
+      "head": "coinvolge",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": "1",
+      "cardinality_end": "1"
+    }
+  ],
+  "groups": []
+}
+```

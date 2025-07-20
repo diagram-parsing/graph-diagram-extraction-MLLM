@@ -1,0 +1,74 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Person",
+      "id": "Person",
+      "class": null
+    },
+    {
+      "text": "Carbon Offset Vendors",
+      "id": "Carbon Offset Vendors",
+      "class": null
+    },
+    {
+      "text": "Different company",
+      "id": "Different company",
+      "class": null
+    },
+    {
+      "text": "Vendor Overhead and/or Profit",
+      "id": "Vendor Overhead and/or Profit",
+      "class": null
+    },
+    {
+      "text": "Third Party-initiated Carbon Negative Activity",
+      "id": "Third Party-initiated Carbon Negative Activity",
+      "class": null
+    },
+    {
+      "text": "Cons",
+      "id": "Cons",
+      "class": null
+    },
+    {
+      "text": "Third Party Overhead and/or Profit",
+      "id": "Third Party Overhead and/or Profit",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Person",
+      "head": "Carbon Offset Vendors",
+      "label": null
+    },
+    {
+      "tail": "Carbon Offset Vendors",
+      "head": "Different company",
+      "label": null
+    },
+    {
+      "tail": "Different company",
+      "head": "Vendor Overhead and/or Profit",
+      "label": null
+    },
+    {
+      "tail": "Different company",
+      "head": "Third Party-initiated Carbon Negative Activity",
+      "label": null
+    },
+    {
+      "tail": "Different company",
+      "head": "Cons",
+      "label": null
+    },
+    {
+      "tail": "Different company",
+      "head": "Third Party Overhead and/or Profit",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

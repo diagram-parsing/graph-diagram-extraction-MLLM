@@ -1,0 +1,114 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "VIDEOLEZIONE",
+        "text": "VIDEOLEZIONE",
+        "attributes": [
+          "numProg: int",
+          "orario: Time",
+          "descrizione: String",
+          "pubblicata: boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "INSEGNAMENTO",
+        "text": "INSEGNAMENTO",
+        "attributes": [
+          "nome: String",
+          "codice: String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "STUDENTE",
+        "text": "STUDENTE",
+        "attributes": [
+          "matricola: String",
+          "nome: String",
+          "cognome: String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "DOCENTE",
+        "text": "DOCENTE",
+        "attributes": [
+          "matricola: String",
+          "nome: String",
+          "titolare: boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "SOTTOTITOLO",
+        "text": "SOTTOTITOLO",
+        "attributes": [
+          "orario: int",
+          "mininizio: int",
+          "minfine: int",
+          "testo: String"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "MODULO",
+        "text": "MODULO",
+        "attributes": [
+          "orario: int",
+          "mininizio: int",
+          "minfine: int",
+          "descrizione: String",
+          "materia: String"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "VIDEOLEZIONE",
+        "head": "INSEGNAMENTO",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "INSEGNAMENTO",
+        "head": "STUDENTE",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "INSEGNAMENTO",
+        "head": "DOCENTE",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "VIDEOLEZIONE",
+        "head": "SOTTOTITOLO",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "VIDEOLEZIONE",
+        "head": "MODULO",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      }
+    ],
+    "groups": []
+  }
+]
+```

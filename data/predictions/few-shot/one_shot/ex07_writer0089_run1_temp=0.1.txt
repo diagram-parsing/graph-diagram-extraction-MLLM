@@ -1,0 +1,143 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "case started",
+        "text": "case started",
+        "class": "event"
+      },
+      {
+        "id": "interview patients",
+        "text": "interview patients",
+        "class": "task"
+      },
+      {
+        "id": "file result exp",
+        "text": "file result exp",
+        "class": "task"
+      },
+      {
+        "id": "create report",
+        "text": "create report",
+        "class": "task"
+      },
+      {
+        "id": "report created",
+        "text": "report created",
+        "class": "event"
+      },
+      {
+        "id": "ask expert to review work of doctor",
+        "text": "ask expert to review work of doctor",
+        "class": "task"
+      },
+      {
+        "id": "open,2 received",
+        "text": "open,2 received",
+        "class": "event"
+      },
+      {
+        "id": "no response in 48h",
+        "text": "no response in 48h",
+        "class": "event"
+      },
+      {
+        "id": "send enterprise",
+        "text": "send enterprise",
+        "class": "task"
+      },
+      {
+        "id": "kill a day for expert",
+        "text": "kill a day for expert",
+        "class": "task"
+      },
+      {
+        "id": "send email",
+        "text": "send email",
+        "class": "task"
+      },
+      {
+        "id": "external expert",
+        "text": null,
+        "class": "group"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "case started",
+        "head": "interview patients",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "interview patients",
+        "head": "file result exp",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "file result exp",
+        "head": "create report",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "create report",
+        "head": "report created",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "case started",
+        "head": "ask expert to review work of doctor",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "ask expert to review work of doctor",
+        "head": "open,2 received",
+        "class": "sequenceFlow",
+        "label": "request review"
+      },
+      {
+        "tail": "open,2 received",
+        "head": "send enterprise",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "open,2 received",
+        "head": "no response in 48h",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "no response in 48h",
+        "head": "kill a day for expert",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "kill a day for expert",
+        "head": "send email",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "send email",
+        "head": "report created",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": null,
+        "class": "group",
+        "nodes": ["external expert"]
+      }
+    ]
+  }
+]
+```

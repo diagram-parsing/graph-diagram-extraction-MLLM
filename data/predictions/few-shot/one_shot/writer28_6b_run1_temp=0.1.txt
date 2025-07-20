@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "Input m",
+        "text": "Input m",
+        "class": "process"
+      },
+      {
+        "id": "Initialize",
+        "text": "k=1\nsum=0",
+        "class": "process"
+      },
+      {
+        "id": "Calculate sum",
+        "text": "sum = sum + k",
+        "class": "process"
+      },
+      {
+        "id": "Check k",
+        "text": "k == m ?",
+        "class": "decision"
+      },
+      {
+        "id": "Increment k",
+        "text": "k = k + 1",
+        "class": "process"
+      },
+      {
+        "id": "Print sum",
+        "text": "Print sum",
+        "class": "process"
+      },
+      {
+        "id": "Finish",
+        "text": "Finish",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Input m",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Input m",
+        "head": "Initialize",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Initialize",
+        "head": "Calculate sum",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Calculate sum",
+        "head": "Check k",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Check k",
+        "head": "Print sum",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "Check k",
+        "head": "Increment k",
+        "class": null,
+        "label": "0"
+      },
+      {
+        "tail": "Increment k",
+        "head": "Calculate sum",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Print sum",
+        "head": "Finish",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

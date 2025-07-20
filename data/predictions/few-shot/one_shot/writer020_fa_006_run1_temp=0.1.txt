@@ -1,0 +1,84 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "S",
+        "text": "S",
+        "class": "state"
+      },
+      {
+        "id": "{q1}",
+        "text": "{q1}",
+        "class": "state"
+      },
+      {
+        "id": "{q2,f}",
+        "text": "{q2,f}",
+        "class": "state"
+      },
+      {
+        "id": "{f}",
+        "text": "{f}",
+        "class": "final state"
+      },
+      {
+        "id": "{q3}",
+        "text": "{q3}",
+        "class": "state"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "S",
+        "head": "{q1}",
+        "class": null,
+        "label": "a"
+      },
+      {
+        "tail": "S",
+        "head": "{q2,f}",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "{q1}",
+        "head": "{q3}",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "{q1}",
+        "head": "{q2,f}",
+        "class": null,
+        "label": "c"
+      },
+      {
+        "tail": "{q2,f}",
+        "head": "{f}",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "{q2,f}",
+        "head": "{q3}",
+        "class": null,
+        "label": "c"
+      },
+      {
+        "tail": "{q3}",
+        "head": "{q2,f}",
+        "class": null,
+        "label": "b"
+      },
+      {
+        "tail": "{q3}",
+        "head": "{f}",
+        "class": null,
+        "label": "c"
+      }
+    ],
+    "groups": []
+  }
+]
+```

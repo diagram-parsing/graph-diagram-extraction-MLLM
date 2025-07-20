@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "order",
+        "text": "order",
+        "class": "dataObject"
+      },
+      {
+        "id": "receive order by website",
+        "text": "receive order by website",
+        "class": "task"
+      },
+      {
+        "id": "receive order by phone",
+        "text": "receive order by phone",
+        "class": "task"
+      },
+      {
+        "id": "write order down",
+        "text": "write order down",
+        "class": "task"
+      },
+      {
+        "id": "confirm order",
+        "text": "confirm order",
+        "class": "task"
+      },
+      {
+        "id": "Driver",
+        "text": "Driver",
+        "class": "event"
+      },
+      {
+        "id": "process our order",
+        "text": "process our order",
+        "class": "task"
+      },
+      {
+        "id": "Attach order note to record",
+        "text": "Attach order note to record",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "order",
+        "head": "receive order by website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive order by website",
+        "head": "confirm order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm order",
+        "head": "Driver",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "confirm order",
+        "head": "process our order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "receive order by phone",
+        "head": "write order down",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write order down",
+        "head": "confirm order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write order down",
+        "head": "Attach order note to record",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "process our order",
+        "head": "Attach order note to record",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

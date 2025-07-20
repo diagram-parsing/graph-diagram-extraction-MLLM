@@ -1,0 +1,58 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "Process 1",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "Decision",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "Process 2",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Process 1",
+      "label": null
+    },
+    {
+      "tail": "Process 1",
+      "head": "Decision",
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Process 2",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decision",
+      "head": "Process 1",
+      "label": "No"
+    },
+    {
+      "tail": "Process 2",
+      "head": "End",
+      "label": null
+    }
+  ]
+}
+```

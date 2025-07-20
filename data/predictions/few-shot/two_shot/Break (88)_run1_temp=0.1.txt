@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Input n",
+      "id": "Input n",
+      "class": null
+    },
+    {
+      "text": "n%2=0",
+      "id": "n%2=0",
+      "class": null
+    },
+    {
+      "text": "Even",
+      "id": "Even",
+      "class": null
+    },
+    {
+      "text": "Odd",
+      "id": "Odd",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input n",
+      "label": null
+    },
+    {
+      "tail": "Input n",
+      "head": "n%2=0",
+      "label": null
+    },
+    {
+      "tail": "n%2=0",
+      "head": "Even",
+      "label": "Yes"
+    },
+    {
+      "tail": "n%2=0",
+      "head": "Odd",
+      "label": "No"
+    },
+    {
+      "tail": "Even",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Odd",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

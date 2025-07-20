@@ -1,0 +1,133 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Start",
+        "class": null
+      },
+      {
+        "id": "Read Values",
+        "text": "Read Values",
+        "class": null
+      },
+      {
+        "id": "new trials available?",
+        "text": "new trials available?",
+        "class": null
+      },
+      {
+        "id": "read new trial",
+        "text": "read new trial",
+        "class": null
+      },
+      {
+        "id": "average available for condition?",
+        "text": "average available for condition?",
+        "class": null
+      },
+      {
+        "id": "Initialize",
+        "text": "Initialize",
+        "class": null
+      },
+      {
+        "id": "add data to cumulative sum",
+        "text": "add data to cumulative sum",
+        "class": null
+      },
+      {
+        "id": "compute t-value and plot",
+        "text": "compute t-value and plot",
+        "class": null
+      },
+      {
+        "id": "continue?",
+        "text": "continue?",
+        "class": null
+      },
+      {
+        "id": "Stop",
+        "text": "Stop",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "Read Values",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Read Values",
+        "head": "new trials available?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "new trials available?",
+        "head": "Read Values",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "new trials available?",
+        "head": "read new trial",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "read new trial",
+        "head": "average available for condition?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "average available for condition?",
+        "head": "Initialize",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "average available for condition?",
+        "head": "add data to cumulative sum",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "Initialize",
+        "head": "add data to cumulative sum",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "add data to cumulative sum",
+        "head": "compute t-value and plot",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "compute t-value and plot",
+        "head": "continue?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "continue?",
+        "head": "Stop",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "continue?",
+        "head": "Read Values",
+        "class": null,
+        "label": "yes"
+      }
+    ],
+    "groups": []
+  }
+]
+```

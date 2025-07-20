@@ -1,0 +1,170 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent_1",
+        "text": null,
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task_1",
+        "text": "Database Search",
+        "class": "Task"
+      },
+      {
+        "id": "Task_2",
+        "text": "Calculate claim estimate",
+        "class": "Task"
+      },
+      {
+        "id": "Task_3",
+        "text": "Create an Action Plan",
+        "class": "Task"
+      },
+      {
+        "id": "Task_4",
+        "text": "Negotiate Settlement",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent_1",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "EndEvent_2",
+        "text": null,
+        "class": "EndEvent"
+      },
+      {
+        "id": "Task_5",
+        "text": "Inform Claimant",
+        "class": "Task"
+      },
+      {
+        "id": "Task_6",
+        "text": "Assess risk",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway_1",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task_7",
+        "text": "Conduct high level risk assessment",
+        "class": "Task"
+      },
+      {
+        "id": "Task_8",
+        "text": "Conduct low level risk assessment",
+        "class": "Task"
+      },
+      {
+        "id": "Task_9",
+        "text": "Notify customer",
+        "class": "Task"
+      },
+      {
+        "id": "Task_10",
+        "text": "Organise disbursement",
+        "class": "Task"
+      },
+      {
+        "id": "EndEvent_3",
+        "text": null,
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent_1",
+        "head": "Task_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_1",
+        "head": "Task_2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_2",
+        "head": "Task_3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_3",
+        "head": "Task_4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_4",
+        "head": "Task_5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_5",
+        "head": "EndEvent_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "StartEvent_1",
+        "head": "Task_6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_6",
+        "head": "Exclusive_Databased_Gateway_1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Task_7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway_1",
+        "head": "Task_8",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_7",
+        "head": "Task_9",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_8",
+        "head": "Task_9",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_9",
+        "head": "Task_10",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task_10",
+        "head": "EndEvent_3",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

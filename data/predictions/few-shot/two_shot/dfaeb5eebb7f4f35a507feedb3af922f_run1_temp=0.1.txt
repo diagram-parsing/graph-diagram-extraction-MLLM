@@ -1,0 +1,125 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "StartEvent",
+      "text": "",
+      "class": "StartEvent"
+    },
+    {
+      "id": "Process oats to create fine flour",
+      "text": "Process oats to create fine flour",
+      "class": "Task"
+    },
+    {
+      "id": "Chop pecans",
+      "text": "Chop pecans",
+      "class": "Task"
+    },
+    {
+      "id": "Chop walnuts",
+      "text": "Chop walnuts",
+      "class": "Task"
+    },
+    {
+      "id": "Omit nuts",
+      "text": "Omit nuts",
+      "class": "Task"
+    },
+    {
+      "id": "Cream butter, eggs, and sugar in an electric mixer",
+      "text": "Cream butter, eggs, and sugar in an electric mixer",
+      "class": "Task"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_1",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_2",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "Exclusive_Databased_Gateway_3",
+      "text": "",
+      "class": "Exclusive_Databased_Gateway"
+    },
+    {
+      "id": "EndEvent",
+      "text": "",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "StartEvent",
+      "head": "Exclusive_Databased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Chop pecans",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Chop walnuts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_1",
+      "head": "Omit nuts",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Chop pecans",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Chop walnuts",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Omit nuts",
+      "head": "Exclusive_Databased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_2",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Process oats to create fine flour",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Cream butter, eggs, and sugar in an electric mixer",
+      "head": "Exclusive_Databased_Gateway_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Databased_Gateway_3",
+      "head": "EndEvent",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

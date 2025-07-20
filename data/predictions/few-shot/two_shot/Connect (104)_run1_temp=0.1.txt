@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Leave office",
+      "id": "Leave office",
+      "class": null
+    },
+    {
+      "text": "Check time",
+      "id": "Check time",
+      "class": null
+    },
+    {
+      "text": "Before 7am ?",
+      "id": "Before 7am ?",
+      "class": null
+    },
+    {
+      "text": "Take bus",
+      "id": "Take bus",
+      "class": null
+    },
+    {
+      "text": "Take subway",
+      "id": "Take subway",
+      "class": null
+    },
+    {
+      "text": "Reach home",
+      "id": "Reach home",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Leave office",
+      "head": "Check time",
+      "label": null
+    },
+    {
+      "tail": "Check time",
+      "head": "Before 7am ?",
+      "label": null
+    },
+    {
+      "tail": "Before 7am ?",
+      "head": "Take bus",
+      "label": "Yes"
+    },
+    {
+      "tail": "Before 7am ?",
+      "head": "Take subway",
+      "label": "No"
+    },
+    {
+      "tail": "Take bus",
+      "head": "Reach home",
+      "label": null
+    },
+    {
+      "tail": "Take subway",
+      "head": "Reach home",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,60 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "start",
+        "text": null,
+        "class": "terminator"
+      },
+      {
+        "id": "read_n",
+        "text": "Read n",
+        "class": "process"
+      },
+      {
+        "id": "n_equals_n_plus_n",
+        "text": "n = n + n",
+        "class": "process"
+      },
+      {
+        "id": "bitwise_and",
+        "text": "Bitwise AND",
+        "class": "process"
+      },
+      {
+        "id": "end",
+        "text": null,
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "start",
+        "head": "read_n",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "read_n",
+        "head": "n_equals_n_plus_n",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "n_equals_n_plus_n",
+        "head": "bitwise_and",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "bitwise_and",
+        "head": "end",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,88 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Reference Values",
+        "text": "Reference Values",
+        "class": null
+      },
+      {
+        "id": "Control",
+        "text": "Control",
+        "class": null
+      },
+      {
+        "id": "Constant Voltage",
+        "text": "Constant Voltage",
+        "class": null
+      },
+      {
+        "id": "Supply System",
+        "text": "Supply System",
+        "class": null
+      },
+      {
+        "id": "Power Unit",
+        "text": "Power Unit",
+        "class": null
+      },
+      {
+        "id": "Motor",
+        "text": "Motor",
+        "class": null
+      },
+      {
+        "id": "Driven Load",
+        "text": "Driven Load",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Reference Values",
+        "head": "Control",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Control",
+        "head": "Constant Voltage",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Constant Voltage",
+        "head": "Supply System",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Supply System",
+        "head": "Power Unit",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Power Unit",
+        "head": "Motor",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Motor",
+        "head": "Driven Load",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Driven Load",
+        "head": "Control",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,119 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Open Email",
+      "id": "Open Email",
+      "class": null
+    },
+    {
+      "text": "Read email",
+      "id": "Read email",
+      "class": null
+    },
+    {
+      "text": "Structured?",
+      "id": "Structured?",
+      "class": null
+    },
+    {
+      "text": "Process Manually",
+      "id": "Process Manually",
+      "class": null
+    },
+    {
+      "text": "Send Email to Update File",
+      "id": "Send Email to Update File",
+      "class": null
+    },
+    {
+      "text": "Extract Data",
+      "id": "Extract Data",
+      "class": null
+    },
+    {
+      "text": "Lookup Product Description",
+      "id": "Lookup Product Description",
+      "class": null
+    },
+    {
+      "text": "Match Found?",
+      "id": "Match Found?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Open Email",
+      "label": null
+    },
+    {
+      "tail": "Open Email",
+      "head": "Read email",
+      "label": null
+    },
+    {
+      "tail": "Read email",
+      "head": "Structured?",
+      "label": null
+    },
+    {
+      "tail": "Structured?",
+      "head": "Process Manually",
+      "label": "NO"
+    },
+    {
+      "tail": "Structured?",
+      "head": "Send Email to Update File",
+      "label": "YES"
+    },
+    {
+      "tail": "Read email",
+      "head": "Extract Data",
+      "label": null
+    },
+    {
+      "tail": "Extract Data",
+      "head": "Lookup Product Description",
+      "label": null
+    },
+    {
+      "tail": "Lookup Product Description",
+      "head": "Match Found?",
+      "label": null
+    },
+    {
+      "tail": "Match Found?",
+      "head": "Send Email to Update File",
+      "label": "YES"
+    },
+    {
+      "tail": "Match Found?",
+      "head": "Process Manually",
+      "label": "NO"
+    },
+    {
+      "tail": "Process Manually",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Send Email to Update File",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

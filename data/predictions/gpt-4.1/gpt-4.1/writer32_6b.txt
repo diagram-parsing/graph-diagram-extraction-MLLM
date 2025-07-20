@@ -1,0 +1,97 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": "terminator"
+    },
+    {
+      "id": "Input n",
+      "text": "Input n",
+      "class": "data"
+    },
+    {
+      "id": "k=1 sum=0",
+      "text": "k=1\nsum=0",
+      "class": "process"
+    },
+    {
+      "id": "sum=sum+k",
+      "text": "sum=sum+k",
+      "class": "process"
+    },
+    {
+      "id": "k==n?",
+      "text": "k==n?",
+      "class": "decision"
+    },
+    {
+      "id": "disp sum",
+      "text": "disp sum",
+      "class": "data"
+    },
+    {
+      "id": "Finish",
+      "text": "Finish",
+      "class": "terminator"
+    },
+    {
+      "id": "k=k+1",
+      "text": "k=k+1",
+      "class": "process"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input n",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "Input n",
+      "head": "k=1 sum=0",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "k=1 sum=0",
+      "head": "sum=sum+k",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "sum=sum+k",
+      "head": "k==n?",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "k==n?",
+      "head": "disp sum",
+      "class": "flow",
+      "label": "1"
+    },
+    {
+      "tail": "disp sum",
+      "head": "Finish",
+      "class": "flow",
+      "label": null
+    },
+    {
+      "tail": "k==n?",
+      "head": "k=k+1",
+      "class": "flow",
+      "label": "0"
+    },
+    {
+      "tail": "k=k+1",
+      "head": "sum=sum+k",
+      "class": "flow",
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

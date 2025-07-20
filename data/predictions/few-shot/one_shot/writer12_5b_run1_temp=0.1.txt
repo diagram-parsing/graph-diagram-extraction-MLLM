@@ -1,0 +1,144 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Start",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "Decision1",
+        "text": "More samples",
+        "class": "decision"
+      },
+      {
+        "id": "Process1",
+        "text": "Next sample",
+        "class": "process"
+      },
+      {
+        "id": "Process2",
+        "text": "Update Weights",
+        "class": "process"
+      },
+      {
+        "id": "Decision2",
+        "text": "Em back on",
+        "class": "decision"
+      },
+      {
+        "id": "Process3",
+        "text": "better = on",
+        "class": "process"
+      },
+      {
+        "id": "Process4",
+        "text": "same weights",
+        "class": "process"
+      },
+      {
+        "id": "Process5",
+        "text": "i++",
+        "class": "process"
+      },
+      {
+        "id": "Decision3",
+        "text": "i < limit",
+        "class": "decision"
+      },
+      {
+        "id": "Process6",
+        "text": "Back to first sample",
+        "class": "process"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Start",
+        "head": "Decision1",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Decision1",
+        "head": "Process1",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "Decision1",
+        "head": "Decision2",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "Process1",
+        "head": "Process2",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Process2",
+        "head": "Decision1",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Decision2",
+        "head": "Process3",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "Decision2",
+        "head": "Process4",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "Process3",
+        "head": "Process5",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Process4",
+        "head": "Process5",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Process5",
+        "head": "Decision3",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Decision3",
+        "head": "Process6",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "Decision3",
+        "head": "End",
+        "class": null,
+        "label": "else"
+      },
+      {
+        "tail": "Process6",
+        "head": "Decision1",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

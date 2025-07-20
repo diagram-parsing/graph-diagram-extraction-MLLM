@@ -1,0 +1,192 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Spezifikation in Anforderungstabelle",
+        "methods": null,
+        "attributes": [
+          "Ifd Nummer",
+          "Hauptthema",
+          "Unterthema",
+          "Beschreibung",
+          "Ref. zum FK",
+          "Status",
+          "Datum der Abstimmung"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "2",
+        "text": "Änderungen in Anforderungstabelle",
+        "methods": null,
+        "attributes": [
+          "Ifd. Nummer",
+          "Hauptthema",
+          "Unterthema",
+          "Beschreibung",
+          "Ref. zum FK",
+          "Status",
+          "Datum Abstimmung"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "3",
+        "text": "Anforderungen im Fachkonzept",
+        "methods": null,
+        "attributes": [
+          "Gliederungspunkte",
+          "Überschriften",
+          "Beschreibung",
+          "Prio"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "4",
+        "text": "Epic (Hauptaufgabe)",
+        "methods": null,
+        "attributes": [
+          "Titel",
+          "FK / Anf.Tab",
+          "Reihenfolge"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "5",
+        "text": "Feature (Unteraufgabe)",
+        "methods": null,
+        "attributes": [
+          "Titel",
+          "Ref. zur Epic",
+          "Ref. FK / Anf.Tab",
+          "Reihenfolge"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "6",
+        "text": "User-Story",
+        "methods": null,
+        "attributes": [
+          "Story-ID",
+          "Titel",
+          "Anwendungsfall",
+          "Akkzeptanzkriterien",
+          "Ref. zur Task",
+          "Ref. zum FK / Anf.Tab"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "7",
+        "text": "Task (Entwickleraufgabe)",
+        "methods": null,
+        "attributes": [
+          "# DVZ-intern"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "8",
+        "text": "Testfall",
+        "methods": null,
+        "attributes": [
+          "Testfall-ID",
+          "Ref. zur User-Story",
+          "Titel",
+          "Testschritt",
+          "erwartetes Ergebnis",
+          "Status"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "9",
+        "text": "Fehlerticket",
+        "methods": null,
+        "attributes": [
+          "Fehler-ID",
+          "Titel",
+          "Beschreibung",
+          "Ref. zur User-Story",
+          "Ref. zum Test-Az",
+          "Tester/In",
+          "Status"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "3",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "6",
+        "head": "7",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "6",
+        "head": "8",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "8",
+        "head": "9",
+        "class": "DirectedAssociation",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

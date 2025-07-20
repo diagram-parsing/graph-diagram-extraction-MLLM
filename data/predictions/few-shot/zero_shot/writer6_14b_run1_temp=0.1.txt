@@ -1,0 +1,125 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": "terminator"
+    },
+    {
+      "id": "Input",
+      "text": "Input a,b,c",
+      "class": "input"
+    },
+    {
+      "id": "CalculateDelta",
+      "text": "Δ=b²-4ac",
+      "class": "process"
+    },
+    {
+      "id": "DeltaLessThanZero",
+      "text": "Δ<0",
+      "class": "decision"
+    },
+    {
+      "id": "NoSolution",
+      "text": "No solution",
+      "class": "output"
+    },
+    {
+      "id": "DeltaZero",
+      "text": "Δ=0",
+      "class": "decision"
+    },
+    {
+      "id": "OutputOne",
+      "text": "Output -b/2a",
+      "class": "output"
+    },
+    {
+      "id": "OutputTwo",
+      "text": "Output (-b+√Δ)/2a",
+      "class": "output"
+    },
+    {
+      "id": "OutputThree",
+      "text": "Output (-b-√Δ)/2a",
+      "class": "output"
+    },
+    {
+      "id": "End",
+      "text": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "CalculateDelta",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "CalculateDelta",
+      "head": "DeltaLessThanZero",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "DeltaLessThanZero",
+      "head": "NoSolution",
+      "class": null,
+      "label": "Y"
+    },
+    {
+      "tail": "DeltaLessThanZero",
+      "head": "DeltaZero",
+      "class": null,
+      "label": "N"
+    },
+    {
+      "tail": "DeltaZero",
+      "head": "OutputOne",
+      "class": null,
+      "label": "Y"
+    },
+    {
+      "tail": "DeltaZero",
+      "head": "OutputTwo",
+      "class": null,
+      "label": "N"
+    },
+    {
+      "tail": "OutputOne",
+      "head": "End",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "OutputTwo",
+      "head": "End",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "OutputThree",
+      "head": "End",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "NoSolution",
+      "head": "End",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

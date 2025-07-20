@@ -1,0 +1,113 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Adulto",
+        "text": "Adulto",
+        "attributes": [
+          "Nome:string",
+          "Cognome:string",
+          "DataNascita:date",
+          "LuogoNascita:string",
+          "CodiceFiscale:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Bambino",
+        "text": "Bambino",
+        "attributes": [
+          "Nome:string",
+          "Cognome:string",
+          "DataNascita:date",
+          "LuogoNascita:string",
+          "CodiceFiscale:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vaccinazione",
+        "text": "Vaccinazione",
+        "attributes": [
+          "Tipolnocolazione:enum",
+          "DataEsecuzione:date",
+          "Effettuativi:string",
+          "CertificatoPDF:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Esenzione",
+        "text": "Esenzione",
+        "attributes": [
+          "TipoVacino:string",
+          "Codice:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Vaccino",
+        "text": "Vaccino",
+        "attributes": [
+          "Nome:string",
+          "EtàRichiesta:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Tipolnocolazione",
+        "text": "Tipolnocolazione",
+        "methods": [
+          "Iniziale",
+          "Richiamo"
+        ],
+        "class": "Enumeration"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Adulto",
+        "head": "Bambino",
+        "class": "Generalization",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bambino",
+        "head": "Esenzione",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Bambino",
+        "head": "Vaccinazione",
+        "class": "Composition",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vaccinazione",
+        "head": "Vaccino",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      },
+      {
+        "tail": "Vaccinazione",
+        "head": "Tipolnocolazione",
+        "class": "Association",
+        "label": null,
+        "cardinality_start": null,
+        "cardinality_end": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

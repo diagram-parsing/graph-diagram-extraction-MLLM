@@ -1,0 +1,129 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Order",
+      "text": "Order",
+      "class": "dataObject"
+    },
+    {
+      "id": "OrderConfirmed",
+      "text": "Order Confirmed",
+      "class": "dataObject"
+    },
+    {
+      "id": "OrderEnroute",
+      "text": "Order Enroute",
+      "class": "dataObject"
+    },
+    {
+      "id": "OrderDelivered",
+      "text": "Order Delivered",
+      "class": "dataObject"
+    },
+    {
+      "id": "ConfirmOrder",
+      "text": "Confirm order",
+      "class": "task"
+    },
+    {
+      "id": "WriteDownOrder",
+      "text": "Write down Order",
+      "class": "task"
+    },
+    {
+      "id": "PrintOrder",
+      "text": "Print order",
+      "class": "task"
+    },
+    {
+      "id": "AttachOrderToPinboard",
+      "text": "Attach order to pinboard",
+      "class": "task"
+    },
+    {
+      "id": "OrderReceivedByLiekondo",
+      "text": "Order received by Likondo",
+      "class": "event"
+    },
+    {
+      "id": "OrderReceivedByWebSik",
+      "text": "Order received by WebSik",
+      "class": "event"
+    },
+    {
+      "id": "OrderTakenByPhone",
+      "text": "Order taken by Phone",
+      "class": "event"
+    },
+    {
+      "id": "OrderCompleted",
+      "text": "Order Completed",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "OrderReceivedByLiekondo",
+      "head": "ConfirmOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "OrderReceivedByWebSik",
+      "head": "ConfirmOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "OrderTakenByPhone",
+      "head": "ConfirmOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ConfirmOrder",
+      "head": "OrderConfirmed",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "ConfirmOrder",
+      "head": "WriteDownOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "WriteDownOrder",
+      "head": "PrintOrder",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "PrintOrder",
+      "head": "AttachOrderToPinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "AttachOrderToPinboard",
+      "head": "OrderCompleted",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "OrderConfirmed",
+      "head": "OrderEnroute",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "OrderEnroute",
+      "head": "OrderDelivered",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,54 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read P,R,N",
+      "id": "Read P,R,N",
+      "class": null
+    },
+    {
+      "text": "Calculate I = (P * R * N) / 100",
+      "id": "Calculate I = (P * R * N) / 100",
+      "class": null
+    },
+    {
+      "text": "Print Output",
+      "id": "Print Output",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read P,R,N",
+      "label": null
+    },
+    {
+      "tail": "Read P,R,N",
+      "head": "Calculate I = (P * R * N) / 100",
+      "label": null
+    },
+    {
+      "tail": "Calculate I = (P * R * N) / 100",
+      "head": "Print Output",
+      "label": null
+    },
+    {
+      "tail": "Print Output",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

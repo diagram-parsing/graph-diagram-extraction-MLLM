@@ -1,0 +1,124 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "Customers",
+      "class": "pool"
+    },
+    {
+      "id": "insurance_claim",
+      "text": "insurance claim",
+      "class": "dataObject"
+    },
+    {
+      "id": "register_and_examine_claim",
+      "text": "register and examine claim",
+      "class": "task"
+    },
+    {
+      "id": "write_settlement_recommendation",
+      "text": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "id": "check_recommendation",
+      "text": "check recommendation",
+      "class": "task"
+    },
+    {
+      "id": "approval",
+      "text": "approval",
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "send_to_claim_offer",
+      "text": "send to claim offer",
+      "class": "task"
+    },
+    {
+      "id": "mark_claim_as_NOT_OK",
+      "text": "mark claim as 'NOT OK'",
+      "class": "task"
+    },
+    {
+      "id": "mark_claim_as_OK",
+      "text": "mark claim as 'OK'",
+      "class": "task"
+    },
+    {
+      "id": "process_proceeded",
+      "text": "process proceeded",
+      "class": "event"
+    },
+    {
+      "id": "rejected",
+      "text": "rejected",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "insurance_claim",
+      "head": "register_and_examine_claim",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "register_and_examine_claim",
+      "head": "write_settlement_recommendation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write_settlement_recommendation",
+      "head": "check_recommendation",
+      "class": "sequenceFlow",
+      "label": "recommendation"
+    },
+    {
+      "tail": "check_recommendation",
+      "head": "approval",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "approval",
+      "head": "send_to_claim_offer",
+      "class": "sequenceFlow",
+      "label": "not approved"
+    },
+    {
+      "tail": "approval",
+      "head": "mark_claim_as_NOT_OK",
+      "class": "sequenceFlow",
+      "label": "approved"
+    },
+    {
+      "tail": "mark_claim_as_NOT_OK",
+      "head": "rejected",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "mark_claim_as_OK",
+      "head": "process_proceeded",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_to_claim_offer",
+      "head": "mark_claim_as_OK",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": [
+    {
+      "name": "customer",
+      "class": "pool",
+      "nodes": ["insurance_claim", "register_and_examine_claim", "write_settlement_recommendation", "check_recommendation", "approval", "send_to_claim_offer", "mark_claim_as_NOT_OK", "mark_claim_as_OK", "process_proceeded", "rejected"]
+    }
+  ]
+}
+```

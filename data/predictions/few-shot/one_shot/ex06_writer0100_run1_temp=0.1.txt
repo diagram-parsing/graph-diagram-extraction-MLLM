@@ -1,0 +1,116 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "incoming_email",
+        "text": "Incoming email",
+        "class": "event"
+      },
+      {
+        "id": "receive_order_by_website",
+        "text": "Receive order by website",
+        "class": "task"
+      },
+      {
+        "id": "receive_order_by_liefvando",
+        "text": "Receive order by Liefvando",
+        "class": "task"
+      },
+      {
+        "id": "take_order_by_phone",
+        "text": "Take order by phone",
+        "class": "task"
+      },
+      {
+        "id": "confirm_order",
+        "text": "Confirm order",
+        "class": "task"
+      },
+      {
+        "id": "print_out_order",
+        "text": "Print out order",
+        "class": "task"
+      },
+      {
+        "id": "write_down_order_note",
+        "text": "Write down order note",
+        "class": "task"
+      },
+      {
+        "id": "attach_order_note_to_pinboard",
+        "text": "Attach order note to pinboard",
+        "class": "task"
+      },
+      {
+        "id": "order_process_finished",
+        "text": "Order process finished",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "incoming_email",
+        "head": "receive_order_by_website",
+        "class": "sequenceFlow",
+        "label": "Order type: website"
+      },
+      {
+        "tail": "incoming_email",
+        "head": "receive_order_by_liefvando",
+        "class": "sequenceFlow",
+        "label": "Order type: Liefvando"
+      },
+      {
+        "tail": "incoming_email",
+        "head": "take_order_by_phone",
+        "class": "sequenceFlow",
+        "label": "Order type: phone"
+      },
+      {
+        "tail": "receive_order_by_website",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": "order [website]"
+      },
+      {
+        "tail": "receive_order_by_liefvando",
+        "head": "confirm_order",
+        "class": "sequenceFlow",
+        "label": "order [Liefvando]"
+      },
+      {
+        "tail": "confirm_order",
+        "head": "print_out_order",
+        "class": "sequenceFlow",
+        "label": "Confirmed order [Liefvando]"
+      },
+      {
+        "tail": "confirm_order",
+        "head": "write_down_order_note",
+        "class": "sequenceFlow",
+        "label": "order note"
+      },
+      {
+        "tail": "print_out_order",
+        "head": "attach_order_note_to_pinboard",
+        "class": "sequenceFlow",
+        "label": "order note"
+      },
+      {
+        "tail": "write_down_order_note",
+        "head": "attach_order_note_to_pinboard",
+        "class": "sequenceFlow",
+        "label": "order note"
+      },
+      {
+        "tail": "attach_order_note_to_pinboard",
+        "head": "order_process_finished",
+        "class": "sequenceFlow",
+        "label": "order process finished"
+      }
+    ],
+    "groups": []
+  }
+]
+```

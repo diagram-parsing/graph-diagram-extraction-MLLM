@@ -1,0 +1,67 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "q0_1",
+        "text": "q0_1",
+        "class": "state"
+      },
+      {
+        "id": "q0_2",
+        "text": "q0_2",
+        "class": "state"
+      },
+      {
+        "id": "q0_3",
+        "text": "q0_3",
+        "class": "final state"
+      },
+      {
+        "id": "q0_4",
+        "text": "q0_4",
+        "class": "state"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "q0_1",
+        "head": "q0_2",
+        "class": null,
+        "label": "0"
+      },
+      {
+        "tail": "q0_2",
+        "head": "q0_4",
+        "class": null,
+        "label": "0"
+      },
+      {
+        "tail": "q0_4",
+        "head": "q0_2",
+        "class": null,
+        "label": "0,1"
+      },
+      {
+        "tail": "q0_1",
+        "head": "q0_3",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "q0_2",
+        "head": "q0_3",
+        "class": null,
+        "label": "1"
+      },
+      {
+        "tail": "q0_3",
+        "head": "q0_3",
+        "class": null,
+        "label": "1"
+      }
+    ],
+    "groups": []
+  }
+]
+```

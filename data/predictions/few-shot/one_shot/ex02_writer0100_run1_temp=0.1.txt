@@ -1,0 +1,99 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Customer",
+        "text": "Customer",
+        "class": "pool"
+      },
+      {
+        "id": "claim_received",
+        "text": "claim received",
+        "class": "task"
+      },
+      {
+        "id": "register_and_examine_claim",
+        "text": "register and examine claim",
+        "class": "task"
+      },
+      {
+        "id": "write_settlement_recommendation",
+        "text": "write settlement recommendation",
+        "class": "task"
+      },
+      {
+        "id": "check_recommendation_and_match_claim",
+        "text": "check recommendation and match claim",
+        "class": "task"
+      },
+      {
+        "id": "send_claim_back_to_claims_officer",
+        "text": "send claim back to claims officer",
+        "class": "task"
+      },
+      {
+        "id": "proceed_claim_process",
+        "text": "proceed claim process",
+        "class": "task"
+      },
+      {
+        "id": "process_will_proceed_first_part_finished",
+        "text": "process will proceed first part finished",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Customer",
+        "head": "claim_received",
+        "class": "sequenceFlow",
+        "label": "claim"
+      },
+      {
+        "tail": "claim_received",
+        "head": "register_and_examine_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "register_and_examine_claim",
+        "head": "write_settlement_recommendation",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_settlement_recommendation",
+        "head": "check_recommendation_and_match_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_recommendation_and_match_claim",
+        "head": "send_claim_back_to_claims_officer",
+        "class": "sequenceFlow",
+        "label": "Not OK"
+      },
+      {
+        "tail": "check_recommendation_and_match_claim",
+        "head": "proceed_claim_process",
+        "class": "sequenceFlow",
+        "label": "OK"
+      },
+      {
+        "tail": "proceed_claim_process",
+        "head": "process_will_proceed_first_part_finished",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": null,
+        "class": "pool",
+        "nodes": ["Customer"]
+      }
+    ]
+  }
+]
+```

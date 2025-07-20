@@ -1,0 +1,119 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "offence is registered",
+      "text": "offence is registered",
+      "class": "StartEvent"
+    },
+    {
+      "id": "judge offence",
+      "text": "judge offence",
+      "class": "Task"
+    },
+    {
+      "id": "temporary judgement",
+      "text": "temporary judgement",
+      "class": "Task"
+    },
+    {
+      "id": "final judgement",
+      "text": "final judgement",
+      "class": "Task"
+    },
+    {
+      "id": "offence put in archives",
+      "text": "offence put in archives",
+      "class": "EndEvent"
+    },
+    {
+      "id": "investigate history",
+      "text": "investigate history",
+      "class": "Task"
+    },
+    {
+      "id": "collect information about earlier offences",
+      "text": "collect information about earlier offences",
+      "class": "Task"
+    },
+    {
+      "id": "collect information about other offences committed by the offender",
+      "text": "collect information about other offences committed by the offender",
+      "class": "Task"
+    },
+    {
+      "id": "Determine fine",
+      "text": "Determine fine",
+      "class": "Task"
+    },
+    {
+      "id": "send transfer form",
+      "text": "send transfer form",
+      "class": "Task"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "offence is registered",
+      "head": "judge offence",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "judge offence",
+      "head": "temporary judgement",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "temporary judgement",
+      "head": "final judgement",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "final judgement",
+      "head": "offence put in archives",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "offence is registered",
+      "head": "investigate history",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "investigate history",
+      "head": "collect information about earlier offences",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "investigate history",
+      "head": "collect information about other offences committed by the offender",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "final judgement",
+      "head": "Determine fine",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Determine fine",
+      "head": "send transfer form",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "send transfer form",
+      "head": "offence put in archives",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,119 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "claim",
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "register claim",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "Examine claim",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "write settlement recommendation letter",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "task_4",
+      "text": "Check recommendation conclusion",
+      "class": "task"
+    },
+    {
+      "id": "event_2",
+      "text": "OK",
+      "class": "event"
+    },
+    {
+      "id": "event_3",
+      "text": "Not OK",
+      "class": "event"
+    },
+    {
+      "id": "task_5",
+      "text": "return recommendation back to claim office",
+      "class": "task"
+    },
+    {
+      "id": "event_4",
+      "text": "Proceed claim handling process",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": "claim examined?"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_4",
+      "head": "event_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "event_3",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": "return recommendation"
+    },
+    {
+      "tail": "event_2",
+      "head": "event_4",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

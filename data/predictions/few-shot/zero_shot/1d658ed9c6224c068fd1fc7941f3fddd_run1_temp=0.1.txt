@@ -1,0 +1,193 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "StartEvent",
+        "text": "offence is registered",
+        "class": "StartEvent"
+      },
+      {
+        "id": "Task1",
+        "text": "judge offence",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway1",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task2",
+        "text": "temporary judgement",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway2",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task3",
+        "text": "final judgement",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway3",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task4",
+        "text": "Determine fine",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway4",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "EndEvent",
+        "text": "offence put in archives",
+        "class": "EndEvent"
+      },
+      {
+        "id": "Task5",
+        "text": "investigate history",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway5",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task6",
+        "text": "collect information about earlier offences",
+        "class": "Task"
+      },
+      {
+        "id": "Exclusive_Databased_Gateway6",
+        "text": null,
+        "class": "Exclusive_Databased_Gateway"
+      },
+      {
+        "id": "Task7",
+        "text": "collect information about other offences committed by the offender",
+        "class": "Task"
+      },
+      {
+        "id": "Task8",
+        "text": "send transfer form",
+        "class": "Task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "StartEvent",
+        "head": "Task1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task1",
+        "head": "Exclusive_Databased_Gateway1",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway1",
+        "head": "Task2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task2",
+        "head": "Exclusive_Databased_Gateway2",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway2",
+        "head": "Task3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task3",
+        "head": "Exclusive_Databased_Gateway3",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway3",
+        "head": "Task4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task4",
+        "head": "Exclusive_Databased_Gateway4",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway4",
+        "head": "EndEvent",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway4",
+        "head": "Task8",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task1",
+        "head": "Task5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task5",
+        "head": "Exclusive_Databased_Gateway5",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway5",
+        "head": "Task6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway5",
+        "head": "Task7",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task6",
+        "head": "Exclusive_Databased_Gateway6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Task7",
+        "head": "Exclusive_Databased_Gateway6",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Exclusive_Databased_Gateway6",
+        "head": "Exclusive_Databased_Gateway3",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

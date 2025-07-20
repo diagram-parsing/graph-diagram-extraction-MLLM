@@ -1,0 +1,60 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": null
+      },
+      {
+        "id": "Input length, width",
+        "text": "Input length, width",
+        "class": null
+      },
+      {
+        "id": "Perimeter = 2 * (length + width)",
+        "text": "Perimeter = 2 * (length + width)",
+        "class": null
+      },
+      {
+        "id": "Print output",
+        "text": "Print output",
+        "class": null
+      },
+      {
+        "id": "Stop",
+        "text": "Stop",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "Input length, width",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Input length, width",
+        "head": "Perimeter = 2 * (length + width)",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Perimeter = 2 * (length + width)",
+        "head": "Print output",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Print output",
+        "head": "Stop",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

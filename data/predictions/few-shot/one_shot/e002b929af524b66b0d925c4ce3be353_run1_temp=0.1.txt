@@ -1,0 +1,93 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "check_outstanding_debts",
+        "text": "check outstanding debts",
+        "class": "Task"
+      },
+      {
+        "id": "reject_order",
+        "text": "reject order",
+        "class": "EndEvent"
+      },
+      {
+        "id": "check_availability_of_equipment",
+        "text": "check availability of equipment",
+        "class": "Task"
+      },
+      {
+        "id": "estimate_the_date_of_availability",
+        "text": "estimate the date of availability",
+        "class": "Task"
+      },
+      {
+        "id": "check_order_origin",
+        "text": "check order origin",
+        "class": "Task"
+      },
+      {
+        "id": "estimate_the_shipping_time",
+        "text": "estimate the shipping time",
+        "class": "Task"
+      },
+      {
+        "id": "Send_proposal_to_the_partner",
+        "text": "Send proposal to the partner",
+        "class": "Task"
+      },
+      {
+        "id": "receive_confirmation",
+        "text": "receive confirmation",
+        "class": "EndEvent"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "check_outstanding_debts",
+        "head": "reject_order",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_outstanding_debts",
+        "head": "check_availability_of_equipment",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_availability_of_equipment",
+        "head": "estimate_the_date_of_availability",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_order_origin",
+        "head": "estimate_the_shipping_time",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "estimate_the_date_of_availability",
+        "head": "Send_proposal_to_the_partner",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "estimate_the_shipping_time",
+        "head": "Send_proposal_to_the_partner",
+        "class": "SequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Send_proposal_to_the_partner",
+        "head": "receive_confirmation",
+        "class": "SequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

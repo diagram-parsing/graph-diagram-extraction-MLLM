@@ -1,0 +1,128 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": "terminator"
+    },
+    {
+      "text": "More samples",
+      "id": "More samples",
+      "class": "decision"
+    },
+    {
+      "text": "Next sample",
+      "id": "Next sample",
+      "class": "process"
+    },
+    {
+      "text": "Updates weights",
+      "id": "Updates weights",
+      "class": "process"
+    },
+    {
+      "text": "best_err = err",
+      "id": "best_err = err",
+      "class": "process"
+    },
+    {
+      "text": "Save weights",
+      "id": "Save weights",
+      "class": "process"
+    },
+    {
+      "text": "k++",
+      "id": "k++",
+      "class": "process"
+    },
+    {
+      "text": "k < limit",
+      "id": "k < limit",
+      "class": "decision"
+    },
+    {
+      "text": "Back to first sample",
+      "id": "Back to first sample",
+      "class": "process"
+    },
+    {
+      "text": "End best_err",
+      "id": "End best_err",
+      "class": "decision"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "More samples",
+      "label": null
+    },
+    {
+      "tail": "More samples",
+      "head": "Next sample",
+      "label": "true"
+    },
+    {
+      "tail": "Next sample",
+      "head": "Updates weights",
+      "label": null
+    },
+    {
+      "tail": "Updates weights",
+      "head": "More samples",
+      "label": null
+    },
+    {
+      "tail": "More samples",
+      "head": "End best_err",
+      "label": "true"
+    },
+    {
+      "tail": "End best_err",
+      "head": "best_err = err",
+      "label": "yes"
+    },
+    {
+      "tail": "best_err = err",
+      "head": "Save weights",
+      "label": null
+    },
+    {
+      "tail": "Save weights",
+      "head": "k++",
+      "label": null
+    },
+    {
+      "tail": "k++",
+      "head": "k < limit",
+      "label": null
+    },
+    {
+      "tail": "k < limit",
+      "head": "Back to first sample",
+      "label": "then"
+    },
+    {
+      "tail": "Back to first sample",
+      "head": "More samples",
+      "label": null
+    },
+    {
+      "tail": "k < limit",
+      "head": "End",
+      "label": "else"
+    },
+    {
+      "tail": "End best_err",
+      "head": "k++",
+      "label": "no"
+    }
+  ]
+}
+```

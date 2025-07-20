@@ -1,0 +1,123 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": "terminator"
+    },
+    {
+      "text": "Err<best-err",
+      "id": "Err<best-err",
+      "class": "decision"
+    },
+    {
+      "text": "best-err=err",
+      "id": "best-err=err",
+      "class": "process"
+    },
+    {
+      "text": "Save weights",
+      "id": "Save weights",
+      "class": "process"
+    },
+    {
+      "text": "k++",
+      "id": "k++",
+      "class": "process"
+    },
+    {
+      "text": "k<limit",
+      "id": "k<limit",
+      "class": "decision"
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": "terminator"
+    },
+    {
+      "text": "More Samples?",
+      "id": "More Samples?",
+      "class": "decision"
+    },
+    {
+      "text": "Update weights",
+      "id": "Update weights",
+      "class": "process"
+    },
+    {
+      "text": "next sample",
+      "id": "next sample",
+      "class": "process"
+    },
+    {
+      "text": "Back to first Sample",
+      "id": "Back to first Sample",
+      "class": "process"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Err<best-err",
+      "label": null
+    },
+    {
+      "tail": "Err<best-err",
+      "head": "best-err=err",
+      "label": "Yes"
+    },
+    {
+      "tail": "best-err=err",
+      "head": "Save weights",
+      "label": null
+    },
+    {
+      "tail": "Save weights",
+      "head": "k++",
+      "label": null
+    },
+    {
+      "tail": "k++",
+      "head": "k<limit",
+      "label": null
+    },
+    {
+      "tail": "k<limit",
+      "head": "Back to first Sample",
+      "label": "then"
+    },
+    {
+      "tail": "k<limit",
+      "head": "End",
+      "label": "else"
+    },
+    {
+      "tail": "Start",
+      "head": "More Samples?",
+      "label": null
+    },
+    {
+      "tail": "More Samples?",
+      "head": "Update weights",
+      "label": "true"
+    },
+    {
+      "tail": "Update weights",
+      "head": "next sample",
+      "label": null
+    },
+    {
+      "tail": "next sample",
+      "head": "More Samples?",
+      "label": null
+    },
+    {
+      "tail": "More Samples?",
+      "head": "Err<best-err",
+      "label": null
+    }
+  ]
+}
+```

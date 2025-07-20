@@ -1,0 +1,132 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "begin",
+        "text": "begin",
+        "class": "terminator"
+      },
+      {
+        "id": "more_samples",
+        "text": "more samples?",
+        "class": "decision"
+      },
+      {
+        "id": "next_sample",
+        "text": "next sample",
+        "class": "process"
+      },
+      {
+        "id": "update_weights",
+        "text": "update weights",
+        "class": "process"
+      },
+      {
+        "id": "Errc_best_err",
+        "text": "Errc best_err",
+        "class": "decision"
+      },
+      {
+        "id": "best_err_eq_err",
+        "text": "best_err = err",
+        "class": "process"
+      },
+      {
+        "id": "save_weight",
+        "text": "save weight",
+        "class": "process"
+      },
+      {
+        "id": "k_t_plus",
+        "text": "k_t+",
+        "class": "process"
+      },
+      {
+        "id": "k_limit",
+        "text": "k < limit",
+        "class": "decision"
+      },
+      {
+        "id": "Back_to_first_sample",
+        "text": "Back to first sample",
+        "class": "process"
+      },
+      {
+        "id": "end",
+        "text": "end",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "begin",
+        "head": "more_samples",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "more_samples",
+        "head": "next_sample",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "more_samples",
+        "head": "Errc_best_err",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "Errc_best_err",
+        "head": "best_err_eq_err",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "Errc_best_err",
+        "head": "k_t_plus",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "best_err_eq_err",
+        "head": "save_weight",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "save_weight",
+        "head": "k_t_plus",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "k_t_plus",
+        "head": "k_limit",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "k_limit",
+        "head": "Back_to_first_sample",
+        "class": null,
+        "label": "then"
+      },
+      {
+        "tail": "k_limit",
+        "head": "end",
+        "class": null,
+        "label": "else"
+      },
+      {
+        "tail": "Back_to_first_sample",
+        "head": "more_samples",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

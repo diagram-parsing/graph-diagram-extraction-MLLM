@@ -1,0 +1,113 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Medewerker",
+      "id": "Medewerker",
+      "class": "StartEvent"
+    },
+    {
+      "text": "Helpdesk",
+      "id": "Helpdesk",
+      "class": "Task"
+    },
+    {
+      "text": "On the fly verhelpen",
+      "id": "On the fly verhelpen",
+      "class": "Task"
+    },
+    {
+      "text": "Escaleren via TOPDesk",
+      "id": "Escaleren via TOPDesk",
+      "class": "Task"
+    },
+    {
+      "text": "Verhelpen in tweede lijn",
+      "id": "Verhelpen in tweede lijn",
+      "class": "Task"
+    },
+    {
+      "text": "Ticket in Jira",
+      "id": "Ticket in Jira",
+      "class": "Task"
+    },
+    {
+      "text": "Nieuwe feature",
+      "id": "Nieuwe feature",
+      "class": "Task"
+    },
+    {
+      "text": "Naar normale swimlane",
+      "id": "Naar normale swimlane",
+      "class": "EndEvent"
+    },
+    {
+      "text": "Bug",
+      "id": "Bug",
+      "class": "Task"
+    },
+    {
+      "text": "Naar Fastlane",
+      "id": "Naar Fastlane",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Medewerker",
+      "head": "Helpdesk",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Helpdesk",
+      "head": "On the fly verhelpen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Helpdesk",
+      "head": "Escaleren via TOPDesk",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Escaleren via TOPDesk",
+      "head": "Verhelpen in tweede lijn",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Escaleren via TOPDesk",
+      "head": "Ticket in Jira",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket in Jira",
+      "head": "Nieuwe feature",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ticket in Jira",
+      "head": "Bug",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Nieuwe feature",
+      "head": "Naar normale swimlane",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Bug",
+      "head": "Naar Fastlane",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

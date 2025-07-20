@@ -1,0 +1,72 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "P1",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "T1",
+        "text": "T1",
+        "class": "Transition"
+      },
+      {
+        "id": "P2",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P3",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "T2",
+        "text": "T2",
+        "class": "Transition"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "P1",
+        "head": "T1",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "T1",
+        "head": "P2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P2",
+        "head": "P3",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "T1",
+        "head": "P3",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P3",
+        "head": "T2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "T2",
+        "head": "P1",
+        "class": "Arc",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

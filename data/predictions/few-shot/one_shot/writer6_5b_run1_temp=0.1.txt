@@ -1,0 +1,138 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Begin",
+        "text": "Begin",
+        "class": "terminator"
+      },
+      {
+        "id": "More samples?",
+        "text": "More samples?",
+        "class": "decision"
+      },
+      {
+        "id": "Next sample",
+        "text": "Next sample",
+        "class": "process"
+      },
+      {
+        "id": "Update weights",
+        "text": "Update weights",
+        "class": "process"
+      },
+      {
+        "id": "Ehr < best err",
+        "text": "Ehr < best err",
+        "class": "decision"
+      },
+      {
+        "id": "best err = err",
+        "text": "best err = err",
+        "class": "process"
+      },
+      {
+        "id": "Save weights",
+        "text": "Save weights",
+        "class": "process"
+      },
+      {
+        "id": "k++",
+        "text": "k++",
+        "class": "process"
+      },
+      {
+        "id": "k < max",
+        "text": "k < max",
+        "class": "decision"
+      },
+      {
+        "id": "Back to first sample",
+        "text": "Back to first sample",
+        "class": "process"
+      },
+      {
+        "id": "End",
+        "text": "End",
+        "class": "terminator"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Begin",
+        "head": "More samples?",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "More samples?",
+        "head": "Next sample",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "More samples?",
+        "head": "Ehr < best err",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "Next sample",
+        "head": "Update weights",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Update weights",
+        "head": "Ehr < best err",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Ehr < best err",
+        "head": "best err = err",
+        "class": null,
+        "label": "yes"
+      },
+      {
+        "tail": "Ehr < best err",
+        "head": "Save weights",
+        "class": null,
+        "label": "no"
+      },
+      {
+        "tail": "Save weights",
+        "head": "k++",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "k++",
+        "head": "k < max",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "k < max",
+        "head": "Back to first sample",
+        "class": null,
+        "label": "then"
+      },
+      {
+        "tail": "k < max",
+        "head": "End",
+        "class": null,
+        "label": "else"
+      },
+      {
+        "tail": "Back to first sample",
+        "head": "More samples?",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,80 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Destinatario",
+      "text": "Destinatario",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Centro Smistamento",
+      "text": "Centro Smistamento",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Tratta",
+      "text": "Tratta",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "ServicePoint",
+      "text": "ServicePoint",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Spedizione",
+      "text": "Spedizione",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Pacco",
+      "text": "Pacco",
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Percorso",
+      "text": "Percorso",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Destinatario",
+      "head": "Centro Smistamento",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Centro Smistamento",
+      "head": "Tratta",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "ServicePoint",
+      "head": "Centro Smistamento",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Tratta",
+      "head": "Percorso",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Spedizione",
+      "head": "Percorso",
+      "class": "UndirectedAssociation",
+      "label": null
+    },
+    {
+      "tail": "Spedizione",
+      "head": "Pacco",
+      "class": "UndirectedAssociation",
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

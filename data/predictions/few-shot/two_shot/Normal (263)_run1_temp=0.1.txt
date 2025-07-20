@@ -1,0 +1,24 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "To Do 1",
+      "id": "To Do 1",
+      "class": null
+    },
+    {
+      "text": "To Do 2",
+      "id": "To Do 2",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "To Do 1",
+      "head": "To Do 2",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,69 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "X=1",
+      "id": "X=1",
+      "class": null
+    },
+    {
+      "text": "X>1",
+      "id": "X>1",
+      "class": null
+    },
+    {
+      "text": "OUTPUT X",
+      "id": "OUTPUT X",
+      "class": null
+    },
+    {
+      "text": "X=X+1",
+      "id": "X=X+1",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "X=1",
+      "label": null
+    },
+    {
+      "tail": "X=1",
+      "head": "X>1",
+      "label": null
+    },
+    {
+      "tail": "X>1",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "X>1",
+      "head": "OUTPUT X",
+      "label": "Yes"
+    },
+    {
+      "tail": "OUTPUT X",
+      "head": "X=X+1",
+      "label": null
+    },
+    {
+      "tail": "X=X+1",
+      "head": "X>1",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

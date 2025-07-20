@@ -1,0 +1,80 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "records_retrieved",
+      "text": "Records retrieved through electronic database",
+      "class": null
+    },
+    {
+      "id": "potentially_suitable",
+      "text": "Potentially suitable Studies",
+      "class": null
+    },
+    {
+      "id": "excluded_124",
+      "text": "Excluded: n=124\n-Duplication\n-Animal studies",
+      "class": null
+    },
+    {
+      "id": "eligible_rcts",
+      "text": "Potentially eligible RCTs",
+      "class": null
+    },
+    {
+      "id": "excluded_81",
+      "text": "Excluded: n=81",
+      "class": null
+    },
+    {
+      "id": "included_rcts",
+      "text": "RCTs included in the meta-analysis (n=8)",
+      "class": null
+    },
+    {
+      "id": "excluded_4",
+      "text": "Excluded: n=4",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "records_retrieved",
+      "head": "potentially_suitable",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "potentially_suitable",
+      "head": "excluded_124",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "potentially_suitable",
+      "head": "eligible_rcts",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "eligible_rcts",
+      "head": "excluded_81",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "eligible_rcts",
+      "head": "included_rcts",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "included_rcts",
+      "head": "excluded_4",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

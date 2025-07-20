@@ -1,0 +1,79 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Alarm Rings",
+      "id": "Alarm Rings",
+      "class": null
+    },
+    {
+      "text": "Ready to face the world?",
+      "id": "Ready to face the world?",
+      "class": null
+    },
+    {
+      "text": "Get Up",
+      "id": "Get Up",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Ignore",
+      "id": "Ignore",
+      "class": null
+    },
+    {
+      "text": "Hit SNOOZE",
+      "id": "Hit SNOOZE",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Alarm Rings",
+      "label": null
+    },
+    {
+      "tail": "Alarm Rings",
+      "head": "Ready to face the world?",
+      "label": null
+    },
+    {
+      "tail": "Ready to face the world?",
+      "head": "Get Up",
+      "label": "Yes"
+    },
+    {
+      "tail": "Get Up",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Ready to face the world?",
+      "head": "Hit SNOOZE",
+      "label": "No"
+    },
+    {
+      "tail": "Hit SNOOZE",
+      "head": "Ignore",
+      "label": null
+    },
+    {
+      "tail": "Ignore",
+      "head": "Alarm Rings",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

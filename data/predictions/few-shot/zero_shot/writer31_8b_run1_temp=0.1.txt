@@ -1,0 +1,88 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "begin",
+        "text": "begin",
+        "class": "terminator"
+      },
+      {
+        "id": "input_nm",
+        "text": "Input n, m",
+        "class": "input"
+      },
+      {
+        "id": "r_nm",
+        "text": "r = n % m",
+        "class": "process"
+      },
+      {
+        "id": "decision_r0",
+        "text": "r = 0?",
+        "class": "decision"
+      },
+      {
+        "id": "output_m",
+        "text": "output m",
+        "class": "output"
+      },
+      {
+        "id": "end",
+        "text": "end",
+        "class": "terminator"
+      },
+      {
+        "id": "swap_nm",
+        "text": "n = m\nm = r",
+        "class": "process"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "begin",
+        "head": "input_nm",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "input_nm",
+        "head": "r_nm",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "r_nm",
+        "head": "decision_r0",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "decision_r0",
+        "head": "output_m",
+        "class": null,
+        "label": "true"
+      },
+      {
+        "tail": "decision_r0",
+        "head": "swap_nm",
+        "class": null,
+        "label": "false"
+      },
+      {
+        "tail": "swap_nm",
+        "head": "r_nm",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "output_m",
+        "head": "end",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

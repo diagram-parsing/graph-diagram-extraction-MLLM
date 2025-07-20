@@ -1,0 +1,116 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "Credit request received",
+        "class": "event"
+      },
+      {
+        "id": "2",
+        "text": "Assess risk",
+        "class": "task"
+      },
+      {
+        "id": "3",
+        "text": "above threshold",
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "4",
+        "text": "carry out advanced assessment",
+        "class": "task"
+      },
+      {
+        "id": "5",
+        "text": "under threshold",
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "6",
+        "text": "carry out simple assessment",
+        "class": "task"
+      },
+      {
+        "id": "7",
+        "text": "notify result",
+        "class": "task"
+      },
+      {
+        "id": "8",
+        "text": "request processed",
+        "class": "event"
+      },
+      {
+        "id": "9",
+        "text": "organize disbursement",
+        "class": "task"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "1",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "2",
+        "head": "3",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "3",
+        "head": "4",
+        "class": "sequenceFlow",
+        "label": "above threshold"
+      },
+      {
+        "tail": "3",
+        "head": "5",
+        "class": "sequenceFlow",
+        "label": "under threshold"
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "8",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "9",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "9",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,84 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Flowchart Example",
+      "id": "Flowchart Example",
+      "class": null
+    },
+    {
+      "text": "Check monitor",
+      "id": "Check monitor",
+      "class": null
+    },
+    {
+      "text": "Switch on",
+      "id": "Switch on",
+      "class": null
+    },
+    {
+      "text": "Perform a search for the error message",
+      "id": "Perform a search for the error message",
+      "class": null
+    },
+    {
+      "text": "Computer is fine",
+      "id": "Computer is fine",
+      "class": null
+    },
+    {
+      "text": "Turn the computer monitor on",
+      "id": "Turn the computer monitor on",
+      "class": null
+    },
+    {
+      "text": "Is the computer power light on?",
+      "id": "Is the computer power light on?",
+      "class": null
+    },
+    {
+      "text": "Check the computer power cord",
+      "id": "Check the computer power cord",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Flowchart Example",
+      "head": "Check monitor",
+      "label": null
+    },
+    {
+      "tail": "Check monitor",
+      "head": "Switch on",
+      "label": "Yes"
+    },
+    {
+      "tail": "Check monitor",
+      "head": "Is the computer power light on?",
+      "label": "No"
+    },
+    {
+      "tail": "Switch on",
+      "head": "Perform a search for the error message",
+      "label": "Yes"
+    },
+    {
+      "tail": "Switch on",
+      "head": "Computer is fine",
+      "label": "No"
+    },
+    {
+      "tail": "Is the computer power light on?",
+      "head": "Turn the computer monitor on",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the computer power light on?",
+      "head": "Check the computer power cord",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
+```

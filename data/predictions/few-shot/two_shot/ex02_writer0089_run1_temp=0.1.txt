@@ -1,0 +1,96 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": null,
+      "class": "event"
+    },
+    {
+      "id": "task_1",
+      "text": "register and examine claim",
+      "class": "task"
+    },
+    {
+      "id": "task_2",
+      "text": "write settlement recommendation",
+      "class": "task"
+    },
+    {
+      "id": "task_3",
+      "text": "check settlement recommendation",
+      "class": "task"
+    },
+    {
+      "id": "exclusiveGateway_1",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "event_2",
+      "text": null,
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "exclusiveGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": "OK"
+    },
+    {
+      "tail": "exclusiveGateway_1",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": "not OK"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Customer",
+      "nodes": [],
+      "class": "pool"
+    },
+    {
+      "name": "System",
+      "nodes": [],
+      "class": "lane"
+    },
+    {
+      "name": "Junior claims officer",
+      "nodes": [],
+      "class": "lane"
+    },
+    {
+      "name": "Senior claims officer",
+      "nodes": [],
+      "class": "lane"
+    }
+  ]
+}
+```

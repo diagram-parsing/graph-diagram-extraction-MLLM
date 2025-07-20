@@ -1,0 +1,83 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": null,
+      "class": "terminator"
+    },
+    {
+      "id": "Process1",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "Decision1",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "Process2",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "Decision2",
+      "text": null,
+      "class": "decision"
+    },
+    {
+      "id": "Process3",
+      "text": null,
+      "class": "process"
+    },
+    {
+      "id": "End",
+      "text": null,
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Process1",
+      "label": null
+    },
+    {
+      "tail": "Process1",
+      "head": "Decision1",
+      "label": null
+    },
+    {
+      "tail": "Decision1",
+      "head": "Process2",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decision1",
+      "head": "Decision2",
+      "label": "No"
+    },
+    {
+      "tail": "Process2",
+      "head": "Decision2",
+      "label": null
+    },
+    {
+      "tail": "Decision2",
+      "head": "Process3",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decision2",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "Process3",
+      "head": "Decision2",
+      "label": null
+    }
+  ]
+}
+```

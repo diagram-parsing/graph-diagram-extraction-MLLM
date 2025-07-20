@@ -1,0 +1,192 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Kunde formuellt Anforderungen an Seminar",
+      "id": "Kunde formuellt Anforderungen an Seminar",
+      "class": "Task"
+    },
+    {
+      "text": "Kunde erwartet Angebot",
+      "id": "Kunde erwartet Angebot",
+      "class": "Task"
+    },
+    {
+      "text": "Erarbeitet ein Angebot",
+      "id": "Erarbeitet ein Angebot",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_1",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "Exclusive_Eventbased_Gateway_2",
+      "class": "Exclusive_Eventbased_Gateway"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_1",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "EndEvent_2",
+      "class": "EndEvent"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_1",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_2",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_3",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_4",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_5",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_6",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_7",
+      "class": "IntermediateMessageEventThrowing"
+    },
+    {
+      "text": "",
+      "id": "IntermediateMessageEventThrowing_8",
+      "class": "IntermediateMessageEventThrowing"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kunde formuellt Anforderungen an Seminar",
+      "head": "Kunde erwartet Angebot",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Kunde erwartet Angebot",
+      "head": "IntermediateMessageEventThrowing_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_1",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "IntermediateMessageEventThrowing_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_1",
+      "head": "IntermediateMessageEventThrowing_3",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_2",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_3",
+      "head": "EndEvent_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Erarbeitet ein Angebot",
+      "head": "IntermediateMessageEventThrowing_4",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_4",
+      "head": "Exclusive_Eventbased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "IntermediateMessageEventThrowing_5",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Exclusive_Eventbased_Gateway_2",
+      "head": "IntermediateMessageEventThrowing_6",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_5",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_6",
+      "head": "EndEvent_2",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_7",
+      "head": "Exclusive_Eventbased_Gateway_1",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "IntermediateMessageEventThrowing_8",
+      "head": "Exclusive_Eventbased_Gateway_2",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": [
+    {
+      "name": "Kunde",
+      "id": "Kunde",
+      "nodes": [
+        "Kunde formuellt Anforderungen an Seminar",
+        "Kunde erwartet Angebot"
+      ],
+      "class": "Lane"
+    },
+    {
+      "name": "Universität",
+      "id": "Universität",
+      "nodes": [
+        "Erarbeitet ein Angebot"
+      ],
+      "class": "Lane"
+    }
+  ]
+}
+```

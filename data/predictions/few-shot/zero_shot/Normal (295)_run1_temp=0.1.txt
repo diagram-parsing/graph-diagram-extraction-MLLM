@@ -1,0 +1,108 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "text": "Start",
+      "class": null
+    },
+    {
+      "id": "Define Optimization Problem",
+      "text": "Define Optimization Problem",
+      "class": null
+    },
+    {
+      "id": "Calculate Matrix",
+      "text": "Calculate Matrix",
+      "class": null
+    },
+    {
+      "id": "Obtain Result",
+      "text": "Obtain Result",
+      "class": null
+    },
+    {
+      "id": "Perform Data Mining Algorithms",
+      "text": "Perform Data Mining Algorithms",
+      "class": null
+    },
+    {
+      "id": "Evaluate",
+      "text": "Evaluate",
+      "class": null
+    },
+    {
+      "id": "Meet Design Requirements?",
+      "text": "Meet Design Requirements?",
+      "class": null
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": null
+    },
+    {
+      "id": "Modify Mining Rules",
+      "text": "Modify Mining Rules",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Define Optimization Problem",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Define Optimization Problem",
+      "head": "Calculate Matrix",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Calculate Matrix",
+      "head": "Obtain Result",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Obtain Result",
+      "head": "Perform Data Mining Algorithms",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Perform Data Mining Algorithms",
+      "head": "Evaluate",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Evaluate",
+      "head": "Meet Design Requirements?",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Meet Design Requirements?",
+      "head": "Stop",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "Meet Design Requirements?",
+      "head": "Modify Mining Rules",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "Modify Mining Rules",
+      "head": "Perform Data Mining Algorithms",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

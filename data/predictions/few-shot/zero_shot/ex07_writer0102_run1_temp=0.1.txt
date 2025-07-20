@@ -1,0 +1,165 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "1",
+        "text": "review work of doctor",
+        "class": "task"
+      },
+      {
+        "id": "2",
+        "text": "External Expert",
+        "class": "pool"
+      },
+      {
+        "id": "3",
+        "text": "QA Specialist",
+        "class": "pool"
+      },
+      {
+        "id": "4",
+        "text": "interview patients",
+        "class": "task"
+      },
+      {
+        "id": "5",
+        "text": "file results",
+        "class": "task"
+      },
+      {
+        "id": "6",
+        "text": "create report",
+        "class": "task"
+      },
+      {
+        "id": "7",
+        "text": "ask expert for review",
+        "class": "task"
+      },
+      {
+        "id": "8",
+        "text": "Send to QA Specialist",
+        "class": "task"
+      },
+      {
+        "id": "9",
+        "text": "pay expert",
+        "class": "task"
+      },
+      {
+        "id": "10",
+        "text": "Until enough",
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "11",
+        "text": "Until in time",
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "12",
+        "text": "Hospital director",
+        "class": "pool"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "2",
+        "head": "1",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "1",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "1",
+        "head": "4",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "5",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "5",
+        "head": "6",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "6",
+        "head": "12",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "4",
+        "head": "10",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "10",
+        "head": "7",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "8",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "8",
+        "head": "2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "7",
+        "head": "11",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "11",
+        "head": "9",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "9",
+        "head": "12",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "External Expert",
+        "class": "pool",
+        "nodes": ["2", "1"]
+      },
+      {
+        "name": "QA Specialist",
+        "class": "pool",
+        "nodes": ["3", "4", "5", "6", "7", "8", "9"]
+      },
+      {
+        "name": "Hospital director",
+        "class": "pool",
+        "nodes": ["12"]
+      }
+    ]
+  }
+]
+```

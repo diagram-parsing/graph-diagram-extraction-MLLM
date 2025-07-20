@@ -1,0 +1,239 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "messageEvent_1",
+        "text": "claim received",
+        "class": "messageEvent"
+      },
+      {
+        "id": "task_1",
+        "text": "Check if claimant is insured",
+        "class": "task"
+      },
+      {
+        "id": "exclusiveGateway_1",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_2",
+        "text": "Send rejection via SAP system",
+        "class": "task"
+      },
+      {
+        "id": "task_3",
+        "text": "Evaluate severity",
+        "class": "task"
+      },
+      {
+        "id": "exclusiveGateway_2",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_4",
+        "text": "Send all forms via SAP system",
+        "class": "task"
+      },
+      {
+        "id": "task_5",
+        "text": "Send forms via SAP system",
+        "class": "task"
+      },
+      {
+        "id": "document_1",
+        "text": "Forms [Simple]",
+        "class": "dataObject"
+      },
+      {
+        "id": "document_2",
+        "text": "Forms [Complex]",
+        "class": "dataObject"
+      },
+      {
+        "id": "messageEvent_2",
+        "text": "Forms received",
+        "class": "messageEvent"
+      },
+      {
+        "id": "task_6",
+        "text": "Check for completion",
+        "class": "task"
+      },
+      {
+        "id": "exclusiveGateway_3",
+        "text": null,
+        "class": "exclusiveGateway"
+      },
+      {
+        "id": "task_7",
+        "text": "Incomplete - Inform & update via SAP system",
+        "class": "task"
+      },
+      {
+        "id": "dataStore_1",
+        "text": "Claims Management System",
+        "class": "dataStore"
+      },
+      {
+        "id": "task_8",
+        "text": "Register",
+        "class": "task"
+      },
+      {
+        "id": "event_1",
+        "text": "Process ends",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "messageEvent_1",
+        "head": "task_1",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_1",
+        "head": "exclusiveGateway_1",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusiveGateway_1",
+        "head": "task_2",
+        "class": "sequenceFlow",
+        "label": "Not insured"
+      },
+      {
+        "tail": "exclusiveGateway_1",
+        "head": "task_3",
+        "class": "sequenceFlow",
+        "label": "insured"
+      },
+      {
+        "tail": "task_3",
+        "head": "exclusiveGateway_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusiveGateway_2",
+        "head": "task_4",
+        "class": "sequenceFlow",
+        "label": "Simple"
+      },
+      {
+        "tail": "exclusiveGateway_2",
+        "head": "task_5",
+        "class": "sequenceFlow",
+        "label": "Complex"
+      },
+      {
+        "tail": "task_4",
+        "head": "document_1",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_5",
+        "head": "document_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "document_1",
+        "head": "messageEvent_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "document_2",
+        "head": "messageEvent_2",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "messageEvent_2",
+        "head": "task_6",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_6",
+        "head": "exclusiveGateway_3",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "exclusiveGateway_3",
+        "head": "task_7",
+        "class": "sequenceFlow",
+        "label": "Incomplete"
+      },
+      {
+        "tail": "exclusiveGateway_3",
+        "head": "dataStore_1",
+        "class": "sequenceFlow",
+        "label": "Complete"
+      },
+      {
+        "tail": "dataStore_1",
+        "head": "task_8",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "task_8",
+        "head": "event_1",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Claimant",
+        "class": "pool",
+        "nodes": []
+      },
+      {
+        "name": "Insurance - Claim Office",
+        "class": "pool",
+        "nodes": [
+          "messageEvent_1",
+          "task_1",
+          "exclusiveGateway_1",
+          "task_2",
+          "task_3",
+          "exclusiveGateway_2",
+          "task_4",
+          "task_5",
+          "document_1",
+          "document_2",
+          "messageEvent_2",
+          "task_6",
+          "exclusiveGateway_3",
+          "task_7",
+          "dataStore_1",
+          "task_8",
+          "event_1"
+        ]
+      },
+      {
+        "name": "Senior claim office",
+        "class": "lane",
+        "nodes": [
+          "task_3",
+          "exclusiveGateway_2",
+          "task_4",
+          "task_5",
+          "document_1",
+          "document_2"
+        ]
+      }
+    ]
+  }
+]
+```

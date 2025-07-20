@@ -1,0 +1,113 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start_event",
+      "text": "start event",
+      "class": "event"
+    },
+    {
+      "id": "evaluate_application",
+      "text": "evaluate application",
+      "class": "task"
+    },
+    {
+      "id": "exclusive_gateway",
+      "text": null,
+      "class": "exclusiveGateway"
+    },
+    {
+      "id": "notify_customer",
+      "text": "notify customer",
+      "class": "task"
+    },
+    {
+      "id": "end_event_decline",
+      "text": "end event",
+      "class": "event"
+    },
+    {
+      "id": "create_bank_account",
+      "text": "create bank account",
+      "class": "task"
+    },
+    {
+      "id": "send_welcome_pack",
+      "text": "send welcome pack",
+      "class": "task"
+    },
+    {
+      "id": "send_bank_card",
+      "text": "send bank card",
+      "class": "task"
+    },
+    {
+      "id": "send_PIN",
+      "text": "send PIN",
+      "class": "task"
+    },
+    {
+      "id": "end_event_accept",
+      "text": "end event",
+      "class": "event"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start_event",
+      "head": "evaluate_application",
+      "class": "sequenceFlow",
+      "label": "application received"
+    },
+    {
+      "tail": "evaluate_application",
+      "head": "exclusive_gateway",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "exclusive_gateway",
+      "head": "notify_customer",
+      "class": "sequenceFlow",
+      "label": "application declined"
+    },
+    {
+      "tail": "notify_customer",
+      "head": "end_event_decline",
+      "class": "sequenceFlow",
+      "label": "process ends"
+    },
+    {
+      "tail": "exclusive_gateway",
+      "head": "create_bank_account",
+      "class": "sequenceFlow",
+      "label": "application accepted"
+    },
+    {
+      "tail": "create_bank_account",
+      "head": "send_welcome_pack",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_welcome_pack",
+      "head": "send_bank_card",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_bank_card",
+      "head": "send_PIN",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "send_PIN",
+      "head": "end_event_accept",
+      "class": "sequenceFlow",
+      "label": "process ends"
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,133 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "cliente",
+        "text": "cliente",
+        "attributes": [
+          "nome:string",
+          "cognome:string",
+          "indirizzo:string",
+          "latitudine:double",
+          "longitudine:double",
+          "nascita:date",
+          "cell:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "articolo",
+        "text": "articolo",
+        "attributes": [
+          "foto:string",
+          "nome:string",
+          "descriz:string",
+          "prezzo:currency"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "ordine",
+        "text": "ordine",
+        "attributes": [
+          "feedback:string",
+          "voto:int",
+          "indirizzo:string"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "gestore",
+        "text": "gestore",
+        "attributes": [
+          "nome:string",
+          "cell:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "quantity",
+        "text": "quantity",
+        "attributes": [
+          "quantita:int"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "incarico",
+        "text": "incarico",
+        "attributes": [
+          "accettato:boolean",
+          "feedback_cl:string",
+          "esito:string",
+          "oracONSEGNA:datetime",
+          "esito_pagamento:boolean"
+        ],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "rider",
+        "text": "rider",
+        "attributes": [
+          "nome:string",
+          "cell:int",
+          "disponibile:boolean"
+        ],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "cliente",
+        "head": "ordine",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "*",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "articolo",
+        "head": "ordine",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      },
+      {
+        "tail": "ordine",
+        "head": "incarico",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "incarico",
+        "head": "rider",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "articolo",
+        "head": "quantity",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "1"
+      },
+      {
+        "tail": "gestore",
+        "head": "articolo",
+        "class": "UndirectedAssociation",
+        "label": null,
+        "cardinality_start": "1",
+        "cardinality_end": "*"
+      }
+    ],
+    "groups": []
+  }
+]
+```

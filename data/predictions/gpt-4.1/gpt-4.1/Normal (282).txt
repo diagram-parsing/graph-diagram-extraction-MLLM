@@ -1,0 +1,91 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "Begin",
+      "text": "Begin",
+      "class": null
+    },
+    {
+      "id": "Online Application",
+      "text": "Online Application",
+      "class": null
+    },
+    {
+      "id": "Applicant meets with a loan officer to discuss their needs",
+      "text": "Applicant meets with a loan officer to discuss their needs",
+      "class": null
+    },
+    {
+      "id": "Process Application",
+      "text": "Process Application",
+      "class": null
+    },
+    {
+      "id": "Application reviewed by the office manager",
+      "text": "Application reviewed by the office manager",
+      "class": null
+    },
+    {
+      "id": "Application Rejected",
+      "text": "Application Rejected",
+      "class": null
+    },
+    {
+      "id": "Application Approved",
+      "text": "Application Approved",
+      "class": null
+    },
+    {
+      "id": "END",
+      "text": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Online Application",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Online Application",
+      "head": "Applicant meets with a loan officer to discuss their needs",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Applicant meets with a loan officer to discuss their needs",
+      "head": "Process Application",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Process Application",
+      "head": "Application reviewed by the office manager",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "Application reviewed by the office manager",
+      "head": "Application Rejected",
+      "class": null,
+      "label": "N"
+    },
+    {
+      "tail": "Application reviewed by the office manager",
+      "head": "Application Approved",
+      "class": null,
+      "label": "Y"
+    },
+    {
+      "tail": "Application Approved",
+      "head": "END",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}]
+```

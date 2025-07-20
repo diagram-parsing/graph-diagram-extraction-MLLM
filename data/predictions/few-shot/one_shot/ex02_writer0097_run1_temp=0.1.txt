@@ -1,0 +1,170 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Customer",
+        "text": "Customer",
+        "class": "pool"
+      },
+      {
+        "id": "Insurer",
+        "text": "Insurer",
+        "class": "pool"
+      },
+      {
+        "id": "register_claim",
+        "text": "register claim",
+        "class": "task"
+      },
+      {
+        "id": "examine_claim",
+        "text": "examine claim",
+        "class": "task"
+      },
+      {
+        "id": "write_recommendation",
+        "text": "write recommendation",
+        "class": "task"
+      },
+      {
+        "id": "check_recommendation",
+        "text": "check recommendation",
+        "class": "task"
+      },
+      {
+        "id": "send_back",
+        "text": "send back",
+        "class": "task"
+      },
+      {
+        "id": "proceed_handling_process",
+        "text": "proceed handling process",
+        "class": "task"
+      },
+      {
+        "id": "claim_received",
+        "text": "claim received",
+        "class": "event"
+      },
+      {
+        "id": "claim_registered",
+        "text": "claim registered",
+        "class": "event"
+      },
+      {
+        "id": "claim_examined",
+        "text": "claim examined",
+        "class": "event"
+      },
+      {
+        "id": "recommendation_checked",
+        "text": "recommendation checked",
+        "class": "event"
+      },
+      {
+        "id": "claim_approved",
+        "text": "claim approved",
+        "class": "event"
+      },
+      {
+        "id": "claim_processed",
+        "text": "claim processed",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Customer",
+        "head": "claim_received",
+        "class": "sequenceFlow",
+        "label": "claim"
+      },
+      {
+        "tail": "claim_received",
+        "head": "register_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "register_claim",
+        "head": "claim_registered",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "claim_registered",
+        "head": "examine_claim",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "examine_claim",
+        "head": "claim_examined",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "claim_examined",
+        "head": "write_recommendation",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "write_recommendation",
+        "head": "recommendation_checked",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "recommendation_checked",
+        "head": "check_recommendation",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "check_recommendation",
+        "head": "send_back",
+        "class": "sequenceFlow",
+        "label": "Not OK"
+      },
+      {
+        "tail": "send_back",
+        "head": "examine_claim",
+        "class": "sequenceFlow",
+        "label": "to claims officer"
+      },
+      {
+        "tail": "check_recommendation",
+        "head": "proceed_handling_process",
+        "class": "sequenceFlow",
+        "label": "OK"
+      },
+      {
+        "tail": "proceed_handling_process",
+        "head": "claim_approved",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "claim_approved",
+        "head": "claim_processed",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": [
+      {
+        "name": "Customer",
+        "class": "pool",
+        "nodes": ["Customer"]
+      },
+      {
+        "name": "Insurer",
+        "class": "pool",
+        "nodes": ["Insurer"]
+      }
+    ]
+  }
+]
+```

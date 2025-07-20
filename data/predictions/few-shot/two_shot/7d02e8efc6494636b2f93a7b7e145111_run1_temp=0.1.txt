@@ -1,0 +1,91 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Anwender",
+      "id": "Anwender",
+      "class": "StartEvent"
+    },
+    {
+      "text": "SAP Gui öffnen",
+      "id": "SAP Gui öffnen",
+      "class": "Task"
+    },
+    {
+      "text": "T-Code COOIS ausführen",
+      "id": "T-Code COOIS ausführen",
+      "class": "Task"
+    },
+    {
+      "text": "Filteroptionen auswählen",
+      "id": "Filteroptionen auswählen",
+      "class": "Task"
+    },
+    {
+      "text": "Ausführen des Reports",
+      "id": "Ausführen des Reports",
+      "class": "Task"
+    },
+    {
+      "text": "COOIS Layout auswählen",
+      "id": "COOIS Layout auswählen",
+      "class": "Task"
+    },
+    {
+      "text": "Report in Excel exportieren",
+      "id": "Report in Excel exportieren",
+      "class": "Task"
+    },
+    {
+      "text": "",
+      "id": "EndEvent",
+      "class": "EndEvent"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Anwender",
+      "head": "SAP Gui öffnen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "SAP Gui öffnen",
+      "head": "T-Code COOIS ausführen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "T-Code COOIS ausführen",
+      "head": "Filteroptionen auswählen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Filteroptionen auswählen",
+      "head": "Ausführen des Reports",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Ausführen des Reports",
+      "head": "COOIS Layout auswählen",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "COOIS Layout auswählen",
+      "head": "Report in Excel exportieren",
+      "class": "SequenceFlow",
+      "label": ""
+    },
+    {
+      "tail": "Report in Excel exportieren",
+      "head": "EndEvent",
+      "class": "SequenceFlow",
+      "label": ""
+    }
+  ],
+  "groups": []
+}
+```

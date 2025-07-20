@@ -1,0 +1,136 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "SchedaInformativa",
+        "text": "Scheda Informativa",
+        "attributes": ["titolo", "descrizione"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "SchedaPubblica",
+        "text": "SchedaPubblica",
+        "class": "SimpleClass"
+      },
+      {
+        "id": "SchedaOperaEvento",
+        "text": "Scheda Opera/evento",
+        "attributes": ["tipologia", "dataInizioValidita'", "dataFineValidita'"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "AssociazioneSchedaCitadino",
+        "text": "AssociazioneSchedaCitadino",
+        "attributes": ["titoloScheda", "idCitadino"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Cittadino",
+        "text": "Cittadino",
+        "attributes": ["nome", "cognome", "id"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "CredenzialiCitadino",
+        "text": "Credenziali Citadino",
+        "attributes": ["username", "password"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "UtentePubblicaAmministrazione",
+        "text": "Utente Pubblica Amministrazione",
+        "attributes": ["nome", "cognome"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "CredenzialiPubblicaAmministrazione",
+        "text": "Credenziali Pubblica Amministrazione",
+        "attributes": ["username", "password"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "AssociazioneSchedaArgomento",
+        "text": "AssociazioneSchedaArgomento",
+        "attributes": ["nomeArgomento", "titoloScheda"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "Argomento",
+        "text": "Argomento",
+        "attributes": ["nome", "tipo"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "AssociazioneSchedaArea",
+        "text": "AssociazioneSchedaArea",
+        "attributes": ["titoloScheda", "idAreaGeografica"],
+        "class": "ComplexClass"
+      },
+      {
+        "id": "AreaGeografica",
+        "text": "AreaGeografica",
+        "attributes": ["Latitudine", "Longitudine", "id"],
+        "class": "ComplexClass"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "SchedaInformativa",
+        "head": "SchedaPubblica",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "SchedaInformativa",
+        "head": "SchedaOperaEvento",
+        "class": "Generalization",
+        "label": null
+      },
+      {
+        "tail": "SchedaOperaEvento",
+        "head": "AssociazioneSchedaArgomento",
+        "class": "Composition",
+        "label": null
+      },
+      {
+        "tail": "SchedaOperaEvento",
+        "head": "AssociazioneSchedaArea",
+        "class": "Composition",
+        "label": null
+      },
+      {
+        "tail": "AssociazioneSchedaCitadino",
+        "head": "Cittadino",
+        "class": "Composition",
+        "label": null
+      },
+      {
+        "tail": "Cittadino",
+        "head": "CredenzialiCitadino",
+        "class": "Composition",
+        "label": null
+      },
+      {
+        "tail": "UtentePubblicaAmministrazione",
+        "head": "CredenzialiPubblicaAmministrazione",
+        "class": "Composition",
+        "label": null
+      },
+      {
+        "tail": "AssociazioneSchedaArgomento",
+        "head": "Argomento",
+        "class": "Composition",
+        "label": null
+      },
+      {
+        "tail": "AssociazioneSchedaArea",
+        "head": "AreaGeografica",
+        "class": "Composition",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

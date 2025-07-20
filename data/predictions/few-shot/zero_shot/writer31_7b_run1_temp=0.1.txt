@@ -1,0 +1,125 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "begin",
+      "text": "begin",
+      "class": "terminator"
+    },
+    {
+      "id": "i=0",
+      "text": "i=0",
+      "class": "process"
+    },
+    {
+      "id": "changed=false",
+      "text": "changed=false",
+      "class": "process"
+    },
+    {
+      "id": "i=length(T)-2",
+      "text": "i<length(T)-2",
+      "class": "decision"
+    },
+    {
+      "id": "changed?",
+      "text": "changed?",
+      "class": "decision"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "terminator"
+    },
+    {
+      "id": "i=i+1",
+      "text": "i=i+1",
+      "class": "process"
+    },
+    {
+      "id": "T[i]>T[i+1]",
+      "text": "T[i]>T[i+1]",
+      "class": "decision"
+    },
+    {
+      "id": "swap(T[i],T[i+1])",
+      "text": "swap(T[i],T[i+1])",
+      "class": "process"
+    },
+    {
+      "id": "changed=true",
+      "text": "changed=true",
+      "class": "process"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "begin",
+      "head": "i=0",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "i=0",
+      "head": "changed=false",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "changed=false",
+      "head": "i=length(T)-2",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "i=length(T)-2",
+      "head": "changed?",
+      "class": null,
+      "label": "No"
+    },
+    {
+      "tail": "changed?",
+      "head": "Stop",
+      "class": null,
+      "label": "False"
+    },
+    {
+      "tail": "changed?",
+      "head": "i=length(T)-2",
+      "class": null,
+      "label": "true"
+    },
+    {
+      "tail": "i=length(T)-2",
+      "head": "i=i+1",
+      "class": null,
+      "label": "Yes"
+    },
+    {
+      "tail": "i=i+1",
+      "head": "T[i]>T[i+1]",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "T[i]>T[i+1]",
+      "head": "swap(T[i],T[i+1])",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "swap(T[i],T[i+1])",
+      "head": "changed=true",
+      "class": null,
+      "label": null
+    },
+    {
+      "tail": "changed=true",
+      "head": "changed=false",
+      "class": null,
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,61 @@
+```json
+{
+  "nodes": [
+    {"id": "1", "text": "receive course description", "class": "event"},
+    {"id": "2", "text": "give course description", "class": "task"},
+    {"id": "3", "text": "receive course first", "class": "event"},
+    {"id": "4", "text": "send course first", "class": "task"},
+    {"id": "5", "text": "enter information into course bookings system (CBS)", "class": "task"},
+    {"id": "6", "text": "wait till all 10 course description arrived", "class": "task"},
+    {"id": "7", "text": "assign student to new course", "class": "task"},
+    {"id": "8", "text": "receive notification of accepted students", "class": "event"},
+    {"id": "9", "text": "send notification of accepted students", "class": "task"},
+    {"id": "10", "text": "1 week before school start", "class": "event"},
+    {"id": "11", "text": "course selected", "class": "event"},
+    {"id": "12", "text": "course selected confirmed", "class": "event"},
+    {"id": "13", "text": "list of students not accepted", "class": "dataObject"},
+    {"id": "14", "text": "send mail accepted students", "class": "task"},
+    {"id": "15", "text": "receive mail accepted students", "class": "event"},
+    {"id": "16", "text": "send mail not accepted students", "class": "task"},
+    {"id": "17", "text": "receive mail not accepted students", "class": "event"},
+    {"id": "18", "text": "course in CBS", "class": "dataObject"},
+    {"id": "19", "text": "select course", "class": "task"},
+    {"id": "20", "text": "student course classified", "class": "event"},
+    {"id": "21", "text": "return to CBS", "class": "task"}
+  ],
+  "relations": [
+    {"tail": "1", "head": "2", "class": "sequenceFlow", "label": null},
+    {"tail": "2", "head": "3", "class": "sequenceFlow", "label": null},
+    {"tail": "3", "head": "4", "class": "sequenceFlow", "label": null},
+    {"tail": "4", "head": "5", "class": "sequenceFlow", "label": null},
+    {"tail": "5", "head": "6", "class": "sequenceFlow", "label": null},
+    {"tail": "6", "head": "7", "class": "sequenceFlow", "label": null},
+    {"tail": "7", "head": "8", "class": "sequenceFlow", "label": null},
+    {"tail": "8", "head": "9", "class": "sequenceFlow", "label": null},
+    {"tail": "9", "head": "10", "class": "sequenceFlow", "label": null},
+    {"tail": "10", "head": "11", "class": "sequenceFlow", "label": null},
+    {"tail": "11", "head": "12", "class": "sequenceFlow", "label": null},
+    {"tail": "12", "head": "13", "class": "sequenceFlow", "label": null},
+    {"tail": "13", "head": "14", "class": "sequenceFlow", "label": null},
+    {"tail": "14", "head": "15", "class": "sequenceFlow", "label": null},
+    {"tail": "15", "head": "16", "class": "sequenceFlow", "label": null},
+    {"tail": "16", "head": "17", "class": "sequenceFlow", "label": null},
+    {"tail": "17", "head": "18", "class": "sequenceFlow", "label": null},
+    {"tail": "18", "head": "19", "class": "sequenceFlow", "label": null},
+    {"tail": "19", "head": "20", "class": "sequenceFlow", "label": null},
+    {"tail": "20", "head": "21", "class": "sequenceFlow", "label": null}
+  ],
+  "groups": [
+    {
+      "name": "Teachers",
+      "class": "lane",
+      "nodes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]
+    },
+    {
+      "name": "Students",
+      "class": "lane",
+      "nodes": ["18", "19", "20", "21"]
+    }
+  ]
+}
+```

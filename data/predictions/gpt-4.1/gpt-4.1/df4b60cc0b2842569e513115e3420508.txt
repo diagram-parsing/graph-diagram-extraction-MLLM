@@ -1,0 +1,194 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "A",
+        "text": "A",
+        "class": "Transition"
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "class": "Transition"
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "class": "Transition"
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "class": "Transition"
+      },
+      {
+        "id": "E",
+        "text": "E",
+        "class": "Transition"
+      },
+      {
+        "id": "F",
+        "text": "F",
+        "class": "Transition"
+      },
+      {
+        "id": "P1",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P2",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P3",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P4",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P5",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P6",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P7",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P8",
+        "text": null,
+        "class": "Place"
+      },
+      {
+        "id": "P9",
+        "text": null,
+        "class": "Place"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "P1",
+        "head": "A",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "A",
+        "head": "P2",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P2",
+        "head": "B",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P2",
+        "head": "C",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "B",
+        "head": "P3",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "C",
+        "head": "P4",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P3",
+        "head": "D",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P3",
+        "head": "E",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "D",
+        "head": "P5",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "E",
+        "head": "P5",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P5",
+        "head": "F",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P4",
+        "head": "F",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "F",
+        "head": "P6",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P6",
+        "head": "P7",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P7",
+        "head": "P8",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P8",
+        "head": "P9",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "P6",
+        "head": "C",
+        "class": "Arc",
+        "label": null
+      },
+      {
+        "tail": "F",
+        "head": "P2",
+        "class": "Arc",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

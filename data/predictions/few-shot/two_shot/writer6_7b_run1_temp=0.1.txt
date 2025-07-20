@@ -1,0 +1,118 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "begin",
+      "text": "begin",
+      "class": "terminator"
+    },
+    {
+      "id": "T0",
+      "text": "T0",
+      "class": "process"
+    },
+    {
+      "id": "changed=false",
+      "text": "changed=false",
+      "class": "process"
+    },
+    {
+      "id": "i=0",
+      "text": "i=0",
+      "class": "process"
+    },
+    {
+      "id": "k=length(T)-2",
+      "text": "k=length(T)-2",
+      "class": "decision"
+    },
+    {
+      "id": "T[i]<T[i+1]",
+      "text": "T[i]<T[i+1]",
+      "class": "decision"
+    },
+    {
+      "id": "swap(T[i],T[i+1])",
+      "text": "swap(T[i],T[i+1])",
+      "class": "process"
+    },
+    {
+      "id": "changed=true",
+      "text": "changed=true",
+      "class": "process"
+    },
+    {
+      "id": "changed?",
+      "text": "changed?",
+      "class": "decision"
+    },
+    {
+      "id": "stop",
+      "text": "stop",
+      "class": "terminator"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "begin",
+      "head": "T0",
+      "label": null
+    },
+    {
+      "tail": "T0",
+      "head": "changed=false",
+      "label": null
+    },
+    {
+      "tail": "changed=false",
+      "head": "i=0",
+      "label": null
+    },
+    {
+      "tail": "i=0",
+      "head": "k=length(T)-2",
+      "label": null
+    },
+    {
+      "tail": "k=length(T)-2",
+      "head": "T[i]<T[i+1]",
+      "label": "Yes"
+    },
+    {
+      "tail": "T[i]<T[i+1]",
+      "head": "swap(T[i],T[i+1])",
+      "label": null
+    },
+    {
+      "tail": "swap(T[i],T[i+1])",
+      "head": "changed=true",
+      "label": null
+    },
+    {
+      "tail": "changed=true",
+      "head": "changed?",
+      "label": null
+    },
+    {
+      "tail": "k=length(T)-2",
+      "head": "changed?",
+      "label": "No"
+    },
+    {
+      "tail": "changed?",
+      "head": "stop",
+      "label": "False"
+    },
+    {
+      "tail": "changed?",
+      "head": "changed=false",
+      "label": "True"
+    },
+    {
+      "tail": "i=0",
+      "head": "i=0",
+      "label": null
+    }
+  ]
+}
+```

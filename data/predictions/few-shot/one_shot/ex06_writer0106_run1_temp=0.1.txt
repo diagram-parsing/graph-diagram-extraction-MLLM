@@ -1,0 +1,144 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "Order",
+        "text": "Order",
+        "class": "task"
+      },
+      {
+        "id": "Order Confirmed",
+        "text": "Order Confirmed",
+        "class": "event"
+      },
+      {
+        "id": "Order Enacted",
+        "text": "Order Enacted",
+        "class": "event"
+      },
+      {
+        "id": "Order Received by Lieferservice",
+        "text": "Order received by Lieferservice",
+        "class": "task"
+      },
+      {
+        "id": "Order Received by Website",
+        "text": "Order received by Website",
+        "class": "task"
+      },
+      {
+        "id": "Order Taken by Phone",
+        "text": "Order taken by Phone",
+        "class": "task"
+      },
+      {
+        "id": "Confirm Order",
+        "text": "Confirm order",
+        "class": "task"
+      },
+      {
+        "id": "Write down Order",
+        "text": "Write down Order",
+        "class": "task"
+      },
+      {
+        "id": "Print on Order",
+        "text": "Print on Order",
+        "class": "task"
+      },
+      {
+        "id": "Attach order to note on Pinboard",
+        "text": "Attach order to note on Pinboard",
+        "class": "task"
+      },
+      {
+        "id": "Order Completed",
+        "text": "Order Completed",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "Order",
+        "head": "Order Confirmed",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order Confirmed",
+        "head": "Confirm Order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Confirm Order",
+        "head": "Order Enacted",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order",
+        "head": "Order Received by Lieferservice",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order Received by Lieferservice",
+        "head": "Confirm Order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order",
+        "head": "Order Received by Website",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order Received by Website",
+        "head": "Confirm Order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order",
+        "head": "Order Taken by Phone",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Order Taken by Phone",
+        "head": "Confirm Order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Confirm Order",
+        "head": "Write down Order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Write down Order",
+        "head": "Print on Order",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Print on Order",
+        "head": "Attach order to note on Pinboard",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "Attach order to note on Pinboard",
+        "head": "Order Completed",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

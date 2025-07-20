@@ -1,0 +1,116 @@
+```json
+{
+  "nodes": [
+    {
+      "text": "Eingabemenge",
+      "attributes": [
+        "- mengenelemente: ArrayList<Mengenelement>"
+      ],
+      "methods": null,
+      "id": "Eingabemenge",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Mengenelement",
+      "attributes": null,
+      "methods": null,
+      "id": "Mengenelement",
+      "class": "SimpleClass"
+    },
+    {
+      "text": "Punkt",
+      "attributes": [
+        "- x: int",
+        "- y: int"
+      ],
+      "methods": null,
+      "id": "Punkt",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Ziffer",
+      "attributes": [
+        "- p1x: int",
+        "- p1y: int",
+        "- p2x: int",
+        "- p2y: int",
+        "- p3x: int",
+        "- p3y: int",
+        "- wert: double"
+      ],
+      "methods": null,
+      "id": "Ziffer",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Pfeilspitze",
+      "attributes": [
+        "- p1x: int",
+        "- p1y: int",
+        "- p2x: int",
+        "- p2y: int",
+        "- p3x: int",
+        "- p3y: int"
+      ],
+      "methods": null,
+      "id": "Pfeilspitze",
+      "class": "ComplexClass"
+    },
+    {
+      "text": "Strecke",
+      "attributes": [
+        "- p1x: int",
+        "- p1y: int",
+        "- p2x: int",
+        "- p2y: int"
+      ],
+      "methods": null,
+      "id": "Strecke",
+      "class": "ComplexClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Eingabemenge",
+      "head": "Mengenelement",
+      "class": "Composition",
+      "label": null,
+      "cardinality_start": "*",
+      "cardinality_end": "1"
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Punkt",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Ziffer",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Pfeilspitze",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Mengenelement",
+      "head": "Strecke",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,135 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "Persona 1",
+      "text": "DNI = 43785612Y\nNombre = Juan Ignacio\nApellidos = Delgado Alemany\nFecha de nacimiento = 02/12/1973\nEmail = jane.doe@dummmy.com",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Trabajador 1",
+      "text": "Sueldo = 1100\nPuesto = Dependiente\nCarnet conducir = True",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Persona 3",
+      "text": "DNI = 65227811H\nNombre = Pedro\nApellidos = Lucha García\nFecha de nacimiento = 30/04/1985\nEmail = jane.doe@dummmy.com",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Trabajador 3",
+      "text": "Sueldo = 1000\nPuesto = Repartidor\nCarnet conducir = True",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Persona 2",
+      "text": "DNI = 45783219V\nNombre = Héctor\nApellidos = De Miguel Martín\nFecha de nacimiento = 06/01/1977\nEmail = jane.doe@dummmy.com",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Trabajador 2",
+      "text": "Sueldo = 1200\nPuesto = Encargado almacén\nCarnet conducir = True",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Trabajador Tienda",
+      "text": null,
+      "methods": null,
+      "attributes": null,
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Repartidor",
+      "text": null,
+      "methods": null,
+      "attributes": null,
+      "class": "SimpleClass"
+    },
+    {
+      "id": "Vehículo 1",
+      "text": "Matrícula = 4533GDT",
+      "methods": null,
+      "attributes": null,
+      "class": "ComplexClass"
+    },
+    {
+      "id": "Trabajador Almacén",
+      "text": null,
+      "methods": null,
+      "attributes": null,
+      "class": "SimpleClass"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Persona 1",
+      "head": "Trabajador 1",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Trabajador 1",
+      "head": "Trabajador Tienda",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Persona 3",
+      "head": "Trabajador 3",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Trabajador 3",
+      "head": "Repartidor",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Repartidor",
+      "head": "Vehículo 1",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Persona 2",
+      "head": "Trabajador 2",
+      "class": "UndirectedAssociation",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    },
+    {
+      "tail": "Trabajador 2",
+      "head": "Trabajador Almacén",
+      "class": "Generalization",
+      "label": null,
+      "cardinality_start": null,
+      "cardinality_end": null
+    }
+  ],
+  "groups": []
+}
+```

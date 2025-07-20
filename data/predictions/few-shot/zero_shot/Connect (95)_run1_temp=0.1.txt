@@ -1,0 +1,66 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "PowerSupply",
+        "text": "Power Supply",
+        "class": null
+      },
+      {
+        "id": "RAM",
+        "text": "RAM",
+        "class": null
+      },
+      {
+        "id": "Processor",
+        "text": "Processor",
+        "class": null
+      },
+      {
+        "id": "HardDrive",
+        "text": "Hard Drive",
+        "class": null
+      },
+      {
+        "id": "HardDisk",
+        "text": "Hard disk",
+        "class": null
+      }
+    ],
+    "relations": [
+      {
+        "tail": "PowerSupply",
+        "head": "RAM",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "PowerSupply",
+        "head": "HardDisk",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "RAM",
+        "head": "Processor",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "Processor",
+        "head": "HardDrive",
+        "class": null,
+        "label": null
+      },
+      {
+        "tail": "HardDisk",
+        "head": "Processor",
+        "class": null,
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```

@@ -1,0 +1,142 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start_event",
+      "text": "Start event",
+      "class": "event"
+    },
+    {
+      "id": "receive_order_by_letter",
+      "text": "receive order by Letter",
+      "class": "task"
+    },
+    {
+      "id": "receive_order_by_website",
+      "text": "receive order by website",
+      "class": "task"
+    },
+    {
+      "id": "take_order_by_phone",
+      "text": "take order by phone",
+      "class": "task"
+    },
+    {
+      "id": "write_down_order_note",
+      "text": "write down order note",
+      "class": "task"
+    },
+    {
+      "id": "confirm_order",
+      "text": "confirm order",
+      "class": "task"
+    },
+    {
+      "id": "print_out_order",
+      "text": "print out order",
+      "class": "task"
+    },
+    {
+      "id": "attach_order_to_pinboard",
+      "text": "attach order to pinboard",
+      "class": "task"
+    },
+    {
+      "id": "end_event",
+      "text": "End event",
+      "class": "event"
+    },
+    {
+      "id": "order_confirmation",
+      "text": "order confirmation",
+      "class": "dataObject"
+    },
+    {
+      "id": "order_note",
+      "text": "order note",
+      "class": "dataObject"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start_event",
+      "head": "receive_order_by_letter",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "start_event",
+      "head": "receive_order_by_website",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "start_event",
+      "head": "take_order_by_phone",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive_order_by_letter",
+      "head": "confirm_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "receive_order_by_website",
+      "head": "confirm_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "take_order_by_phone",
+      "head": "write_down_order_note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm_order",
+      "head": "print_out_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write_down_order_note",
+      "head": "print_out_order",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "print_out_order",
+      "head": "attach_order_to_pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "attach_order_to_pinboard",
+      "head": "end_event",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "confirm_order",
+      "head": "order_confirmation",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "write_down_order_note",
+      "head": "order_note",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "order_note",
+      "head": "attach_order_to_pinboard",
+      "class": "sequenceFlow",
+      "label": null
+    }
+  ],
+  "groups": []
+}
+```

@@ -1,0 +1,232 @@
+```json
+[{
+  "nodes": [
+    {
+      "id": "event_1",
+      "text": "rating started",
+      "class": "event"
+    },
+    {
+      "id": "parallelGateway_1",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_1",
+      "text": "interview patient",
+      "class": "task"
+    },
+    {
+      "id": "parallelGateway_2",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_2",
+      "text": "file results",
+      "class": "task"
+    },
+    {
+      "id": "parallelGateway_3",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "task_3",
+      "text": "create report",
+      "class": "task"
+    },
+    {
+      "id": "parallelGateway_4",
+      "text": null,
+      "class": "parallelGateway"
+    },
+    {
+      "id": "event_2",
+      "text": "doctor rated",
+      "class": "event"
+    },
+    {
+      "id": "subProcess_1",
+      "text": "ask expert",
+      "class": "subProcess"
+    },
+    {
+      "id": "timerEvent_1",
+      "text": "until respond in time",
+      "class": "timerEvent"
+    },
+    {
+      "id": "task_4",
+      "text": "forward expertise",
+      "class": "task"
+    },
+    {
+      "id": "task_5",
+      "text": "fill cheque",
+      "class": "task"
+    },
+    {
+      "id": "task_6",
+      "text": "send it",
+      "class": "task"
+    },
+    {
+      "id": "expert_pool",
+      "text": null,
+      "class": "pool"
+    }
+  ],
+  "relations": [
+    {
+      "tail": "event_1",
+      "head": "parallelGateway_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "task_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_1",
+      "head": "parallelGateway_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_2",
+      "head": "task_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_2",
+      "head": "parallelGateway_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_3",
+      "head": "task_3",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_3",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_4",
+      "head": "event_2",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "parallelGateway_1",
+      "head": "subProcess_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "subProcess_1",
+      "head": "timerEvent_1",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "subProcess_1",
+      "head": "task_4",
+      "class": "sequenceFlow",
+      "label": "expertise"
+    },
+    {
+      "tail": "timerEvent_1",
+      "head": "subProcess_1",
+      "class": "sequenceFlow",
+      "label": "until respond in time"
+    },
+    {
+      "tail": "task_4",
+      "head": "task_5",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_5",
+      "head": "task_6",
+      "class": "sequenceFlow",
+      "label": null
+    },
+    {
+      "tail": "task_6",
+      "head": "parallelGateway_4",
+      "class": "sequenceFlow",
+      "label": "cheque"
+    },
+    {
+      "tail": "subProcess_1",
+      "head": "expert_pool",
+      "class": "messageFlow",
+      "label": null
+    },
+    {
+      "tail": "expert_pool",
+      "head": "task_4",
+      "class": "messageFlow",
+      "label": "expertise"
+    },
+    {
+      "tail": "task_6",
+      "head": "expert_pool",
+      "class": "messageFlow",
+      "label": "cheque"
+    }
+  ],
+  "groups": [
+    {
+      "name": "HOSPITAL",
+      "class": "pool",
+      "nodes": [
+        "MANAGING DIRECTOR",
+        "QA DEPARTMENT"
+      ]
+    },
+    {
+      "name": "MANAGING DIRECTOR",
+      "class": "lane",
+      "nodes": [
+        "event_1",
+        "parallelGateway_1",
+        "task_1",
+        "parallelGateway_2",
+        "task_2",
+        "parallelGateway_3",
+        "task_3",
+        "parallelGateway_4",
+        "event_2"
+      ]
+    },
+    {
+      "name": "QA DEPARTMENT",
+      "class": "lane",
+      "nodes": [
+        "subProcess_1",
+        "timerEvent_1",
+        "task_4",
+        "task_5",
+        "task_6"
+      ]
+    },
+    {
+      "name": "EXPERT",
+      "class": "pool",
+      "nodes": []
+    }
+  ]
+}]
+```

@@ -1,0 +1,110 @@
+```json
+[
+  {
+    "nodes": [
+      {
+        "id": "newCreditRequested",
+        "text": "new Credit requested",
+        "class": "event"
+      },
+      {
+        "id": "assessRisk",
+        "text": "assess risk",
+        "class": "task"
+      },
+      {
+        "id": "riskAboveThreshold",
+        "text": "risk above threshold",
+        "class": "event"
+      },
+      {
+        "id": "riskBelowThreshold",
+        "text": "risk below threshold",
+        "class": "event"
+      },
+      {
+        "id": "carryOutAdvancedRiskAssessment",
+        "text": "carry out advanced risk assessment",
+        "class": "task"
+      },
+      {
+        "id": "carryOutSimpleRiskAss",
+        "text": "carry out simple risk ass.",
+        "class": "task"
+      },
+      {
+        "id": "notifyCustomerResultOfAssessment",
+        "text": "notify customer result of assessment",
+        "class": "task"
+      },
+      {
+        "id": "organizeDisbursement",
+        "text": "organize disbursement",
+        "class": "task"
+      },
+      {
+        "id": "requestFullLoan",
+        "text": "request full loan",
+        "class": "event"
+      }
+    ],
+    "relations": [
+      {
+        "tail": "newCreditRequested",
+        "head": "assessRisk",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "assessRisk",
+        "head": "riskAboveThreshold",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "assessRisk",
+        "head": "riskBelowThreshold",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "riskAboveThreshold",
+        "head": "carryOutAdvancedRiskAssessment",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "riskBelowThreshold",
+        "head": "carryOutSimpleRiskAss",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "carryOutAdvancedRiskAssessment",
+        "head": "notifyCustomerResultOfAssessment",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "carryOutSimpleRiskAss",
+        "head": "organizeDisbursement",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "notifyCustomerResultOfAssessment",
+        "head": "requestFullLoan",
+        "class": "sequenceFlow",
+        "label": null
+      },
+      {
+        "tail": "organizeDisbursement",
+        "head": "requestFullLoan",
+        "class": "sequenceFlow",
+        "label": null
+      }
+    ],
+    "groups": []
+  }
+]
+```
