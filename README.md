@@ -38,9 +38,10 @@ The tables below shows F1 scores for diagram recognition across several datasets
 | FA       | 0.981       | 0.957        | 0.947       | 0.937       | 0.978        | 0.964        | 0.922       |
 | hdBPMN   | 0.680       | 0.769        | 0.633       | 0.469       | 0.793        | 0.772        | 0.441       |
 | CBD      | 0.955       | 0.991        | 0.955       | 0.849       | 0.987        | 0.969        | 0.834       |
-| SEM      | 0.793       | 0.779        | 0.635       | 0.489       | 0.932        | 0.723        | 0.360       |
+| SEM      | 0.774       | 0.669        | 0.516       | 0.445       | 0.862        | 0.673        | 0.301       |
 | SAM-UML  | 0.843       | 0.289        | 0.253       | 0.377       | 0.179        | 0.508        | 0.021       |
 | SAM-BPMN | 0.606       | 0.796        | 0.527       | 0.318       | 0.872        | 0.735        | 0.240       |
+
 
 ### SAM-UML 
 The following table reports scores for the SAM-UML dataset, including methods and attributes, as well as edge cardinalities.
