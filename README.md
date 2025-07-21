@@ -1,4 +1,4 @@
-# Multimodal large language models for information extraction from graph-structured diagrams
+# Multimodal large language models for information extraction from graph-structured diagrams 
 
 This repository contains the code, data, and evaluation scripts for our research on extracting structured information from diagram images using multimodal large language models (MLLMs).
 
