@@ -12,6 +12,7 @@ We investigate the use of InternVL3-14B, a multimodal large language model (MLLM
 - `data/labels/`: ground-truth JSON annotations for the diagram datasets used in our study. Note: Labels for SEM and CBD are not included due to licensing constraints.
 - `evaluation/`: Evaluation scripts
 - `results/`: CSV files for our results 
+- `prompts/`: Text files for the prompts we used 
 
 ---
 
