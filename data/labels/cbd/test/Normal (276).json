@@ -1,0 +1,214 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        481.0,
+        69.5,
+        70.0,
+        33.0
+      ]
+    },
+    {
+      "text": "Read Values",
+      "id": "Read Values",
+      "class": null,
+      "bbox": [
+        477.0,
+        199.5,
+        158.0,
+        27.0
+      ]
+    },
+    {
+      "text": "new trials available?",
+      "id": "new trials available?",
+      "class": null,
+      "bbox": [
+        474.5,
+        335.5,
+        95.0,
+        45.0
+      ]
+    },
+    {
+      "text": "read new trial",
+      "id": "read new trial",
+      "class": null,
+      "bbox": [
+        471.5,
+        466.5,
+        123.0,
+        19.0
+      ]
+    },
+    {
+      "text": "average available for condition",
+      "id": "average available for condition",
+      "class": null,
+      "bbox": [
+        473.5,
+        597.0,
+        151.0,
+        50.0
+      ]
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null,
+      "bbox": [
+        175.5,
+        689.5,
+        107.0,
+        23.0
+      ]
+    },
+    {
+      "text": "add data to cumulative sum",
+      "id": "add data to cumulative sum",
+      "class": null,
+      "bbox": [
+        471.5,
+        804.5,
+        147.0,
+        45.0
+      ]
+    },
+    {
+      "text": "compute t-value and plot",
+      "id": "compute t-value and plot",
+      "class": null,
+      "bbox": [
+        472.0,
+        936.0,
+        148.0,
+        48.0
+      ]
+    },
+    {
+      "text": "continue?",
+      "id": "continue?",
+      "class": null,
+      "bbox": [
+        475.0,
+        1066.0,
+        92.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        469.0,
+        1195.5,
+        66.0,
+        37.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Read Values",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "new trials available?",
+      "tail": "Read Values",
+      "label": null
+    },
+    {
+      "head": "Read Values",
+      "tail": "new trials available?",
+      "label": "no",
+      "bbox": [
+        312.0,
+        349.0,
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "head": "read new trial",
+      "tail": "Read Values",
+      "label": "yes",
+      "bbox": [
+        501.5,
+        387.0,
+        39.0,
+        20.0
+      ]
+    },
+    {
+      "head": "average available for condition",
+      "tail": "read new trial",
+      "label": null
+    },
+    {
+      "head": "Initialize",
+      "tail": "average available for condition",
+      "label": "no",
+      "bbox": [
+        312.0,
+        349.0,
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "head": "add data to cumulative sum",
+      "tail": "average available for condition",
+      "label": "yes",
+      "bbox": [
+        501.5,
+        387.0,
+        39.0,
+        20.0
+      ]
+    },
+    {
+      "head": "add data to cumulative sum",
+      "tail": "Initialize",
+      "label": null
+    },
+    {
+      "head": "compute t-value and plot",
+      "tail": "add data to cumulative sum",
+      "label": null
+    },
+    {
+      "head": "continue?",
+      "tail": "compute t-value and plot",
+      "label": null
+    },
+    {
+      "head": "Read Values",
+      "tail": "continue?",
+      "label": "yes",
+      "bbox": [
+        501.5,
+        387.0,
+        39.0,
+        20.0
+      ]
+    },
+    {
+      "head": "Stop",
+      "tail": "continue?",
+      "label": "no",
+      "bbox": [
+        312.0,
+        349.0,
+        28.0,
+        16.0
+      ]
+    }
+  ],
+  "groups": []
+}

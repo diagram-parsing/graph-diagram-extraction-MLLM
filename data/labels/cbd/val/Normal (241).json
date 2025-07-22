@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Image",
+      "id": "Image",
+      "class": null
+    },
+    {
+      "text": "Image Enhancement",
+      "id": "Image Enhancement",
+      "class": null
+    },
+    {
+      "text": "Sampling",
+      "id": "Sampling",
+      "class": null
+    },
+    {
+      "text": "Morphological Processing",
+      "id": "Morphological Processing",
+      "class": null
+    },
+    {
+      "text": "Segmentation",
+      "id": "Segmentation",
+      "class": null
+    },
+    {
+      "text": "Obect Recognition",
+      "id": "Obect Recognition",
+      "class": null
+    },
+    {
+      "text": "Final Result",
+      "id": "Final Result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Image",
+      "head": "Image Enhancement",
+      "label": null
+    },
+    {
+      "tail": "Image Enhancement",
+      "head": "Sampling",
+      "label": null
+    },
+    {
+      "tail": "Sampling",
+      "head": "Morphological Processing",
+      "label": null
+    },
+    {
+      "tail": "Morphological Processing",
+      "head": "Segmentation",
+      "label": null
+    },
+    {
+      "tail": "Segmentation",
+      "head": "Obect Recognition",
+      "label": null
+    },
+    {
+      "tail": "Obect Recognition",
+      "head": "Final Result",
+      "label": null
+    }
+  ],
+  "groups": []
+}

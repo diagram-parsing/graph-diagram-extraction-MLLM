@@ -1,0 +1,98 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        174.5,
+        36.0,
+        31.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Read A",
+      "id": "Read A",
+      "class": null,
+      "bbox": [
+        173.0,
+        84.5,
+        32.0,
+        11.0
+      ]
+    },
+    {
+      "text": "A>0",
+      "id": "A>0",
+      "class": null
+    },
+    {
+      "text": "Positive",
+      "id": "Positive",
+      "class": null,
+      "bbox": [
+        72.0,
+        159.5,
+        38.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Negative",
+      "id": "Negative",
+      "class": null,
+      "bbox": [
+        277.5,
+        143.0,
+        43.0,
+        42.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        173.0,
+        201.0,
+        26.0,
+        14.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Read A",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "A>0",
+      "tail": "Read A",
+      "label": null
+    },
+    {
+      "head": "Positive",
+      "tail": "A>0",
+      "label": "Yes"
+    },
+    {
+      "head": "Negative",
+      "tail": "A>0",
+      "label": "No"
+    },
+    {
+      "head": "Stop",
+      "tail": "Positive",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Negative",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "C=5/9(F-32)",
+      "id": "C=5/9(F-32)",
+      "class": null
+    },
+    {
+      "text": "Dispaly",
+      "id": "Dispaly",
+      "class": null
+    },
+    {
+      "text": "Display",
+      "id": "Display",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "C=5/9(F-32)",
+      "label": null
+    },
+    {
+      "tail": "C=5/9(F-32)",
+      "head": "Dispaly",
+      "label": null
+    },
+    {
+      "tail": "Display",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

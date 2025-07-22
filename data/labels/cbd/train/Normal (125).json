@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Traffic rules",
+      "id": "Traffic rules",
+      "class": null
+    },
+    {
+      "text": "Check colour of light",
+      "id": "Check colour of light",
+      "class": null
+    },
+    {
+      "text": "Light green",
+      "id": "Light green",
+      "class": null
+    },
+    {
+      "text": "Light orange",
+      "id": "Light orange",
+      "class": null
+    },
+    {
+      "text": "Light red",
+      "id": "Light red",
+      "class": null
+    },
+    {
+      "text": "Go",
+      "id": "Go",
+      "class": null
+    },
+    {
+      "text": "Don't speed",
+      "id": "Don't speed",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Traffic rules",
+      "head": "Check colour of light",
+      "label": null
+    },
+    {
+      "tail": "Check colour of light",
+      "head": "Light green",
+      "label": null
+    },
+    {
+      "tail": "Check colour of light",
+      "head": "Light orange",
+      "label": null
+    },
+    {
+      "tail": "Check colour of light",
+      "head": "Light red",
+      "label": null
+    },
+    {
+      "tail": "Light green",
+      "head": "Go",
+      "label": null
+    },
+    {
+      "tail": "Light orange",
+      "head": "Don't speed",
+      "label": null
+    },
+    {
+      "tail": "Light red",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Don't speed",
+      "head": "Go",
+      "label": null
+    },
+    {
+      "tail": "Don't speed",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "start",
+      "id": "start",
+      "class": null
+    },
+    {
+      "text": "identity authentication",
+      "id": "identity authentication",
+      "class": null
+    },
+    {
+      "text": "identity verification",
+      "id": "identity verification",
+      "class": null
+    },
+    {
+      "text": "Try Again",
+      "id": "Try Again",
+      "class": null
+    },
+    {
+      "text": "Profile",
+      "id": "Profile",
+      "class": null
+    },
+    {
+      "text": "User",
+      "id": "User",
+      "class": null
+    },
+    {
+      "text": "identity management",
+      "id": "identity management",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "identity authentication",
+      "label": null
+    },
+    {
+      "tail": "identity authentication",
+      "head": "identity verification",
+      "label": null
+    },
+    {
+      "tail": "identity verification",
+      "head": "Try Again",
+      "label": "N"
+    },
+    {
+      "tail": "Try Again",
+      "head": "identity verification",
+      "label": null
+    },
+    {
+      "tail": "identity verification",
+      "head": "Profile",
+      "label": "Y"
+    },
+    {
+      "tail": "Profile",
+      "head": "User",
+      "label": "N"
+    },
+    {
+      "tail": "Profile",
+      "head": "identity management",
+      "label": "Y"
+    }
+  ],
+  "groups": []
+}

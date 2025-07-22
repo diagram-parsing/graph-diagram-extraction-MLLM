@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Power",
+      "id": "Power",
+      "class": null
+    },
+    {
+      "text": "TV",
+      "id": "TV",
+      "class": null
+    },
+    {
+      "text": "Remote",
+      "id": "Remote",
+      "class": null
+    },
+    {
+      "text": "Output Devices",
+      "id": "Output Devices",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Power",
+      "head": "TV",
+      "label": null
+    },
+    {
+      "tail": "Remote",
+      "head": "TV",
+      "label": null
+    },
+    {
+      "tail": "TV",
+      "head": "Output Devices",
+      "label": null
+    }
+  ],
+  "groups": []
+}

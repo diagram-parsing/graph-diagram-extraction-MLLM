@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "BEGIN",
+      "id": "BEGIN",
+      "class": null
+    },
+    {
+      "text": "Enter Limit",
+      "id": "Enter Limit",
+      "class": null
+    },
+    {
+      "text": "Initialize number",
+      "id": "Initialize number",
+      "class": null
+    },
+    {
+      "text": "Set Sum equal to 0",
+      "id": "Set Sum equal to 0",
+      "class": null
+    },
+    {
+      "text": "DO",
+      "id": "DO",
+      "class": null
+    },
+    {
+      "text": "If Sum>Limit",
+      "id": "If Sum>Limit",
+      "class": null
+    },
+    {
+      "text": "Dispaly Number and Sum",
+      "id": "Dispaly Number and Sum",
+      "class": null
+    },
+    {
+      "text": "Update values",
+      "id": "Update values",
+      "class": null
+    },
+    {
+      "text": "Decrease loss",
+      "id": "Decrease loss",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "BEGIN",
+      "head": "Enter Limit",
+      "label": null
+    },
+    {
+      "tail": "Enter Limit",
+      "head": "Initialize number",
+      "label": null
+    },
+    {
+      "tail": "Initialize number",
+      "head": "Set Sum equal to 0",
+      "label": null
+    },
+    {
+      "tail": "Set Sum equal to 0",
+      "head": "DO",
+      "label": null
+    },
+    {
+      "tail": "DO",
+      "head": "If Sum>Limit",
+      "label": null
+    },
+    {
+      "tail": "If Sum>Limit",
+      "head": "Dispaly Number and Sum",
+      "label": "true"
+    },
+    {
+      "tail": "If Sum>Limit",
+      "head": "Update values",
+      "label": "flase"
+    },
+    {
+      "tail": "Update values",
+      "head": "Decrease loss",
+      "label": null
+    },
+    {
+      "tail": "Decrease loss",
+      "head": "DO",
+      "label": null
+    },
+    {
+      "tail": "Dispaly Number and Sum",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

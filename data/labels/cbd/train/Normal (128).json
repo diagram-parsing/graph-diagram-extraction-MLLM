@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Paper review",
+      "id": "Paper review",
+      "class": null
+    },
+    {
+      "text": "Correction",
+      "id": "Correction",
+      "class": null
+    },
+    {
+      "text": "Was the article important?",
+      "id": "Was the article important?",
+      "class": null
+    },
+    {
+      "text": "Was the changes worth it?",
+      "id": "Was the changes worth it?",
+      "class": null
+    },
+    {
+      "text": "Seek the changes",
+      "id": "Seek the changes",
+      "class": null
+    },
+    {
+      "text": "New changes",
+      "id": "New changes",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Paper review",
+      "head": "Correction",
+      "label": null
+    },
+    {
+      "tail": "Correction",
+      "head": "Was the article important?",
+      "label": "Implement"
+    },
+    {
+      "tail": "Was the article important?",
+      "head": "Was the changes worth it?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Was the changes worth it?",
+      "head": "Seek the changes",
+      "label": "Disagree"
+    },
+    {
+      "tail": "Seek the changes",
+      "head": "Correction",
+      "label": "Wait"
+    },
+    {
+      "tail": "Was the article important?",
+      "head": "New changes",
+      "label": "No"
+    },
+    {
+      "tail": "Was the changes worth it?",
+      "head": "New changes",
+      "label": "Agree"
+    }
+  ],
+  "groups": []
+}

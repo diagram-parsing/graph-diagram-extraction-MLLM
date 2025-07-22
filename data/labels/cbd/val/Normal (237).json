@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Sort Population",
+      "id": "Sort Population",
+      "class": null
+    },
+    {
+      "text": "Calculate males and females",
+      "id": "Calculate males and females",
+      "class": null
+    },
+    {
+      "text": "Calculate crowding distance",
+      "id": "Calculate crowding distance",
+      "class": null
+    },
+    {
+      "text": "return",
+      "id": "return",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Sort Population",
+      "head": "Calculate males and females",
+      "label": null
+    },
+    {
+      "tail": "Calculate males and females",
+      "head": "Calculate crowding distance",
+      "label": null
+    },
+    {
+      "tail": "Calculate crowding distance",
+      "head": "return",
+      "label": null
+    }
+  ],
+  "groups": []
+}

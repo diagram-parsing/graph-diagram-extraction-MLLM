@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Source",
+      "id": "Source",
+      "class": null
+    },
+    {
+      "text": "Amplification",
+      "id": "Amplification",
+      "class": null
+    },
+    {
+      "text": "Amplifictaion",
+      "id": "Amplifictaion",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Demodulator",
+      "id": "Demodulator",
+      "class": null
+    },
+    {
+      "text": "Target",
+      "id": "Target",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Source",
+      "head": "Amplification",
+      "label": null
+    },
+    {
+      "tail": "Amplifictaion",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Demodulator",
+      "label": null
+    },
+    {
+      "tail": "Demodulator",
+      "head": "Target",
+      "label": null
+    }
+  ],
+  "groups": []
+}

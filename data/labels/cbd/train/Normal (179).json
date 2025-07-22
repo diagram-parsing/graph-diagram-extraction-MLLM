@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Power On",
+      "id": "Power On",
+      "class": null
+    },
+    {
+      "text": "Look for previous data",
+      "id": "Look for previous data",
+      "class": null
+    },
+    {
+      "text": "Generate Map and Location",
+      "id": "Generate Map and Location",
+      "class": null
+    },
+    {
+      "text": "Plan route",
+      "id": "Plan route",
+      "class": null
+    },
+    {
+      "text": "Route",
+      "id": "Route",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Power On",
+      "label": null
+    },
+    {
+      "tail": "Power On",
+      "head": "Look for previous data",
+      "label": null
+    },
+    {
+      "tail": "Look for previous data",
+      "head": "Generate Map and Location",
+      "label": null
+    },
+    {
+      "tail": "Generate Map and Location",
+      "head": "Plan route",
+      "label": null
+    },
+    {
+      "tail": "Plan route",
+      "head": "Route",
+      "label": null
+    },
+    {
+      "tail": "Plan route",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,51 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Thermometer",
+      "id": "Thermometer",
+      "class": null,
+      "bbox": [
+        68.0,
+        64.0,
+        90.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Transistor",
+      "id": "Transistor",
+      "class": null,
+      "bbox": [
+        252.5,
+        67.0,
+        85.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Fever",
+      "id": "Fever",
+      "class": null,
+      "bbox": [
+        441.5,
+        64.5,
+        39.0,
+        17.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Transistor",
+      "tail": "Thermometer",
+      "label": null
+    },
+    {
+      "head": "Fever",
+      "tail": "Transistor",
+      "label": null
+    }
+  ],
+  "groups": []
+}

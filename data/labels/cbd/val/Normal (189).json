@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Speech",
+      "id": "Speech",
+      "class": null
+    },
+    {
+      "text": "Microsoft speech recognizer",
+      "id": "Microsoft speech recognizer",
+      "class": null
+    },
+    {
+      "text": "UWP MediaCapture",
+      "id": "UWP MediaCapture",
+      "class": null
+    },
+    {
+      "text": "Voice to Text",
+      "id": "Voice to Text",
+      "class": null
+    },
+    {
+      "text": "Send text to LUIS.AI",
+      "id": "Send text to LUIS.AI",
+      "class": null
+    },
+    {
+      "text": "Send text to API.AI",
+      "id": "Send text to API.AI",
+      "class": null
+    },
+    {
+      "text": "Send entity to WIKI API",
+      "id": "Send entity to WIKI API",
+      "class": null
+    },
+    {
+      "text": "Send entity to Oxford dictinary API",
+      "id": "Send entity to Oxford dictinary API",
+      "class": null
+    },
+    {
+      "text": "Text",
+      "id": "Text",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Speech",
+      "head": "Microsoft speech recognizer",
+      "label": null
+    },
+    {
+      "tail": "Microsoft speech recognizer",
+      "head": "UWP MediaCapture",
+      "label": null
+    },
+    {
+      "tail": "UWP MediaCapture",
+      "head": "Voice to Text",
+      "label": null
+    },
+    {
+      "tail": "Voice to Text",
+      "head": "Send text to LUIS.AI",
+      "label": null
+    },
+    {
+      "tail": "Voice to Text",
+      "head": "Send text to API.AI",
+      "label": null
+    },
+    {
+      "tail": "Send text to LUIS.AI",
+      "head": "Send entity to WIKI API",
+      "label": null
+    },
+    {
+      "tail": "Send text to API.AI",
+      "head": "Send entity to Oxford dictinary API",
+      "label": null
+    },
+    {
+      "tail": "Send entity to WIKI API",
+      "head": "Text",
+      "label": null
+    },
+    {
+      "tail": "Send entity to Oxford dictinary API",
+      "head": "Text",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Filtering",
+      "id": "Filtering",
+      "class": null
+    },
+    {
+      "text": "Connect ribs",
+      "id": "Connect ribs",
+      "class": null
+    },
+    {
+      "text": "Skeleton",
+      "id": "Skeleton",
+      "class": null
+    },
+    {
+      "text": "Segmentation Using Level set",
+      "id": "Segmentation Using Level set",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input",
+      "head": "Filtering",
+      "label": null
+    },
+    {
+      "tail": "Filtering",
+      "head": "Connect ribs",
+      "label": null
+    },
+    {
+      "tail": "Connect ribs",
+      "head": "Skeleton",
+      "label": null
+    },
+    {
+      "tail": "Skeleton",
+      "head": "Segmentation Using Level set",
+      "label": null
+    }
+  ],
+  "groups": []
+}

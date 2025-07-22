@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Is it food?",
+      "id": "Is it food?",
+      "class": null
+    },
+    {
+      "text": "Try to eat it immediately.",
+      "id": "Try to eat it immediately.",
+      "class": null
+    },
+    {
+      "text": "First heat it",
+      "id": "First heat it",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Is it food?",
+      "head": "Try to eat it immediately.",
+      "label": "No"
+    },
+    {
+      "tail": "Is it food?",
+      "head": "First heat it",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

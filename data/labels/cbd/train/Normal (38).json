@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "ACCEPT INPUT FROM USER",
+      "id": "ACCEPT INPUT FROM USER",
+      "class": null
+    },
+    {
+      "text": "CONDITION for(i=1;i<=a;i++)",
+      "id": "CONDITION for(i=1;i<=a;i++)",
+      "class": null
+    },
+    {
+      "text": "PRINT VALUE OF FACTORIAL",
+      "id": "PRINT VALUE OF FACTORIAL",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "ACCEPT INPUT FROM USER",
+      "label": null
+    },
+    {
+      "tail": "ACCEPT INPUT FROM USER",
+      "head": "CONDITION for(i=1;i<=a;i++)",
+      "label": null
+    },
+    {
+      "tail": "CONDITION for(i=1;i<=a;i++)",
+      "head": "PRINT VALUE OF FACTORIAL",
+      "label": "CONDITION is FALSE"
+    },
+    {
+      "tail": "CONDITION for(i=1;i<=a;i++)",
+      "head": "Process",
+      "label": "CONDITION is TRUE"
+    },
+    {
+      "tail": "Process",
+      "head": "CONDITION for(i=1;i<=a;i++)",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "PRINT VALUE OF FACTORIAL",
+      "label": null
+    },
+    {
+      "tail": "PRINT VALUE OF FACTORIAL",
+      "head": "STOP",
+      "label": null
+    }
+  ],
+  "groups": []
+}

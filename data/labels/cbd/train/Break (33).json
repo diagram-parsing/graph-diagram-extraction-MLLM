@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input Total Score",
+      "id": "Input Total Score",
+      "class": null
+    },
+    {
+      "text": "If total score>800",
+      "id": "If total score>800",
+      "class": null
+    },
+    {
+      "text": "Not good college",
+      "id": "Not good college",
+      "class": null
+    },
+    {
+      "text": "Good college",
+      "id": "Good college",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input Total Score",
+      "label": null
+    },
+    {
+      "tail": "Input Total Score",
+      "head": "If total score>800",
+      "label": null
+    },
+    {
+      "tail": "If total score>800",
+      "head": "Not good college",
+      "label": "No"
+    },
+    {
+      "tail": "If total score>800",
+      "head": "Good college",
+      "label": "Yes"
+    },
+    {
+      "tail": "Not good college",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Good college",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

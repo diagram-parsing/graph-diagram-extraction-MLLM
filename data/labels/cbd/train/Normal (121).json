@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Vibration signal",
+      "id": "Vibration signal",
+      "class": null
+    },
+    {
+      "text": "OCR",
+      "id": "OCR",
+      "class": null
+    },
+    {
+      "text": "MBS",
+      "id": "MBS",
+      "class": null
+    },
+    {
+      "text": "Fault Features",
+      "id": "Fault Features",
+      "class": null
+    },
+    {
+      "text": "Faults",
+      "id": "Faults",
+      "class": null
+    },
+    {
+      "text": "Bayesian diagnostic network",
+      "id": "Bayesian diagnostic network",
+      "class": null
+    },
+    {
+      "text": "Fault causes",
+      "id": "Fault causes",
+      "class": null
+    },
+    {
+      "text": "Diagnostic results",
+      "id": "Diagnostic results",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input",
+      "head": "Vibration signal",
+      "label": null
+    },
+    {
+      "tail": "Vibration signal",
+      "head": "OCR",
+      "label": null
+    },
+    {
+      "tail": "OCR",
+      "head": "MBS",
+      "label": null
+    },
+    {
+      "tail": "MBS",
+      "head": "Fault Features",
+      "label": null
+    },
+    {
+      "tail": "Faults",
+      "head": "Bayesian diagnostic network",
+      "label": null
+    },
+    {
+      "tail": "Fault Features",
+      "head": "Bayesian diagnostic network",
+      "label": null
+    },
+    {
+      "tail": "Fault causes",
+      "head": "Bayesian diagnostic network",
+      "label": null
+    },
+    {
+      "tail": "Bayesian diagnostic network",
+      "head": "Diagnostic results",
+      "label": null
+    }
+  ],
+  "groups": []
+}

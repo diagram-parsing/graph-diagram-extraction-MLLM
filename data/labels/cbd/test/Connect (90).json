@@ -1,0 +1,163 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        66.0,
+        13.5,
+        32.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Right",
+      "id": "Right",
+      "class": null,
+      "bbox": [
+        66.5,
+        62.0,
+        27.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Left",
+      "id": "Left",
+      "class": null,
+      "bbox": [
+        65.5,
+        116.0,
+        19.0,
+        8.0
+      ]
+    },
+    {
+      "text": "Turn Right",
+      "id": "Turn Right",
+      "class": null,
+      "bbox": [
+        146.5,
+        162.0,
+        43.0,
+        12.0
+      ]
+    },
+    {
+      "text": "Go straight",
+      "id": "Go straight",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        305.5,
+        163.5,
+        19.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Turn Left",
+      "id": "Turn Left",
+      "class": null,
+      "bbox": [
+        231.0,
+        160.5,
+        36.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Turn left",
+      "id": "Turn left",
+      "class": null,
+      "bbox": [
+        231.0,
+        160.5,
+        36.0,
+        11.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Right",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Left",
+      "tail": "Right",
+      "label": "No",
+      "bbox": [
+        120.5,
+        58.0,
+        13.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Left",
+      "tail": "Right",
+      "label": "Yes"
+    },
+    {
+      "head": "Turn Right",
+      "tail": "Left",
+      "label": "No",
+      "bbox": [
+        120.5,
+        58.0,
+        13.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Go straight",
+      "tail": "Left",
+      "label": "Yes"
+    },
+    {
+      "head": "End",
+      "tail": "Left",
+      "label": "No",
+      "bbox": [
+        120.5,
+        58.0,
+        13.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Turn Left",
+      "tail": "Left",
+      "label": "Yes"
+    },
+    {
+      "head": "Right",
+      "tail": "Go straight",
+      "label": null
+    },
+    {
+      "head": "Right",
+      "tail": "Turn Right",
+      "label": null
+    },
+    {
+      "head": "Right",
+      "tail": "Turn left",
+      "label": null
+    },
+    {
+      "head": "Right",
+      "tail": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

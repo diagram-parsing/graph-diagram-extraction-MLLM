@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Fill the bath with water",
+      "id": "Fill the bath with water",
+      "class": null
+    },
+    {
+      "text": "Add warm water",
+      "id": "Add warm water",
+      "class": null
+    },
+    {
+      "text": "Get into bath",
+      "id": "Get into bath",
+      "class": null
+    },
+    {
+      "text": "Wash",
+      "id": "Wash",
+      "class": null
+    },
+    {
+      "text": "Come Out",
+      "id": "Come Out",
+      "class": null
+    },
+    {
+      "text": "Empty the bath water",
+      "id": "Empty the bath water",
+      "class": null
+    },
+    {
+      "text": "Get dressed",
+      "id": "Get dressed",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Fill the bath with water",
+      "label": null
+    },
+    {
+      "tail": "Fill the bath with water",
+      "head": "Add warm water",
+      "label": null
+    },
+    {
+      "tail": "Add warm water",
+      "head": "Get into bath",
+      "label": null
+    },
+    {
+      "tail": "Get into bath",
+      "head": "Wash",
+      "label": null
+    },
+    {
+      "tail": "Wash",
+      "head": "Come Out",
+      "label": null
+    },
+    {
+      "tail": "Come Out",
+      "head": "Empty the bath water",
+      "label": null
+    },
+    {
+      "tail": "Empty the bath water",
+      "head": "Get dressed",
+      "label": null
+    },
+    {
+      "tail": "Get dressed",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "Plaintext",
+      "id": "Plaintext",
+      "class": null
+    },
+    {
+      "text": "Ciphertext",
+      "id": "Ciphertext",
+      "class": null
+    },
+    {
+      "text": "ID",
+      "id": "ID",
+      "class": null
+    },
+    {
+      "text": "Pass",
+      "id": "Pass",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Plaintext",
+      "head": "Ciphertext",
+      "label": null
+    },
+    {
+      "tail": "ID",
+      "head": "Ciphertext",
+      "label": null
+    },
+    {
+      "tail": "Ciphertext",
+      "head": "Plaintext",
+      "label": null
+    },
+    {
+      "tail": "Pass",
+      "head": "Plaintext",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Mixed Data",
+      "id": "Mixed Data",
+      "class": null
+    },
+    {
+      "text": "Classifier",
+      "id": "Classifier",
+      "class": null
+    },
+    {
+      "text": "Class 1",
+      "id": "Class 1",
+      "class": null
+    },
+    {
+      "text": "Class 2",
+      "id": "Class 2",
+      "class": null
+    },
+    {
+      "text": "Class 3",
+      "id": "Class 3",
+      "class": null
+    },
+    {
+      "text": "Class 4",
+      "id": "Class 4",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Mixed Data",
+      "head": "Classifier",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Class 1",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Class 2",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Class 3",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Class 4",
+      "label": null
+    }
+  ],
+  "groups": []
+}

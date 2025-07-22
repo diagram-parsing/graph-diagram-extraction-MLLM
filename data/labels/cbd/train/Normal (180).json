@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Privacy",
+      "id": "Privacy",
+      "class": null
+    },
+    {
+      "text": "Password",
+      "id": "Password",
+      "class": null
+    },
+    {
+      "text": "Biometric Cryptosystem",
+      "id": "Biometric Cryptosystem",
+      "class": null
+    },
+    {
+      "text": "PIN",
+      "id": "PIN",
+      "class": null
+    },
+    {
+      "text": "Non-invertible Transformation",
+      "id": "Non-invertible Transformation",
+      "class": null
+    },
+    {
+      "text": "Key Binding",
+      "id": "Key Binding",
+      "class": null
+    },
+    {
+      "text": "Key Generation",
+      "id": "Key Generation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Privacy",
+      "head": "Password",
+      "label": null
+    },
+    {
+      "tail": "Privacy",
+      "head": "Biometric Cryptosystem",
+      "label": null
+    },
+    {
+      "tail": "Password",
+      "head": "PIN",
+      "label": null
+    },
+    {
+      "tail": "Password",
+      "head": "Non-invertible Transformation",
+      "label": null
+    },
+    {
+      "tail": "Biometric Cryptosystem",
+      "head": "Key Binding",
+      "label": null
+    },
+    {
+      "tail": "Biometric Cryptosystem",
+      "head": "Key Generation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

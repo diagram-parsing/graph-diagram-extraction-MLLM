@@ -1,0 +1,84 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        151.0,
+        26.0,
+        46.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Condition",
+      "id": "Condition",
+      "class": null,
+      "bbox": [
+        150.5,
+        152.5,
+        61.0,
+        15.0
+      ]
+    },
+    {
+      "text": "End of loop",
+      "id": "End of loop",
+      "class": null,
+      "bbox": [
+        151.5,
+        441.5,
+        77.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Loop Body",
+      "id": "Loop Body",
+      "class": null,
+      "bbox": [
+        151.0,
+        275.0,
+        70.0,
+        18.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Condition",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "End of loop",
+      "tail": "Condition",
+      "label": "False",
+      "bbox": [
+        353.5,
+        279.5,
+        43.0,
+        19.0
+      ]
+    },
+    {
+      "head": "Loop Body",
+      "tail": "Condition",
+      "label": "True",
+      "bbox": [
+        178.0,
+        227.0,
+        36.0,
+        14.0
+      ]
+    },
+    {
+      "head": "Condition",
+      "tail": "Loop Body",
+      "label": null
+    }
+  ],
+  "groups": []
+}

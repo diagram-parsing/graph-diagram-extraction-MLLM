@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Human Intelligence",
+      "id": "Human Intelligence",
+      "class": null
+    },
+    {
+      "text": "Pre-processed Silhouette",
+      "id": "Pre-processed Silhouette",
+      "class": null
+    },
+    {
+      "text": "Segmentation",
+      "id": "Segmentation",
+      "class": null
+    },
+    {
+      "text": "Find all values",
+      "id": "Find all values",
+      "class": null
+    },
+    {
+      "text": "Feature Vector",
+      "id": "Feature Vector",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Human Intelligence",
+      "label": null
+    },
+    {
+      "tail": "Human Intelligence",
+      "head": "Pre-processed Silhouette",
+      "label": "Apply Pre-processing"
+    },
+    {
+      "tail": "Pre-processed Silhouette",
+      "head": "Segmentation",
+      "label": "Divide into radial bins"
+    },
+    {
+      "tail": "Segmentation",
+      "head": "Find all values",
+      "label": "Extract features from each radial bin"
+    },
+    {
+      "tail": "Find all values",
+      "head": "Feature Vector",
+      "label": "Combine all features"
+    },
+    {
+      "tail": "Feature Vector",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

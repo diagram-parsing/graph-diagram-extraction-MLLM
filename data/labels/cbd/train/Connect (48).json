@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Generate new colony",
+      "id": "Generate new colony",
+      "class": null
+    },
+    {
+      "text": "Colony performance evaluation",
+      "id": "Colony performance evaluation",
+      "class": null
+    },
+    {
+      "text": "Binary Search",
+      "id": "Binary Search",
+      "class": null
+    },
+    {
+      "text": "Crowding distance sorting",
+      "id": "Crowding distance sorting",
+      "class": null
+    },
+    {
+      "text": "Update colony",
+      "id": "Update colony",
+      "class": null
+    },
+    {
+      "text": "Need more values",
+      "id": "Need more values",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Generate new colony",
+      "label": null
+    },
+    {
+      "tail": "Generate new colony",
+      "head": "Colony performance evaluation",
+      "label": null
+    },
+    {
+      "tail": "Colony performance evaluation",
+      "head": "Binary Search",
+      "label": null
+    },
+    {
+      "tail": "Binary Search",
+      "head": "Crowding distance sorting",
+      "label": null
+    },
+    {
+      "tail": "Crowding distance sorting",
+      "head": "Update colony",
+      "label": null
+    },
+    {
+      "tail": "Update colony",
+      "head": "Need more values",
+      "label": null
+    },
+    {
+      "tail": "Need more values",
+      "head": "Colony performance evaluation",
+      "label": "No"
+    },
+    {
+      "tail": "Need more values",
+      "head": "End",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

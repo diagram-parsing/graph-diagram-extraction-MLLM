@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "RF Front End",
+      "id": "RF Front End",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    },
+    {
+      "text": "Noise",
+      "id": "Noise",
+      "class": null
+    },
+    {
+      "text": "Acquisition",
+      "id": "Acquisition",
+      "class": null
+    },
+    {
+      "text": "Channel 1 Tracking",
+      "id": "Channel 1 Tracking",
+      "class": null
+    },
+    {
+      "text": "Channel 2 tracking",
+      "id": "Channel 2 tracking",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Channel n tracking",
+      "id": "Channel n tracking",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "RF Front End",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Noise",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "Acquisition",
+      "label": null
+    },
+    {
+      "tail": "Acquisition",
+      "head": "Channel 1 Tracking",
+      "label": null
+    },
+    {
+      "tail": "Acquisition",
+      "head": "Channel 2 tracking",
+      "label": null
+    },
+    {
+      "tail": "Channel 2 tracking",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Acquisition",
+      "head": "Channel n tracking",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Create a store category",
+      "id": "Create a store category",
+      "class": null
+    },
+    {
+      "text": "Create a store type",
+      "id": "Create a store type",
+      "class": null
+    },
+    {
+      "text": "Create a store",
+      "id": "Create a store",
+      "class": null
+    },
+    {
+      "text": "Add items to a store",
+      "id": "Add items to a store",
+      "class": null
+    },
+    {
+      "text": "Create an item category",
+      "id": "Create an item category",
+      "class": null
+    },
+    {
+      "text": "Paper work",
+      "id": "Paper work",
+      "class": null
+    },
+    {
+      "text": "Raise an indent",
+      "id": "Raise an indent",
+      "class": null
+    },
+    {
+      "text": "Bill Check",
+      "id": "Bill Check",
+      "class": null
+    },
+    {
+      "text": "Create a purchase order",
+      "id": "Create a purchase order",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Create a store category",
+      "label": null
+    },
+    {
+      "tail": "Create a store category",
+      "head": "Create a store type",
+      "label": null
+    },
+    {
+      "tail": "Create a store type",
+      "head": "Create a store",
+      "label": null
+    },
+    {
+      "tail": "Create a store",
+      "head": "Add items to a store",
+      "label": "Purchase"
+    },
+    {
+      "tail": "Create a store",
+      "head": "Create an item category",
+      "label": "Sales"
+    },
+    {
+      "tail": "Add items to a store",
+      "head": "Paper work",
+      "label": null
+    },
+    {
+      "tail": "Create an item category",
+      "head": "Add items to a store",
+      "label": null
+    },
+    {
+      "tail": "Paper work",
+      "head": "Raise an indent",
+      "label": null
+    },
+    {
+      "tail": "Add items to a store",
+      "head": "Bill Check",
+      "label": null
+    },
+    {
+      "tail": "Raise an indent",
+      "head": "Create a purchase order",
+      "label": null
+    },
+    {
+      "tail": "Create a purchase order",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

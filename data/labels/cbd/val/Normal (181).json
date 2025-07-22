@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Aerial",
+      "id": "Aerial",
+      "class": null
+    },
+    {
+      "text": "Network",
+      "id": "Network",
+      "class": null
+    },
+    {
+      "text": "Detector",
+      "id": "Detector",
+      "class": null
+    },
+    {
+      "text": "amplifier",
+      "id": "amplifier",
+      "class": null
+    },
+    {
+      "text": "Loud-Speaker",
+      "id": "Loud-Speaker",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Aerial",
+      "head": "Network",
+      "label": null
+    },
+    {
+      "tail": "Network",
+      "head": "Detector",
+      "label": null
+    },
+    {
+      "tail": "Detector",
+      "head": "amplifier",
+      "label": null
+    },
+    {
+      "tail": "amplifier",
+      "head": "Loud-Speaker",
+      "label": null
+    }
+  ],
+  "groups": []
+}

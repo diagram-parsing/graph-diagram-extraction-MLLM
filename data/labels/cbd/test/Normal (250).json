@@ -1,0 +1,104 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        117.0,
+        31.0,
+        40.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Process 1",
+      "id": "Process 1",
+      "class": null,
+      "bbox": [
+        117.5,
+        99.5,
+        73.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Decision",
+      "id": "Decision",
+      "class": null,
+      "bbox": [
+        119.0,
+        215.0,
+        70.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Process 2",
+      "id": "Process 2",
+      "class": null,
+      "bbox": [
+        319.0,
+        206.5,
+        72.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Process 3",
+      "id": "Process 3",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        123.0,
+        405.0,
+        40.0,
+        20.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Process 1",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Decision",
+      "tail": "Process 1",
+      "label": null
+    },
+    {
+      "head": "Process 2",
+      "tail": "Decision",
+      "label": "No",
+      "bbox": [
+        225.0,
+        198.5,
+        28.0,
+        17.0
+      ]
+    },
+    {
+      "head": "Process 1",
+      "tail": "Process 2",
+      "label": null
+    },
+    {
+      "head": "Process 3",
+      "tail": "Decision",
+      "label": "Yes"
+    },
+    {
+      "head": "Stop",
+      "tail": "Process 3",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,172 @@
+{
+  "nodes": [
+    {
+      "text": "QA",
+      "id": "QA",
+      "class": null
+    },
+    {
+      "text": "QA Manual",
+      "id": "QA Manual",
+      "class": null
+    },
+    {
+      "text": "Unit",
+      "id": "Unit",
+      "class": null
+    },
+    {
+      "text": "Information & advice",
+      "id": "Information & advice",
+      "class": null
+    },
+    {
+      "text": "Center for Healthcare",
+      "id": "Center for Healthcare",
+      "class": null
+    },
+    {
+      "text": "GENERAL",
+      "id": "GENERAL",
+      "class": null
+    },
+    {
+      "text": "Delivery of Care",
+      "id": "Delivery of Care",
+      "class": null
+    },
+    {
+      "text": "Invoice",
+      "id": "Invoice",
+      "class": null
+    },
+    {
+      "text": "Standard Operating Procedures",
+      "id": "Standard Operating Procedures",
+      "class": null
+    },
+    {
+      "text": "Protocols and Trial Paperwork",
+      "id": "Protocols and Trial Paperwork",
+      "class": null
+    },
+    {
+      "text": "Best practice guidelines",
+      "id": "Best practice guidelines",
+      "class": null
+    },
+    {
+      "text": "Research Governace",
+      "id": "Research Governace",
+      "class": null
+    },
+    {
+      "text": "Induction",
+      "id": "Induction",
+      "class": null
+    },
+    {
+      "text": "Staff Handbook",
+      "id": "Staff Handbook",
+      "class": null
+    },
+    {
+      "text": "Good Clinical Practice",
+      "id": "Good Clinical Practice",
+      "class": null
+    },
+    {
+      "text": "Protecting Information Policy",
+      "id": "Protecting Information Policy",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "QA",
+      "head": "QA Manual",
+      "label": null
+    },
+    {
+      "tail": "QA",
+      "head": "Unit",
+      "label": null
+    },
+    {
+      "tail": "QA",
+      "head": "Information & advice",
+      "label": null
+    },
+    {
+      "tail": "Unit",
+      "head": "Center for Healthcare",
+      "label": null
+    },
+    {
+      "tail": "Unit",
+      "head": "GENERAL",
+      "label": null
+    },
+    {
+      "tail": "Unit",
+      "head": "Delivery of Care",
+      "label": null
+    },
+    {
+      "tail": "Unit",
+      "head": "Invoice",
+      "label": null
+    },
+    {
+      "tail": "Center for Healthcare",
+      "head": "Standard Operating Procedures",
+      "label": null
+    },
+    {
+      "tail": "Center for Healthcare",
+      "head": "Protocols and Trial Paperwork",
+      "label": null
+    },
+    {
+      "tail": "Delivery of Care",
+      "head": "Best practice guidelines",
+      "label": null
+    },
+    {
+      "tail": "Invoice",
+      "head": "Best practice guidelines",
+      "label": null
+    },
+    {
+      "tail": "GENERAL",
+      "head": "Research Governace",
+      "label": null
+    },
+    {
+      "tail": "GENERAL",
+      "head": "Induction",
+      "label": null
+    },
+    {
+      "tail": "GENERAL",
+      "head": "Staff Handbook",
+      "label": null
+    },
+    {
+      "tail": "Research Governace",
+      "head": "Good Clinical Practice",
+      "label": null
+    },
+    {
+      "tail": "Research Governace",
+      "head": "Protecting Information Policy",
+      "label": null
+    },
+    {
+      "tail": "Staff Handbook",
+      "head": "Protecting Information Policy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

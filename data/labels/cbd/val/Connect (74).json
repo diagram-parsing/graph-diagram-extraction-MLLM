@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Input Total Score",
+      "id": "Input Total Score",
+      "class": null
+    },
+    {
+      "text": "If total score>800",
+      "id": "If total score>800",
+      "class": null
+    },
+    {
+      "text": "Bad Work",
+      "id": "Bad Work",
+      "class": null
+    },
+    {
+      "text": "Good Work",
+      "id": "Good Work",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input Total Score",
+      "label": null
+    },
+    {
+      "tail": "Input Total Score",
+      "head": "If total score>800",
+      "label": null
+    },
+    {
+      "tail": "If total score>800",
+      "head": "Bad Work",
+      "label": "No"
+    },
+    {
+      "tail": "If total score>800",
+      "head": "Good Work",
+      "label": "Yes"
+    },
+    {
+      "tail": "Bad Work",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Good Work",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Dyed and Finished Fabric in Roll",
+      "id": "Dyed and Finished Fabric in Roll",
+      "class": null
+    },
+    {
+      "text": "Fabric Inspection",
+      "id": "Fabric Inspection",
+      "class": null
+    },
+    {
+      "text": "Authentication",
+      "id": "Authentication",
+      "class": null
+    },
+    {
+      "text": "Different Tests of Fabric",
+      "id": "Different Tests of Fabric",
+      "class": null
+    },
+    {
+      "text": "Test Cutting",
+      "id": "Test Cutting",
+      "class": null
+    },
+    {
+      "text": "Confirmation",
+      "id": "Confirmation",
+      "class": null
+    },
+    {
+      "text": "Input to cutting Section",
+      "id": "Input to cutting Section",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Dyed and Finished Fabric in Roll",
+      "head": "Fabric Inspection",
+      "label": null
+    },
+    {
+      "tail": "Fabric Inspection",
+      "head": "Authentication",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "Different Tests of Fabric",
+      "label": null
+    },
+    {
+      "tail": "Different Tests of Fabric",
+      "head": "Test Cutting",
+      "label": null
+    },
+    {
+      "tail": "Test Cutting",
+      "head": "Confirmation",
+      "label": null
+    },
+    {
+      "tail": "Confirmation",
+      "head": "Input to cutting Section",
+      "label": null
+    }
+  ],
+  "groups": []
+}

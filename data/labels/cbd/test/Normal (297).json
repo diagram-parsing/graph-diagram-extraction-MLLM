@@ -1,0 +1,227 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        527.0,
+        37.5,
+        84.0,
+        37.0
+      ]
+    },
+    {
+      "text": "Low Income",
+      "id": "Low Income",
+      "class": null,
+      "bbox": [
+        210.0,
+        174.5,
+        132.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Explosion",
+      "id": "Explosion",
+      "class": null,
+      "bbox": [
+        530.5,
+        337.5,
+        105.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Adequate",
+      "id": "Adequate",
+      "class": null,
+      "bbox": [
+        822.5,
+        169.5,
+        111.0,
+        29.0
+      ]
+    },
+    {
+      "text": "Inadequate access to social services",
+      "id": "Inadequate access to social services",
+      "class": null,
+      "bbox": [
+        202.0,
+        336.5,
+        200.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Inhibiting policy environment",
+      "id": "Inhibiting policy environment",
+      "class": null,
+      "bbox": [
+        839.0,
+        336.5,
+        156.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Lack of government investmnet",
+      "id": "Lack of government investmnet",
+      "class": null,
+      "bbox": [
+        101.5,
+        499.0,
+        109.0,
+        28.0
+      ]
+    },
+    {
+      "text": "Interest",
+      "id": "Interest",
+      "class": null,
+      "bbox": [
+        303.5,
+        496.5,
+        85.0,
+        19.0
+      ]
+    },
+    {
+      "text": "Gender",
+      "id": "Gender",
+      "class": null,
+      "bbox": [
+        528.5,
+        500.5,
+        81.0,
+        23.0
+      ]
+    },
+    {
+      "text": "Limited civic participation",
+      "id": "Limited civic participation",
+      "class": null,
+      "bbox": [
+        735.0,
+        499.5,
+        136.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Limited Accountability",
+      "id": "Limited Accountability",
+      "class": null,
+      "bbox": [
+        944.5,
+        499.5,
+        117.0,
+        13.0
+      ]
+    },
+    {
+      "text": "lack of political will",
+      "id": "lack of political will",
+      "class": null,
+      "bbox": [
+        101.5,
+        740.5,
+        105.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Decreasing FDI, insufficient domestic capital",
+      "id": "Decreasing FDI, insufficient domestic capital",
+      "class": null,
+      "bbox": [
+        429.0,
+        733.0,
+        200.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Lack of credit for small businesses and microenterprises",
+      "id": "Lack of credit for small businesses and microenterprises",
+      "class": null,
+      "bbox": [
+        691.5,
+        740.5,
+        187.0,
+        29.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Low Income",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Explosion",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Adequate",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Inadequate access to social services",
+      "tail": "Low Income",
+      "label": null
+    },
+    {
+      "head": "Inhibiting policy environment",
+      "tail": "Adequate",
+      "label": null
+    },
+    {
+      "head": "Lack of government investmnet",
+      "tail": "Inadequate access to social services",
+      "label": null
+    },
+    {
+      "head": "Interest",
+      "tail": "Inadequate access to social services",
+      "label": null
+    },
+    {
+      "head": "Gender",
+      "tail": "Explosion",
+      "label": null
+    },
+    {
+      "head": "Limited civic participation",
+      "tail": "Inadequate access to social services",
+      "label": null
+    },
+    {
+      "head": "Limited Accountability",
+      "tail": "Inadequate access to social services",
+      "label": null
+    },
+    {
+      "head": "lack of political will",
+      "tail": "Lack of government investmnet",
+      "label": null
+    },
+    {
+      "head": "Decreasing FDI, insufficient domestic capital",
+      "tail": "Gender",
+      "label": null
+    },
+    {
+      "head": "Lack of credit for small businesses and microenterprises",
+      "tail": "Gender",
+      "label": null
+    }
+  ],
+  "groups": []
+}

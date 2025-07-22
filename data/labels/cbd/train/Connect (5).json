@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Switch On lights",
+      "id": "Switch On lights",
+      "class": null
+    },
+    {
+      "text": "Turn the LED connected to Q0 off",
+      "id": "Turn the LED connected to Q0 off",
+      "class": null
+    },
+    {
+      "text": "Check if the LDR connected to A1 is in darkness",
+      "id": "Check if the LDR connected to A1 is in darkness",
+      "class": null
+    },
+    {
+      "text": "Switch Off the lights",
+      "id": "Switch Off the lights",
+      "class": null
+    },
+    {
+      "text": "Turn the LED connected to Q0 on",
+      "id": "Turn the LED connected to Q0 on",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Switch On lights",
+      "label": null
+    },
+    {
+      "tail": "Switch On lights",
+      "head": "Turn the LED connected to Q0 off",
+      "label": null
+    },
+    {
+      "tail": "Turn the LED connected to Q0 off",
+      "head": "Check if the LDR connected to A1 is in darkness",
+      "label": null
+    },
+    {
+      "tail": "Check if the LDR connected to A1 is in darkness",
+      "head": "Switch Off the lights",
+      "label": "N"
+    },
+    {
+      "tail": "Switch Off the lights",
+      "head": "Check if the LDR connected to A1 is in darkness",
+      "label": null
+    },
+    {
+      "tail": "Check if the LDR connected to A1 is in darkness",
+      "head": "Turn the LED connected to Q0 on",
+      "label": "Y"
+    },
+    {
+      "tail": "Turn the LED connected to Q0 on",
+      "head": "Check if the LDR connected to A1 is in darkness",
+      "label": null
+    }
+  ],
+  "groups": []
+}

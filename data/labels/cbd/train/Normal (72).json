@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Would you do anything for love?",
+      "id": "Would you do anything for love?",
+      "class": null
+    },
+    {
+      "text": "Even that?",
+      "id": "Even that?",
+      "class": null
+    },
+    {
+      "text": "In Love",
+      "id": "In Love",
+      "class": null
+    },
+    {
+      "text": "Depends",
+      "id": "Depends",
+      "class": null
+    },
+    {
+      "text": "Yes, even that",
+      "id": "Yes, even that",
+      "class": null
+    },
+    {
+      "text": "Not in love",
+      "id": "Not in love",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Would you do anything for love?",
+      "head": "Even that?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Would you do anything for love?",
+      "head": "In Love",
+      "label": "No"
+    },
+    {
+      "tail": "Even that?",
+      "head": "Depends",
+      "label": null
+    },
+    {
+      "tail": "Even that?",
+      "head": "Yes, even that",
+      "label": null
+    },
+    {
+      "tail": "Even that?",
+      "head": "Not in love",
+      "label": null
+    },
+    {
+      "tail": "Yes, even that",
+      "head": "In Love",
+      "label": null
+    }
+  ],
+  "groups": []
+}

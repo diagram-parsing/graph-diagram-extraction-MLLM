@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Find changes in work",
+      "id": "Find changes in work",
+      "class": null
+    },
+    {
+      "text": "Approval",
+      "id": "Approval",
+      "class": null
+    },
+    {
+      "text": "Ignore change",
+      "id": "Ignore change",
+      "class": null
+    },
+    {
+      "text": "Method",
+      "id": "Method",
+      "class": null
+    },
+    {
+      "text": "Agree?",
+      "id": "Agree?",
+      "class": null
+    },
+    {
+      "text": "Expand",
+      "id": "Expand",
+      "class": null
+    },
+    {
+      "text": "Discard",
+      "id": "Discard",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Find changes in work",
+      "label": null
+    },
+    {
+      "tail": "Find changes in work",
+      "head": "Approval",
+      "label": null
+    },
+    {
+      "tail": "Approval",
+      "head": "Ignore change",
+      "label": "No"
+    },
+    {
+      "tail": "Approval",
+      "head": "Method",
+      "label": "Yes"
+    },
+    {
+      "tail": "Method",
+      "head": "Agree?",
+      "label": null
+    },
+    {
+      "tail": "Agree?",
+      "head": "Expand",
+      "label": "Yes"
+    },
+    {
+      "tail": "Agree?",
+      "head": "Discard",
+      "label": "No"
+    },
+    {
+      "tail": "Expand",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "Discard",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "Ignore change",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

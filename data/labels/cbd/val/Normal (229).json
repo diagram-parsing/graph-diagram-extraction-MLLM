@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Update the program with the current date",
+      "id": "Update the program with the current date",
+      "class": null
+    },
+    {
+      "text": "Track records",
+      "id": "Track records",
+      "class": null
+    },
+    {
+      "text": "Data delineation and conversion to text files",
+      "id": "Data delineation and conversion to text files",
+      "class": null
+    },
+    {
+      "text": "Set initial conditions from previous simulations",
+      "id": "Set initial conditions from previous simulations",
+      "class": null
+    },
+    {
+      "text": "Execute Model",
+      "id": "Execute Model",
+      "class": null
+    },
+    {
+      "text": "Plot inundation maps",
+      "id": "Plot inundation maps",
+      "class": null
+    },
+    {
+      "text": "Update records",
+      "id": "Update records",
+      "class": null
+    },
+    {
+      "text": "Upload the KML files to Google Earth",
+      "id": "Upload the KML files to Google Earth",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Update the program with the current date",
+      "head": "Track records",
+      "label": null
+    },
+    {
+      "tail": "Track records",
+      "head": "Data delineation and conversion to text files",
+      "label": null
+    },
+    {
+      "tail": "Data delineation and conversion to text files",
+      "head": "Set initial conditions from previous simulations",
+      "label": null
+    },
+    {
+      "tail": "Set initial conditions from previous simulations",
+      "head": "Execute Model",
+      "label": null
+    },
+    {
+      "tail": "Execute Model",
+      "head": "Plot inundation maps",
+      "label": null
+    },
+    {
+      "tail": "Plot inundation maps",
+      "head": "Update records",
+      "label": null
+    },
+    {
+      "tail": "Update records",
+      "head": "Upload the KML files to Google Earth",
+      "label": null
+    }
+  ],
+  "groups": []
+}

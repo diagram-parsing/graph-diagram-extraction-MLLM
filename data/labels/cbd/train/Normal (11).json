@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Input Variable: K",
+      "id": "Input Variable: K",
+      "class": null
+    },
+    {
+      "text": "if K%2==0",
+      "id": "if K%2==0",
+      "class": null
+    },
+    {
+      "text": "Print: K is odd",
+      "id": "Print: K is odd",
+      "class": null
+    },
+    {
+      "text": "Print: K is Even",
+      "id": "Print: K is Even",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Input Variable: K",
+      "label": null
+    },
+    {
+      "tail": "Input Variable: K",
+      "head": "if K%2==0",
+      "label": null
+    },
+    {
+      "tail": "if K%2==0",
+      "head": "Print: K is odd",
+      "label": "False"
+    },
+    {
+      "tail": "if K%2==0",
+      "head": "Print: K is Even",
+      "label": "True"
+    },
+    {
+      "tail": "Print: K is Even",
+      "head": "STOP",
+      "label": null
+    }
+  ],
+  "groups": []
+}

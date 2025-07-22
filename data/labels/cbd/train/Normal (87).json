@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Bootstrap",
+      "id": "Bootstrap",
+      "class": null
+    },
+    {
+      "text": "Installation",
+      "id": "Installation",
+      "class": null
+    },
+    {
+      "text": "Copy",
+      "id": "Copy",
+      "class": null
+    },
+    {
+      "text": "Unpack",
+      "id": "Unpack",
+      "class": null
+    },
+    {
+      "text": "Register",
+      "id": "Register",
+      "class": null
+    },
+    {
+      "text": "Config",
+      "id": "Config",
+      "class": null
+    },
+    {
+      "text": "Zip",
+      "id": "Zip",
+      "class": null
+    },
+    {
+      "text": "Image",
+      "id": "Image",
+      "class": null
+    },
+    {
+      "text": "ISO",
+      "id": "ISO",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Bootstrap",
+      "head": "Installation",
+      "label": null
+    },
+    {
+      "tail": "Installation",
+      "head": "Copy",
+      "label": null
+    },
+    {
+      "tail": "Copy",
+      "head": "Unpack",
+      "label": null
+    },
+    {
+      "tail": "Unpack",
+      "head": "Register",
+      "label": null
+    },
+    {
+      "tail": "Register",
+      "head": "Config",
+      "label": null
+    },
+    {
+      "tail": "Config",
+      "head": "Zip",
+      "label": null
+    },
+    {
+      "tail": "Config",
+      "head": "Image",
+      "label": null
+    },
+    {
+      "tail": "Config",
+      "head": "ISO",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Screening from database",
+      "id": "Screening from database",
+      "class": null
+    },
+    {
+      "text": "Cluster random sampling",
+      "id": "Cluster random sampling",
+      "class": null
+    },
+    {
+      "text": "Exclusion",
+      "id": "Exclusion",
+      "class": null
+    },
+    {
+      "text": "Cluster random samling",
+      "id": "Cluster random samling",
+      "class": null
+    },
+    {
+      "text": "128 institutions",
+      "id": "128 institutions",
+      "class": null
+    },
+    {
+      "text": "No paticipation",
+      "id": "No paticipation",
+      "class": null
+    },
+    {
+      "text": "Enrollment 128 institutions",
+      "id": "Enrollment 128 institutions",
+      "class": null
+    },
+    {
+      "text": "Data missing, Unconfirmed diagnosis",
+      "id": "Data missing, Unconfirmed diagnosis",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Screening from database",
+      "head": "Cluster random sampling",
+      "label": null
+    },
+    {
+      "tail": "Screening from database",
+      "head": "Exclusion",
+      "label": null
+    },
+    {
+      "tail": "Cluster random samling",
+      "head": "128 institutions",
+      "label": null
+    },
+    {
+      "tail": "Cluster random samling",
+      "head": "No paticipation",
+      "label": null
+    },
+    {
+      "tail": "128 institutions",
+      "head": "Enrollment 128 institutions",
+      "label": null
+    },
+    {
+      "tail": "128 institutions",
+      "head": "Data missing, Unconfirmed diagnosis",
+      "label": null
+    }
+  ],
+  "groups": []
+}

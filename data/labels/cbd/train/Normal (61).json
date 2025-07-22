@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input Salary",
+      "id": "Input Salary",
+      "class": null
+    },
+    {
+      "text": "Find Increase in salary",
+      "id": "Find Increase in salary",
+      "class": null
+    },
+    {
+      "text": "Add increase to salary",
+      "id": "Add increase to salary",
+      "class": null
+    },
+    {
+      "text": "Print result",
+      "id": "Print result",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input Salary",
+      "label": null
+    },
+    {
+      "tail": "Input Salary",
+      "head": "Find Increase in salary",
+      "label": null
+    },
+    {
+      "tail": "Find Increase in salary",
+      "head": "Add increase to salary",
+      "label": null
+    },
+    {
+      "tail": "Add increase to salary",
+      "head": "Print result",
+      "label": null
+    },
+    {
+      "tail": "Print result",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

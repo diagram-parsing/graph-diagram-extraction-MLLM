@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Question?",
+      "id": "Question?",
+      "class": null
+    },
+    {
+      "text": "process 1",
+      "id": "process 1",
+      "class": null
+    },
+    {
+      "text": "process 2",
+      "id": "process 2",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "Question?",
+      "label": null
+    },
+    {
+      "tail": "Question?",
+      "head": "process 1",
+      "label": "No"
+    },
+    {
+      "tail": "Question?",
+      "head": "process 2",
+      "label": "No"
+    },
+    {
+      "tail": "process 1",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "process 2",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

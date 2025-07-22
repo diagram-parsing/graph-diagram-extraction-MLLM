@@ -1,0 +1,132 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        377.5,
+        125.0,
+        111.0,
+        44.0
+      ]
+    },
+    {
+      "text": "Create a swarm of particles",
+      "id": "Create a swarm of particles",
+      "class": null,
+      "bbox": [
+        379.5,
+        307.5,
+        503.0,
+        43.0
+      ]
+    },
+    {
+      "text": "Calculate each particle's fitness",
+      "id": "Calculate each particle's fitness",
+      "class": null,
+      "bbox": [
+        385.5,
+        488.5,
+        581.0,
+        43.0
+      ]
+    },
+    {
+      "text": "Determine best value",
+      "id": "Determine best value",
+      "class": null,
+      "bbox": [
+        364.5,
+        689.0,
+        413.0,
+        34.0
+      ]
+    },
+    {
+      "text": "Update Value",
+      "id": "Update Value",
+      "class": null,
+      "bbox": [
+        363.5,
+        930.5,
+        259.0,
+        35.0
+      ]
+    },
+    {
+      "text": "Termination",
+      "id": "Termination",
+      "class": null,
+      "bbox": [
+        381.5,
+        1229.5,
+        233.0,
+        45.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        384.5,
+        1519.0,
+        85.0,
+        44.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create a swarm of particles",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Calculate each particle's fitness",
+      "tail": "Create a swarm of particles",
+      "label": null
+    },
+    {
+      "head": "Determine best value",
+      "tail": "Calculate each particle's fitness",
+      "label": null
+    },
+    {
+      "head": "Update Value",
+      "tail": "Determine best value",
+      "label": null
+    },
+    {
+      "head": "Termination",
+      "tail": "Update Value",
+      "label": null
+    },
+    {
+      "head": "Calculate each particle's fitness",
+      "tail": "Termination",
+      "label": "No",
+      "bbox": [
+        647.5,
+        1180.0,
+        69.0,
+        46.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Termination",
+      "label": "Yes",
+      "bbox": [
+        463.0,
+        1410.5,
+        82.0,
+        47.0
+      ]
+    }
+  ],
+  "groups": []
+}

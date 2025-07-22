@@ -1,0 +1,125 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        237.0,
+        26.5,
+        76.0,
+        35.0
+      ]
+    },
+    {
+      "text": "Online Application",
+      "id": "Online Application",
+      "class": null,
+      "bbox": [
+        234.0,
+        155.0,
+        238.0,
+        32.0
+      ]
+    },
+    {
+      "text": "Applicants meets with a loan officer to discuss their needs",
+      "id": "Applicants meets with a loan officer to discuss their needs",
+      "class": null,
+      "bbox": [
+        243.0,
+        302.0,
+        424.0,
+        58.0
+      ]
+    },
+    {
+      "text": "Process Application",
+      "id": "Process Application",
+      "class": null,
+      "bbox": [
+        239.5,
+        456.5,
+        251.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Application reviewed by the office manager",
+      "id": "Application reviewed by the office manager",
+      "class": null
+    },
+    {
+      "text": "Application Rejected",
+      "id": "Application Rejected",
+      "class": null,
+      "bbox": [
+        568.5,
+        691.5,
+        129.0,
+        61.0
+      ]
+    },
+    {
+      "text": "Application Approved",
+      "id": "Application Approved",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null,
+      "bbox": [
+        239.5,
+        999.0,
+        59.0,
+        28.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Online Application",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Applicants meets with a loan officer to discuss their needs",
+      "tail": "Online Application",
+      "label": null
+    },
+    {
+      "head": "Process Application",
+      "tail": "Applicants meets with a loan officer to discuss their needs",
+      "label": null
+    },
+    {
+      "head": "Application reviewed by the office manager",
+      "tail": "Process Application",
+      "label": null
+    },
+    {
+      "head": "Application Rejected",
+      "tail": "Application reviewed by the office manager",
+      "label": "N",
+      "bbox": [
+        423.0,
+        676.0,
+        22.0,
+        22.0
+      ]
+    },
+    {
+      "head": "Application Approved",
+      "tail": "Application reviewed by the office manager",
+      "label": "Y"
+    },
+    {
+      "head": "END",
+      "tail": "Application Approved",
+      "label": null
+    }
+  ],
+  "groups": []
+}

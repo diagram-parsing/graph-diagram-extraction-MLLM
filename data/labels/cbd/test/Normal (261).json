@@ -1,0 +1,55 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        58.0,
+        22.5,
+        34.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Are you happy?",
+      "id": "Are you happy?",
+      "class": null,
+      "bbox": [
+        55.5,
+        119.0,
+        39.0,
+        30.0
+      ]
+    },
+    {
+      "text": "Yes a lot",
+      "id": "Yes a lot",
+      "class": null
+    },
+    {
+      "text": "Want to be happy?",
+      "id": "Want to be happy?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Are you happy?",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Yes a lot",
+      "tail": "Are you happy?",
+      "label": null
+    },
+    {
+      "head": "Want to be happy?",
+      "tail": "Are you happy?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

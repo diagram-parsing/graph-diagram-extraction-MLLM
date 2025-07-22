@@ -1,0 +1,212 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        50.5,
+        16.0,
+        35.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Check your PC configuration",
+      "id": "Check your PC configuration",
+      "class": null,
+      "bbox": [
+        50.5,
+        88.5,
+        75.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Install and configure a database",
+      "id": "Install and configure a database",
+      "class": null,
+      "bbox": [
+        48.0,
+        174.5,
+        54.0,
+        37.0
+      ]
+    },
+    {
+      "text": "IBM DB2 Database?",
+      "id": "IBM DB2 Database?",
+      "class": null,
+      "bbox": [
+        179.5,
+        174.0,
+        53.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Create users",
+      "id": "Create users",
+      "class": null,
+      "bbox": [
+        313.0,
+        168.5,
+        70.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Create database schemas.",
+      "id": "Create database schemas.",
+      "class": null,
+      "bbox": [
+        48.5,
+        270.0,
+        81.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Install Oracle Weblogic Server",
+      "id": "Install Oracle Weblogic Server",
+      "class": null,
+      "bbox": [
+        47.0,
+        354.0,
+        86.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Install Software",
+      "id": "Install Software",
+      "class": null,
+      "bbox": [
+        178.0,
+        353.5,
+        50.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Create and configure WebLogic Server Domian.",
+      "id": "Create and configure WebLogic Server Domian.",
+      "class": null,
+      "bbox": [
+        312.0,
+        354.0,
+        84.0,
+        56.0
+      ]
+    },
+    {
+      "text": "Perform Steps",
+      "id": "Perform Steps",
+      "class": null,
+      "bbox": [
+        436.5,
+        353.5,
+        47.0,
+        29.0
+      ]
+    },
+    {
+      "text": "Verify your environment.",
+      "id": "Verify your environment.",
+      "class": null,
+      "bbox": [
+        575.0,
+        352.5,
+        62.0,
+        27.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        46.5,
+        437.5,
+        23.0,
+        13.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Check your PC configuration",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Install and configure a database",
+      "tail": "Check your PC configuration",
+      "label": null
+    },
+    {
+      "head": "IBM DB2 Database?",
+      "tail": "Install and configure a database",
+      "label": null
+    },
+    {
+      "head": "Create users",
+      "tail": "IBM DB2 Database?",
+      "label": "Yes",
+      "bbox": [
+        246.0,
+        173.5,
+        36.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Create database schemas.",
+      "tail": "IBM DB2 Database?",
+      "label": "No",
+      "bbox": [
+        116.5,
+        227.5,
+        17.0,
+        13.0
+      ]
+    },
+    {
+      "head": "Create database schemas.",
+      "tail": "Create users",
+      "label": null
+    },
+    {
+      "head": "Install Oracle Weblogic Server",
+      "tail": "Create database schemas.",
+      "label": null
+    },
+    {
+      "head": "Install Software",
+      "tail": "Install Oracle Weblogic Server",
+      "label": null
+    },
+    {
+      "head": "Create and configure WebLogic Server Domian.",
+      "tail": "Install Software",
+      "label": null
+    },
+    {
+      "head": "Perform Steps",
+      "tail": "Create and configure WebLogic Server Domian.",
+      "label": null
+    },
+    {
+      "head": "Verify your environment.",
+      "tail": "Perform Steps",
+      "label": null
+    },
+    {
+      "head": "End",
+      "tail": "Verify your environment.",
+      "label": null
+    }
+  ],
+  "groups": []
+}

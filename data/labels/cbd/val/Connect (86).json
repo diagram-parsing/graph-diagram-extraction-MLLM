@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Home",
+      "id": "Home",
+      "class": null
+    },
+    {
+      "text": "Check time",
+      "id": "Check time",
+      "class": null
+    },
+    {
+      "text": "Late?",
+      "id": "Late?",
+      "class": null
+    },
+    {
+      "text": "Take bus",
+      "id": "Take bus",
+      "class": null
+    },
+    {
+      "text": "Take subway",
+      "id": "Take subway",
+      "class": null
+    },
+    {
+      "text": "Reach school",
+      "id": "Reach school",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Home",
+      "head": "Check time",
+      "label": null
+    },
+    {
+      "tail": "Check time",
+      "head": "Late?",
+      "label": null
+    },
+    {
+      "tail": "Late?",
+      "head": "Take bus",
+      "label": "Yes"
+    },
+    {
+      "tail": "Late?",
+      "head": "Take subway",
+      "label": "No"
+    },
+    {
+      "tail": "Take bus",
+      "head": "Reach school",
+      "label": null
+    },
+    {
+      "tail": "Take subway",
+      "head": "Reach school",
+      "label": null
+    }
+  ],
+  "groups": []
+}

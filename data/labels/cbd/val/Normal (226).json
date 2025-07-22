@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Image collection",
+      "id": "Image collection",
+      "class": null
+    },
+    {
+      "text": "Image preprocessing",
+      "id": "Image preprocessing",
+      "class": null
+    },
+    {
+      "text": "Segmentation",
+      "id": "Segmentation",
+      "class": null
+    },
+    {
+      "text": "Important vectors",
+      "id": "Important vectors",
+      "class": null
+    },
+    {
+      "text": "Classifier training",
+      "id": "Classifier training",
+      "class": null
+    },
+    {
+      "text": "Classification",
+      "id": "Classification",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Image collection",
+      "head": "Image preprocessing",
+      "label": null
+    },
+    {
+      "tail": "Image preprocessing",
+      "head": "Segmentation",
+      "label": null
+    },
+    {
+      "tail": "Segmentation",
+      "head": "Important vectors",
+      "label": null
+    },
+    {
+      "tail": "Important vectors",
+      "head": "Classifier training",
+      "label": null
+    },
+    {
+      "tail": "Important vectors",
+      "head": "Classification",
+      "label": null
+    },
+    {
+      "tail": "Classifier training",
+      "head": "Classification",
+      "label": null
+    },
+    {
+      "tail": "Classification",
+      "head": "Output",
+      "label": null
+    }
+  ],
+  "groups": []
+}

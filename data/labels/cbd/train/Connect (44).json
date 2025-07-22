@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Source",
+      "id": "Source",
+      "class": null
+    },
+    {
+      "text": "Hadamard Code",
+      "id": "Hadamard Code",
+      "class": null
+    },
+    {
+      "text": "STBC Encoder",
+      "id": "STBC Encoder",
+      "class": null
+    },
+    {
+      "text": "OFDM mod.",
+      "id": "OFDM mod.",
+      "class": null
+    },
+    {
+      "text": "mod",
+      "id": "mod",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Source",
+      "head": "Hadamard Code",
+      "label": null
+    },
+    {
+      "tail": "Hadamard Code",
+      "head": "STBC Encoder",
+      "label": null
+    },
+    {
+      "tail": "STBC Encoder",
+      "head": "OFDM mod.",
+      "label": null
+    },
+    {
+      "tail": "STBC Encoder",
+      "head": "mod",
+      "label": null
+    }
+  ],
+  "groups": []
+}

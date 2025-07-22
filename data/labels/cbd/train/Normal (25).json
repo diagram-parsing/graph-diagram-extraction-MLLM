@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Frequency Mixer",
+      "id": "Frequency Mixer",
+      "class": null
+    },
+    {
+      "text": "Local Oscillator",
+      "id": "Local Oscillator",
+      "class": null
+    },
+    {
+      "text": "Power",
+      "id": "Power",
+      "class": null
+    },
+    {
+      "text": "Bandpass 2MHz",
+      "id": "Bandpass 2MHz",
+      "class": null
+    },
+    {
+      "text": "Bandpass Filter 0MHz",
+      "id": "Bandpass Filter 0MHz",
+      "class": null
+    },
+    {
+      "text": "Bandpass Filter",
+      "id": "Bandpass Filter",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    },
+    {
+      "text": "Power Splitter",
+      "id": "Power Splitter",
+      "class": null
+    },
+    {
+      "text": "Frequency",
+      "id": "Frequency",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Frequency Mixer",
+      "head": "Local Oscillator",
+      "label": null
+    },
+    {
+      "tail": "Frequency Mixer",
+      "head": "Power",
+      "label": null
+    },
+    {
+      "tail": "Power",
+      "head": "Bandpass 2MHz",
+      "label": null
+    },
+    {
+      "tail": "Power",
+      "head": "Bandpass Filter 0MHz",
+      "label": null
+    },
+    {
+      "tail": "Power",
+      "head": "Bandpass Filter",
+      "label": null
+    },
+    {
+      "tail": "Bandpass 2MHz",
+      "head": "Frequency Mixer",
+      "label": null
+    },
+    {
+      "tail": "Frequency Mixer",
+      "head": "Finish",
+      "label": null
+    },
+    {
+      "tail": "Bandpass Filter 0MHz",
+      "head": "Power Splitter",
+      "label": null
+    },
+    {
+      "tail": "Power Splitter",
+      "head": "Frequency Mixer",
+      "label": null
+    },
+    {
+      "tail": "Power Splitter",
+      "head": "Frequency",
+      "label": null
+    },
+    {
+      "tail": "Bandpass Filter",
+      "head": "Frequency",
+      "label": null
+    },
+    {
+      "tail": "Frequency",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

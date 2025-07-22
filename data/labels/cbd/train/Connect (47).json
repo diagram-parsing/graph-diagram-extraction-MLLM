@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "start",
+      "id": "start",
+      "class": null
+    },
+    {
+      "text": "guess number",
+      "id": "guess number",
+      "class": null
+    },
+    {
+      "text": "if<=10",
+      "id": "if<=10",
+      "class": null
+    },
+    {
+      "text": "small number",
+      "id": "small number",
+      "class": null
+    },
+    {
+      "text": "if>10 and <=80",
+      "id": "if>10 and <=80",
+      "class": null
+    },
+    {
+      "text": "medium number",
+      "id": "medium number",
+      "class": null
+    },
+    {
+      "text": "large number",
+      "id": "large number",
+      "class": null
+    },
+    {
+      "text": "end",
+      "id": "end",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "start",
+      "head": "guess number",
+      "label": null
+    },
+    {
+      "tail": "guess number",
+      "head": "if<=10",
+      "label": null
+    },
+    {
+      "tail": "if<=10",
+      "head": "small number",
+      "label": "true"
+    },
+    {
+      "tail": "if<=10",
+      "head": "if>10 and <=80",
+      "label": "false"
+    },
+    {
+      "tail": "if>10 and <=80",
+      "head": "medium number",
+      "label": "true"
+    },
+    {
+      "tail": "if>10 and <=80",
+      "head": "large number",
+      "label": "false"
+    },
+    {
+      "tail": "medium number",
+      "head": "end",
+      "label": null
+    },
+    {
+      "tail": "large number",
+      "head": "end",
+      "label": null
+    },
+    {
+      "tail": "small number",
+      "head": "end",
+      "label": null
+    }
+  ],
+  "groups": []
+}

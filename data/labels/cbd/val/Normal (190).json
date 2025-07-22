@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Customer Documents",
+      "id": "Customer Documents",
+      "class": null
+    },
+    {
+      "text": "Review documents?",
+      "id": "Review documents?",
+      "class": null
+    },
+    {
+      "text": "Process Terminates",
+      "id": "Process Terminates",
+      "class": null
+    },
+    {
+      "text": "Forward to Bank Manager",
+      "id": "Forward to Bank Manager",
+      "class": null
+    },
+    {
+      "text": "Profile Done",
+      "id": "Profile Done",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Customer Documents",
+      "head": "Review documents?",
+      "label": null
+    },
+    {
+      "tail": "Review documents?",
+      "head": "Process Terminates",
+      "label": "Rejected because of missing documents"
+    },
+    {
+      "tail": "Review documents?",
+      "head": "Forward to Bank Manager",
+      "label": "Documents are complete"
+    },
+    {
+      "tail": "Forward to Bank Manager",
+      "head": "Profile Done",
+      "label": null
+    },
+    {
+      "tail": "Profile Done",
+      "head": "Process Terminates",
+      "label": null
+    }
+  ],
+  "groups": []
+}

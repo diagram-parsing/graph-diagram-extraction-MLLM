@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Input 3D Coordinates of atomic nuclei",
+      "id": "Input 3D Coordinates of atomic nuclei",
+      "class": null
+    },
+    {
+      "text": "Different parts of nuclei",
+      "id": "Different parts of nuclei",
+      "class": null
+    },
+    {
+      "text": "Formation",
+      "id": "Formation",
+      "class": null
+    },
+    {
+      "text": "Diagonaization",
+      "id": "Diagonaization",
+      "class": null
+    },
+    {
+      "text": "Converged?",
+      "id": "Converged?",
+      "class": null
+    },
+    {
+      "text": "Calculate Properties End",
+      "id": "Calculate Properties End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input 3D Coordinates of atomic nuclei",
+      "head": "Different parts of nuclei",
+      "label": null
+    },
+    {
+      "tail": "Input 3D Coordinates of atomic nuclei",
+      "head": "Formation",
+      "label": null
+    },
+    {
+      "tail": "Different parts of nuclei",
+      "head": "Formation",
+      "label": null
+    },
+    {
+      "tail": "Formation",
+      "head": "Diagonaization",
+      "label": null
+    },
+    {
+      "tail": "Diagonaization",
+      "head": "Converged?",
+      "label": null
+    },
+    {
+      "tail": "Converged?",
+      "head": "Calculate Properties End",
+      "label": "Yes"
+    },
+    {
+      "tail": "Converged?",
+      "head": "Formation",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

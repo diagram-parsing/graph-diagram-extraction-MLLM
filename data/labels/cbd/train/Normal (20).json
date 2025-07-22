@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Analog retrieval",
+      "id": "Analog retrieval",
+      "class": null
+    },
+    {
+      "text": "Sampling",
+      "id": "Sampling",
+      "class": null
+    },
+    {
+      "text": "Analogical Inference",
+      "id": "Analogical Inference",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Analog retrieval",
+      "head": "Sampling",
+      "label": "learning"
+    },
+    {
+      "tail": "Sampling",
+      "head": "Analogical Inference",
+      "label": "Self-supervised learning"
+    },
+    {
+      "tail": "Analogical Inference",
+      "head": "End",
+      "label": "Intersection"
+    }
+  ],
+  "groups": []
+}

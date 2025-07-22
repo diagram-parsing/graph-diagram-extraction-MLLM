@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Check Weather",
+      "id": "Check Weather",
+      "class": null
+    },
+    {
+      "text": "Is it raining?",
+      "id": "Is it raining?",
+      "class": null
+    },
+    {
+      "text": "Leave umbrella at home",
+      "id": "Leave umbrella at home",
+      "class": null
+    },
+    {
+      "text": "Take an umbrella",
+      "id": "Take an umbrella",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Check Weather",
+      "label": null
+    },
+    {
+      "tail": "Check Weather",
+      "head": "Is it raining?",
+      "label": null
+    },
+    {
+      "tail": "Is it raining?",
+      "head": "Leave umbrella at home",
+      "label": "NO"
+    },
+    {
+      "tail": "Is it raining?",
+      "head": "Take an umbrella",
+      "label": "YES"
+    },
+    {
+      "tail": "Leave umbrella at home",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "Take an umbrella",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

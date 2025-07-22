@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Request",
+      "id": "Request",
+      "class": null
+    },
+    {
+      "text": "Session",
+      "id": "Session",
+      "class": null
+    },
+    {
+      "text": "Control",
+      "id": "Control",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "LEVEL POSITIONING",
+      "id": "LEVEL POSITIONING",
+      "class": null
+    },
+    {
+      "text": "OUTPUT DISPLAY",
+      "id": "OUTPUT DISPLAY",
+      "class": null
+    },
+    {
+      "text": "Access",
+      "id": "Access",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input",
+      "head": "Request",
+      "label": null
+    },
+    {
+      "tail": "Request",
+      "head": "Session",
+      "label": null
+    },
+    {
+      "tail": "Session",
+      "head": "Control",
+      "label": null
+    },
+    {
+      "tail": "Control",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "LEVEL POSITIONING",
+      "label": null
+    },
+    {
+      "tail": "LEVEL POSITIONING",
+      "head": "OUTPUT DISPLAY",
+      "label": null
+    },
+    {
+      "tail": "Access",
+      "head": "OUTPUT DISPLAY",
+      "label": null
+    }
+  ],
+  "groups": []
+}

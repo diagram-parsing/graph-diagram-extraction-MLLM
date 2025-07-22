@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Information Source",
+      "id": "Information Source",
+      "class": null
+    },
+    {
+      "text": "Source Encoder",
+      "id": "Source Encoder",
+      "class": null
+    },
+    {
+      "text": "Channel Encoder",
+      "id": "Channel Encoder",
+      "class": null
+    },
+    {
+      "text": "Sample",
+      "id": "Sample",
+      "class": null
+    },
+    {
+      "text": "Channel",
+      "id": "Channel",
+      "class": null
+    },
+    {
+      "text": "Modular",
+      "id": "Modular",
+      "class": null
+    },
+    {
+      "text": "Channel Decoder",
+      "id": "Channel Decoder",
+      "class": null
+    },
+    {
+      "text": "Source Decoder",
+      "id": "Source Decoder",
+      "class": null
+    },
+    {
+      "text": "Information Sink",
+      "id": "Information Sink",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Information Source",
+      "head": "Source Encoder",
+      "label": null
+    },
+    {
+      "tail": "Source Encoder",
+      "head": "Channel Encoder",
+      "label": null
+    },
+    {
+      "tail": "Channel Encoder",
+      "head": "Sample",
+      "label": null
+    },
+    {
+      "tail": "Sample",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Channel",
+      "head": "Modular",
+      "label": null
+    },
+    {
+      "tail": "Modular",
+      "head": "Channel Decoder",
+      "label": null
+    },
+    {
+      "tail": "Channel Decoder",
+      "head": "Source Decoder",
+      "label": null
+    },
+    {
+      "tail": "Source Decoder",
+      "head": "Information Sink",
+      "label": null
+    }
+  ],
+  "groups": []
+}

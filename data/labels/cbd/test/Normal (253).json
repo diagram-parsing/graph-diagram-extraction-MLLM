@@ -1,0 +1,98 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        54.5,
+        136.5,
+        35.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Make decision",
+      "id": "Make decision",
+      "class": null,
+      "bbox": [
+        192.0,
+        136.0,
+        48.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Do 1",
+      "id": "Do 1",
+      "class": null
+    },
+    {
+      "text": "Do 3",
+      "id": "Do 3",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        446.5,
+        137.5,
+        33.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Do 2",
+      "id": "Do 2",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Make decision",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Do 1",
+      "tail": "Make decision",
+      "label": "outcome 1",
+      "bbox": [
+        223.5,
+        78.0,
+        59.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Do 3",
+      "tail": "Do 1",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Do 3",
+      "label": null
+    },
+    {
+      "head": "Do 2",
+      "tail": "Make decision",
+      "label": "outcome 2",
+      "bbox": [
+        223.0,
+        194.0,
+        60.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Do 3",
+      "tail": "Do 2",
+      "label": null
+    }
+  ],
+  "groups": []
+}

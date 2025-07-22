@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "King?",
+      "id": "King?",
+      "class": null
+    },
+    {
+      "text": "Sven is not currently King",
+      "id": "Sven is not currently King",
+      "class": null
+    },
+    {
+      "text": "Is Sven the current heir?",
+      "id": "Is Sven the current heir?",
+      "class": null
+    },
+    {
+      "text": "Ask Queen",
+      "id": "Ask Queen",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "King?",
+      "head": "Sven is not currently King",
+      "label": "Yes"
+    },
+    {
+      "tail": "King?",
+      "head": "Is Sven the current heir?",
+      "label": "No"
+    },
+    {
+      "tail": "Is Sven the current heir?",
+      "head": "Sven is not currently King",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is Sven the current heir?",
+      "head": "Ask Queen",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

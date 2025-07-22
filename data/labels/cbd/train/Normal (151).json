@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Time Series Gateway",
+      "id": "Time Series Gateway",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "Compare Time Series",
+      "id": "Compare Time Series",
+      "class": null
+    },
+    {
+      "text": "Different?",
+      "id": "Different?",
+      "class": null
+    },
+    {
+      "text": "Analyze Time Series Difference",
+      "id": "Analyze Time Series Difference",
+      "class": null
+    },
+    {
+      "text": "Determine Change Date",
+      "id": "Determine Change Date",
+      "class": null
+    },
+    {
+      "text": "t=N-1?",
+      "id": "t=N-1?",
+      "class": null
+    },
+    {
+      "text": "Output Changed Dates",
+      "id": "Output Changed Dates",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Time Series Gateway",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Compare Time Series",
+      "label": null
+    },
+    {
+      "tail": "Compare Time Series",
+      "head": "Different?",
+      "label": null
+    },
+    {
+      "tail": "Different?",
+      "head": "Analyze Time Series Difference",
+      "label": "Yes"
+    },
+    {
+      "tail": "Analyze Time Series Difference",
+      "head": "Determine Change Date",
+      "label": null
+    },
+    {
+      "tail": "Determine Change Date",
+      "head": "t=N-1?",
+      "label": null
+    },
+    {
+      "tail": "Different?",
+      "head": "t=N-1?",
+      "label": "No"
+    },
+    {
+      "tail": "t=N-1?",
+      "head": "Compare Time Series",
+      "label": "No"
+    },
+    {
+      "tail": "t=N-1?",
+      "head": "Output Changed Dates",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

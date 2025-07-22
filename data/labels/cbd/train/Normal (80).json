@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "text": "Office",
+      "id": "Office",
+      "class": null
+    },
+    {
+      "text": "Home",
+      "id": "Home",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Office",
+      "head": "Home",
+      "label": null
+    }
+  ],
+  "groups": []
+}

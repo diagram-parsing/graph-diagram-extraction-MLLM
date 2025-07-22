@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Instruction",
+      "id": "Instruction",
+      "class": null
+    },
+    {
+      "text": "Research Development",
+      "id": "Research Development",
+      "class": null
+    },
+    {
+      "text": "Develop Strategy and Obectives",
+      "id": "Develop Strategy and Obectives",
+      "class": null
+    },
+    {
+      "text": "Limitation",
+      "id": "Limitation",
+      "class": null
+    },
+    {
+      "text": "Monitor Progress",
+      "id": "Monitor Progress",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Instruction",
+      "head": "Research Development",
+      "label": null
+    },
+    {
+      "tail": "Research Development",
+      "head": "Develop Strategy and Obectives",
+      "label": null
+    },
+    {
+      "tail": "Develop Strategy and Obectives",
+      "head": "Limitation",
+      "label": null
+    },
+    {
+      "tail": "Limitation",
+      "head": "Monitor Progress",
+      "label": null
+    },
+    {
+      "tail": "Monitor Progress",
+      "head": "Develop Strategy and Obectives",
+      "label": null
+    }
+  ],
+  "groups": []
+}

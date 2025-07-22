@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "What is the score?",
+      "id": "What is the score?",
+      "class": null
+    },
+    {
+      "text": "Yes",
+      "id": "Yes",
+      "class": null
+    },
+    {
+      "text": "No",
+      "id": "No",
+      "class": null
+    },
+    {
+      "text": "Goood",
+      "id": "Goood",
+      "class": null
+    },
+    {
+      "text": "Is its value greater than 0?",
+      "id": "Is its value greater than 0?",
+      "class": null
+    },
+    {
+      "text": "Bad",
+      "id": "Bad",
+      "class": null
+    },
+    {
+      "text": "Good",
+      "id": "Good",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "What is the score?",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "What is the score?",
+      "head": "No",
+      "label": null
+    },
+    {
+      "tail": "No",
+      "head": "Goood",
+      "label": null
+    },
+    {
+      "tail": "Yes",
+      "head": "Is its value greater than 0?",
+      "label": null
+    },
+    {
+      "tail": "Is its value greater than 0?",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "Is its value greater than 0?",
+      "head": "No",
+      "label": null
+    },
+    {
+      "tail": "Yes",
+      "head": "Bad",
+      "label": null
+    },
+    {
+      "tail": "No",
+      "head": "Good",
+      "label": null
+    }
+  ],
+  "groups": []
+}

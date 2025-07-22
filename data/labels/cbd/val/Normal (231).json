@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input single-subect score",
+      "id": "Input single-subect score",
+      "class": null
+    },
+    {
+      "text": "Subect Choice",
+      "id": "Subect Choice",
+      "class": null
+    },
+    {
+      "text": "single-subect socre x number of subjects",
+      "id": "single-subect socre x number of subjects",
+      "class": null
+    },
+    {
+      "text": "If total scores>800",
+      "id": "If total scores>800",
+      "class": null
+    },
+    {
+      "text": "Low grade school",
+      "id": "Low grade school",
+      "class": null
+    },
+    {
+      "text": "High grade school",
+      "id": "High grade school",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input single-subect score",
+      "label": null
+    },
+    {
+      "tail": "Input single-subect score",
+      "head": "Subect Choice",
+      "label": null
+    },
+    {
+      "tail": "Subect Choice",
+      "head": "single-subect socre x number of subjects",
+      "label": null
+    },
+    {
+      "tail": "single-subect socre x number of subjects",
+      "head": "If total scores>800",
+      "label": null
+    },
+    {
+      "tail": "If total scores>800",
+      "head": "Low grade school",
+      "label": null
+    },
+    {
+      "tail": "If total scores>800",
+      "head": "High grade school",
+      "label": null
+    },
+    {
+      "tail": "Low grade school",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "High grade school",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

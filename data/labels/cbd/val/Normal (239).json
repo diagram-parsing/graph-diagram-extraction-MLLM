@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Add Malt",
+      "id": "Add Malt",
+      "class": null
+    },
+    {
+      "text": "Smash Malt",
+      "id": "Smash Malt",
+      "class": null
+    },
+    {
+      "text": "Gelatinization",
+      "id": "Gelatinization",
+      "class": null
+    },
+    {
+      "text": "Filter",
+      "id": "Filter",
+      "class": null
+    },
+    {
+      "text": "Boil",
+      "id": "Boil",
+      "class": null
+    },
+    {
+      "text": "Left It",
+      "id": "Left It",
+      "class": null
+    },
+    {
+      "text": "Cooling",
+      "id": "Cooling",
+      "class": null
+    },
+    {
+      "text": "Fermentation",
+      "id": "Fermentation",
+      "class": null
+    },
+    {
+      "text": "Sample",
+      "id": "Sample",
+      "class": null
+    },
+    {
+      "text": "Packaging",
+      "id": "Packaging",
+      "class": null
+    },
+    {
+      "text": "Deliver to Warehouse",
+      "id": "Deliver to Warehouse",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Add Malt",
+      "label": null
+    },
+    {
+      "tail": "Add Malt",
+      "head": "Smash Malt",
+      "label": null
+    },
+    {
+      "tail": "Smash Malt",
+      "head": "Gelatinization",
+      "label": null
+    },
+    {
+      "tail": "Gelatinization",
+      "head": "Filter",
+      "label": null
+    },
+    {
+      "tail": "Filter",
+      "head": "Boil",
+      "label": null
+    },
+    {
+      "tail": "Boil",
+      "head": "Left It",
+      "label": null
+    },
+    {
+      "tail": "Left It",
+      "head": "Cooling",
+      "label": null
+    },
+    {
+      "tail": "Cooling",
+      "head": "Fermentation",
+      "label": null
+    },
+    {
+      "tail": "Fermentation",
+      "head": "Sample",
+      "label": null
+    },
+    {
+      "tail": "Sample",
+      "head": "Filter",
+      "label": null
+    },
+    {
+      "tail": "Filter",
+      "head": "Packaging",
+      "label": null
+    },
+    {
+      "tail": "Packaging",
+      "head": "Deliver to Warehouse",
+      "label": null
+    },
+    {
+      "tail": "Deliver to Warehouse",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

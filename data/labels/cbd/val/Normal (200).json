@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Read A",
+      "id": "Read A",
+      "class": null
+    },
+    {
+      "text": "Read B",
+      "id": "Read B",
+      "class": null
+    },
+    {
+      "text": "Calculate Sum as A+B",
+      "id": "Calculate Sum as A+B",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Read A",
+      "label": null
+    },
+    {
+      "tail": "Read A",
+      "head": "Read B",
+      "label": null
+    },
+    {
+      "tail": "Read B",
+      "head": "Calculate Sum as A+B",
+      "label": null
+    },
+    {
+      "tail": "Calculate Sum as A+B",
+      "head": "Output",
+      "label": null
+    },
+    {
+      "tail": "Output",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

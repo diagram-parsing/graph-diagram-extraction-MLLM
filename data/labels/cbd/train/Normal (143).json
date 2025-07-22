@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Enter numbers",
+      "id": "Enter numbers",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Enter numbers",
+      "label": null
+    },
+    {
+      "tail": "Enter numbers",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Output",
+      "label": null
+    },
+    {
+      "tail": "Output",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

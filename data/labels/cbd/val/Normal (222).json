@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Decode the population",
+      "id": "Decode the population",
+      "class": null
+    },
+    {
+      "text": "Find Fitness",
+      "id": "Find Fitness",
+      "class": null
+    },
+    {
+      "text": "Flexibilty",
+      "id": "Flexibilty",
+      "class": null
+    },
+    {
+      "text": "Crossover",
+      "id": "Crossover",
+      "class": null
+    },
+    {
+      "text": "Track",
+      "id": "Track",
+      "class": null
+    },
+    {
+      "text": "Replace",
+      "id": "Replace",
+      "class": null
+    },
+    {
+      "text": "New population",
+      "id": "New population",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Decode the population",
+      "label": null
+    },
+    {
+      "tail": "Decode the population",
+      "head": "Find Fitness",
+      "label": null
+    },
+    {
+      "tail": "Find Fitness",
+      "head": "Flexibilty",
+      "label": null
+    },
+    {
+      "tail": "Flexibilty",
+      "head": "Crossover",
+      "label": null
+    },
+    {
+      "tail": "Crossover",
+      "head": "Track",
+      "label": null
+    },
+    {
+      "tail": "Track",
+      "head": "Replace",
+      "label": null
+    },
+    {
+      "tail": "Replace",
+      "head": "New population",
+      "label": null
+    },
+    {
+      "tail": "New population",
+      "head": "Decode the population",
+      "label": null
+    }
+  ],
+  "groups": []
+}

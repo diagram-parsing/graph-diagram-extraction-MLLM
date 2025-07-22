@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Randomly generating a group of parameters of SVM model",
+      "id": "Randomly generating a group of parameters of SVM model",
+      "class": null
+    },
+    {
+      "text": "Calculate all the values",
+      "id": "Calculate all the values",
+      "class": null
+    },
+    {
+      "text": "Finding out the optimal fitness",
+      "id": "Finding out the optimal fitness",
+      "class": null
+    },
+    {
+      "text": "Are optimazation criteria met?",
+      "id": "Are optimazation criteria met?",
+      "class": null
+    },
+    {
+      "text": "Generating new group by evolutionary operation",
+      "id": "Generating new group by evolutionary operation",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Randomly generating a group of parameters of SVM model",
+      "head": "Calculate all the values",
+      "label": null
+    },
+    {
+      "tail": "Calculate all the values",
+      "head": "Finding out the optimal fitness",
+      "label": null
+    },
+    {
+      "tail": "Finding out the optimal fitness",
+      "head": "Are optimazation criteria met?",
+      "label": null
+    },
+    {
+      "tail": "Are optimazation criteria met?",
+      "head": "Generating new group by evolutionary operation",
+      "label": "No"
+    },
+    {
+      "tail": "Generating new group by evolutionary operation",
+      "head": "Calculate all the values",
+      "label": null
+    },
+    {
+      "tail": "Are optimazation criteria met?",
+      "head": "Finish",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

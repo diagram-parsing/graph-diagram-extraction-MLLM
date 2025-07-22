@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Leave home",
+      "id": "Leave home",
+      "class": null
+    },
+    {
+      "text": "Check time",
+      "id": "Check time",
+      "class": null
+    },
+    {
+      "text": "Before 7 am?",
+      "id": "Before 7 am?",
+      "class": null
+    },
+    {
+      "text": "Take bus",
+      "id": "Take bus",
+      "class": null
+    },
+    {
+      "text": "Take Car",
+      "id": "Take Car",
+      "class": null
+    },
+    {
+      "text": "Reach school",
+      "id": "Reach school",
+      "class": null
+    },
+    {
+      "text": "Take car",
+      "id": "Take car",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Leave home",
+      "head": "Check time",
+      "label": null
+    },
+    {
+      "tail": "Check time",
+      "head": "Before 7 am?",
+      "label": null
+    },
+    {
+      "tail": "Before 7 am?",
+      "head": "Take bus",
+      "label": "NO"
+    },
+    {
+      "tail": "Before 7 am?",
+      "head": "Take Car",
+      "label": "YES"
+    },
+    {
+      "tail": "Take bus",
+      "head": "Reach school",
+      "label": null
+    },
+    {
+      "tail": "Take car",
+      "head": "Reach school",
+      "label": null
+    }
+  ],
+  "groups": []
+}

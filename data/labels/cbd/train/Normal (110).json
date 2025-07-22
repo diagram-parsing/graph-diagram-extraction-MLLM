@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Draw shapes easily",
+      "id": "Draw shapes easily",
+      "class": null
+    },
+    {
+      "text": "Your chart adjusts automatically",
+      "id": "Your chart adjusts automatically",
+      "class": null
+    },
+    {
+      "text": "Present it",
+      "id": "Present it",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Draw shapes easily",
+      "head": "Your chart adjusts automatically",
+      "label": null
+    },
+    {
+      "tail": "Your chart adjusts automatically",
+      "head": "Present it",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "Database searches n=408",
+      "id": "Database searches n=408",
+      "class": null
+    },
+    {
+      "text": "Records identified n=492",
+      "id": "Records identified n=492",
+      "class": null
+    },
+    {
+      "text": "Conference abstracts n=16",
+      "id": "Conference abstracts n=16",
+      "class": null
+    },
+    {
+      "text": "clinicaltrials.gov n=68",
+      "id": "clinicaltrials.gov n=68",
+      "class": null
+    },
+    {
+      "text": "Records screened",
+      "id": "Records screened",
+      "class": null
+    },
+    {
+      "text": "Duplicates removed",
+      "id": "Duplicates removed",
+      "class": null
+    },
+    {
+      "text": "Records independently screened by two reviewers",
+      "id": "Records independently screened by two reviewers",
+      "class": null
+    },
+    {
+      "text": "Clearly irrelevant records removed",
+      "id": "Clearly irrelevant records removed",
+      "class": null
+    },
+    {
+      "text": "Full-text articles retrieved",
+      "id": "Full-text articles retrieved",
+      "class": null
+    },
+    {
+      "text": "Irrelevant records removed",
+      "id": "Irrelevant records removed",
+      "class": null
+    },
+    {
+      "text": "Stop the process",
+      "id": "Stop the process",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Database searches n=408",
+      "head": "Records identified n=492",
+      "label": null
+    },
+    {
+      "tail": "Conference abstracts n=16",
+      "head": "Records identified n=492",
+      "label": null
+    },
+    {
+      "tail": "clinicaltrials.gov n=68",
+      "head": "Records identified n=492",
+      "label": null
+    },
+    {
+      "tail": "Records identified n=492",
+      "head": "Records screened",
+      "label": null
+    },
+    {
+      "tail": "Records identified n=492",
+      "head": "Duplicates removed",
+      "label": null
+    },
+    {
+      "tail": "Records screened",
+      "head": "Records independently screened by two reviewers",
+      "label": null
+    },
+    {
+      "tail": "Records screened",
+      "head": "Clearly irrelevant records removed",
+      "label": null
+    },
+    {
+      "tail": "Records independently screened by two reviewers",
+      "head": "Full-text articles retrieved",
+      "label": null
+    },
+    {
+      "tail": "Records independently screened by two reviewers",
+      "head": "Irrelevant records removed",
+      "label": null
+    },
+    {
+      "tail": "Full-text articles retrieved",
+      "head": "Stop the process",
+      "label": null
+    },
+    {
+      "tail": "Full-text articles retrieved",
+      "head": "Update",
+      "label": null
+    }
+  ],
+  "groups": []
+}

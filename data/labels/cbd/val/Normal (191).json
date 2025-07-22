@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Input",
+      "id": "Read Input",
+      "class": null
+    },
+    {
+      "text": "Read Cost",
+      "id": "Read Cost",
+      "class": null
+    },
+    {
+      "text": "Income>=Cost?",
+      "id": "Income>=Cost?",
+      "class": null
+    },
+    {
+      "text": "Calculate Profit as Income-Cost",
+      "id": "Calculate Profit as Income-Cost",
+      "class": null
+    },
+    {
+      "text": "Calculate Loss as Income-Cost",
+      "id": "Calculate Loss as Income-Cost",
+      "class": null
+    },
+    {
+      "text": "Print good",
+      "id": "Print good",
+      "class": null
+    },
+    {
+      "text": "Print Bad",
+      "id": "Print Bad",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Input",
+      "label": null
+    },
+    {
+      "tail": "Read Input",
+      "head": "Read Cost",
+      "label": null
+    },
+    {
+      "tail": "Read Cost",
+      "head": "Income>=Cost?",
+      "label": null
+    },
+    {
+      "tail": "Income>=Cost?",
+      "head": "Calculate Profit as Income-Cost",
+      "label": "Yes"
+    },
+    {
+      "tail": "Income>=Cost?",
+      "head": "Calculate Loss as Income-Cost",
+      "label": "No"
+    },
+    {
+      "tail": "Calculate Profit as Income-Cost",
+      "head": "Print good",
+      "label": null
+    },
+    {
+      "tail": "Calculate Loss as Income-Cost",
+      "head": "Print Bad",
+      "label": null
+    },
+    {
+      "tail": "Print Bad",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Print good",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start Project",
+      "id": "Start Project",
+      "class": null
+    },
+    {
+      "text": "Create Project with desired settings",
+      "id": "Create Project with desired settings",
+      "class": null
+    },
+    {
+      "text": "Create folder for categorization",
+      "id": "Create folder for categorization",
+      "class": null
+    },
+    {
+      "text": "Fill Information",
+      "id": "Fill Information",
+      "class": null
+    },
+    {
+      "text": "Collect info like wire size, length, etc.",
+      "id": "Collect info like wire size, length, etc.",
+      "class": null
+    },
+    {
+      "text": "Genertae Report",
+      "id": "Genertae Report",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start Project",
+      "head": "Create Project with desired settings",
+      "label": null
+    },
+    {
+      "tail": "Create Project with desired settings",
+      "head": "Create folder for categorization",
+      "label": null
+    },
+    {
+      "tail": "Create folder for categorization",
+      "head": "Fill Information",
+      "label": null
+    },
+    {
+      "tail": "Fill Information",
+      "head": "Collect info like wire size, length, etc.",
+      "label": null
+    },
+    {
+      "tail": "Collect info like wire size, length, etc.",
+      "head": "Genertae Report",
+      "label": null
+    }
+  ],
+  "groups": []
+}

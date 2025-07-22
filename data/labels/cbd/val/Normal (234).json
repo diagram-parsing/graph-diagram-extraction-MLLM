@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "Train Time?",
+      "id": "Train Time?",
+      "class": null
+    },
+    {
+      "text": "Before 4 pm?",
+      "id": "Before 4 pm?",
+      "class": null
+    },
+    {
+      "text": "He is in college",
+      "id": "He is in college",
+      "class": null
+    },
+    {
+      "text": "He is in Playground",
+      "id": "He is in Playground",
+      "class": null
+    },
+    {
+      "text": "Before 7 pm?",
+      "id": "Before 7 pm?",
+      "class": null
+    },
+    {
+      "text": "He is at School",
+      "id": "He is at School",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "connection",
+      "head": "Train Time?",
+      "label": null
+    },
+    {
+      "tail": "Train Time?",
+      "head": "Before 4 pm?",
+      "label": null
+    },
+    {
+      "tail": "Before 4 pm?",
+      "head": "He is in college",
+      "label": "Yes"
+    },
+    {
+      "tail": "Before 4 pm?",
+      "head": "He is in Playground",
+      "label": "No"
+    },
+    {
+      "tail": "Before 7 pm?",
+      "head": "He is at School",
+      "label": "Yes"
+    },
+    {
+      "tail": "Before 7 pm?",
+      "head": "He is in Playground",
+      "label": "No"
+    },
+    {
+      "tail": "He is at School",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

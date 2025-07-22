@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Documents",
+      "id": "Documents",
+      "class": null
+    },
+    {
+      "text": "Invoice Meets Requirements?",
+      "id": "Invoice Meets Requirements?",
+      "class": null
+    },
+    {
+      "text": "Return Invoice to Supplier",
+      "id": "Return Invoice to Supplier",
+      "class": null
+    },
+    {
+      "text": "Approval",
+      "id": "Approval",
+      "class": null
+    },
+    {
+      "text": "Require action",
+      "id": "Require action",
+      "class": null
+    },
+    {
+      "text": "Invoice Placed in payment Queue",
+      "id": "Invoice Placed in payment Queue",
+      "class": null
+    },
+    {
+      "text": "Payment Processed",
+      "id": "Payment Processed",
+      "class": null
+    },
+    {
+      "text": "Action Taken, Issue Resolved?",
+      "id": "Action Taken, Issue Resolved?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Documents",
+      "label": null
+    },
+    {
+      "tail": "Documents",
+      "head": "Invoice Meets Requirements?",
+      "label": null
+    },
+    {
+      "tail": "Invoice Meets Requirements?",
+      "head": "Return Invoice to Supplier",
+      "label": "No"
+    },
+    {
+      "tail": "Invoice Meets Requirements?",
+      "head": "Approval",
+      "label": "Yes"
+    },
+    {
+      "tail": "Approval",
+      "head": "Require action",
+      "label": "No"
+    },
+    {
+      "tail": "Approval",
+      "head": "Invoice Placed in payment Queue",
+      "label": "Yes"
+    },
+    {
+      "tail": "Invoice Placed in payment Queue",
+      "head": "Payment Processed",
+      "label": null
+    },
+    {
+      "tail": "Require action",
+      "head": "Action Taken, Issue Resolved?",
+      "label": null
+    },
+    {
+      "tail": "Action Taken, Issue Resolved?",
+      "head": "Require action",
+      "label": "No"
+    },
+    {
+      "tail": "Action Taken, Issue Resolved?",
+      "head": "Approval",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

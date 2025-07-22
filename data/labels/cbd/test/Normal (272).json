@@ -1,0 +1,173 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        307.0,
+        44.0,
+        68.0,
+        34.0
+      ]
+    },
+    {
+      "text": "Entry Users Personal ID",
+      "id": "Entry Users Personal ID",
+      "class": null,
+      "bbox": [
+        308.5,
+        201.5,
+        259.0,
+        27.0
+      ]
+    },
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "Login Success",
+      "id": "Login Success",
+      "class": null,
+      "bbox": [
+        297.0,
+        553.5,
+        192.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Read to-n Answer",
+      "id": "Read to-n Answer",
+      "class": null,
+      "bbox": [
+        290.0,
+        707.5,
+        226.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Start Loop",
+      "id": "Start Loop",
+      "class": null,
+      "bbox": [
+        303.0,
+        902.0,
+        154.0,
+        38.0
+      ]
+    },
+    {
+      "text": "Inference Process",
+      "id": "Inference Process",
+      "class": null,
+      "bbox": [
+        312.0,
+        1069.5,
+        234.0,
+        35.0
+      ]
+    },
+    {
+      "text": "Conclusion",
+      "id": "Conclusion",
+      "class": null,
+      "bbox": [
+        307.5,
+        1304.0,
+        155.0,
+        28.0
+      ]
+    },
+    {
+      "text": "Positioning Detection for monitoring",
+      "id": "Positioning Detection for monitoring",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        310.5,
+        1824.5,
+        73.0,
+        37.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Entry Users Personal ID",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "connection",
+      "tail": "Entry Users Personal ID",
+      "label": null
+    },
+    {
+      "head": "Login Success",
+      "tail": "connection",
+      "label": null
+    },
+    {
+      "head": "Read to-n Answer",
+      "tail": "Login Success",
+      "label": null
+    },
+    {
+      "head": "Start Loop",
+      "tail": "Read to-n Answer",
+      "label": null
+    },
+    {
+      "head": "Inference Process",
+      "tail": "Start Loop",
+      "label": null
+    },
+    {
+      "head": "Conclusion",
+      "tail": "Inference Process",
+      "label": null
+    },
+    {
+      "head": "connection",
+      "tail": "Conclusion",
+      "label": "No",
+      "bbox": [
+        594.5,
+        1271.0,
+        45.0,
+        32.0
+      ]
+    },
+    {
+      "head": "Positioning Detection for monitoring",
+      "tail": "Conclusion",
+      "label": "Yes",
+      "bbox": [
+        371.5,
+        1449.5,
+        51.0,
+        29.0
+      ]
+    },
+    {
+      "head": "connection",
+      "tail": "Positioning Detection for monitoring",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "connection",
+      "label": null
+    }
+  ],
+  "groups": []
+}

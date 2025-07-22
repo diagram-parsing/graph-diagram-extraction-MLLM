@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Electricity",
+      "id": "Electricity",
+      "class": null
+    },
+    {
+      "text": "NRZ Pulse Generator",
+      "id": "NRZ Pulse Generator",
+      "class": null
+    },
+    {
+      "text": "Modulator",
+      "id": "Modulator",
+      "class": null
+    },
+    {
+      "text": "Optical Amplifier",
+      "id": "Optical Amplifier",
+      "class": null
+    },
+    {
+      "text": "FSO channel",
+      "id": "FSO channel",
+      "class": null
+    },
+    {
+      "text": "Amplification",
+      "id": "Amplification",
+      "class": null
+    },
+    {
+      "text": "Low pass Filter",
+      "id": "Low pass Filter",
+      "class": null
+    },
+    {
+      "text": "BER Analyzer",
+      "id": "BER Analyzer",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Electricity",
+      "head": "NRZ Pulse Generator",
+      "label": null
+    },
+    {
+      "tail": "NRZ Pulse Generator",
+      "head": "Modulator",
+      "label": null
+    },
+    {
+      "tail": "Modulator",
+      "head": "Optical Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Optical Amplifier",
+      "head": "FSO channel",
+      "label": null
+    },
+    {
+      "tail": "FSO channel",
+      "head": "Optical Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Optical Amplifier",
+      "head": "Amplification",
+      "label": null
+    },
+    {
+      "tail": "Amplification",
+      "head": "Low pass Filter",
+      "label": null
+    },
+    {
+      "tail": "Low pass Filter",
+      "head": "BER Analyzer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

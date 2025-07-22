@@ -1,0 +1,126 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Source",
+      "id": "Source",
+      "class": null,
+      "bbox": [
+        85.5,
+        40.0,
+        57.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Source encoder",
+      "id": "Source encoder",
+      "class": null,
+      "bbox": [
+        304.0,
+        44.5,
+        64.0,
+        29.0
+      ]
+    },
+    {
+      "text": "Channel encoder",
+      "id": "Channel encoder",
+      "class": null,
+      "bbox": [
+        533.5,
+        45.0,
+        65.0,
+        30.0
+      ]
+    },
+    {
+      "text": "Noises",
+      "id": "Noises",
+      "class": null,
+      "bbox": [
+        751.0,
+        131.0,
+        58.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Channel decoder",
+      "id": "Channel decoder",
+      "class": null,
+      "bbox": [
+        537.0,
+        216.0,
+        64.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Source decoder",
+      "id": "Source decoder",
+      "class": null,
+      "bbox": [
+        307.0,
+        215.5,
+        64.0,
+        27.0
+      ]
+    },
+    {
+      "text": "source decoder",
+      "id": "source decoder",
+      "class": null,
+      "bbox": [
+        307.0,
+        215.5,
+        64.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Destination",
+      "id": "Destination",
+      "class": null,
+      "bbox": [
+        102.5,
+        212.0,
+        85.0,
+        14.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Source encoder",
+      "tail": "Source",
+      "label": null
+    },
+    {
+      "head": "Channel encoder",
+      "tail": "Source encoder",
+      "label": null
+    },
+    {
+      "head": "Noises",
+      "tail": "Channel encoder",
+      "label": null
+    },
+    {
+      "head": "Channel decoder",
+      "tail": "Noises",
+      "label": null
+    },
+    {
+      "head": "Source decoder",
+      "tail": "Channel decoder",
+      "label": null
+    },
+    {
+      "head": "Destination",
+      "tail": "source decoder",
+      "label": null
+    }
+  ],
+  "groups": []
+}

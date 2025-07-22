@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Power Supply",
+      "id": "Power Supply",
+      "class": null
+    },
+    {
+      "text": "Bulb",
+      "id": "Bulb",
+      "class": null
+    },
+    {
+      "text": "TV",
+      "id": "TV",
+      "class": null
+    },
+    {
+      "text": "Processor",
+      "id": "Processor",
+      "class": null
+    },
+    {
+      "text": "Hard Drive",
+      "id": "Hard Drive",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Power Supply",
+      "head": "Bulb",
+      "label": null
+    },
+    {
+      "tail": "Power Supply",
+      "head": "TV",
+      "label": null
+    },
+    {
+      "tail": "Bulb",
+      "head": "Processor",
+      "label": null
+    },
+    {
+      "tail": "TV",
+      "head": "Processor",
+      "label": null
+    },
+    {
+      "tail": "Processor",
+      "head": "Hard Drive",
+      "label": null
+    }
+  ],
+  "groups": []
+}

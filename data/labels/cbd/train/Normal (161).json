@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Random Initialization",
+      "id": "Random Initialization",
+      "class": null
+    },
+    {
+      "text": "Operation on counter",
+      "id": "Operation on counter",
+      "class": null
+    },
+    {
+      "text": "Compute the Objective function",
+      "id": "Compute the Objective function",
+      "class": null
+    },
+    {
+      "text": "Update Velocity",
+      "id": "Update Velocity",
+      "class": null
+    },
+    {
+      "text": "Update individual best if needed",
+      "id": "Update individual best if needed",
+      "class": null
+    },
+    {
+      "text": "Update Position",
+      "id": "Update Position",
+      "class": null
+    },
+    {
+      "text": "Store position in new variable",
+      "id": "Store position in new variable",
+      "class": null
+    },
+    {
+      "text": "Stopping criteria",
+      "id": "Stopping criteria",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Random Initialization",
+      "head": "Operation on counter",
+      "label": null
+    },
+    {
+      "tail": "Operation on counter",
+      "head": "Compute the Objective function",
+      "label": null
+    },
+    {
+      "tail": "Compute the Objective function",
+      "head": "Update Velocity",
+      "label": null
+    },
+    {
+      "tail": "Update Velocity",
+      "head": "Update individual best if needed",
+      "label": null
+    },
+    {
+      "tail": "Update individual best if needed",
+      "head": "Update Position",
+      "label": null
+    },
+    {
+      "tail": "Update Position",
+      "head": "Store position in new variable",
+      "label": null
+    },
+    {
+      "tail": "Store position in new variable",
+      "head": "Stopping criteria",
+      "label": null
+    },
+    {
+      "tail": "Stopping criteria",
+      "head": "Operation on counter",
+      "label": "No"
+    },
+    {
+      "tail": "Stopping criteria",
+      "head": "Finish",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

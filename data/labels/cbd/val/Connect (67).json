@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "re-sample subset i",
+      "id": "re-sample subset i",
+      "class": null
+    },
+    {
+      "text": "Select operators",
+      "id": "Select operators",
+      "class": null
+    },
+    {
+      "text": "iterations T i<=T",
+      "id": "iterations T i<=T",
+      "class": null
+    },
+    {
+      "text": "EI evaluate and sort variables",
+      "id": "EI evaluate and sort variables",
+      "class": null
+    },
+    {
+      "text": "Finalize it",
+      "id": "Finalize it",
+      "class": null
+    },
+    {
+      "text": "model",
+      "id": "model",
+      "class": null
+    },
+    {
+      "text": "Testing Samples",
+      "id": "Testing Samples",
+      "class": null
+    },
+    {
+      "text": "Prediction results",
+      "id": "Prediction results",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "re-sample subset i",
+      "label": null
+    },
+    {
+      "tail": "re-sample subset i",
+      "head": "Select operators",
+      "label": null
+    },
+    {
+      "tail": "Select operators",
+      "head": "iterations T i<=T",
+      "label": null
+    },
+    {
+      "tail": "iterations T i<=T",
+      "head": "re-sample subset i",
+      "label": "Yes"
+    },
+    {
+      "tail": "iterations T i<=T",
+      "head": "EI evaluate and sort variables",
+      "label": "No"
+    },
+    {
+      "tail": "EI evaluate and sort variables",
+      "head": "Finalize it",
+      "label": null
+    },
+    {
+      "tail": "Finalize it",
+      "head": "model",
+      "label": null
+    },
+    {
+      "tail": "Testing Samples",
+      "head": "model",
+      "label": null
+    },
+    {
+      "tail": "model",
+      "head": "Prediction results",
+      "label": null
+    }
+  ],
+  "groups": []
+}

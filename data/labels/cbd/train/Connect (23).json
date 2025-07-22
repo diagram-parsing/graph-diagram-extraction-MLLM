@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "reference",
+      "id": "reference",
+      "class": null
+    },
+    {
+      "text": "Noice romovel",
+      "id": "Noice romovel",
+      "class": null
+    },
+    {
+      "text": "Subsampling",
+      "id": "Subsampling",
+      "class": null
+    },
+    {
+      "text": "Time alignment",
+      "id": "Time alignment",
+      "class": null
+    },
+    {
+      "text": "Similarities",
+      "id": "Similarities",
+      "class": null
+    },
+    {
+      "text": "Analysis of feature distribution",
+      "id": "Analysis of feature distribution",
+      "class": null
+    },
+    {
+      "text": "Information Extraction",
+      "id": "Information Extraction",
+      "class": null
+    },
+    {
+      "text": "Global temporal degradation",
+      "id": "Global temporal degradation",
+      "class": null
+    },
+    {
+      "text": "Perceptually motivated aggregation",
+      "id": "Perceptually motivated aggregation",
+      "class": null
+    },
+    {
+      "text": "Result",
+      "id": "Result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "reference",
+      "head": "Noice romovel",
+      "label": null
+    },
+    {
+      "tail": "Noice romovel",
+      "head": "Subsampling",
+      "label": null
+    },
+    {
+      "tail": "Noice romovel",
+      "head": "Time alignment",
+      "label": null
+    },
+    {
+      "tail": "Time alignment",
+      "head": "Similarities",
+      "label": null
+    },
+    {
+      "tail": "Similarities",
+      "head": "Analysis of feature distribution",
+      "label": null
+    },
+    {
+      "tail": "Subsampling",
+      "head": "Information Extraction",
+      "label": null
+    },
+    {
+      "tail": "Information Extraction",
+      "head": "Global temporal degradation",
+      "label": null
+    },
+    {
+      "tail": "Global temporal degradation",
+      "head": "Perceptually motivated aggregation",
+      "label": null
+    },
+    {
+      "tail": "Analysis of feature distribution",
+      "head": "Perceptually motivated aggregation",
+      "label": null
+    },
+    {
+      "tail": "Perceptually motivated aggregation",
+      "head": "Result",
+      "label": null
+    }
+  ],
+  "groups": []
+}

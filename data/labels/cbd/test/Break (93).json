@@ -1,0 +1,114 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        31.0,
+        29.5,
+        26.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Greet customer",
+      "id": "Greet customer",
+      "class": null,
+      "bbox": [
+        32.0,
+        93.5,
+        46.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Talk with them",
+      "id": "Talk with them",
+      "class": null,
+      "bbox": [
+        116.5,
+        93.0,
+        45.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Need help",
+      "id": "Need help",
+      "class": null,
+      "bbox": [
+        206.0,
+        95.0,
+        28.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Call manager",
+      "id": "Call manager",
+      "class": null,
+      "bbox": [
+        293.0,
+        93.5,
+        42.0,
+        25.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Manager assist",
+      "id": "Manager assist",
+      "class": null,
+      "bbox": [
+        378.0,
+        93.0,
+        46.0,
+        26.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Greet customer",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Talk with them",
+      "tail": "Greet customer",
+      "label": null
+    },
+    {
+      "head": "Need help",
+      "tail": "Talk with them",
+      "label": null
+    },
+    {
+      "head": "Call manager",
+      "tail": "Need help",
+      "label": "Yes"
+    },
+    {
+      "head": "End",
+      "tail": "Need help",
+      "label": "No"
+    },
+    {
+      "head": "Manager assist",
+      "tail": "Call manager",
+      "label": null
+    },
+    {
+      "head": "End",
+      "tail": "Manager assist",
+      "label": null
+    }
+  ],
+  "groups": []
+}

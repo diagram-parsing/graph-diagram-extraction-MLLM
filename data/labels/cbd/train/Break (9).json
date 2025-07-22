@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "text": "Purchase Process",
+      "id": "Purchase Process",
+      "class": null
+    },
+    {
+      "text": "Fill out details",
+      "id": "Fill out details",
+      "class": null
+    },
+    {
+      "text": "Approved",
+      "id": "Approved",
+      "class": null
+    },
+    {
+      "text": "Purchase Requisition",
+      "id": "Purchase Requisition",
+      "class": null
+    },
+    {
+      "text": "Credit Card or Cash?",
+      "id": "Credit Card or Cash?",
+      "class": null
+    },
+    {
+      "text": "Is it an Independent Contractor",
+      "id": "Is it an Independent Contractor",
+      "class": null
+    },
+    {
+      "text": "Give your details",
+      "id": "Give your details",
+      "class": null
+    },
+    {
+      "text": "Obtain P.O from Controller",
+      "id": "Obtain P.O from Controller",
+      "class": null
+    },
+    {
+      "text": "Enter card number",
+      "id": "Enter card number",
+      "class": null
+    },
+    {
+      "text": "Invoice CCPR",
+      "id": "Invoice CCPR",
+      "class": null
+    },
+    {
+      "text": "Documents to Controller for Approval",
+      "id": "Documents to Controller for Approval",
+      "class": null
+    },
+    {
+      "text": "Invoice",
+      "id": "Invoice",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Purchase Process",
+      "head": "Fill out details",
+      "label": null
+    },
+    {
+      "tail": "Fill out details",
+      "head": "Approved",
+      "label": null
+    },
+    {
+      "tail": "Approved",
+      "head": "Purchase Requisition",
+      "label": "NO"
+    },
+    {
+      "tail": "Approved",
+      "head": "Credit Card or Cash?",
+      "label": "YES"
+    },
+    {
+      "tail": "Credit Card or Cash?",
+      "head": "Is it an Independent Contractor",
+      "label": "Cash"
+    },
+    {
+      "tail": "Is it an Independent Contractor",
+      "head": "Give your details",
+      "label": "YES"
+    },
+    {
+      "tail": "Is it an Independent Contractor",
+      "head": "Obtain P.O from Controller",
+      "label": "NO"
+    },
+    {
+      "tail": "Credit Card or Cash?",
+      "head": "Enter card number",
+      "label": "Credit Card"
+    },
+    {
+      "tail": "Enter card number",
+      "head": "Invoice CCPR",
+      "label": null
+    },
+    {
+      "tail": "Invoice CCPR",
+      "head": "Documents to Controller for Approval",
+      "label": null
+    },
+    {
+      "tail": "Obtain P.O from Controller",
+      "head": "Invoice",
+      "label": null
+    },
+    {
+      "tail": "Invoice",
+      "head": "Documents to Controller for Approval",
+      "label": "To Controller"
+    }
+  ],
+  "groups": []
+}

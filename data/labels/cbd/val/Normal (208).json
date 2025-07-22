@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Coding",
+      "id": "Coding",
+      "class": null
+    },
+    {
+      "text": "Channel coding",
+      "id": "Channel coding",
+      "class": null
+    },
+    {
+      "text": "Modulator",
+      "id": "Modulator",
+      "class": null
+    },
+    {
+      "text": "Demodulator",
+      "id": "Demodulator",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Coding",
+      "head": "Channel coding",
+      "label": null
+    },
+    {
+      "tail": "Channel coding",
+      "head": "Modulator",
+      "label": null
+    },
+    {
+      "tail": "Modulator",
+      "head": "Demodulator",
+      "label": null
+    },
+    {
+      "tail": "Demodulator",
+      "head": "Channel coding",
+      "label": null
+    },
+    {
+      "tail": "Channel coding",
+      "head": "Output",
+      "label": null
+    }
+  ],
+  "groups": []
+}

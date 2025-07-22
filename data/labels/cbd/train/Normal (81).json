@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Collide",
+      "id": "Collide",
+      "class": null
+    },
+    {
+      "text": "Wake up",
+      "id": "Wake up",
+      "class": null
+    },
+    {
+      "text": "Run",
+      "id": "Run",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Collide",
+      "label": null
+    },
+    {
+      "tail": "Collide",
+      "head": "Wake up",
+      "label": null
+    },
+    {
+      "tail": "Wake up",
+      "head": "Run",
+      "label": null
+    },
+    {
+      "tail": "Run",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

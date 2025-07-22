@@ -1,0 +1,130 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        428.0,
+        89.5,
+        132.0,
+        53.0
+      ]
+    },
+    {
+      "text": "Preprocessing",
+      "id": "Preprocessing",
+      "class": null,
+      "bbox": [
+        432.5,
+        330.0,
+        263.0,
+        46.0
+      ]
+    },
+    {
+      "text": "cleaning",
+      "id": "cleaning",
+      "class": null,
+      "bbox": [
+        153.5,
+        585.5,
+        217.0,
+        63.0
+      ]
+    },
+    {
+      "text": "Segmentation of nuclei",
+      "id": "Segmentation of nuclei",
+      "class": null
+    },
+    {
+      "text": "Detection of overlapping cells",
+      "id": "Detection of overlapping cells",
+      "class": null,
+      "bbox": [
+        189.5,
+        827.0,
+        309.0,
+        90.0
+      ]
+    },
+    {
+      "text": "Detection of overlapping nuclei",
+      "id": "Detection of overlapping nuclei",
+      "class": null,
+      "bbox": [
+        646.0,
+        829.0,
+        334.0,
+        88.0
+      ]
+    },
+    {
+      "text": "Feature extraction",
+      "id": "Feature extraction",
+      "class": null,
+      "bbox": [
+        429.0,
+        1077.5,
+        326.0,
+        31.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        415.5,
+        1317.5,
+        99.0,
+        51.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Preprocessing",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "cleaning",
+      "tail": "Preprocessing",
+      "label": null
+    },
+    {
+      "head": "Segmentation of nuclei",
+      "tail": "Preprocessing",
+      "label": null
+    },
+    {
+      "head": "Detection of overlapping cells",
+      "tail": "cleaning",
+      "label": null
+    },
+    {
+      "head": "Detection of overlapping nuclei",
+      "tail": "Segmentation of nuclei",
+      "label": null
+    },
+    {
+      "head": "Feature extraction",
+      "tail": "Detection of overlapping cells",
+      "label": null
+    },
+    {
+      "head": "Feature extraction",
+      "tail": "Detection of overlapping nuclei",
+      "label": null
+    },
+    {
+      "head": "End",
+      "tail": "Feature extraction",
+      "label": null
+    }
+  ],
+  "groups": []
+}

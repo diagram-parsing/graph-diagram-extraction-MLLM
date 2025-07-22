@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Mobile Switch on",
+      "id": "Mobile Switch on",
+      "class": null
+    },
+    {
+      "text": "GPS senses motion",
+      "id": "GPS senses motion",
+      "class": null
+    },
+    {
+      "text": "GPS and phone",
+      "id": "GPS and phone",
+      "class": null
+    },
+    {
+      "text": "GPS and Phone",
+      "id": "GPS and Phone",
+      "class": null
+    },
+    {
+      "text": "Give location",
+      "id": "Give location",
+      "class": null
+    },
+    {
+      "text": "GPS notifies Police",
+      "id": "GPS notifies Police",
+      "class": null
+    },
+    {
+      "text": "Server tracks GPS",
+      "id": "Server tracks GPS",
+      "class": null
+    },
+    {
+      "text": "Cell phone tracks GPS",
+      "id": "Cell phone tracks GPS",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Mobile Switch on",
+      "label": null
+    },
+    {
+      "tail": "Mobile Switch on",
+      "head": "GPS senses motion",
+      "label": null
+    },
+    {
+      "tail": "GPS senses motion",
+      "head": "GPS and phone",
+      "label": null
+    },
+    {
+      "tail": "GPS and Phone",
+      "head": "Give location",
+      "label": null
+    },
+    {
+      "tail": "Give location",
+      "head": "GPS notifies Police",
+      "label": null
+    },
+    {
+      "tail": "GPS notifies Police",
+      "head": "Server tracks GPS",
+      "label": null
+    },
+    {
+      "tail": "GPS notifies Police",
+      "head": "Cell phone tracks GPS",
+      "label": null
+    }
+  ],
+  "groups": []
+}

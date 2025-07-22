@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Case status changes",
+      "id": "Case status changes",
+      "class": null
+    },
+    {
+      "text": "Approval triggered",
+      "id": "Approval triggered",
+      "class": null
+    },
+    {
+      "text": "Is the approval applied to the case",
+      "id": "Is the approval applied to the case",
+      "class": null
+    },
+    {
+      "text": "Self-approval configured",
+      "id": "Self-approval configured",
+      "class": null
+    },
+    {
+      "text": "Change the case",
+      "id": "Change the case",
+      "class": null
+    },
+    {
+      "text": "Approval flow configured?",
+      "id": "Approval flow configured?",
+      "class": null
+    },
+    {
+      "text": "Case status change",
+      "id": "Case status change",
+      "class": null
+    },
+    {
+      "text": "Task status changes based on approval mapping",
+      "id": "Task status changes based on approval mapping",
+      "class": null
+    },
+    {
+      "text": "Task sent to approver",
+      "id": "Task sent to approver",
+      "class": null
+    },
+    {
+      "text": "Approver make decision",
+      "id": "Approver make decision",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Case status changes",
+      "head": "Approval triggered",
+      "label": null
+    },
+    {
+      "tail": "Approval triggered",
+      "head": "Is the approval applied to the case",
+      "label": null
+    },
+    {
+      "tail": "Is the approval applied to the case",
+      "head": "Self-approval configured",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the approval applied to the case",
+      "head": "Change the case",
+      "label": "No"
+    },
+    {
+      "tail": "Self-approval configured",
+      "head": "Approval flow configured?",
+      "label": "No"
+    },
+    {
+      "tail": "Self-approval configured",
+      "head": "Case status change",
+      "label": "Yes"
+    },
+    {
+      "tail": "Case status change",
+      "head": "Task status changes based on approval mapping",
+      "label": null
+    },
+    {
+      "tail": "Approval flow configured?",
+      "head": "Task status changes based on approval mapping",
+      "label": "No"
+    },
+    {
+      "tail": "Approval flow configured?",
+      "head": "Task sent to approver",
+      "label": "No"
+    },
+    {
+      "tail": "Task sent to approver",
+      "head": "Approver make decision",
+      "label": null
+    }
+  ],
+  "groups": []
+}

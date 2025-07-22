@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Artificial Intelligence",
+      "id": "Artificial Intelligence",
+      "class": null
+    },
+    {
+      "text": "Machine Learning",
+      "id": "Machine Learning",
+      "class": null
+    },
+    {
+      "text": "Deep Learning",
+      "id": "Deep Learning",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Artificial Intelligence",
+      "head": "Machine Learning",
+      "label": null
+    },
+    {
+      "tail": "Machine Learning",
+      "head": "Deep Learning",
+      "label": null
+    }
+  ],
+  "groups": []
+}

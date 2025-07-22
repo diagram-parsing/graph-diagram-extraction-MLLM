@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Information input transducer",
+      "id": "Information input transducer",
+      "class": null
+    },
+    {
+      "text": "Source encoder",
+      "id": "Source encoder",
+      "class": null
+    },
+    {
+      "text": "Channel encoder",
+      "id": "Channel encoder",
+      "class": null
+    },
+    {
+      "text": "Digital",
+      "id": "Digital",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    },
+    {
+      "text": "demodulator",
+      "id": "demodulator",
+      "class": null
+    },
+    {
+      "text": "Channel decoder",
+      "id": "Channel decoder",
+      "class": null
+    },
+    {
+      "text": "Source decoder",
+      "id": "Source decoder",
+      "class": null
+    },
+    {
+      "text": "Output transducer",
+      "id": "Output transducer",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Information input transducer",
+      "head": "Source encoder",
+      "label": null
+    },
+    {
+      "tail": "Source encoder",
+      "head": "Channel encoder",
+      "label": null
+    },
+    {
+      "tail": "Channel encoder",
+      "head": "Digital",
+      "label": null
+    },
+    {
+      "tail": "Digital",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "demodulator",
+      "label": null
+    },
+    {
+      "tail": "demodulator",
+      "head": "Channel decoder",
+      "label": null
+    },
+    {
+      "tail": "Channel decoder",
+      "head": "Source decoder",
+      "label": null
+    },
+    {
+      "tail": "Source decoder",
+      "head": "Output transducer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

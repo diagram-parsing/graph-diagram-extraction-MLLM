@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input N",
+      "id": "Input N",
+      "class": null
+    },
+    {
+      "text": "Temp=n modulo 2",
+      "id": "Temp=n modulo 2",
+      "class": null
+    },
+    {
+      "text": "Temp=0",
+      "id": "Temp=0",
+      "class": null
+    },
+    {
+      "text": "Even",
+      "id": "Even",
+      "class": null
+    },
+    {
+      "text": "Odd",
+      "id": "Odd",
+      "class": null
+    },
+    {
+      "text": "Output Answer",
+      "id": "Output Answer",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input N",
+      "label": null
+    },
+    {
+      "tail": "Input N",
+      "head": "Temp=n modulo 2",
+      "label": null
+    },
+    {
+      "tail": "Temp=n modulo 2",
+      "head": "Temp=0",
+      "label": null
+    },
+    {
+      "tail": "Temp=0",
+      "head": "Even",
+      "label": "YES"
+    },
+    {
+      "tail": "Temp=0",
+      "head": "Odd",
+      "label": "NO"
+    },
+    {
+      "tail": "Even",
+      "head": "Output Answer",
+      "label": null
+    },
+    {
+      "tail": "Odd",
+      "head": "Output Answer",
+      "label": null
+    },
+    {
+      "tail": "Output Answer",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

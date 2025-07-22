@@ -1,0 +1,212 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        210.0,
+        36.0,
+        42.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Calculate total travelling-periods EV using Distance for each EV",
+      "id": "Calculate total travelling-periods EV using Distance for each EV",
+      "class": null,
+      "bbox": [
+        207.0,
+        151.5,
+        206.0,
+        55.0
+      ]
+    },
+    {
+      "text": "Calculate Each Step",
+      "id": "Calculate Each Step",
+      "class": null,
+      "bbox": [
+        203.0,
+        275.0,
+        122.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Available cars to simulate?",
+      "id": "Available cars to simulate?",
+      "class": null,
+      "bbox": [
+        208.0,
+        426.5,
+        106.0,
+        35.0
+      ]
+    },
+    {
+      "text": "Return generated scenario",
+      "id": "Return generated scenario",
+      "class": null,
+      "bbox": [
+        499.0,
+        429.0,
+        92.0,
+        52.0
+      ]
+    },
+    {
+      "text": "Randomly generate Steps",
+      "id": "Randomly generate Steps",
+      "class": null,
+      "bbox": [
+        212.0,
+        575.0,
+        106.0,
+        36.0
+      ]
+    },
+    {
+      "text": "Random trial is higher than 100?",
+      "id": "Random trial is higher than 100?",
+      "class": null
+    },
+    {
+      "text": "Discard car from scenario",
+      "id": "Discard car from scenario",
+      "class": null,
+      "bbox": [
+        496.0,
+        722.5,
+        128.0,
+        35.0
+      ]
+    },
+    {
+      "text": "Get next car and reduce used available trips-per step of last car scenario.",
+      "id": "Get next car and reduce used available trips-per step of last car scenario.",
+      "class": null
+    },
+    {
+      "text": "Is it possible?",
+      "id": "Is it possible?",
+      "class": null,
+      "bbox": [
+        209.5,
+        889.5,
+        67.0,
+        37.0
+      ]
+    },
+    {
+      "text": "Allocate cars",
+      "id": "Allocate cars",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Calculate total travelling-periods EV using Distance for each EV",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Calculate Each Step",
+      "tail": "Calculate total travelling-periods EV using Distance for each EV",
+      "label": null
+    },
+    {
+      "head": "Available cars to simulate?",
+      "tail": "Calculate Each Step",
+      "label": null
+    },
+    {
+      "head": "Return generated scenario",
+      "tail": "Available cars to simulate?",
+      "label": "No",
+      "bbox": [
+        59.5,
+        747.0,
+        25.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Randomly generate Steps",
+      "tail": "Available cars to simulate?",
+      "label": "Yes",
+      "bbox": [
+        207.0,
+        503.0,
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Random trial is higher than 100?",
+      "tail": "Randomly generate Steps",
+      "label": null
+    },
+    {
+      "head": "Discard car from scenario",
+      "tail": "Random trial is higher than 100?",
+      "label": "Yes",
+      "bbox": [
+        207.0,
+        503.0,
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Get next car and reduce used available trips-per step of last car scenario.",
+      "tail": "Discard car from scenario",
+      "label": null
+    },
+    {
+      "head": "Is it possible?",
+      "tail": "Random trial is higher than 100?",
+      "label": "No",
+      "bbox": [
+        59.5,
+        747.0,
+        25.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Randomly generate Steps",
+      "tail": "Is it possible?",
+      "label": "No",
+      "bbox": [
+        59.5,
+        747.0,
+        25.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Allocate cars",
+      "tail": "Is it possible?",
+      "label": "yes",
+      "bbox": [
+        207.0,
+        503.0,
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Get next car and reduce used available trips-per step of last car scenario.",
+      "tail": "Allocate cars",
+      "label": null
+    },
+    {
+      "head": "Available cars to simulate?",
+      "tail": "Get next car and reduce used available trips-per step of last car scenario.",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start-up",
+      "id": "Start-up",
+      "class": null
+    },
+    {
+      "text": "Input variables",
+      "id": "Input variables",
+      "class": null
+    },
+    {
+      "text": "Operator",
+      "id": "Operator",
+      "class": null
+    },
+    {
+      "text": "Main function",
+      "id": "Main function",
+      "class": null
+    },
+    {
+      "text": "MPU WDT1 setup",
+      "id": "MPU WDT1 setup",
+      "class": null
+    },
+    {
+      "text": "Configuration",
+      "id": "Configuration",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start-up",
+      "head": "Input variables",
+      "label": null
+    },
+    {
+      "tail": "Input variables",
+      "head": "Operator",
+      "label": null
+    },
+    {
+      "tail": "Operator",
+      "head": "Main function",
+      "label": null
+    },
+    {
+      "tail": "Main function",
+      "head": "MPU WDT1 setup",
+      "label": null
+    },
+    {
+      "tail": "MPU WDT1 setup",
+      "head": "Configuration",
+      "label": null
+    },
+    {
+      "tail": "Configuration",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

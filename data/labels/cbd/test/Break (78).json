@@ -1,0 +1,103 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Check Software",
+      "id": "Check Software",
+      "class": null,
+      "bbox": [
+        348.5,
+        139.5,
+        47.0,
+        29.0
+      ]
+    },
+    {
+      "text": "Check all the needs",
+      "id": "Check all the needs",
+      "class": null,
+      "bbox": [
+        134.5,
+        238.5,
+        61.0,
+        25.0
+      ]
+    },
+    {
+      "text": "B",
+      "id": "B",
+      "class": null
+    },
+    {
+      "text": "C",
+      "id": "C",
+      "class": null
+    },
+    {
+      "text": "Good Needs",
+      "id": "Good Needs",
+      "class": null,
+      "bbox": [
+        146.0,
+        365.0,
+        36.0,
+        28.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Check Software",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Check all the needs",
+      "tail": "Check Software",
+      "label": "Yes",
+      "bbox": [
+        147.5,
+        314.0,
+        15.0,
+        8.0
+      ]
+    },
+    {
+      "head": "B",
+      "tail": "Check Software",
+      "label": "No"
+    },
+    {
+      "head": "C",
+      "tail": "Check all the needs",
+      "label": "No"
+    },
+    {
+      "head": "Good Needs",
+      "tail": "Check Software",
+      "label": "Yes",
+      "bbox": [
+        147.5,
+        314.0,
+        15.0,
+        8.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Good Needs",
+      "label": null
+    }
+  ],
+  "groups": []
+}

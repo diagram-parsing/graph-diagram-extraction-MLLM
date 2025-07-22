@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "BEGIN",
+      "id": "BEGIN",
+      "class": null
+    },
+    {
+      "text": "Check Parameter",
+      "id": "Check Parameter",
+      "class": null
+    },
+    {
+      "text": "CLICK CHOLERA ETEC OR BACK",
+      "id": "CLICK CHOLERA ETEC OR BACK",
+      "class": null
+    },
+    {
+      "text": "Take rest",
+      "id": "Take rest",
+      "class": null
+    },
+    {
+      "text": "THE SCREEN GOES BACK TO THE HOME",
+      "id": "THE SCREEN GOES BACK TO THE HOME",
+      "class": null
+    },
+    {
+      "text": "THE APP PLAYS AUDIO FOR ETEC",
+      "id": "THE APP PLAYS AUDIO FOR ETEC",
+      "class": null
+    },
+    {
+      "text": "CLICK CHOLERA BUTTON AGAIN",
+      "id": "CLICK CHOLERA BUTTON AGAIN",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    },
+    {
+      "text": "CLICK ETEC",
+      "id": "CLICK ETEC",
+      "class": null
+    },
+    {
+      "text": "THE CHOLERA AUDIO STOPS",
+      "id": "THE CHOLERA AUDIO STOPS",
+      "class": null
+    },
+    {
+      "text": "THE ETEC AUDIO STOPS",
+      "id": "THE ETEC AUDIO STOPS",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "BEGIN",
+      "head": "Check Parameter",
+      "label": null
+    },
+    {
+      "tail": "Check Parameter",
+      "head": "CLICK CHOLERA ETEC OR BACK",
+      "label": null
+    },
+    {
+      "tail": "CLICK CHOLERA ETEC OR BACK",
+      "head": "Take rest",
+      "label": null
+    },
+    {
+      "tail": "CLICK CHOLERA ETEC OR BACK",
+      "head": "THE SCREEN GOES BACK TO THE HOME",
+      "label": null
+    },
+    {
+      "tail": "CLICK CHOLERA ETEC OR BACK",
+      "head": "THE APP PLAYS AUDIO FOR ETEC",
+      "label": null
+    },
+    {
+      "tail": "Take rest",
+      "head": "CLICK CHOLERA BUTTON AGAIN",
+      "label": null
+    },
+    {
+      "tail": "THE SCREEN GOES BACK TO THE HOME",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "THE APP PLAYS AUDIO FOR ETEC",
+      "head": "CLICK ETEC",
+      "label": null
+    },
+    {
+      "tail": "CLICK CHOLERA BUTTON AGAIN",
+      "head": "THE CHOLERA AUDIO STOPS",
+      "label": null
+    },
+    {
+      "tail": "CLICK ETEC",
+      "head": "THE ETEC AUDIO STOPS",
+      "label": null
+    },
+    {
+      "tail": "THE CHOLERA AUDIO STOPS",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "THE ETEC AUDIO STOPS",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

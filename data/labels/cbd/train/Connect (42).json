@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Solar Panel",
+      "id": "Solar Panel",
+      "class": null
+    },
+    {
+      "text": "Power Regulator",
+      "id": "Power Regulator",
+      "class": null
+    },
+    {
+      "text": "Main Switch",
+      "id": "Main Switch",
+      "class": null
+    },
+    {
+      "text": "Voltage Divider",
+      "id": "Voltage Divider",
+      "class": null
+    },
+    {
+      "text": "DC-to-DC Converter",
+      "id": "DC-to-DC Converter",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    },
+    {
+      "text": "DC-to-AC Inverter",
+      "id": "DC-to-AC Inverter",
+      "class": null
+    },
+    {
+      "text": "Fans",
+      "id": "Fans",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Solar Panel",
+      "head": "Power Regulator",
+      "label": null
+    },
+    {
+      "tail": "Power Regulator",
+      "head": "Main Switch",
+      "label": null
+    },
+    {
+      "tail": "Main Switch",
+      "head": "Voltage Divider",
+      "label": null
+    },
+    {
+      "tail": "Power Regulator",
+      "head": "DC-to-DC Converter",
+      "label": null
+    },
+    {
+      "tail": "Power Regulator",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Main Switch",
+      "head": "DC-to-DC Converter",
+      "label": null
+    },
+    {
+      "tail": "DC-to-DC Converter",
+      "head": "DC-to-AC Inverter",
+      "label": null
+    },
+    {
+      "tail": "DC-to-AC Inverter",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Voltage Divider",
+      "head": "Fans",
+      "label": null
+    },
+    {
+      "tail": "Fans",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

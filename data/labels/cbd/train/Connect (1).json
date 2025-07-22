@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Documentation Work",
+      "id": "Documentation Work",
+      "class": null
+    },
+    {
+      "text": "Print cycle count sheets",
+      "id": "Print cycle count sheets",
+      "class": null
+    },
+    {
+      "text": "Perform physical count of stock",
+      "id": "Perform physical count of stock",
+      "class": null
+    },
+    {
+      "text": "Enter physical counts",
+      "id": "Enter physical counts",
+      "class": null
+    },
+    {
+      "text": "Report differences",
+      "id": "Report differences",
+      "class": null
+    },
+    {
+      "text": "Recount inventory?",
+      "id": "Recount inventory?",
+      "class": null
+    },
+    {
+      "text": "Post inventory documents",
+      "id": "Post inventory documents",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Display documents",
+      "id": "Display documents",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Documentation Work",
+      "label": null
+    },
+    {
+      "tail": "Documentation Work",
+      "head": "Print cycle count sheets",
+      "label": null
+    },
+    {
+      "tail": "Print cycle count sheets",
+      "head": "Perform physical count of stock",
+      "label": null
+    },
+    {
+      "tail": "Perform physical count of stock",
+      "head": "Enter physical counts",
+      "label": null
+    },
+    {
+      "tail": "Enter physical counts",
+      "head": "Report differences",
+      "label": null
+    },
+    {
+      "tail": "Report differences",
+      "head": "Recount inventory?",
+      "label": null
+    },
+    {
+      "tail": "Recount inventory?",
+      "head": "Post inventory documents",
+      "label": "No"
+    },
+    {
+      "tail": "Post inventory documents",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Recount inventory?",
+      "head": "Display documents",
+      "label": "Yes"
+    },
+    {
+      "tail": "Display documents",
+      "head": "Perform physical count of stock",
+      "label": null
+    },
+    {
+      "tail": "Perform physical count of stock",
+      "head": "Report differences",
+      "label": null
+    }
+  ],
+  "groups": []
+}

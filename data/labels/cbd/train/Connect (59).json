@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Problem",
+      "id": "Problem",
+      "class": null
+    },
+    {
+      "text": "Develop an Algorithm",
+      "id": "Develop an Algorithm",
+      "class": null
+    },
+    {
+      "text": "Think creativity",
+      "id": "Think creativity",
+      "class": null
+    },
+    {
+      "text": "Create an Action Plan",
+      "id": "Create an Action Plan",
+      "class": null
+    },
+    {
+      "text": "Discuss",
+      "id": "Discuss",
+      "class": null
+    },
+    {
+      "text": "Test the Solution",
+      "id": "Test the Solution",
+      "class": null
+    },
+    {
+      "text": "Is the Problem Solved?",
+      "id": "Is the Problem Solved?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Problem",
+      "label": null
+    },
+    {
+      "tail": "Problem",
+      "head": "Develop an Algorithm",
+      "label": null
+    },
+    {
+      "tail": "Develop an Algorithm",
+      "head": "Think creativity",
+      "label": null
+    },
+    {
+      "tail": "Think creativity",
+      "head": "Create an Action Plan",
+      "label": null
+    },
+    {
+      "tail": "Create an Action Plan",
+      "head": "Discuss",
+      "label": null
+    },
+    {
+      "tail": "Discuss",
+      "head": "Test the Solution",
+      "label": null
+    },
+    {
+      "tail": "Test the Solution",
+      "head": "Is the Problem Solved?",
+      "label": null
+    },
+    {
+      "tail": "Is the Problem Solved?",
+      "head": "Think creativity",
+      "label": "No"
+    },
+    {
+      "tail": "Is the Problem Solved?",
+      "head": "End",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

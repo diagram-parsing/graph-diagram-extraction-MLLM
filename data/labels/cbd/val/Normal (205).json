@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Encoder",
+      "id": "Encoder",
+      "class": null
+    },
+    {
+      "text": "Channel Encoder",
+      "id": "Channel Encoder",
+      "class": null
+    },
+    {
+      "text": "Modulation",
+      "id": "Modulation",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    },
+    {
+      "text": "Demodulation",
+      "id": "Demodulation",
+      "class": null
+    },
+    {
+      "text": "Channel Decoder",
+      "id": "Channel Decoder",
+      "class": null
+    },
+    {
+      "text": "Decoder",
+      "id": "Decoder",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Encoder",
+      "head": "Channel Encoder",
+      "label": null
+    },
+    {
+      "tail": "Channel Encoder",
+      "head": "Modulation",
+      "label": null
+    },
+    {
+      "tail": "Modulation",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "Demodulation",
+      "label": null
+    },
+    {
+      "tail": "Demodulation",
+      "head": "Channel Decoder",
+      "label": null
+    },
+    {
+      "tail": "Channel Decoder",
+      "head": "Decoder",
+      "label": null
+    }
+  ],
+  "groups": []
+}

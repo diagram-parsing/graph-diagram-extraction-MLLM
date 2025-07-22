@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "C=A+B",
+      "id": "C=A+B",
+      "class": null
+    },
+    {
+      "text": "Print A",
+      "id": "Print A",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "C=A+B",
+      "label": null
+    },
+    {
+      "tail": "C=A+B",
+      "head": "Print A",
+      "label": null
+    },
+    {
+      "tail": "Print A",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

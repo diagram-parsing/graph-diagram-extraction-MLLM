@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Converter",
+      "id": "Converter",
+      "class": null
+    },
+    {
+      "text": "Boost Converter",
+      "id": "Boost Converter",
+      "class": null
+    },
+    {
+      "text": "Monitor",
+      "id": "Monitor",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Converter",
+      "head": "Boost Converter",
+      "label": null
+    },
+    {
+      "tail": "Monitor",
+      "head": "Boost Converter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

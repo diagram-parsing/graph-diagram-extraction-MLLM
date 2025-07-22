@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Bad environment",
+      "id": "Bad environment",
+      "class": null
+    },
+    {
+      "text": "Work Process A General Requirments",
+      "id": "Work Process A General Requirments",
+      "class": null
+    },
+    {
+      "text": "Has the area been monitored for noise levels?",
+      "id": "Has the area been monitored for noise levels?",
+      "class": null
+    },
+    {
+      "text": "Environment Monitor",
+      "id": "Environment Monitor",
+      "class": null
+    },
+    {
+      "text": "Is the exposure considered \"nuisance\" level noise?",
+      "id": "Is the exposure considered \"nuisance\" level noise?",
+      "class": null
+    },
+    {
+      "text": "Work Process C Controlling Nuisance Noise",
+      "id": "Work Process C Controlling Nuisance Noise",
+      "class": null
+    },
+    {
+      "text": "Is the exposure considered \"hazardous\"?",
+      "id": "Is the exposure considered \"hazardous\"?",
+      "class": null
+    },
+    {
+      "text": "Work Process D Controlling Hazardous Noise",
+      "id": "Work Process D Controlling Hazardous Noise",
+      "class": null
+    },
+    {
+      "text": "Need to be enrolled in the hearing Conservation Program?",
+      "id": "Need to be enrolled in the hearing Conservation Program?",
+      "class": null
+    },
+    {
+      "text": "Testing Phase",
+      "id": "Testing Phase",
+      "class": null
+    },
+    {
+      "text": "Proceed with work",
+      "id": "Proceed with work",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Bad environment",
+      "head": "Work Process A General Requirments",
+      "label": null
+    },
+    {
+      "tail": "Work Process A General Requirments",
+      "head": "Has the area been monitored for noise levels?",
+      "label": null
+    },
+    {
+      "tail": "Has the area been monitored for noise levels?",
+      "head": "Environment Monitor",
+      "label": "No"
+    },
+    {
+      "tail": "Environment Monitor",
+      "head": "Is the exposure considered \"nuisance\" level noise?",
+      "label": null
+    },
+    {
+      "tail": "Has the area been monitored for noise levels?",
+      "head": "Is the exposure considered \"nuisance\" level noise?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the exposure considered \"nuisance\" level noise?",
+      "head": "Work Process C Controlling Nuisance Noise",
+      "label": "Yes"
+    },
+    {
+      "tail": "Work Process C Controlling Nuisance Noise",
+      "head": "Is the exposure considered \"hazardous\"?",
+      "label": null
+    },
+    {
+      "tail": "Is the exposure considered \"nuisance\" level noise?",
+      "head": "Is the exposure considered \"hazardous\"?",
+      "label": "No"
+    },
+    {
+      "tail": "Is the exposure considered \"hazardous\"?",
+      "head": "Work Process D Controlling Hazardous Noise",
+      "label": "Yes"
+    },
+    {
+      "tail": "Work Process D Controlling Hazardous Noise",
+      "head": "Need to be enrolled in the hearing Conservation Program?",
+      "label": null
+    },
+    {
+      "tail": "Is the exposure considered \"hazardous\"?",
+      "head": "Need to be enrolled in the hearing Conservation Program?",
+      "label": "No"
+    },
+    {
+      "tail": "Need to be enrolled in the hearing Conservation Program?",
+      "head": "Testing Phase",
+      "label": "Yes"
+    },
+    {
+      "tail": "Testing Phase",
+      "head": "Proceed with work",
+      "label": null
+    },
+    {
+      "tail": "Need to be enrolled in the hearing Conservation Program?",
+      "head": "Proceed with work",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

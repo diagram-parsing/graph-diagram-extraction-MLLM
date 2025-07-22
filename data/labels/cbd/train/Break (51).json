@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Select the area to check",
+      "id": "Select the area to check",
+      "class": null
+    },
+    {
+      "text": "Generating inventory list",
+      "id": "Generating inventory list",
+      "class": null
+    },
+    {
+      "text": "The warehouse arrived at the location",
+      "id": "The warehouse arrived at the location",
+      "class": null
+    },
+    {
+      "text": "Read the goods",
+      "id": "Read the goods",
+      "class": null
+    },
+    {
+      "text": "Count all",
+      "id": "Count all",
+      "class": null
+    },
+    {
+      "text": "Keep inventory",
+      "id": "Keep inventory",
+      "class": null
+    },
+    {
+      "text": "Summary inventory information",
+      "id": "Summary inventory information",
+      "class": null
+    },
+    {
+      "text": "Data base",
+      "id": "Data base",
+      "class": null
+    },
+    {
+      "text": "Check everything",
+      "id": "Check everything",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Select the area to check",
+      "label": null
+    },
+    {
+      "tail": "Select the area to check",
+      "head": "Generating inventory list",
+      "label": null
+    },
+    {
+      "tail": "Generating inventory list",
+      "head": "The warehouse arrived at the location",
+      "label": null
+    },
+    {
+      "tail": "The warehouse arrived at the location",
+      "head": "Read the goods",
+      "label": null
+    },
+    {
+      "tail": "Read the goods",
+      "head": "Count all",
+      "label": null
+    },
+    {
+      "tail": "Count all",
+      "head": "Keep inventory",
+      "label": null
+    },
+    {
+      "tail": "Keep inventory",
+      "head": "Select the area to check",
+      "label": "Y"
+    },
+    {
+      "tail": "Keep inventory",
+      "head": "Summary inventory information",
+      "label": "N"
+    },
+    {
+      "tail": "Summary inventory information",
+      "head": "Data base",
+      "label": null
+    },
+    {
+      "tail": "Data base",
+      "head": "Check everything",
+      "label": null
+    },
+    {
+      "tail": "Check everything",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

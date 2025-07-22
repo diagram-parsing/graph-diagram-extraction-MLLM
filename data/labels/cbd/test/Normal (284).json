@@ -1,0 +1,123 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Fan doesn't work",
+      "id": "Fan doesn't work",
+      "class": null,
+      "bbox": [
+        350.5,
+        110.5,
+        421.0,
+        41.0
+      ]
+    },
+    {
+      "text": "Fan plugged in?",
+      "id": "Fan plugged in?",
+      "class": null,
+      "bbox": [
+        318.0,
+        546.0,
+        310.0,
+        130.0
+      ]
+    },
+    {
+      "text": "Plug in Fan",
+      "id": "Plug in Fan",
+      "class": null,
+      "bbox": [
+        946.0,
+        542.0,
+        294.0,
+        62.0
+      ]
+    },
+    {
+      "text": "Bulb burned out?",
+      "id": "Bulb burned out?",
+      "class": null,
+      "bbox": [
+        318.5,
+        1083.5,
+        307.0,
+        125.0
+      ]
+    },
+    {
+      "text": "Replace bulb",
+      "id": "Replace bulb",
+      "class": null,
+      "bbox": [
+        976.0,
+        1081.0,
+        342.0,
+        48.0
+      ]
+    },
+    {
+      "text": "Repair Fan",
+      "id": "Repair Fan",
+      "class": null,
+      "bbox": [
+        302.5,
+        1518.0,
+        289.0,
+        62.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Fan plugged in?",
+      "tail": "Fan doesn't work",
+      "label": null
+    },
+    {
+      "head": "Plug in Fan",
+      "tail": "Fan plugged in?",
+      "label": "No",
+      "bbox": [
+        643.5,
+        469.5,
+        83.0,
+        53.0
+      ]
+    },
+    {
+      "head": "Bulb burned out?",
+      "tail": "Fan plugged in?",
+      "label": "Yes",
+      "bbox": [
+        410.5,
+        771.5,
+        85.0,
+        53.0
+      ]
+    },
+    {
+      "head": "Replace bulb",
+      "tail": "Bulb burned out?",
+      "label": "Yes",
+      "bbox": [
+        410.5,
+        771.5,
+        85.0,
+        53.0
+      ]
+    },
+    {
+      "head": "Repair Fan",
+      "tail": "Bulb burned out?",
+      "label": "No",
+      "bbox": [
+        643.5,
+        469.5,
+        83.0,
+        53.0
+      ]
+    }
+  ],
+  "groups": []
+}

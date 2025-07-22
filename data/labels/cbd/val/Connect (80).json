@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Question",
+      "id": "Question",
+      "class": null
+    },
+    {
+      "text": "Analysis",
+      "id": "Analysis",
+      "class": null
+    },
+    {
+      "text": "Variation?",
+      "id": "Variation?",
+      "class": null
+    },
+    {
+      "text": "Complexity?",
+      "id": "Complexity?",
+      "class": null
+    },
+    {
+      "text": "Flow?",
+      "id": "Flow?",
+      "class": null
+    },
+    {
+      "text": "Action items Just go do it.",
+      "id": "Action items Just go do it.",
+      "class": null
+    },
+    {
+      "text": "Waste",
+      "id": "Waste",
+      "class": null
+    },
+    {
+      "text": "6 Sigma statistical Analysis",
+      "id": "6 Sigma statistical Analysis",
+      "class": null
+    },
+    {
+      "text": "Brain power",
+      "id": "Brain power",
+      "class": null
+    },
+    {
+      "text": "Implementation Plan Events & Action items",
+      "id": "Implementation Plan Events & Action items",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Question",
+      "head": "Analysis",
+      "label": null
+    },
+    {
+      "tail": "Analysis",
+      "head": "Variation?",
+      "label": null
+    },
+    {
+      "tail": "Variation?",
+      "head": "Complexity?",
+      "label": null
+    },
+    {
+      "tail": "Variation?",
+      "head": "Flow?",
+      "label": null
+    },
+    {
+      "tail": "Flow?",
+      "head": "Action items Just go do it.",
+      "label": null
+    },
+    {
+      "tail": "Flow?",
+      "head": "Waste",
+      "label": null
+    },
+    {
+      "tail": "Complexity?",
+      "head": "6 Sigma statistical Analysis",
+      "label": null
+    },
+    {
+      "tail": "Complexity?",
+      "head": "Brain power",
+      "label": null
+    },
+    {
+      "tail": "Action items Just go do it.",
+      "head": "Implementation Plan Events & Action items",
+      "label": null
+    },
+    {
+      "tail": "Waste",
+      "head": "Implementation Plan Events & Action items",
+      "label": null
+    },
+    {
+      "tail": "6 Sigma statistical Analysis",
+      "head": "Implementation Plan Events & Action items",
+      "label": null
+    },
+    {
+      "tail": "Brain power",
+      "head": "Implementation Plan Events & Action items",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Take observation",
+      "id": "Take observation",
+      "class": null
+    },
+    {
+      "text": "Discarding Wind observations",
+      "id": "Discarding Wind observations",
+      "class": null
+    },
+    {
+      "text": "Is the probabilistic rejection mechanism acceptable?",
+      "id": "Is the probabilistic rejection mechanism acceptable?",
+      "class": null
+    },
+    {
+      "text": "Particle generation",
+      "id": "Particle generation",
+      "class": null
+    },
+    {
+      "text": "Particles travel over time, and the age of particles increases.",
+      "id": "Particles travel over time, and the age of particles increases.",
+      "class": null
+    },
+    {
+      "text": "Re-update particles",
+      "id": "Re-update particles",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Take observation",
+      "head": "Discarding Wind observations",
+      "label": null
+    },
+    {
+      "tail": "Take observation",
+      "head": "Is the probabilistic rejection mechanism acceptable?",
+      "label": null
+    },
+    {
+      "tail": "Is the probabilistic rejection mechanism acceptable?",
+      "head": "Particle generation",
+      "label": null
+    },
+    {
+      "tail": "Particle generation",
+      "head": "Particles travel over time, and the age of particles increases.",
+      "label": null
+    },
+    {
+      "tail": "Particles travel over time, and the age of particles increases.",
+      "head": "Re-update particles",
+      "label": null
+    },
+    {
+      "tail": "Re-update particles",
+      "head": "Discarding Wind observations",
+      "label": null
+    },
+    {
+      "tail": "Re-update particles",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

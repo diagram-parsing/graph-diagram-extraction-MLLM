@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Awkward?",
+      "id": "Awkward?",
+      "class": null
+    },
+    {
+      "text": "No",
+      "id": "No",
+      "class": null
+    },
+    {
+      "text": "Stay",
+      "id": "Stay",
+      "class": null
+    },
+    {
+      "text": "Yes",
+      "id": "Yes",
+      "class": null
+    },
+    {
+      "text": "Talk with others",
+      "id": "Talk with others",
+      "class": null
+    },
+    {
+      "text": "Leave",
+      "id": "Leave",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Awkward?",
+      "head": "No",
+      "label": null
+    },
+    {
+      "tail": "No",
+      "head": "Stay",
+      "label": null
+    },
+    {
+      "tail": "Awkward?",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "Yes",
+      "head": "Talk with others",
+      "label": null
+    },
+    {
+      "tail": "Talk with others",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "Talk with others",
+      "head": "No",
+      "label": null
+    },
+    {
+      "tail": "Yes",
+      "head": "Stay",
+      "label": null
+    },
+    {
+      "tail": "No",
+      "head": "Leave",
+      "label": null
+    }
+  ],
+  "groups": []
+}

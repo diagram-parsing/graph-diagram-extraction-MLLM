@@ -1,0 +1,182 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Bill",
+      "id": "Bill",
+      "class": null,
+      "bbox": [
+        562.0,
+        37.0,
+        40.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Review Bill",
+      "id": "Review Bill",
+      "class": null,
+      "bbox": [
+        562.0,
+        180.5,
+        142.0,
+        31.0
+      ]
+    },
+    {
+      "text": "Invoice Meets Requirements?",
+      "id": "Invoice Meets Requirements?",
+      "class": null,
+      "bbox": [
+        562.5,
+        340.0,
+        125.0,
+        44.0
+      ]
+    },
+    {
+      "text": "Return",
+      "id": "Return",
+      "class": null,
+      "bbox": [
+        185.5,
+        338.5,
+        85.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Information Required",
+      "id": "Information Required",
+      "class": null,
+      "bbox": [
+        564.0,
+        545.5,
+        142.0,
+        63.0
+      ]
+    },
+    {
+      "text": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "id": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "class": null
+    },
+    {
+      "text": "Invoice Placed in Payment Queue",
+      "id": "Invoice Placed in Payment Queue",
+      "class": null,
+      "bbox": [
+        924.5,
+        544.5,
+        137.0,
+        43.0
+      ]
+    },
+    {
+      "text": "Payment Processed",
+      "id": "Payment Processed",
+      "class": null,
+      "bbox": [
+        924.0,
+        712.5,
+        86.0,
+        43.0
+      ]
+    },
+    {
+      "text": "Action Taken, Issue Resolved?",
+      "id": "Action Taken, Issue Resolved?",
+      "class": null,
+      "bbox": [
+        184.0,
+        699.5,
+        130.0,
+        45.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Review Bill",
+      "tail": "Bill",
+      "label": null
+    },
+    {
+      "head": "Invoice Meets Requirements?",
+      "tail": "Review Bill",
+      "label": null
+    },
+    {
+      "head": "Return",
+      "tail": "Invoice Meets Requirements?",
+      "label": "No",
+      "bbox": [
+        374.5,
+        313.5,
+        29.0,
+        21.0
+      ]
+    },
+    {
+      "head": "Information Required",
+      "tail": "Invoice Meets Requirements?",
+      "label": "Yes",
+      "bbox": [
+        586.5,
+        426.0,
+        31.0,
+        20.0
+      ]
+    },
+    {
+      "head": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "tail": "Information Required",
+      "label": "No",
+      "bbox": [
+        374.5,
+        313.5,
+        29.0,
+        21.0
+      ]
+    },
+    {
+      "head": "Invoice Placed in Payment Queue",
+      "tail": "Information Required",
+      "label": "Yes",
+      "bbox": [
+        586.5,
+        426.0,
+        31.0,
+        20.0
+      ]
+    },
+    {
+      "head": "Payment Processed",
+      "tail": "Invoice Placed in Payment Queue",
+      "label": null
+    },
+    {
+      "head": "Invoice Placed on Hold, Dept Notified of Required Action",
+      "tail": "Action Taken, Issue Resolved?",
+      "label": "No",
+      "bbox": [
+        374.5,
+        313.5,
+        29.0,
+        21.0
+      ]
+    },
+    {
+      "head": "Information Required",
+      "tail": "Action Taken, Issue Resolved?",
+      "label": "Yes",
+      "bbox": [
+        586.5,
+        426.0,
+        31.0,
+        20.0
+      ]
+    }
+  ],
+  "groups": []
+}

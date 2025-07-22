@@ -1,0 +1,120 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        134.5,
+        25.5,
+        27.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Determine SEUs energy inputs/outputs",
+      "id": "Determine SEUs energy inputs/outputs",
+      "class": null,
+      "bbox": [
+        135.5,
+        84.0,
+        83.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Determine process",
+      "id": "Determine process",
+      "class": null,
+      "bbox": [
+        132.5,
+        140.0,
+        91.0,
+        12.0
+      ]
+    },
+    {
+      "text": "Determine measurement period(EN8 process)",
+      "id": "Determine measurement period(EN8 process)",
+      "class": null,
+      "bbox": [
+        135.0,
+        197.5,
+        94.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Normalize",
+      "id": "Normalize",
+      "class": null,
+      "bbox": [
+        135.5,
+        254.0,
+        39.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Check",
+      "id": "Check",
+      "class": null,
+      "bbox": [
+        138.5,
+        309.5,
+        31.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Report",
+      "id": "Report",
+      "class": null,
+      "bbox": [
+        141.0,
+        366.5,
+        36.0,
+        11.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Determine SEUs energy inputs/outputs",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Determine process",
+      "tail": "Determine SEUs energy inputs/outputs",
+      "label": null
+    },
+    {
+      "head": "Determine measurement period(EN8 process)",
+      "tail": "Determine process",
+      "label": null
+    },
+    {
+      "head": "Normalize",
+      "tail": "Determine measurement period(EN8 process)",
+      "label": null
+    },
+    {
+      "head": "Check",
+      "tail": "Normalize",
+      "label": null
+    },
+    {
+      "head": "Report",
+      "tail": "Check",
+      "label": null
+    },
+    {
+      "head": "Start",
+      "tail": "Report",
+      "label": null
+    }
+  ],
+  "groups": []
+}

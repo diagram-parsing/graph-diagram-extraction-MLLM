@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Circuit",
+      "id": "Circuit",
+      "class": null
+    },
+    {
+      "text": "Current flows from the batteries",
+      "id": "Current flows from the batteries",
+      "class": null
+    },
+    {
+      "text": "Heating",
+      "id": "Heating",
+      "class": null
+    },
+    {
+      "text": "Bulb filament glows bright",
+      "id": "Bulb filament glows bright",
+      "class": null
+    },
+    {
+      "text": "Focus",
+      "id": "Focus",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Circuit",
+      "head": "Current flows from the batteries",
+      "label": null
+    },
+    {
+      "tail": "Current flows from the batteries",
+      "head": "Heating",
+      "label": null
+    },
+    {
+      "tail": "Heating",
+      "head": "Bulb filament glows bright",
+      "label": null
+    },
+    {
+      "tail": "Bulb filament glows bright",
+      "head": "Focus",
+      "label": null
+    }
+  ],
+  "groups": []
+}

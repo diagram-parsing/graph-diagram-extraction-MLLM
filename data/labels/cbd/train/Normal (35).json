@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Initial",
+      "id": "Initial",
+      "class": null
+    },
+    {
+      "text": "Fitness Computation",
+      "id": "Fitness Computation",
+      "class": null
+    },
+    {
+      "text": "Fitness",
+      "id": "Fitness",
+      "class": null
+    },
+    {
+      "text": "Converged?",
+      "id": "Converged?",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    },
+    {
+      "text": "Reproduction",
+      "id": "Reproduction",
+      "class": null
+    },
+    {
+      "text": "New Generation",
+      "id": "New Generation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initial",
+      "head": "Fitness Computation",
+      "label": null
+    },
+    {
+      "tail": "Fitness Computation",
+      "head": "Fitness",
+      "label": null
+    },
+    {
+      "tail": "Fitness Computation",
+      "head": "Converged?",
+      "label": null
+    },
+    {
+      "tail": "Converged?",
+      "head": "STOP",
+      "label": "YES"
+    },
+    {
+      "tail": "Converged?",
+      "head": "Reproduction",
+      "label": "NO"
+    },
+    {
+      "tail": "Reproduction",
+      "head": "New Generation",
+      "label": null
+    },
+    {
+      "tail": "New Generation",
+      "head": "Fitness Computation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

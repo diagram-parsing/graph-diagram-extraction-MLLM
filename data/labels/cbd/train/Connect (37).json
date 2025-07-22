@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "terminator",
+      "id": "terminator",
+      "class": null
+    },
+    {
+      "text": "Take all values",
+      "id": "Take all values",
+      "class": null
+    },
+    {
+      "text": "Input Hours Per Week",
+      "id": "Input Hours Per Week",
+      "class": null
+    },
+    {
+      "text": "Hourly Pay x Hours Per Week",
+      "id": "Hourly Pay x Hours Per Week",
+      "class": null
+    },
+    {
+      "text": "weeklypay>400",
+      "id": "weeklypay>400",
+      "class": null
+    },
+    {
+      "text": "Output can afford to live along",
+      "id": "Output can afford to live along",
+      "class": null
+    },
+    {
+      "text": "Poor condition",
+      "id": "Poor condition",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "terminator",
+      "head": "Take all values",
+      "label": null
+    },
+    {
+      "tail": "Take all values",
+      "head": "Input Hours Per Week",
+      "label": null
+    },
+    {
+      "tail": "Input Hours Per Week",
+      "head": "Hourly Pay x Hours Per Week",
+      "label": null
+    },
+    {
+      "tail": "Hourly Pay x Hours Per Week",
+      "head": "weeklypay>400",
+      "label": null
+    },
+    {
+      "tail": "weeklypay>400",
+      "head": "Output can afford to live along",
+      "label": "true"
+    },
+    {
+      "tail": "weeklypay>400",
+      "head": "Poor condition",
+      "label": "false"
+    },
+    {
+      "tail": "Output can afford to live along",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Poor condition",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

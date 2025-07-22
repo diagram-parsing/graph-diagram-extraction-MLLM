@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "Custom Place Order",
+      "id": "Custom Place Order",
+      "class": null
+    },
+    {
+      "text": "Order Check",
+      "id": "Order Check",
+      "class": null
+    },
+    {
+      "text": "Is the order a normal order?",
+      "id": "Is the order a normal order?",
+      "class": null
+    },
+    {
+      "text": "Is the order a special order?",
+      "id": "Is the order a special order?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Confirmation",
+      "id": "Confirmation",
+      "class": null
+    },
+    {
+      "text": "Dispatch the order",
+      "id": "Dispatch the order",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "connection",
+      "head": "Custom Place Order",
+      "label": null
+    },
+    {
+      "tail": "Custom Place Order",
+      "head": "Order Check",
+      "label": null
+    },
+    {
+      "tail": "Order Check",
+      "head": "Is the order a normal order?",
+      "label": null
+    },
+    {
+      "tail": "Is the order a normal order?",
+      "head": "Is the order a special order?",
+      "label": "No"
+    },
+    {
+      "tail": "Is the order a special order?",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "Is the order a special order?",
+      "head": "Confirmation",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the order a normal order?",
+      "head": "Confirmation",
+      "label": null
+    },
+    {
+      "tail": "Confirmation",
+      "head": "Dispatch the order",
+      "label": null
+    },
+    {
+      "tail": "Dispatch the order",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

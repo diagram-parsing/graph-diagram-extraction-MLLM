@@ -1,0 +1,142 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Initialize AG",
+      "id": "Initialize AG",
+      "class": null,
+      "bbox": [
+        128.5,
+        114.5,
+        151.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Generate initial population",
+      "id": "Generate initial population",
+      "class": null,
+      "bbox": [
+        135.0,
+        262.5,
+        138.0,
+        45.0
+      ]
+    },
+    {
+      "text": "Selection based on the fitness values",
+      "id": "Selection based on the fitness values",
+      "class": null,
+      "bbox": [
+        132.0,
+        402.5,
+        164.0,
+        41.0
+      ]
+    },
+    {
+      "text": "Connection",
+      "id": "Connection",
+      "class": null,
+      "bbox": [
+        144.0,
+        546.0,
+        148.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Mutation",
+      "id": "Mutation",
+      "class": null,
+      "bbox": [
+        421.0,
+        118.0,
+        84.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Implementation of the fitness function",
+      "id": "Implementation of the fitness function",
+      "class": null,
+      "bbox": [
+        423.0,
+        260.0,
+        170.0,
+        48.0
+      ]
+    },
+    {
+      "text": "update fitness value",
+      "id": "update fitness value",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null,
+      "bbox": [
+        419.5,
+        577.5,
+        61.0,
+        21.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Generate initial population",
+      "tail": "Initialize AG",
+      "label": null
+    },
+    {
+      "head": "Selection based on the fitness values",
+      "tail": "Generate initial population",
+      "label": null
+    },
+    {
+      "head": "Connection",
+      "tail": "Selection based on the fitness values",
+      "label": null
+    },
+    {
+      "head": "Mutation",
+      "tail": "Connection",
+      "label": null
+    },
+    {
+      "head": "Implementation of the fitness function",
+      "tail": "Mutation",
+      "label": null
+    },
+    {
+      "head": "update fitness value",
+      "tail": "Implementation of the fitness function",
+      "label": null
+    },
+    {
+      "head": "Mutation",
+      "tail": "update fitness value",
+      "label": "No",
+      "bbox": [
+        560.0,
+        347.5,
+        32.0,
+        21.0
+      ]
+    },
+    {
+      "head": "Finish",
+      "tail": "update fitness value",
+      "label": "Yes",
+      "bbox": [
+        455.0,
+        514.5,
+        34.0,
+        23.0
+      ]
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input data user",
+      "id": "Input data user",
+      "class": null
+    },
+    {
+      "text": "Enter ID",
+      "id": "Enter ID",
+      "class": null
+    },
+    {
+      "text": "Authentication",
+      "id": "Authentication",
+      "class": null
+    },
+    {
+      "text": "Memory",
+      "id": "Memory",
+      "class": null
+    },
+    {
+      "text": "Result",
+      "id": "Result",
+      "class": null
+    },
+    {
+      "text": "end",
+      "id": "end",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input data user",
+      "label": null
+    },
+    {
+      "tail": "Input data user",
+      "head": "Enter ID",
+      "label": null
+    },
+    {
+      "tail": "Enter ID",
+      "head": "Authentication",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "Memory",
+      "label": null
+    },
+    {
+      "tail": "Memory",
+      "head": "Result",
+      "label": null
+    },
+    {
+      "tail": "Result",
+      "head": "end",
+      "label": null
+    }
+  ],
+  "groups": []
+}

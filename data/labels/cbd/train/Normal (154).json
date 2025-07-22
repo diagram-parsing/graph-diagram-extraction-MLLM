@@ -1,0 +1,157 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Do you understand English?",
+      "id": "Do you understand English?",
+      "class": null
+    },
+    {
+      "text": "GOOD",
+      "id": "GOOD",
+      "class": null
+    },
+    {
+      "text": "LET'S GO DRINK",
+      "id": "LET'S GO DRINK",
+      "class": null
+    },
+    {
+      "text": "I should go home",
+      "id": "I should go home",
+      "class": null
+    },
+    {
+      "text": "Okay, YOU SEE THE LINE LABELED \"YES\"?",
+      "id": "Okay, YOU SEE THE LINE LABELED \"YES\"?",
+      "class": null
+    },
+    {
+      "text": "...AND YOU CAN SEE THE ONES LABELED \"NO\"?",
+      "id": "...AND YOU CAN SEE THE ONES LABELED \"NO\"?",
+      "class": null
+    },
+    {
+      "text": "BUT YOU JUST FOLLOWED THEM TWICE",
+      "id": "BUT YOU JUST FOLLOWED THEM TWICE",
+      "class": null
+    },
+    {
+      "text": "BUT YOU SEE THE ONES LABELED \"NO\".",
+      "id": "BUT YOU SEE THE ONES LABELED \"NO\".",
+      "class": null
+    },
+    {
+      "text": "Okay",
+      "id": "Okay",
+      "class": null
+    },
+    {
+      "text": "LISTEN.",
+      "id": "LISTEN.",
+      "class": null
+    },
+    {
+      "text": "I HATE YOU.",
+      "id": "I HATE YOU.",
+      "class": null
+    },
+    {
+      "text": "(THAT WASN'T A QUESTION.)",
+      "id": "(THAT WASN'T A QUESTION.)",
+      "class": null
+    },
+    {
+      "text": "SCREW IT.",
+      "id": "SCREW IT.",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Do you understand English?",
+      "label": null
+    },
+    {
+      "tail": "Do you understand English?",
+      "head": "GOOD",
+      "label": "YES"
+    },
+    {
+      "tail": "GOOD",
+      "head": "LET'S GO DRINK",
+      "label": null
+    },
+    {
+      "tail": "LET'S GO DRINK",
+      "head": "I should go home",
+      "label": "6 DRINKS"
+    },
+    {
+      "tail": "Do you understand English?",
+      "head": "Okay, YOU SEE THE LINE LABELED \"YES\"?",
+      "label": "NO"
+    },
+    {
+      "tail": "Okay, YOU SEE THE LINE LABELED \"YES\"?",
+      "head": "...AND YOU CAN SEE THE ONES LABELED \"NO\"?",
+      "label": "YES"
+    },
+    {
+      "tail": "...AND YOU CAN SEE THE ONES LABELED \"NO\"?",
+      "head": "GOOD",
+      "label": "YES"
+    },
+    {
+      "tail": "...AND YOU CAN SEE THE ONES LABELED \"NO\"?",
+      "head": "BUT YOU JUST FOLLOWED THEM TWICE",
+      "label": "NO"
+    },
+    {
+      "tail": "Okay, YOU SEE THE LINE LABELED \"YES\"?",
+      "head": "BUT YOU SEE THE ONES LABELED \"NO\".",
+      "label": "NO"
+    },
+    {
+      "tail": "BUT YOU SEE THE ONES LABELED \"NO\".",
+      "head": "Okay",
+      "label": "YES"
+    },
+    {
+      "tail": "BUT YOU SEE THE ONES LABELED \"NO\".",
+      "head": "LISTEN.",
+      "label": "NO"
+    },
+    {
+      "tail": "LISTEN.",
+      "head": "I HATE YOU.",
+      "label": null
+    },
+    {
+      "tail": "BUT YOU JUST FOLLOWED THEM TWICE",
+      "head": "(THAT WASN'T A QUESTION.)",
+      "label": "YES"
+    },
+    {
+      "tail": "BUT YOU JUST FOLLOWED THEM TWICE",
+      "head": "(THAT WASN'T A QUESTION.)",
+      "label": "NO"
+    },
+    {
+      "tail": "(THAT WASN'T A QUESTION.)",
+      "head": "SCREW IT.",
+      "label": null
+    },
+    {
+      "tail": "SCREW IT.",
+      "head": "LET'S GO DRINK",
+      "label": null
+    }
+  ],
+  "groups": []
+}

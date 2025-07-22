@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "I want this?",
+      "id": "I want this?",
+      "class": null
+    },
+    {
+      "text": "Don't Do It",
+      "id": "Don't Do It",
+      "class": null
+    },
+    {
+      "text": "End in climax?",
+      "id": "End in climax?",
+      "class": null
+    },
+    {
+      "text": "Do it",
+      "id": "Do it",
+      "class": null
+    },
+    {
+      "text": "Good Movie?",
+      "id": "Good Movie?",
+      "class": null
+    },
+    {
+      "text": "Do It",
+      "id": "Do It",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "I want this?",
+      "label": null
+    },
+    {
+      "tail": "I want this?",
+      "head": "Don't Do It",
+      "label": "NO"
+    },
+    {
+      "tail": "I want this?",
+      "head": "End in climax?",
+      "label": "YES"
+    },
+    {
+      "tail": "End in climax?",
+      "head": "Do it",
+      "label": "NO"
+    },
+    {
+      "tail": "End in climax?",
+      "head": "Good Movie?",
+      "label": "YES"
+    },
+    {
+      "tail": "Good Movie?",
+      "head": "Don't Do It",
+      "label": "NO"
+    },
+    {
+      "tail": "Good Movie?",
+      "head": "Do It",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

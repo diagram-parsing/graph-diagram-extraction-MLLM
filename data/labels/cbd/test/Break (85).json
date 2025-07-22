@@ -1,0 +1,72 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        77.5,
+        26.5,
+        37.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null,
+      "bbox": [
+        81.5,
+        78.5,
+        33.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Login correct?",
+      "id": "Login correct?",
+      "class": null,
+      "bbox": [
+        83.0,
+        139.0,
+        42.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Front Page",
+      "id": "Front Page",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Login",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Login correct?",
+      "tail": "Login",
+      "label": null
+    },
+    {
+      "head": "Login",
+      "tail": "Login correct?",
+      "label": "Correct",
+      "bbox": [
+        31.5,
+        97.5,
+        37.0,
+        13.0
+      ]
+    },
+    {
+      "head": "Front Page",
+      "tail": "Login correct?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

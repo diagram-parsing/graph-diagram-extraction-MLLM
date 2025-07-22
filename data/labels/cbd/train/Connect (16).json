@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Initiate agent",
+      "id": "Initiate agent",
+      "class": null
+    },
+    {
+      "text": "Evaluate the fitness for each agent",
+      "id": "Evaluate the fitness for each agent",
+      "class": null
+    },
+    {
+      "text": "Update values",
+      "id": "Update values",
+      "class": null
+    },
+    {
+      "text": "Claculate M and a for each agent",
+      "id": "Claculate M and a for each agent",
+      "class": null
+    },
+    {
+      "text": "Update velocity and position",
+      "id": "Update velocity and position",
+      "class": null
+    },
+    {
+      "text": "Meeting end of criterion?",
+      "id": "Meeting end of criterion?",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initiate agent",
+      "head": "Evaluate the fitness for each agent",
+      "label": null
+    },
+    {
+      "tail": "Evaluate the fitness for each agent",
+      "head": "Update values",
+      "label": null
+    },
+    {
+      "tail": "Update values",
+      "head": "Claculate M and a for each agent",
+      "label": null
+    },
+    {
+      "tail": "Claculate M and a for each agent",
+      "head": "Update velocity and position",
+      "label": null
+    },
+    {
+      "tail": "Update velocity and position",
+      "head": "Meeting end of criterion?",
+      "label": null
+    },
+    {
+      "tail": "Meeting end of criterion?",
+      "head": "Evaluate the fitness for each agent",
+      "label": "No"
+    },
+    {
+      "tail": "Meeting end of criterion?",
+      "head": "Finish",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

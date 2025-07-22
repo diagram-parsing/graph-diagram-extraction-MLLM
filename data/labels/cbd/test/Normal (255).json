@@ -1,0 +1,99 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Input Image",
+      "id": "Input Image",
+      "class": null,
+      "bbox": [
+        118.5,
+        114.0,
+        69.0,
+        56.0
+      ]
+    },
+    {
+      "text": "Preprocess",
+      "id": "Preprocess",
+      "class": null,
+      "bbox": [
+        281.0,
+        113.0,
+        120.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Dilation&Erosion",
+      "id": "Dilation&Erosion",
+      "class": null,
+      "bbox": [
+        445.5,
+        112.5,
+        105.0,
+        57.0
+      ]
+    },
+    {
+      "text": "Edge Detection",
+      "id": "Edge Detection",
+      "class": null,
+      "bbox": [
+        446.5,
+        224.5,
+        105.0,
+        57.0
+      ]
+    },
+    {
+      "text": "THC",
+      "id": "THC",
+      "class": null,
+      "bbox": [
+        282.5,
+        227.5,
+        49.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Locate",
+      "id": "Locate",
+      "class": null,
+      "bbox": [
+        120.0,
+        226.0,
+        72.0,
+        24.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Preprocess",
+      "tail": "Input Image",
+      "label": null
+    },
+    {
+      "head": "Dilation&Erosion",
+      "tail": "Preprocess",
+      "label": null
+    },
+    {
+      "head": "Edge Detection",
+      "tail": "Dilation&Erosion",
+      "label": null
+    },
+    {
+      "head": "THC",
+      "tail": "Edge Detection",
+      "label": null
+    },
+    {
+      "head": "Locate",
+      "tail": "THC",
+      "label": null
+    }
+  ],
+  "groups": []
+}

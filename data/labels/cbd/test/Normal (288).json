@@ -1,0 +1,100 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Fix the object",
+      "id": "Fix the object",
+      "class": null,
+      "bbox": [
+        880.5,
+        219.0,
+        261.0,
+        38.0
+      ]
+    },
+    {
+      "text": "Measure the part",
+      "id": "Measure the part",
+      "class": null,
+      "bbox": [
+        876.5,
+        498.5,
+        285.0,
+        39.0
+      ]
+    },
+    {
+      "text": "Fulfill?",
+      "id": "Fulfill?",
+      "class": null,
+      "bbox": [
+        864.5,
+        789.0,
+        133.0,
+        44.0
+      ]
+    },
+    {
+      "text": "Modify",
+      "id": "Modify",
+      "class": null,
+      "bbox": [
+        443.5,
+        1183.5,
+        195.0,
+        65.0
+      ]
+    },
+    {
+      "text": "Place fixture into production",
+      "id": "Place fixture into production",
+      "class": null,
+      "bbox": [
+        1307.0,
+        1188.0,
+        270.0,
+        82.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Measure the part",
+      "tail": "Fix the object",
+      "label": null
+    },
+    {
+      "head": "Fulfill?",
+      "tail": "Measure the part",
+      "label": null
+    },
+    {
+      "head": "Modify",
+      "tail": "Fulfill?",
+      "label": "No",
+      "bbox": [
+        603.0,
+        774.0,
+        58.0,
+        44.0
+      ]
+    },
+    {
+      "head": "Place fixture into production",
+      "tail": "Fulfill?",
+      "label": "Yes",
+      "bbox": [
+        1151.5,
+        773.5,
+        67.0,
+        43.0
+      ]
+    },
+    {
+      "head": "Fix the object",
+      "tail": "Modify",
+      "label": null
+    }
+  ],
+  "groups": []
+}

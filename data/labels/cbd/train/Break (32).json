@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Door bell",
+      "id": "Door bell",
+      "class": null
+    },
+    {
+      "text": "Ready to face the world?",
+      "id": "Ready to face the world?",
+      "class": null
+    },
+    {
+      "text": "Get Up",
+      "id": "Get Up",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Ignore",
+      "id": "Ignore",
+      "class": null
+    },
+    {
+      "text": "Delay inevitable for 5 minutes",
+      "id": "Delay inevitable for 5 minutes",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Door bell",
+      "label": null
+    },
+    {
+      "tail": "Ready to face the world?",
+      "head": "Get Up",
+      "label": "Yes"
+    },
+    {
+      "tail": "Get Up",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Ready to face the world?",
+      "head": "Ignore",
+      "label": "No"
+    },
+    {
+      "tail": "Ignore",
+      "head": "Delay inevitable for 5 minutes",
+      "label": null
+    },
+    {
+      "tail": "Delay inevitable for 5 minutes",
+      "head": "Door bell",
+      "label": null
+    }
+  ],
+  "groups": []
+}

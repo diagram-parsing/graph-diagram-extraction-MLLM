@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "A=1",
+      "id": "A=1",
+      "class": null
+    },
+    {
+      "text": "A<=10?",
+      "id": "A<=10?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Print A",
+      "id": "Print A",
+      "class": null
+    },
+    {
+      "text": "A=A+1",
+      "id": "A=A+1",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "A=1",
+      "label": null
+    },
+    {
+      "tail": "A=1",
+      "head": "A<=10?",
+      "label": null
+    },
+    {
+      "tail": "A<=10?",
+      "head": "End",
+      "label": "F"
+    },
+    {
+      "tail": "A<=10?",
+      "head": "Print A",
+      "label": "T"
+    },
+    {
+      "tail": "Print A",
+      "head": "A=A+1",
+      "label": null
+    },
+    {
+      "tail": "A=A+1",
+      "head": "A<=10?",
+      "label": null
+    },
+    {
+      "tail": "A=A+1",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

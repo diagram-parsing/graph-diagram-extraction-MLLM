@@ -1,0 +1,121 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Wide a wait(a)",
+      "id": "Wide a wait(a)",
+      "class": null
+    },
+    {
+      "text": "Thread d Wait(d)",
+      "id": "Thread d Wait(d)",
+      "class": null
+    },
+    {
+      "text": "Wide b wait(b)",
+      "id": "Wide b wait(b)",
+      "class": null
+    },
+    {
+      "text": "Wide c wait(c)",
+      "id": "Wide c wait(c)",
+      "class": null,
+      "bbox": [
+        2440.0,
+        629.5,
+        286.0,
+        205.0
+      ]
+    },
+    {
+      "text": "Wide e Wait(e)",
+      "id": "Wide e Wait(e)",
+      "class": null
+    },
+    {
+      "text": "Wide g wait(g)",
+      "id": "Wide g wait(g)",
+      "class": null,
+      "bbox": [
+        266.5,
+        1956.5,
+        289.0,
+        213.0
+      ]
+    },
+    {
+      "text": "Wide f wait(f)",
+      "id": "Wide f wait(f)",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Thread d Wait(d)",
+      "tail": "Wide a wait(a)",
+      "label": "queueA",
+      "bbox": [
+        672.5,
+        1157.0,
+        315.0,
+        94.0
+      ]
+    },
+    {
+      "head": "Thread d Wait(d)",
+      "tail": "Wide b wait(b)",
+      "label": "queueB",
+      "bbox": [
+        1659.0,
+        947.0,
+        312.0,
+        88.0
+      ]
+    },
+    {
+      "head": "Thread d Wait(d)",
+      "tail": "Wide c wait(c)",
+      "label": "queueC",
+      "bbox": [
+        2170.5,
+        1155.5,
+        315.0,
+        97.0
+      ]
+    },
+    {
+      "head": "Wide e Wait(e)",
+      "tail": "Thread d Wait(d)",
+      "label": "queueC",
+      "bbox": [
+        2170.5,
+        1155.5,
+        315.0,
+        97.0
+      ]
+    },
+    {
+      "head": "Wide g wait(g)",
+      "tail": "Wide e Wait(e)",
+      "label": "queueG",
+      "bbox": [
+        787.5,
+        1812.0,
+        321.0,
+        94.0
+      ]
+    },
+    {
+      "head": "Wide e Wait(e)",
+      "tail": "Wide f wait(f)",
+      "label": "queueF",
+      "bbox": [
+        2052.5,
+        1812.0,
+        303.0,
+        88.0
+      ]
+    }
+  ],
+  "groups": []
+}

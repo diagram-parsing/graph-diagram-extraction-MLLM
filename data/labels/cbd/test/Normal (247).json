@@ -1,0 +1,93 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "A",
+      "id": "A",
+      "class": null
+    },
+    {
+      "text": "Process step 3",
+      "id": "Process step 3",
+      "class": null,
+      "bbox": [
+        94.0,
+        106.0,
+        80.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Process step 4",
+      "id": "Process step 4",
+      "class": null,
+      "bbox": [
+        95.0,
+        174.0,
+        82.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Process step 5",
+      "id": "Process step 5",
+      "class": null,
+      "bbox": [
+        95.0,
+        241.5,
+        84.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Process step 6",
+      "id": "Process step 6",
+      "class": null,
+      "bbox": [
+        94.5,
+        309.5,
+        81.0,
+        13.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        96.0,
+        377.5,
+        24.0,
+        15.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Process step 3",
+      "tail": "A",
+      "label": null
+    },
+    {
+      "head": "Process step 4",
+      "tail": "Process step 3",
+      "label": null
+    },
+    {
+      "head": "Process step 5",
+      "tail": "Process step 4",
+      "label": null
+    },
+    {
+      "head": "Process step 6",
+      "tail": "Process step 5",
+      "label": null
+    },
+    {
+      "head": "End",
+      "tail": "Process step 6",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Hans Albert Einstein",
+      "id": "Hans Albert Einstein",
+      "class": null
+    },
+    {
+      "text": "Albert Einstein",
+      "id": "Albert Einstein",
+      "class": null
+    },
+    {
+      "text": "Hermann Einstein",
+      "id": "Hermann Einstein",
+      "class": null
+    },
+    {
+      "text": "Mileva Maric",
+      "id": "Mileva Maric",
+      "class": null
+    },
+    {
+      "text": "German Empire",
+      "id": "German Empire",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Hans Albert Einstein",
+      "head": "Albert Einstein",
+      "label": "son of"
+    },
+    {
+      "tail": "Albert Einstein",
+      "head": "Hermann Einstein",
+      "label": "Son of"
+    },
+    {
+      "tail": "Mileva Maric",
+      "head": "Albert Einstein",
+      "label": "Wife of"
+    },
+    {
+      "tail": "Albert Einstein",
+      "head": "German Empire",
+      "label": "Born In"
+    }
+  ],
+  "groups": []
+}

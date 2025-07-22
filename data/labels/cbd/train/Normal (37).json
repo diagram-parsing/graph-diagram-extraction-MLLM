@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Are you happy?",
+      "id": "Are you happy?",
+      "class": null
+    },
+    {
+      "text": "Make others happy",
+      "id": "Make others happy",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    },
+    {
+      "text": "Want to be happy?",
+      "id": "Want to be happy?",
+      "class": null
+    },
+    {
+      "text": "Ask someone",
+      "id": "Ask someone",
+      "class": null
+    },
+    {
+      "text": "all over",
+      "id": "all over",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Are you happy?",
+      "label": null
+    },
+    {
+      "tail": "Are you happy?",
+      "head": "Make others happy",
+      "label": "Yes"
+    },
+    {
+      "tail": "Make others happy",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Are you happy?",
+      "head": "Want to be happy?",
+      "label": "No"
+    },
+    {
+      "tail": "Want to be happy?",
+      "head": "Ask someone",
+      "label": "Yes"
+    },
+    {
+      "tail": "Ask someone",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Want to be happy?",
+      "head": "all over",
+      "label": "No"
+    },
+    {
+      "tail": "all over",
+      "head": "Start",
+      "label": null
+    }
+  ],
+  "groups": []
+}

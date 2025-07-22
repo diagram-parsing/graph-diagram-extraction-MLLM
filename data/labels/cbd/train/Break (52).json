@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "text": "Inferred OD",
+      "id": "Inferred OD",
+      "class": null
+    },
+    {
+      "text": "Get array of paths from O to D",
+      "id": "Get array of paths from O to D",
+      "class": null
+    },
+    {
+      "text": "get array of paths from O to D",
+      "id": "get array of paths from O to D",
+      "class": null
+    },
+    {
+      "text": "Find the best route",
+      "id": "Find the best route",
+      "class": null
+    },
+    {
+      "text": "Trip exists?",
+      "id": "Trip exists?",
+      "class": null
+    },
+    {
+      "text": "Arrival Time Inference Fails",
+      "id": "Arrival Time Inference Fails",
+      "class": null
+    },
+    {
+      "text": "Find arrival time at segment alighting location",
+      "id": "Find arrival time at segment alighting location",
+      "class": null
+    },
+    {
+      "text": "Arrival time?",
+      "id": "Arrival time?",
+      "class": null
+    },
+    {
+      "text": "Next trip",
+      "id": "Next trip",
+      "class": null
+    },
+    {
+      "text": "Final segment",
+      "id": "Final segment",
+      "class": null
+    },
+    {
+      "text": "Check another one",
+      "id": "Check another one",
+      "class": null
+    },
+    {
+      "text": "alighting time + egress time = arrival time",
+      "id": "alighting time + egress time = arrival time",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Inferred OD",
+      "head": "Get array of paths from O to D",
+      "label": null
+    },
+    {
+      "tail": "get array of paths from O to D",
+      "head": "Find the best route",
+      "label": null
+    },
+    {
+      "tail": "Find the best route",
+      "head": "Trip exists?",
+      "label": null
+    },
+    {
+      "tail": "Trip exists?",
+      "head": "Arrival Time Inference Fails",
+      "label": "No"
+    },
+    {
+      "tail": "Trip exists?",
+      "head": "Find arrival time at segment alighting location",
+      "label": "Yes"
+    },
+    {
+      "tail": "Find arrival time at segment alighting location",
+      "head": "Arrival time?",
+      "label": null
+    },
+    {
+      "tail": "Arrival time?",
+      "head": "Next trip",
+      "label": "No"
+    },
+    {
+      "tail": "Next trip",
+      "head": "Trip exists?",
+      "label": null
+    },
+    {
+      "tail": "Arrival time?",
+      "head": "Final segment",
+      "label": "Yes"
+    },
+    {
+      "tail": "Final segment",
+      "head": "Check another one",
+      "label": "No"
+    },
+    {
+      "tail": "Check another one",
+      "head": "Find the best route",
+      "label": null
+    },
+    {
+      "tail": "Final segment",
+      "head": "alighting time + egress time = arrival time",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

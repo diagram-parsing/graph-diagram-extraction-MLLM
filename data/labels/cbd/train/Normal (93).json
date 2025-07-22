@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Signal",
+      "id": "Signal",
+      "class": null
+    },
+    {
+      "text": "Mapping",
+      "id": "Mapping",
+      "class": null
+    },
+    {
+      "text": "Amplification",
+      "id": "Amplification",
+      "class": null
+    },
+    {
+      "text": "Induction",
+      "id": "Induction",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Signal",
+      "head": "Mapping",
+      "label": null
+    },
+    {
+      "tail": "Mapping",
+      "head": "Amplification",
+      "label": null
+    },
+    {
+      "tail": "Amplification",
+      "head": "Induction",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Signal Conditioning",
+      "id": "Signal Conditioning",
+      "class": null
+    },
+    {
+      "text": "CPU",
+      "id": "CPU",
+      "class": null
+    },
+    {
+      "text": "Power Electronics",
+      "id": "Power Electronics",
+      "class": null
+    },
+    {
+      "text": "Power Supply",
+      "id": "Power Supply",
+      "class": null
+    },
+    {
+      "text": "Actuator Power Supply",
+      "id": "Actuator Power Supply",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input",
+      "head": "Signal Conditioning",
+      "label": null
+    },
+    {
+      "tail": "Signal Conditioning",
+      "head": "CPU",
+      "label": null
+    },
+    {
+      "tail": "CPU",
+      "head": "Power Electronics",
+      "label": null
+    },
+    {
+      "tail": "Power Supply",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Power Supply",
+      "head": "Signal Conditioning",
+      "label": null
+    },
+    {
+      "tail": "Power Supply",
+      "head": "CPU",
+      "label": null
+    },
+    {
+      "tail": "Actuator Power Supply",
+      "head": "Power Electronics",
+      "label": null
+    }
+  ],
+  "groups": []
+}

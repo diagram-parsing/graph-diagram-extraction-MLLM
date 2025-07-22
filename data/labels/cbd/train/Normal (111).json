@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "idea",
+      "id": "idea",
+      "class": null
+    },
+    {
+      "text": "Program",
+      "id": "Program",
+      "class": null
+    },
+    {
+      "text": "Python",
+      "id": "Python",
+      "class": null
+    },
+    {
+      "text": "C++",
+      "id": "C++",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "idea",
+      "head": "Program",
+      "label": null
+    },
+    {
+      "tail": "Program",
+      "head": "Python",
+      "label": null
+    },
+    {
+      "tail": "Program",
+      "head": "C++",
+      "label": null
+    }
+  ],
+  "groups": []
+}

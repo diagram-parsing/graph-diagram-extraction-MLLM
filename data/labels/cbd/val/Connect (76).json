@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Analysis",
+      "id": "Analysis",
+      "class": null
+    },
+    {
+      "text": "18 included in analysis",
+      "id": "18 included in analysis",
+      "class": null
+    },
+    {
+      "text": "Some are excluded",
+      "id": "Some are excluded",
+      "class": null
+    },
+    {
+      "text": "Prognostic",
+      "id": "Prognostic",
+      "class": null
+    },
+    {
+      "text": "Predictive",
+      "id": "Predictive",
+      "class": null
+    },
+    {
+      "text": "Response",
+      "id": "Response",
+      "class": null
+    },
+    {
+      "text": "Response to therapy",
+      "id": "Response to therapy",
+      "class": null
+    },
+    {
+      "text": "Outcome from surgical",
+      "id": "Outcome from surgical",
+      "class": null
+    },
+    {
+      "text": "response to radiotherapy",
+      "id": "response to radiotherapy",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Analysis",
+      "head": "18 included in analysis",
+      "label": null
+    },
+    {
+      "tail": "Analysis",
+      "head": "Some are excluded",
+      "label": null
+    },
+    {
+      "tail": "18 included in analysis",
+      "head": "Prognostic",
+      "label": null
+    },
+    {
+      "tail": "18 included in analysis",
+      "head": "Predictive",
+      "label": null
+    },
+    {
+      "tail": "Predictive",
+      "head": "Response",
+      "label": null
+    },
+    {
+      "tail": "Predictive",
+      "head": "Response to therapy",
+      "label": null
+    },
+    {
+      "tail": "Predictive",
+      "head": "Outcome from surgical",
+      "label": null
+    },
+    {
+      "tail": "Predictive",
+      "head": "response to radiotherapy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

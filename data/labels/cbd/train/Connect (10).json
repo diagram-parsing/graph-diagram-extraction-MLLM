@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Memory",
+      "id": "Memory",
+      "class": null
+    },
+    {
+      "text": "Tx: Epely maneuver",
+      "id": "Tx: Epely maneuver",
+      "class": null
+    },
+    {
+      "text": "Positional test",
+      "id": "Positional test",
+      "class": null
+    },
+    {
+      "text": "End of study",
+      "id": "End of study",
+      "class": null
+    },
+    {
+      "text": "Random allocation",
+      "id": "Random allocation",
+      "class": null
+    },
+    {
+      "text": "Malware Test",
+      "id": "Malware Test",
+      "class": null
+    },
+    {
+      "text": "Tx: Semont maneuver",
+      "id": "Tx: Semont maneuver",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Memory",
+      "head": "Tx: Epely maneuver",
+      "label": null
+    },
+    {
+      "tail": "Tx: Epely maneuver",
+      "head": "Positional test",
+      "label": null
+    },
+    {
+      "tail": "Positional test",
+      "head": "End of study",
+      "label": "Resolution of the PC-BPPV"
+    },
+    {
+      "tail": "Positional test",
+      "head": "Random allocation",
+      "label": "Treatment failure"
+    },
+    {
+      "tail": "Random allocation",
+      "head": "Malware Test",
+      "label": null
+    },
+    {
+      "tail": "Random allocation",
+      "head": "Tx: Semont maneuver",
+      "label": null
+    },
+    {
+      "tail": "Malware Test",
+      "head": "Positional test",
+      "label": null
+    },
+    {
+      "tail": "Tx: Semont maneuver",
+      "head": "Positional test",
+      "label": null
+    },
+    {
+      "tail": "Positional test",
+      "head": "End of study",
+      "label": null
+    }
+  ],
+  "groups": []
+}

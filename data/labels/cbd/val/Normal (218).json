@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initial population",
+      "id": "Initial population",
+      "class": null
+    },
+    {
+      "text": "Controller",
+      "id": "Controller",
+      "class": null
+    },
+    {
+      "text": "Selection",
+      "id": "Selection",
+      "class": null
+    },
+    {
+      "text": "Fixed",
+      "id": "Fixed",
+      "class": null
+    },
+    {
+      "text": "Mutation",
+      "id": "Mutation",
+      "class": null
+    },
+    {
+      "text": "Has the population converged?",
+      "id": "Has the population converged?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initial population",
+      "label": null
+    },
+    {
+      "tail": "Initial population",
+      "head": "Controller",
+      "label": null
+    },
+    {
+      "tail": "Controller",
+      "head": "Selection",
+      "label": null
+    },
+    {
+      "tail": "Selection",
+      "head": "Fixed",
+      "label": null
+    },
+    {
+      "tail": "Fixed",
+      "head": "Mutation",
+      "label": null
+    },
+    {
+      "tail": "Mutation",
+      "head": "Has the population converged?",
+      "label": null
+    },
+    {
+      "tail": "Has the population converged?",
+      "head": "Controller",
+      "label": "No"
+    },
+    {
+      "tail": "Has the population converged?",
+      "head": "End",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

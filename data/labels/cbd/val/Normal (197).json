@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Advance prisons",
+      "id": "Advance prisons",
+      "class": null
+    },
+    {
+      "text": "DIG Prisons",
+      "id": "DIG Prisons",
+      "class": null
+    },
+    {
+      "text": "Chief Superintendent",
+      "id": "Chief Superintendent",
+      "class": null
+    },
+    {
+      "text": "Superintendent",
+      "id": "Superintendent",
+      "class": null
+    },
+    {
+      "text": "Assistant Superintendent",
+      "id": "Assistant Superintendent",
+      "class": null
+    },
+    {
+      "text": "PoliceMan",
+      "id": "PoliceMan",
+      "class": null
+    },
+    {
+      "text": "Watchman",
+      "id": "Watchman",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Advance prisons",
+      "head": "DIG Prisons",
+      "label": null
+    },
+    {
+      "tail": "DIG Prisons",
+      "head": "Chief Superintendent",
+      "label": null
+    },
+    {
+      "tail": "Chief Superintendent",
+      "head": "Superintendent",
+      "label": null
+    },
+    {
+      "tail": "Superintendent",
+      "head": "Assistant Superintendent",
+      "label": null
+    },
+    {
+      "tail": "Assistant Superintendent",
+      "head": "PoliceMan",
+      "label": null
+    },
+    {
+      "tail": "PoliceMan",
+      "head": "Watchman",
+      "label": null
+    }
+  ],
+  "groups": []
+}

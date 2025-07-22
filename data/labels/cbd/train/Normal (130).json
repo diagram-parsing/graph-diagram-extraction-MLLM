@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "C<=0?",
+      "id": "C<=0?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    },
+    {
+      "text": "C=C+1",
+      "id": "C=C+1",
+      "class": null
+    },
+    {
+      "text": "C<=10?",
+      "id": "C<=10?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "C<=0?",
+      "label": null
+    },
+    {
+      "tail": "C<=0?",
+      "head": "End",
+      "label": "F"
+    },
+    {
+      "tail": "C<=0?",
+      "head": "Output",
+      "label": "T"
+    },
+    {
+      "tail": "Output",
+      "head": "C=C+1",
+      "label": null
+    },
+    {
+      "tail": "C=C+1",
+      "head": "C<=10?",
+      "label": null
+    },
+    {
+      "tail": "C=C+1",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

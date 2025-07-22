@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "Order palced",
+      "id": "Order palced",
+      "class": null
+    },
+    {
+      "text": "Transaction started in order system",
+      "id": "Transaction started in order system",
+      "class": null
+    },
+    {
+      "text": "Verification",
+      "id": "Verification",
+      "class": null
+    },
+    {
+      "text": "Credit card valid?",
+      "id": "Credit card valid?",
+      "class": null
+    },
+    {
+      "text": "Retry",
+      "id": "Retry",
+      "class": null
+    },
+    {
+      "text": "Money?",
+      "id": "Money?",
+      "class": null
+    },
+    {
+      "text": "Transaction completed in order system",
+      "id": "Transaction completed in order system",
+      "class": null
+    },
+    {
+      "text": "Customer Information Database",
+      "id": "Customer Information Database",
+      "class": null
+    },
+    {
+      "text": "confirmation bill",
+      "id": "confirmation bill",
+      "class": null
+    },
+    {
+      "text": "Thank you page",
+      "id": "Thank you page",
+      "class": null
+    },
+    {
+      "text": "Entries are reconciled at end of month",
+      "id": "Entries are reconciled at end of month",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Order palced",
+      "head": "Transaction started in order system",
+      "label": null
+    },
+    {
+      "tail": "Transaction started in order system",
+      "head": "Verification",
+      "label": null
+    },
+    {
+      "tail": "Verification",
+      "head": "Credit card valid?",
+      "label": null
+    },
+    {
+      "tail": "Credit card valid?",
+      "head": "Retry",
+      "label": "NO"
+    },
+    {
+      "tail": "Credit card valid?",
+      "head": "Money?",
+      "label": "YES"
+    },
+    {
+      "tail": "Money?",
+      "head": "Retry",
+      "label": "NO"
+    },
+    {
+      "tail": "Retry",
+      "head": "Transaction started in order system",
+      "label": null
+    },
+    {
+      "tail": "Money?",
+      "head": "Transaction completed in order system",
+      "label": "YES"
+    },
+    {
+      "tail": "Transaction completed in order system",
+      "head": "Customer Information Database",
+      "label": null
+    },
+    {
+      "tail": "Transaction completed in order system",
+      "head": "confirmation bill",
+      "label": null
+    },
+    {
+      "tail": "Transaction completed in order system",
+      "head": "Thank you page",
+      "label": null
+    },
+    {
+      "tail": "Thank you page",
+      "head": "Entries are reconciled at end of month",
+      "label": null
+    }
+  ],
+  "groups": []
+}

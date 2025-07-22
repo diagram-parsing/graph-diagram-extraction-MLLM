@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Interested in watching movie?",
+      "id": "Interested in watching movie?",
+      "class": null
+    },
+    {
+      "text": "Well, go read a book then.",
+      "id": "Well, go read a book then.",
+      "class": null
+    },
+    {
+      "text": "Know the story?",
+      "id": "Know the story?",
+      "class": null
+    },
+    {
+      "text": "Think about what part of the process you need to see",
+      "id": "Think about what part of the process you need to see",
+      "class": null
+    },
+    {
+      "text": "Let's start",
+      "id": "Let's start",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Interested in watching movie?",
+      "label": null
+    },
+    {
+      "tail": "Interested in watching movie?",
+      "head": "Well, go read a book then.",
+      "label": "no"
+    },
+    {
+      "tail": "Interested in watching movie?",
+      "head": "Know the story?",
+      "label": "yes"
+    },
+    {
+      "tail": "Know the story?",
+      "head": "Think about what part of the process you need to see",
+      "label": "no"
+    },
+    {
+      "tail": "Know the story?",
+      "head": "Let's start",
+      "label": "yes"
+    }
+  ],
+  "groups": []
+}

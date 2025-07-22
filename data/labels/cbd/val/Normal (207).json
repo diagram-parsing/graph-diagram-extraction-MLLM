@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Design a Postcard",
+      "id": "Design a Postcard",
+      "class": null
+    },
+    {
+      "text": "Is the design based on a template?",
+      "id": "Is the design based on a template?",
+      "class": null
+    },
+    {
+      "text": "Yes",
+      "id": "Yes",
+      "class": null
+    },
+    {
+      "text": "No",
+      "id": "No",
+      "class": null
+    },
+    {
+      "text": "Select the specified design template",
+      "id": "Select the specified design template",
+      "class": null
+    },
+    {
+      "text": "Draft a design based on best practices",
+      "id": "Draft a design based on best practices",
+      "class": null
+    },
+    {
+      "text": "Modification",
+      "id": "Modification",
+      "class": null
+    },
+    {
+      "text": "Offer",
+      "id": "Offer",
+      "class": null
+    },
+    {
+      "text": "Submit for approval",
+      "id": "Submit for approval",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Design a Postcard",
+      "head": "Is the design based on a template?",
+      "label": null
+    },
+    {
+      "tail": "Is the design based on a template?",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "Is the design based on a template?",
+      "head": "No",
+      "label": null
+    },
+    {
+      "tail": "Yes",
+      "head": "Select the specified design template",
+      "label": null
+    },
+    {
+      "tail": "No",
+      "head": "Draft a design based on best practices",
+      "label": null
+    },
+    {
+      "tail": "Select the specified design template",
+      "head": "Modification",
+      "label": null
+    },
+    {
+      "tail": "Draft a design based on best practices",
+      "head": "Offer",
+      "label": null
+    },
+    {
+      "tail": "Modification",
+      "head": "Submit for approval",
+      "label": null
+    },
+    {
+      "tail": "Offer",
+      "head": "Submit for approval",
+      "label": null
+    }
+  ],
+  "groups": []
+}

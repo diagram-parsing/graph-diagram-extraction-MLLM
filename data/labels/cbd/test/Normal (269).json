@@ -1,0 +1,67 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Take Order",
+      "id": "Take Order",
+      "class": null,
+      "bbox": [
+        134.5,
+        124.5,
+        95.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Order Meets Specification",
+      "id": "Order Meets Specification",
+      "class": null,
+      "bbox": [
+        131.5,
+        254.0,
+        111.0,
+        44.0
+      ]
+    },
+    {
+      "text": "Order Decline",
+      "id": "Order Decline",
+      "class": null,
+      "bbox": [
+        294.5,
+        389.0,
+        117.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Take Payment",
+      "id": "Take Payment",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Order Meets Specification",
+      "tail": "Take Order",
+      "label": null
+    },
+    {
+      "head": "Order Decline",
+      "tail": "Order Meets Specification",
+      "label": "No",
+      "bbox": [
+        267.5,
+        309.0,
+        27.0,
+        18.0
+      ]
+    },
+    {
+      "head": "Take Payment",
+      "tail": "Order Meets Specification",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

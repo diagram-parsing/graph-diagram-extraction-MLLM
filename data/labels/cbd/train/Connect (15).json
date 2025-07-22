@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Image DataBase",
+      "id": "Image DataBase",
+      "class": null
+    },
+    {
+      "text": "Train sample",
+      "id": "Train sample",
+      "class": null
+    },
+    {
+      "text": "Test sample",
+      "id": "Test sample",
+      "class": null
+    },
+    {
+      "text": "SVM Classifier",
+      "id": "SVM Classifier",
+      "class": null
+    },
+    {
+      "text": "Model",
+      "id": "Model",
+      "class": null
+    },
+    {
+      "text": "Result",
+      "id": "Result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Image DataBase",
+      "head": "Train sample",
+      "label": null
+    },
+    {
+      "tail": "Image DataBase",
+      "head": "Test sample",
+      "label": null
+    },
+    {
+      "tail": "Train sample",
+      "head": "SVM Classifier",
+      "label": null
+    },
+    {
+      "tail": "Test sample",
+      "head": "Model",
+      "label": null
+    },
+    {
+      "tail": "SVM Classifier",
+      "head": "Model",
+      "label": null
+    },
+    {
+      "tail": "Model",
+      "head": "Result",
+      "label": null
+    }
+  ],
+  "groups": []
+}

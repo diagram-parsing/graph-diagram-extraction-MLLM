@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Is your apps main goal is to support the porduct",
+      "id": "Is your apps main goal is to support the porduct",
+      "class": null
+    },
+    {
+      "text": "Consider hit apps",
+      "id": "Consider hit apps",
+      "class": null
+    },
+    {
+      "text": "Is your app inherently viral?",
+      "id": "Is your app inherently viral?",
+      "class": null
+    },
+    {
+      "text": "Consider Free with IAPs",
+      "id": "Consider Free with IAPs",
+      "class": null
+    },
+    {
+      "text": "Does user have valid ID",
+      "id": "Does user have valid ID",
+      "class": null
+    },
+    {
+      "text": "Can you easily explain the apps value in screenshots ?",
+      "id": "Can you easily explain the apps value in screenshots ?",
+      "class": null
+    },
+    {
+      "text": "Can you easily explain the apps value in screenshots?",
+      "id": "Can you easily explain the apps value in screenshots?",
+      "class": null
+    },
+    {
+      "text": "Paid service",
+      "id": "Paid service",
+      "class": null
+    },
+    {
+      "text": "Is the app itself your core revenue stream",
+      "id": "Is the app itself your core revenue stream",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Is your apps main goal is to support the porduct",
+      "label": null
+    },
+    {
+      "tail": "Is your apps main goal is to support the porduct",
+      "head": "Consider hit apps",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is your apps main goal is to support the porduct",
+      "head": "Is your app inherently viral?",
+      "label": null
+    },
+    {
+      "tail": "Is your app inherently viral?",
+      "head": "Consider Free with IAPs",
+      "label": null
+    },
+    {
+      "tail": "Is your app inherently viral?",
+      "head": "Does user have valid ID",
+      "label": null
+    },
+    {
+      "tail": "Does user have valid ID",
+      "head": "Consider Free with IAPs",
+      "label": null
+    },
+    {
+      "tail": "Does user have valid ID",
+      "head": "Can you easily explain the apps value in screenshots ?",
+      "label": null
+    },
+    {
+      "tail": "Can you easily explain the apps value in screenshots?",
+      "head": "Paid service",
+      "label": null
+    },
+    {
+      "tail": "Can you easily explain the apps value in screenshots?",
+      "head": "Is the app itself your core revenue stream",
+      "label": null
+    },
+    {
+      "tail": "Is the app itself your core revenue stream",
+      "head": "Paid service",
+      "label": null
+    }
+  ],
+  "groups": []
+}

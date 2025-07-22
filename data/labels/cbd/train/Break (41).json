@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Take Input",
+      "id": "Take Input",
+      "class": null
+    },
+    {
+      "text": "If Number%2==0",
+      "id": "If Number%2==0",
+      "class": null
+    },
+    {
+      "text": "Print: \"Number is odd\"",
+      "id": "Print: \"Number is odd\"",
+      "class": null
+    },
+    {
+      "text": "Print result",
+      "id": "Print result",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Take Input",
+      "label": null
+    },
+    {
+      "tail": "Take Input",
+      "head": "If Number%2==0",
+      "label": null
+    },
+    {
+      "tail": "If Number%2==0",
+      "head": "Print: \"Number is odd\"",
+      "label": "False"
+    },
+    {
+      "tail": "If Number%2==0",
+      "head": "Print result",
+      "label": "True"
+    },
+    {
+      "tail": "Print result",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

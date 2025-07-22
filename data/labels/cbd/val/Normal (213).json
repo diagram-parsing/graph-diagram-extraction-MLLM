@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Phone Rings",
+      "id": "Phone Rings",
+      "class": null
+    },
+    {
+      "text": "Ready to Get Up?",
+      "id": "Ready to Get Up?",
+      "class": null
+    },
+    {
+      "text": "Hit Snooze Button",
+      "id": "Hit Snooze Button",
+      "class": null
+    },
+    {
+      "text": "Ignore",
+      "id": "Ignore",
+      "class": null
+    },
+    {
+      "text": "Climb Out of Bed",
+      "id": "Climb Out of Bed",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Phone Rings",
+      "label": null
+    },
+    {
+      "tail": "Phone Rings",
+      "head": "Ready to Get Up?",
+      "label": null
+    },
+    {
+      "tail": "Ready to Get Up?",
+      "head": "Hit Snooze Button",
+      "label": "NO"
+    },
+    {
+      "tail": "Hit Snooze Button",
+      "head": "Ignore",
+      "label": null
+    },
+    {
+      "tail": "Ignore",
+      "head": "Phone Rings",
+      "label": null
+    },
+    {
+      "tail": "Ready to Get Up?",
+      "head": "Climb Out of Bed",
+      "label": "Yes"
+    },
+    {
+      "tail": "Climb Out of Bed",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

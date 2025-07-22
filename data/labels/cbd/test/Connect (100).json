@@ -1,0 +1,136 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        123.0,
+        20.0,
+        34.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Total patients",
+      "id": "Total patients",
+      "class": null,
+      "bbox": [
+        118.0,
+        85.5,
+        48.0,
+        29.0
+      ]
+    },
+    {
+      "text": "Serious patients",
+      "id": "Serious patients",
+      "class": null,
+      "bbox": [
+        127.0,
+        152.0,
+        40.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Operation needed",
+      "id": "Operation needed",
+      "class": null,
+      "bbox": [
+        44.5,
+        206.0,
+        49.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Doctor needed",
+      "id": "Doctor needed",
+      "class": null,
+      "bbox": [
+        129.0,
+        202.5,
+        66.0,
+        11.0
+      ]
+    },
+    {
+      "text": "No operation needed",
+      "id": "No operation needed",
+      "class": null,
+      "bbox": [
+        210.5,
+        202.5,
+        67.0,
+        27.0
+      ]
+    },
+    {
+      "text": "PACC Group",
+      "id": "PACC Group",
+      "class": null,
+      "bbox": [
+        43.0,
+        263.0,
+        60.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Get well soon",
+      "id": "Get well soon",
+      "class": null,
+      "bbox": [
+        176.5,
+        263.0,
+        67.0,
+        14.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Total patients",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Serious patients",
+      "tail": "Total patients",
+      "label": null
+    },
+    {
+      "head": "Operation needed",
+      "tail": "Serious patients",
+      "label": null
+    },
+    {
+      "head": "Doctor needed",
+      "tail": "Serious patients",
+      "label": null
+    },
+    {
+      "head": "No operation needed",
+      "tail": "Serious patients",
+      "label": null
+    },
+    {
+      "head": "PACC Group",
+      "tail": "No operation needed",
+      "label": null
+    },
+    {
+      "head": "Get well soon",
+      "tail": "Doctor needed",
+      "label": null
+    },
+    {
+      "head": "Get well soon",
+      "tail": "No operation needed",
+      "label": null
+    }
+  ],
+  "groups": []
+}

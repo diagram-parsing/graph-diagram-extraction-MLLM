@@ -1,0 +1,83 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        96.5,
+        24.0,
+        35.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Read P,R,N",
+      "id": "Read P,R,N",
+      "class": null,
+      "bbox": [
+        96.5,
+        95.0,
+        75.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Calculate I=(P*R*N)/100",
+      "id": "Calculate I=(P*R*N)/100",
+      "class": null,
+      "bbox": [
+        96.5,
+        172.0,
+        129.0,
+        38.0
+      ]
+    },
+    {
+      "text": "Print Output",
+      "id": "Print Output",
+      "class": null,
+      "bbox": [
+        96.5,
+        252.0,
+        81.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        87.5,
+        326.0,
+        33.0,
+        18.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Read P,R,N",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Calculate I=(P*R*N)/100",
+      "tail": "Read P,R,N",
+      "label": null
+    },
+    {
+      "head": "Print Output",
+      "tail": "Calculate I=(P*R*N)/100",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Print Output",
+      "label": null
+    }
+  ],
+  "groups": []
+}

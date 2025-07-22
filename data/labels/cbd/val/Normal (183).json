@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Camera",
+      "id": "Camera",
+      "class": null
+    },
+    {
+      "text": "Analog Image",
+      "id": "Analog Image",
+      "class": null
+    },
+    {
+      "text": "Driver",
+      "id": "Driver",
+      "class": null
+    },
+    {
+      "text": "Digital Image",
+      "id": "Digital Image",
+      "class": null
+    },
+    {
+      "text": "Ouput",
+      "id": "Ouput",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Camera",
+      "head": "Analog Image",
+      "label": null
+    },
+    {
+      "tail": "Analog Image",
+      "head": "Driver",
+      "label": null
+    },
+    {
+      "tail": "Driver",
+      "head": "Digital Image",
+      "label": null
+    },
+    {
+      "tail": "Digital Image",
+      "head": "Ouput",
+      "label": null
+    }
+  ],
+  "groups": []
+}

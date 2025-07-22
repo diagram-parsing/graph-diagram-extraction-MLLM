@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "iCounter=1",
+      "id": "iCounter=1",
+      "class": null
+    },
+    {
+      "text": "Output: icounter",
+      "id": "Output: icounter",
+      "class": null
+    },
+    {
+      "text": "Increment",
+      "id": "Increment",
+      "class": null
+    },
+    {
+      "text": "iCounter<=10",
+      "id": "iCounter<=10",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "iCounter=1",
+      "label": null
+    },
+    {
+      "tail": "iCounter=1",
+      "head": "Output: icounter",
+      "label": null
+    },
+    {
+      "tail": "Output: icounter",
+      "head": "Increment",
+      "label": null
+    },
+    {
+      "tail": "Increment",
+      "head": "iCounter<=10",
+      "label": null
+    },
+    {
+      "tail": "iCounter<=10",
+      "head": "Output: icounter",
+      "label": "True"
+    },
+    {
+      "tail": "iCounter<=10",
+      "head": "End",
+      "label": "False"
+    }
+  ],
+  "groups": []
+}

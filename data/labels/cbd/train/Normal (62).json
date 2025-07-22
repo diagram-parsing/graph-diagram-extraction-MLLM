@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Design a Postcard",
+      "id": "Design a Postcard",
+      "class": null
+    },
+    {
+      "text": "Customer like it?",
+      "id": "Customer like it?",
+      "class": null
+    },
+    {
+      "text": "Yes",
+      "id": "Yes",
+      "class": null
+    },
+    {
+      "text": "No",
+      "id": "No",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Design a Postcard",
+      "head": "Customer like it?",
+      "label": null
+    },
+    {
+      "tail": "Customer like it?",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "Customer like it?",
+      "head": "No",
+      "label": null
+    }
+  ],
+  "groups": []
+}

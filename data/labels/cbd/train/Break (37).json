@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Work",
+      "id": "Work",
+      "class": null
+    },
+    {
+      "text": "add",
+      "id": "add",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "update",
+      "id": "update",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Work",
+      "label": null
+    },
+    {
+      "tail": "Work",
+      "head": "add",
+      "label": "Yes"
+    },
+    {
+      "tail": "Work",
+      "head": "Process",
+      "label": "No"
+    },
+    {
+      "tail": "Process",
+      "head": "update",
+      "label": null
+    },
+    {
+      "tail": "update",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "add",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

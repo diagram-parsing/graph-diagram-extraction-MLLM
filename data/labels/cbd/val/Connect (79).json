@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Image Extracted",
+      "id": "Image Extracted",
+      "class": null
+    },
+    {
+      "text": "Head extracted",
+      "id": "Head extracted",
+      "class": null
+    },
+    {
+      "text": "Head tracking",
+      "id": "Head tracking",
+      "class": null
+    },
+    {
+      "text": "Cordinate values",
+      "id": "Cordinate values",
+      "class": null
+    },
+    {
+      "text": "Centroid height lower than threshold",
+      "id": "Centroid height lower than threshold",
+      "class": null
+    },
+    {
+      "text": "Fall detected",
+      "id": "Fall detected",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Image Extracted",
+      "head": "Head extracted",
+      "label": null
+    },
+    {
+      "tail": "Head extracted",
+      "head": "Head tracking",
+      "label": null
+    },
+    {
+      "tail": "Head tracking",
+      "head": "Cordinate values",
+      "label": null
+    },
+    {
+      "tail": "Cordinate values",
+      "head": "Head tracking",
+      "label": "NO"
+    },
+    {
+      "tail": "Cordinate values",
+      "head": "Centroid height lower than threshold",
+      "label": "YES"
+    },
+    {
+      "tail": "Centroid height lower than threshold",
+      "head": "Head tracking",
+      "label": "NO"
+    },
+    {
+      "tail": "Centroid height lower than threshold",
+      "head": "Fall detected",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

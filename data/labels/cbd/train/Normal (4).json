@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Piotr Hallmann",
+      "id": "Piotr Hallmann",
+      "class": null
+    },
+    {
+      "text": "Gdynia, Poland",
+      "id": "Gdynia, Poland",
+      "class": null
+    },
+    {
+      "text": "1987-08-25",
+      "id": "1987-08-25",
+      "class": null
+    },
+    {
+      "text": "70.308",
+      "id": "70.308",
+      "class": null
+    },
+    {
+      "text": "175.26",
+      "id": "175.26",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Piotr Hallmann",
+      "head": "Gdynia, Poland",
+      "label": "lives in"
+    },
+    {
+      "tail": "Piotr Hallmann",
+      "head": "1987-08-25",
+      "label": "born on"
+    },
+    {
+      "tail": "Piotr Hallmann",
+      "head": "70.308",
+      "label": "weight"
+    },
+    {
+      "tail": "Piotr Hallmann",
+      "head": "175.26",
+      "label": "height"
+    }
+  ],
+  "groups": []
+}

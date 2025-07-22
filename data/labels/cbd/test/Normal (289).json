@@ -1,0 +1,115 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Person",
+      "id": "Person",
+      "class": null,
+      "bbox": [
+        258.0,
+        458.0,
+        110.0,
+        32.0
+      ]
+    },
+    {
+      "text": "Carbon Offset Vendors",
+      "id": "Carbon Offset Vendors",
+      "class": null,
+      "bbox": [
+        728.5,
+        463.5,
+        179.0,
+        67.0
+      ]
+    },
+    {
+      "text": "Vendor Overhead and/or Profit",
+      "id": "Vendor Overhead and/or Profit",
+      "class": null,
+      "bbox": [
+        1164.0,
+        209.5,
+        222.0,
+        65.0
+      ]
+    },
+    {
+      "text": "Different company",
+      "id": "Different company",
+      "class": null,
+      "bbox": [
+        1145.0,
+        458.0,
+        314.0,
+        36.0
+      ]
+    },
+    {
+      "text": "Cons",
+      "id": "Cons",
+      "class": null,
+      "bbox": [
+        1157.5,
+        689.5,
+        83.0,
+        39.0
+      ]
+    },
+    {
+      "text": "Third Party-initiated Carbon Negative Activity",
+      "id": "Third Party-initiated Carbon Negative Activity",
+      "class": null,
+      "bbox": [
+        1590.5,
+        192.5,
+        249.0,
+        65.0
+      ]
+    },
+    {
+      "text": "Third Party Overhead and/or Profit",
+      "id": "Third Party Overhead and/or Profit",
+      "class": null,
+      "bbox": [
+        1591.0,
+        699.5,
+        268.0,
+        63.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Carbon Offset Vendors",
+      "tail": "Person",
+      "label": null
+    },
+    {
+      "head": "Vendor Overhead and/or Profit",
+      "tail": "Carbon Offset Vendors",
+      "label": null
+    },
+    {
+      "head": "Different company",
+      "tail": "Carbon Offset Vendors",
+      "label": null
+    },
+    {
+      "head": "Cons",
+      "tail": "Carbon Offset Vendors",
+      "label": null
+    },
+    {
+      "head": "Third Party-initiated Carbon Negative Activity",
+      "tail": "Different company",
+      "label": null
+    },
+    {
+      "head": "Third Party Overhead and/or Profit",
+      "tail": "Different company",
+      "label": null
+    }
+  ],
+  "groups": []
+}

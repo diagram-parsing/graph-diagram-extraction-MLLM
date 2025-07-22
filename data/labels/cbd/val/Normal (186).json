@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Instruction",
+      "id": "Instruction",
+      "class": null
+    },
+    {
+      "text": "Fuzzy Entropy",
+      "id": "Fuzzy Entropy",
+      "class": null
+    },
+    {
+      "text": "Thresholding",
+      "id": "Thresholding",
+      "class": null
+    },
+    {
+      "text": "Feature vectors",
+      "id": "Feature vectors",
+      "class": null
+    },
+    {
+      "text": "Classifier",
+      "id": "Classifier",
+      "class": null
+    },
+    {
+      "text": "Speech",
+      "id": "Speech",
+      "class": null
+    },
+    {
+      "text": "Non speech",
+      "id": "Non speech",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Instruction",
+      "head": "Fuzzy Entropy",
+      "label": null
+    },
+    {
+      "tail": "Fuzzy Entropy",
+      "head": "Thresholding",
+      "label": null
+    },
+    {
+      "tail": "Thresholding",
+      "head": "Feature vectors",
+      "label": null
+    },
+    {
+      "tail": "Feature vectors",
+      "head": "Classifier",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Speech",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Non speech",
+      "label": null
+    }
+  ],
+  "groups": []
+}

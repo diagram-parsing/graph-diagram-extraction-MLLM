@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Products Page",
+      "id": "Products Page",
+      "class": null
+    },
+    {
+      "text": "Product",
+      "id": "Product",
+      "class": null
+    },
+    {
+      "text": "Customer Testimonals",
+      "id": "Customer Testimonals",
+      "class": null
+    },
+    {
+      "text": "Plans Page",
+      "id": "Plans Page",
+      "class": null
+    },
+    {
+      "text": "Compare",
+      "id": "Compare",
+      "class": null
+    },
+    {
+      "text": "Purchase Page",
+      "id": "Purchase Page",
+      "class": null
+    },
+    {
+      "text": "Customer make a purchase?",
+      "id": "Customer make a purchase?",
+      "class": null
+    },
+    {
+      "text": "Feedback",
+      "id": "Feedback",
+      "class": null
+    },
+    {
+      "text": "Exit intent pop-up with discount",
+      "id": "Exit intent pop-up with discount",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Login",
+      "head": "Products Page",
+      "label": null
+    },
+    {
+      "tail": "Products Page",
+      "head": "Product",
+      "label": null
+    },
+    {
+      "tail": "Product",
+      "head": "Customer Testimonals",
+      "label": null
+    },
+    {
+      "tail": "Customer Testimonals",
+      "head": "Plans Page",
+      "label": null
+    },
+    {
+      "tail": "Plans Page",
+      "head": "Compare",
+      "label": null
+    },
+    {
+      "tail": "Compare",
+      "head": "Purchase Page",
+      "label": null
+    },
+    {
+      "tail": "Purchase Page",
+      "head": "Customer make a purchase?",
+      "label": null
+    },
+    {
+      "tail": "Customer make a purchase?",
+      "head": "Feedback",
+      "label": "Yes"
+    },
+    {
+      "tail": "Customer make a purchase?",
+      "head": "Exit intent pop-up with discount",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

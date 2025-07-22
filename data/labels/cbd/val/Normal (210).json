@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Input length and width",
+      "id": "Input length and width",
+      "class": null
+    },
+    {
+      "text": "Area=length*width",
+      "id": "Area=length*width",
+      "class": null
+    },
+    {
+      "text": "Print area",
+      "id": "Print area",
+      "class": null
+    },
+    {
+      "text": "Calculate another area?",
+      "id": "Calculate another area?",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input length and width",
+      "label": null
+    },
+    {
+      "tail": "Input length and width",
+      "head": "Area=length*width",
+      "label": null
+    },
+    {
+      "tail": "Area=length*width",
+      "head": "Print area",
+      "label": null
+    },
+    {
+      "tail": "Print area",
+      "head": "Calculate another area?",
+      "label": null
+    },
+    {
+      "tail": "Calculate another area?",
+      "head": "Input length and width",
+      "label": "Yes"
+    },
+    {
+      "tail": "Calculate another area?",
+      "head": "Finish",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Sensor",
+      "id": "Sensor",
+      "class": null
+    },
+    {
+      "text": "Arduino",
+      "id": "Arduino",
+      "class": null
+    },
+    {
+      "text": "Home automation",
+      "id": "Home automation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Sensor",
+      "head": "Arduino",
+      "label": null
+    },
+    {
+      "tail": "Arduino",
+      "head": "Home automation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

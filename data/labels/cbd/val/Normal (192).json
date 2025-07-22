@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Finish work papers",
+      "id": "Finish work papers",
+      "class": null
+    },
+    {
+      "text": "Review",
+      "id": "Review",
+      "class": null
+    },
+    {
+      "text": "Complete?",
+      "id": "Complete?",
+      "class": null
+    },
+    {
+      "text": "Auditor prepares internal draft",
+      "id": "Auditor prepares internal draft",
+      "class": null
+    },
+    {
+      "text": "Draft",
+      "id": "Draft",
+      "class": null
+    },
+    {
+      "text": "Alternate manager reviews",
+      "id": "Alternate manager reviews",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Finish work papers",
+      "head": "Review",
+      "label": null
+    },
+    {
+      "tail": "Review",
+      "head": "Complete?",
+      "label": null
+    },
+    {
+      "tail": "Complete?",
+      "head": "Finish work papers",
+      "label": "No"
+    },
+    {
+      "tail": "Complete?",
+      "head": "Auditor prepares internal draft",
+      "label": "Yes"
+    },
+    {
+      "tail": "Auditor prepares internal draft",
+      "head": "Draft",
+      "label": null
+    },
+    {
+      "tail": "Draft",
+      "head": "Complete?",
+      "label": null
+    },
+    {
+      "tail": "Complete?",
+      "head": "Auditor prepares internal draft",
+      "label": "No"
+    },
+    {
+      "tail": "Complete?",
+      "head": "Alternate manager reviews",
+      "label": "Yes"
+    },
+    {
+      "tail": "Alternate manager reviews",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

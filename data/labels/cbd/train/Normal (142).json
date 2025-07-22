@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "STORAGE",
+      "id": "STORAGE",
+      "class": null
+    },
+    {
+      "text": "Separation",
+      "id": "Separation",
+      "class": null
+    },
+    {
+      "text": "MILLING",
+      "id": "MILLING",
+      "class": null
+    },
+    {
+      "text": "HULLS GRINDING",
+      "id": "HULLS GRINDING",
+      "class": null
+    },
+    {
+      "text": "DRY EXTRUDING",
+      "id": "DRY EXTRUDING",
+      "class": null
+    },
+    {
+      "text": "FULL PRESSING",
+      "id": "FULL PRESSING",
+      "class": null
+    },
+    {
+      "text": "OIL CLARIFICATION",
+      "id": "OIL CLARIFICATION",
+      "class": null
+    },
+    {
+      "text": "Waste removal",
+      "id": "Waste removal",
+      "class": null
+    },
+    {
+      "text": "CAKE STORAGE",
+      "id": "CAKE STORAGE",
+      "class": null
+    },
+    {
+      "text": "CRUDE OIL STORAGE",
+      "id": "CRUDE OIL STORAGE",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "STORAGE",
+      "head": "Separation",
+      "label": null
+    },
+    {
+      "tail": "Separation",
+      "head": "MILLING",
+      "label": null
+    },
+    {
+      "tail": "MILLING",
+      "head": "HULLS GRINDING",
+      "label": null
+    },
+    {
+      "tail": "HULLS GRINDING",
+      "head": "DRY EXTRUDING",
+      "label": null
+    },
+    {
+      "tail": "DRY EXTRUDING",
+      "head": "FULL PRESSING",
+      "label": null
+    },
+    {
+      "tail": "FULL PRESSING",
+      "head": "OIL CLARIFICATION",
+      "label": null
+    },
+    {
+      "tail": "FULL PRESSING",
+      "head": "Waste removal",
+      "label": null
+    },
+    {
+      "tail": "Waste removal",
+      "head": "CAKE STORAGE",
+      "label": null
+    },
+    {
+      "tail": "OIL CLARIFICATION",
+      "head": "CRUDE OIL STORAGE",
+      "label": null
+    }
+  ],
+  "groups": []
+}

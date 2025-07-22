@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Create Document",
+      "id": "Create Document",
+      "class": null
+    },
+    {
+      "text": "Document",
+      "id": "Document",
+      "class": null
+    },
+    {
+      "text": "Manager Approval",
+      "id": "Manager Approval",
+      "class": null
+    },
+    {
+      "text": "Approval Decision",
+      "id": "Approval Decision",
+      "class": null
+    },
+    {
+      "text": "Onboard",
+      "id": "Onboard",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Create Document",
+      "head": "Document",
+      "label": null
+    },
+    {
+      "tail": "Document",
+      "head": "Manager Approval",
+      "label": null
+    },
+    {
+      "tail": "Manager Approval",
+      "head": "Approval Decision",
+      "label": null
+    },
+    {
+      "tail": "Approval Decision",
+      "head": "Onboard",
+      "label": "Approve"
+    },
+    {
+      "tail": "Approval Decision",
+      "head": "Create Document",
+      "label": "Reject"
+    }
+  ],
+  "groups": []
+}

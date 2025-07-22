@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Video Document",
+      "id": "Video Document",
+      "class": null
+    },
+    {
+      "text": "Extraction",
+      "id": "Extraction",
+      "class": null
+    },
+    {
+      "text": "Caption Segmentation",
+      "id": "Caption Segmentation",
+      "class": null
+    },
+    {
+      "text": "Classifier",
+      "id": "Classifier",
+      "class": null
+    },
+    {
+      "text": "Video Scenes Library",
+      "id": "Video Scenes Library",
+      "class": null
+    },
+    {
+      "text": "Sampling",
+      "id": "Sampling",
+      "class": null
+    },
+    {
+      "text": "Retrieve video scenes with the same label",
+      "id": "Retrieve video scenes with the same label",
+      "class": null
+    },
+    {
+      "text": "Filter",
+      "id": "Filter",
+      "class": null
+    },
+    {
+      "text": "Result",
+      "id": "Result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Video Document",
+      "head": "Extraction",
+      "label": null
+    },
+    {
+      "tail": "Extraction",
+      "head": "Caption Segmentation",
+      "label": null
+    },
+    {
+      "tail": "Caption Segmentation",
+      "head": "Classifier",
+      "label": null
+    },
+    {
+      "tail": "Classifier",
+      "head": "Video Scenes Library",
+      "label": null
+    },
+    {
+      "tail": "Sampling",
+      "head": "Retrieve video scenes with the same label",
+      "label": null
+    },
+    {
+      "tail": "Retrieve video scenes with the same label",
+      "head": "Video Scenes Library",
+      "label": "Retrieve"
+    },
+    {
+      "tail": "Retrieve video scenes with the same label",
+      "head": "Filter",
+      "label": null
+    },
+    {
+      "tail": "Filter",
+      "head": "Result",
+      "label": null
+    }
+  ],
+  "groups": []
+}

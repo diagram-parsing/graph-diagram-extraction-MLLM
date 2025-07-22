@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Look for address",
+      "id": "Look for address",
+      "class": null
+    },
+    {
+      "text": "Did you find it?",
+      "id": "Did you find it?",
+      "class": null
+    },
+    {
+      "text": "Ask someone",
+      "id": "Ask someone",
+      "class": null
+    },
+    {
+      "text": "Stop looking",
+      "id": "Stop looking",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Look for address",
+      "label": null
+    },
+    {
+      "tail": "Look for address",
+      "head": "Did you find it?",
+      "label": null
+    },
+    {
+      "tail": "Did you find it?",
+      "head": "Ask someone",
+      "label": "No"
+    },
+    {
+      "tail": "Ask someone",
+      "head": "Look for address",
+      "label": "Yes"
+    },
+    {
+      "tail": "Did you find it?",
+      "head": "Stop looking",
+      "label": "Yes"
+    },
+    {
+      "tail": "Ask someone",
+      "head": "Stop looking",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

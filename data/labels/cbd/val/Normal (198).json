@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Buy Tea Leaves",
+      "id": "Buy Tea Leaves",
+      "class": null
+    },
+    {
+      "text": "Heat water",
+      "id": "Heat water",
+      "class": null
+    },
+    {
+      "text": "Has the water boiled?",
+      "id": "Has the water boiled?",
+      "class": null
+    },
+    {
+      "text": "Make Tea",
+      "id": "Make Tea",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Buy Tea Leaves",
+      "label": null
+    },
+    {
+      "tail": "Buy Tea Leaves",
+      "head": "Heat water",
+      "label": null
+    },
+    {
+      "tail": "Heat water",
+      "head": "Has the water boiled?",
+      "label": null
+    },
+    {
+      "tail": "Has the water boiled?",
+      "head": "Heat water",
+      "label": "No"
+    },
+    {
+      "tail": "Has the water boiled?",
+      "head": "Make Tea",
+      "label": "Yes"
+    },
+    {
+      "tail": "Make Tea",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

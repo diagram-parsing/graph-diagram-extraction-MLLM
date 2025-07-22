@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Identify Problem",
+      "id": "Identify Problem",
+      "class": null
+    },
+    {
+      "text": "User \"Issues\"",
+      "id": "User \"Issues\"",
+      "class": null
+    },
+    {
+      "text": "Login Fixed",
+      "id": "Login Fixed",
+      "class": null
+    },
+    {
+      "text": "Browser Issue",
+      "id": "Browser Issue",
+      "class": null
+    },
+    {
+      "text": "Different Browser",
+      "id": "Different Browser",
+      "class": null
+    },
+    {
+      "text": "Platform Issue",
+      "id": "Platform Issue",
+      "class": null
+    },
+    {
+      "text": "Use Different Platform",
+      "id": "Use Different Platform",
+      "class": null
+    },
+    {
+      "text": "Import Settings",
+      "id": "Import Settings",
+      "class": null
+    },
+    {
+      "text": "use different version",
+      "id": "use different version",
+      "class": null
+    },
+    {
+      "text": "Settings",
+      "id": "Settings",
+      "class": null
+    },
+    {
+      "text": "Adjust Settings",
+      "id": "Adjust Settings",
+      "class": null
+    },
+    {
+      "text": "Content Issue",
+      "id": "Content Issue",
+      "class": null
+    },
+    {
+      "text": "Change Content",
+      "id": "Change Content",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Identify Problem",
+      "head": "User \"Issues\"",
+      "label": null
+    },
+    {
+      "tail": "User \"Issues\"",
+      "head": "Login Fixed",
+      "label": "Yes"
+    },
+    {
+      "tail": "User \"Issues\"",
+      "head": "Browser Issue",
+      "label": "No"
+    },
+    {
+      "tail": "Browser Issue",
+      "head": "Different Browser",
+      "label": "Yes"
+    },
+    {
+      "tail": "Browser Issue",
+      "head": "Platform Issue",
+      "label": "No"
+    },
+    {
+      "tail": "Platform Issue",
+      "head": "Use Different Platform",
+      "label": "Yes"
+    },
+    {
+      "tail": "Platform Issue",
+      "head": "Import Settings",
+      "label": "No"
+    },
+    {
+      "tail": "Import Settings",
+      "head": "use different version",
+      "label": "Yes"
+    },
+    {
+      "tail": "Import Settings",
+      "head": "Settings",
+      "label": "No"
+    },
+    {
+      "tail": "Settings",
+      "head": "Adjust Settings",
+      "label": "Yes"
+    },
+    {
+      "tail": "Settings",
+      "head": "Content Issue",
+      "label": "No"
+    },
+    {
+      "tail": "Content Issue",
+      "head": "Change Content",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

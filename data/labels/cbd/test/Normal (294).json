@@ -1,0 +1,95 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        607.5,
+        303.0,
+        199.0,
+        82.0
+      ]
+    },
+    {
+      "text": "Source Processor",
+      "id": "Source Processor",
+      "class": null,
+      "bbox": [
+        598.5,
+        807.5,
+        287.0,
+        125.0
+      ]
+    },
+    {
+      "text": "Processor",
+      "id": "Processor",
+      "class": null,
+      "bbox": [
+        598.5,
+        1240.5,
+        287.0,
+        53.0
+      ]
+    },
+    {
+      "text": "Sink Processor",
+      "id": "Sink Processor",
+      "class": null,
+      "bbox": [
+        598.5,
+        1674.0,
+        293.0,
+        136.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        587.5,
+        2166.5,
+        151.0,
+        77.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Source Processor",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Processor",
+      "tail": "Source Processor",
+      "label": "Stream",
+      "bbox": [
+        793.0,
+        1022.5,
+        206.0,
+        61.0
+      ]
+    },
+    {
+      "head": "Sink Processor",
+      "tail": "Processor",
+      "label": "Stream",
+      "bbox": [
+        793.0,
+        1022.5,
+        206.0,
+        61.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Sink Processor",
+      "label": null
+    }
+  ],
+  "groups": []
+}

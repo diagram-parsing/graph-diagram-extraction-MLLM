@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Value",
+      "id": "Read Value",
+      "class": null
+    },
+    {
+      "text": "Temp<32?",
+      "id": "Temp<32?",
+      "class": null
+    },
+    {
+      "text": "Print Cold",
+      "id": "Print Cold",
+      "class": null
+    },
+    {
+      "text": "Print Not Cold",
+      "id": "Print Not Cold",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Value",
+      "label": null
+    },
+    {
+      "tail": "Read Value",
+      "head": "Temp<32?",
+      "label": null
+    },
+    {
+      "tail": "Temp<32?",
+      "head": "Print Cold",
+      "label": "Yes"
+    },
+    {
+      "tail": "Temp<32?",
+      "head": "Print Not Cold",
+      "label": "No"
+    },
+    {
+      "tail": "Print Cold",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Print Not Cold",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Headline",
+      "id": "Headline",
+      "class": null
+    },
+    {
+      "text": "Sample",
+      "id": "Sample",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Sample Headline",
+      "id": "Sample Headline",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Sample1 Headline",
+      "id": "Sample1 Headline",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Headline",
+      "head": "Sample",
+      "label": null
+    },
+    {
+      "tail": "Sample",
+      "head": "Process",
+      "label": "No"
+    },
+    {
+      "tail": "Sample",
+      "head": "Sample Headline",
+      "label": "Yes"
+    },
+    {
+      "tail": "Sample Headline",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "Sample Headline",
+      "head": "Sample1 Headline",
+      "label": "Yes"
+    },
+    {
+      "tail": "Sample1 Headline",
+      "head": "Process",
+      "label": "No"
+    },
+    {
+      "tail": "Sample1 Headline",
+      "head": "End",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

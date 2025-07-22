@@ -1,0 +1,86 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Decision",
+      "id": "Decision",
+      "class": null
+    },
+    {
+      "text": "Step1",
+      "id": "Step1",
+      "class": null,
+      "bbox": [
+        210.0,
+        136.5,
+        24.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Step2",
+      "id": "Step2",
+      "class": null,
+      "bbox": [
+        13.5,
+        136.0,
+        25.0,
+        12.0
+      ]
+    },
+    {
+      "text": "Step3",
+      "id": "Step3",
+      "class": null,
+      "bbox": [
+        13.5,
+        136.0,
+        25.0,
+        12.0
+      ]
+    },
+    {
+      "text": "stop",
+      "id": "stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Decision",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Step1",
+      "tail": "Decision",
+      "label": "Yes"
+    },
+    {
+      "head": "Step2",
+      "tail": "Decision",
+      "label": "No"
+    },
+    {
+      "head": "Step3",
+      "tail": "Step2",
+      "label": null
+    },
+    {
+      "head": "stop",
+      "tail": "Step3",
+      "label": null
+    },
+    {
+      "head": "stop",
+      "tail": "Step1",
+      "label": null
+    }
+  ],
+  "groups": []
+}

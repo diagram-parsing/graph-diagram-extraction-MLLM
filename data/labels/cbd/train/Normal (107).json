@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read",
+      "id": "Read",
+      "class": null
+    },
+    {
+      "text": "Update value",
+      "id": "Update value",
+      "class": null
+    },
+    {
+      "text": "Print",
+      "id": "Print",
+      "class": null
+    },
+    {
+      "text": "X>0",
+      "id": "X>0",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read",
+      "label": null
+    },
+    {
+      "tail": "Read",
+      "head": "Update value",
+      "label": null
+    },
+    {
+      "tail": "Update value",
+      "head": "Print",
+      "label": null
+    },
+    {
+      "tail": "Print",
+      "head": "X>0",
+      "label": null
+    },
+    {
+      "tail": "X>0",
+      "head": "Update value",
+      "label": "Yes"
+    },
+    {
+      "tail": "X>0",
+      "head": "End",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

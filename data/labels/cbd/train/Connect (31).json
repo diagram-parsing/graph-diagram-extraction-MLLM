@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Temp",
+      "id": "Read Temp",
+      "class": null
+    },
+    {
+      "text": "Temp<32?",
+      "id": "Temp<32?",
+      "class": null
+    },
+    {
+      "text": "Go Out",
+      "id": "Go Out",
+      "class": null
+    },
+    {
+      "text": "Don't go out",
+      "id": "Don't go out",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Temp",
+      "label": null
+    },
+    {
+      "tail": "Read Temp",
+      "head": "Temp<32?",
+      "label": null
+    },
+    {
+      "tail": "Temp<32?",
+      "head": "Go Out",
+      "label": "Yes"
+    },
+    {
+      "tail": "Temp<32?",
+      "head": "Don't go out",
+      "label": "No"
+    },
+    {
+      "tail": "Go Out",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Don't go out",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,119 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        430.5,
+        44.5,
+        71.0,
+        31.0
+      ]
+    },
+    {
+      "text": "Scan Bar code",
+      "id": "Scan Bar code",
+      "class": null,
+      "bbox": [
+        427.5,
+        180.5,
+        195.0,
+        23.0
+      ]
+    },
+    {
+      "text": "\"Reader\" decrypts message and sends it to \"3D object management interface\"",
+      "id": "\"Reader\" decrypts message and sends it to \"3D object management interface\"",
+      "class": null
+    },
+    {
+      "text": "Check the website",
+      "id": "Check the website",
+      "class": null,
+      "bbox": [
+        422.0,
+        476.0,
+        250.0,
+        22.0
+      ]
+    },
+    {
+      "text": "The back-end server checks data and compares it with \"3D objects database\"",
+      "id": "The back-end server checks data and compares it with \"3D objects database\"",
+      "class": null
+    },
+    {
+      "text": "Does data match the detail in \"3D objects database\"",
+      "id": "Does data match the detail in \"3D objects database\"",
+      "class": null,
+      "bbox": [
+        427.5,
+        845.0,
+        365.0,
+        60.0
+      ]
+    },
+    {
+      "text": "An error message is displayed on the user screen",
+      "id": "An error message is displayed on the user screen",
+      "class": null
+    },
+    {
+      "text": "The 3D object is displayed on the user screen",
+      "id": "The 3D object is displayed on the user screen",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Scan Bar code",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "\"Reader\" decrypts message and sends it to \"3D object management interface\"",
+      "tail": "Scan Bar code",
+      "label": null
+    },
+    {
+      "head": "Check the website",
+      "tail": "\"Reader\" decrypts message and sends it to \"3D object management interface\"",
+      "label": null
+    },
+    {
+      "head": "The back-end server checks data and compares it with \"3D objects database\"",
+      "tail": "Check the website",
+      "label": null
+    },
+    {
+      "head": "Does data match the detail in \"3D objects database\"",
+      "tail": "The back-end server checks data and compares it with \"3D objects database\"",
+      "label": null
+    },
+    {
+      "head": "An error message is displayed on the user screen",
+      "tail": "Does data match the detail in \"3D objects database\"",
+      "label": "No?",
+      "bbox": [
+        173.5,
+        801.0,
+        57.0,
+        28.0
+      ]
+    },
+    {
+      "head": "The 3D object is displayed on the user screen",
+      "tail": "Does data match the detail in \"3D objects database\"",
+      "label": "Yes?",
+      "bbox": [
+        667.5,
+        801.0,
+        65.0,
+        28.0
+      ]
+    }
+  ],
+  "groups": []
+}

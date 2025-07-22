@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Data Acquisition",
+      "id": "Data Acquisition",
+      "class": null
+    },
+    {
+      "text": "Preprocessing",
+      "id": "Preprocessing",
+      "class": null
+    },
+    {
+      "text": "Signal sampling",
+      "id": "Signal sampling",
+      "class": null
+    },
+    {
+      "text": "Labeling R-peaks with their Location",
+      "id": "Labeling R-peaks with their Location",
+      "class": null
+    },
+    {
+      "text": "Signal",
+      "id": "Signal",
+      "class": null
+    },
+    {
+      "text": "Geometry Analysis",
+      "id": "Geometry Analysis",
+      "class": null
+    },
+    {
+      "text": "Frequency-domain Analysis",
+      "id": "Frequency-domain Analysis",
+      "class": null
+    },
+    {
+      "text": "Time-domain Analysis",
+      "id": "Time-domain Analysis",
+      "class": null
+    },
+    {
+      "text": "HRV Evaluation",
+      "id": "HRV Evaluation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Data Acquisition",
+      "head": "Preprocessing",
+      "label": null
+    },
+    {
+      "tail": "Preprocessing",
+      "head": "Signal sampling",
+      "label": null
+    },
+    {
+      "tail": "Signal sampling",
+      "head": "Labeling R-peaks with their Location",
+      "label": null
+    },
+    {
+      "tail": "Labeling R-peaks with their Location",
+      "head": "Signal",
+      "label": null
+    },
+    {
+      "tail": "Signal",
+      "head": "Geometry Analysis",
+      "label": null
+    },
+    {
+      "tail": "Signal",
+      "head": "Frequency-domain Analysis",
+      "label": null
+    },
+    {
+      "tail": "Signal",
+      "head": "Time-domain Analysis",
+      "label": null
+    },
+    {
+      "tail": "Geometry Analysis",
+      "head": "HRV Evaluation",
+      "label": null
+    },
+    {
+      "tail": "Frequency-domain Analysis",
+      "head": "HRV Evaluation",
+      "label": null
+    },
+    {
+      "tail": "Time-domain Analysis",
+      "head": "HRV Evaluation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Greet",
+      "id": "Greet",
+      "class": null
+    },
+    {
+      "text": "ACCEPT NO COMMANDS",
+      "id": "ACCEPT NO COMMANDS",
+      "class": null
+    },
+    {
+      "text": "Enter ID",
+      "id": "Enter ID",
+      "class": null
+    },
+    {
+      "text": "INPUT DRIVER INFORMATION",
+      "id": "INPUT DRIVER INFORMATION",
+      "class": null
+    },
+    {
+      "text": "Verify finger scan",
+      "id": "Verify finger scan",
+      "class": null
+    },
+    {
+      "text": "SCAN FINGER AGAIN",
+      "id": "SCAN FINGER AGAIN",
+      "class": null
+    },
+    {
+      "text": "1st AND 2nd SCAN MATCH?",
+      "id": "1st AND 2nd SCAN MATCH?",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Greet",
+      "label": null
+    },
+    {
+      "tail": "Greet",
+      "head": "ACCEPT NO COMMANDS",
+      "label": "FAILURE"
+    },
+    {
+      "tail": "Greet",
+      "head": "Enter ID",
+      "label": null
+    },
+    {
+      "tail": "Enter ID",
+      "head": "INPUT DRIVER INFORMATION",
+      "label": null
+    },
+    {
+      "tail": "INPUT DRIVER INFORMATION",
+      "head": "Verify finger scan",
+      "label": null
+    },
+    {
+      "tail": "Verify finger scan",
+      "head": "SCAN FINGER AGAIN",
+      "label": null
+    },
+    {
+      "tail": "SCAN FINGER AGAIN",
+      "head": "1st AND 2nd SCAN MATCH?",
+      "label": null
+    },
+    {
+      "tail": "1st AND 2nd SCAN MATCH?",
+      "head": "Enter ID",
+      "label": "NO"
+    },
+    {
+      "tail": "1st AND 2nd SCAN MATCH?",
+      "head": "Login",
+      "label": "YES"
+    },
+    {
+      "tail": "Login",
+      "head": "STOP",
+      "label": null
+    }
+  ],
+  "groups": []
+}

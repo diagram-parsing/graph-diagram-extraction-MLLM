@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "Log In",
+      "id": "Log In",
+      "class": null
+    },
+    {
+      "text": "Logged in",
+      "id": "Logged in",
+      "class": null
+    },
+    {
+      "text": "OpenID",
+      "id": "OpenID",
+      "class": null
+    },
+    {
+      "text": "Home",
+      "id": "Home",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Log In",
+      "head": "Logged in",
+      "label": null
+    },
+    {
+      "tail": "Logged in",
+      "head": "OpenID",
+      "label": "No"
+    },
+    {
+      "tail": "Logged in",
+      "head": "Home",
+      "label": "Yes"
+    },
+    {
+      "tail": "OpenID",
+      "head": "Home",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Source",
+      "id": "Source",
+      "class": null
+    },
+    {
+      "text": "Electrical Transmit",
+      "id": "Electrical Transmit",
+      "class": null
+    },
+    {
+      "text": "Optical",
+      "id": "Optical",
+      "class": null
+    },
+    {
+      "text": "fibre cable",
+      "id": "fibre cable",
+      "class": null
+    },
+    {
+      "text": "Demodular",
+      "id": "Demodular",
+      "class": null
+    },
+    {
+      "text": "receiver",
+      "id": "receiver",
+      "class": null
+    },
+    {
+      "text": "Destination",
+      "id": "Destination",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Source",
+      "head": "Electrical Transmit",
+      "label": null
+    },
+    {
+      "tail": "Electrical Transmit",
+      "head": "Optical",
+      "label": null
+    },
+    {
+      "tail": "Optical",
+      "head": "fibre cable",
+      "label": null
+    },
+    {
+      "tail": "fibre cable",
+      "head": "Demodular",
+      "label": null
+    },
+    {
+      "tail": "Demodular",
+      "head": "receiver",
+      "label": null
+    },
+    {
+      "tail": "receiver",
+      "head": "Destination",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,197 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "User",
+      "id": "User",
+      "class": null,
+      "bbox": [
+        299.0,
+        39.5,
+        54.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Selection of problem area/problem",
+      "id": "Selection of problem area/problem",
+      "class": null,
+      "bbox": [
+        298.5,
+        152.5,
+        375.0,
+        23.0
+      ]
+    },
+    {
+      "text": "Symptom selection",
+      "id": "Symptom selection",
+      "class": null,
+      "bbox": [
+        294.5,
+        242.0,
+        207.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Answer queries on selected symptoms",
+      "id": "Answer queries on selected symptoms",
+      "class": null,
+      "bbox": [
+        291.5,
+        333.0,
+        409.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Determine probable diseases",
+      "id": "Determine probable diseases",
+      "class": null,
+      "bbox": [
+        291.0,
+        418.5,
+        310.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Filter determined diseases",
+      "id": "Filter determined diseases",
+      "class": null,
+      "bbox": [
+        293.0,
+        508.0,
+        278.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Is Top probability?",
+      "id": "Is Top probability?",
+      "class": null,
+      "bbox": [
+        294.0,
+        645.5,
+        136.0,
+        57.0
+      ]
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null,
+      "bbox": [
+        296.5,
+        1027.5,
+        77.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Is history question?",
+      "id": "Is history question?",
+      "class": null,
+      "bbox": [
+        294.5,
+        834.0,
+        107.0,
+        56.0
+      ]
+    },
+    {
+      "text": "Add catalyst factor",
+      "id": "Add catalyst factor",
+      "class": null,
+      "bbox": [
+        691.5,
+        893.0,
+        213.0,
+        30.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Selection of problem area/problem",
+      "tail": "User",
+      "label": null
+    },
+    {
+      "head": "Symptom selection",
+      "tail": "Selection of problem area/problem",
+      "label": null
+    },
+    {
+      "head": "Answer queries on selected symptoms",
+      "tail": "Symptom selection",
+      "label": null
+    },
+    {
+      "head": "Determine probable diseases",
+      "tail": "Answer queries on selected symptoms",
+      "label": null
+    },
+    {
+      "head": "Filter determined diseases",
+      "tail": "Determine probable diseases",
+      "label": null
+    },
+    {
+      "head": "Is Top probability?",
+      "tail": "Filter determined diseases",
+      "label": null
+    },
+    {
+      "head": "Output",
+      "tail": "Is Top probability?",
+      "label": "No",
+      "bbox": [
+        40.0,
+        610.5,
+        38.0,
+        23.0
+      ]
+    },
+    {
+      "head": "Is history question?",
+      "tail": "Is Top probability?",
+      "label": "Yes",
+      "bbox": [
+        348.5,
+        737.5,
+        43.0,
+        25.0
+      ]
+    },
+    {
+      "head": "Add catalyst factor",
+      "tail": "Is history question?",
+      "label": "Yes",
+      "bbox": [
+        348.5,
+        737.5,
+        43.0,
+        25.0
+      ]
+    },
+    {
+      "head": "Output",
+      "tail": "Is history question?",
+      "label": "No",
+      "bbox": [
+        40.0,
+        610.5,
+        38.0,
+        23.0
+      ]
+    },
+    {
+      "head": "Output",
+      "tail": "Add catalyst factor",
+      "label": null
+    }
+  ],
+  "groups": []
+}

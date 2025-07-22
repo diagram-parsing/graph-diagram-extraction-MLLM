@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Is cable-source verify activated",
+      "id": "Is cable-source verify activated",
+      "class": null
+    },
+    {
+      "text": "Let the packet through for further processing",
+      "id": "Let the packet through for further processing",
+      "class": null
+    },
+    {
+      "text": "Is there an entry in the CPE database",
+      "id": "Is there an entry in the CPE database",
+      "class": null
+    },
+    {
+      "text": "2",
+      "id": "2",
+      "class": null
+    },
+    {
+      "text": "3",
+      "id": "3",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Is cable-source verify activated",
+      "head": "Let the packet through for further processing",
+      "label": "No"
+    },
+    {
+      "tail": "Is cable-source verify activated",
+      "head": "Is there an entry in the CPE database",
+      "label": null
+    },
+    {
+      "tail": "Is there an entry in the CPE database",
+      "head": "2",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is there an entry in the CPE database",
+      "head": "3",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

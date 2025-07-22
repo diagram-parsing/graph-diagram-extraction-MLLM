@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Tuner",
+      "id": "Tuner",
+      "class": null
+    },
+    {
+      "text": "Mixer",
+      "id": "Mixer",
+      "class": null
+    },
+    {
+      "text": "Noise",
+      "id": "Noise",
+      "class": null
+    },
+    {
+      "text": "IF Amplifier",
+      "id": "IF Amplifier",
+      "class": null
+    },
+    {
+      "text": "Detector",
+      "id": "Detector",
+      "class": null
+    },
+    {
+      "text": "AF Amplifier",
+      "id": "AF Amplifier",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Tuner",
+      "head": "Mixer",
+      "label": null
+    },
+    {
+      "tail": "Noise",
+      "head": "Mixer",
+      "label": null
+    },
+    {
+      "tail": "Mixer",
+      "head": "IF Amplifier",
+      "label": null
+    },
+    {
+      "tail": "IF Amplifier",
+      "head": "Detector",
+      "label": null
+    },
+    {
+      "tail": "Detector",
+      "head": "AF Amplifier",
+      "label": null
+    }
+  ],
+  "groups": []
+}

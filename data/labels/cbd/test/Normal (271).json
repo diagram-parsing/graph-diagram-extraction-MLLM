@@ -1,0 +1,99 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Acetyl-CoA",
+      "id": "Acetyl-CoA",
+      "class": null,
+      "bbox": [
+        410.5,
+        141.5,
+        111.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Citric Acid",
+      "id": "Citric Acid",
+      "class": null,
+      "bbox": [
+        426.5,
+        303.0,
+        103.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Mevalonic acid",
+      "id": "Mevalonic acid",
+      "class": null,
+      "bbox": [
+        416.5,
+        439.5,
+        145.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Methyl Acid",
+      "id": "Methyl Acid",
+      "class": null,
+      "bbox": [
+        418.5,
+        593.5,
+        121.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Geranyl-PP",
+      "id": "Geranyl-PP",
+      "class": null,
+      "bbox": [
+        412.0,
+        726.5,
+        112.0,
+        23.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        410.0,
+        874.5,
+        42.0,
+        23.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Citric Acid",
+      "tail": "Acetyl-CoA",
+      "label": null
+    },
+    {
+      "head": "Mevalonic acid",
+      "tail": "Citric Acid",
+      "label": null
+    },
+    {
+      "head": "Methyl Acid",
+      "tail": "Mevalonic acid",
+      "label": null
+    },
+    {
+      "head": "Geranyl-PP",
+      "tail": "Methyl Acid",
+      "label": null
+    },
+    {
+      "head": "End",
+      "tail": "Geranyl-PP",
+      "label": null
+    }
+  ],
+  "groups": []
+}

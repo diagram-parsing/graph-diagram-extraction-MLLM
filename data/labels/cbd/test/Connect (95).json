@@ -1,0 +1,88 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Power Supply",
+      "id": "Power Supply",
+      "class": null,
+      "bbox": [
+        42.0,
+        77.5,
+        50.0,
+        39.0
+      ]
+    },
+    {
+      "text": "RAM",
+      "id": "RAM",
+      "class": null,
+      "bbox": [
+        162.0,
+        25.5,
+        34.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Hard disk",
+      "id": "Hard disk",
+      "class": null,
+      "bbox": [
+        159.0,
+        131.0,
+        60.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Processor",
+      "id": "Processor",
+      "class": null,
+      "bbox": [
+        284.5,
+        79.0,
+        65.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Hard Drive",
+      "id": "Hard Drive",
+      "class": null,
+      "bbox": [
+        393.0,
+        77.0,
+        38.0,
+        36.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "RAM",
+      "tail": "Power Supply",
+      "label": null
+    },
+    {
+      "head": "Hard disk",
+      "tail": "Power Supply",
+      "label": null
+    },
+    {
+      "head": "Processor",
+      "tail": "RAM",
+      "label": null
+    },
+    {
+      "head": "Processor",
+      "tail": "Hard disk",
+      "label": null
+    },
+    {
+      "head": "Hard Drive",
+      "tail": "Processor",
+      "label": null
+    }
+  ],
+  "groups": []
+}

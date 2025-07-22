@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Submit the registartion form",
+      "id": "Submit the registartion form",
+      "class": null
+    },
+    {
+      "text": "Form Complete?",
+      "id": "Form Complete?",
+      "class": null
+    },
+    {
+      "text": "Form Complete",
+      "id": "Form Complete",
+      "class": null
+    },
+    {
+      "text": "Verify details",
+      "id": "Verify details",
+      "class": null
+    },
+    {
+      "text": "Accept Submission?",
+      "id": "Accept Submission?",
+      "class": null
+    },
+    {
+      "text": "Return Document",
+      "id": "Return Document",
+      "class": null
+    },
+    {
+      "text": "Write Acceptance Letter",
+      "id": "Write Acceptance Letter",
+      "class": null
+    },
+    {
+      "text": "Confirmation",
+      "id": "Confirmation",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Submit the registartion form",
+      "label": null
+    },
+    {
+      "tail": "Submit the registartion form",
+      "head": "Form Complete?",
+      "label": null
+    },
+    {
+      "tail": "Form Complete?",
+      "head": "Submit the registartion form",
+      "label": "No"
+    },
+    {
+      "tail": "Form Complete",
+      "head": "Verify details",
+      "label": "Yes"
+    },
+    {
+      "tail": "Verify details",
+      "head": "Accept Submission?",
+      "label": null
+    },
+    {
+      "tail": "Accept Submission?",
+      "head": "Return Document",
+      "label": "No"
+    },
+    {
+      "tail": "Accept Submission?",
+      "head": "Write Acceptance Letter",
+      "label": "Yes"
+    },
+    {
+      "tail": "Write Acceptance Letter",
+      "head": "Confirmation",
+      "label": null
+    },
+    {
+      "tail": "Confirmation",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Return Document",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

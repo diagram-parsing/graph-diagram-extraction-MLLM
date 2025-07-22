@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "REST API",
+      "id": "REST API",
+      "class": null
+    },
+    {
+      "text": "pre process",
+      "id": "pre process",
+      "class": null
+    },
+    {
+      "text": "document-filter-topic",
+      "id": "document-filter-topic",
+      "class": null
+    },
+    {
+      "text": "document-converter",
+      "id": "document-converter",
+      "class": null
+    },
+    {
+      "text": "document-converter-topic",
+      "id": "document-converter-topic",
+      "class": null
+    },
+    {
+      "text": "Topic",
+      "id": "Topic",
+      "class": null
+    },
+    {
+      "text": "publisher-topic",
+      "id": "publisher-topic",
+      "class": null
+    },
+    {
+      "text": "workflow",
+      "id": "workflow",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "REST API",
+      "head": "pre process",
+      "label": null
+    },
+    {
+      "tail": "pre process",
+      "head": "document-filter-topic",
+      "label": null
+    },
+    {
+      "tail": "document-filter-topic",
+      "head": "document-converter",
+      "label": null
+    },
+    {
+      "tail": "document-converter",
+      "head": "document-converter-topic",
+      "label": null
+    },
+    {
+      "tail": "document-converter-topic",
+      "head": "Topic",
+      "label": null
+    },
+    {
+      "tail": "Topic",
+      "head": "publisher-topic",
+      "label": null
+    },
+    {
+      "tail": "Topic",
+      "head": "workflow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

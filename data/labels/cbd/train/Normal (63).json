@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Enter measurements",
+      "id": "Enter measurements",
+      "class": null
+    },
+    {
+      "text": "Input Width",
+      "id": "Input Width",
+      "class": null
+    },
+    {
+      "text": "Input value of Long",
+      "id": "Input value of Long",
+      "class": null
+    },
+    {
+      "text": "Input Long",
+      "id": "Input Long",
+      "class": null
+    },
+    {
+      "text": "Width*Long",
+      "id": "Width*Long",
+      "class": null
+    },
+    {
+      "text": "Area of a rectangle",
+      "id": "Area of a rectangle",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Enter measurements",
+      "label": null
+    },
+    {
+      "tail": "Enter measurements",
+      "head": "Input Width",
+      "label": null
+    },
+    {
+      "tail": "Input Width",
+      "head": "Input value of Long",
+      "label": null
+    },
+    {
+      "tail": "Input value of Long",
+      "head": "Input Long",
+      "label": null
+    },
+    {
+      "tail": "Input Long",
+      "head": "Width*Long",
+      "label": null
+    },
+    {
+      "tail": "Width*Long",
+      "head": "Area of a rectangle",
+      "label": null
+    },
+    {
+      "tail": "Area of a rectangle",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

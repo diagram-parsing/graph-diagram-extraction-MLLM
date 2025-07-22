@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Data acquistion for vibration signal",
+      "id": "Data acquistion for vibration signal",
+      "class": null
+    },
+    {
+      "text": "Pressure control unit",
+      "id": "Pressure control unit",
+      "class": null
+    },
+    {
+      "text": "Characteristic frequency exits",
+      "id": "Characteristic frequency exits",
+      "class": null
+    },
+    {
+      "text": "Normal condition",
+      "id": "Normal condition",
+      "class": null
+    },
+    {
+      "text": "Characteristic not exist",
+      "id": "Characteristic not exist",
+      "class": null
+    },
+    {
+      "text": "Not Good condition",
+      "id": "Not Good condition",
+      "class": null
+    },
+    {
+      "text": "Blade with crack",
+      "id": "Blade with crack",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Data acquistion for vibration signal",
+      "head": "Pressure control unit",
+      "label": null
+    },
+    {
+      "tail": "Pressure control unit",
+      "head": "Characteristic frequency exits",
+      "label": null
+    },
+    {
+      "tail": "Characteristic frequency exits",
+      "head": "Normal condition",
+      "label": "NO"
+    },
+    {
+      "tail": "Characteristic frequency exits",
+      "head": "Characteristic not exist",
+      "label": "YES"
+    },
+    {
+      "tail": "Characteristic not exist",
+      "head": "Not Good condition",
+      "label": "YES"
+    },
+    {
+      "tail": "Characteristic not exist",
+      "head": "Blade with crack",
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}

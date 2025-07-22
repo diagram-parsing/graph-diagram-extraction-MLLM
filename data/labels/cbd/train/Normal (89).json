@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Program",
+      "id": "Program",
+      "class": null
+    },
+    {
+      "text": "Logical Plan",
+      "id": "Logical Plan",
+      "class": null
+    },
+    {
+      "text": "Physical Plan",
+      "id": "Physical Plan",
+      "class": null
+    },
+    {
+      "text": "Map-Reduce",
+      "id": "Map-Reduce",
+      "class": null
+    },
+    {
+      "text": "Execution",
+      "id": "Execution",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Program",
+      "head": "Logical Plan",
+      "label": null
+    },
+    {
+      "tail": "Logical Plan",
+      "head": "Physical Plan",
+      "label": null
+    },
+    {
+      "tail": "Physical Plan",
+      "head": "Map-Reduce",
+      "label": null
+    },
+    {
+      "tail": "Map-Reduce",
+      "head": "Execution",
+      "label": null
+    }
+  ],
+  "groups": []
+}

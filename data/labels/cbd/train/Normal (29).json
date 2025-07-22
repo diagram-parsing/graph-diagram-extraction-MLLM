@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Development Plan",
+      "id": "Development Plan",
+      "class": null
+    },
+    {
+      "text": "Form a team",
+      "id": "Form a team",
+      "class": null
+    },
+    {
+      "text": "Give contract",
+      "id": "Give contract",
+      "class": null
+    },
+    {
+      "text": "Planning",
+      "id": "Planning",
+      "class": null
+    },
+    {
+      "text": "Estimate cost",
+      "id": "Estimate cost",
+      "class": null
+    },
+    {
+      "text": "Tender pass",
+      "id": "Tender pass",
+      "class": null
+    },
+    {
+      "text": "Finalize",
+      "id": "Finalize",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Development Plan",
+      "label": null
+    },
+    {
+      "tail": "Development Plan",
+      "head": "Form a team",
+      "label": null
+    },
+    {
+      "tail": "Form a team",
+      "head": "Give contract",
+      "label": null
+    },
+    {
+      "tail": "Give contract",
+      "head": "Planning",
+      "label": null
+    },
+    {
+      "tail": "Planning",
+      "head": "Estimate cost",
+      "label": null
+    },
+    {
+      "tail": "Estimate cost",
+      "head": "Tender pass",
+      "label": null
+    },
+    {
+      "tail": "Tender pass",
+      "head": "Finalize",
+      "label": null
+    },
+    {
+      "tail": "Finalize",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

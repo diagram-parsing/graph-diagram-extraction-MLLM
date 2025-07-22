@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Planning",
+      "id": "Planning",
+      "class": null
+    },
+    {
+      "text": "In progress",
+      "id": "In progress",
+      "class": null
+    },
+    {
+      "text": "review",
+      "id": "review",
+      "class": null
+    },
+    {
+      "text": "Done",
+      "id": "Done",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Planning",
+      "head": "In progress",
+      "label": null
+    },
+    {
+      "tail": "In progress",
+      "head": "review",
+      "label": null
+    },
+    {
+      "tail": "review",
+      "head": "Done",
+      "label": null
+    }
+  ],
+  "groups": []
+}

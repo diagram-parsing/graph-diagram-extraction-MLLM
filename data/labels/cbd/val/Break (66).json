@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Check Round Status",
+      "id": "Check Round Status",
+      "class": null
+    },
+    {
+      "text": "Is it round 15?",
+      "id": "Is it round 15?",
+      "class": null
+    },
+    {
+      "text": "Chill",
+      "id": "Chill",
+      "class": null
+    },
+    {
+      "text": "Keep rolling",
+      "id": "Keep rolling",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Check Round Status",
+      "label": null
+    },
+    {
+      "tail": "Check Round Status",
+      "head": "Is it round 15?",
+      "label": null
+    },
+    {
+      "tail": "Is it round 15?",
+      "head": "Chill",
+      "label": "NO"
+    },
+    {
+      "tail": "Is it round 15?",
+      "head": "Keep rolling",
+      "label": "YES"
+    },
+    {
+      "tail": "Keep rolling",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Chill",
+      "head": "Check Round Status",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Area = Width*Height",
+      "id": "Area = Width*Height",
+      "class": null
+    },
+    {
+      "text": "Height",
+      "id": "Height",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "Area = Width*Height",
+      "label": null
+    },
+    {
+      "tail": "Area = Width*Height",
+      "head": "Height",
+      "label": null
+    },
+    {
+      "tail": "Height",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

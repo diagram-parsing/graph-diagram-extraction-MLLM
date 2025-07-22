@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Raw Materials",
+      "id": "Raw Materials",
+      "class": null
+    },
+    {
+      "text": "Melting",
+      "id": "Melting",
+      "class": null
+    },
+    {
+      "text": "Forming",
+      "id": "Forming",
+      "class": null
+    },
+    {
+      "text": "Sampling",
+      "id": "Sampling",
+      "class": null
+    },
+    {
+      "text": "Inspection and Testing",
+      "id": "Inspection and Testing",
+      "class": null
+    },
+    {
+      "text": "Secondary Processing",
+      "id": "Secondary Processing",
+      "class": null
+    },
+    {
+      "text": "Warehousing",
+      "id": "Warehousing",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Raw Materials",
+      "head": "Melting",
+      "label": null
+    },
+    {
+      "tail": "Melting",
+      "head": "Forming",
+      "label": null
+    },
+    {
+      "tail": "Forming",
+      "head": "Sampling",
+      "label": null
+    },
+    {
+      "tail": "Sampling",
+      "head": "Inspection and Testing",
+      "label": null
+    },
+    {
+      "tail": "Inspection and Testing",
+      "head": "Secondary Processing",
+      "label": null
+    },
+    {
+      "tail": "Secondary Processing",
+      "head": "Warehousing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

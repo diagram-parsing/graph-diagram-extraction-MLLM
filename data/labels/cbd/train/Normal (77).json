@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "Enter Details",
+      "id": "Enter Details",
+      "class": null
+    },
+    {
+      "text": "Confirmation",
+      "id": "Confirmation",
+      "class": null
+    },
+    {
+      "text": "Attempts?",
+      "id": "Attempts?",
+      "class": null
+    },
+    {
+      "text": "Display",
+      "id": "Display",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Enter Details",
+      "head": "Confirmation",
+      "label": null
+    },
+    {
+      "tail": "Confirmation",
+      "head": "Attempts?",
+      "label": null
+    },
+    {
+      "tail": "Attempts?",
+      "head": "Display",
+      "label": "Yes"
+    },
+    {
+      "tail": "Attempts?",
+      "head": "Confirmation",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

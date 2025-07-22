@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "Decision",
+      "id": "Decision",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Delay",
+      "id": "Delay",
+      "class": null
+    },
+    {
+      "text": "Print result",
+      "id": "Print result",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Decision",
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Process",
+      "label": "No"
+    },
+    {
+      "tail": "Process",
+      "head": "Delay",
+      "label": null
+    },
+    {
+      "tail": "Delay",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Print result",
+      "label": "Yes"
+    },
+    {
+      "tail": "Print result",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

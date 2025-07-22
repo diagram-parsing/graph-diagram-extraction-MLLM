@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Input Image",
+      "id": "Input Image",
+      "class": null
+    },
+    {
+      "text": "Image Enhancement",
+      "id": "Image Enhancement",
+      "class": null
+    },
+    {
+      "text": "Image Segmentation",
+      "id": "Image Segmentation",
+      "class": null
+    },
+    {
+      "text": "Cropping ROI Manually",
+      "id": "Cropping ROI Manually",
+      "class": null
+    },
+    {
+      "text": "Threshold and region based technique",
+      "id": "Threshold and region based technique",
+      "class": null
+    },
+    {
+      "text": "NCNNN",
+      "id": "NCNNN",
+      "class": null
+    },
+    {
+      "text": "Testing",
+      "id": "Testing",
+      "class": null
+    },
+    {
+      "text": "Evaluation",
+      "id": "Evaluation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input Image",
+      "head": "Image Enhancement",
+      "label": null
+    },
+    {
+      "tail": "Image Enhancement",
+      "head": "Image Segmentation",
+      "label": null
+    },
+    {
+      "tail": "Image Segmentation",
+      "head": "Cropping ROI Manually",
+      "label": null
+    },
+    {
+      "tail": "Image Segmentation",
+      "head": "Threshold and region based technique",
+      "label": null
+    },
+    {
+      "tail": "Image Segmentation",
+      "head": "NCNNN",
+      "label": null
+    },
+    {
+      "tail": "NCNNN",
+      "head": "Testing",
+      "label": null
+    },
+    {
+      "tail": "Testing",
+      "head": "Evaluation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

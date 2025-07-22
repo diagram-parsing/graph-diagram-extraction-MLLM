@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Enter to the website",
+      "id": "Enter to the website",
+      "class": null
+    },
+    {
+      "text": "have an account",
+      "id": "have an account",
+      "class": null
+    },
+    {
+      "text": "Sign up",
+      "id": "Sign up",
+      "class": null
+    },
+    {
+      "text": "Fill details",
+      "id": "Fill details",
+      "class": null
+    },
+    {
+      "text": "Submit",
+      "id": "Submit",
+      "class": null
+    },
+    {
+      "text": "Log in",
+      "id": "Log in",
+      "class": null
+    },
+    {
+      "text": "Enter e-mail and password valid",
+      "id": "Enter e-mail and password valid",
+      "class": null
+    },
+    {
+      "text": "e-mail and password valid",
+      "id": "e-mail and password valid",
+      "class": null
+    },
+    {
+      "text": "Profile",
+      "id": "Profile",
+      "class": null
+    },
+    {
+      "text": "end",
+      "id": "end",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Enter to the website",
+      "label": null
+    },
+    {
+      "tail": "Enter to the website",
+      "head": "have an account",
+      "label": null
+    },
+    {
+      "tail": "have an account",
+      "head": "Sign up",
+      "label": "No"
+    },
+    {
+      "tail": "Sign up",
+      "head": "Fill details",
+      "label": null
+    },
+    {
+      "tail": "Fill details",
+      "head": "Submit",
+      "label": null
+    },
+    {
+      "tail": "Submit",
+      "head": "Log in",
+      "label": null
+    },
+    {
+      "tail": "have an account",
+      "head": "Log in",
+      "label": "yes"
+    },
+    {
+      "tail": "Log in",
+      "head": "Enter e-mail and password valid",
+      "label": null
+    },
+    {
+      "tail": "Enter e-mail and password valid",
+      "head": "e-mail and password valid",
+      "label": null
+    },
+    {
+      "tail": "e-mail and password valid",
+      "head": "Log in",
+      "label": "no"
+    },
+    {
+      "tail": "e-mail and password valid",
+      "head": "Profile",
+      "label": "yes"
+    },
+    {
+      "tail": "Profile",
+      "head": "end",
+      "label": null
+    }
+  ],
+  "groups": []
+}

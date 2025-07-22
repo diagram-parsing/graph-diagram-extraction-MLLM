@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initialize X<0",
+      "id": "Initialize X<0",
+      "class": null
+    },
+    {
+      "text": "X=X+2",
+      "id": "X=X+2",
+      "class": null
+    },
+    {
+      "text": "Print X",
+      "id": "Print X",
+      "class": null
+    },
+    {
+      "text": "X<20",
+      "id": "X<20",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initialize X<0",
+      "label": null
+    },
+    {
+      "tail": "Initialize X<0",
+      "head": "X=X+2",
+      "label": null
+    },
+    {
+      "tail": "X=X+2",
+      "head": "Print X",
+      "label": null
+    },
+    {
+      "tail": "Print X",
+      "head": "X<20",
+      "label": null
+    },
+    {
+      "tail": "X<20",
+      "head": "X=X+2",
+      "label": "YES"
+    },
+    {
+      "tail": "X<20",
+      "head": "END",
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}

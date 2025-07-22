@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "i=0",
+      "id": "i=0",
+      "class": null
+    },
+    {
+      "text": "Assign operations to variables",
+      "id": "Assign operations to variables",
+      "class": null
+    },
+    {
+      "text": "Generate 'k' test samples",
+      "id": "Generate 'k' test samples",
+      "class": null
+    },
+    {
+      "text": "Compute a",
+      "id": "Compute a",
+      "class": null
+    },
+    {
+      "text": "a>c",
+      "id": "a>c",
+      "class": null
+    },
+    {
+      "text": "User is located in location i",
+      "id": "User is located in location i",
+      "class": null
+    },
+    {
+      "text": "i=i+1",
+      "id": "i=i+1",
+      "class": null
+    },
+    {
+      "text": "i>M",
+      "id": "i>M",
+      "class": null
+    },
+    {
+      "text": "Display i",
+      "id": "Display i",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "i=0",
+      "label": null
+    },
+    {
+      "tail": "i=0",
+      "head": "Assign operations to variables",
+      "label": null
+    },
+    {
+      "tail": "Assign operations to variables",
+      "head": "Generate 'k' test samples",
+      "label": null
+    },
+    {
+      "tail": "Generate 'k' test samples",
+      "head": "Compute a",
+      "label": null
+    },
+    {
+      "tail": "Compute a",
+      "head": "a>c",
+      "label": null
+    },
+    {
+      "tail": "a>c",
+      "head": "User is located in location i",
+      "label": "Yes"
+    },
+    {
+      "tail": "a>c",
+      "head": "i=i+1",
+      "label": "No"
+    },
+    {
+      "tail": "i=i+1",
+      "head": "i>M",
+      "label": null
+    },
+    {
+      "tail": "i>M",
+      "head": "Display i",
+      "label": "Yes"
+    },
+    {
+      "tail": "i>M",
+      "head": "Assign operations to variables",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

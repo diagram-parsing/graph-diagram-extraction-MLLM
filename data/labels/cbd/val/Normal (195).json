@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initialization",
+      "id": "Initialization",
+      "class": null
+    },
+    {
+      "text": "INPUT bears",
+      "id": "INPUT bears",
+      "class": null
+    },
+    {
+      "text": "hourwage=hours*7",
+      "id": "hourwage=hours*7",
+      "class": null
+    },
+    {
+      "text": "bearswage=bears*0.45",
+      "id": "bearswage=bears*0.45",
+      "class": null
+    },
+    {
+      "text": "total=hourswage+bearswage",
+      "id": "total=hourswage+bearswage",
+      "class": null
+    },
+    {
+      "text": "Print Result",
+      "id": "Print Result",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialization",
+      "label": null
+    },
+    {
+      "tail": "Initialization",
+      "head": "INPUT bears",
+      "label": null
+    },
+    {
+      "tail": "INPUT bears",
+      "head": "hourwage=hours*7",
+      "label": null
+    },
+    {
+      "tail": "hourwage=hours*7",
+      "head": "bearswage=bears*0.45",
+      "label": null
+    },
+    {
+      "tail": "bearswage=bears*0.45",
+      "head": "total=hourswage+bearswage",
+      "label": null
+    },
+    {
+      "tail": "total=hourswage+bearswage",
+      "head": "Print Result",
+      "label": null
+    },
+    {
+      "tail": "Print Result",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

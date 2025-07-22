@@ -1,0 +1,156 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Surgery",
+      "id": "Surgery",
+      "class": null,
+      "bbox": [
+        440.5,
+        60.0,
+        105.0,
+        36.0
+      ]
+    },
+    {
+      "text": "Discuss with Doctor",
+      "id": "Discuss with Doctor",
+      "class": null,
+      "bbox": [
+        449.0,
+        302.5,
+        258.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Still has concerns",
+      "id": "Still has concerns",
+      "class": null,
+      "bbox": [
+        200.5,
+        490.0,
+        165.0,
+        28.0
+      ]
+    },
+    {
+      "text": "No longer has concerns",
+      "id": "No longer has concerns",
+      "class": null,
+      "bbox": [
+        684.5,
+        516.0,
+        131.0,
+        54.0
+      ]
+    },
+    {
+      "text": "Contact Again",
+      "id": "Contact Again",
+      "class": null,
+      "bbox": [
+        147.5,
+        655.5,
+        181.0,
+        29.0
+      ]
+    },
+    {
+      "text": "No further CP action",
+      "id": "No further CP action",
+      "class": null,
+      "bbox": [
+        713.5,
+        661.0,
+        193.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Ensure documentation complete",
+      "id": "Ensure documentation complete",
+      "class": null
+    },
+    {
+      "text": "Concerns remain",
+      "id": "Concerns remain",
+      "class": null,
+      "bbox": [
+        140.0,
+        808.5,
+        158.0,
+        23.0
+      ]
+    },
+    {
+      "text": "Ensure documentation is complete",
+      "id": "Ensure documentation is complete",
+      "class": null
+    },
+    {
+      "text": "Assessment made. CP procedures follow",
+      "id": "Assessment made. CP procedures follow",
+      "class": null,
+      "bbox": [
+        163.5,
+        1130.0,
+        197.0,
+        50.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Discuss with Doctor",
+      "tail": "Surgery",
+      "label": null
+    },
+    {
+      "head": "Still has concerns",
+      "tail": "Discuss with Doctor",
+      "label": null
+    },
+    {
+      "head": "No longer has concerns",
+      "tail": "Discuss with Doctor",
+      "label": null
+    },
+    {
+      "head": "Contact Again",
+      "tail": "Still has concerns",
+      "label": null
+    },
+    {
+      "head": "No longer has concerns",
+      "tail": "Contact Again",
+      "label": null
+    },
+    {
+      "head": "No further CP action",
+      "tail": "No longer has concerns",
+      "label": null
+    },
+    {
+      "head": "Ensure documentation complete",
+      "tail": "No further CP action",
+      "label": null
+    },
+    {
+      "head": "Concerns remain",
+      "tail": "Contact Again",
+      "label": null
+    },
+    {
+      "head": "Ensure documentation is complete",
+      "tail": "Concerns remain",
+      "label": null
+    },
+    {
+      "head": "Assessment made. CP procedures follow",
+      "tail": "Ensure documentation is complete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

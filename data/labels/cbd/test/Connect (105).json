@@ -1,0 +1,105 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "If Condition",
+      "id": "If Condition",
+      "class": null,
+      "bbox": [
+        20.0,
+        62.0,
+        38.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Nested If Condition",
+      "id": "Nested If Condition",
+      "class": null
+    },
+    {
+      "text": "Pass",
+      "id": "Pass",
+      "class": null
+    },
+    {
+      "text": "If Body",
+      "id": "If Body",
+      "class": null
+    },
+    {
+      "text": "Nested If Body",
+      "id": "Nested If Body",
+      "class": null
+    },
+    {
+      "text": "Statement just below it",
+      "id": "Statement just below it",
+      "class": null
+    },
+    {
+      "text": "Exit",
+      "id": "Exit",
+      "class": null,
+      "bbox": [
+        21.5,
+        214.5,
+        13.0,
+        7.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "If Condition",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Nested If Condition",
+      "tail": "If Condition",
+      "label": "False"
+    },
+    {
+      "head": "Pass",
+      "tail": "Nested If Condition",
+      "label": "False"
+    },
+    {
+      "head": "If Body",
+      "tail": "If Condition",
+      "label": "True"
+    },
+    {
+      "head": "Nested If Body",
+      "tail": "Nested If Condition",
+      "label": "True"
+    },
+    {
+      "head": "Statement just below it",
+      "tail": "If Body",
+      "label": null
+    },
+    {
+      "head": "Statement just below it",
+      "tail": "Nested If Body",
+      "label": null
+    },
+    {
+      "head": "Statement just below it",
+      "tail": "Pass",
+      "label": null
+    },
+    {
+      "head": "Exit",
+      "tail": "Statement just below it",
+      "label": null
+    }
+  ],
+  "groups": []
+}

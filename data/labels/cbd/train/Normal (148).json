@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initialize parameters of particles",
+      "id": "Initialize parameters of particles",
+      "class": null
+    },
+    {
+      "text": "Calculate the fitness function",
+      "id": "Calculate the fitness function",
+      "class": null
+    },
+    {
+      "text": "Compare with others fitness",
+      "id": "Compare with others fitness",
+      "class": null
+    },
+    {
+      "text": "Update the global best position of particle swarm",
+      "id": "Update the global best position of particle swarm",
+      "class": null
+    },
+    {
+      "text": "Find overall performance",
+      "id": "Find overall performance",
+      "class": null
+    },
+    {
+      "text": "Does it satisfy the termination conditions?",
+      "id": "Does it satisfy the termination conditions?",
+      "class": null
+    },
+    {
+      "text": "Display the results",
+      "id": "Display the results",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialize parameters of particles",
+      "label": null
+    },
+    {
+      "tail": "Initialize parameters of particles",
+      "head": "Calculate the fitness function",
+      "label": null
+    },
+    {
+      "tail": "Calculate the fitness function",
+      "head": "Compare with others fitness",
+      "label": null
+    },
+    {
+      "tail": "Compare with others fitness",
+      "head": "Update the global best position of particle swarm",
+      "label": null
+    },
+    {
+      "tail": "Update the global best position of particle swarm",
+      "head": "Find overall performance",
+      "label": null
+    },
+    {
+      "tail": "Find overall performance",
+      "head": "Does it satisfy the termination conditions?",
+      "label": null
+    },
+    {
+      "tail": "Does it satisfy the termination conditions?",
+      "head": "Calculate the fitness function",
+      "label": "N"
+    },
+    {
+      "tail": "Does it satisfy the termination conditions?",
+      "head": "Display the results",
+      "label": "Y"
+    },
+    {
+      "tail": "Display the results",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

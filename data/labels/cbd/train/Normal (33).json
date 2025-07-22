@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Movie",
+      "id": "Movie",
+      "class": null
+    },
+    {
+      "text": "has subtitles",
+      "id": "has subtitles",
+      "class": null
+    },
+    {
+      "text": "Ask someone",
+      "id": "Ask someone",
+      "class": null
+    },
+    {
+      "text": "Type",
+      "id": "Type",
+      "class": null
+    },
+    {
+      "text": "Summarize based on selected algorithm",
+      "id": "Summarize based on selected algorithm",
+      "class": null
+    },
+    {
+      "text": "Create new algorithm",
+      "id": "Create new algorithm",
+      "class": null
+    },
+    {
+      "text": "Generate the summarized video",
+      "id": "Generate the summarized video",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Movie",
+      "head": "has subtitles",
+      "label": null
+    },
+    {
+      "tail": "has subtitles",
+      "head": "Ask someone",
+      "label": "No"
+    },
+    {
+      "tail": "has subtitles",
+      "head": "Type",
+      "label": "Yes"
+    },
+    {
+      "tail": "Ask someone",
+      "head": "Type",
+      "label": null
+    },
+    {
+      "tail": "Type",
+      "head": "Summarize based on selected algorithm",
+      "label": "Single"
+    },
+    {
+      "tail": "Type",
+      "head": "Create new algorithm",
+      "label": "Combined"
+    },
+    {
+      "tail": "Summarize based on selected algorithm",
+      "head": "Generate the summarized video",
+      "label": null
+    },
+    {
+      "tail": "Create new algorithm",
+      "head": "Generate the summarized video",
+      "label": null
+    }
+  ],
+  "groups": []
+}

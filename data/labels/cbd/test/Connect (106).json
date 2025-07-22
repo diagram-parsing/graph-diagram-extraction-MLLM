@@ -1,0 +1,123 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Order",
+      "id": "Order",
+      "class": null
+    },
+    {
+      "text": "Want fries?",
+      "id": "Want fries?",
+      "class": null,
+      "bbox": [
+        45.5,
+        104.0,
+        51.0,
+        36.0
+      ]
+    },
+    {
+      "text": "Order fries",
+      "id": "Order fries",
+      "class": null,
+      "bbox": [
+        166.0,
+        90.0,
+        48.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Want drink?",
+      "id": "Want drink?",
+      "class": null,
+      "bbox": [
+        40.5,
+        146.5,
+        35.0,
+        39.0
+      ]
+    },
+    {
+      "text": "Order drink",
+      "id": "Order drink",
+      "class": null
+    },
+    {
+      "text": "Pay",
+      "id": "Pay",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Order",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Want fries?",
+      "tail": "Order",
+      "label": null
+    },
+    {
+      "head": "Order fries",
+      "tail": "Want fries?",
+      "label": "Yes",
+      "bbox": [
+        101.0,
+        84.0,
+        20.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Want drink?",
+      "tail": "Order fries",
+      "label": null
+    },
+    {
+      "head": "Want drink?",
+      "tail": "Want fries?",
+      "label": "No"
+    },
+    {
+      "head": "Order drink",
+      "tail": "Want drink?",
+      "label": "Yes",
+      "bbox": [
+        101.0,
+        84.0,
+        20.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Pay",
+      "tail": "Order drink",
+      "label": null
+    },
+    {
+      "head": "Pay",
+      "tail": "Want drink?",
+      "label": "No"
+    },
+    {
+      "head": "End",
+      "tail": "Pay",
+      "label": null
+    }
+  ],
+  "groups": []
+}

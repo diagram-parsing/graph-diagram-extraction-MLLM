@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "text": "Activities",
+      "id": "Activities",
+      "class": null
+    },
+    {
+      "text": "Atmosphere",
+      "id": "Atmosphere",
+      "class": null
+    },
+    {
+      "text": "Consumption of fossil energy",
+      "id": "Consumption of fossil energy",
+      "class": null
+    },
+    {
+      "text": "Emissions of primary pollutants",
+      "id": "Emissions of primary pollutants",
+      "class": null
+    },
+    {
+      "text": "Transformation and transport of pollutants",
+      "id": "Transformation and transport of pollutants",
+      "class": null
+    },
+    {
+      "text": "pollutants",
+      "id": "pollutants",
+      "class": null
+    },
+    {
+      "text": "Exposure to pollutants",
+      "id": "Exposure to pollutants",
+      "class": null
+    },
+    {
+      "text": "Effects of pollution",
+      "id": "Effects of pollution",
+      "class": null
+    },
+    {
+      "text": "Effects on vegetation",
+      "id": "Effects on vegetation",
+      "class": null
+    },
+    {
+      "text": "Effects on fauna, human and animal health",
+      "id": "Effects on fauna, human and animal health",
+      "class": null
+    },
+    {
+      "text": "Effects on biotopes",
+      "id": "Effects on biotopes",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Activities",
+      "head": "Atmosphere",
+      "label": null
+    },
+    {
+      "tail": "Activities",
+      "head": "Consumption of fossil energy",
+      "label": null
+    },
+    {
+      "tail": "Consumption of fossil energy",
+      "head": "Emissions of primary pollutants",
+      "label": null
+    },
+    {
+      "tail": "Emissions of primary pollutants",
+      "head": "Transformation and transport of pollutants",
+      "label": null
+    },
+    {
+      "tail": "Emissions of primary pollutants",
+      "head": "pollutants",
+      "label": null
+    },
+    {
+      "tail": "Transformation and transport of pollutants",
+      "head": "pollutants",
+      "label": null
+    },
+    {
+      "tail": "pollutants",
+      "head": "Exposure to pollutants",
+      "label": null
+    },
+    {
+      "tail": "pollutants",
+      "head": "Effects of pollution",
+      "label": null
+    },
+    {
+      "tail": "Exposure to pollutants",
+      "head": "Effects of pollution",
+      "label": null
+    },
+    {
+      "tail": "Effects of pollution",
+      "head": "Effects on vegetation",
+      "label": null
+    },
+    {
+      "tail": "Effects of pollution",
+      "head": "Effects on fauna, human and animal health",
+      "label": null
+    },
+    {
+      "tail": "Effects of pollution",
+      "head": "Effects on biotopes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

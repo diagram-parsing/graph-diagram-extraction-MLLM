@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Are you thirsty?",
+      "id": "Are you thirsty?",
+      "class": null
+    },
+    {
+      "text": "Take water",
+      "id": "Take water",
+      "class": null
+    },
+    {
+      "text": "Don't get a drink",
+      "id": "Don't get a drink",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Are you thirsty?",
+      "head": "Take water",
+      "label": "Yes"
+    },
+    {
+      "tail": "Are you thirsty?",
+      "head": "Don't get a drink",
+      "label": "no"
+    }
+  ],
+  "groups": []
+}

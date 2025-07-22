@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Door Bell",
+      "id": "Door Bell",
+      "class": null
+    },
+    {
+      "text": "Ready to Get Up?",
+      "id": "Ready to Get Up?",
+      "class": null
+    },
+    {
+      "text": "Ignore bell",
+      "id": "Ignore bell",
+      "class": null
+    },
+    {
+      "text": "Relay",
+      "id": "Relay",
+      "class": null
+    },
+    {
+      "text": "Wakeup",
+      "id": "Wakeup",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Door Bell",
+      "label": null
+    },
+    {
+      "tail": "Door Bell",
+      "head": "Ready to Get Up?",
+      "label": null
+    },
+    {
+      "tail": "Ready to Get Up?",
+      "head": "Ignore bell",
+      "label": "NO"
+    },
+    {
+      "tail": "Ignore bell",
+      "head": "Relay",
+      "label": null
+    },
+    {
+      "tail": "Relay",
+      "head": "Door Bell",
+      "label": null
+    },
+    {
+      "tail": "Ready to Get Up?",
+      "head": "Wakeup",
+      "label": "YES"
+    },
+    {
+      "tail": "Wakeup",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

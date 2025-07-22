@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Exploration",
+      "id": "Exploration",
+      "class": null
+    },
+    {
+      "text": "Drilling and blasting",
+      "id": "Drilling and blasting",
+      "class": null
+    },
+    {
+      "text": "Mining",
+      "id": "Mining",
+      "class": null
+    },
+    {
+      "text": "mining",
+      "id": "mining",
+      "class": null
+    },
+    {
+      "text": "Separation",
+      "id": "Separation",
+      "class": null
+    },
+    {
+      "text": "Refining",
+      "id": "Refining",
+      "class": null
+    },
+    {
+      "text": "Distribution",
+      "id": "Distribution",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Exploration",
+      "head": "Drilling and blasting",
+      "label": null
+    },
+    {
+      "tail": "Drilling and blasting",
+      "head": "Mining",
+      "label": null
+    },
+    {
+      "tail": "mining",
+      "head": "Separation",
+      "label": null
+    },
+    {
+      "tail": "Separation",
+      "head": "Refining",
+      "label": null
+    },
+    {
+      "tail": "Refining",
+      "head": "Distribution",
+      "label": null
+    }
+  ],
+  "groups": []
+}

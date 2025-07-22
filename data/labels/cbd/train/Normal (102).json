@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Goals",
+      "id": "Goals",
+      "class": null
+    },
+    {
+      "text": "Winning",
+      "id": "Winning",
+      "class": null
+    },
+    {
+      "text": "Planning",
+      "id": "Planning",
+      "class": null
+    },
+    {
+      "text": "Trust",
+      "id": "Trust",
+      "class": null
+    },
+    {
+      "text": "Action",
+      "id": "Action",
+      "class": null
+    },
+    {
+      "text": "Result",
+      "id": "Result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Goals",
+      "head": "Winning",
+      "label": null
+    },
+    {
+      "tail": "Planning",
+      "head": "Winning",
+      "label": null
+    },
+    {
+      "tail": "Trust",
+      "head": "Winning",
+      "label": null
+    },
+    {
+      "tail": "Action",
+      "head": "Winning",
+      "label": null
+    },
+    {
+      "tail": "Result",
+      "head": "Winning",
+      "label": null
+    }
+  ],
+  "groups": []
+}

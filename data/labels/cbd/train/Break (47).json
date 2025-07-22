@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Do You Understand Flowcharts?",
+      "id": "Do You Understand Flowcharts?",
+      "class": null
+    },
+    {
+      "text": "Great",
+      "id": "Great",
+      "class": null
+    },
+    {
+      "text": "Explain everyone",
+      "id": "Explain everyone",
+      "class": null
+    },
+    {
+      "text": "Would You Like to Start With the Basics?",
+      "id": "Would You Like to Start With the Basics?",
+      "class": null
+    },
+    {
+      "text": "Read each detail",
+      "id": "Read each detail",
+      "class": null
+    },
+    {
+      "text": "Further Reading About Flowcharts",
+      "id": "Further Reading About Flowcharts",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Do You Understand Flowcharts?",
+      "label": null
+    },
+    {
+      "tail": "Do You Understand Flowcharts?",
+      "head": "Great",
+      "label": "Yes"
+    },
+    {
+      "tail": "Great",
+      "head": "Explain everyone",
+      "label": null
+    },
+    {
+      "tail": "Do You Understand Flowcharts?",
+      "head": "Would You Like to Start With the Basics?",
+      "label": "No"
+    },
+    {
+      "tail": "Would You Like to Start With the Basics?",
+      "head": "Read each detail",
+      "label": "YES"
+    },
+    {
+      "tail": "Would You Like to Start With the Basics?",
+      "head": "Further Reading About Flowcharts",
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}

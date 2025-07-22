@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Worker (as the victim)",
+      "id": "Worker (as the victim)",
+      "class": null
+    },
+    {
+      "text": "Family members",
+      "id": "Family members",
+      "class": null
+    },
+    {
+      "text": "Loss of earning capacity",
+      "id": "Loss of earning capacity",
+      "class": null
+    },
+    {
+      "text": "Pain & Suffering",
+      "id": "Pain & Suffering",
+      "class": null
+    },
+    {
+      "text": "Family issue",
+      "id": "Family issue",
+      "class": null
+    },
+    {
+      "text": "Changed Social Life",
+      "id": "Changed Social Life",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Worker (as the victim)",
+      "head": "Family members",
+      "label": null
+    },
+    {
+      "tail": "Family members",
+      "head": "Loss of earning capacity",
+      "label": null
+    },
+    {
+      "tail": "Loss of earning capacity",
+      "head": "Pain & Suffering",
+      "label": null
+    },
+    {
+      "tail": "Pain & Suffering",
+      "head": "Family issue",
+      "label": null
+    },
+    {
+      "tail": "Family issue",
+      "head": "Changed Social Life",
+      "label": null
+    }
+  ],
+  "groups": []
+}

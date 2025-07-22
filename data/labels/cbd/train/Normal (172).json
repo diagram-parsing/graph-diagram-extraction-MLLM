@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Inputs",
+      "id": "Read Inputs",
+      "class": null
+    },
+    {
+      "text": "Let Factor=1,I=1",
+      "id": "Let Factor=1,I=1",
+      "class": null
+    },
+    {
+      "text": "I is greater than N",
+      "id": "I is greater than N",
+      "class": null
+    },
+    {
+      "text": "Show Factor on output",
+      "id": "Show Factor on output",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Add 1 to I",
+      "id": "Add 1 to I",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Inputs",
+      "label": null
+    },
+    {
+      "tail": "Read Inputs",
+      "head": "Let Factor=1,I=1",
+      "label": null
+    },
+    {
+      "tail": "Let Factor=1,I=1",
+      "head": "I is greater than N",
+      "label": null
+    },
+    {
+      "tail": "I is greater than N",
+      "head": "Show Factor on output",
+      "label": "Yes"
+    },
+    {
+      "tail": "I is greater than N",
+      "head": "Update",
+      "label": "No"
+    },
+    {
+      "tail": "Show Factor on output",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Update",
+      "head": "Add 1 to I",
+      "label": null
+    },
+    {
+      "tail": "Add 1 to I",
+      "head": "I is greater than N",
+      "label": null
+    }
+  ],
+  "groups": []
+}

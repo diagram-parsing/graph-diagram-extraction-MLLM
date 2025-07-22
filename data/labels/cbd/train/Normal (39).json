@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "L=p.l",
+      "id": "L=p.l",
+      "class": null
+    },
+    {
+      "text": "Print",
+      "id": "Print",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "L=p.l",
+      "label": null
+    },
+    {
+      "tail": "L=p.l",
+      "head": "Print",
+      "label": null
+    },
+    {
+      "tail": "Print",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

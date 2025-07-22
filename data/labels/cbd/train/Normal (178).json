@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Requirements",
+      "id": "Requirements",
+      "class": null
+    },
+    {
+      "text": "System simulation",
+      "id": "System simulation",
+      "class": null
+    },
+    {
+      "text": "Result Analyzing",
+      "id": "Result Analyzing",
+      "class": null
+    },
+    {
+      "text": "Improvement & Development",
+      "id": "Improvement & Development",
+      "class": null
+    },
+    {
+      "text": "Hardware implementation",
+      "id": "Hardware implementation",
+      "class": null
+    },
+    {
+      "text": "Display",
+      "id": "Display",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Requirements",
+      "label": null
+    },
+    {
+      "tail": "Requirements",
+      "head": "System simulation",
+      "label": null
+    },
+    {
+      "tail": "System simulation",
+      "head": "Result Analyzing",
+      "label": null
+    },
+    {
+      "tail": "Result Analyzing",
+      "head": "Improvement & Development",
+      "label": null
+    },
+    {
+      "tail": "Improvement & Development",
+      "head": "Hardware implementation",
+      "label": null
+    },
+    {
+      "tail": "Hardware implementation",
+      "head": "Display",
+      "label": null
+    },
+    {
+      "tail": "Display",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

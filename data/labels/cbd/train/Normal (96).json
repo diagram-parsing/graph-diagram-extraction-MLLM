@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Dead body",
+      "id": "Dead body",
+      "class": null
+    },
+    {
+      "text": "EMG Electrode",
+      "id": "EMG Electrode",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    },
+    {
+      "text": "EMG Recorder",
+      "id": "EMG Recorder",
+      "class": null
+    },
+    {
+      "text": "AF Amplifier",
+      "id": "AF Amplifier",
+      "class": null
+    },
+    {
+      "text": "Oscilloscope",
+      "id": "Oscilloscope",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Dead body",
+      "head": "EMG Electrode",
+      "label": null
+    },
+    {
+      "tail": "EMG Electrode",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "EMG Recorder",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "AF Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "Oscilloscope",
+      "label": null
+    }
+  ],
+  "groups": []
+}

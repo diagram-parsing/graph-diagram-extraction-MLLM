@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Data Collection",
+      "id": "Data Collection",
+      "class": null
+    },
+    {
+      "text": "Conceptual Model Construction",
+      "id": "Conceptual Model Construction",
+      "class": null
+    },
+    {
+      "text": "Sufficient Data?",
+      "id": "Sufficient Data?",
+      "class": null
+    },
+    {
+      "text": "Groundwater Flow",
+      "id": "Groundwater Flow",
+      "class": null
+    },
+    {
+      "text": "Liberal?",
+      "id": "Liberal?",
+      "class": null
+    },
+    {
+      "text": "Contaminant transport",
+      "id": "Contaminant transport",
+      "class": null
+    },
+    {
+      "text": "Adequate?",
+      "id": "Adequate?",
+      "class": null
+    },
+    {
+      "text": "Predictive Simulations",
+      "id": "Predictive Simulations",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Data Collection",
+      "head": "Conceptual Model Construction",
+      "label": null
+    },
+    {
+      "tail": "Conceptual Model Construction",
+      "head": "Sufficient Data?",
+      "label": null
+    },
+    {
+      "tail": "Sufficient Data?",
+      "head": "Groundwater Flow",
+      "label": "Yes"
+    },
+    {
+      "tail": "Groundwater Flow",
+      "head": "Liberal?",
+      "label": null
+    },
+    {
+      "tail": "Liberal?",
+      "head": "Groundwater Flow",
+      "label": "No"
+    },
+    {
+      "tail": "Liberal?",
+      "head": "Contaminant transport",
+      "label": "Yes"
+    },
+    {
+      "tail": "Contaminant transport",
+      "head": "Adequate?",
+      "label": null
+    },
+    {
+      "tail": "Adequate?",
+      "head": "Contaminant transport",
+      "label": "No"
+    },
+    {
+      "tail": "Adequate?",
+      "head": "Predictive Simulations",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

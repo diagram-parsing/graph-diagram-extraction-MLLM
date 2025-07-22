@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "PV array",
+      "id": "PV array",
+      "class": null
+    },
+    {
+      "text": "Power",
+      "id": "Power",
+      "class": null
+    },
+    {
+      "text": "Distribution pannel",
+      "id": "Distribution pannel",
+      "class": null
+    },
+    {
+      "text": "AC loads",
+      "id": "AC loads",
+      "class": null
+    },
+    {
+      "text": "Electricity utility",
+      "id": "Electricity utility",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "PV array",
+      "head": "Power",
+      "label": null
+    },
+    {
+      "tail": "Power",
+      "head": "Distribution pannel",
+      "label": null
+    },
+    {
+      "tail": "Distribution pannel",
+      "head": "AC loads",
+      "label": null
+    },
+    {
+      "tail": "Distribution pannel",
+      "head": "Electricity utility",
+      "label": null
+    }
+  ],
+  "groups": []
+}

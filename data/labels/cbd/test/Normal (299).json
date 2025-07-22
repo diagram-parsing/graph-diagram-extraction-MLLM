@@ -1,0 +1,155 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        317.0,
+        124.5,
+        58.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Initialize i",
+      "id": "Initialize i",
+      "class": null,
+      "bbox": [
+        309.5,
+        205.0,
+        107.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Terminate Process",
+      "id": "Terminate Process",
+      "class": null,
+      "bbox": [
+        98.0,
+        207.5,
+        84.0,
+        47.0
+      ]
+    },
+    {
+      "text": "Enough Quotes?",
+      "id": "Enough Quotes?",
+      "class": null,
+      "bbox": [
+        312.5,
+        286.5,
+        63.0,
+        41.0
+      ]
+    },
+    {
+      "text": "Ready",
+      "id": "Ready",
+      "class": null,
+      "bbox": [
+        311.0,
+        387.0,
+        72.0,
+        28.0
+      ]
+    },
+    {
+      "text": "Purchase Approval?",
+      "id": "Purchase Approval?",
+      "class": null,
+      "bbox": [
+        313.5,
+        461.5,
+        73.0,
+        41.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        313.0,
+        543.0,
+        44.0,
+        24.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Initialize i",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Terminate Process",
+      "tail": "Initialize i",
+      "label": "i>N",
+      "bbox": [
+        192.0,
+        194.5,
+        38.0,
+        17.0
+      ]
+    },
+    {
+      "head": "Enough Quotes?",
+      "tail": "Initialize i",
+      "label": null
+    },
+    {
+      "head": "Initialize i",
+      "tail": "Enough Quotes?",
+      "label": "tender++",
+      "bbox": [
+        504.5,
+        242.0,
+        65.0,
+        14.0
+      ]
+    },
+    {
+      "head": "Ready",
+      "tail": "Enough Quotes?",
+      "label": "Yes",
+      "bbox": [
+        333.5,
+        331.0,
+        29.0,
+        20.0
+      ]
+    },
+    {
+      "head": "Purchase Approval?",
+      "tail": "Ready",
+      "label": null
+    },
+    {
+      "head": "Terminate Process",
+      "tail": "Purchase Approval?",
+      "label": "Rejected",
+      "bbox": [
+        181.0,
+        444.5,
+        64.0,
+        17.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Purchase Approval?",
+      "label": "Yes",
+      "bbox": [
+        333.5,
+        331.0,
+        29.0,
+        20.0
+      ]
+    }
+  ],
+  "groups": []
+}

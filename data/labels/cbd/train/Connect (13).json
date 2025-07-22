@@ -1,0 +1,147 @@
+{
+  "nodes": [
+    {
+      "text": "Planning",
+      "id": "Planning",
+      "class": null
+    },
+    {
+      "text": "Sun-dried & decorticated",
+      "id": "Sun-dried & decorticated",
+      "class": null
+    },
+    {
+      "text": "Leave it",
+      "id": "Leave it",
+      "class": null
+    },
+    {
+      "text": "Extraction (Mechanical/Solvent/intermittent",
+      "id": "Extraction (Mechanical/Solvent/intermittent",
+      "class": null
+    },
+    {
+      "text": "Gathering",
+      "id": "Gathering",
+      "class": null
+    },
+    {
+      "text": "Sedimentation/boiling with water/filtration",
+      "id": "Sedimentation/boiling with water/filtration",
+      "class": null
+    },
+    {
+      "text": "STEP-3 Processing of oil",
+      "id": "STEP-3 Processing of oil",
+      "class": null
+    },
+    {
+      "text": "Dilution with hydrocarbons",
+      "id": "Dilution with hydrocarbons",
+      "class": null
+    },
+    {
+      "text": "seed",
+      "id": "seed",
+      "class": null
+    },
+    {
+      "text": "Micro-emulsification",
+      "id": "Micro-emulsification",
+      "class": null
+    },
+    {
+      "text": "Transesterification",
+      "id": "Transesterification",
+      "class": null
+    },
+    {
+      "text": "Blended fuel",
+      "id": "Blended fuel",
+      "class": null
+    },
+    {
+      "text": "Liquid fractions",
+      "id": "Liquid fractions",
+      "class": null
+    },
+    {
+      "text": "Waste",
+      "id": "Waste",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Planning",
+      "head": "Sun-dried & decorticated",
+      "label": null
+    },
+    {
+      "tail": "Sun-dried & decorticated",
+      "head": "Leave it",
+      "label": null
+    },
+    {
+      "tail": "Leave it",
+      "head": "Extraction (Mechanical/Solvent/intermittent",
+      "label": null
+    },
+    {
+      "tail": "Extraction (Mechanical/Solvent/intermittent",
+      "head": "Gathering",
+      "label": null
+    },
+    {
+      "tail": "Gathering",
+      "head": "Sedimentation/boiling with water/filtration",
+      "label": null
+    },
+    {
+      "tail": "Sedimentation/boiling with water/filtration",
+      "head": "STEP-3 Processing of oil",
+      "label": null
+    },
+    {
+      "tail": "STEP-3 Processing of oil",
+      "head": "Dilution with hydrocarbons",
+      "label": null
+    },
+    {
+      "tail": "STEP-3 Processing of oil",
+      "head": "seed",
+      "label": null
+    },
+    {
+      "tail": "STEP-3 Processing of oil",
+      "head": "Micro-emulsification",
+      "label": null
+    },
+    {
+      "tail": "STEP-3 Processing of oil",
+      "head": "Transesterification",
+      "label": null
+    },
+    {
+      "tail": "Dilution with hydrocarbons",
+      "head": "Blended fuel",
+      "label": null
+    },
+    {
+      "tail": "seed",
+      "head": "Liquid fractions",
+      "label": null
+    },
+    {
+      "tail": "Micro-emulsification",
+      "head": "Micro-emulsification",
+      "label": null
+    },
+    {
+      "tail": "Transesterification",
+      "head": "Waste",
+      "label": null
+    }
+  ],
+  "groups": []
+}

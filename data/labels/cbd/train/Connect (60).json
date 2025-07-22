@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Set up the training pattern",
+      "id": "Set up the training pattern",
+      "class": null
+    },
+    {
+      "text": "Set up the structure",
+      "id": "Set up the structure",
+      "class": null
+    },
+    {
+      "text": "Use the training pattern",
+      "id": "Use the training pattern",
+      "class": null
+    },
+    {
+      "text": "Training finished?",
+      "id": "Training finished?",
+      "class": null
+    },
+    {
+      "text": "Save the connection weights",
+      "id": "Save the connection weights",
+      "class": null
+    },
+    {
+      "text": "Power quality Analysis",
+      "id": "Power quality Analysis",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Set up the training pattern",
+      "label": null
+    },
+    {
+      "tail": "Set up the training pattern",
+      "head": "Set up the structure",
+      "label": null
+    },
+    {
+      "tail": "Set up the structure",
+      "head": "Use the training pattern",
+      "label": null
+    },
+    {
+      "tail": "Use the training pattern",
+      "head": "Training finished?",
+      "label": null
+    },
+    {
+      "tail": "Training finished?",
+      "head": "Use the training pattern",
+      "label": "no"
+    },
+    {
+      "tail": "Training finished?",
+      "head": "Save the connection weights",
+      "label": "yes"
+    },
+    {
+      "tail": "Save the connection weights",
+      "head": "Power quality Analysis",
+      "label": null
+    },
+    {
+      "tail": "Power quality Analysis",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

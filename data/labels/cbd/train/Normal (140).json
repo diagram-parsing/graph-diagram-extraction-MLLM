@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Temperature",
+      "id": "Read Temperature",
+      "class": null
+    },
+    {
+      "text": "Check Temperature",
+      "id": "Check Temperature",
+      "class": null
+    },
+    {
+      "text": "Print\"Below Freezing\"",
+      "id": "Print\"Below Freezing\"",
+      "class": null
+    },
+    {
+      "text": "Print\"Above Freezing\"",
+      "id": "Print\"Above Freezing\"",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Temperature",
+      "label": null
+    },
+    {
+      "tail": "Read Temperature",
+      "head": "Check Temperature",
+      "label": null
+    },
+    {
+      "tail": "Check Temperature",
+      "head": "Print\"Below Freezing\"",
+      "label": "YES"
+    },
+    {
+      "tail": "Check Temperature",
+      "head": "Print\"Above Freezing\"",
+      "label": "YES"
+    },
+    {
+      "tail": "Print\"Below Freezing\"",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Print\"Above Freezing\"",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Pre-processing",
+      "id": "Pre-processing",
+      "class": null
+    },
+    {
+      "text": "Feature Extraction",
+      "id": "Feature Extraction",
+      "class": null
+    },
+    {
+      "text": "Analysis",
+      "id": "Analysis",
+      "class": null
+    },
+    {
+      "text": "MVS classifier",
+      "id": "MVS classifier",
+      "class": null
+    },
+    {
+      "text": "NKK Classifier",
+      "id": "NKK Classifier",
+      "class": null
+    },
+    {
+      "text": "Performance evaluation",
+      "id": "Performance evaluation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Pre-processing",
+      "head": "Feature Extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature Extraction",
+      "head": "Analysis",
+      "label": null
+    },
+    {
+      "tail": "Feature Extraction",
+      "head": "MVS classifier",
+      "label": null
+    },
+    {
+      "tail": "Feature Extraction",
+      "head": "NKK Classifier",
+      "label": null
+    },
+    {
+      "tail": "MVS classifier",
+      "head": "Performance evaluation",
+      "label": null
+    },
+    {
+      "tail": "NKK Classifier",
+      "head": "Performance evaluation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

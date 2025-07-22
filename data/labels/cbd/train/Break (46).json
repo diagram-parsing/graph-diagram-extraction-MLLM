@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "User enters login name and password",
+      "id": "User enters login name and password",
+      "class": null
+    },
+    {
+      "text": "Correct login and password?",
+      "id": "Correct login and password?",
+      "class": null
+    },
+    {
+      "text": "Alert",
+      "id": "Alert",
+      "class": null
+    },
+    {
+      "text": "User successfully logs in",
+      "id": "User successfully logs in",
+      "class": null
+    },
+    {
+      "text": "Display",
+      "id": "Display",
+      "class": null
+    },
+    {
+      "text": "terminator",
+      "id": "terminator",
+      "class": null
+    },
+    {
+      "text": "User logs into the system",
+      "id": "User logs into the system",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "connection",
+      "head": "User enters login name and password",
+      "label": null
+    },
+    {
+      "tail": "User enters login name and password",
+      "head": "Correct login and password?",
+      "label": null
+    },
+    {
+      "tail": "Correct login and password?",
+      "head": "Alert",
+      "label": "No"
+    },
+    {
+      "tail": "Alert",
+      "head": "User enters login name and password",
+      "label": null
+    },
+    {
+      "tail": "Correct login and password?",
+      "head": "User successfully logs in",
+      "label": "Yes"
+    },
+    {
+      "tail": "User successfully logs in",
+      "head": "Display",
+      "label": null
+    },
+    {
+      "tail": "Display",
+      "head": "terminator",
+      "label": null
+    },
+    {
+      "tail": "terminator",
+      "head": "User logs into the system",
+      "label": null
+    }
+  ],
+  "groups": []
+}

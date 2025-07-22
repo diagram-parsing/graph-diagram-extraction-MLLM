@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Camera",
+      "id": "Camera",
+      "class": null
+    },
+    {
+      "text": "Cache",
+      "id": "Cache",
+      "class": null
+    },
+    {
+      "text": "Object Detection",
+      "id": "Object Detection",
+      "class": null
+    },
+    {
+      "text": "Tracking",
+      "id": "Tracking",
+      "class": null
+    },
+    {
+      "text": "Vehicle Identify",
+      "id": "Vehicle Identify",
+      "class": null
+    },
+    {
+      "text": "Result",
+      "id": "Result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Camera",
+      "head": "Cache",
+      "label": "Video"
+    },
+    {
+      "tail": "Cache",
+      "head": "Object Detection",
+      "label": "Image Sequence"
+    },
+    {
+      "tail": "Object Detection",
+      "head": "Tracking",
+      "label": "Info of Moving Obj"
+    },
+    {
+      "tail": "Tracking",
+      "head": "Vehicle Identify",
+      "label": "Obj Characteristic"
+    },
+    {
+      "tail": "Vehicle Identify",
+      "head": "Result",
+      "label": "Obj classification"
+    }
+  ],
+  "groups": []
+}

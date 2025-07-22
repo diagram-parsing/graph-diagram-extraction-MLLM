@@ -1,0 +1,174 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null,
+      "bbox": [
+        136.0,
+        14.5,
+        34.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Input A,B,C",
+      "id": "Input A,B,C",
+      "class": null
+    },
+    {
+      "text": "IS A>B?",
+      "id": "IS A>B?",
+      "class": null
+    },
+    {
+      "text": "IS B>C?",
+      "id": "IS B>C?",
+      "class": null
+    },
+    {
+      "text": "PRINT B",
+      "id": "PRINT B",
+      "class": null,
+      "bbox": [
+        31.5,
+        187.5,
+        45.0,
+        15.0
+      ]
+    },
+    {
+      "text": "IS A>C?",
+      "id": "IS A>C?",
+      "class": null
+    },
+    {
+      "text": "PRINT A",
+      "id": "PRINT A",
+      "class": null,
+      "bbox": [
+        269.5,
+        178.5,
+        41.0,
+        11.0
+      ]
+    },
+    {
+      "text": "PRINT C",
+      "id": "PRINT C",
+      "class": null,
+      "bbox": [
+        208.0,
+        179.5,
+        44.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        149.5,
+        239.0,
+        33.0,
+        18.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Input A,B,C",
+      "tail": "START",
+      "label": null
+    },
+    {
+      "head": "IS A>B?",
+      "tail": "Input A,B,C",
+      "label": null
+    },
+    {
+      "head": "IS B>C?",
+      "tail": "IS A>B?",
+      "label": "No",
+      "bbox": [
+        97.0,
+        117.0,
+        20.0,
+        12.0
+      ]
+    },
+    {
+      "head": "PRINT B",
+      "tail": "IS B>C?",
+      "label": "YES",
+      "bbox": [
+        22.0,
+        116.0,
+        22.0,
+        12.0
+      ]
+    },
+    {
+      "head": "IS A>C?",
+      "tail": "IS A>B?",
+      "label": "YES",
+      "bbox": [
+        22.0,
+        116.0,
+        22.0,
+        12.0
+      ]
+    },
+    {
+      "head": "PRINT A",
+      "tail": "IS A>C?",
+      "label": "YES",
+      "bbox": [
+        22.0,
+        116.0,
+        22.0,
+        12.0
+      ]
+    },
+    {
+      "head": "PRINT B",
+      "tail": "IS B>C?",
+      "label": "NO",
+      "bbox": [
+        97.0,
+        117.0,
+        20.0,
+        12.0
+      ]
+    },
+    {
+      "head": "PRINT C",
+      "tail": "IS A>C?",
+      "label": "NO",
+      "bbox": [
+        97.0,
+        117.0,
+        20.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Stop",
+      "tail": "PRINT B",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "PRINT C",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "PRINT A",
+      "label": null
+    }
+  ],
+  "groups": []
+}

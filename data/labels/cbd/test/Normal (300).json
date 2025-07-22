@@ -1,0 +1,125 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Reference Values",
+      "id": "Reference Values",
+      "class": null,
+      "bbox": [
+        325.5,
+        84.5,
+        109.0,
+        51.0
+      ]
+    },
+    {
+      "text": "Control",
+      "id": "Control",
+      "class": null,
+      "bbox": [
+        333.5,
+        249.0,
+        81.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Power Unit",
+      "id": "Power Unit",
+      "class": null,
+      "bbox": [
+        334.5,
+        501.5,
+        105.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Supply System",
+      "id": "Supply System",
+      "class": null,
+      "bbox": [
+        581.5,
+        501.0,
+        137.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Constant Voltage",
+      "id": "Constant Voltage",
+      "class": null,
+      "bbox": [
+        577.5,
+        375.5,
+        147.0,
+        19.0
+      ]
+    },
+    {
+      "text": "Motor",
+      "id": "Motor",
+      "class": null,
+      "bbox": [
+        333.5,
+        644.0,
+        63.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Driven Load",
+      "id": "Driven Load",
+      "class": null,
+      "bbox": [
+        126.0,
+        647.0,
+        64.0,
+        46.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Control",
+      "tail": "Reference Values",
+      "label": "connected"
+    },
+    {
+      "head": "Power Unit",
+      "tail": "Control",
+      "label": "connected"
+    },
+    {
+      "head": "Supply System",
+      "tail": "Power Unit",
+      "label": "connected"
+    },
+    {
+      "head": "Constant Voltage",
+      "tail": "Supply System",
+      "label": "connected"
+    },
+    {
+      "head": "Control",
+      "tail": "Constant Voltage",
+      "label": "connected"
+    },
+    {
+      "head": "Motor",
+      "tail": "Power Unit",
+      "label": "connected"
+    },
+    {
+      "head": "Driven Load",
+      "tail": "Motor",
+      "label": "connected"
+    },
+    {
+      "head": "Control",
+      "tail": "Driven Load",
+      "label": "connected"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,162 @@
+{
+  "nodes": [
+    {
+      "text": "Confirmation",
+      "id": "Confirmation",
+      "class": null
+    },
+    {
+      "text": "Briefing to all staff by Management",
+      "id": "Briefing to all staff by Management",
+      "class": null
+    },
+    {
+      "text": "Profile analysis",
+      "id": "Profile analysis",
+      "class": null
+    },
+    {
+      "text": "Selection",
+      "id": "Selection",
+      "class": null
+    },
+    {
+      "text": "Review",
+      "id": "Review",
+      "class": null
+    },
+    {
+      "text": "Job Questionnaire & Employee Interviewing for Data Collection",
+      "id": "Job Questionnaire & Employee Interviewing for Data Collection",
+      "class": null
+    },
+    {
+      "text": "Consent sign",
+      "id": "Consent sign",
+      "class": null
+    },
+    {
+      "text": "Drafting JD & Discuss with Dept. Head",
+      "id": "Drafting JD & Discuss with Dept. Head",
+      "class": null
+    },
+    {
+      "text": "Manager review",
+      "id": "Manager review",
+      "class": null
+    },
+    {
+      "text": "JD Confirm?",
+      "id": "JD Confirm?",
+      "class": null
+    },
+    {
+      "text": "Review & Amend",
+      "id": "Review & Amend",
+      "class": null
+    },
+    {
+      "text": "Training",
+      "id": "Training",
+      "class": null
+    },
+    {
+      "text": "Handled by HR Dept.",
+      "id": "Handled by HR Dept.",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    },
+    {
+      "text": "Handled by Dept. Head",
+      "id": "Handled by Dept. Head",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Confirmation",
+      "head": "Briefing to all staff by Management",
+      "label": null
+    },
+    {
+      "tail": "Briefing to all staff by Management",
+      "head": "Profile analysis",
+      "label": null
+    },
+    {
+      "tail": "Profile analysis",
+      "head": "Selection",
+      "label": null
+    },
+    {
+      "tail": "Selection",
+      "head": "Review",
+      "label": null
+    },
+    {
+      "tail": "Review",
+      "head": "Job Questionnaire & Employee Interviewing for Data Collection",
+      "label": null
+    },
+    {
+      "tail": "Job Questionnaire & Employee Interviewing for Data Collection",
+      "head": "Consent sign",
+      "label": null
+    },
+    {
+      "tail": "Consent sign",
+      "head": "Drafting JD & Discuss with Dept. Head",
+      "label": null
+    },
+    {
+      "tail": "Drafting JD & Discuss with Dept. Head",
+      "head": "Manager review",
+      "label": null
+    },
+    {
+      "tail": "Manager review",
+      "head": "JD Confirm?",
+      "label": null
+    },
+    {
+      "tail": "JD Confirm?",
+      "head": "Review & Amend",
+      "label": "No"
+    },
+    {
+      "tail": "Review & Amend",
+      "head": "Manager review",
+      "label": null
+    },
+    {
+      "tail": "JD Confirm?",
+      "head": "Training",
+      "label": "Yes"
+    },
+    {
+      "tail": "Training",
+      "head": "Handled by HR Dept.",
+      "label": "New Staff"
+    },
+    {
+      "tail": "Handled by HR Dept.",
+      "head": "Finish",
+      "label": null
+    },
+    {
+      "tail": "Training",
+      "head": "Handled by Dept. Head",
+      "label": "Existing Staff"
+    },
+    {
+      "tail": "Handled by Dept. Head",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

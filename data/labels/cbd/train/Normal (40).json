@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Are you happy?",
+      "id": "Are you happy?",
+      "class": null
+    },
+    {
+      "text": "Very good, have a great day!",
+      "id": "Very good, have a great day!",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    },
+    {
+      "text": "Want to be happy?",
+      "id": "Want to be happy?",
+      "class": null
+    },
+    {
+      "text": "Very good, Then you are already happy",
+      "id": "Very good, Then you are already happy",
+      "class": null
+    },
+    {
+      "text": "Stay fit",
+      "id": "Stay fit",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Are you happy?",
+      "label": null
+    },
+    {
+      "tail": "Are you happy?",
+      "head": "Very good, have a great day!",
+      "label": "Yes"
+    },
+    {
+      "tail": "Very good, have a great day!",
+      "head": "Finish",
+      "label": null
+    },
+    {
+      "tail": "Are you happy?",
+      "head": "Want to be happy?",
+      "label": "No"
+    },
+    {
+      "tail": "Want to be happy?",
+      "head": "Very good, Then you are already happy",
+      "label": null
+    },
+    {
+      "tail": "Very good, Then you are already happy",
+      "head": "Finish",
+      "label": null
+    },
+    {
+      "tail": "Want to be happy?",
+      "head": "Stay fit",
+      "label": "No"
+    },
+    {
+      "tail": "Stay fit",
+      "head": "Start",
+      "label": null
+    }
+  ],
+  "groups": []
+}

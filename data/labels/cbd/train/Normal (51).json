@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Generate Initial Population",
+      "id": "Generate Initial Population",
+      "class": null
+    },
+    {
+      "text": "Compute the fitness of each individual",
+      "id": "Compute the fitness of each individual",
+      "class": null
+    },
+    {
+      "text": "Check all person",
+      "id": "Check all person",
+      "class": null
+    },
+    {
+      "text": "Categorize them",
+      "id": "Categorize them",
+      "class": null
+    },
+    {
+      "text": "Converging?",
+      "id": "Converging?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Generate Initial Population",
+      "label": null
+    },
+    {
+      "tail": "Generate Initial Population",
+      "head": "Compute the fitness of each individual",
+      "label": null
+    },
+    {
+      "tail": "Compute the fitness of each individual",
+      "head": "Check all person",
+      "label": null
+    },
+    {
+      "tail": "Check all person",
+      "head": "Categorize them",
+      "label": null
+    },
+    {
+      "tail": "Categorize them",
+      "head": "Converging?",
+      "label": null
+    },
+    {
+      "tail": "Converging?",
+      "head": "Compute the fitness of each individual",
+      "label": "NO"
+    },
+    {
+      "tail": "Converging?",
+      "head": "End",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

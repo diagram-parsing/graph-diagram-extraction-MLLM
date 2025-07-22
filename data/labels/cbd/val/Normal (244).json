@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "package installation",
+      "id": "package installation",
+      "class": null
+    },
+    {
+      "text": "copy",
+      "id": "copy",
+      "class": null
+    },
+    {
+      "text": "Unzip",
+      "id": "Unzip",
+      "class": null
+    },
+    {
+      "text": "finetuning",
+      "id": "finetuning",
+      "class": null
+    },
+    {
+      "text": "values",
+      "id": "values",
+      "class": null
+    },
+    {
+      "text": "generate tar",
+      "id": "generate tar",
+      "class": null
+    },
+    {
+      "text": "generate disk Image",
+      "id": "generate disk Image",
+      "class": null
+    },
+    {
+      "text": "Image",
+      "id": "Image",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "package installation",
+      "label": null
+    },
+    {
+      "tail": "package installation",
+      "head": "copy",
+      "label": null
+    },
+    {
+      "tail": "copy",
+      "head": "Unzip",
+      "label": null
+    },
+    {
+      "tail": "Unzip",
+      "head": "finetuning",
+      "label": null
+    },
+    {
+      "tail": "finetuning",
+      "head": "values",
+      "label": null
+    },
+    {
+      "tail": "values",
+      "head": "generate tar",
+      "label": null
+    },
+    {
+      "tail": "values",
+      "head": "generate disk Image",
+      "label": null
+    },
+    {
+      "tail": "values",
+      "head": "Image",
+      "label": null
+    }
+  ],
+  "groups": []
+}

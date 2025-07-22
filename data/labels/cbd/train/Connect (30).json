@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Pre-configuration",
+      "id": "Pre-configuration",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Input Signal Analysis",
+      "id": "Input Signal Analysis",
+      "class": null
+    },
+    {
+      "text": "Output Signal Analysis",
+      "id": "Output Signal Analysis",
+      "class": null
+    },
+    {
+      "text": "Output Signal Analysis Finished?",
+      "id": "Output Signal Analysis Finished?",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "Back to work",
+      "id": "Back to work",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Pre-configuration",
+      "label": null
+    },
+    {
+      "tail": "Pre-configuration",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "Input Signal Analysis",
+      "label": null
+    },
+    {
+      "tail": "Input Signal Analysis",
+      "head": "Input Signal Analysis",
+      "label": null
+    },
+    {
+      "tail": "Input Signal Analysis",
+      "head": "Output Signal Analysis",
+      "label": "Yes"
+    },
+    {
+      "tail": "Output Signal Analysis",
+      "head": "Output Signal Analysis Finished?",
+      "label": null
+    },
+    {
+      "tail": "Output Signal Analysis Finished?",
+      "head": "Update",
+      "label": "NO"
+    },
+    {
+      "tail": "Output Signal Analysis Finished?",
+      "head": "Back to work",
+      "label": "YES"
+    },
+    {
+      "tail": "Back to work",
+      "head": "Input",
+      "label": null
+    }
+  ],
+  "groups": []
+}

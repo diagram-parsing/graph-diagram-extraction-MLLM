@@ -1,0 +1,110 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        65.0,
+        17.5,
+        24.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Object Detected in left",
+      "id": "Object Detected in left",
+      "class": null,
+      "bbox": [
+        70.0,
+        117.0,
+        56.0,
+        38.0
+      ]
+    },
+    {
+      "text": "Object Detected in right",
+      "id": "Object Detected in right",
+      "class": null,
+      "bbox": [
+        238.0,
+        117.5,
+        56.0,
+        37.0
+      ]
+    },
+    {
+      "text": "Turn Left",
+      "id": "Turn Left",
+      "class": null,
+      "bbox": [
+        65.0,
+        202.5,
+        36.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Turn Right",
+      "id": "Turn Right",
+      "class": null,
+      "bbox": [
+        234.5,
+        203.5,
+        45.0,
+        11.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Object Detected in left",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Object Detected in right",
+      "tail": "Object Detected in left",
+      "label": "No",
+      "bbox": [
+        132.0,
+        108.0,
+        14.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Object Detected in left",
+      "tail": "Object Detected in right",
+      "label": "No",
+      "bbox": [
+        132.0,
+        108.0,
+        14.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Turn Left",
+      "tail": "Object Detected in left",
+      "label": "Yes"
+    },
+    {
+      "head": "Object Detected in right",
+      "tail": "Turn Left",
+      "label": null
+    },
+    {
+      "head": "Turn Right",
+      "tail": "Object Detected in right",
+      "label": "yes"
+    },
+    {
+      "head": "Object Detected in left",
+      "tail": "Turn Right",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Talk About Topic",
+      "id": "Talk About Topic",
+      "class": null
+    },
+    {
+      "text": "Explain Your Segmentation",
+      "id": "Explain Your Segmentation",
+      "class": null
+    },
+    {
+      "text": "Explain ALL Result",
+      "id": "Explain ALL Result",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Talk About Topic",
+      "label": null
+    },
+    {
+      "tail": "Talk About Topic",
+      "head": "Explain Your Segmentation",
+      "label": null
+    },
+    {
+      "tail": "Explain Your Segmentation",
+      "head": "Explain ALL Result",
+      "label": null
+    },
+    {
+      "tail": "Explain ALL Result",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

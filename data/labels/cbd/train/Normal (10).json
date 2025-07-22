@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "K is equal to 0",
+      "id": "K is equal to 0",
+      "class": null
+    },
+    {
+      "text": "Calculate K as K+1",
+      "id": "Calculate K as K+1",
+      "class": null
+    },
+    {
+      "text": "PRINT K",
+      "id": "PRINT K",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "K is equal to 0",
+      "label": null
+    },
+    {
+      "tail": "K is equal to 0",
+      "head": "Calculate K as K+1",
+      "label": null
+    },
+    {
+      "tail": "Calculate K as K+1",
+      "head": "PRINT K",
+      "label": null
+    },
+    {
+      "tail": "PRINT K",
+      "head": "STOP",
+      "label": null
+    }
+  ],
+  "groups": []
+}

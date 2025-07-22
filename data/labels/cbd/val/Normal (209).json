@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input name",
+      "id": "Input name",
+      "class": null
+    },
+    {
+      "text": "If name is 'Mr West'",
+      "id": "If name is 'Mr West'",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input name",
+      "label": null
+    },
+    {
+      "tail": "Input name",
+      "head": "If name is 'Mr West'",
+      "label": null
+    },
+    {
+      "tail": "If name is 'Mr West'",
+      "head": "Output",
+      "label": null
+    },
+    {
+      "tail": "Output",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "If name is 'Mr West'",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

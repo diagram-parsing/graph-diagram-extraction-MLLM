@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Admission records Authentication",
+      "id": "Admission records Authentication",
+      "class": null
+    },
+    {
+      "text": "Records after duplicates removed",
+      "id": "Records after duplicates removed",
+      "class": null
+    },
+    {
+      "text": "Transfer Admission records Authentication",
+      "id": "Transfer Admission records Authentication",
+      "class": null
+    },
+    {
+      "text": "Records screened",
+      "id": "Records screened",
+      "class": null
+    },
+    {
+      "text": "Records excluded",
+      "id": "Records excluded",
+      "class": null
+    },
+    {
+      "text": "Full-text articles assessed for eligibility",
+      "id": "Full-text articles assessed for eligibility",
+      "class": null
+    },
+    {
+      "text": "Full-text articles excluded, with reasons",
+      "id": "Full-text articles excluded, with reasons",
+      "class": null
+    },
+    {
+      "text": "Assessment result of each article",
+      "id": "Assessment result of each article",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Admission records Authentication",
+      "head": "Records after duplicates removed",
+      "label": null
+    },
+    {
+      "tail": "Transfer Admission records Authentication",
+      "head": "Records after duplicates removed",
+      "label": null
+    },
+    {
+      "tail": "Records after duplicates removed",
+      "head": "Records screened",
+      "label": null
+    },
+    {
+      "tail": "Records screened",
+      "head": "Records excluded",
+      "label": null
+    },
+    {
+      "tail": "Records screened",
+      "head": "Full-text articles assessed for eligibility",
+      "label": null
+    },
+    {
+      "tail": "Full-text articles assessed for eligibility",
+      "head": "Full-text articles excluded, with reasons",
+      "label": null
+    },
+    {
+      "tail": "Full-text articles assessed for eligibility",
+      "head": "Assessment result of each article",
+      "label": null
+    }
+  ],
+  "groups": []
+}

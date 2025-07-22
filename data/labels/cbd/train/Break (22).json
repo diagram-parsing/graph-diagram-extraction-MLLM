@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initialize variables",
+      "id": "Initialize variables",
+      "class": null
+    },
+    {
+      "text": "INPUT numbers",
+      "id": "INPUT numbers",
+      "class": null
+    },
+    {
+      "text": "All numbers been entered?",
+      "id": "All numbers been entered?",
+      "class": null
+    },
+    {
+      "text": "average=total/numbers",
+      "id": "average=total/numbers",
+      "class": null
+    },
+    {
+      "text": "Print Output",
+      "id": "Print Output",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    },
+    {
+      "text": "INPUT latest",
+      "id": "INPUT latest",
+      "class": null
+    },
+    {
+      "text": "total=total+latest",
+      "id": "total=total+latest",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initialize variables",
+      "label": null
+    },
+    {
+      "tail": "Initialize variables",
+      "head": "INPUT numbers",
+      "label": null
+    },
+    {
+      "tail": "INPUT numbers",
+      "head": "All numbers been entered?",
+      "label": null
+    },
+    {
+      "tail": "All numbers been entered?",
+      "head": "average=total/numbers",
+      "label": "Yes"
+    },
+    {
+      "tail": "average=total/numbers",
+      "head": "Print Output",
+      "label": null
+    },
+    {
+      "tail": "Print Output",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "All numbers been entered?",
+      "head": "INPUT latest",
+      "label": "No"
+    },
+    {
+      "tail": "INPUT latest",
+      "head": "total=total+latest",
+      "label": null
+    },
+    {
+      "tail": "total=total+latest",
+      "head": "All numbers been entered?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

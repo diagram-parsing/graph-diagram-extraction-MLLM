@@ -1,0 +1,157 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "If registered?",
+      "id": "If registered?",
+      "class": null
+    },
+    {
+      "text": "Registration",
+      "id": "Registration",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Is valid?",
+      "id": "Is valid?",
+      "class": null
+    },
+    {
+      "text": "Is Admin?",
+      "id": "Is Admin?",
+      "class": null
+    },
+    {
+      "text": "Add information",
+      "id": "Add information",
+      "class": null
+    },
+    {
+      "text": "Search vehicle",
+      "id": "Search vehicle",
+      "class": null
+    },
+    {
+      "text": "Update all information",
+      "id": "Update all information",
+      "class": null
+    },
+    {
+      "text": "Car reserved",
+      "id": "Car reserved",
+      "class": null
+    },
+    {
+      "text": "Travelling information update",
+      "id": "Travelling information update",
+      "class": null
+    },
+    {
+      "text": "Get ID",
+      "id": "Get ID",
+      "class": null
+    },
+    {
+      "text": "Log out",
+      "id": "Log out",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "If registered?",
+      "label": null
+    },
+    {
+      "tail": "If registered?",
+      "head": "Registration",
+      "label": "No"
+    },
+    {
+      "tail": "Registration",
+      "head": "Login",
+      "label": null
+    },
+    {
+      "tail": "If registered?",
+      "head": "Login",
+      "label": "Yes"
+    },
+    {
+      "tail": "Login",
+      "head": "Is valid?",
+      "label": null
+    },
+    {
+      "tail": "Is valid?",
+      "head": "Login",
+      "label": "No"
+    },
+    {
+      "tail": "Is valid?",
+      "head": "Is Admin?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is Admin?",
+      "head": "Add information",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is Admin?",
+      "head": "Search vehicle",
+      "label": "No"
+    },
+    {
+      "tail": "Add information",
+      "head": "Update all information",
+      "label": null
+    },
+    {
+      "tail": "Search vehicle",
+      "head": "Car reserved",
+      "label": null
+    },
+    {
+      "tail": "Update all information",
+      "head": "Travelling information update",
+      "label": null
+    },
+    {
+      "tail": "Car reserved",
+      "head": "Get ID",
+      "label": null
+    },
+    {
+      "tail": "Travelling information update",
+      "head": "Log out",
+      "label": null
+    },
+    {
+      "tail": "Get ID",
+      "head": "Log out",
+      "label": null
+    },
+    {
+      "tail": "Log out",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

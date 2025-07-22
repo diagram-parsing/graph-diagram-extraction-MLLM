@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Run Main FLASH",
+      "id": "Run Main FLASH",
+      "class": null
+    },
+    {
+      "text": "Is the Main FLASH Application OK?",
+      "id": "Is the Main FLASH Application OK?",
+      "class": null
+    },
+    {
+      "text": "Initialize IAP Interface",
+      "id": "Initialize IAP Interface",
+      "class": null
+    },
+    {
+      "text": "Main Application",
+      "id": "Main Application",
+      "class": null
+    },
+    {
+      "text": "Is IAP Request Received?",
+      "id": "Is IAP Request Received?",
+      "class": null
+    },
+    {
+      "text": "Reprogram Main Application",
+      "id": "Reprogram Main Application",
+      "class": null
+    },
+    {
+      "text": "RESET",
+      "id": "RESET",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Run Main FLASH",
+      "label": null
+    },
+    {
+      "tail": "Run Main FLASH",
+      "head": "Is the Main FLASH Application OK?",
+      "label": null
+    },
+    {
+      "tail": "Is the Main FLASH Application OK?",
+      "head": "Initialize IAP Interface",
+      "label": "No"
+    },
+    {
+      "tail": "Is the Main FLASH Application OK?",
+      "head": "Main Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Main Application",
+      "head": "Initialize IAP Interface",
+      "label": null
+    },
+    {
+      "tail": "Initialize IAP Interface",
+      "head": "Is IAP Request Received?",
+      "label": null
+    },
+    {
+      "tail": "Is IAP Request Received?",
+      "head": "Is IAP Request Received?",
+      "label": "No"
+    },
+    {
+      "tail": "Is IAP Request Received?",
+      "head": "Reprogram Main Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Reprogram Main Application",
+      "head": "RESET",
+      "label": null
+    }
+  ],
+  "groups": []
+}

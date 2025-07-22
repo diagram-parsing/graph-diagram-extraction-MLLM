@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Application",
+      "id": "Application",
+      "class": null
+    },
+    {
+      "text": "Plan & design worload & jobs to be executed",
+      "id": "Plan & design worload & jobs to be executed",
+      "class": null
+    },
+    {
+      "text": "Prepare Custom Script/Clients",
+      "id": "Prepare Custom Script/Clients",
+      "class": null
+    },
+    {
+      "text": "Run Tests and analyze",
+      "id": "Run Tests and analyze",
+      "class": null
+    },
+    {
+      "text": "Error",
+      "id": "Error",
+      "class": null
+    },
+    {
+      "text": "Revising",
+      "id": "Revising",
+      "class": null
+    },
+    {
+      "text": "Finalize Configuration",
+      "id": "Finalize Configuration",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Application",
+      "head": "Plan & design worload & jobs to be executed",
+      "label": null
+    },
+    {
+      "tail": "Plan & design worload & jobs to be executed",
+      "head": "Prepare Custom Script/Clients",
+      "label": null
+    },
+    {
+      "tail": "Prepare Custom Script/Clients",
+      "head": "Run Tests and analyze",
+      "label": null
+    },
+    {
+      "tail": "Run Tests and analyze",
+      "head": "Error",
+      "label": null
+    },
+    {
+      "tail": "Error",
+      "head": "Revising",
+      "label": null
+    },
+    {
+      "tail": "Revising",
+      "head": "Run Tests and analyze",
+      "label": null
+    },
+    {
+      "tail": "Error",
+      "head": "Finalize Configuration",
+      "label": null
+    }
+  ],
+  "groups": []
+}

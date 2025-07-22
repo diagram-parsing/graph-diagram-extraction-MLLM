@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Count voters' First Choices",
+      "id": "Count voters' First Choices",
+      "class": null
+    },
+    {
+      "text": "Any one left?",
+      "id": "Any one left?",
+      "class": null
+    },
+    {
+      "text": "Eliminate last place candidate",
+      "id": "Eliminate last place candidate",
+      "class": null
+    },
+    {
+      "text": "Recount all ballots",
+      "id": "Recount all ballots",
+      "class": null
+    },
+    {
+      "text": "Search them",
+      "id": "Search them",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Count voters' First Choices",
+      "head": "Any one left?",
+      "label": null
+    },
+    {
+      "tail": "Any one left?",
+      "head": "Eliminate last place candidate",
+      "label": "no"
+    },
+    {
+      "tail": "Eliminate last place candidate",
+      "head": "Recount all ballots",
+      "label": null
+    },
+    {
+      "tail": "Recount all ballots",
+      "head": "Any one left?",
+      "label": null
+    },
+    {
+      "tail": "Any one left?",
+      "head": "Search them",
+      "label": "yes"
+    }
+  ],
+  "groups": []
+}

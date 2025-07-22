@@ -1,0 +1,141 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        174.5,
+        37.0,
+        37.0,
+        14.0
+      ]
+    },
+    {
+      "text": "SUM=0",
+      "id": "SUM=0",
+      "class": null,
+      "bbox": [
+        170.5,
+        90.0,
+        39.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Input N",
+      "id": "Input N",
+      "class": null,
+      "bbox": [
+        170.5,
+        145.5,
+        45.0,
+        11.0
+      ]
+    },
+    {
+      "text": "N!=0?",
+      "id": "N!=0?",
+      "class": null
+    },
+    {
+      "text": "PRINT SUM",
+      "id": "PRINT SUM",
+      "class": null,
+      "bbox": [
+        172.0,
+        434.5,
+        60.0,
+        11.0
+      ]
+    },
+    {
+      "text": "N!=0",
+      "id": "N!=0",
+      "class": null
+    },
+    {
+      "text": "REM=N%10",
+      "id": "REM=N%10",
+      "class": null,
+      "bbox": [
+        171.5,
+        265.5,
+        61.0,
+        31.0
+      ]
+    },
+    {
+      "text": "N=N/10",
+      "id": "N=N/10",
+      "class": null,
+      "bbox": [
+        170.5,
+        371.5,
+        41.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        172.5,
+        502.5,
+        33.0,
+        19.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "SUM=0",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Input N",
+      "tail": "SUM=0",
+      "label": null
+    },
+    {
+      "head": "N!=0?",
+      "tail": "Input N",
+      "label": null
+    },
+    {
+      "head": "PRINT SUM",
+      "tail": "N!=0?",
+      "label": "False",
+      "bbox": [
+        228.5,
+        211.0,
+        41.0,
+        16.0
+      ]
+    },
+    {
+      "head": "REM=N%10",
+      "tail": "N!=0",
+      "label": "TRUE"
+    },
+    {
+      "head": "N!=0?",
+      "tail": "N=N/10",
+      "label": null
+    },
+    {
+      "head": "PRINT SUM",
+      "tail": "N=N/10",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "PRINT SUM",
+      "label": null
+    }
+  ],
+  "groups": []
+}

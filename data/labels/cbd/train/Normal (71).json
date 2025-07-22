@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Signal",
+      "id": "Signal",
+      "class": null
+    },
+    {
+      "text": "Real-time algorithm",
+      "id": "Real-time algorithm",
+      "class": null
+    },
+    {
+      "text": "Amplification",
+      "id": "Amplification",
+      "class": null
+    },
+    {
+      "text": "Hybrid Thresholding Criterion",
+      "id": "Hybrid Thresholding Criterion",
+      "class": null
+    },
+    {
+      "text": "Noise Removal",
+      "id": "Noise Removal",
+      "class": null
+    },
+    {
+      "text": "Denoise Signal",
+      "id": "Denoise Signal",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Signal",
+      "head": "Real-time algorithm",
+      "label": null
+    },
+    {
+      "tail": "Real-time algorithm",
+      "head": "Amplification",
+      "label": null
+    },
+    {
+      "tail": "Amplification",
+      "head": "Hybrid Thresholding Criterion",
+      "label": null
+    },
+    {
+      "tail": "Hybrid Thresholding Criterion",
+      "head": "Noise Removal",
+      "label": null
+    },
+    {
+      "tail": "Noise Removal",
+      "head": "Denoise Signal",
+      "label": null
+    }
+  ],
+  "groups": []
+}

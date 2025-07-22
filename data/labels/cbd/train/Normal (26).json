@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "board",
+      "id": "board",
+      "class": null
+    },
+    {
+      "text": "Lighting",
+      "id": "Lighting",
+      "class": null
+    },
+    {
+      "text": "Power",
+      "id": "Power",
+      "class": null
+    },
+    {
+      "text": "General power",
+      "id": "General power",
+      "class": null
+    },
+    {
+      "text": "Conveyer 1",
+      "id": "Conveyer 1",
+      "class": null
+    },
+    {
+      "text": "Processing",
+      "id": "Processing",
+      "class": null
+    },
+    {
+      "text": "Conveyer",
+      "id": "Conveyer",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "board",
+      "head": "Lighting",
+      "label": null
+    },
+    {
+      "tail": "board",
+      "head": "Power",
+      "label": null
+    },
+    {
+      "tail": "board",
+      "head": "General power",
+      "label": null
+    },
+    {
+      "tail": "Power",
+      "head": "Conveyer 1",
+      "label": null
+    },
+    {
+      "tail": "Conveyer 1",
+      "head": "Processing",
+      "label": null
+    },
+    {
+      "tail": "Processing",
+      "head": "Conveyer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

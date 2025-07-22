@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Do you have time to flee?",
+      "id": "Do you have time to flee?",
+      "class": null
+    },
+    {
+      "text": "Run quickly",
+      "id": "Run quickly",
+      "class": null
+    },
+    {
+      "text": "Yeah! No need to say hi.",
+      "id": "Yeah! No need to say hi.",
+      "class": null
+    },
+    {
+      "text": "Are you wearing sun glasses?",
+      "id": "Are you wearing sun glasses?",
+      "class": null
+    },
+    {
+      "text": "Don't run",
+      "id": "Don't run",
+      "class": null
+    },
+    {
+      "text": "Could you pretend to get a call?",
+      "id": "Could you pretend to get a call?",
+      "class": null
+    },
+    {
+      "text": "No problem",
+      "id": "No problem",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Do you have time to flee?",
+      "head": "Run quickly",
+      "label": "Yes"
+    },
+    {
+      "tail": "Run quickly",
+      "head": "Yeah! No need to say hi.",
+      "label": null
+    },
+    {
+      "tail": "Do you have time to flee?",
+      "head": "Are you wearing sun glasses?",
+      "label": "No"
+    },
+    {
+      "tail": "Are you wearing sun glasses?",
+      "head": "Don't run",
+      "label": "Yes"
+    },
+    {
+      "tail": "Don't run",
+      "head": "Yeah! No need to say hi.",
+      "label": null
+    },
+    {
+      "tail": "Are you wearing sun glasses?",
+      "head": "Could you pretend to get a call?",
+      "label": "No"
+    },
+    {
+      "tail": "Could you pretend to get a call?",
+      "head": "No problem",
+      "label": "Yes"
+    },
+    {
+      "tail": "No problem",
+      "head": "Yeah! No need to say hi.",
+      "label": null
+    },
+    {
+      "tail": "Could you pretend to get a call?",
+      "head": "Finish",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

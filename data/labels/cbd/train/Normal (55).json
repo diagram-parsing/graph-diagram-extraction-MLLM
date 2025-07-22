@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Transformer",
+      "id": "Transformer",
+      "class": null
+    },
+    {
+      "text": "Rectifier",
+      "id": "Rectifier",
+      "class": null
+    },
+    {
+      "text": "Regulator",
+      "id": "Regulator",
+      "class": null
+    },
+    {
+      "text": "ARDUINO",
+      "id": "ARDUINO",
+      "class": null
+    },
+    {
+      "text": "Sensor",
+      "id": "Sensor",
+      "class": null
+    },
+    {
+      "text": "Crystal glass",
+      "id": "Crystal glass",
+      "class": null
+    },
+    {
+      "text": "LED PANNEL",
+      "id": "LED PANNEL",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Transformer",
+      "head": "Rectifier",
+      "label": null
+    },
+    {
+      "tail": "Rectifier",
+      "head": "Regulator",
+      "label": null
+    },
+    {
+      "tail": "Regulator",
+      "head": "ARDUINO",
+      "label": null
+    },
+    {
+      "tail": "Sensor",
+      "head": "ARDUINO",
+      "label": null
+    },
+    {
+      "tail": "ARDUINO",
+      "head": "Crystal glass",
+      "label": null
+    },
+    {
+      "tail": "Crystal glass",
+      "head": "LED PANNEL",
+      "label": null
+    }
+  ],
+  "groups": []
+}

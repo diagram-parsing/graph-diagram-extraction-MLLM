@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "text": "CPU",
+      "id": "CPU",
+      "class": null
+    },
+    {
+      "text": "Is the process controlled?",
+      "id": "Is the process controlled?",
+      "class": null
+    },
+    {
+      "text": "Does a solution already exist?",
+      "id": "Does a solution already exist?",
+      "class": null
+    },
+    {
+      "text": "Develop a controlled process",
+      "id": "Develop a controlled process",
+      "class": null
+    },
+    {
+      "text": "Fix it now!",
+      "id": "Fix it now!",
+      "class": null
+    },
+    {
+      "text": "Any problem?",
+      "id": "Any problem?",
+      "class": null
+    },
+    {
+      "text": "Figure out simplest solution",
+      "id": "Figure out simplest solution",
+      "class": null
+    },
+    {
+      "text": "Is it design related?",
+      "id": "Is it design related?",
+      "class": null
+    },
+    {
+      "text": "Is the problem complex?",
+      "id": "Is the problem complex?",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "6-Sigma or other",
+      "id": "6-Sigma or other",
+      "class": null
+    },
+    {
+      "text": "Is the problem related to the 8 Wastes?",
+      "id": "Is the problem related to the 8 Wastes?",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "CPU",
+      "head": "Is the process controlled?",
+      "label": null
+    },
+    {
+      "tail": "Is the process controlled?",
+      "head": "Does a solution already exist?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the process controlled?",
+      "head": "Develop a controlled process",
+      "label": "No"
+    },
+    {
+      "tail": "Develop a controlled process",
+      "head": "Does a solution already exist?",
+      "label": null
+    },
+    {
+      "tail": "Does a solution already exist?",
+      "head": "Fix it now!",
+      "label": "Yes"
+    },
+    {
+      "tail": "Does a solution already exist?",
+      "head": "Any problem?",
+      "label": "No"
+    },
+    {
+      "tail": "Any problem?",
+      "head": "Figure out simplest solution",
+      "label": "Yes"
+    },
+    {
+      "tail": "Any problem?",
+      "head": "Is it design related?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is it design related?",
+      "head": "Is the problem complex?",
+      "label": "No"
+    },
+    {
+      "tail": "Is it design related?",
+      "head": "Update",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is it design related?",
+      "head": "6-Sigma or other",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is it design related?",
+      "head": "Is the problem related to the 8 Wastes?",
+      "label": "No"
+    },
+    {
+      "tail": "Is the problem related to the 8 Wastes?",
+      "head": "Stop",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Initialization",
+      "id": "Initialization",
+      "class": null
+    },
+    {
+      "text": "System update Time-updating",
+      "id": "System update Time-updating",
+      "class": null
+    },
+    {
+      "text": "DVL Availble?",
+      "id": "DVL Availble?",
+      "class": null
+    },
+    {
+      "text": "Measurement-updating",
+      "id": "Measurement-updating",
+      "class": null
+    },
+    {
+      "text": "Alignment Over?",
+      "id": "Alignment Over?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initialization",
+      "head": "System update Time-updating",
+      "label": null
+    },
+    {
+      "tail": "System update Time-updating",
+      "head": "DVL Availble?",
+      "label": null
+    },
+    {
+      "tail": "DVL Availble?",
+      "head": "System update Time-updating",
+      "label": "N"
+    },
+    {
+      "tail": "DVL Availble?",
+      "head": "Measurement-updating",
+      "label": "Y"
+    },
+    {
+      "tail": "Measurement-updating",
+      "head": "Alignment Over?",
+      "label": null
+    },
+    {
+      "tail": "Alignment Over?",
+      "head": "System update Time-updating",
+      "label": "N"
+    },
+    {
+      "tail": "Alignment Over?",
+      "head": "End",
+      "label": "Y"
+    }
+  ],
+  "groups": []
+}

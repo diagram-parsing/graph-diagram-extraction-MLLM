@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Data process",
+      "id": "Data process",
+      "class": null
+    },
+    {
+      "text": "Degree calculation",
+      "id": "Degree calculation",
+      "class": null
+    },
+    {
+      "text": "Area calculation",
+      "id": "Area calculation",
+      "class": null
+    },
+    {
+      "text": "Similarity calculation",
+      "id": "Similarity calculation",
+      "class": null
+    },
+    {
+      "text": "Core calculation",
+      "id": "Core calculation",
+      "class": null
+    },
+    {
+      "text": "Dimension expansion",
+      "id": "Dimension expansion",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Data process",
+      "head": "Degree calculation",
+      "label": null
+    },
+    {
+      "tail": "Degree calculation",
+      "head": "Area calculation",
+      "label": null
+    },
+    {
+      "tail": "Area calculation",
+      "head": "Similarity calculation",
+      "label": null
+    },
+    {
+      "tail": "Similarity calculation",
+      "head": "Core calculation",
+      "label": null
+    },
+    {
+      "tail": "Core calculation",
+      "head": "Dimension expansion",
+      "label": null
+    },
+    {
+      "tail": "Dimension expansion",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

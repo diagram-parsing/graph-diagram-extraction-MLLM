@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "Got the first dose?",
+      "id": "Got the first dose?",
+      "class": null
+    },
+    {
+      "text": "1 dose",
+      "id": "1 dose",
+      "class": null
+    },
+    {
+      "text": "Got second dose?",
+      "id": "Got second dose?",
+      "class": null
+    },
+    {
+      "text": "2 dose",
+      "id": "2 dose",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Got the first dose?",
+      "head": "1 dose",
+      "label": "Yes"
+    },
+    {
+      "tail": "Got the first dose?",
+      "head": "Got second dose?",
+      "label": "No/Don't know"
+    },
+    {
+      "tail": "Got second dose?",
+      "head": "1 dose",
+      "label": "Yes"
+    },
+    {
+      "tail": "Got second dose?",
+      "head": "2 dose",
+      "label": "No/Don't know"
+    }
+  ],
+  "groups": []
+}

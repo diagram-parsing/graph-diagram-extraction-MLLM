@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "COMPUTE LOGICAL ADMIN GROUP NAME",
+      "id": "COMPUTE LOGICAL ADMIN GROUP NAME",
+      "class": null
+    },
+    {
+      "text": "ADD OR REMOVE?",
+      "id": "ADD OR REMOVE?",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "ADD USERS TO GROUP",
+      "id": "ADD USERS TO GROUP",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    },
+    {
+      "text": "Personalize",
+      "id": "Personalize",
+      "class": null
+    },
+    {
+      "text": "DISPLAY CURRENT MEMBERS",
+      "id": "DISPLAY CURRENT MEMBERS",
+      "class": null
+    },
+    {
+      "text": "Check",
+      "id": "Check",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "COMPUTE LOGICAL ADMIN GROUP NAME",
+      "label": null
+    },
+    {
+      "tail": "COMPUTE LOGICAL ADMIN GROUP NAME",
+      "head": "ADD OR REMOVE?",
+      "label": null
+    },
+    {
+      "tail": "ADD OR REMOVE?",
+      "head": "Update",
+      "label": "ADD"
+    },
+    {
+      "tail": "Update",
+      "head": "ADD USERS TO GROUP",
+      "label": null
+    },
+    {
+      "tail": "ADD USERS TO GROUP",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "ADD OR REMOVE?",
+      "head": "Personalize",
+      "label": "REMOVE"
+    },
+    {
+      "tail": "Personalize",
+      "head": "DISPLAY CURRENT MEMBERS",
+      "label": null
+    },
+    {
+      "tail": "DISPLAY CURRENT MEMBERS",
+      "head": "Check",
+      "label": null
+    },
+    {
+      "tail": "Check",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

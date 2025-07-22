@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Application",
+      "id": "Application",
+      "class": null
+    },
+    {
+      "text": "Close other apps",
+      "id": "Close other apps",
+      "class": null
+    },
+    {
+      "text": "Update Game",
+      "id": "Update Game",
+      "class": null
+    },
+    {
+      "text": "Render game state onto window",
+      "id": "Render game state onto window",
+      "class": null
+    },
+    {
+      "text": "Process events from window",
+      "id": "Process events from window",
+      "class": null
+    },
+    {
+      "text": "Does game lag?",
+      "id": "Does game lag?",
+      "class": null
+    },
+    {
+      "text": "Application Shutdown",
+      "id": "Application Shutdown",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Application",
+      "head": "Close other apps",
+      "label": null
+    },
+    {
+      "tail": "Close other apps",
+      "head": "Update Game",
+      "label": null
+    },
+    {
+      "tail": "Update Game",
+      "head": "Render game state onto window",
+      "label": null
+    },
+    {
+      "tail": "Render game state onto window",
+      "head": "Process events from window",
+      "label": null
+    },
+    {
+      "tail": "Process events from window",
+      "head": "Does game lag?",
+      "label": null
+    },
+    {
+      "tail": "Does game lag?",
+      "head": "Update Game",
+      "label": "Yes"
+    },
+    {
+      "tail": "Does game lag?",
+      "head": "Application Shutdown",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

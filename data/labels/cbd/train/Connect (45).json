@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "READ",
+      "id": "READ",
+      "class": null
+    },
+    {
+      "text": "M=1 F=1",
+      "id": "M=1 F=1",
+      "class": null
+    },
+    {
+      "text": "F=F*M",
+      "id": "F=F*M",
+      "class": null
+    },
+    {
+      "text": "M=N?",
+      "id": "M=N?",
+      "class": null
+    },
+    {
+      "text": "M=M+1",
+      "id": "M=M+1",
+      "class": null
+    },
+    {
+      "text": "PRINT",
+      "id": "PRINT",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "READ",
+      "label": null
+    },
+    {
+      "tail": "READ",
+      "head": "M=1 F=1",
+      "label": null
+    },
+    {
+      "tail": "M=1 F=1",
+      "head": "F=F*M",
+      "label": null
+    },
+    {
+      "tail": "F=F*M",
+      "head": "M=N?",
+      "label": null
+    },
+    {
+      "tail": "M=N?",
+      "head": "M=M+1",
+      "label": "NO"
+    },
+    {
+      "tail": "M=M+1",
+      "head": "F=F*M",
+      "label": null
+    },
+    {
+      "tail": "M=N?",
+      "head": "PRINT",
+      "label": "YES"
+    },
+    {
+      "tail": "PRINT",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

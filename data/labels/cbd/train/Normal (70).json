@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Vibration signal",
+      "id": "Vibration signal",
+      "class": null
+    },
+    {
+      "text": "Separating noise from the signal",
+      "id": "Separating noise from the signal",
+      "class": null
+    },
+    {
+      "text": "Processing on signal",
+      "id": "Processing on signal",
+      "class": null
+    },
+    {
+      "text": "Calculation of every value to find amplification",
+      "id": "Calculation of every value to find amplification",
+      "class": null
+    },
+    {
+      "text": "End the process",
+      "id": "End the process",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Vibration signal",
+      "head": "Separating noise from the signal",
+      "label": null
+    },
+    {
+      "tail": "Separating noise from the signal",
+      "head": "Processing on signal",
+      "label": null
+    },
+    {
+      "tail": "Processing on signal",
+      "head": "Calculation of every value to find amplification",
+      "label": null
+    },
+    {
+      "tail": "Calculation of every value to find amplification",
+      "head": "End the process",
+      "label": null
+    }
+  ],
+  "groups": []
+}

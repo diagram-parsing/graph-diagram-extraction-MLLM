@@ -1,0 +1,94 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "App Front page",
+      "id": "App Front page",
+      "class": null,
+      "bbox": [
+        43.5,
+        31.5,
+        57.0,
+        29.0
+      ]
+    },
+    {
+      "text": "Launch",
+      "id": "Launch",
+      "class": null,
+      "bbox": [
+        162.5,
+        32.5,
+        37.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Login page",
+      "id": "Login page",
+      "class": null,
+      "bbox": [
+        392.5,
+        28.5,
+        51.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Enter password",
+      "id": "Enter password",
+      "class": null,
+      "bbox": [
+        278.0,
+        32.0,
+        56.0,
+        28.0
+      ]
+    },
+    {
+      "text": "Home Page User Logged In",
+      "id": "Home Page User Logged In",
+      "class": null,
+      "bbox": [
+        508.5,
+        33.0,
+        63.0,
+        26.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Launch",
+      "tail": "App Front page",
+      "label": null
+    },
+    {
+      "head": "Login page",
+      "tail": "Launch",
+      "label": "No"
+    },
+    {
+      "head": "Enter password",
+      "tail": "Launch",
+      "label": "Yes",
+      "bbox": [
+        220.0,
+        32.0,
+        18.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Login page",
+      "tail": "Enter password",
+      "label": null
+    },
+    {
+      "head": "Home Page User Logged In",
+      "tail": "Login page",
+      "label": null
+    }
+  ],
+  "groups": []
+}

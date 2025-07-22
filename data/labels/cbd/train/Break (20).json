@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "INPUT numbers",
+      "id": "INPUT numbers",
+      "class": null
+    },
+    {
+      "text": "Perform operation",
+      "id": "Perform operation",
+      "class": null
+    },
+    {
+      "text": "Find Average",
+      "id": "Find Average",
+      "class": null
+    },
+    {
+      "text": "INPUT latest",
+      "id": "INPUT latest",
+      "class": null
+    },
+    {
+      "text": "total=total+latest",
+      "id": "total=total+latest",
+      "class": null
+    },
+    {
+      "text": "OUTPUT \"The total of he numbers was\"+total",
+      "id": "OUTPUT \"The total of he numbers was\"+total",
+      "class": null
+    },
+    {
+      "text": "Print result",
+      "id": "Print result",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "INPUT numbers",
+      "label": null
+    },
+    {
+      "tail": "INPUT numbers",
+      "head": "Perform operation",
+      "label": null
+    },
+    {
+      "tail": "Perform operation",
+      "head": "Find Average",
+      "label": "Yes"
+    },
+    {
+      "tail": "Perform operation",
+      "head": "INPUT latest",
+      "label": "No"
+    },
+    {
+      "tail": "total=total+latest",
+      "head": "Perform operation",
+      "label": null
+    },
+    {
+      "tail": "Find Average",
+      "head": "OUTPUT \"The total of he numbers was\"+total",
+      "label": null
+    },
+    {
+      "tail": "OUTPUT \"The total of he numbers was\"+total",
+      "head": "Print result",
+      "label": null
+    },
+    {
+      "tail": "Print result",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

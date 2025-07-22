@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Hungry?",
+      "id": "Hungry?",
+      "class": null
+    },
+    {
+      "text": "Enjoy your lunch",
+      "id": "Enjoy your lunch",
+      "class": null
+    },
+    {
+      "text": "Look for food in the fridge",
+      "id": "Look for food in the fridge",
+      "class": null
+    },
+    {
+      "text": "Found?",
+      "id": "Found?",
+      "class": null
+    },
+    {
+      "text": "Feel lazy to go out?",
+      "id": "Feel lazy to go out?",
+      "class": null
+    },
+    {
+      "text": "Find a restaurant",
+      "id": "Find a restaurant",
+      "class": null
+    },
+    {
+      "text": "Order take out",
+      "id": "Order take out",
+      "class": null
+    },
+    {
+      "text": "Hungry",
+      "id": "Hungry",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Hungry?",
+      "label": null
+    },
+    {
+      "tail": "Hungry?",
+      "head": "Enjoy your lunch",
+      "label": "Yes"
+    },
+    {
+      "tail": "Hungry?",
+      "head": "Look for food in the fridge",
+      "label": "No"
+    },
+    {
+      "tail": "Look for food in the fridge",
+      "head": "Found?",
+      "label": null
+    },
+    {
+      "tail": "Found?",
+      "head": "Enjoy your lunch",
+      "label": "Yes"
+    },
+    {
+      "tail": "Found?",
+      "head": "Feel lazy to go out?",
+      "label": "No"
+    },
+    {
+      "tail": "Feel lazy to go out?",
+      "head": "Find a restaurant",
+      "label": "I want to go out for some fresh air"
+    },
+    {
+      "tail": "Feel lazy to go out?",
+      "head": "Order take out",
+      "label": "Yes, I am Very lazy to go out"
+    },
+    {
+      "tail": "Order take out",
+      "head": "Hungry",
+      "label": null
+    },
+    {
+      "tail": "Find a restaurant",
+      "head": "Hungry",
+      "label": null
+    },
+    {
+      "tail": "Hungry",
+      "head": "Enjoy your lunch",
+      "label": "Yes"
+    },
+    {
+      "tail": "Hungry",
+      "head": "End",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

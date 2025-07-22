@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "FLOWCHART",
+      "id": "FLOWCHART",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "FLOWCHART",
+      "label": null
+    },
+    {
+      "tail": "FLOWCHART",
+      "head": "FLOWCHART",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

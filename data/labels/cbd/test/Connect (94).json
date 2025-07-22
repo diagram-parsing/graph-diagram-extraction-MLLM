@@ -1,0 +1,120 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null,
+      "bbox": [
+        29.0,
+        14.0,
+        38.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Power modulator",
+      "id": "Power modulator",
+      "class": null,
+      "bbox": [
+        133.5,
+        12.5,
+        103.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Motor",
+      "id": "Motor",
+      "class": null,
+      "bbox": [
+        224.0,
+        13.0,
+        38.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Load",
+      "id": "Load",
+      "class": null,
+      "bbox": [
+        296.0,
+        13.0,
+        34.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Sensing unit",
+      "id": "Sensing unit",
+      "class": null,
+      "bbox": [
+        218.5,
+        69.0,
+        77.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Control unit",
+      "id": "Control unit",
+      "class": null,
+      "bbox": [
+        102.0,
+        70.0,
+        86.0,
+        12.0
+      ]
+    },
+    {
+      "text": "Input command",
+      "id": "Input command",
+      "class": null,
+      "bbox": [
+        116.5,
+        132.0,
+        97.0,
+        14.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Power modulator",
+      "tail": "Input",
+      "label": null
+    },
+    {
+      "head": "Motor",
+      "tail": "Power modulator",
+      "label": null
+    },
+    {
+      "head": "Load",
+      "tail": "Motor",
+      "label": null
+    },
+    {
+      "head": "Sensing unit",
+      "tail": "Motor",
+      "label": null
+    },
+    {
+      "head": "Control unit",
+      "tail": "Sensing unit",
+      "label": null
+    },
+    {
+      "head": "Power modulator",
+      "tail": "Control unit",
+      "label": null
+    },
+    {
+      "head": "Control unit",
+      "tail": "Input command",
+      "label": null
+    }
+  ],
+  "groups": []
+}

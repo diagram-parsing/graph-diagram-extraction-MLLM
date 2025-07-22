@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Does the user has an account?",
+      "id": "Does the user has an account?",
+      "class": null
+    },
+    {
+      "text": "Go to website",
+      "id": "Go to website",
+      "class": null
+    },
+    {
+      "text": "User enter email",
+      "id": "User enter email",
+      "class": null
+    },
+    {
+      "text": "\"Open an account\" page open",
+      "id": "\"Open an account\" page open",
+      "class": null
+    },
+    {
+      "text": "User enter password",
+      "id": "User enter password",
+      "class": null
+    },
+    {
+      "text": "User clicks on the login button",
+      "id": "User clicks on the login button",
+      "class": null
+    },
+    {
+      "text": "Are the email and password is correct?",
+      "id": "Are the email and password is correct?",
+      "class": null
+    },
+    {
+      "text": "Close",
+      "id": "Close",
+      "class": null
+    },
+    {
+      "text": "Error message appears",
+      "id": "Error message appears",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Does the user has an account?",
+      "label": null
+    },
+    {
+      "tail": "Does the user has an account?",
+      "head": "Go to website",
+      "label": "No"
+    },
+    {
+      "tail": "Does the user has an account?",
+      "head": "User enter email",
+      "label": "Yes"
+    },
+    {
+      "tail": "Go to website",
+      "head": "\"Open an account\" page open",
+      "label": null
+    },
+    {
+      "tail": "User enter email",
+      "head": "User enter password",
+      "label": null
+    },
+    {
+      "tail": "User enter password",
+      "head": "User clicks on the login button",
+      "label": null
+    },
+    {
+      "tail": "User clicks on the login button",
+      "head": "Are the email and password is correct?",
+      "label": null
+    },
+    {
+      "tail": "Are the email and password is correct?",
+      "head": "Close",
+      "label": "No"
+    },
+    {
+      "tail": "Are the email and password is correct?",
+      "head": "Error message appears",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

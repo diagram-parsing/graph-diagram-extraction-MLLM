@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Design a novel",
+      "id": "Design a novel",
+      "class": null
+    },
+    {
+      "text": "Is the design based on a template",
+      "id": "Is the design based on a template",
+      "class": null
+    },
+    {
+      "text": "Yes",
+      "id": "Yes",
+      "class": null
+    },
+    {
+      "text": "No",
+      "id": "No",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Design a novel",
+      "head": "Is the design based on a template",
+      "label": null
+    },
+    {
+      "tail": "Is the design based on a template",
+      "head": "Yes",
+      "label": null
+    },
+    {
+      "tail": "Is the design based on a template",
+      "head": "No",
+      "label": null
+    }
+  ],
+  "groups": []
+}

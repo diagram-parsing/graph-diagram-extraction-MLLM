@@ -1,0 +1,104 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        117.5,
+        28.5,
+        31.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Work on problem",
+      "id": "Work on problem",
+      "class": null,
+      "bbox": [
+        111.0,
+        93.0,
+        52.0,
+        30.0
+      ]
+    },
+    {
+      "text": "Assess their Situation and the",
+      "id": "Assess their Situation and the",
+      "class": null,
+      "bbox": [
+        118.5,
+        164.5,
+        85.0,
+        23.0
+      ]
+    },
+    {
+      "text": "Present Solution(s)",
+      "id": "Present Solution(s)",
+      "class": null,
+      "bbox": [
+        117.5,
+        221.0,
+        93.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Sign up",
+      "id": "Sign up",
+      "class": null,
+      "bbox": [
+        118.0,
+        285.0,
+        44.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Retain relationship",
+      "id": "Retain relationship",
+      "class": null,
+      "bbox": [
+        118.5,
+        348.0,
+        95.0,
+        12.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Work on problem",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Assess their Situation and the",
+      "tail": "Work on problem",
+      "label": null
+    },
+    {
+      "head": "Present Solution(s)",
+      "tail": "Assess their Situation and the",
+      "label": null
+    },
+    {
+      "head": "Sign up",
+      "tail": "Present Solution(s)",
+      "label": null
+    },
+    {
+      "head": "Retain relationship",
+      "tail": "Sign up",
+      "label": null
+    },
+    {
+      "head": "Work on problem",
+      "tail": "Retain relationship",
+      "label": null
+    }
+  ],
+  "groups": []
+}

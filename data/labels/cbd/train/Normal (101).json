@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Inputs",
+      "id": "Inputs",
+      "class": null
+    },
+    {
+      "text": "Arduino Uno",
+      "id": "Arduino Uno",
+      "class": null
+    },
+    {
+      "text": "IOT",
+      "id": "IOT",
+      "class": null
+    },
+    {
+      "text": "LCD",
+      "id": "LCD",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Motor",
+      "id": "Motor",
+      "class": null
+    },
+    {
+      "text": "Pump",
+      "id": "Pump",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Inputs",
+      "head": "Arduino Uno",
+      "label": null
+    },
+    {
+      "tail": "Arduino Uno",
+      "head": "IOT",
+      "label": null
+    },
+    {
+      "tail": "Arduino Uno",
+      "head": "LCD",
+      "label": null
+    },
+    {
+      "tail": "Arduino Uno",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Motor",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Pump",
+      "label": null
+    }
+  ],
+  "groups": []
+}

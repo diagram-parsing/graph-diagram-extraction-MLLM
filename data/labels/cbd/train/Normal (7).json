@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Customer",
+      "id": "Customer",
+      "class": null
+    },
+    {
+      "text": "TV Sofa",
+      "id": "TV Sofa",
+      "class": null
+    },
+    {
+      "text": "Shipping",
+      "id": "Shipping",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Customer",
+      "head": "TV Sofa",
+      "label": "order"
+    },
+    {
+      "tail": "TV Sofa",
+      "head": "Shipping",
+      "label": "order confirmation"
+    }
+  ],
+  "groups": []
+}

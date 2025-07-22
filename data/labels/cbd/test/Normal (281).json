@@ -1,0 +1,135 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        101.5,
+        54.0,
+        71.0,
+        30.0
+      ]
+    },
+    {
+      "text": "1. Record Customer's Application",
+      "id": "1. Record Customer's Application",
+      "class": null
+    },
+    {
+      "text": "2. Initial Processing",
+      "id": "2. Initial Processing",
+      "class": null,
+      "bbox": [
+        726.5,
+        54.5,
+        133.0,
+        61.0
+      ]
+    },
+    {
+      "text": "3. Obtain Documents from Customers",
+      "id": "3. Obtain Documents from Customers",
+      "class": null
+    },
+    {
+      "text": "4. Documentation",
+      "id": "4. Documentation",
+      "class": null,
+      "bbox": [
+        406.0,
+        277.0,
+        136.0,
+        58.0
+      ]
+    },
+    {
+      "text": "5. Evaluate",
+      "id": "5. Evaluate",
+      "class": null,
+      "bbox": [
+        108.5,
+        270.0,
+        119.0,
+        80.0
+      ]
+    },
+    {
+      "text": "6. Approval",
+      "id": "6. Approval",
+      "class": null,
+      "bbox": [
+        101.5,
+        497.5,
+        125.0,
+        81.0
+      ]
+    },
+    {
+      "text": "7. Loan Granted",
+      "id": "7. Loan Granted",
+      "class": null,
+      "bbox": [
+        431.5,
+        528.5,
+        97.0,
+        59.0
+      ]
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null,
+      "bbox": [
+        757.0,
+        532.0,
+        78.0,
+        28.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "1. Record Customer's Application",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "2. Initial Processing",
+      "tail": "1. Record Customer's Application",
+      "label": null
+    },
+    {
+      "head": "3. Obtain Documents from Customers",
+      "tail": "2. Initial Processing",
+      "label": null
+    },
+    {
+      "head": "4. Documentation",
+      "tail": "3. Obtain Documents from Customers",
+      "label": null
+    },
+    {
+      "head": "5. Evaluate",
+      "tail": "4. Documentation",
+      "label": null
+    },
+    {
+      "head": "6. Approval",
+      "tail": "5. Evaluate",
+      "label": null
+    },
+    {
+      "head": "7. Loan Granted",
+      "tail": "6. Approval",
+      "label": null
+    },
+    {
+      "head": "Finish",
+      "tail": "7. Loan Granted",
+      "label": null
+    }
+  ],
+  "groups": []
+}

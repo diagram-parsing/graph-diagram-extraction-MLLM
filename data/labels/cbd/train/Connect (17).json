@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Login Profile",
+      "id": "Login Profile",
+      "class": null
+    },
+    {
+      "text": "Still Logged in?",
+      "id": "Still Logged in?",
+      "class": null
+    },
+    {
+      "text": "Session time out",
+      "id": "Session time out",
+      "class": null
+    },
+    {
+      "text": "Login Again",
+      "id": "Login Again",
+      "class": null
+    },
+    {
+      "text": "Go On",
+      "id": "Go On",
+      "class": null
+    },
+    {
+      "text": "Logged in?",
+      "id": "Logged in?",
+      "class": null
+    },
+    {
+      "text": "Pause Counting",
+      "id": "Pause Counting",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Login Profile",
+      "head": "Still Logged in?",
+      "label": null
+    },
+    {
+      "tail": "Still Logged in?",
+      "head": "Session time out",
+      "label": "No"
+    },
+    {
+      "tail": "Session time out",
+      "head": "Login Again",
+      "label": null
+    },
+    {
+      "tail": "Still Logged in?",
+      "head": "Go On",
+      "label": "Yes"
+    },
+    {
+      "tail": "Go On",
+      "head": "Still Logged in?",
+      "label": null
+    },
+    {
+      "tail": "Login Again",
+      "head": "Logged in?",
+      "label": null
+    },
+    {
+      "tail": "Logged in?",
+      "head": "Pause Counting",
+      "label": "No"
+    },
+    {
+      "tail": "Logged in?",
+      "head": "Go On",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

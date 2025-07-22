@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Home contract",
+      "id": "Home contract",
+      "class": null
+    },
+    {
+      "text": "Deal?",
+      "id": "Deal?",
+      "class": null
+    },
+    {
+      "text": "Go back",
+      "id": "Go back",
+      "class": null
+    },
+    {
+      "text": "Paper work",
+      "id": "Paper work",
+      "class": null
+    },
+    {
+      "text": "Shipping",
+      "id": "Shipping",
+      "class": null
+    },
+    {
+      "text": "Box check",
+      "id": "Box check",
+      "class": null
+    },
+    {
+      "text": "Tariff Payment",
+      "id": "Tariff Payment",
+      "class": null
+    },
+    {
+      "text": "Delivery",
+      "id": "Delivery",
+      "class": null
+    },
+    {
+      "text": "Payment mode",
+      "id": "Payment mode",
+      "class": null
+    },
+    {
+      "text": "Pay Foreign Exchange?",
+      "id": "Pay Foreign Exchange?",
+      "class": null
+    },
+    {
+      "text": "Pay Foreign Exchange",
+      "id": "Pay Foreign Exchange",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Payment",
+      "id": "Payment",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Home contract",
+      "head": "Deal?",
+      "label": null
+    },
+    {
+      "tail": "Deal?",
+      "head": "Go back",
+      "label": "No"
+    },
+    {
+      "tail": "Deal?",
+      "head": "Paper work",
+      "label": "Yes"
+    },
+    {
+      "tail": "Paper work",
+      "head": "Shipping",
+      "label": null
+    },
+    {
+      "tail": "Shipping",
+      "head": "Box check",
+      "label": null
+    },
+    {
+      "tail": "Box check",
+      "head": "Tariff Payment",
+      "label": null
+    },
+    {
+      "tail": "Tariff Payment",
+      "head": "Delivery",
+      "label": null
+    },
+    {
+      "tail": "Delivery",
+      "head": "Payment mode",
+      "label": null
+    },
+    {
+      "tail": "Payment mode",
+      "head": "Pay Foreign Exchange?",
+      "label": null
+    },
+    {
+      "tail": "Pay Foreign Exchange",
+      "head": "End",
+      "label": "No"
+    },
+    {
+      "tail": "Pay Foreign Exchange",
+      "head": "Payment",
+      "label": "Yes"
+    },
+    {
+      "tail": "Payment",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

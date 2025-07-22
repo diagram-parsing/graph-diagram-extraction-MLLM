@@ -1,0 +1,118 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        62.0,
+        8.0,
+        30.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Input Data",
+      "id": "Input Data",
+      "class": null
+    },
+    {
+      "text": "Looking for Entropy",
+      "id": "Looking for Entropy",
+      "class": null,
+      "bbox": [
+        64.0,
+        94.5,
+        86.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Gain",
+      "id": "Gain",
+      "class": null
+    },
+    {
+      "text": "Highest Gain",
+      "id": "Highest Gain",
+      "class": null
+    },
+    {
+      "text": "Creating a Node Branch",
+      "id": "Creating a Node Branch",
+      "class": null,
+      "bbox": [
+        64.5,
+        218.0,
+        97.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Finished",
+      "id": "Finished",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        308.5,
+        178.5,
+        25.0,
+        13.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Input Data",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Looking for Entropy",
+      "tail": "Input Data",
+      "label": null
+    },
+    {
+      "head": "Gain",
+      "tail": "Looking for Entropy",
+      "label": null
+    },
+    {
+      "head": "Highest Gain",
+      "tail": "Gain",
+      "label": null
+    },
+    {
+      "head": "Creating a Node Branch",
+      "tail": "Highest Gain",
+      "label": null
+    },
+    {
+      "head": "Finished",
+      "tail": "Creating a Node Branch",
+      "label": null
+    },
+    {
+      "head": "Gain",
+      "tail": "Finished",
+      "label": "No",
+      "bbox": [
+        168.5,
+        107.5,
+        13.0,
+        13.0
+      ]
+    },
+    {
+      "head": "Stop",
+      "tail": "Finished",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

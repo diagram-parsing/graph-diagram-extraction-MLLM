@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Is she currently working in an important project?",
+      "id": "Is she currently working in an important project?",
+      "class": null
+    },
+    {
+      "text": "Worth it?",
+      "id": "Worth it?",
+      "class": null
+    },
+    {
+      "text": "Could her leaving interrupt the work flow?",
+      "id": "Could her leaving interrupt the work flow?",
+      "class": null
+    },
+    {
+      "text": "Any other option?",
+      "id": "Any other option?",
+      "class": null
+    },
+    {
+      "text": "Let her go!",
+      "id": "Let her go!",
+      "class": null
+    },
+    {
+      "text": "Can the company afford the raise?",
+      "id": "Can the company afford the raise?",
+      "class": null
+    },
+    {
+      "text": "Keep her!",
+      "id": "Keep her!",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Is she currently working in an important project?",
+      "head": "Worth it?",
+      "label": "No"
+    },
+    {
+      "tail": "Worth it?",
+      "head": "Could her leaving interrupt the work flow?",
+      "label": "No"
+    },
+    {
+      "tail": "Could her leaving interrupt the work flow?",
+      "head": "Any other option?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Could her leaving interrupt the work flow?",
+      "head": "Let her go!",
+      "label": "No"
+    },
+    {
+      "tail": "Any other option?",
+      "head": "Can the company afford the raise?",
+      "label": "No"
+    },
+    {
+      "tail": "Any other option?",
+      "head": "Let her go!",
+      "label": "Yes"
+    },
+    {
+      "tail": "Can the company afford the raise?",
+      "head": "Let her go!",
+      "label": "No"
+    },
+    {
+      "tail": "Can the company afford the raise?",
+      "head": "Keep her!",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

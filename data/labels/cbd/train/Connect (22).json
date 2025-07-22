@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Initialization",
+      "id": "Initialization",
+      "class": null
+    },
+    {
+      "text": "Senior pathologist sample qualification",
+      "id": "Senior pathologist sample qualification",
+      "class": null
+    },
+    {
+      "text": "Sample check",
+      "id": "Sample check",
+      "class": null
+    },
+    {
+      "text": "cartidge assay",
+      "id": "cartidge assay",
+      "class": null
+    },
+    {
+      "text": "Invalid result",
+      "id": "Invalid result",
+      "class": null
+    },
+    {
+      "text": "Infected",
+      "id": "Infected",
+      "class": null
+    },
+    {
+      "text": "No Infection",
+      "id": "No Infection",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    },
+    {
+      "text": "Go Home",
+      "id": "Go Home",
+      "class": null
+    },
+    {
+      "text": "Results",
+      "id": "Results",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initialization",
+      "head": "Senior pathologist sample qualification",
+      "label": null
+    },
+    {
+      "tail": "Senior pathologist sample qualification",
+      "head": "Sample check",
+      "label": null
+    },
+    {
+      "tail": "Sample check",
+      "head": "cartidge assay",
+      "label": null
+    },
+    {
+      "tail": "cartidge assay",
+      "head": "Invalid result",
+      "label": null
+    },
+    {
+      "tail": "cartidge assay",
+      "head": "Infected",
+      "label": null
+    },
+    {
+      "tail": "cartidge assay",
+      "head": "No Infection",
+      "label": null
+    },
+    {
+      "tail": "Invalid result",
+      "head": "STOP",
+      "label": null
+    },
+    {
+      "tail": "Infected",
+      "head": "STOP",
+      "label": null
+    },
+    {
+      "tail": "No Infection",
+      "head": "Go Home",
+      "label": null
+    },
+    {
+      "tail": "STOP",
+      "head": "Results",
+      "label": null
+    },
+    {
+      "tail": "Go Home",
+      "head": "Results",
+      "label": null
+    }
+  ],
+  "groups": []
+}

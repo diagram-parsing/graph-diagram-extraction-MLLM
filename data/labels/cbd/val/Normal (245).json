@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input Variables",
+      "id": "Input Variables",
+      "class": null
+    },
+    {
+      "text": "Foundation Excavation",
+      "id": "Foundation Excavation",
+      "class": null
+    },
+    {
+      "text": "Base Check",
+      "id": "Base Check",
+      "class": null
+    },
+    {
+      "text": "Branch",
+      "id": "Branch",
+      "class": null
+    },
+    {
+      "text": "Ratio Select",
+      "id": "Ratio Select",
+      "class": null
+    },
+    {
+      "text": "Stone Preparation",
+      "id": "Stone Preparation",
+      "class": null
+    },
+    {
+      "text": "Wall Masonry",
+      "id": "Wall Masonry",
+      "class": null
+    },
+    {
+      "text": "Jointing",
+      "id": "Jointing",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input Variables",
+      "label": null
+    },
+    {
+      "tail": "Input Variables",
+      "head": "Foundation Excavation",
+      "label": null
+    },
+    {
+      "tail": "Foundation Excavation",
+      "head": "Base Check",
+      "label": null
+    },
+    {
+      "tail": "Base Check",
+      "head": "Branch",
+      "label": null
+    },
+    {
+      "tail": "Branch",
+      "head": "Ratio Select",
+      "label": null
+    },
+    {
+      "tail": "Branch",
+      "head": "Stone Preparation",
+      "label": null
+    },
+    {
+      "tail": "Branch",
+      "head": "Wall Masonry",
+      "label": null
+    },
+    {
+      "tail": "Wall Masonry",
+      "head": "Jointing",
+      "label": null
+    },
+    {
+      "tail": "Jointing",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

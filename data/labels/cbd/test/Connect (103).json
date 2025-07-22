@@ -1,0 +1,98 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        34.5,
+        11.5,
+        29.0,
+        13.0
+      ]
+    },
+    {
+      "text": "If Condition",
+      "id": "If Condition",
+      "class": null,
+      "bbox": [
+        36.0,
+        68.0,
+        48.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Else Body",
+      "id": "Else Body",
+      "class": null
+    },
+    {
+      "text": "If Body",
+      "id": "If Body",
+      "class": null
+    },
+    {
+      "text": "Statement just below it",
+      "id": "Statement just below it",
+      "class": null,
+      "bbox": [
+        35.0,
+        180.0,
+        54.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Exit",
+      "id": "Exit",
+      "class": null,
+      "bbox": [
+        36.5,
+        235.0,
+        23.0,
+        10.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "If Condition",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Else Body",
+      "tail": "If Condition",
+      "label": "False"
+    },
+    {
+      "head": "If Body",
+      "tail": "If Condition",
+      "label": "True",
+      "bbox": [
+        19.5,
+        94.5,
+        19.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Statement just below it",
+      "tail": "If Body",
+      "label": null
+    },
+    {
+      "head": "Statement just below it",
+      "tail": "Else Body",
+      "label": null
+    },
+    {
+      "head": "Exit",
+      "tail": "Statement just below it",
+      "label": null
+    }
+  ],
+  "groups": []
+}

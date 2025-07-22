@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "Calculations",
+      "id": "Calculations",
+      "class": null
+    },
+    {
+      "text": "System",
+      "id": "System",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "connection",
+      "head": "Calculations",
+      "label": "Error"
+    },
+    {
+      "tail": "Calculations",
+      "head": "System",
+      "label": "Output"
+    },
+    {
+      "tail": "System",
+      "head": "connection",
+      "label": "Sensor"
+    }
+  ],
+  "groups": []
+}

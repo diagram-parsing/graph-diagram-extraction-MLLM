@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Do you want to do this?",
+      "id": "Do you want to do this?",
+      "class": null
+    },
+    {
+      "text": "Don't do it",
+      "id": "Don't do it",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Will it likely end in disaster?",
+      "id": "Will it likely end in disaster?",
+      "class": null
+    },
+    {
+      "text": "Do it",
+      "id": "Do it",
+      "class": null
+    },
+    {
+      "text": "Good Movie?",
+      "id": "Good Movie?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Do you want to do this?",
+      "label": null
+    },
+    {
+      "tail": "Do you want to do this?",
+      "head": "Don't do it",
+      "label": null
+    },
+    {
+      "tail": "Don't do it",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Do you want to do this?",
+      "head": "Will it likely end in disaster?",
+      "label": null
+    },
+    {
+      "tail": "Will it likely end in disaster?",
+      "head": "Do it",
+      "label": "No"
+    },
+    {
+      "tail": "Do it",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Will it likely end in disaster?",
+      "head": "Good Movie?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Good Movie?",
+      "head": "Don't do it",
+      "label": "No"
+    },
+    {
+      "tail": "Good Movie?",
+      "head": "Do it",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

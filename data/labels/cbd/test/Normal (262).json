@@ -1,0 +1,135 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        107.0,
+        17.0,
+        34.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Has 5 attempts",
+      "id": "Has 5 attempts",
+      "class": null
+    },
+    {
+      "text": "Block",
+      "id": "Block",
+      "class": null,
+      "bbox": [
+        29.5,
+        134.0,
+        33.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Alert",
+      "id": "Alert",
+      "class": null,
+      "bbox": [
+        34.0,
+        251.0,
+        30.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Authorized",
+      "id": "Authorized",
+      "class": null,
+      "bbox": [
+        108.0,
+        191.5,
+        28.0,
+        7.0
+      ]
+    },
+    {
+      "text": "Allow",
+      "id": "Allow",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        108.5,
+        308.5,
+        27.0,
+        13.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Has 5 attempts",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Block",
+      "tail": "Has 5 attempts",
+      "label": "Yes"
+    },
+    {
+      "head": "Login",
+      "tail": "Has 5 attempts",
+      "label": "No",
+      "bbox": [
+        144.0,
+        186.0,
+        12.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Alert",
+      "tail": "Block",
+      "label": null
+    },
+    {
+      "head": "Authorized",
+      "tail": "Login",
+      "label": null
+    },
+    {
+      "head": "Has 5 attempts",
+      "tail": "Authorized",
+      "label": "No",
+      "bbox": [
+        144.0,
+        186.0,
+        12.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Allow",
+      "tail": "Authorized",
+      "label": "Yes"
+    },
+    {
+      "head": "Stop",
+      "tail": "Allow",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Alert",
+      "label": null
+    }
+  ],
+  "groups": []
+}

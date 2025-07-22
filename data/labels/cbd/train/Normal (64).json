@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Dinosaur dies",
+      "id": "Dinosaur dies",
+      "class": null
+    },
+    {
+      "text": "Body found?",
+      "id": "Body found?",
+      "class": null
+    },
+    {
+      "text": "Dinosaur is eaten or rots and no fossil is formed",
+      "id": "Dinosaur is eaten or rots and no fossil is formed",
+      "class": null
+    },
+    {
+      "text": "Scientist do some experiments on it?",
+      "id": "Scientist do some experiments on it?",
+      "class": null
+    },
+    {
+      "text": "Dinosaur rots and no fossil is formed",
+      "id": "Dinosaur rots and no fossil is formed",
+      "class": null
+    },
+    {
+      "text": "Find many intersting facts about Dianosaur",
+      "id": "Find many intersting facts about Dianosaur",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Dinosaur dies",
+      "head": "Body found?",
+      "label": null
+    },
+    {
+      "tail": "Body found?",
+      "head": "Dinosaur is eaten or rots and no fossil is formed",
+      "label": "NO"
+    },
+    {
+      "tail": "Body found?",
+      "head": "Scientist do some experiments on it?",
+      "label": "YES"
+    },
+    {
+      "tail": "Scientist do some experiments on it?",
+      "head": "Dinosaur rots and no fossil is formed",
+      "label": "NO"
+    },
+    {
+      "tail": "Scientist do some experiments on it?",
+      "head": "Find many intersting facts about Dianosaur",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Start Loop",
+      "id": "Start Loop",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "End Loop",
+      "id": "End Loop",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Increment or Decrement",
+      "id": "Increment or Decrement",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start Loop",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "End Loop",
+      "label": "False"
+    },
+    {
+      "tail": "Initialize",
+      "head": "Process",
+      "label": "True"
+    },
+    {
+      "tail": "Process",
+      "head": "Increment or Decrement",
+      "label": null
+    },
+    {
+      "tail": "Increment or Decrement",
+      "head": "Initialize",
+      "label": null
+    }
+  ],
+  "groups": []
+}

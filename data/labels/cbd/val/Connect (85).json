@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "My Operation",
+      "id": "My Operation",
+      "class": null
+    },
+    {
+      "text": "Yes or No?",
+      "id": "Yes or No?",
+      "class": null
+    },
+    {
+      "text": "Therapy",
+      "id": "Therapy",
+      "class": null
+    },
+    {
+      "text": "catch something",
+      "id": "catch something",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "My Operation",
+      "label": null
+    },
+    {
+      "tail": "My Operation",
+      "head": "Yes or No?",
+      "label": null
+    },
+    {
+      "tail": "Yes or No?",
+      "head": "Therapy",
+      "label": "no"
+    },
+    {
+      "tail": "Therapy",
+      "head": "My Operation",
+      "label": null
+    },
+    {
+      "tail": "Yes or No?",
+      "head": "catch something",
+      "label": "yes"
+    },
+    {
+      "tail": "catch something",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

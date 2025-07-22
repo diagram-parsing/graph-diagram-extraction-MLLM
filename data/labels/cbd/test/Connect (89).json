@@ -1,0 +1,186 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        67.5,
+        42.5,
+        31.0,
+        19.0
+      ]
+    },
+    {
+      "text": "Open Email",
+      "id": "Open Email",
+      "class": null,
+      "bbox": [
+        210.0,
+        43.5,
+        60.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Read email",
+      "id": "Read email",
+      "class": null,
+      "bbox": [
+        354.5,
+        43.5,
+        71.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Input Structured?",
+      "id": "Input Structured?",
+      "class": null,
+      "bbox": [
+        502.5,
+        43.5,
+        61.0,
+        25.0
+      ]
+    },
+    {
+      "text": "Extract Data",
+      "id": "Extract Data",
+      "class": null,
+      "bbox": [
+        134.5,
+        290.0,
+        75.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Process Manually",
+      "id": "Process Manually",
+      "class": null,
+      "bbox": [
+        659.0,
+        43.0,
+        90.0,
+        16.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        915.5,
+        133.5,
+        23.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Lookup Product Description",
+      "id": "Lookup Product Description",
+      "class": null,
+      "bbox": [
+        284.5,
+        292.5,
+        81.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Match Found?",
+      "id": "Match Found?",
+      "class": null,
+      "bbox": [
+        446.5,
+        291.5,
+        71.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Send Email to Update File",
+      "id": "Send Email to Update File",
+      "class": null,
+      "bbox": [
+        442.5,
+        134.0,
+        69.0,
+        24.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open Email",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Read email",
+      "tail": "Open Email",
+      "label": null
+    },
+    {
+      "head": "Input Structured?",
+      "tail": "Read email",
+      "label": null
+    },
+    {
+      "head": "Extract Data",
+      "tail": "Input Structured?",
+      "label": "YES",
+      "bbox": [
+        321.5,
+        84.5,
+        23.0,
+        13.0
+      ]
+    },
+    {
+      "head": "Process Manually",
+      "tail": "Input Structured?",
+      "label": "NO",
+      "bbox": [
+        578.0,
+        29.0,
+        20.0,
+        14.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Process Manually",
+      "label": null
+    },
+    {
+      "head": "Lookup Product Description",
+      "tail": "Extract Data",
+      "label": null
+    },
+    {
+      "head": "Match Found?",
+      "tail": "Lookup Product Description",
+      "label": null
+    },
+    {
+      "head": "Send Email to Update File",
+      "tail": "Match Found?",
+      "label": "NO",
+      "bbox": [
+        578.0,
+        29.0,
+        20.0,
+        14.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Send Email to Update File",
+      "label": null
+    }
+  ],
+  "groups": []
+}

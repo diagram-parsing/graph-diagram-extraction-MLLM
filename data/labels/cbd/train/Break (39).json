@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Initial",
+      "id": "Initial",
+      "class": null
+    },
+    {
+      "text": "Case 1",
+      "id": "Case 1",
+      "class": null
+    },
+    {
+      "text": "Statement 1",
+      "id": "Statement 1",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Case 2",
+      "id": "Case 2",
+      "class": null
+    },
+    {
+      "text": "CASE 2",
+      "id": "CASE 2",
+      "class": null
+    },
+    {
+      "text": "Statement 2",
+      "id": "Statement 2",
+      "class": null
+    },
+    {
+      "text": "Case N",
+      "id": "Case N",
+      "class": null
+    },
+    {
+      "text": "Statement N",
+      "id": "Statement N",
+      "class": null
+    },
+    {
+      "text": "Default statement",
+      "id": "Default statement",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initial",
+      "head": "Case 1",
+      "label": null
+    },
+    {
+      "tail": "Case 1",
+      "head": "Statement 1",
+      "label": "YES"
+    },
+    {
+      "tail": "Statement 1",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Case 1",
+      "head": "Case 2",
+      "label": "NO"
+    },
+    {
+      "tail": "CASE 2",
+      "head": "Statement 2",
+      "label": "YES"
+    },
+    {
+      "tail": "Statement 2",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "CASE 2",
+      "head": "Case N",
+      "label": "NO"
+    },
+    {
+      "tail": "Case N",
+      "head": "Statement N",
+      "label": "YES"
+    },
+    {
+      "tail": "Statement N",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Case N",
+      "head": "Default statement",
+      "label": "NO"
+    },
+    {
+      "tail": "Default statement",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

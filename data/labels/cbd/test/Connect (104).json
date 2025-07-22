@@ -1,0 +1,116 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Leave office",
+      "id": "Leave office",
+      "class": null,
+      "bbox": [
+        115.5,
+        22.0,
+        55.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Check time",
+      "id": "Check time",
+      "class": null,
+      "bbox": [
+        107.5,
+        69.0,
+        51.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Before 7am?",
+      "id": "Before 7am?",
+      "class": null,
+      "bbox": [
+        102.5,
+        132.0,
+        37.0,
+        28.0
+      ]
+    },
+    {
+      "text": "Take bus",
+      "id": "Take bus",
+      "class": null,
+      "bbox": [
+        44.0,
+        172.0,
+        42.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Take subway",
+      "id": "Take subway",
+      "class": null,
+      "bbox": [
+        159.5,
+        172.0,
+        61.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Reach home",
+      "id": "Reach home",
+      "class": null,
+      "bbox": [
+        111.5,
+        230.0,
+        59.0,
+        10.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Check time",
+      "tail": "Leave office",
+      "label": null
+    },
+    {
+      "head": "Before 7am?",
+      "tail": "Check time",
+      "label": null
+    },
+    {
+      "head": "Take bus",
+      "tail": "Before 7am?",
+      "label": "Yes",
+      "bbox": [
+        53.5,
+        118.0,
+        23.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Take subway",
+      "tail": "Before 7am?",
+      "label": "No",
+      "bbox": [
+        159.5,
+        118.0,
+        17.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Reach home",
+      "tail": "Take bus",
+      "label": null
+    },
+    {
+      "head": "Reach home",
+      "tail": "Take subway",
+      "label": null
+    }
+  ],
+  "groups": []
+}

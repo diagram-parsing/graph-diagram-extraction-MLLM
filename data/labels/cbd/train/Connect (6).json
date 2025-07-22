@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Problem",
+      "id": "Problem",
+      "class": null
+    },
+    {
+      "text": "Find Solution",
+      "id": "Find Solution",
+      "class": null
+    },
+    {
+      "text": "New Solution",
+      "id": "New Solution",
+      "class": null
+    },
+    {
+      "text": "Escalate When Out of Ideas for New Theories",
+      "id": "Escalate When Out of Ideas for New Theories",
+      "class": null
+    },
+    {
+      "text": "Test the theory",
+      "id": "Test the theory",
+      "class": null
+    },
+    {
+      "text": "Theory Confirmed?",
+      "id": "Theory Confirmed?",
+      "class": null
+    },
+    {
+      "text": "Establish a Plan of Action",
+      "id": "Establish a Plan of Action",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Problem",
+      "head": "Find Solution",
+      "label": null
+    },
+    {
+      "tail": "Find Solution",
+      "head": "New Solution",
+      "label": null
+    },
+    {
+      "tail": "New Solution",
+      "head": "Escalate When Out of Ideas for New Theories",
+      "label": "No"
+    },
+    {
+      "tail": "New Solution",
+      "head": "Test the theory",
+      "label": "Yes"
+    },
+    {
+      "tail": "Test the theory",
+      "head": "Theory Confirmed?",
+      "label": null
+    },
+    {
+      "tail": "Theory Confirmed?",
+      "head": "Establish a Plan of Action",
+      "label": "Yes"
+    },
+    {
+      "tail": "Theory Confirmed?",
+      "head": "Find Solution",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

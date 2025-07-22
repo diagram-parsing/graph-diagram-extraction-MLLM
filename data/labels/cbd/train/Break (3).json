@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "New Member",
+      "id": "New Member",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Authentication",
+      "id": "Authentication",
+      "class": null
+    },
+    {
+      "text": "D1",
+      "id": "D1",
+      "class": null
+    },
+    {
+      "text": "Validation",
+      "id": "Validation",
+      "class": null
+    },
+    {
+      "text": "Print info",
+      "id": "Print info",
+      "class": null
+    },
+    {
+      "text": "D2",
+      "id": "D2",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "New Member",
+      "head": "Login",
+      "label": "User name Password"
+    },
+    {
+      "tail": "Login",
+      "head": "Authentication",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "D1",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "Validation",
+      "label": "ADP Username ADP Password"
+    },
+    {
+      "tail": "Authentication",
+      "head": "Print info",
+      "label": "If not a member"
+    },
+    {
+      "tail": "Print info",
+      "head": "New Member",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "Validation",
+      "label": "If existing member"
+    },
+    {
+      "tail": "Validation",
+      "head": "D2",
+      "label": "ADP Username ADP Password"
+    }
+  ],
+  "groups": []
+}

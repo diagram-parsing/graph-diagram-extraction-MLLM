@@ -1,0 +1,265 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        452.5,
+        23.0,
+        51.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Sending and receiving a Ultrsound to measure distance",
+      "id": "Sending and receiving a Ultrsound to measure distance",
+      "class": null
+    },
+    {
+      "text": "Operations",
+      "id": "Operations",
+      "class": null,
+      "bbox": [
+        457.0,
+        162.5,
+        96.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Sending the measured data to the micro-controller",
+      "id": "Sending the measured data to the micro-controller",
+      "class": null
+    },
+    {
+      "text": "Bluetooth available?",
+      "id": "Bluetooth available?",
+      "class": null,
+      "bbox": [
+        453.5,
+        342.0,
+        77.0,
+        34.0
+      ]
+    },
+    {
+      "text": "Internet available",
+      "id": "Internet available",
+      "class": null,
+      "bbox": [
+        281.5,
+        411.5,
+        73.0,
+        37.0
+      ]
+    },
+    {
+      "text": "Data Check",
+      "id": "Data Check",
+      "class": null,
+      "bbox": [
+        667.5,
+        411.5,
+        97.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Internet available?",
+      "id": "Internet available?",
+      "class": null,
+      "bbox": [
+        281.5,
+        411.5,
+        73.0,
+        37.0
+      ]
+    },
+    {
+      "text": "Result in negative response, no data will be sent",
+      "id": "Result in negative response, no data will be sent",
+      "class": null
+    },
+    {
+      "text": "Sending the data to a Cloud Server",
+      "id": "Sending the data to a Cloud Server",
+      "class": null,
+      "bbox": [
+        412.5,
+        498.5,
+        153.0,
+        35.0
+      ]
+    },
+    {
+      "text": "Data Incoming",
+      "id": "Data Incoming",
+      "class": null,
+      "bbox": [
+        661.5,
+        496.0,
+        127.0,
+        24.0
+      ]
+    },
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "Over Threshold level?",
+      "id": "Over Threshold level?",
+      "class": null,
+      "bbox": [
+        669.5,
+        609.0,
+        71.0,
+        54.0
+      ]
+    },
+    {
+      "text": "Empty recylce bin",
+      "id": "Empty recylce bin",
+      "class": null,
+      "bbox": [
+        459.0,
+        608.0,
+        152.0,
+        20.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        452.5,
+        730.5,
+        33.0,
+        19.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Sending and receiving a Ultrsound to measure distance",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Operations",
+      "tail": "Sending and receiving a Ultrsound to measure distance",
+      "label": null
+    },
+    {
+      "head": "Sending the measured data to the micro-controller",
+      "tail": "Operations",
+      "label": null
+    },
+    {
+      "head": "Bluetooth available?",
+      "tail": "Sending the measured data to the micro-controller",
+      "label": null
+    },
+    {
+      "head": "Internet available",
+      "tail": "Bluetooth available?",
+      "label": "No",
+      "bbox": [
+        353.0,
+        329.0,
+        24.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Data Check",
+      "tail": "Bluetooth available?",
+      "label": "Yes",
+      "bbox": [
+        564.0,
+        328.5,
+        32.0,
+        21.0
+      ]
+    },
+    {
+      "head": "Result in negative response, no data will be sent",
+      "tail": "Internet available?",
+      "label": "No",
+      "bbox": [
+        353.0,
+        329.0,
+        24.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Sending the data to a Cloud Server",
+      "tail": "Internet available?",
+      "label": "No",
+      "bbox": [
+        353.0,
+        329.0,
+        24.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Data Incoming",
+      "tail": "Data Check",
+      "label": null
+    },
+    {
+      "head": "Data Incoming",
+      "tail": "Sending the data to a Cloud Server",
+      "label": null
+    },
+    {
+      "head": "connection",
+      "tail": "Result in negative response, no data will be sent",
+      "label": null
+    },
+    {
+      "head": "Over Threshold level?",
+      "tail": "Data Incoming",
+      "label": null
+    },
+    {
+      "head": "Empty recylce bin",
+      "tail": "Over Threshold level?",
+      "label": "Yes",
+      "bbox": [
+        564.0,
+        328.5,
+        32.0,
+        21.0
+      ]
+    },
+    {
+      "head": "connection",
+      "tail": "Empty recylce bin",
+      "label": null
+    },
+    {
+      "head": "connection",
+      "tail": "Over Threshold level?",
+      "label": "No",
+      "bbox": [
+        353.0,
+        329.0,
+        24.0,
+        16.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "connection",
+      "label": null
+    }
+  ],
+  "groups": []
+}

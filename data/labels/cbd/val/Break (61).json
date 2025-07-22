@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Check Prequalification",
+      "id": "Check Prequalification",
+      "class": null
+    },
+    {
+      "text": "small loan",
+      "id": "small loan",
+      "class": null
+    },
+    {
+      "text": "Loan amount greater than 50% of Monthly Salary",
+      "id": "Loan amount greater than 50% of Monthly Salary",
+      "class": null
+    },
+    {
+      "text": "Submit Loan Application",
+      "id": "Submit Loan Application",
+      "class": null
+    },
+    {
+      "text": "Review Loan",
+      "id": "Review Loan",
+      "class": null
+    },
+    {
+      "text": "Decline Application",
+      "id": "Decline Application",
+      "class": null
+    },
+    {
+      "text": "Pend Application and Request additional Info",
+      "id": "Pend Application and Request additional Info",
+      "class": null
+    },
+    {
+      "text": "Confirm Application Confirm Application",
+      "id": "Confirm Application Confirm Application",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Review",
+      "id": "Review",
+      "class": null
+    },
+    {
+      "text": "confirmation",
+      "id": "confirmation",
+      "class": null
+    },
+    {
+      "text": "Confirmation",
+      "id": "Confirmation",
+      "class": null
+    },
+    {
+      "text": "Approve Application",
+      "id": "Approve Application",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Check Prequalification",
+      "label": null
+    },
+    {
+      "tail": "Check Prequalification",
+      "head": "small loan",
+      "label": null
+    },
+    {
+      "tail": "small loan",
+      "head": "Loan amount greater than 50% of Monthly Salary",
+      "label": "No"
+    },
+    {
+      "tail": "small loan",
+      "head": "Submit Loan Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Submit Loan Application",
+      "head": "Review Loan",
+      "label": null
+    },
+    {
+      "tail": "Review Loan",
+      "head": "Decline Application",
+      "label": "No"
+    },
+    {
+      "tail": "Review Loan",
+      "head": "Pend Application and Request additional Info",
+      "label": "No"
+    },
+    {
+      "tail": "Review Loan",
+      "head": "Confirm Application Confirm Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decline Application",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Pend Application and Request additional Info",
+      "head": "Review",
+      "label": null
+    },
+    {
+      "tail": "Confirm Application Confirm Application",
+      "head": "confirmation",
+      "label": null
+    },
+    {
+      "tail": "Review",
+      "head": "Decline Application",
+      "label": "No"
+    },
+    {
+      "tail": "Review",
+      "head": "Confirm Application Confirm Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decline Application",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Confirmation",
+      "head": "Decline Application",
+      "label": "No"
+    },
+    {
+      "tail": "Confirmation",
+      "head": "Approve Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decline Application",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Approve Application",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

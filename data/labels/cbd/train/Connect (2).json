@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Identify the Problem",
+      "id": "Identify the Problem",
+      "class": null
+    },
+    {
+      "text": "Establish a theory",
+      "id": "Establish a theory",
+      "class": null
+    },
+    {
+      "text": "New Theory?",
+      "id": "New Theory?",
+      "class": null
+    },
+    {
+      "text": "Find new idea",
+      "id": "Find new idea",
+      "class": null
+    },
+    {
+      "text": "Test the Theory",
+      "id": "Test the Theory",
+      "class": null
+    },
+    {
+      "text": "Theory Confirmed?",
+      "id": "Theory Confirmed?",
+      "class": null
+    },
+    {
+      "text": "Establish a Theory",
+      "id": "Establish a Theory",
+      "class": null
+    },
+    {
+      "text": "Establish a Plan of Action",
+      "id": "Establish a Plan of Action",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Identify the Problem",
+      "head": "Establish a theory",
+      "label": null
+    },
+    {
+      "tail": "Establish a theory",
+      "head": "New Theory?",
+      "label": null
+    },
+    {
+      "tail": "New Theory?",
+      "head": "Find new idea",
+      "label": "No"
+    },
+    {
+      "tail": "New Theory?",
+      "head": "Test the Theory",
+      "label": "Yes"
+    },
+    {
+      "tail": "Test the Theory",
+      "head": "Theory Confirmed?",
+      "label": null
+    },
+    {
+      "tail": "Theory Confirmed?",
+      "head": "Establish a Theory",
+      "label": "No"
+    },
+    {
+      "tail": "Theory Confirmed?",
+      "head": "Establish a Plan of Action",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

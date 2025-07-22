@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "do something",
+      "id": "do something",
+      "class": null
+    },
+    {
+      "text": "Yes or No?",
+      "id": "Yes or No?",
+      "class": null
+    },
+    {
+      "text": "update",
+      "id": "update",
+      "class": null
+    },
+    {
+      "text": "Print",
+      "id": "Print",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "do something",
+      "label": null
+    },
+    {
+      "tail": "do something",
+      "head": "Yes or No?",
+      "label": null
+    },
+    {
+      "tail": "Yes or No?",
+      "head": "update",
+      "label": "no"
+    },
+    {
+      "tail": "update",
+      "head": "do something",
+      "label": null
+    },
+    {
+      "tail": "Yes or No?",
+      "head": "Print",
+      "label": "yes"
+    },
+    {
+      "tail": "Print",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Measurement",
+      "id": "Measurement",
+      "class": null
+    },
+    {
+      "text": "Primary Sensing Element",
+      "id": "Primary Sensing Element",
+      "class": null
+    },
+    {
+      "text": "Transmitter",
+      "id": "Transmitter",
+      "class": null
+    },
+    {
+      "text": "Channel",
+      "id": "Channel",
+      "class": null
+    },
+    {
+      "text": "Receiver",
+      "id": "Receiver",
+      "class": null
+    },
+    {
+      "text": "End Device",
+      "id": "End Device",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Measurement",
+      "head": "Primary Sensing Element",
+      "label": null
+    },
+    {
+      "tail": "Primary Sensing Element",
+      "head": "Transmitter",
+      "label": null
+    },
+    {
+      "tail": "Transmitter",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Channel",
+      "head": "Receiver",
+      "label": null
+    },
+    {
+      "tail": "Receiver",
+      "head": "End Device",
+      "label": null
+    }
+  ],
+  "groups": []
+}

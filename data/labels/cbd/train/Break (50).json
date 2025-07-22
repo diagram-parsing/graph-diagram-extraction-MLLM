@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "text": "A team member suggests a project",
+      "id": "A team member suggests a project",
+      "class": null
+    },
+    {
+      "text": "Study about project",
+      "id": "Study about project",
+      "class": null
+    },
+    {
+      "text": "Participants decide if it's a good idea",
+      "id": "Participants decide if it's a good idea",
+      "class": null
+    },
+    {
+      "text": "Team rejects idea",
+      "id": "Team rejects idea",
+      "class": null
+    },
+    {
+      "text": "Explain more",
+      "id": "Explain more",
+      "class": null
+    },
+    {
+      "text": "Team member conducts more research",
+      "id": "Team member conducts more research",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Team member writes proposal",
+      "id": "Team member writes proposal",
+      "class": null
+    },
+    {
+      "text": "Team reviews proposal",
+      "id": "Team reviews proposal",
+      "class": null
+    },
+    {
+      "text": "Proposal OK?",
+      "id": "Proposal OK?",
+      "class": null
+    },
+    {
+      "text": "Revise",
+      "id": "Revise",
+      "class": null
+    },
+    {
+      "text": "Team sends proposal to final decision-maker",
+      "id": "Team sends proposal to final decision-maker",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "A team member suggests a project",
+      "head": "Study about project",
+      "label": null
+    },
+    {
+      "tail": "Study about project",
+      "head": "Participants decide if it's a good idea",
+      "label": null
+    },
+    {
+      "tail": "Participants decide if it's a good idea",
+      "head": "Team rejects idea",
+      "label": "No"
+    },
+    {
+      "tail": "Participants decide if it's a good idea",
+      "head": "Explain more",
+      "label": "Yes"
+    },
+    {
+      "tail": "Participants decide if it's a good idea",
+      "head": "Team member conducts more research",
+      "label": "Not enough info"
+    },
+    {
+      "tail": "Team member conducts more research",
+      "head": "Study about project",
+      "label": null
+    },
+    {
+      "tail": "Team rejects idea",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Explain more",
+      "head": "Team member writes proposal",
+      "label": null
+    },
+    {
+      "tail": "Team member writes proposal",
+      "head": "Team reviews proposal",
+      "label": null
+    },
+    {
+      "tail": "Team reviews proposal",
+      "head": "Proposal OK?",
+      "label": null
+    },
+    {
+      "tail": "Proposal OK?",
+      "head": "Revise",
+      "label": "No"
+    },
+    {
+      "tail": "Revise",
+      "head": "Team reviews proposal",
+      "label": null
+    },
+    {
+      "tail": "Proposal OK?",
+      "head": "Team sends proposal to final decision-maker",
+      "label": "Yes"
+    },
+    {
+      "tail": "Team sends proposal to final decision-maker",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,127 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        447.5,
+        41.5,
+        51.0,
+        19.0
+      ]
+    },
+    {
+      "text": "Read Parameters",
+      "id": "Read Parameters",
+      "class": null,
+      "bbox": [
+        452.5,
+        166.0,
+        207.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Perform operations",
+      "id": "Perform operations",
+      "class": null,
+      "bbox": [
+        452.0,
+        337.5,
+        238.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Update the position and velocity for all the particles",
+      "id": "Update the position and velocity for all the particles",
+      "class": null,
+      "bbox": [
+        455.0,
+        678.0,
+        676.0,
+        30.0
+      ]
+    },
+    {
+      "text": "Terminal condition satisfied?",
+      "id": "Terminal condition satisfied?",
+      "class": null,
+      "bbox": [
+        452.0,
+        896.0,
+        262.0,
+        70.0
+      ]
+    },
+    {
+      "text": "Print Output",
+      "id": "Print Output",
+      "class": null,
+      "bbox": [
+        444.5,
+        1104.5,
+        129.0,
+        23.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        453.0,
+        1237.5,
+        56.0,
+        29.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Read Parameters",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Perform operations",
+      "tail": "Read Parameters",
+      "label": null
+    },
+    {
+      "head": "Terminal condition satisfied?",
+      "tail": "Update the position and velocity for all the particles",
+      "label": null
+    },
+    {
+      "head": "Perform operations",
+      "tail": "Terminal condition satisfied?",
+      "label": "No",
+      "bbox": [
+        183.5,
+        847.0,
+        49.0,
+        32.0
+      ]
+    },
+    {
+      "head": "Print Output",
+      "tail": "Terminal condition satisfied?",
+      "label": "Yes",
+      "bbox": [
+        537.5,
+        1027.0,
+        61.0,
+        36.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Print Output",
+      "label": null
+    }
+  ],
+  "groups": []
+}

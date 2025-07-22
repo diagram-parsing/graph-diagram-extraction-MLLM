@@ -1,0 +1,83 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "ROI",
+      "id": "ROI",
+      "class": null,
+      "bbox": [
+        97.0,
+        18.0,
+        30.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Input image",
+      "id": "Input image",
+      "class": null,
+      "bbox": [
+        128.0,
+        78.0,
+        74.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Information",
+      "id": "Information",
+      "class": null,
+      "bbox": [
+        130.5,
+        142.0,
+        81.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Classification",
+      "id": "Classification",
+      "class": null,
+      "bbox": [
+        128.0,
+        204.0,
+        78.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Obstacle/Non-obstacle decision",
+      "id": "Obstacle/Non-obstacle decision",
+      "class": null,
+      "bbox": [
+        128.0,
+        270.5,
+        180.0,
+        15.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Input image",
+      "tail": "ROI",
+      "label": null
+    },
+    {
+      "head": "Information",
+      "tail": "Input image",
+      "label": null
+    },
+    {
+      "head": "Classification",
+      "tail": "Information",
+      "label": null
+    },
+    {
+      "head": "Obstacle/Non-obstacle decision",
+      "tail": "Classification",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,100 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Initialisation",
+      "id": "Initialisation",
+      "class": null,
+      "bbox": [
+        172.5,
+        31.5,
+        125.0,
+        21.0
+      ]
+    },
+    {
+      "text": "GEOMETRIC MODELLING OF THE RECONSTRUCTED OBJECT",
+      "id": "GEOMETRIC MODELLING OF THE RECONSTRUCTED OBJECT",
+      "class": null,
+      "bbox": [
+        166.5,
+        130.0,
+        219.0,
+        34.0
+      ]
+    },
+    {
+      "text": "CONTROL MEASUREMENTS",
+      "id": "CONTROL MEASUREMENTS",
+      "class": null,
+      "bbox": [
+        169.0,
+        261.0,
+        142.0,
+        34.0
+      ]
+    },
+    {
+      "text": "Performance?",
+      "id": "Performance?",
+      "class": null,
+      "bbox": [
+        165.0,
+        423.5,
+        138.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        155.5,
+        590.5,
+        49.0,
+        23.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "GEOMETRIC MODELLING OF THE RECONSTRUCTED OBJECT",
+      "tail": "Initialisation",
+      "label": null
+    },
+    {
+      "head": "CONTROL MEASUREMENTS",
+      "tail": "GEOMETRIC MODELLING OF THE RECONSTRUCTED OBJECT",
+      "label": null
+    },
+    {
+      "head": "Performance?",
+      "tail": "CONTROL MEASUREMENTS",
+      "label": null
+    },
+    {
+      "head": "GEOMETRIC MODELLING OF THE RECONSTRUCTED OBJECT",
+      "tail": "Performance?",
+      "label": "NO",
+      "bbox": [
+        363.5,
+        412.0,
+        29.0,
+        16.0
+      ]
+    },
+    {
+      "head": "Stop",
+      "tail": "Performance?",
+      "label": "YES",
+      "bbox": [
+        199.0,
+        544.0,
+        34.0,
+        16.0
+      ]
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Sum=0 N=50",
+      "id": "Sum=0 N=50",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "Sum=Sum+N",
+      "id": "Sum=Sum+N",
+      "class": null
+    },
+    {
+      "text": "N=99?",
+      "id": "N=99?",
+      "class": null
+    },
+    {
+      "text": "PRINT SUM",
+      "id": "PRINT SUM",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Sum=0 N=50",
+      "label": null
+    },
+    {
+      "tail": "Sum=0 N=50",
+      "head": "Update",
+      "label": null
+    },
+    {
+      "tail": "Update",
+      "head": "Sum=Sum+N",
+      "label": null
+    },
+    {
+      "tail": "Sum=Sum+N",
+      "head": "N=99?",
+      "label": null
+    },
+    {
+      "tail": "N=99?",
+      "head": "Update",
+      "label": "NO"
+    },
+    {
+      "tail": "N=99?",
+      "head": "PRINT SUM",
+      "label": "YES"
+    },
+    {
+      "tail": "PRINT SUM",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

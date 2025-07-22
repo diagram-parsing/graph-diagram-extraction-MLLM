@@ -1,0 +1,84 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "log In",
+      "id": "log In",
+      "class": null,
+      "bbox": [
+        49.5,
+        24.0,
+        31.0,
+        12.0
+      ]
+    },
+    {
+      "text": "Logged In",
+      "id": "Logged In",
+      "class": null,
+      "bbox": [
+        49.0,
+        113.5,
+        62.0,
+        17.0
+      ]
+    },
+    {
+      "text": "OpenID log in",
+      "id": "OpenID log in",
+      "class": null,
+      "bbox": [
+        138.0,
+        158.5,
+        58.0,
+        11.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        47.0,
+        243.5,
+        24.0,
+        13.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Logged In",
+      "tail": "log In",
+      "label": "OpenID login",
+      "bbox": [
+        138.0,
+        158.5,
+        58.0,
+        11.0
+      ]
+    },
+    {
+      "head": "OpenID log in",
+      "tail": "Logged In",
+      "label": "No"
+    },
+    {
+      "head": "End",
+      "tail": "Logged In",
+      "label": "Yes",
+      "bbox": [
+        34.0,
+        162.5,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "OpenID log in",
+      "label": null
+    }
+  ],
+  "groups": []
+}

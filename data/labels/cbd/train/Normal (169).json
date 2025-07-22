@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Vibration signal",
+      "id": "Vibration signal",
+      "class": null
+    },
+    {
+      "text": "Dicompose the signal into different components",
+      "id": "Dicompose the signal into different components",
+      "class": null
+    },
+    {
+      "text": "Obtain the order of component according to size",
+      "id": "Obtain the order of component according to size",
+      "class": null
+    },
+    {
+      "text": "Calculate the significance indicator and further construct the fault sensitive matrix",
+      "id": "Calculate the significance indicator and further construct the fault sensitive matrix",
+      "class": null
+    },
+    {
+      "text": "Identify fault type and find out the optimal IMF to fault",
+      "id": "Identify fault type and find out the optimal IMF to fault",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Vibration signal",
+      "head": "Dicompose the signal into different components",
+      "label": null
+    },
+    {
+      "tail": "Dicompose the signal into different components",
+      "head": "Obtain the order of component according to size",
+      "label": null
+    },
+    {
+      "tail": "Obtain the order of component according to size",
+      "head": "Calculate the significance indicator and further construct the fault sensitive matrix",
+      "label": null
+    },
+    {
+      "tail": "Calculate the significance indicator and further construct the fault sensitive matrix",
+      "head": "Identify fault type and find out the optimal IMF to fault",
+      "label": null
+    }
+  ],
+  "groups": []
+}

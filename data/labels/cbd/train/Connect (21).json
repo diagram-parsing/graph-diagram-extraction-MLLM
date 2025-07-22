@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Read Inputs",
+      "id": "Read Inputs",
+      "class": null
+    },
+    {
+      "text": "Read command from Bluetooth Unit",
+      "id": "Read command from Bluetooth Unit",
+      "class": null
+    },
+    {
+      "text": "Run sensors",
+      "id": "Run sensors",
+      "class": null
+    },
+    {
+      "text": "Read sensor values",
+      "id": "Read sensor values",
+      "class": null
+    },
+    {
+      "text": "Send read sensor values To bluetooth unit",
+      "id": "Send read sensor values To bluetooth unit",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Read Inputs",
+      "label": null
+    },
+    {
+      "tail": "Read Inputs",
+      "head": "Read command from Bluetooth Unit",
+      "label": null
+    },
+    {
+      "tail": "Read command from Bluetooth Unit",
+      "head": "Run sensors",
+      "label": null
+    },
+    {
+      "tail": "Run sensors",
+      "head": "Read sensor values",
+      "label": null
+    },
+    {
+      "tail": "Read sensor values",
+      "head": "Send read sensor values To bluetooth unit",
+      "label": null
+    },
+    {
+      "tail": "Send read sensor values To bluetooth unit",
+      "head": "Read command from Bluetooth Unit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Pull Customer Invoice from Stack",
+      "id": "Pull Customer Invoice from Stack",
+      "class": null
+    },
+    {
+      "text": "Does Invoice have a Purchase Order #?",
+      "id": "Does Invoice have a Purchase Order #?",
+      "class": null
+    },
+    {
+      "text": "Contact Purchaser for Information",
+      "id": "Contact Purchaser for Information",
+      "class": null
+    },
+    {
+      "text": "Verify Order",
+      "id": "Verify Order",
+      "class": null
+    },
+    {
+      "text": "Verify order",
+      "id": "Verify order",
+      "class": null
+    },
+    {
+      "text": "ID match",
+      "id": "ID match",
+      "class": null
+    },
+    {
+      "text": "Amounts Match?",
+      "id": "Amounts Match?",
+      "class": null
+    },
+    {
+      "text": "Send Invoice to Processing",
+      "id": "Send Invoice to Processing",
+      "class": null
+    },
+    {
+      "text": "Discrepancy Merit Investigating?",
+      "id": "Discrepancy Merit Investigating?",
+      "class": null
+    },
+    {
+      "text": "File complaint",
+      "id": "File complaint",
+      "class": null
+    },
+    {
+      "text": "Investigate and Rectify",
+      "id": "Investigate and Rectify",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Pull Customer Invoice from Stack",
+      "label": null
+    },
+    {
+      "tail": "Pull Customer Invoice from Stack",
+      "head": "Does Invoice have a Purchase Order #?",
+      "label": null
+    },
+    {
+      "tail": "Does Invoice have a Purchase Order #?",
+      "head": "Contact Purchaser for Information",
+      "label": "No"
+    },
+    {
+      "tail": "Contact Purchaser for Information",
+      "head": "Verify Order",
+      "label": null
+    },
+    {
+      "tail": "Does Invoice have a Purchase Order #?",
+      "head": "Verify Order",
+      "label": "Yes"
+    },
+    {
+      "tail": "Verify order",
+      "head": "ID match",
+      "label": null
+    },
+    {
+      "tail": "ID match",
+      "head": "Amounts Match?",
+      "label": null
+    },
+    {
+      "tail": "Amounts Match?",
+      "head": "Send Invoice to Processing",
+      "label": "Yes"
+    },
+    {
+      "tail": "Amounts Match?",
+      "head": "Discrepancy Merit Investigating?",
+      "label": "No"
+    },
+    {
+      "tail": "Discrepancy Merit Investigating?",
+      "head": "File complaint",
+      "label": null
+    },
+    {
+      "tail": "File complaint",
+      "head": "Investigate and Rectify",
+      "label": null
+    },
+    {
+      "tail": "Investigate and Rectify",
+      "head": "Amounts Match?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

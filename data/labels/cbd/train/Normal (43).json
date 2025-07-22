@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Global",
+      "id": "Global",
+      "class": null
+    },
+    {
+      "text": "Bluetooth",
+      "id": "Bluetooth",
+      "class": null
+    },
+    {
+      "text": "Accelerometer",
+      "id": "Accelerometer",
+      "class": null
+    },
+    {
+      "text": "Battery Monitor",
+      "id": "Battery Monitor",
+      "class": null
+    },
+    {
+      "text": "USB Connector",
+      "id": "USB Connector",
+      "class": null
+    },
+    {
+      "text": "Battery",
+      "id": "Battery",
+      "class": null
+    },
+    {
+      "text": "LiPo Battery",
+      "id": "LiPo Battery",
+      "class": null
+    },
+    {
+      "text": "Voltage Regulator",
+      "id": "Voltage Regulator",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Global",
+      "head": "Bluetooth",
+      "label": "UART"
+    },
+    {
+      "tail": "Bluetooth",
+      "head": "Accelerometer",
+      "label": "I2C"
+    },
+    {
+      "tail": "Bluetooth",
+      "head": "Battery Monitor",
+      "label": "I2C"
+    },
+    {
+      "tail": "USB Connector",
+      "head": "Battery",
+      "label": "5V"
+    },
+    {
+      "tail": "Battery",
+      "head": "LiPo Battery",
+      "label": null
+    },
+    {
+      "tail": "LiPo Battery",
+      "head": "Battery Monitor",
+      "label": "3.7V"
+    },
+    {
+      "tail": "LiPo Battery",
+      "head": "Voltage Regulator",
+      "label": null
+    }
+  ],
+  "groups": []
+}

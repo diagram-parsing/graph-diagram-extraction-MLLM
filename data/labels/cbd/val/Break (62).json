@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Like an item",
+      "id": "Like an item",
+      "class": null
+    },
+    {
+      "text": "Do I have enough money?",
+      "id": "Do I have enough money?",
+      "class": null
+    },
+    {
+      "text": "Buy the item",
+      "id": "Buy the item",
+      "class": null
+    },
+    {
+      "text": "Don't buy the item",
+      "id": "Don't buy the item",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Like an item",
+      "head": "Do I have enough money?",
+      "label": null
+    },
+    {
+      "tail": "Do I have enough money?",
+      "head": "Buy the item",
+      "label": "Yes"
+    },
+    {
+      "tail": "Do I have enough money?",
+      "head": "Don't buy the item",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

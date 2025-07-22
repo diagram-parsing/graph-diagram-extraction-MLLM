@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Keyword rejected",
+      "id": "Keyword rejected",
+      "class": null
+    },
+    {
+      "text": "Writer creates article draft (with image ideas)",
+      "id": "Writer creates article draft (with image ideas)",
+      "class": null
+    },
+    {
+      "text": "Marketer gathers outreach list",
+      "id": "Marketer gathers outreach list",
+      "class": null
+    },
+    {
+      "text": "Feedback",
+      "id": "Feedback",
+      "class": null
+    },
+    {
+      "text": "Designer creates graphics",
+      "id": "Designer creates graphics",
+      "class": null
+    },
+    {
+      "text": "Marketer optimizes article & publishes it",
+      "id": "Marketer optimizes article & publishes it",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Keyword rejected",
+      "label": "Disapproved"
+    },
+    {
+      "tail": "Start",
+      "head": "Writer creates article draft (with image ideas)",
+      "label": null
+    },
+    {
+      "tail": "Start",
+      "head": "Marketer gathers outreach list",
+      "label": null
+    },
+    {
+      "tail": "Writer creates article draft (with image ideas)",
+      "head": "Feedback",
+      "label": null
+    },
+    {
+      "tail": "Feedback",
+      "head": "Writer creates article draft (with image ideas)",
+      "label": "Edit needed"
+    },
+    {
+      "tail": "Feedback",
+      "head": "Designer creates graphics",
+      "label": null
+    },
+    {
+      "tail": "Designer creates graphics",
+      "head": "Marketer optimizes article & publishes it",
+      "label": null
+    },
+    {
+      "tail": "Marketer optimizes article & publishes it",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

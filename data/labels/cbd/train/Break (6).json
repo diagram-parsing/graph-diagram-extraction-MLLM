@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Customer Consulting and Quotation",
+      "id": "Customer Consulting and Quotation",
+      "class": null
+    },
+    {
+      "text": "Deal?",
+      "id": "Deal?",
+      "class": null
+    },
+    {
+      "text": "Go home",
+      "id": "Go home",
+      "class": null
+    },
+    {
+      "text": "Invoice",
+      "id": "Invoice",
+      "class": null
+    },
+    {
+      "text": "Shipping",
+      "id": "Shipping",
+      "class": null
+    },
+    {
+      "text": "Custom Clearance",
+      "id": "Custom Clearance",
+      "class": null
+    },
+    {
+      "text": "Payment mode",
+      "id": "Payment mode",
+      "class": null
+    },
+    {
+      "text": "Delivery",
+      "id": "Delivery",
+      "class": null
+    },
+    {
+      "text": "Service Payment",
+      "id": "Service Payment",
+      "class": null
+    },
+    {
+      "text": "Pay Foreign Exchange?",
+      "id": "Pay Foreign Exchange?",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    },
+    {
+      "text": "Payment",
+      "id": "Payment",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Customer Consulting and Quotation",
+      "head": "Deal?",
+      "label": null
+    },
+    {
+      "tail": "Deal?",
+      "head": "Go home",
+      "label": "No"
+    },
+    {
+      "tail": "Deal?",
+      "head": "Invoice",
+      "label": "Yes"
+    },
+    {
+      "tail": "Invoice",
+      "head": "Shipping",
+      "label": null
+    },
+    {
+      "tail": "Shipping",
+      "head": "Custom Clearance",
+      "label": null
+    },
+    {
+      "tail": "Custom Clearance",
+      "head": "Payment mode",
+      "label": null
+    },
+    {
+      "tail": "Payment mode",
+      "head": "Delivery",
+      "label": null
+    },
+    {
+      "tail": "Delivery",
+      "head": "Service Payment",
+      "label": null
+    },
+    {
+      "tail": "Service Payment",
+      "head": "Pay Foreign Exchange?",
+      "label": null
+    },
+    {
+      "tail": "Pay Foreign Exchange?",
+      "head": "Stop",
+      "label": "No"
+    },
+    {
+      "tail": "Pay Foreign Exchange?",
+      "head": "Payment",
+      "label": "Yes"
+    },
+    {
+      "tail": "Payment",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

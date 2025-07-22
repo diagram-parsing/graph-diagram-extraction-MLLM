@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Inspection for toxic drugs in each house",
+      "id": "Inspection for toxic drugs in each house",
+      "class": null
+    },
+    {
+      "text": "Team selection for different Inspection",
+      "id": "Team selection for different Inspection",
+      "class": null
+    },
+    {
+      "text": "Agree and describe domains and subdomains",
+      "id": "Agree and describe domains and subdomains",
+      "class": null
+    },
+    {
+      "text": "Panel review and feedback",
+      "id": "Panel review and feedback",
+      "class": null
+    },
+    {
+      "text": "Consensus",
+      "id": "Consensus",
+      "class": null
+    },
+    {
+      "text": "Panel review results, implement changes",
+      "id": "Panel review results, implement changes",
+      "class": null
+    },
+    {
+      "text": "Summarize results",
+      "id": "Summarize results",
+      "class": null
+    },
+    {
+      "text": "Feedback",
+      "id": "Feedback",
+      "class": null
+    },
+    {
+      "text": "Publish results",
+      "id": "Publish results",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Inspection for toxic drugs in each house",
+      "head": "Team selection for different Inspection",
+      "label": null
+    },
+    {
+      "tail": "Team selection for different Inspection",
+      "head": "Agree and describe domains and subdomains",
+      "label": null
+    },
+    {
+      "tail": "Agree and describe domains and subdomains",
+      "head": "Panel review and feedback",
+      "label": null
+    },
+    {
+      "tail": "Panel review and feedback",
+      "head": "Consensus",
+      "label": null
+    },
+    {
+      "tail": "Consensus",
+      "head": "Panel review results, implement changes",
+      "label": "No"
+    },
+    {
+      "tail": "Panel review results, implement changes",
+      "head": "Agree and describe domains and subdomains",
+      "label": null
+    },
+    {
+      "tail": "Consensus",
+      "head": "Summarize results",
+      "label": "Yes"
+    },
+    {
+      "tail": "Summarize results",
+      "head": "Feedback",
+      "label": null
+    },
+    {
+      "tail": "Feedback",
+      "head": "Consensus",
+      "label": null
+    },
+    {
+      "tail": "Consensus",
+      "head": "Panel review results, implement changes",
+      "label": "No"
+    },
+    {
+      "tail": "Panel review results, implement changes",
+      "head": "Feedback",
+      "label": null
+    },
+    {
+      "tail": "Consensus",
+      "head": "Publish results",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

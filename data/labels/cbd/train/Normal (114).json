@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Are you happy?",
+      "id": "Are you happy?",
+      "class": null
+    },
+    {
+      "text": "Good",
+      "id": "Good",
+      "class": null
+    },
+    {
+      "text": "Want to be happy?",
+      "id": "Want to be happy?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Are you happy?",
+      "label": null
+    },
+    {
+      "tail": "Are you happy?",
+      "head": "Good",
+      "label": null
+    },
+    {
+      "tail": "Are you happy?",
+      "head": "Want to be happy?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

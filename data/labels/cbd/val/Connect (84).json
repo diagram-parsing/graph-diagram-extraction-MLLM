@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Toss",
+      "id": "Toss",
+      "class": null
+    },
+    {
+      "text": "Is the Coin heads?",
+      "id": "Is the Coin heads?",
+      "class": null
+    },
+    {
+      "text": "Mary Pays",
+      "id": "Mary Pays",
+      "class": null
+    },
+    {
+      "text": "Bill Pays",
+      "id": "Bill Pays",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Toss",
+      "label": null
+    },
+    {
+      "tail": "Toss",
+      "head": "Is the Coin heads?",
+      "label": null
+    },
+    {
+      "tail": "Is the Coin heads?",
+      "head": "Mary Pays",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the Coin heads?",
+      "head": "Bill Pays",
+      "label": "No"
+    },
+    {
+      "tail": "Mary Pays",
+      "head": "END",
+      "label": null
+    },
+    {
+      "tail": "Bill Pays",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

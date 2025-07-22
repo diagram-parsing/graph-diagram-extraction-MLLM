@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Applications",
+      "id": "Applications",
+      "class": null
+    },
+    {
+      "text": "Check manual",
+      "id": "Check manual",
+      "class": null
+    },
+    {
+      "text": "LibVA API",
+      "id": "LibVA API",
+      "class": null
+    },
+    {
+      "text": "Processor",
+      "id": "Processor",
+      "class": null
+    },
+    {
+      "text": "driver",
+      "id": "driver",
+      "class": null
+    },
+    {
+      "text": "Firmwares",
+      "id": "Firmwares",
+      "class": null
+    },
+    {
+      "text": "Graphics Card",
+      "id": "Graphics Card",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Applications",
+      "head": "Check manual",
+      "label": null
+    },
+    {
+      "tail": "Check manual",
+      "head": "LibVA API",
+      "label": null
+    },
+    {
+      "tail": "LibVA API",
+      "head": "Processor",
+      "label": null
+    },
+    {
+      "tail": "Processor",
+      "head": "driver",
+      "label": null
+    },
+    {
+      "tail": "driver",
+      "head": "Firmwares",
+      "label": null
+    },
+    {
+      "tail": "Firmwares",
+      "head": "Graphics Card",
+      "label": null
+    },
+    {
+      "tail": "driver",
+      "head": "Graphics Card",
+      "label": null
+    }
+  ],
+  "groups": []
+}

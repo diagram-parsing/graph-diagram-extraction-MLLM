@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "circuit",
+      "id": "circuit",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "CONTROL CIRCUIT",
+      "id": "CONTROL CIRCUIT",
+      "class": null
+    },
+    {
+      "text": "VALVES",
+      "id": "VALVES",
+      "class": null
+    },
+    {
+      "text": "Condenser",
+      "id": "Condenser",
+      "class": null
+    },
+    {
+      "text": "SERVICE UNIT F,R,L,P",
+      "id": "SERVICE UNIT F,R,L,P",
+      "class": null
+    },
+    {
+      "text": "CYLINDER",
+      "id": "CYLINDER",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "circuit",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "CONTROL CIRCUIT",
+      "label": null
+    },
+    {
+      "tail": "CONTROL CIRCUIT",
+      "head": "VALVES",
+      "label": null
+    },
+    {
+      "tail": "Condenser",
+      "head": "SERVICE UNIT F,R,L,P",
+      "label": "Air"
+    },
+    {
+      "tail": "SERVICE UNIT F,R,L,P",
+      "head": "VALVES",
+      "label": "Lubricated Air"
+    },
+    {
+      "tail": "VALVES",
+      "head": "CYLINDER",
+      "label": null
+    }
+  ],
+  "groups": []
+}

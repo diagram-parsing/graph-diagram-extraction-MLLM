@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Has 5 attempts",
+      "id": "Has 5 attempts",
+      "class": null
+    },
+    {
+      "text": "Lock account",
+      "id": "Lock account",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Access",
+      "id": "Access",
+      "class": null
+    },
+    {
+      "text": "Grant sccess",
+      "id": "Grant sccess",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Alert user",
+      "id": "Alert user",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Has 5 attempts",
+      "label": null
+    },
+    {
+      "tail": "Has 5 attempts",
+      "head": "Lock account",
+      "label": "Yes"
+    },
+    {
+      "tail": "Login",
+      "head": "Access",
+      "label": null
+    },
+    {
+      "tail": "Access",
+      "head": "Has 5 attempts",
+      "label": "No"
+    },
+    {
+      "tail": "Access",
+      "head": "Grant sccess",
+      "label": "Yes"
+    },
+    {
+      "tail": "Grant sccess",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Alert user",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

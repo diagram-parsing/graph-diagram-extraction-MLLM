@@ -1,0 +1,137 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Flowchart Example",
+      "id": "Flowchart Example",
+      "class": null,
+      "bbox": [
+        131.0,
+        16.0,
+        76.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Check monitor",
+      "id": "Check monitor",
+      "class": null,
+      "bbox": [
+        130.5,
+        66.5,
+        39.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Switch on",
+      "id": "Switch on",
+      "class": null,
+      "bbox": [
+        76.0,
+        118.0,
+        46.0,
+        12.0
+      ]
+    },
+    {
+      "text": "Is the computer power light on?",
+      "id": "Is the computer power light on?",
+      "class": null
+    },
+    {
+      "text": "Perform a search for the error message",
+      "id": "Perform a search for the error message",
+      "class": null
+    },
+    {
+      "text": "Computer is fine",
+      "id": "Computer is fine",
+      "class": null
+    },
+    {
+      "text": "Turn the computer monitor on",
+      "id": "Turn the computer monitor on",
+      "class": null
+    },
+    {
+      "text": "Check the computer power cord",
+      "id": "Check the computer power cord",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Check monitor",
+      "tail": "Flowchart Example",
+      "label": null
+    },
+    {
+      "head": "Switch on",
+      "tail": "Check monitor",
+      "label": "Yes",
+      "bbox": [
+        76.0,
+        67.5,
+        16.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Is the computer power light on?",
+      "tail": "Check monitor",
+      "label": "No",
+      "bbox": [
+        194.5,
+        66.0,
+        15.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Perform a search for the error message",
+      "tail": "Switch on",
+      "label": "Yes",
+      "bbox": [
+        76.0,
+        67.5,
+        16.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Computer is fine",
+      "tail": "Switch on",
+      "label": "No",
+      "bbox": [
+        194.5,
+        66.0,
+        15.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Turn the computer monitor on",
+      "tail": "Is the computer power light on?",
+      "label": "Yes",
+      "bbox": [
+        76.0,
+        67.5,
+        16.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Check the computer power cord",
+      "tail": "Is the computer power light on?",
+      "label": "No",
+      "bbox": [
+        194.5,
+        66.0,
+        15.0,
+        8.0
+      ]
+    }
+  ],
+  "groups": []
+}

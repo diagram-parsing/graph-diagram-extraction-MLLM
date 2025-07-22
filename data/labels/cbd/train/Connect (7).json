@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read AI0, AI1 and AI2",
+      "id": "Read AI0, AI1 and AI2",
+      "class": null
+    },
+    {
+      "text": "Convert values to standard",
+      "id": "Convert values to standard",
+      "class": null
+    },
+    {
+      "text": "Current Value>Safety Thresholds",
+      "id": "Current Value>Safety Thresholds",
+      "class": null
+    },
+    {
+      "text": "Display warning with visual indicator",
+      "id": "Display warning with visual indicator",
+      "class": null
+    },
+    {
+      "text": "Print Message",
+      "id": "Print Message",
+      "class": null
+    },
+    {
+      "text": "Print Output",
+      "id": "Print Output",
+      "class": null
+    },
+    {
+      "text": "Log the data in txt files for future analysis",
+      "id": "Log the data in txt files for future analysis",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read AI0, AI1 and AI2",
+      "label": null
+    },
+    {
+      "tail": "Read AI0, AI1 and AI2",
+      "head": "Convert values to standard",
+      "label": null
+    },
+    {
+      "tail": "Convert values to standard",
+      "head": "Current Value>Safety Thresholds",
+      "label": null
+    },
+    {
+      "tail": "Current Value>Safety Thresholds",
+      "head": "Display warning with visual indicator",
+      "label": "Yes"
+    },
+    {
+      "tail": "Current Value>Safety Thresholds",
+      "head": "Print Message",
+      "label": "No"
+    },
+    {
+      "tail": "Print Output",
+      "head": "Log the data in txt files for future analysis",
+      "label": null
+    },
+    {
+      "tail": "Log the data in txt files for future analysis",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Log the data in txt files for future analysis",
+      "head": "Read AI0, AI1 and AI2",
+      "label": null
+    }
+  ],
+  "groups": []
+}

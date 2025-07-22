@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Select Topic",
+      "id": "Select Topic",
+      "class": null
+    },
+    {
+      "text": "Background Search",
+      "id": "Background Search",
+      "class": null
+    },
+    {
+      "text": "Develop Search Strategy",
+      "id": "Develop Search Strategy",
+      "class": null
+    },
+    {
+      "text": "Task assign",
+      "id": "Task assign",
+      "class": null
+    },
+    {
+      "text": "Evaluate information for Accuracy & Reliability",
+      "id": "Evaluate information for Accuracy & Reliability",
+      "class": null
+    },
+    {
+      "text": "Discuss with others",
+      "id": "Discuss with others",
+      "class": null
+    },
+    {
+      "text": "Revision of Paper",
+      "id": "Revision of Paper",
+      "class": null
+    },
+    {
+      "text": "Report",
+      "id": "Report",
+      "class": null
+    },
+    {
+      "text": "Submit",
+      "id": "Submit",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Select Topic",
+      "head": "Background Search",
+      "label": null
+    },
+    {
+      "tail": "Background Search",
+      "head": "Develop Search Strategy",
+      "label": null
+    },
+    {
+      "tail": "Develop Search Strategy",
+      "head": "Task assign",
+      "label": null
+    },
+    {
+      "tail": "Task assign",
+      "head": "Evaluate information for Accuracy & Reliability",
+      "label": null
+    },
+    {
+      "tail": "Evaluate information for Accuracy & Reliability",
+      "head": "Discuss with others",
+      "label": null
+    },
+    {
+      "tail": "Discuss with others",
+      "head": "Revision of Paper",
+      "label": null
+    },
+    {
+      "tail": "Revision of Paper",
+      "head": "Report",
+      "label": null
+    },
+    {
+      "tail": "Revision of Paper",
+      "head": "Submit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Enter",
+      "id": "Enter",
+      "class": null
+    },
+    {
+      "text": "Home page",
+      "id": "Home page",
+      "class": null
+    },
+    {
+      "text": "Enter Email ID and Password",
+      "id": "Enter Email ID and Password",
+      "class": null
+    },
+    {
+      "text": "Is Email ID and Password Correct",
+      "id": "Is Email ID and Password Correct",
+      "class": null
+    },
+    {
+      "text": "Log in error",
+      "id": "Log in error",
+      "class": null
+    },
+    {
+      "text": "Display Account",
+      "id": "Display Account",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Enter",
+      "label": null
+    },
+    {
+      "tail": "Enter",
+      "head": "Home page",
+      "label": null
+    },
+    {
+      "tail": "Home page",
+      "head": "Enter Email ID and Password",
+      "label": null
+    },
+    {
+      "tail": "Enter Email ID and Password",
+      "head": "Is Email ID and Password Correct",
+      "label": null
+    },
+    {
+      "tail": "Is Email ID and Password Correct",
+      "head": "Log in error",
+      "label": "No"
+    },
+    {
+      "tail": "Log in error",
+      "head": "Enter Email ID and Password",
+      "label": null
+    },
+    {
+      "tail": "Is Email ID and Password Correct",
+      "head": "Display Account",
+      "label": "Yes"
+    },
+    {
+      "tail": "Display Account",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

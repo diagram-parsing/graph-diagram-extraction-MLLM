@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Topic",
+      "id": "Topic",
+      "class": null
+    },
+    {
+      "text": "Power signal",
+      "id": "Power signal",
+      "class": null
+    },
+    {
+      "text": "Processor",
+      "id": "Processor",
+      "class": null
+    },
+    {
+      "text": "Output",
+      "id": "Output",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Topic",
+      "head": "Power signal",
+      "label": null
+    },
+    {
+      "tail": "Power signal",
+      "head": "Processor",
+      "label": "Stream"
+    },
+    {
+      "tail": "Processor",
+      "head": "Output",
+      "label": "Stream"
+    },
+    {
+      "tail": "Output",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

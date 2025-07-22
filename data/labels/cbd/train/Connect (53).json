@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Collect rice sheath blight images",
+      "id": "Collect rice sheath blight images",
+      "class": null
+    },
+    {
+      "text": "Image preprocessing",
+      "id": "Image preprocessing",
+      "class": null
+    },
+    {
+      "text": "smoothing",
+      "id": "smoothing",
+      "class": null
+    },
+    {
+      "text": "Histogram equalization",
+      "id": "Histogram equalization",
+      "class": null
+    },
+    {
+      "text": "segmentation",
+      "id": "segmentation",
+      "class": null
+    },
+    {
+      "text": "Feature extraction",
+      "id": "Feature extraction",
+      "class": null
+    },
+    {
+      "text": "feature extraction",
+      "id": "feature extraction",
+      "class": null
+    },
+    {
+      "text": "Texture extraction",
+      "id": "Texture extraction",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Collect rice sheath blight images",
+      "head": "Image preprocessing",
+      "label": null
+    },
+    {
+      "tail": "Image preprocessing",
+      "head": "smoothing",
+      "label": null
+    },
+    {
+      "tail": "Image preprocessing",
+      "head": "Histogram equalization",
+      "label": null
+    },
+    {
+      "tail": "Image preprocessing",
+      "head": "segmentation",
+      "label": null
+    },
+    {
+      "tail": "smoothing",
+      "head": "Feature extraction",
+      "label": null
+    },
+    {
+      "tail": "segmentation",
+      "head": "Feature extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature extraction",
+      "head": "feature extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature extraction",
+      "head": "Texture extraction",
+      "label": null
+    }
+  ],
+  "groups": []
+}

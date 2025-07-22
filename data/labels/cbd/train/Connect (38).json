@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Input Image",
+      "id": "Input Image",
+      "class": null
+    },
+    {
+      "text": "Feature extraction",
+      "id": "Feature extraction",
+      "class": null
+    },
+    {
+      "text": "SVM Classifier",
+      "id": "SVM Classifier",
+      "class": null
+    },
+    {
+      "text": "Database",
+      "id": "Database",
+      "class": null
+    },
+    {
+      "text": "Normal",
+      "id": "Normal",
+      "class": null
+    },
+    {
+      "text": "Abnormal",
+      "id": "Abnormal",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input Image",
+      "head": "Feature extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature extraction",
+      "head": "SVM Classifier",
+      "label": null
+    },
+    {
+      "tail": "Database",
+      "head": "SVM Classifier",
+      "label": null
+    },
+    {
+      "tail": "SVM Classifier",
+      "head": "Normal",
+      "label": null
+    },
+    {
+      "tail": "SVM Classifier",
+      "head": "Abnormal",
+      "label": null
+    }
+  ],
+  "groups": []
+}

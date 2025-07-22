@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Preparation",
+      "id": "Preparation",
+      "class": null
+    },
+    {
+      "text": "Documentation",
+      "id": "Documentation",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Authentication",
+      "id": "Authentication",
+      "class": null
+    },
+    {
+      "text": "Finalize",
+      "id": "Finalize",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Preparation",
+      "head": "Documentation",
+      "label": null
+    },
+    {
+      "tail": "Documentation",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Authentication",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "Finalize",
+      "label": null
+    },
+    {
+      "tail": "Finalize",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

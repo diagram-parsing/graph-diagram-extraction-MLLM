@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Complete Purchase Requistion Form",
+      "id": "Complete Purchase Requistion Form",
+      "class": null
+    },
+    {
+      "text": "Approved",
+      "id": "Approved",
+      "class": null
+    },
+    {
+      "text": "Purchase Requisition",
+      "id": "Purchase Requisition",
+      "class": null
+    },
+    {
+      "text": "Money",
+      "id": "Money",
+      "class": null
+    },
+    {
+      "text": "Is It an Independent Contractor?",
+      "id": "Is It an Independent Contractor?",
+      "class": null
+    },
+    {
+      "text": "Fill Form",
+      "id": "Fill Form",
+      "class": null
+    },
+    {
+      "text": "Take permission",
+      "id": "Take permission",
+      "class": null
+    },
+    {
+      "text": "IC's Agreement filled out or on File",
+      "id": "IC's Agreement filled out or on File",
+      "class": null
+    },
+    {
+      "text": "Invoice CCPR",
+      "id": "Invoice CCPR",
+      "class": null
+    },
+    {
+      "text": "Approval",
+      "id": "Approval",
+      "class": null
+    },
+    {
+      "text": "Invoice P.O.",
+      "id": "Invoice P.O.",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Complete Purchase Requistion Form",
+      "label": null
+    },
+    {
+      "tail": "Complete Purchase Requistion Form",
+      "head": "Approved",
+      "label": null
+    },
+    {
+      "tail": "Approved",
+      "head": "Purchase Requisition",
+      "label": "NO"
+    },
+    {
+      "tail": "Approved",
+      "head": "Money",
+      "label": "YES"
+    },
+    {
+      "tail": "Money",
+      "head": "Is It an Independent Contractor?",
+      "label": "Cash"
+    },
+    {
+      "tail": "Money",
+      "head": "Fill Form",
+      "label": "Credit Cash"
+    },
+    {
+      "tail": "Is It an Independent Contractor?",
+      "head": "Take permission",
+      "label": "NO"
+    },
+    {
+      "tail": "Is It an Independent Contractor?",
+      "head": "IC's Agreement filled out or on File",
+      "label": "YES"
+    },
+    {
+      "tail": "IC's Agreement filled out or on File",
+      "head": "Take permission",
+      "label": null
+    },
+    {
+      "tail": "Fill Form",
+      "head": "Invoice CCPR",
+      "label": null
+    },
+    {
+      "tail": "Invoice CCPR",
+      "head": "Approval",
+      "label": null
+    },
+    {
+      "tail": "Take permission",
+      "head": "Invoice P.O.",
+      "label": null
+    },
+    {
+      "tail": "Invoice P.O.",
+      "head": "Approval",
+      "label": "To Controller"
+    }
+  ],
+  "groups": []
+}

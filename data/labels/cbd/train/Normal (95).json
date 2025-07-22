@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Go to kitchen",
+      "id": "Go to kitchen",
+      "class": null
+    },
+    {
+      "text": "Find food",
+      "id": "Find food",
+      "class": null
+    },
+    {
+      "text": "Microwave it",
+      "id": "Microwave it",
+      "class": null
+    },
+    {
+      "text": "Switch off light",
+      "id": "Switch off light",
+      "class": null
+    },
+    {
+      "text": "Get out of kitchen",
+      "id": "Get out of kitchen",
+      "class": null
+    },
+    {
+      "text": "Enoy dinner",
+      "id": "Enoy dinner",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Go to kitchen",
+      "label": null
+    },
+    {
+      "tail": "Go to kitchen",
+      "head": "Find food",
+      "label": null
+    },
+    {
+      "tail": "Find food",
+      "head": "Microwave it",
+      "label": null
+    },
+    {
+      "tail": "Microwave it",
+      "head": "Switch off light",
+      "label": null
+    },
+    {
+      "tail": "Switch off light",
+      "head": "Get out of kitchen",
+      "label": null
+    },
+    {
+      "tail": "Get out of kitchen",
+      "head": "Enoy dinner",
+      "label": null
+    }
+  ],
+  "groups": []
+}

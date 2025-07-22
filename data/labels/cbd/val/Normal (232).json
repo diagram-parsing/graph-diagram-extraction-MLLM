@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Decision",
+      "id": "Decision",
+      "class": null
+    },
+    {
+      "text": "ODD",
+      "id": "ODD",
+      "class": null
+    },
+    {
+      "text": "Even",
+      "id": "Even",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "Decision",
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "ODD",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decision",
+      "head": "Even",
+      "label": "No"
+    },
+    {
+      "tail": "ODD",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Even",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

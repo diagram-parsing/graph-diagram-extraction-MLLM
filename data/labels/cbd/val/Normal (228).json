@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Take Variables",
+      "id": "Take Variables",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Print",
+      "id": "Print",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Take Variables",
+      "label": null
+    },
+    {
+      "tail": "Take Variables",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Print",
+      "label": null
+    },
+    {
+      "tail": "Print",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

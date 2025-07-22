@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Initial",
+      "id": "Initial",
+      "class": null
+    },
+    {
+      "text": "GetQuery()",
+      "id": "GetQuery()",
+      "class": null
+    },
+    {
+      "text": "Open query or Create query",
+      "id": "Open query or Create query",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Read or make changes",
+      "id": "Read or make changes",
+      "class": null
+    },
+    {
+      "text": "Save",
+      "id": "Save",
+      "class": null
+    },
+    {
+      "text": "Close",
+      "id": "Close",
+      "class": null
+    },
+    {
+      "text": "Open PeopleSoft Query to run",
+      "id": "Open PeopleSoft Query to run",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initial",
+      "head": "GetQuery()",
+      "label": null
+    },
+    {
+      "tail": "GetQuery()",
+      "head": "Open query or Create query",
+      "label": null
+    },
+    {
+      "tail": "Open query or Create query",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Open query or Create query",
+      "head": "Read or make changes",
+      "label": null
+    },
+    {
+      "tail": "Read or make changes",
+      "head": "Save",
+      "label": null
+    },
+    {
+      "tail": "Save",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Save",
+      "head": "Close",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Close",
+      "label": null
+    },
+    {
+      "tail": "Close",
+      "head": "Open PeopleSoft Query to run",
+      "label": null
+    }
+  ],
+  "groups": []
+}

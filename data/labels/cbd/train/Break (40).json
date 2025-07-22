@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Program",
+      "id": "Program",
+      "class": null
+    },
+    {
+      "text": "Input image",
+      "id": "Input image",
+      "class": null
+    },
+    {
+      "text": "Description",
+      "id": "Description",
+      "class": null
+    },
+    {
+      "text": "Segmentation",
+      "id": "Segmentation",
+      "class": null
+    },
+    {
+      "text": "Obstacle/Non-obstacle decision",
+      "id": "Obstacle/Non-obstacle decision",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Program",
+      "head": "Input image",
+      "label": null
+    },
+    {
+      "tail": "Input image",
+      "head": "Description",
+      "label": null
+    },
+    {
+      "tail": "Description",
+      "head": "Segmentation",
+      "label": null
+    },
+    {
+      "tail": "Segmentation",
+      "head": "Obstacle/Non-obstacle decision",
+      "label": null
+    }
+  ],
+  "groups": []
+}

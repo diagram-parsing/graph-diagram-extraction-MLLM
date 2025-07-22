@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Enter Website",
+      "id": "Enter Website",
+      "class": null
+    },
+    {
+      "text": "Homepage",
+      "id": "Homepage",
+      "class": null
+    },
+    {
+      "text": "Enter Details",
+      "id": "Enter Details",
+      "class": null
+    },
+    {
+      "text": "Correct?",
+      "id": "Correct?",
+      "class": null
+    },
+    {
+      "text": "Enter Again",
+      "id": "Enter Again",
+      "class": null
+    },
+    {
+      "text": "Enter",
+      "id": "Enter",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Enter Website",
+      "label": null
+    },
+    {
+      "tail": "Enter Website",
+      "head": "Homepage",
+      "label": null
+    },
+    {
+      "tail": "Homepage",
+      "head": "Enter Details",
+      "label": null
+    },
+    {
+      "tail": "Enter Details",
+      "head": "Correct?",
+      "label": null
+    },
+    {
+      "tail": "Correct?",
+      "head": "Enter Again",
+      "label": "No"
+    },
+    {
+      "tail": "Enter Again",
+      "head": "Enter Details",
+      "label": null
+    },
+    {
+      "tail": "Correct?",
+      "head": "Enter",
+      "label": "Yes"
+    },
+    {
+      "tail": "Enter",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,149 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Example",
+      "id": "Example",
+      "class": null,
+      "bbox": [
+        414.5,
+        52.5,
+        85.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Does the computer turn on?",
+      "id": "Does the computer turn on?",
+      "class": null,
+      "bbox": [
+        409.0,
+        195.0,
+        158.0,
+        54.0
+      ]
+    },
+    {
+      "text": "Any Report",
+      "id": "Any Report",
+      "class": null,
+      "bbox": [
+        235.0,
+        378.0,
+        136.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Is the computer power light on?",
+      "id": "Is the computer power light on?",
+      "class": null,
+      "bbox": [
+        628.0,
+        372.5,
+        168.0,
+        57.0
+      ]
+    },
+    {
+      "text": "Perform a search for the error message",
+      "id": "Perform a search for the error message",
+      "class": null
+    },
+    {
+      "text": "Computer Okay",
+      "id": "Computer Okay",
+      "class": null
+    },
+    {
+      "text": "PC ON",
+      "id": "PC ON",
+      "class": null,
+      "bbox": [
+        442.5,
+        553.5,
+        77.0,
+        23.0
+      ]
+    },
+    {
+      "text": "Check the computer power cord",
+      "id": "Check the computer power cord",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Does the computer turn on?",
+      "tail": "Example",
+      "label": null
+    },
+    {
+      "head": "Any Report",
+      "tail": "Does the computer turn on?",
+      "label": "Yes",
+      "bbox": [
+        237.5,
+        216.5,
+        49.0,
+        29.0
+      ]
+    },
+    {
+      "head": "Is the computer power light on?",
+      "tail": "Does the computer turn on?",
+      "label": "No",
+      "bbox": [
+        608.5,
+        210.0,
+        45.0,
+        30.0
+      ]
+    },
+    {
+      "head": "Perform a search for the error message",
+      "tail": "Any Report",
+      "label": "Yes",
+      "bbox": [
+        237.5,
+        216.5,
+        49.0,
+        29.0
+      ]
+    },
+    {
+      "head": "Computer Okay",
+      "tail": "Any Report",
+      "label": "No",
+      "bbox": [
+        608.5,
+        210.0,
+        45.0,
+        30.0
+      ]
+    },
+    {
+      "head": "PC ON",
+      "tail": "Is the computer power light on?",
+      "label": "Yes",
+      "bbox": [
+        237.5,
+        216.5,
+        49.0,
+        29.0
+      ]
+    },
+    {
+      "head": "Check the computer power cord",
+      "tail": "Is the computer power light on?",
+      "label": "No",
+      "bbox": [
+        608.5,
+        210.0,
+        45.0,
+        30.0
+      ]
+    }
+  ],
+  "groups": []
+}

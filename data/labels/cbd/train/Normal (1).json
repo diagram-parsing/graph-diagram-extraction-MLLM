@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Promotion",
+      "id": "Promotion",
+      "class": null
+    },
+    {
+      "text": "Manager Post",
+      "id": "Manager Post",
+      "class": null
+    },
+    {
+      "text": "Send Letter via Internet",
+      "id": "Send Letter via Internet",
+      "class": null
+    },
+    {
+      "text": "Auditor Schedules Opening Conference",
+      "id": "Auditor Schedules Opening Conference",
+      "class": null
+    },
+    {
+      "text": "Send Opening Conference Confirmation (via Email)",
+      "id": "Send Opening Conference Confirmation (via Email)",
+      "class": null
+    },
+    {
+      "text": "Risk Assessment by Auditors",
+      "id": "Risk Assessment by Auditors",
+      "class": null
+    },
+    {
+      "text": "Documentation",
+      "id": "Documentation",
+      "class": null
+    },
+    {
+      "text": "Opening Conference",
+      "id": "Opening Conference",
+      "class": null
+    },
+    {
+      "text": "Manager Reviews Planning",
+      "id": "Manager Reviews Planning",
+      "class": null
+    },
+    {
+      "text": "Fieldwork Performance",
+      "id": "Fieldwork Performance",
+      "class": null
+    },
+    {
+      "text": "Audit Observation Form",
+      "id": "Audit Observation Form",
+      "class": null
+    },
+    {
+      "text": "Finalization",
+      "id": "Finalization",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Promotion",
+      "head": "Manager Post",
+      "label": null
+    },
+    {
+      "tail": "Manager Post",
+      "head": "Send Letter via Internet",
+      "label": null
+    },
+    {
+      "tail": "Manager Post",
+      "head": "Auditor Schedules Opening Conference",
+      "label": null
+    },
+    {
+      "tail": "Auditor Schedules Opening Conference",
+      "head": "Send Opening Conference Confirmation (via Email)",
+      "label": null
+    },
+    {
+      "tail": "Auditor Schedules Opening Conference",
+      "head": "Risk Assessment by Auditors",
+      "label": null
+    },
+    {
+      "tail": "Risk Assessment by Auditors",
+      "head": "Documentation",
+      "label": null
+    },
+    {
+      "tail": "Documentation",
+      "head": "Opening Conference",
+      "label": null
+    },
+    {
+      "tail": "Opening Conference",
+      "head": "Risk Assessment by Auditors",
+      "label": null
+    },
+    {
+      "tail": "Opening Conference",
+      "head": "Manager Reviews Planning",
+      "label": null
+    },
+    {
+      "tail": "Manager Reviews Planning",
+      "head": "Fieldwork Performance",
+      "label": null
+    },
+    {
+      "tail": "Fieldwork Performance",
+      "head": "Audit Observation Form",
+      "label": null
+    },
+    {
+      "tail": "Audit Observation Form",
+      "head": "Finalization",
+      "label": null
+    },
+    {
+      "tail": "Finalization",
+      "head": "Fieldwork Performance",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Initialize all variables",
+      "id": "Initialize all variables",
+      "class": null
+    },
+    {
+      "text": "Take Values",
+      "id": "Take Values",
+      "class": null
+    },
+    {
+      "text": "Decode chromosomes",
+      "id": "Decode chromosomes",
+      "class": null
+    },
+    {
+      "text": "Total samples",
+      "id": "Total samples",
+      "class": null
+    },
+    {
+      "text": "Select mates",
+      "id": "Select mates",
+      "class": null
+    },
+    {
+      "text": "Mating",
+      "id": "Mating",
+      "class": null
+    },
+    {
+      "text": "Sample",
+      "id": "Sample",
+      "class": null
+    },
+    {
+      "text": "Convergence Check",
+      "id": "Convergence Check",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initialize all variables",
+      "head": "Take Values",
+      "label": null
+    },
+    {
+      "tail": "Take Values",
+      "head": "Decode chromosomes",
+      "label": null
+    },
+    {
+      "tail": "Decode chromosomes",
+      "head": "Total samples",
+      "label": null
+    },
+    {
+      "tail": "Total samples",
+      "head": "Select mates",
+      "label": null
+    },
+    {
+      "tail": "Select mates",
+      "head": "Mating",
+      "label": null
+    },
+    {
+      "tail": "Mating",
+      "head": "Sample",
+      "label": null
+    },
+    {
+      "tail": "Sample",
+      "head": "Convergence Check",
+      "label": null
+    },
+    {
+      "tail": "Convergence Check",
+      "head": "Decode chromosomes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

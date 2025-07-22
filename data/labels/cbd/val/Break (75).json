@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "SMOOTH",
+      "id": "SMOOTH",
+      "class": null
+    },
+    {
+      "text": "Threshold",
+      "id": "Threshold",
+      "class": null
+    },
+    {
+      "text": "CALIBRATE",
+      "id": "CALIBRATE",
+      "class": null
+    },
+    {
+      "text": "INTERPOLATE",
+      "id": "INTERPOLATE",
+      "class": null
+    },
+    {
+      "text": "DISPLAY",
+      "id": "DISPLAY",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "SMOOTH",
+      "label": null
+    },
+    {
+      "tail": "SMOOTH",
+      "head": "Threshold",
+      "label": null
+    },
+    {
+      "tail": "CALIBRATE",
+      "head": "Threshold",
+      "label": null
+    },
+    {
+      "tail": "Threshold",
+      "head": "INTERPOLATE",
+      "label": null
+    },
+    {
+      "tail": "INTERPOLATE",
+      "head": "DISPLAY",
+      "label": null
+    },
+    {
+      "tail": "DISPLAY",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

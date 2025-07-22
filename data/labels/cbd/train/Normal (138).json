@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Session Obect",
+      "id": "Session Obect",
+      "class": null
+    },
+    {
+      "text": "GetQuery()",
+      "id": "GetQuery()",
+      "class": null
+    },
+    {
+      "text": "GetQuery",
+      "id": "GetQuery",
+      "class": null
+    },
+    {
+      "text": "Input variables",
+      "id": "Input variables",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Read or make changes",
+      "id": "Read or make changes",
+      "class": null
+    },
+    {
+      "text": "Save()",
+      "id": "Save()",
+      "class": null
+    },
+    {
+      "text": "Close()",
+      "id": "Close()",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Session Obect",
+      "head": "GetQuery()",
+      "label": null
+    },
+    {
+      "tail": "GetQuery",
+      "head": "Input variables",
+      "label": null
+    },
+    {
+      "tail": "Input variables",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Input variables",
+      "head": "Read or make changes",
+      "label": null
+    },
+    {
+      "tail": "Read or make changes",
+      "head": "Save()",
+      "label": null
+    },
+    {
+      "tail": "Save()",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Close()",
+      "label": null
+    },
+    {
+      "tail": "Save()",
+      "head": "Close()",
+      "label": null
+    },
+    {
+      "tail": "Close()",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

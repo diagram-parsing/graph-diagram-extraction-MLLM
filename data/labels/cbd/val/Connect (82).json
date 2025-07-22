@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "DEFENSE?",
+      "id": "DEFENSE?",
+      "class": null
+    },
+    {
+      "text": "SWAT",
+      "id": "SWAT",
+      "class": null
+    },
+    {
+      "text": "Block",
+      "id": "Block",
+      "class": null
+    },
+    {
+      "text": "LOOK",
+      "id": "LOOK",
+      "class": null
+    },
+    {
+      "text": "Target",
+      "id": "Target",
+      "class": null
+    },
+    {
+      "text": "LAUNCH BALL",
+      "id": "LAUNCH BALL",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "DEFENSE?",
+      "label": null
+    },
+    {
+      "tail": "DEFENSE?",
+      "head": "SWAT",
+      "label": "Yes"
+    },
+    {
+      "tail": "SWAT",
+      "head": "Block",
+      "label": null
+    },
+    {
+      "tail": "DEFENSE?",
+      "head": "Block",
+      "label": "No"
+    },
+    {
+      "tail": "Block",
+      "head": "LOOK",
+      "label": null
+    },
+    {
+      "tail": "LOOK",
+      "head": "Target",
+      "label": null
+    },
+    {
+      "tail": "Target",
+      "head": "LAUNCH BALL",
+      "label": null
+    },
+    {
+      "tail": "LAUNCH BALL",
+      "head": "DEFENSE?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

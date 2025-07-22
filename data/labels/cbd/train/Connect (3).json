@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Username",
+      "id": "Username",
+      "class": null
+    },
+    {
+      "text": "Password",
+      "id": "Password",
+      "class": null
+    },
+    {
+      "text": "Username && Password correspond to the ones in database?",
+      "id": "Username && Password correspond to the ones in database?",
+      "class": null
+    },
+    {
+      "text": "Enter ID and password",
+      "id": "Enter ID and password",
+      "class": null
+    },
+    {
+      "text": "\"Invalid credentials\"",
+      "id": "\"Invalid credentials\"",
+      "class": null
+    },
+    {
+      "text": "Is User ID blocked?",
+      "id": "Is User ID blocked?",
+      "class": null
+    },
+    {
+      "text": "\"403 Forbidden\"",
+      "id": "\"403 Forbidden\"",
+      "class": null
+    },
+    {
+      "text": "Login successfully",
+      "id": "Login successfully",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Username",
+      "label": null
+    },
+    {
+      "tail": "Username",
+      "head": "Password",
+      "label": null
+    },
+    {
+      "tail": "Password",
+      "head": "Username && Password correspond to the ones in database?",
+      "label": null
+    },
+    {
+      "tail": "Username && Password correspond to the ones in database?",
+      "head": "Enter ID and password",
+      "label": "Yes"
+    },
+    {
+      "tail": "Username && Password correspond to the ones in database?",
+      "head": "\"Invalid credentials\"",
+      "label": "No"
+    },
+    {
+      "tail": "Enter ID and password",
+      "head": "Is User ID blocked?",
+      "label": null
+    },
+    {
+      "tail": "\"Invalid credentials\"",
+      "head": "Username",
+      "label": null
+    },
+    {
+      "tail": "Is User ID blocked?",
+      "head": "\"403 Forbidden\"",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is User ID blocked?",
+      "head": "Login successfully",
+      "label": "No"
+    },
+    {
+      "tail": "\"403 Forbidden\"",
+      "head": "Username",
+      "label": null
+    },
+    {
+      "tail": "Login successfully",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

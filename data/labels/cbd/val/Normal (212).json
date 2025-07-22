@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Document",
+      "id": "Document",
+      "class": null
+    },
+    {
+      "text": "Make an edit",
+      "id": "Make an edit",
+      "class": null
+    },
+    {
+      "text": "Was the article edited further?",
+      "id": "Was the article edited further?",
+      "class": null
+    },
+    {
+      "text": "Do you agree with the changes",
+      "id": "Do you agree with the changes",
+      "class": null
+    },
+    {
+      "text": "Final Document",
+      "id": "Final Document",
+      "class": null
+    },
+    {
+      "text": "seek the compromise",
+      "id": "seek the compromise",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Document",
+      "head": "Make an edit",
+      "label": null
+    },
+    {
+      "tail": "Make an edit",
+      "head": "Was the article edited further?",
+      "label": null
+    },
+    {
+      "tail": "Was the article edited further?",
+      "head": "Do you agree with the changes",
+      "label": "Yes"
+    },
+    {
+      "tail": "Was the article edited further?",
+      "head": "Final Document",
+      "label": "No"
+    },
+    {
+      "tail": "Do you agree with the changes",
+      "head": "seek the compromise",
+      "label": "Disagree"
+    },
+    {
+      "tail": "seek the compromise",
+      "head": "Make an edit",
+      "label": "Implement"
+    },
+    {
+      "tail": "Do you agree with the changes",
+      "head": "Final Document",
+      "label": "Agree"
+    }
+  ],
+  "groups": []
+}

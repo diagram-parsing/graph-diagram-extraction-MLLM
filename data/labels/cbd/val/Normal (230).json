@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "INPUT DEVICE",
+      "id": "INPUT DEVICE",
+      "class": null
+    },
+    {
+      "text": "INPUT POINT",
+      "id": "INPUT POINT",
+      "class": null
+    },
+    {
+      "text": "ELECTRO MAGNETIC",
+      "id": "ELECTRO MAGNETIC",
+      "class": null
+    },
+    {
+      "text": "CPU",
+      "id": "CPU",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "INPUT DEVICE",
+      "head": "INPUT POINT",
+      "label": null
+    },
+    {
+      "tail": "INPUT POINT",
+      "head": "ELECTRO MAGNETIC",
+      "label": null
+    },
+    {
+      "tail": "ELECTRO MAGNETIC",
+      "head": "CPU",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Reviewer",
+      "id": "Reviewer",
+      "class": null
+    },
+    {
+      "text": "Taking feedback from others",
+      "id": "Taking feedback from others",
+      "class": null
+    },
+    {
+      "text": "Final comments",
+      "id": "Final comments",
+      "class": null
+    },
+    {
+      "text": "Document selection",
+      "id": "Document selection",
+      "class": null
+    },
+    {
+      "text": "Selection rounds",
+      "id": "Selection rounds",
+      "class": null
+    },
+    {
+      "text": "Introduction",
+      "id": "Introduction",
+      "class": null
+    },
+    {
+      "text": "Coding Test",
+      "id": "Coding Test",
+      "class": null
+    },
+    {
+      "text": "Tech Interview",
+      "id": "Tech Interview",
+      "class": null
+    },
+    {
+      "text": "HR Interview",
+      "id": "HR Interview",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Reviewer",
+      "head": "Taking feedback from others",
+      "label": null
+    },
+    {
+      "tail": "Taking feedback from others",
+      "head": "Final comments",
+      "label": null
+    },
+    {
+      "tail": "Final comments",
+      "head": "Document selection",
+      "label": null
+    },
+    {
+      "tail": "Document selection",
+      "head": "Selection rounds",
+      "label": null
+    },
+    {
+      "tail": "Selection rounds",
+      "head": "Introduction",
+      "label": null
+    },
+    {
+      "tail": "Selection rounds",
+      "head": "Coding Test",
+      "label": null
+    },
+    {
+      "tail": "Selection rounds",
+      "head": "Tech Interview",
+      "label": null
+    },
+    {
+      "tail": "Selection rounds",
+      "head": "HR Interview",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "1",
+      "id": "1",
+      "class": null
+    },
+    {
+      "text": "Costumer Order",
+      "id": "Costumer Order",
+      "class": null
+    },
+    {
+      "text": "Sales Order",
+      "id": "Sales Order",
+      "class": null
+    },
+    {
+      "text": "Documentation",
+      "id": "Documentation",
+      "class": null
+    },
+    {
+      "text": "Prepare DO",
+      "id": "Prepare DO",
+      "class": null
+    },
+    {
+      "text": "Shipment",
+      "id": "Shipment",
+      "class": null
+    },
+    {
+      "text": "Goods Delivered",
+      "id": "Goods Delivered",
+      "class": null
+    },
+    {
+      "text": "2",
+      "id": "2",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "1",
+      "head": "Costumer Order",
+      "label": null
+    },
+    {
+      "tail": "Costumer Order",
+      "head": "Sales Order",
+      "label": null
+    },
+    {
+      "tail": "Sales Order",
+      "head": "Documentation",
+      "label": null
+    },
+    {
+      "tail": "Documentation",
+      "head": "Sales Order",
+      "label": "No"
+    },
+    {
+      "tail": "Documentation",
+      "head": "Prepare DO",
+      "label": "Yes"
+    },
+    {
+      "tail": "Prepare DO",
+      "head": "Shipment",
+      "label": null
+    },
+    {
+      "tail": "Shipment",
+      "head": "Goods Delivered",
+      "label": null
+    },
+    {
+      "tail": "Goods Delivered",
+      "head": "2",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initial Population",
+      "id": "Initial Population",
+      "class": null
+    },
+    {
+      "text": "Fitness Evaluation",
+      "id": "Fitness Evaluation",
+      "class": null
+    },
+    {
+      "text": "Tournament Selection",
+      "id": "Tournament Selection",
+      "class": null
+    },
+    {
+      "text": "Team Selection",
+      "id": "Team Selection",
+      "class": null
+    },
+    {
+      "text": "Finalize Team",
+      "id": "Finalize Team",
+      "class": null
+    },
+    {
+      "text": "New Generation",
+      "id": "New Generation",
+      "class": null
+    },
+    {
+      "text": "condition fulfil?",
+      "id": "condition fulfil?",
+      "class": null
+    },
+    {
+      "text": "connector",
+      "id": "connector",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initial Population",
+      "label": null
+    },
+    {
+      "tail": "Initial Population",
+      "head": "Fitness Evaluation",
+      "label": null
+    },
+    {
+      "tail": "Fitness Evaluation",
+      "head": "Tournament Selection",
+      "label": null
+    },
+    {
+      "tail": "Tournament Selection",
+      "head": "Team Selection",
+      "label": null
+    },
+    {
+      "tail": "Team Selection",
+      "head": "Finalize Team",
+      "label": null
+    },
+    {
+      "tail": "Finalize Team",
+      "head": "New Generation",
+      "label": null
+    },
+    {
+      "tail": "New Generation",
+      "head": "condition fulfil?",
+      "label": null
+    },
+    {
+      "tail": "condition fulfil?",
+      "head": "connector",
+      "label": "YES"
+    },
+    {
+      "tail": "condition fulfil?",
+      "head": "Tournament Selection",
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}

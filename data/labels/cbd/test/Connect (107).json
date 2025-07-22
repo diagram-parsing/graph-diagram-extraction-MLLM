@@ -1,0 +1,89 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        62.5,
+        21.5,
+        25.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Object Detected",
+      "id": "Object Detected",
+      "class": null,
+      "bbox": [
+        66.0,
+        131.0,
+        50.0,
+        26.0
+      ]
+    },
+    {
+      "text": "Drive Forwards",
+      "id": "Drive Forwards",
+      "class": null,
+      "bbox": [
+        223.5,
+        133.5,
+        43.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Turn Robot",
+      "id": "Turn Robot",
+      "class": null,
+      "bbox": [
+        218.5,
+        207.5,
+        51.0,
+        11.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Object Detected",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Drive Forwards",
+      "tail": "Object Detected",
+      "label": "Yes",
+      "bbox": [
+        140.0,
+        125.5,
+        20.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Object Detected",
+      "tail": "Drive Forwards",
+      "label": null
+    },
+    {
+      "head": "Turn Robot",
+      "tail": "Object Detected",
+      "label": "No",
+      "bbox": [
+        48.5,
+        195.0,
+        15.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Object Detected",
+      "tail": "Turn Robot",
+      "label": null
+    }
+  ],
+  "groups": []
+}

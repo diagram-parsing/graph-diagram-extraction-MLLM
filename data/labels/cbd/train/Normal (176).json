@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "New Budget",
+      "id": "New Budget",
+      "class": null
+    },
+    {
+      "text": "Make an edit",
+      "id": "Make an edit",
+      "class": null
+    },
+    {
+      "text": "Was the article edited further?",
+      "id": "Was the article edited further?",
+      "class": null
+    },
+    {
+      "text": "Do you agree with the change?",
+      "id": "Do you agree with the change?",
+      "class": null
+    },
+    {
+      "text": "Discuss",
+      "id": "Discuss",
+      "class": null
+    },
+    {
+      "text": "Implement Budget",
+      "id": "Implement Budget",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "New Budget",
+      "head": "Make an edit",
+      "label": null
+    },
+    {
+      "tail": "Make an edit",
+      "head": "Was the article edited further?",
+      "label": "Wait"
+    },
+    {
+      "tail": "Was the article edited further?",
+      "head": "Do you agree with the change?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Do you agree with the change?",
+      "head": "Discuss",
+      "label": "Disagree"
+    },
+    {
+      "tail": "Discuss",
+      "head": "Make an edit",
+      "label": "Implement"
+    },
+    {
+      "tail": "Was the article edited further?",
+      "head": "Implement Budget",
+      "label": "No"
+    },
+    {
+      "tail": "Do you agree with the change?",
+      "head": "Implement Budget",
+      "label": "Agree"
+    }
+  ],
+  "groups": []
+}

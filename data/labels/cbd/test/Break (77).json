@@ -1,0 +1,116 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        300.0,
+        92.5,
+        34.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Check needs for project",
+      "id": "Check needs for project",
+      "class": null,
+      "bbox": [
+        305.5,
+        190.0,
+        73.0,
+        38.0
+      ]
+    },
+    {
+      "text": "Is project well-defined?",
+      "id": "Is project well-defined?",
+      "class": null,
+      "bbox": [
+        302.5,
+        307.0,
+        61.0,
+        48.0
+      ]
+    },
+    {
+      "text": "Re-evaluate needs",
+      "id": "Re-evaluate needs",
+      "class": null,
+      "bbox": [
+        130.0,
+        435.5,
+        70.0,
+        31.0
+      ]
+    },
+    {
+      "text": "Build prototype",
+      "id": "Build prototype",
+      "class": null,
+      "bbox": [
+        303.5,
+        435.5,
+        61.0,
+        33.0
+      ]
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null,
+      "bbox": [
+        301.0,
+        545.0,
+        28.0,
+        18.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Check needs for project",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Is project well-defined?",
+      "tail": "Check needs for project",
+      "label": null
+    },
+    {
+      "head": "Re-evaluate needs",
+      "tail": "Is project well-defined?",
+      "label": "No",
+      "bbox": [
+        131.0,
+        371.5,
+        18.0,
+        13.0
+      ]
+    },
+    {
+      "head": "Build prototype",
+      "tail": "Is project well-defined?",
+      "label": "Yes",
+      "bbox": [
+        303.0,
+        377.5,
+        24.0,
+        15.0
+      ]
+    },
+    {
+      "head": "Build prototype",
+      "tail": "Re-evaluate needs",
+      "label": null
+    },
+    {
+      "head": "END",
+      "tail": "Build prototype",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Initial setting",
+      "id": "Initial setting",
+      "class": null
+    },
+    {
+      "text": "Start analysis mode",
+      "id": "Start analysis mode",
+      "class": null
+    },
+    {
+      "text": "Condition?",
+      "id": "Condition?",
+      "class": null
+    },
+    {
+      "text": "Drop packet",
+      "id": "Drop packet",
+      "class": null
+    },
+    {
+      "text": "Normal network status",
+      "id": "Normal network status",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initial setting",
+      "head": "Start analysis mode",
+      "label": "Traffic monitoring"
+    },
+    {
+      "tail": "Start analysis mode",
+      "head": "Condition?",
+      "label": null
+    },
+    {
+      "tail": "Condition?",
+      "head": "Drop packet",
+      "label": "Yes"
+    },
+    {
+      "tail": "Drop packet",
+      "head": "Initial setting",
+      "label": null
+    },
+    {
+      "tail": "Condition?",
+      "head": "Normal network status",
+      "label": null
+    },
+    {
+      "tail": "Normal network status",
+      "head": "Initial setting",
+      "label": null
+    }
+  ],
+  "groups": []
+}

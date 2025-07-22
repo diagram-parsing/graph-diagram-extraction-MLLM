@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "Take Values",
+      "id": "Take Values",
+      "class": null
+    },
+    {
+      "text": "Input Rate",
+      "id": "Input Rate",
+      "class": null
+    },
+    {
+      "text": "Compute Interest = Amount*Years*Rate/100",
+      "id": "Compute Interest = Amount*Years*Rate/100",
+      "class": null
+    },
+    {
+      "text": "Output Interest",
+      "id": "Output Interest",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Take Values",
+      "label": null
+    },
+    {
+      "tail": "Take Values",
+      "head": "Input Rate",
+      "label": null
+    },
+    {
+      "tail": "Input Rate",
+      "head": "Compute Interest = Amount*Years*Rate/100",
+      "label": null
+    },
+    {
+      "tail": "Compute Interest = Amount*Years*Rate/100",
+      "head": "Output Interest",
+      "label": null
+    },
+    {
+      "tail": "Output Interest",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

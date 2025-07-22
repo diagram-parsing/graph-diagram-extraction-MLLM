@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Initialization",
+      "id": "Initialization",
+      "class": null
+    },
+    {
+      "text": "Condition1",
+      "id": "Condition1",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    },
+    {
+      "text": "Condition2",
+      "id": "Condition2",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Statements",
+      "id": "Statements",
+      "class": null
+    },
+    {
+      "text": "Decrement",
+      "id": "Decrement",
+      "class": null
+    },
+    {
+      "text": "Increment",
+      "id": "Increment",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Initialization",
+      "head": "Condition1",
+      "label": null
+    },
+    {
+      "tail": "Condition1",
+      "head": "Stop",
+      "label": "False"
+    },
+    {
+      "tail": "Condition1",
+      "head": "Condition2",
+      "label": "True"
+    },
+    {
+      "tail": "Condition2",
+      "head": "End",
+      "label": "Flase"
+    },
+    {
+      "tail": "Condition2",
+      "head": "Statements",
+      "label": "True"
+    },
+    {
+      "tail": "Statements",
+      "head": "Decrement",
+      "label": null
+    },
+    {
+      "tail": "Decrement",
+      "head": "Condition2",
+      "label": null
+    },
+    {
+      "tail": "End",
+      "head": "Increment",
+      "label": null
+    },
+    {
+      "tail": "Increment",
+      "head": "Condition1",
+      "label": null
+    }
+  ],
+  "groups": []
+}

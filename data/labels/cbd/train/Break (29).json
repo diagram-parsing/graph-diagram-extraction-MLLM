@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Fruits",
+      "id": "Fruits",
+      "class": null
+    },
+    {
+      "text": "Input mango, pitaya, durian",
+      "id": "Input mango, pitaya, durian",
+      "class": null
+    },
+    {
+      "text": "Prefer mango to pitaya",
+      "id": "Prefer mango to pitaya",
+      "class": null
+    },
+    {
+      "text": "Prefer pitaya to durian?",
+      "id": "Prefer pitaya to durian?",
+      "class": null
+    },
+    {
+      "text": "Go for mango",
+      "id": "Go for mango",
+      "class": null
+    },
+    {
+      "text": "Prefer mango to durain",
+      "id": "Prefer mango to durain",
+      "class": null
+    },
+    {
+      "text": "Go for pitaya",
+      "id": "Go for pitaya",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Fruits",
+      "head": "Input mango, pitaya, durian",
+      "label": null
+    },
+    {
+      "tail": "Input mango, pitaya, durian",
+      "head": "Prefer mango to pitaya",
+      "label": null
+    },
+    {
+      "tail": "Prefer mango to pitaya",
+      "head": "Prefer pitaya to durian?",
+      "label": null
+    },
+    {
+      "tail": "Prefer pitaya to durian?",
+      "head": "Go for mango",
+      "label": "Yes"
+    },
+    {
+      "tail": "Prefer pitaya to durian?",
+      "head": "Go for mango",
+      "label": "No"
+    },
+    {
+      "tail": "Prefer mango to pitaya",
+      "head": "Prefer mango to durain",
+      "label": null
+    },
+    {
+      "tail": "Prefer mango to durain",
+      "head": "Go for pitaya",
+      "label": "No"
+    },
+    {
+      "tail": "Prefer mango to durain",
+      "head": "Go for pitaya",
+      "label": "No"
+    },
+    {
+      "tail": "Go for mango",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Go for pitaya",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Go for pitaya",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

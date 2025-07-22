@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Approval Needed?",
+      "id": "Approval Needed?",
+      "class": null
+    },
+    {
+      "text": "Go to manager",
+      "id": "Go to manager",
+      "class": null
+    },
+    {
+      "text": "Finished",
+      "id": "Finished",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Approval Needed?",
+      "label": null
+    },
+    {
+      "tail": "Approval Needed?",
+      "head": "Go to manager",
+      "label": "Yes"
+    },
+    {
+      "tail": "Approval Needed?",
+      "head": "Finished",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

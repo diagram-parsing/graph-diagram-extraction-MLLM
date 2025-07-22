@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Topic assigned",
+      "id": "Topic assigned",
+      "class": null
+    },
+    {
+      "text": "Discuss",
+      "id": "Discuss",
+      "class": null
+    },
+    {
+      "text": "Draft review",
+      "id": "Draft review",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Topic assigned",
+      "label": "Brainstorm"
+    },
+    {
+      "tail": "Topic assigned",
+      "head": "Discuss",
+      "label": "Outline"
+    },
+    {
+      "tail": "Discuss",
+      "head": "Topic assigned",
+      "label": "Return"
+    },
+    {
+      "tail": "Discuss",
+      "head": "Draft review",
+      "label": "Draft"
+    },
+    {
+      "tail": "Draft review",
+      "head": "Discuss",
+      "label": "changes"
+    },
+    {
+      "tail": "Draft review",
+      "head": "Finish",
+      "label": "Approved"
+    }
+  ],
+  "groups": []
+}

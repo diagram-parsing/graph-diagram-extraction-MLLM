@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Input Source",
+      "id": "Input Source",
+      "class": null
+    },
+    {
+      "text": "Input Transducers",
+      "id": "Input Transducers",
+      "class": null
+    },
+    {
+      "text": "Modulation",
+      "id": "Modulation",
+      "class": null
+    },
+    {
+      "text": "Source Encoder",
+      "id": "Source Encoder",
+      "class": null
+    },
+    {
+      "text": "Encoder",
+      "id": "Encoder",
+      "class": null
+    },
+    {
+      "text": "Base-band Amplifier",
+      "id": "Base-band Amplifier",
+      "class": null
+    },
+    {
+      "text": "Channel",
+      "id": "Channel",
+      "class": null
+    },
+    {
+      "text": "Band-pass Demodulator",
+      "id": "Band-pass Demodulator",
+      "class": null
+    },
+    {
+      "text": "Decoder",
+      "id": "Decoder",
+      "class": null
+    },
+    {
+      "text": "Source Decoder",
+      "id": "Source Decoder",
+      "class": null
+    },
+    {
+      "text": "De-modulation",
+      "id": "De-modulation",
+      "class": null
+    },
+    {
+      "text": "Output Transducers",
+      "id": "Output Transducers",
+      "class": null
+    },
+    {
+      "text": "Output Signal",
+      "id": "Output Signal",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Input Source",
+      "head": "Input Transducers",
+      "label": null
+    },
+    {
+      "tail": "Input Transducers",
+      "head": "Modulation",
+      "label": null
+    },
+    {
+      "tail": "Modulation",
+      "head": "Source Encoder",
+      "label": null
+    },
+    {
+      "tail": "Source Encoder",
+      "head": "Encoder",
+      "label": null
+    },
+    {
+      "tail": "Encoder",
+      "head": "Base-band Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Base-band Amplifier",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Channel",
+      "head": "Band-pass Demodulator",
+      "label": null
+    },
+    {
+      "tail": "Band-pass Demodulator",
+      "head": "Decoder",
+      "label": null
+    },
+    {
+      "tail": "Decoder",
+      "head": "Source Decoder",
+      "label": null
+    },
+    {
+      "tail": "Source Decoder",
+      "head": "De-modulation",
+      "label": null
+    },
+    {
+      "tail": "De-modulation",
+      "head": "Output Transducers",
+      "label": null
+    },
+    {
+      "tail": "Output Transducers",
+      "head": "Output Signal",
+      "label": null
+    }
+  ],
+  "groups": []
+}

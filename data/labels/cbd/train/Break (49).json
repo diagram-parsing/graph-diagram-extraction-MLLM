@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "connection",
+      "id": "connection",
+      "class": null
+    },
+    {
+      "text": "New Employee Fills in Paperwork",
+      "id": "New Employee Fills in Paperwork",
+      "class": null
+    },
+    {
+      "text": "decision",
+      "id": "decision",
+      "class": null
+    },
+    {
+      "text": "Documents Sent to Management for Approval",
+      "id": "Documents Sent to Management for Approval",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "Allocate new space",
+      "id": "Allocate new space",
+      "class": null
+    },
+    {
+      "text": "terminator",
+      "id": "terminator",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "connection",
+      "head": "New Employee Fills in Paperwork",
+      "label": null
+    },
+    {
+      "tail": "New Employee Fills in Paperwork",
+      "head": "decision",
+      "label": null
+    },
+    {
+      "tail": "decision",
+      "head": "Documents Sent to Management for Approval",
+      "label": "Document Approved"
+    },
+    {
+      "tail": "decision",
+      "head": "Update",
+      "label": "Document Fix Request"
+    },
+    {
+      "tail": "Update",
+      "head": "decision",
+      "label": null
+    },
+    {
+      "tail": "Documents Sent to Management for Approval",
+      "head": "Allocate new space",
+      "label": null
+    },
+    {
+      "tail": "Allocate new space",
+      "head": "terminator",
+      "label": null
+    }
+  ],
+  "groups": []
+}

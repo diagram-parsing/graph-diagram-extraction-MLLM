@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Problem",
+      "id": "Problem",
+      "class": null
+    },
+    {
+      "text": "What is it?",
+      "id": "What is it?",
+      "class": null
+    },
+    {
+      "text": "I don't need help",
+      "id": "I don't need help",
+      "class": null
+    },
+    {
+      "text": "Do I know the solution",
+      "id": "Do I know the solution",
+      "class": null
+    },
+    {
+      "text": "I need help",
+      "id": "I need help",
+      "class": null
+    },
+    {
+      "text": "Think of solution",
+      "id": "Think of solution",
+      "class": null
+    },
+    {
+      "text": "Try my solution",
+      "id": "Try my solution",
+      "class": null
+    },
+    {
+      "text": "Did it work?",
+      "id": "Did it work?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Problem",
+      "head": "What is it?",
+      "label": "Y"
+    },
+    {
+      "tail": "Problem",
+      "head": "I don't need help",
+      "label": "N"
+    },
+    {
+      "tail": "What is it?",
+      "head": "Do I know the solution",
+      "label": null
+    },
+    {
+      "tail": "Do I know the solution",
+      "head": "I need help",
+      "label": "N"
+    },
+    {
+      "tail": "Do I know the solution",
+      "head": "Think of solution",
+      "label": "Y"
+    },
+    {
+      "tail": "Think of solution",
+      "head": "I need help",
+      "label": "N"
+    },
+    {
+      "tail": "Think of solution",
+      "head": "Try my solution",
+      "label": "Y"
+    },
+    {
+      "tail": "Try my solution",
+      "head": "Did it work?",
+      "label": null
+    },
+    {
+      "tail": "Did it work?",
+      "head": "I need help",
+      "label": "N"
+    },
+    {
+      "tail": "Did it work?",
+      "head": "I don't need help",
+      "label": "Y"
+    }
+  ],
+  "groups": []
+}

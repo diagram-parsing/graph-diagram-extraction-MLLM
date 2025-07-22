@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Work flow",
+      "id": "Work flow",
+      "class": null
+    },
+    {
+      "text": "model estimator",
+      "id": "model estimator",
+      "class": null
+    },
+    {
+      "text": "model merger",
+      "id": "model merger",
+      "class": null
+    },
+    {
+      "text": "region classifier",
+      "id": "region classifier",
+      "class": null
+    },
+    {
+      "text": "region splitter",
+      "id": "region splitter",
+      "class": null
+    },
+    {
+      "text": "Extract",
+      "id": "Extract",
+      "class": null
+    },
+    {
+      "text": "region generator",
+      "id": "region generator",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Work flow",
+      "head": "model estimator",
+      "label": null
+    },
+    {
+      "tail": "model estimator",
+      "head": "model merger",
+      "label": null
+    },
+    {
+      "tail": "model merger",
+      "head": "region classifier",
+      "label": null
+    },
+    {
+      "tail": "region classifier",
+      "head": "region splitter",
+      "label": null
+    },
+    {
+      "tail": "region splitter",
+      "head": "Extract",
+      "label": null
+    },
+    {
+      "tail": "Extract",
+      "head": "region generator",
+      "label": null
+    },
+    {
+      "tail": "region generator",
+      "head": "model estimator",
+      "label": null
+    }
+  ],
+  "groups": []
+}

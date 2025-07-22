@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Lapping",
+      "id": "Lapping",
+      "class": null
+    },
+    {
+      "text": "Die sawing",
+      "id": "Die sawing",
+      "class": null
+    },
+    {
+      "text": "Die bounding",
+      "id": "Die bounding",
+      "class": null
+    },
+    {
+      "text": "Wire",
+      "id": "Wire",
+      "class": null
+    },
+    {
+      "text": "Molding",
+      "id": "Molding",
+      "class": null
+    },
+    {
+      "text": "Marketing",
+      "id": "Marketing",
+      "class": null
+    },
+    {
+      "text": "Plating",
+      "id": "Plating",
+      "class": null
+    },
+    {
+      "text": "sampling",
+      "id": "sampling",
+      "class": null
+    },
+    {
+      "text": "Forming",
+      "id": "Forming",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Lapping",
+      "label": null
+    },
+    {
+      "tail": "Lapping",
+      "head": "Die sawing",
+      "label": null
+    },
+    {
+      "tail": "Die sawing",
+      "head": "Die bounding",
+      "label": null
+    },
+    {
+      "tail": "Die bounding",
+      "head": "Wire",
+      "label": null
+    },
+    {
+      "tail": "Wire",
+      "head": "Molding",
+      "label": null
+    },
+    {
+      "tail": "Molding",
+      "head": "Marketing",
+      "label": null
+    },
+    {
+      "tail": "Marketing",
+      "head": "Plating",
+      "label": null
+    },
+    {
+      "tail": "Plating",
+      "head": "sampling",
+      "label": null
+    },
+    {
+      "tail": "sampling",
+      "head": "Forming",
+      "label": null
+    },
+    {
+      "tail": "Forming",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

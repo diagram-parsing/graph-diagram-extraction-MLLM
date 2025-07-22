@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Worker",
+      "id": "Worker",
+      "class": null
+    },
+    {
+      "text": "Disease",
+      "id": "Disease",
+      "class": null
+    },
+    {
+      "text": "Consult",
+      "id": "Consult",
+      "class": null
+    },
+    {
+      "text": "Explain everything",
+      "id": "Explain everything",
+      "class": null
+    },
+    {
+      "text": "Surgery",
+      "id": "Surgery",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Worker",
+      "head": "Disease",
+      "label": null
+    },
+    {
+      "tail": "Disease",
+      "head": "Consult",
+      "label": null
+    },
+    {
+      "tail": "Consult",
+      "head": "Explain everything",
+      "label": null
+    },
+    {
+      "tail": "Explain everything",
+      "head": "Surgery",
+      "label": null
+    },
+    {
+      "tail": "Surgery",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

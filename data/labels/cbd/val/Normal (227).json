@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Do you work in walking distance from home?",
+      "id": "Do you work in walking distance from home?",
+      "class": null
+    },
+    {
+      "text": "Walk to work.",
+      "id": "Walk to work.",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Do you have a bike",
+      "id": "Do you have a bike",
+      "class": null
+    },
+    {
+      "text": "Drive to work.",
+      "id": "Drive to work.",
+      "class": null
+    },
+    {
+      "text": "Use public transportation.",
+      "id": "Use public transportation.",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Do you work in walking distance from home?",
+      "label": null
+    },
+    {
+      "tail": "Do you work in walking distance from home?",
+      "head": "Walk to work.",
+      "label": "Yes"
+    },
+    {
+      "tail": "Walk to work.",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Do you work in walking distance from home?",
+      "head": "Do you have a bike",
+      "label": "No"
+    },
+    {
+      "tail": "Do you have a bike",
+      "head": "Drive to work.",
+      "label": "Yes"
+    },
+    {
+      "tail": "Drive to work.",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Do you have a bike",
+      "head": "Use public transportation.",
+      "label": "No"
+    },
+    {
+      "tail": "Use public transportation.",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

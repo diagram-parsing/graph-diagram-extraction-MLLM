@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "You are so hungry",
+      "id": "You are so hungry",
+      "class": null
+    },
+    {
+      "text": "Is Mama at home?",
+      "id": "Is Mama at home?",
+      "class": null
+    },
+    {
+      "text": "Enjoy your lunch",
+      "id": "Enjoy your lunch",
+      "class": null
+    },
+    {
+      "text": "Ask your friend",
+      "id": "Ask your friend",
+      "class": null
+    },
+    {
+      "text": "Anything you want to eat?",
+      "id": "Anything you want to eat?",
+      "class": null
+    },
+    {
+      "text": "Feel lazy to go out?",
+      "id": "Feel lazy to go out?",
+      "class": null
+    },
+    {
+      "text": "Go Out",
+      "id": "Go Out",
+      "class": null
+    },
+    {
+      "text": "Order online",
+      "id": "Order online",
+      "class": null
+    },
+    {
+      "text": "Stay hungry",
+      "id": "Stay hungry",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "You are so hungry",
+      "head": "Is Mama at home?",
+      "label": null
+    },
+    {
+      "tail": "Is Mama at home?",
+      "head": "Enjoy your lunch",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is Mama at home?",
+      "head": "Ask your friend",
+      "label": "No"
+    },
+    {
+      "tail": "Ask your friend",
+      "head": "Anything you want to eat?",
+      "label": null
+    },
+    {
+      "tail": "Anything you want to eat?",
+      "head": "Enjoy your lunch",
+      "label": "Yes"
+    },
+    {
+      "tail": "Anything you want to eat?",
+      "head": "Feel lazy to go out?",
+      "label": "No"
+    },
+    {
+      "tail": "Feel lazy to go out?",
+      "head": "Go Out",
+      "label": "I want to go out for some fresh air"
+    },
+    {
+      "tail": "Go Out",
+      "head": "Anything you want to eat?",
+      "label": null
+    },
+    {
+      "tail": "Feel lazy to go out?",
+      "head": "Order online",
+      "label": "Yes, I am very lazy to go out"
+    },
+    {
+      "tail": "Order online",
+      "head": "Anything you want to eat?",
+      "label": null
+    },
+    {
+      "tail": "Anything you want to eat?",
+      "head": "Enjoy your lunch",
+      "label": "Yes"
+    },
+    {
+      "tail": "Anything you want to eat?",
+      "head": "Stay hungry",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

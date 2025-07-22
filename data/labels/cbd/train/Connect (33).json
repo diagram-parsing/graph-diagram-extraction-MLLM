@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initialize-weights and biases With random values",
+      "id": "Initialize-weights and biases With random values",
+      "class": null
+    },
+    {
+      "text": "Perform operations",
+      "id": "Perform operations",
+      "class": null
+    },
+    {
+      "text": "Calculate Error",
+      "id": "Calculate Error",
+      "class": null
+    },
+    {
+      "text": "Error<Error",
+      "id": "Error<Error",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Epoch>Epoch",
+      "id": "Epoch>Epoch",
+      "class": null
+    },
+    {
+      "text": "Update weights and biases",
+      "id": "Update weights and biases",
+      "class": null
+    },
+    {
+      "text": "Epoch=epoch+1",
+      "id": "Epoch=epoch+1",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initialize-weights and biases With random values",
+      "label": null
+    },
+    {
+      "tail": "Initialize-weights and biases With random values",
+      "head": "Perform operations",
+      "label": null
+    },
+    {
+      "tail": "Perform operations",
+      "head": "Calculate Error",
+      "label": null
+    },
+    {
+      "tail": "Calculate Error",
+      "head": "Error<Error",
+      "label": null
+    },
+    {
+      "tail": "Error<Error",
+      "head": "End",
+      "label": "Yes"
+    },
+    {
+      "tail": "Error<Error",
+      "head": "Epoch>Epoch",
+      "label": "No"
+    },
+    {
+      "tail": "Epoch>Epoch",
+      "head": "End",
+      "label": "Yes"
+    },
+    {
+      "tail": "Epoch>Epoch",
+      "head": "Update weights and biases",
+      "label": "No"
+    },
+    {
+      "tail": "Update weights and biases",
+      "head": "Epoch=epoch+1",
+      "label": null
+    },
+    {
+      "tail": "Epoch=epoch+1",
+      "head": "Perform operations",
+      "label": null
+    }
+  ],
+  "groups": []
+}

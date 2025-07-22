@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "INPUT FROM USER",
+      "id": "INPUT FROM USER",
+      "class": null
+    },
+    {
+      "text": "REQUEST RECEIVING",
+      "id": "REQUEST RECEIVING",
+      "class": null
+    },
+    {
+      "text": "DOCUMENTATION",
+      "id": "DOCUMENTATION",
+      "class": null
+    },
+    {
+      "text": "DIRECTIONAL CONTROL UNIT",
+      "id": "DIRECTIONAL CONTROL UNIT",
+      "class": null
+    },
+    {
+      "text": "VIP CUSTOMER",
+      "id": "VIP CUSTOMER",
+      "class": null
+    },
+    {
+      "text": "LEVEL POSITIONING",
+      "id": "LEVEL POSITIONING",
+      "class": null
+    },
+    {
+      "text": "OUTPUT DISPLAY",
+      "id": "OUTPUT DISPLAY",
+      "class": null
+    },
+    {
+      "text": "CLOCK CONTROL UNIT",
+      "id": "CLOCK CONTROL UNIT",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "INPUT FROM USER",
+      "head": "REQUEST RECEIVING",
+      "label": null
+    },
+    {
+      "tail": "REQUEST RECEIVING",
+      "head": "DOCUMENTATION",
+      "label": null
+    },
+    {
+      "tail": "DIRECTIONAL CONTROL UNIT",
+      "head": "VIP CUSTOMER",
+      "label": null
+    },
+    {
+      "tail": "VIP CUSTOMER",
+      "head": "LEVEL POSITIONING",
+      "label": null
+    },
+    {
+      "tail": "LEVEL POSITIONING",
+      "head": "OUTPUT DISPLAY",
+      "label": null
+    },
+    {
+      "tail": "CLOCK CONTROL UNIT",
+      "head": "OUTPUT DISPLAY",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Make all four bits",
+      "id": "Make all four bits",
+      "class": null
+    },
+    {
+      "text": "0<x<9",
+      "id": "0<x<9",
+      "class": null
+    },
+    {
+      "text": "9<x<15",
+      "id": "9<x<15",
+      "class": null
+    },
+    {
+      "text": "ASCII=x+30",
+      "id": "ASCII=x+30",
+      "class": null
+    },
+    {
+      "text": "ASCII=x+41",
+      "id": "ASCII=x+41",
+      "class": null
+    },
+    {
+      "text": "Return ASCII",
+      "id": "Return ASCII",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Make all four bits",
+      "label": null
+    },
+    {
+      "tail": "Make all four bits",
+      "head": "0<x<9",
+      "label": null
+    },
+    {
+      "tail": "0<x<9",
+      "head": "9<x<15",
+      "label": "NO"
+    },
+    {
+      "tail": "0<x<9",
+      "head": "ASCII=x+30",
+      "label": null
+    },
+    {
+      "tail": "9<x<15",
+      "head": "ASCII=x+41",
+      "label": null
+    },
+    {
+      "tail": "ASCII=x+30",
+      "head": "Return ASCII",
+      "label": null
+    },
+    {
+      "tail": "ASCII=x+41",
+      "head": "Return ASCII",
+      "label": null
+    }
+  ],
+  "groups": []
+}

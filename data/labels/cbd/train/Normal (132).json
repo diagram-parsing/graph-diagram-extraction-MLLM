@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Inputs",
+      "id": "Inputs",
+      "class": null
+    },
+    {
+      "text": "Find Area",
+      "id": "Find Area",
+      "class": null
+    },
+    {
+      "text": "Display",
+      "id": "Display",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Inputs",
+      "label": null
+    },
+    {
+      "tail": "Inputs",
+      "head": "Find Area",
+      "label": null
+    },
+    {
+      "tail": "Find Area",
+      "head": "Display",
+      "label": null
+    },
+    {
+      "tail": "Display",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

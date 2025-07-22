@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Payment gateway",
+      "id": "Payment gateway",
+      "class": null
+    },
+    {
+      "text": "Enter your amount and mode",
+      "id": "Enter your amount and mode",
+      "class": null
+    },
+    {
+      "text": "Enter code",
+      "id": "Enter code",
+      "class": null
+    },
+    {
+      "text": "Select gateway",
+      "id": "Select gateway",
+      "class": null
+    },
+    {
+      "text": "Converging?",
+      "id": "Converging?",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Payment gateway",
+      "label": null
+    },
+    {
+      "tail": "Payment gateway",
+      "head": "Enter your amount and mode",
+      "label": null
+    },
+    {
+      "tail": "Enter your amount and mode",
+      "head": "Enter code",
+      "label": null
+    },
+    {
+      "tail": "Enter code",
+      "head": "Select gateway",
+      "label": null
+    },
+    {
+      "tail": "Select gateway",
+      "head": "Converging?",
+      "label": null
+    },
+    {
+      "tail": "Converging?",
+      "head": "Enter your amount and mode",
+      "label": "NO"
+    },
+    {
+      "tail": "Converging?",
+      "head": "End",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

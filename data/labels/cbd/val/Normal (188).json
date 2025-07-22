@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Source Information",
+      "id": "Source Information",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    },
+    {
+      "text": "Channel",
+      "id": "Channel",
+      "class": null
+    },
+    {
+      "text": "Receiver",
+      "id": "Receiver",
+      "class": null
+    },
+    {
+      "text": "Target",
+      "id": "Target",
+      "class": null
+    },
+    {
+      "text": "External Force",
+      "id": "External Force",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Source Information",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Channel",
+      "head": "Receiver",
+      "label": null
+    },
+    {
+      "tail": "Receiver",
+      "head": "Target",
+      "label": null
+    },
+    {
+      "tail": "External Force",
+      "head": "Channel",
+      "label": null
+    }
+  ],
+  "groups": []
+}

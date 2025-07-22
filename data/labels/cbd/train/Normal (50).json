@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Make coffee",
+      "id": "Make coffee",
+      "class": null
+    },
+    {
+      "text": "Browse the web?",
+      "id": "Browse the web?",
+      "class": null
+    },
+    {
+      "text": "Okay then",
+      "id": "Okay then",
+      "class": null
+    },
+    {
+      "text": "See you later",
+      "id": "See you later",
+      "class": null
+    },
+    {
+      "text": "Thing done",
+      "id": "Thing done",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Make coffee",
+      "label": null
+    },
+    {
+      "tail": "Make coffee",
+      "head": "Browse the web?",
+      "label": null
+    },
+    {
+      "tail": "Browse the web?",
+      "head": "Make coffee",
+      "label": "Yes"
+    },
+    {
+      "tail": "Browse the web?",
+      "head": "Okay then",
+      "label": "No"
+    },
+    {
+      "tail": "Okay then",
+      "head": "See you later",
+      "label": null
+    },
+    {
+      "tail": "See you later",
+      "head": "Thing done",
+      "label": null
+    }
+  ],
+  "groups": []
+}

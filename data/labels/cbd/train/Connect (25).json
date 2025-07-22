@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "User",
+      "id": "User",
+      "class": null
+    },
+    {
+      "text": "Login?",
+      "id": "Login?",
+      "class": null
+    },
+    {
+      "text": "Activate Events",
+      "id": "Activate Events",
+      "class": null
+    },
+    {
+      "text": "Check message",
+      "id": "Check message",
+      "class": null
+    },
+    {
+      "text": "Manage Friends",
+      "id": "Manage Friends",
+      "class": null
+    },
+    {
+      "text": "Manage Events",
+      "id": "Manage Events",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "User",
+      "head": "Login?",
+      "label": null
+    },
+    {
+      "tail": "Login?",
+      "head": "Activate Events",
+      "label": "No"
+    },
+    {
+      "tail": "Login?",
+      "head": "Check message",
+      "label": "Yes"
+    },
+    {
+      "tail": "Login?",
+      "head": "Manage Friends",
+      "label": "Yes"
+    },
+    {
+      "tail": "Check message",
+      "head": "Manage Events",
+      "label": null
+    },
+    {
+      "tail": "Activate Events",
+      "head": "Manage Events",
+      "label": null
+    },
+    {
+      "tail": "Manage Events",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

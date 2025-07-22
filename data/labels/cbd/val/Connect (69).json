@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initialize variables",
+      "id": "Initialize variables",
+      "class": null
+    },
+    {
+      "text": "Initialize the k clustering centers",
+      "id": "Initialize the k clustering centers",
+      "class": null
+    },
+    {
+      "text": "Assign each data object to the closet class",
+      "id": "Assign each data object to the closet class",
+      "class": null
+    },
+    {
+      "text": "Recalculate the centers of the clusters",
+      "id": "Recalculate the centers of the clusters",
+      "class": null
+    },
+    {
+      "text": "value greater than threshold?",
+      "id": "value greater than threshold?",
+      "class": null
+    },
+    {
+      "text": "Gather all information",
+      "id": "Gather all information",
+      "class": null
+    },
+    {
+      "text": "Print Results",
+      "id": "Print Results",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initialize variables",
+      "label": null
+    },
+    {
+      "tail": "Initialize variables",
+      "head": "Initialize the k clustering centers",
+      "label": null
+    },
+    {
+      "tail": "Initialize the k clustering centers",
+      "head": "Assign each data object to the closet class",
+      "label": null
+    },
+    {
+      "tail": "Assign each data object to the closet class",
+      "head": "Recalculate the centers of the clusters",
+      "label": null
+    },
+    {
+      "tail": "Recalculate the centers of the clusters",
+      "head": "value greater than threshold?",
+      "label": null
+    },
+    {
+      "tail": "value greater than threshold?",
+      "head": "Assign each data object to the closet class",
+      "label": "No"
+    },
+    {
+      "tail": "value greater than threshold?",
+      "head": "Gather all information",
+      "label": "Yes"
+    },
+    {
+      "tail": "Gather all information",
+      "head": "Print Results",
+      "label": null
+    },
+    {
+      "tail": "Print Results",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

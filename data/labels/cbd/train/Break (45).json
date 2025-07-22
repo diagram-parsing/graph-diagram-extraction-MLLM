@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Add",
+      "id": "Add",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    },
+    {
+      "text": "Subtract",
+      "id": "Subtract",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Add",
+      "label": "Yes"
+    },
+    {
+      "tail": "Add",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Subtract",
+      "label": "No"
+    },
+    {
+      "tail": "Subtract",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

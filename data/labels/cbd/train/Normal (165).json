@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Inputs",
+      "id": "Read Inputs",
+      "class": null
+    },
+    {
+      "text": "Calculate S",
+      "id": "Calculate S",
+      "class": null
+    },
+    {
+      "text": "Calculate area =sqrt(s*(s-a)*(s-b)*(s-c))",
+      "id": "Calculate area =sqrt(s*(s-a)*(s-b)*(s-c))",
+      "class": null
+    },
+    {
+      "text": "Print area",
+      "id": "Print area",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Inputs",
+      "label": null
+    },
+    {
+      "tail": "Read Inputs",
+      "head": "Calculate S",
+      "label": null
+    },
+    {
+      "tail": "Calculate S",
+      "head": "Calculate area =sqrt(s*(s-a)*(s-b)*(s-c))",
+      "label": null
+    },
+    {
+      "tail": "Calculate area =sqrt(s*(s-a)*(s-b)*(s-c))",
+      "head": "Print area",
+      "label": null
+    },
+    {
+      "tail": "Print area",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

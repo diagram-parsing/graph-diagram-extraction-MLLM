@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Power on",
+      "id": "Power on",
+      "class": null
+    },
+    {
+      "text": "Coffee selected",
+      "id": "Coffee selected",
+      "class": null
+    },
+    {
+      "text": "Add frothed milk",
+      "id": "Add frothed milk",
+      "class": null
+    },
+    {
+      "text": "Add sugar",
+      "id": "Add sugar",
+      "class": null
+    },
+    {
+      "text": "Add Chocolate powder",
+      "id": "Add Chocolate powder",
+      "class": null
+    },
+    {
+      "text": "Power pressed",
+      "id": "Power pressed",
+      "class": null
+    },
+    {
+      "text": "Power off",
+      "id": "Power off",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Power on",
+      "label": null
+    },
+    {
+      "tail": "Power on",
+      "head": "Coffee selected",
+      "label": null
+    },
+    {
+      "tail": "Coffee selected",
+      "head": "Add frothed milk",
+      "label": "Latte"
+    },
+    {
+      "tail": "Coffee selected",
+      "head": "Add sugar",
+      "label": "Espresso"
+    },
+    {
+      "tail": "Coffee selected",
+      "head": "Add Chocolate powder",
+      "label": "Mocha"
+    },
+    {
+      "tail": "Add Chocolate powder",
+      "head": "Add frothed milk",
+      "label": null
+    },
+    {
+      "tail": "Add frothed milk",
+      "head": "Add sugar",
+      "label": null
+    },
+    {
+      "tail": "Add sugar",
+      "head": "Power pressed",
+      "label": null
+    },
+    {
+      "tail": "Power pressed",
+      "head": "Power off",
+      "label": null
+    },
+    {
+      "tail": "Power off",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

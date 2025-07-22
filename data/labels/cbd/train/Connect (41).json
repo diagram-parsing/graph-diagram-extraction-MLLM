@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input Data",
+      "id": "Input Data",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Looking for Gain",
+      "id": "Looking for Gain",
+      "class": null
+    },
+    {
+      "text": "Determine the highest Gain",
+      "id": "Determine the highest Gain",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "Finished",
+      "id": "Finished",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input Data",
+      "label": null
+    },
+    {
+      "tail": "Input Data",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Looking for Gain",
+      "label": null
+    },
+    {
+      "tail": "Looking for Gain",
+      "head": "Determine the highest Gain",
+      "label": null
+    },
+    {
+      "tail": "Determine the highest Gain",
+      "head": "Update",
+      "label": null
+    },
+    {
+      "tail": "Update",
+      "head": "Finished",
+      "label": null
+    },
+    {
+      "tail": "Finished",
+      "head": "End",
+      "label": "Yes"
+    },
+    {
+      "tail": "Finished",
+      "head": "Looking for Gain",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,91 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Cashew shell",
+      "id": "Cashew shell",
+      "class": null
+    },
+    {
+      "text": "Sizing",
+      "id": "Sizing",
+      "class": null
+    },
+    {
+      "text": "Expelling",
+      "id": "Expelling",
+      "class": null,
+      "bbox": [
+        454.0,
+        124.5,
+        56.0,
+        19.0
+      ]
+    },
+    {
+      "text": "Cashew shell oil",
+      "id": "Cashew shell oil",
+      "class": null
+    },
+    {
+      "text": "Dirt",
+      "id": "Dirt",
+      "class": null,
+      "bbox": [
+        611.5,
+        193.0,
+        37.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Reactor",
+      "id": "Reactor",
+      "class": null
+    },
+    {
+      "text": "Cashew Shell oil Commercial Grate",
+      "id": "Cashew Shell oil Commercial Grate",
+      "class": null,
+      "bbox": [
+        323.5,
+        277.5,
+        207.0,
+        13.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Sizing",
+      "tail": "Cashew shell",
+      "label": null
+    },
+    {
+      "head": "Expelling",
+      "tail": "Sizing",
+      "label": null
+    },
+    {
+      "head": "Cashew shell oil",
+      "tail": "Expelling",
+      "label": null
+    },
+    {
+      "head": "Dirt",
+      "tail": "Expelling",
+      "label": null
+    },
+    {
+      "head": "Reactor",
+      "tail": "Cashew shell oil",
+      "label": null
+    },
+    {
+      "head": "Cashew Shell oil Commercial Grate",
+      "tail": "Reactor",
+      "label": null
+    }
+  ],
+  "groups": []
+}

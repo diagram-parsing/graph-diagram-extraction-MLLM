@@ -1,0 +1,223 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        278.0,
+        15.5,
+        32.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Initialize Variable",
+      "id": "Initialize Variable",
+      "class": null,
+      "bbox": [
+        284.5,
+        63.0,
+        129.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Enter Variables",
+      "id": "Enter Variables",
+      "class": null,
+      "bbox": [
+        278.0,
+        129.0,
+        114.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Enter variables",
+      "id": "Enter variables",
+      "class": null,
+      "bbox": [
+        278.0,
+        129.0,
+        114.0,
+        14.0
+      ]
+    },
+    {
+      "text": "HoursWorked>MaxNoOvertime?",
+      "id": "HoursWorked>MaxNoOvertime?",
+      "class": null,
+      "bbox": [
+        279.0,
+        212.5,
+        74.0,
+        25.0
+      ]
+    },
+    {
+      "text": "GrossPay=HoursWorked*HourRate",
+      "id": "GrossPay=HoursWorked*HourRate",
+      "class": null,
+      "bbox": [
+        120.0,
+        262.5,
+        164.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Update Grosspay",
+      "id": "Update Grosspay",
+      "class": null,
+      "bbox": [
+        474.0,
+        264.5,
+        134.0,
+        19.0
+      ]
+    },
+    {
+      "text": "GrossPay>MaxNoDue?",
+      "id": "GrossPay>MaxNoDue?",
+      "class": null,
+      "bbox": [
+        279.5,
+        349.0,
+        51.0,
+        22.0
+      ]
+    },
+    {
+      "text": "NetPay=GrossPay",
+      "id": "NetPay=GrossPay",
+      "class": null,
+      "bbox": [
+        120.0,
+        399.0,
+        84.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Update NetPay",
+      "id": "Update NetPay",
+      "class": null,
+      "bbox": [
+        477.5,
+        402.0,
+        117.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Display GrossPay, NetPay",
+      "id": "Display GrossPay, NetPay",
+      "class": null
+    },
+    {
+      "text": "Update Netpay",
+      "id": "Update Netpay",
+      "class": null,
+      "bbox": [
+        477.5,
+        402.0,
+        117.0,
+        20.0
+      ]
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Initialize Variable",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Enter Variables",
+      "tail": "Initialize Variable",
+      "label": null
+    },
+    {
+      "head": "HoursWorked>MaxNoOvertime?",
+      "tail": "Enter variables",
+      "label": null
+    },
+    {
+      "head": "GrossPay=HoursWorked*HourRate",
+      "tail": "HoursWorked>MaxNoOvertime?",
+      "label": "No",
+      "bbox": [
+        155.5,
+        204.5,
+        23.0,
+        15.0
+      ]
+    },
+    {
+      "head": "Update Grosspay",
+      "tail": "HoursWorked>MaxNoOvertime?",
+      "label": "Yes",
+      "bbox": [
+        439.5,
+        205.0,
+        29.0,
+        18.0
+      ]
+    },
+    {
+      "head": "GrossPay>MaxNoDue?",
+      "tail": "GrossPay=HoursWorked*HourRate",
+      "label": null
+    },
+    {
+      "head": "GrossPay>MaxNoDue?",
+      "tail": "Update Grosspay",
+      "label": null
+    },
+    {
+      "head": "NetPay=GrossPay",
+      "tail": "GrossPay>MaxNoDue?",
+      "label": "No",
+      "bbox": [
+        155.5,
+        204.5,
+        23.0,
+        15.0
+      ]
+    },
+    {
+      "head": "Update NetPay",
+      "tail": "GrossPay>MaxNoDue?",
+      "label": "Yes",
+      "bbox": [
+        439.5,
+        205.0,
+        29.0,
+        18.0
+      ]
+    },
+    {
+      "head": "Display GrossPay, NetPay",
+      "tail": "NetPay=GrossPay",
+      "label": null
+    },
+    {
+      "head": "Display GrossPay, NetPay",
+      "tail": "Update Netpay",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Display GrossPay, NetPay",
+      "label": null
+    }
+  ],
+  "groups": []
+}

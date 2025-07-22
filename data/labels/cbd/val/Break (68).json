@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "User navigates to",
+      "id": "User navigates to",
+      "class": null
+    },
+    {
+      "text": "Is User Logged In?",
+      "id": "Is User Logged In?",
+      "class": null
+    },
+    {
+      "text": "Redirect to Login",
+      "id": "Redirect to Login",
+      "class": null
+    },
+    {
+      "text": "User Logs In",
+      "id": "User Logs In",
+      "class": null
+    },
+    {
+      "text": "User Type?",
+      "id": "User Type?",
+      "class": null
+    },
+    {
+      "text": "Back to homepage",
+      "id": "Back to homepage",
+      "class": null
+    },
+    {
+      "text": "Back",
+      "id": "Back",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "User navigates to",
+      "label": null
+    },
+    {
+      "tail": "User navigates to",
+      "head": "Is User Logged In?",
+      "label": null
+    },
+    {
+      "tail": "Is User Logged In?",
+      "head": "Redirect to Login",
+      "label": "No"
+    },
+    {
+      "tail": "Redirect to Login",
+      "head": "User Logs In",
+      "label": null
+    },
+    {
+      "tail": "User Logs In",
+      "head": "User navigates to",
+      "label": null
+    },
+    {
+      "tail": "Is User Logged In?",
+      "head": "User Type?",
+      "label": "Yes"
+    },
+    {
+      "tail": "User Type?",
+      "head": "Back to homepage",
+      "label": "Parent"
+    },
+    {
+      "tail": "User Type?",
+      "head": "Back",
+      "label": "Staff"
+    },
+    {
+      "tail": "User Type?",
+      "head": "End",
+      "label": "Student"
+    }
+  ],
+  "groups": []
+}

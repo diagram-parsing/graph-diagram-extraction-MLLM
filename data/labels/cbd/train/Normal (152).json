@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Patient requests",
+      "id": "Patient requests",
+      "class": null
+    },
+    {
+      "text": "Patient is not eligible",
+      "id": "Patient is not eligible",
+      "class": null
+    },
+    {
+      "text": "Doctor",
+      "id": "Doctor",
+      "class": null
+    },
+    {
+      "text": "Procedure not executed",
+      "id": "Procedure not executed",
+      "class": null
+    },
+    {
+      "text": "Healthcare Brain doctor",
+      "id": "Healthcare Brain doctor",
+      "class": null
+    },
+    {
+      "text": "Healthcare Heart doctor",
+      "id": "Healthcare Heart doctor",
+      "class": null
+    },
+    {
+      "text": "Find replacement",
+      "id": "Find replacement",
+      "class": null
+    },
+    {
+      "text": "Procedure executed",
+      "id": "Procedure executed",
+      "class": null
+    },
+    {
+      "text": "Replacement not found",
+      "id": "Replacement not found",
+      "class": null
+    },
+    {
+      "text": "Replacement found",
+      "id": "Replacement found",
+      "class": null
+    },
+    {
+      "text": "Call another hospital",
+      "id": "Call another hospital",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Patient requests",
+      "head": "Patient is not eligible",
+      "label": null
+    },
+    {
+      "tail": "Patient requests",
+      "head": "Doctor",
+      "label": null
+    },
+    {
+      "tail": "Patient is not eligible",
+      "head": "Procedure not executed",
+      "label": null
+    },
+    {
+      "tail": "Doctor",
+      "head": "Healthcare Brain doctor",
+      "label": null
+    },
+    {
+      "tail": "Doctor",
+      "head": "Healthcare Heart doctor",
+      "label": null
+    },
+    {
+      "tail": "Healthcare Brain doctor",
+      "head": "Find replacement",
+      "label": null
+    },
+    {
+      "tail": "Healthcare Heart doctor",
+      "head": "Procedure executed",
+      "label": null
+    },
+    {
+      "tail": "Find replacement",
+      "head": "Replacement not found",
+      "label": null
+    },
+    {
+      "tail": "Find replacement",
+      "head": "Replacement found",
+      "label": null
+    },
+    {
+      "tail": "Replacement not found",
+      "head": "Call another hospital",
+      "label": null
+    },
+    {
+      "tail": "Replacement found",
+      "head": "Procedure executed",
+      "label": null
+    }
+  ],
+  "groups": []
+}

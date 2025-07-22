@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "website",
+      "id": "website",
+      "class": null
+    },
+    {
+      "text": "Login Page",
+      "id": "Login Page",
+      "class": null
+    },
+    {
+      "text": "Is the login correct?",
+      "id": "Is the login correct?",
+      "class": null
+    },
+    {
+      "text": "Enter",
+      "id": "Enter",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "website",
+      "head": "Login Page",
+      "label": null
+    },
+    {
+      "tail": "Login Page",
+      "head": "Is the login correct?",
+      "label": null
+    },
+    {
+      "tail": "Is the login correct?",
+      "head": "Login Page",
+      "label": "Incorrect Credentials"
+    },
+    {
+      "tail": "Is the login correct?",
+      "head": "Enter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Structural ecodesign of a composite wind turbine blade",
+      "id": "Structural ecodesign of a composite wind turbine blade",
+      "class": null
+    },
+    {
+      "text": "Initial database",
+      "id": "Initial database",
+      "class": null
+    },
+    {
+      "text": "Initial eco-coefficients",
+      "id": "Initial eco-coefficients",
+      "class": null
+    },
+    {
+      "text": "Software tool for structural analysis",
+      "id": "Software tool for structural analysis",
+      "class": null
+    },
+    {
+      "text": "Assessment",
+      "id": "Assessment",
+      "class": null
+    },
+    {
+      "text": "Display result",
+      "id": "Display result",
+      "class": null
+    },
+    {
+      "text": "Update result",
+      "id": "Update result",
+      "class": null
+    },
+    {
+      "text": "New database",
+      "id": "New database",
+      "class": null
+    },
+    {
+      "text": "New eco-coefficients",
+      "id": "New eco-coefficients",
+      "class": null
+    },
+    {
+      "text": "Optimisation",
+      "id": "Optimisation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Structural ecodesign of a composite wind turbine blade",
+      "head": "Initial database",
+      "label": null
+    },
+    {
+      "tail": "Initial database",
+      "head": "Initial eco-coefficients",
+      "label": null
+    },
+    {
+      "tail": "Initial eco-coefficients",
+      "head": "Software tool for structural analysis",
+      "label": null
+    },
+    {
+      "tail": "Software tool for structural analysis",
+      "head": "Assessment",
+      "label": null
+    },
+    {
+      "tail": "Assessment",
+      "head": "Display result",
+      "label": "Good"
+    },
+    {
+      "tail": "Assessment",
+      "head": "Update result",
+      "label": "Bad"
+    },
+    {
+      "tail": "Update result",
+      "head": "New database",
+      "label": null
+    },
+    {
+      "tail": "New database",
+      "head": "New eco-coefficients",
+      "label": null
+    },
+    {
+      "tail": "New eco-coefficients",
+      "head": "Optimisation",
+      "label": null
+    },
+    {
+      "tail": "Optimisation",
+      "head": "Software tool for structural analysis",
+      "label": null
+    }
+  ],
+  "groups": []
+}

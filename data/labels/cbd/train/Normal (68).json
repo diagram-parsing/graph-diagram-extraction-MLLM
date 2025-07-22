@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Start / reset",
+      "id": "Start / reset",
+      "class": null
+    },
+    {
+      "text": "Bootloader button pressed?",
+      "id": "Bootloader button pressed?",
+      "class": null
+    },
+    {
+      "text": "Firmware upgrade mode",
+      "id": "Firmware upgrade mode",
+      "class": null
+    },
+    {
+      "text": "Init variables and constants",
+      "id": "Init variables and constants",
+      "class": null
+    },
+    {
+      "text": "Configure chip",
+      "id": "Configure chip",
+      "class": null
+    },
+    {
+      "text": "Pin config data",
+      "id": "Pin config data",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "New message from host",
+      "id": "New message from host",
+      "class": null
+    },
+    {
+      "text": "Background tasks",
+      "id": "Background tasks",
+      "class": null
+    },
+    {
+      "text": "Process request message",
+      "id": "Process request message",
+      "class": null
+    },
+    {
+      "text": "Send response message to host",
+      "id": "Send response message to host",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start / reset",
+      "head": "Bootloader button pressed?",
+      "label": null
+    },
+    {
+      "tail": "Bootloader button pressed?",
+      "head": "Firmware upgrade mode",
+      "label": "Yes"
+    },
+    {
+      "tail": "Bootloader button pressed?",
+      "head": "Init variables and constants",
+      "label": "No"
+    },
+    {
+      "tail": "Init variables and constants",
+      "head": "Configure chip",
+      "label": null
+    },
+    {
+      "tail": "Pin config data",
+      "head": "Configure chip",
+      "label": null
+    },
+    {
+      "tail": "Configure chip",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "New message from host",
+      "label": null
+    },
+    {
+      "tail": "New message from host",
+      "head": "Background tasks",
+      "label": "No"
+    },
+    {
+      "tail": "New message from host",
+      "head": "Process request message",
+      "label": "Yes"
+    },
+    {
+      "tail": "Process request message",
+      "head": "Send response message to host",
+      "label": null
+    },
+    {
+      "tail": "Send response message to host",
+      "head": "Background tasks",
+      "label": null
+    },
+    {
+      "tail": "Background tasks",
+      "head": "Process",
+      "label": null
+    }
+  ],
+  "groups": []
+}

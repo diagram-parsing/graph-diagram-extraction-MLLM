@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Input",
+      "id": "Input",
+      "class": null
+    },
+    {
+      "text": "PROCESS",
+      "id": "PROCESS",
+      "class": null
+    },
+    {
+      "text": "Display",
+      "id": "Display",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Input",
+      "label": null
+    },
+    {
+      "tail": "Input",
+      "head": "PROCESS",
+      "label": null
+    },
+    {
+      "tail": "PROCESS",
+      "head": "Display",
+      "label": null
+    },
+    {
+      "tail": "Display",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

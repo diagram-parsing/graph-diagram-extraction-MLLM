@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Exercise",
+      "id": "Exercise",
+      "class": null
+    },
+    {
+      "text": "Focus on breathing",
+      "id": "Focus on breathing",
+      "class": null
+    },
+    {
+      "text": "Repeat",
+      "id": "Repeat",
+      "class": null
+    },
+    {
+      "text": "Realize distraction",
+      "id": "Realize distraction",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Exercise",
+      "head": "Focus on breathing",
+      "label": null
+    },
+    {
+      "tail": "Focus on breathing",
+      "head": "Repeat",
+      "label": null
+    },
+    {
+      "tail": "Repeat",
+      "head": "Realize distraction",
+      "label": null
+    },
+    {
+      "tail": "Realize distraction",
+      "head": "Repeat",
+      "label": "NO"
+    },
+    {
+      "tail": "Realize distraction",
+      "head": "Focus on breathing",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

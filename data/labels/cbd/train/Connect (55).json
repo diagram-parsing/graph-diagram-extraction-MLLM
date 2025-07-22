@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "count=1",
+      "id": "count=1",
+      "class": null
+    },
+    {
+      "text": "count<=3",
+      "id": "count<=3",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    },
+    {
+      "text": "INPUT",
+      "id": "INPUT",
+      "class": null
+    },
+    {
+      "text": "p*n*r/100",
+      "id": "p*n*r/100",
+      "class": null
+    },
+    {
+      "text": "PRINT",
+      "id": "PRINT",
+      "class": null
+    },
+    {
+      "text": "count=count+1",
+      "id": "count=count+1",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "count=1",
+      "label": null
+    },
+    {
+      "tail": "count=1",
+      "head": "count<=3",
+      "label": null
+    },
+    {
+      "tail": "count<=3",
+      "head": "STOP",
+      "label": "No"
+    },
+    {
+      "tail": "count<=3",
+      "head": "INPUT",
+      "label": "Yes"
+    },
+    {
+      "tail": "INPUT",
+      "head": "p*n*r/100",
+      "label": null
+    },
+    {
+      "tail": "p*n*r/100",
+      "head": "PRINT",
+      "label": null
+    },
+    {
+      "tail": "PRINT",
+      "head": "count=count+1",
+      "label": null
+    },
+    {
+      "tail": "count=count+1",
+      "head": "count<=3",
+      "label": null
+    }
+  ],
+  "groups": []
+}

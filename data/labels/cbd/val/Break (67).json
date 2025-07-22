@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Monitor",
+      "id": "Monitor",
+      "class": null
+    },
+    {
+      "text": "Does the Monitor turn on?",
+      "id": "Does the Monitor turn on?",
+      "class": null
+    },
+    {
+      "text": "Are there any error messages?",
+      "id": "Are there any error messages?",
+      "class": null
+    },
+    {
+      "text": "Is the Monitor power light on?",
+      "id": "Is the Monitor power light on?",
+      "class": null
+    },
+    {
+      "text": "Perform a search for the error message",
+      "id": "Perform a search for the error message",
+      "class": null
+    },
+    {
+      "text": "Monitor is fine",
+      "id": "Monitor is fine",
+      "class": null
+    },
+    {
+      "text": "Turn the monitor on",
+      "id": "Turn the monitor on",
+      "class": null
+    },
+    {
+      "text": "Check the Monitor power cord",
+      "id": "Check the Monitor power cord",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Monitor",
+      "head": "Does the Monitor turn on?",
+      "label": null
+    },
+    {
+      "tail": "Does the Monitor turn on?",
+      "head": "Are there any error messages?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Does the Monitor turn on?",
+      "head": "Is the Monitor power light on?",
+      "label": "No"
+    },
+    {
+      "tail": "Are there any error messages?",
+      "head": "Perform a search for the error message",
+      "label": "Yes"
+    },
+    {
+      "tail": "Are there any error messages?",
+      "head": "Monitor is fine",
+      "label": "No"
+    },
+    {
+      "tail": "Is the Monitor power light on?",
+      "head": "Turn the monitor on",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the Monitor power light on?",
+      "head": "Check the Monitor power cord",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

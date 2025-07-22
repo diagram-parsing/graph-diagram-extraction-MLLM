@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Simulation of ORC system with nano-fluid",
+      "id": "Simulation of ORC system with nano-fluid",
+      "class": null
+    },
+    {
+      "text": "Note all the records of fluid",
+      "id": "Note all the records of fluid",
+      "class": null
+    },
+    {
+      "text": "Preparation of the nano-fluids",
+      "id": "Preparation of the nano-fluids",
+      "class": null
+    },
+    {
+      "text": "Testing of fluid in Lab",
+      "id": "Testing of fluid in Lab",
+      "class": null
+    },
+    {
+      "text": "Real life ORC in Hybrid OTEC implementation with nano-fluid",
+      "id": "Real life ORC in Hybrid OTEC implementation with nano-fluid",
+      "class": null
+    },
+    {
+      "text": "Submit the progress",
+      "id": "Submit the progress",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Simulation of ORC system with nano-fluid",
+      "head": "Note all the records of fluid",
+      "label": null
+    },
+    {
+      "tail": "Note all the records of fluid",
+      "head": "Preparation of the nano-fluids",
+      "label": null
+    },
+    {
+      "tail": "Preparation of the nano-fluids",
+      "head": "Testing of fluid in Lab",
+      "label": null
+    },
+    {
+      "tail": "Testing of fluid in Lab",
+      "head": "Real life ORC in Hybrid OTEC implementation with nano-fluid",
+      "label": null
+    },
+    {
+      "tail": "Real life ORC in Hybrid OTEC implementation with nano-fluid",
+      "head": "Submit the progress",
+      "label": null
+    }
+  ],
+  "groups": []
+}

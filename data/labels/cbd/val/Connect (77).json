@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Materials production",
+      "id": "Materials production",
+      "class": null
+    },
+    {
+      "text": "Package production",
+      "id": "Package production",
+      "class": null
+    },
+    {
+      "text": "Packing",
+      "id": "Packing",
+      "class": null
+    },
+    {
+      "text": "Shipping",
+      "id": "Shipping",
+      "class": null
+    },
+    {
+      "text": "Use",
+      "id": "Use",
+      "class": null
+    },
+    {
+      "text": "Transport to Next Phase",
+      "id": "Transport to Next Phase",
+      "class": null
+    },
+    {
+      "text": "Disposal",
+      "id": "Disposal",
+      "class": null
+    },
+    {
+      "text": "Reuse",
+      "id": "Reuse",
+      "class": null
+    },
+    {
+      "text": "Composting",
+      "id": "Composting",
+      "class": null
+    },
+    {
+      "text": "Litter",
+      "id": "Litter",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Materials production",
+      "head": "Package production",
+      "label": null
+    },
+    {
+      "tail": "Package production",
+      "head": "Packing",
+      "label": null
+    },
+    {
+      "tail": "Packing",
+      "head": "Shipping",
+      "label": null
+    },
+    {
+      "tail": "Shipping",
+      "head": "Use",
+      "label": null
+    },
+    {
+      "tail": "Use",
+      "head": "Transport to Next Phase",
+      "label": null
+    },
+    {
+      "tail": "Transport to Next Phase",
+      "head": "Disposal",
+      "label": null
+    },
+    {
+      "tail": "Transport to Next Phase",
+      "head": "Reuse",
+      "label": null
+    },
+    {
+      "tail": "Transport to Next Phase",
+      "head": "Composting",
+      "label": null
+    },
+    {
+      "tail": "Transport to Next Phase",
+      "head": "Litter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

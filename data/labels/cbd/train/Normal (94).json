@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Get ready for bath",
+      "id": "Get ready for bath",
+      "class": null
+    },
+    {
+      "text": "Remove clothes",
+      "id": "Remove clothes",
+      "class": null
+    },
+    {
+      "text": "Get into bath",
+      "id": "Get into bath",
+      "class": null
+    },
+    {
+      "text": "Wash",
+      "id": "Wash",
+      "class": null
+    },
+    {
+      "text": "Get out of bath",
+      "id": "Get out of bath",
+      "class": null
+    },
+    {
+      "text": "Switch off the light",
+      "id": "Switch off the light",
+      "class": null
+    },
+    {
+      "text": "Get dressed",
+      "id": "Get dressed",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Get ready for bath",
+      "label": null
+    },
+    {
+      "tail": "Get ready for bath",
+      "head": "Remove clothes",
+      "label": null
+    },
+    {
+      "tail": "Remove clothes",
+      "head": "Get into bath",
+      "label": null
+    },
+    {
+      "tail": "Get into bath",
+      "head": "Wash",
+      "label": null
+    },
+    {
+      "tail": "Wash",
+      "head": "Get out of bath",
+      "label": null
+    },
+    {
+      "tail": "Get out of bath",
+      "head": "Switch off the light",
+      "label": null
+    },
+    {
+      "tail": "Switch off the light",
+      "head": "Get dressed",
+      "label": null
+    }
+  ],
+  "groups": []
+}

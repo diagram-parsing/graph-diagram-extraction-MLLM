@@ -1,0 +1,113 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Receive New Order",
+      "id": "Receive New Order",
+      "class": null
+    },
+    {
+      "text": "Check Size",
+      "id": "Check Size",
+      "class": null,
+      "bbox": [
+        93.5,
+        188.0,
+        111.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Check Stock Levels",
+      "id": "Check Stock Levels",
+      "class": null
+    },
+    {
+      "text": "Print manuals",
+      "id": "Print manuals",
+      "class": null,
+      "bbox": [
+        91.5,
+        455.0,
+        151.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Despatch The Goods",
+      "id": "Despatch The Goods",
+      "class": null
+    },
+    {
+      "text": "Confirm Bill",
+      "id": "Confirm Bill",
+      "class": null,
+      "bbox": [
+        80.5,
+        715.0,
+        125.0,
+        22.0
+      ]
+    },
+    {
+      "text": "Receive Payment",
+      "id": "Receive Payment",
+      "class": null,
+      "bbox": [
+        97.0,
+        850.0,
+        84.0,
+        50.0
+      ]
+    },
+    {
+      "text": "Update Records",
+      "id": "Update Records",
+      "class": null,
+      "bbox": [
+        97.0,
+        982.5,
+        76.0,
+        47.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Check Size",
+      "tail": "Receive New Order",
+      "label": null
+    },
+    {
+      "head": "Check Stock Levels",
+      "tail": "Check Size",
+      "label": null
+    },
+    {
+      "head": "Print manuals",
+      "tail": "Check Stock Levels",
+      "label": null
+    },
+    {
+      "head": "Despatch The Goods",
+      "tail": "Print manuals",
+      "label": null
+    },
+    {
+      "head": "Confirm Bill",
+      "tail": "Despatch The Goods",
+      "label": null
+    },
+    {
+      "head": "Receive Payment",
+      "tail": "Confirm Bill",
+      "label": null
+    },
+    {
+      "head": "Update Records",
+      "tail": "Receive Payment",
+      "label": null
+    }
+  ],
+  "groups": []
+}

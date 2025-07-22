@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Identify Problem",
+      "id": "Identify Problem",
+      "class": null
+    },
+    {
+      "text": "work on it",
+      "id": "work on it",
+      "class": null
+    },
+    {
+      "text": "Note them down in a diagram or table.",
+      "id": "Note them down in a diagram or table.",
+      "class": null
+    },
+    {
+      "text": "Ask for assistant",
+      "id": "Ask for assistant",
+      "class": null
+    },
+    {
+      "text": "Need more help?",
+      "id": "Need more help?",
+      "class": null
+    },
+    {
+      "text": "Find solutions to the root causes identified.",
+      "id": "Find solutions to the root causes identified.",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Identify Problem",
+      "label": null
+    },
+    {
+      "tail": "Identify Problem",
+      "head": "work on it",
+      "label": null
+    },
+    {
+      "tail": "work on it",
+      "head": "Note them down in a diagram or table.",
+      "label": null
+    },
+    {
+      "tail": "Note them down in a diagram or table.",
+      "head": "Ask for assistant",
+      "label": null
+    },
+    {
+      "tail": "Ask for assistant",
+      "head": "Need more help?",
+      "label": null
+    },
+    {
+      "tail": "Need more help?",
+      "head": "Ask for assistant",
+      "label": "No"
+    },
+    {
+      "tail": "Need more help?",
+      "head": "Find solutions to the root causes identified.",
+      "label": "Yes"
+    },
+    {
+      "tail": "Find solutions to the root causes identified.",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

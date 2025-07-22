@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Control group",
+      "id": "Control group",
+      "class": null
+    },
+    {
+      "text": "Collect BALF",
+      "id": "Collect BALF",
+      "class": null
+    },
+    {
+      "text": "Exposure group",
+      "id": "Exposure group",
+      "class": null
+    },
+    {
+      "text": "Protein extractions",
+      "id": "Protein extractions",
+      "class": null
+    },
+    {
+      "text": "Documentation",
+      "id": "Documentation",
+      "class": null
+    },
+    {
+      "text": "Excision of relevant spots & in-gel digestion",
+      "id": "Excision of relevant spots & in-gel digestion",
+      "class": null
+    },
+    {
+      "text": "Chipset",
+      "id": "Chipset",
+      "class": null
+    },
+    {
+      "text": "Data analysis and bioinformatics",
+      "id": "Data analysis and bioinformatics",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Control group",
+      "head": "Collect BALF",
+      "label": null
+    },
+    {
+      "tail": "Exposure group",
+      "head": "Collect BALF",
+      "label": null
+    },
+    {
+      "tail": "Collect BALF",
+      "head": "Protein extractions",
+      "label": null
+    },
+    {
+      "tail": "Protein extractions",
+      "head": "Documentation",
+      "label": null
+    },
+    {
+      "tail": "Documentation",
+      "head": "Excision of relevant spots & in-gel digestion",
+      "label": null
+    },
+    {
+      "tail": "Excision of relevant spots & in-gel digestion",
+      "head": "Chipset",
+      "label": null
+    },
+    {
+      "tail": "Chipset",
+      "head": "Data analysis and bioinformatics",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,136 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "CONSTRUCTION IDEA AND APPROVAL",
+      "id": "CONSTRUCTION IDEA AND APPROVAL",
+      "class": null,
+      "bbox": [
+        295.0,
+        83.5,
+        140.0,
+        31.0
+      ]
+    },
+    {
+      "text": "Initialization",
+      "id": "Initialization",
+      "class": null,
+      "bbox": [
+        305.0,
+        176.0,
+        134.0,
+        24.0
+      ]
+    },
+    {
+      "text": "SURVEY AND LINING OF LAND",
+      "id": "SURVEY AND LINING OF LAND",
+      "class": null
+    },
+    {
+      "text": "FOUNDATION EXCAVATION",
+      "id": "FOUNDATION EXCAVATION",
+      "class": null,
+      "bbox": [
+        295.5,
+        366.0,
+        183.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Evaluate",
+      "id": "Evaluate",
+      "class": null,
+      "bbox": [
+        294.0,
+        459.0,
+        92.0,
+        18.0
+      ]
+    },
+    {
+      "text": "WALL MASONRY",
+      "id": "WALL MASONRY",
+      "class": null,
+      "bbox": [
+        295.5,
+        553.5,
+        107.0,
+        13.0
+      ]
+    },
+    {
+      "text": "joining",
+      "id": "joining",
+      "class": null,
+      "bbox": [
+        292.5,
+        646.5,
+        77.0,
+        27.0
+      ]
+    },
+    {
+      "text": "Joining",
+      "id": "Joining",
+      "class": null,
+      "bbox": [
+        292.5,
+        646.5,
+        77.0,
+        27.0
+      ]
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        292.0,
+        740.0,
+        46.0,
+        26.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Initialization",
+      "tail": "CONSTRUCTION IDEA AND APPROVAL",
+      "label": null
+    },
+    {
+      "head": "SURVEY AND LINING OF LAND",
+      "tail": "Initialization",
+      "label": null
+    },
+    {
+      "head": "FOUNDATION EXCAVATION",
+      "tail": "SURVEY AND LINING OF LAND",
+      "label": null
+    },
+    {
+      "head": "Evaluate",
+      "tail": "FOUNDATION EXCAVATION",
+      "label": null
+    },
+    {
+      "head": "WALL MASONRY",
+      "tail": "Evaluate",
+      "label": null
+    },
+    {
+      "head": "joining",
+      "tail": "WALL MASONRY",
+      "label": null
+    },
+    {
+      "head": "End",
+      "tail": "Joining",
+      "label": null
+    }
+  ],
+  "groups": []
+}

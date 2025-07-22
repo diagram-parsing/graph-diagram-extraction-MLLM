@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "Arrival",
+      "id": "Arrival",
+      "class": null
+    },
+    {
+      "text": "Update",
+      "id": "Update",
+      "class": null
+    },
+    {
+      "text": "Incoming",
+      "id": "Incoming",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Arrival",
+      "head": "Update",
+      "label": "Periodically release"
+    },
+    {
+      "tail": "Incoming",
+      "head": "Update",
+      "label": "Can be batched to form"
+    }
+  ],
+  "groups": []
+}

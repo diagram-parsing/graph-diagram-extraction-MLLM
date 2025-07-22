@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Logo",
+      "id": "Logo",
+      "class": null
+    },
+    {
+      "text": "Hardcopy",
+      "id": "Hardcopy",
+      "class": null
+    },
+    {
+      "text": "Softcopy",
+      "id": "Softcopy",
+      "class": null
+    },
+    {
+      "text": "Quality",
+      "id": "Quality",
+      "class": null
+    },
+    {
+      "text": "paper material",
+      "id": "paper material",
+      "class": null
+    },
+    {
+      "text": "Copyright",
+      "id": "Copyright",
+      "class": null
+    },
+    {
+      "text": "Privacy",
+      "id": "Privacy",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Logo",
+      "head": "Hardcopy",
+      "label": null
+    },
+    {
+      "tail": "Logo",
+      "head": "Softcopy",
+      "label": null
+    },
+    {
+      "tail": "Hardcopy",
+      "head": "Quality",
+      "label": null
+    },
+    {
+      "tail": "Hardcopy",
+      "head": "paper material",
+      "label": null
+    },
+    {
+      "tail": "Softcopy",
+      "head": "Copyright",
+      "label": null
+    },
+    {
+      "tail": "Softcopy",
+      "head": "Privacy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

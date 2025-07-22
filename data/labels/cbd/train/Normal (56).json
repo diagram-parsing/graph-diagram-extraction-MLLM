@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "text": "Temperature",
+      "id": "Temperature",
+      "class": null
+    },
+    {
+      "text": "Arduino",
+      "id": "Arduino",
+      "class": null
+    },
+    {
+      "text": "LCD",
+      "id": "LCD",
+      "class": null
+    },
+    {
+      "text": "Home Automation",
+      "id": "Home Automation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Temperature",
+      "head": "Arduino",
+      "label": null
+    },
+    {
+      "tail": "Arduino",
+      "head": "LCD",
+      "label": null
+    },
+    {
+      "tail": "Arduino",
+      "head": "Home Automation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

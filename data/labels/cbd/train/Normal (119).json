@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Input variables",
+      "id": "Input variables",
+      "class": null
+    },
+    {
+      "text": "C=(F-32)*519",
+      "id": "C=(F-32)*519",
+      "class": null
+    },
+    {
+      "text": "Dispaly all variables",
+      "id": "Dispaly all variables",
+      "class": null
+    },
+    {
+      "text": "Display all variables",
+      "id": "Display all variables",
+      "class": null
+    },
+    {
+      "text": "STOP",
+      "id": "STOP",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Input variables",
+      "label": null
+    },
+    {
+      "tail": "Input variables",
+      "head": "C=(F-32)*519",
+      "label": null
+    },
+    {
+      "tail": "C=(F-32)*519",
+      "head": "Dispaly all variables",
+      "label": null
+    },
+    {
+      "tail": "Display all variables",
+      "head": "STOP",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Review Invoice for Compliance",
+      "id": "Review Invoice for Compliance",
+      "class": null
+    },
+    {
+      "text": "Invoice Meets Requirements?",
+      "id": "Invoice Meets Requirements?",
+      "class": null
+    },
+    {
+      "text": "Back",
+      "id": "Back",
+      "class": null
+    },
+    {
+      "text": "Dept Included Required Information & Approvals?",
+      "id": "Dept Included Required Information & Approvals?",
+      "class": null
+    },
+    {
+      "text": "Contact again",
+      "id": "Contact again",
+      "class": null
+    },
+    {
+      "text": "Wait",
+      "id": "Wait",
+      "class": null
+    },
+    {
+      "text": "Payment Processed",
+      "id": "Payment Processed",
+      "class": null
+    },
+    {
+      "text": "Action Taken, Issue Resolved?",
+      "id": "Action Taken, Issue Resolved?",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Review Invoice for Compliance",
+      "label": null
+    },
+    {
+      "tail": "Review Invoice for Compliance",
+      "head": "Invoice Meets Requirements?",
+      "label": null
+    },
+    {
+      "tail": "Invoice Meets Requirements?",
+      "head": "Back",
+      "label": "No"
+    },
+    {
+      "tail": "Invoice Meets Requirements?",
+      "head": "Dept Included Required Information & Approvals?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Dept Included Required Information & Approvals?",
+      "head": "Contact again",
+      "label": "No"
+    },
+    {
+      "tail": "Dept Included Required Information & Approvals?",
+      "head": "Wait",
+      "label": "Yes"
+    },
+    {
+      "tail": "Wait",
+      "head": "Payment Processed",
+      "label": null
+    },
+    {
+      "tail": "Action Taken, Issue Resolved?",
+      "head": "Contact again",
+      "label": "No"
+    },
+    {
+      "tail": "Action Taken, Issue Resolved?",
+      "head": "Dept Included Required Information & Approvals?",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

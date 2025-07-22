@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "Decision",
+      "id": "Decision",
+      "class": null
+    },
+    {
+      "text": "Operation",
+      "id": "Operation",
+      "class": null
+    },
+    {
+      "text": "Action",
+      "id": "Action",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Decision",
+      "label": null
+    },
+    {
+      "tail": "Decision",
+      "head": "Operation",
+      "label": "Yes"
+    },
+    {
+      "tail": "Decision",
+      "head": "Action",
+      "label": "No"
+    },
+    {
+      "tail": "Operation",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Action",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

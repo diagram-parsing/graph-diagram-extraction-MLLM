@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Take order",
+      "id": "Take order",
+      "class": null
+    },
+    {
+      "text": "Distribution Centre",
+      "id": "Distribution Centre",
+      "class": null
+    },
+    {
+      "text": "Available",
+      "id": "Available",
+      "class": null
+    },
+    {
+      "text": "Print Invoice",
+      "id": "Print Invoice",
+      "class": null
+    },
+    {
+      "text": "Check again",
+      "id": "Check again",
+      "class": null
+    },
+    {
+      "text": "Inform Customer",
+      "id": "Inform Customer",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Take order",
+      "head": "Distribution Centre",
+      "label": null
+    },
+    {
+      "tail": "Distribution Centre",
+      "head": "Available",
+      "label": null
+    },
+    {
+      "tail": "Available",
+      "head": "Print Invoice",
+      "label": "Yes"
+    },
+    {
+      "tail": "Available",
+      "head": "Check again",
+      "label": "No"
+    },
+    {
+      "tail": "Check again",
+      "head": "Inform Customer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

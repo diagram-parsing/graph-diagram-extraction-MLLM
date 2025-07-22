@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "text": "Online search and retrieving of articles",
+      "id": "Online search and retrieving of articles",
+      "class": null
+    },
+    {
+      "text": "117 articles",
+      "id": "117 articles",
+      "class": null
+    },
+    {
+      "text": "Evaluation of articles",
+      "id": "Evaluation of articles",
+      "class": null
+    },
+    {
+      "text": "articles with no full text",
+      "id": "articles with no full text",
+      "class": null
+    },
+    {
+      "text": "Chinese language",
+      "id": "Chinese language",
+      "class": null
+    },
+    {
+      "text": "articles met the inclusion",
+      "id": "articles met the inclusion",
+      "class": null
+    },
+    {
+      "text": "Sort them by numbers",
+      "id": "Sort them by numbers",
+      "class": null
+    },
+    {
+      "text": "Summaries of papers",
+      "id": "Summaries of papers",
+      "class": null
+    },
+    {
+      "text": "Development",
+      "id": "Development",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Online search and retrieving of articles",
+      "head": "117 articles",
+      "label": null
+    },
+    {
+      "tail": "117 articles",
+      "head": "Evaluation of articles",
+      "label": null
+    },
+    {
+      "tail": "Evaluation of articles",
+      "head": "articles with no full text",
+      "label": null
+    },
+    {
+      "tail": "Evaluation of articles",
+      "head": "Chinese language",
+      "label": null
+    },
+    {
+      "tail": "Evaluation of articles",
+      "head": "articles met the inclusion",
+      "label": null
+    },
+    {
+      "tail": "articles met the inclusion",
+      "head": "Sort them by numbers",
+      "label": null
+    },
+    {
+      "tail": "Sort them by numbers",
+      "head": "Summaries of papers",
+      "label": null
+    },
+    {
+      "tail": "Summaries of papers",
+      "head": "Development",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Set of input Images",
+      "id": "Set of input Images",
+      "class": null
+    },
+    {
+      "text": "conversion",
+      "id": "conversion",
+      "class": null
+    },
+    {
+      "text": "DWT",
+      "id": "DWT",
+      "class": null
+    },
+    {
+      "text": "Feature extraction",
+      "id": "Feature extraction",
+      "class": null
+    },
+    {
+      "text": "Feature matching algorithm",
+      "id": "Feature matching algorithm",
+      "class": null
+    },
+    {
+      "text": "images",
+      "id": "images",
+      "class": null
+    },
+    {
+      "text": "results",
+      "id": "results",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Set of input Images",
+      "head": "conversion",
+      "label": null
+    },
+    {
+      "tail": "conversion",
+      "head": "DWT",
+      "label": null
+    },
+    {
+      "tail": "DWT",
+      "head": "Feature extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature extraction",
+      "head": "Feature matching algorithm",
+      "label": null
+    },
+    {
+      "tail": "images",
+      "head": "Feature extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature extraction",
+      "head": "Feature matching algorithm",
+      "label": null
+    },
+    {
+      "tail": "Feature matching algorithm",
+      "head": "results",
+      "label": null
+    }
+  ],
+  "groups": []
+}

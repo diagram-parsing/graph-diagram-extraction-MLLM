@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Candidate",
+      "id": "Candidate",
+      "class": null
+    },
+    {
+      "text": "Are two candidate left?",
+      "id": "Are two candidate left?",
+      "class": null
+    },
+    {
+      "text": "Eliminate last place candidate",
+      "id": "Eliminate last place candidate",
+      "class": null
+    },
+    {
+      "text": "Recount all ballots",
+      "id": "Recount all ballots",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Candidate",
+      "head": "Are two candidate left?",
+      "label": null
+    },
+    {
+      "tail": "Are two candidate left?",
+      "head": "Eliminate last place candidate",
+      "label": "no"
+    },
+    {
+      "tail": "Eliminate last place candidate",
+      "head": "Recount all ballots",
+      "label": null
+    },
+    {
+      "tail": "Recount all ballots",
+      "head": "Are two candidate left?",
+      "label": null
+    },
+    {
+      "tail": "Are two candidate left?",
+      "head": "Finish",
+      "label": "yes"
+    }
+  ],
+  "groups": []
+}

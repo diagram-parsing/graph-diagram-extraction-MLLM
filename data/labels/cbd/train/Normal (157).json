@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Identify the Change",
+      "id": "Identify the Change",
+      "class": null
+    },
+    {
+      "text": "Engineering Change request Approval",
+      "id": "Engineering Change request Approval",
+      "class": null
+    },
+    {
+      "text": "Approval",
+      "id": "Approval",
+      "class": null
+    },
+    {
+      "text": "Engineering Change Order Approval",
+      "id": "Engineering Change Order Approval",
+      "class": null
+    },
+    {
+      "text": "Change Implementation",
+      "id": "Change Implementation",
+      "class": null
+    },
+    {
+      "text": "Engineering Change Release Note",
+      "id": "Engineering Change Release Note",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Identify the Change",
+      "head": "Engineering Change request Approval",
+      "label": null
+    },
+    {
+      "tail": "Engineering Change request Approval",
+      "head": "Approval",
+      "label": null
+    },
+    {
+      "tail": "Approval",
+      "head": "Engineering Change request Approval",
+      "label": "Rejected"
+    },
+    {
+      "tail": "Approval",
+      "head": "Engineering Change Order Approval",
+      "label": "Approved"
+    },
+    {
+      "tail": "Engineering Change Order Approval",
+      "head": "Change Implementation",
+      "label": null
+    },
+    {
+      "tail": "Change Implementation",
+      "head": "Engineering Change Release Note",
+      "label": null
+    }
+  ],
+  "groups": []
+}

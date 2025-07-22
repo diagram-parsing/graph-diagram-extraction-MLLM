@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Initial Step",
+      "id": "Initial Step",
+      "class": null
+    },
+    {
+      "text": "Small loan",
+      "id": "Small loan",
+      "class": null
+    },
+    {
+      "text": "Loan not possible",
+      "id": "Loan not possible",
+      "class": null
+    },
+    {
+      "text": "Submit Loan Application",
+      "id": "Submit Loan Application",
+      "class": null
+    },
+    {
+      "text": "Review",
+      "id": "Review",
+      "class": null
+    },
+    {
+      "text": "Decline Application",
+      "id": "Decline Application",
+      "class": null
+    },
+    {
+      "text": "Pend Application and Request additional Info",
+      "id": "Pend Application and Request additional Info",
+      "class": null
+    },
+    {
+      "text": "Application Confirmation",
+      "id": "Application Confirmation",
+      "class": null
+    },
+    {
+      "text": "Approve",
+      "id": "Approve",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Initial Step",
+      "label": null
+    },
+    {
+      "tail": "Initial Step",
+      "head": "Small loan",
+      "label": null
+    },
+    {
+      "tail": "Small loan",
+      "head": "Loan not possible",
+      "label": "No"
+    },
+    {
+      "tail": "Small loan",
+      "head": "Submit Loan Application",
+      "label": "Yes"
+    },
+    {
+      "tail": "Submit Loan Application",
+      "head": "Review",
+      "label": null
+    },
+    {
+      "tail": "Review",
+      "head": "Decline Application",
+      "label": "No"
+    },
+    {
+      "tail": "Review",
+      "head": "Pend Application and Request additional Info",
+      "label": "No"
+    },
+    {
+      "tail": "Review",
+      "head": "Application Confirmation",
+      "label": "Yes"
+    },
+    {
+      "tail": "Application Confirmation",
+      "head": "Approve",
+      "label": null
+    },
+    {
+      "tail": "Pend Application and Request additional Info",
+      "head": "Review",
+      "label": null
+    },
+    {
+      "tail": "Review",
+      "head": "Decline Application",
+      "label": "No"
+    },
+    {
+      "tail": "Review",
+      "head": "Application Confirmation",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

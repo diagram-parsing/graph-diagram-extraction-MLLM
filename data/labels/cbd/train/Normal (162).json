@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "literature reference",
+      "id": "literature reference",
+      "class": null
+    },
+    {
+      "text": "Identify relevant sources",
+      "id": "Identify relevant sources",
+      "class": null
+    },
+    {
+      "text": "Collect specific data",
+      "id": "Collect specific data",
+      "class": null
+    },
+    {
+      "text": "Available data determination Is there missing data?",
+      "id": "Available data determination Is there missing data?",
+      "class": null
+    },
+    {
+      "text": "Smart toolkit",
+      "id": "Smart toolkit",
+      "class": null
+    },
+    {
+      "text": "Emission factor",
+      "id": "Emission factor",
+      "class": null
+    },
+    {
+      "text": "specific emission inventory",
+      "id": "specific emission inventory",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "literature reference",
+      "head": "Identify relevant sources",
+      "label": null
+    },
+    {
+      "tail": "Identify relevant sources",
+      "head": "Collect specific data",
+      "label": null
+    },
+    {
+      "tail": "Collect specific data",
+      "head": "Available data determination Is there missing data?",
+      "label": null
+    },
+    {
+      "tail": "Available data determination Is there missing data?",
+      "head": "Smart toolkit",
+      "label": "Yes"
+    },
+    {
+      "tail": "Smart toolkit",
+      "head": "Emission factor",
+      "label": null
+    },
+    {
+      "tail": "Available data determination Is there missing data?",
+      "head": "Emission factor",
+      "label": "No"
+    },
+    {
+      "tail": "Emission factor",
+      "head": "specific emission inventory",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Assessment",
+      "id": "Assessment",
+      "class": null
+    },
+    {
+      "text": "Team work",
+      "id": "Team work",
+      "class": null
+    },
+    {
+      "text": "Work",
+      "id": "Work",
+      "class": null
+    },
+    {
+      "text": "Gather",
+      "id": "Gather",
+      "class": null
+    },
+    {
+      "text": "Complete",
+      "id": "Complete",
+      "class": null
+    },
+    {
+      "text": "Closure",
+      "id": "Closure",
+      "class": null
+    },
+    {
+      "text": "Primary closure",
+      "id": "Primary closure",
+      "class": null
+    },
+    {
+      "text": "Bandaging",
+      "id": "Bandaging",
+      "class": null
+    },
+    {
+      "text": "Delayed primary closure",
+      "id": "Delayed primary closure",
+      "class": null
+    },
+    {
+      "text": "Secondary closure",
+      "id": "Secondary closure",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Assessment",
+      "head": "Team work",
+      "label": null
+    },
+    {
+      "tail": "Team work",
+      "head": "Work",
+      "label": null
+    },
+    {
+      "tail": "Work",
+      "head": "Gather",
+      "label": null
+    },
+    {
+      "tail": "Gather",
+      "head": "Complete",
+      "label": null
+    },
+    {
+      "tail": "Complete",
+      "head": "Closure",
+      "label": null
+    },
+    {
+      "tail": "Closure",
+      "head": "Primary closure",
+      "label": null
+    },
+    {
+      "tail": "Closure",
+      "head": "Bandaging",
+      "label": null
+    },
+    {
+      "tail": "Bandaging",
+      "head": "Delayed primary closure",
+      "label": null
+    },
+    {
+      "tail": "Bandaging",
+      "head": "Secondary closure",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Raw Image",
+      "id": "Raw Image",
+      "class": null
+    },
+    {
+      "text": "De-noising",
+      "id": "De-noising",
+      "class": null
+    },
+    {
+      "text": "Image Thresholding",
+      "id": "Image Thresholding",
+      "class": null
+    },
+    {
+      "text": "Isolated pixels removal",
+      "id": "Isolated pixels removal",
+      "class": null
+    },
+    {
+      "text": "Inverse Image",
+      "id": "Inverse Image",
+      "class": null
+    },
+    {
+      "text": "Mean Average",
+      "id": "Mean Average",
+      "class": null
+    },
+    {
+      "text": "Operator",
+      "id": "Operator",
+      "class": null
+    },
+    {
+      "text": "Interpolation Image",
+      "id": "Interpolation Image",
+      "class": null
+    },
+    {
+      "text": "Correlation Image",
+      "id": "Correlation Image",
+      "class": null
+    },
+    {
+      "text": "Sampling",
+      "id": "Sampling",
+      "class": null
+    },
+    {
+      "text": "Edge Detection",
+      "id": "Edge Detection",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Raw Image",
+      "head": "De-noising",
+      "label": null
+    },
+    {
+      "tail": "De-noising",
+      "head": "Image Thresholding",
+      "label": null
+    },
+    {
+      "tail": "Image Thresholding",
+      "head": "Isolated pixels removal",
+      "label": null
+    },
+    {
+      "tail": "Isolated pixels removal",
+      "head": "Inverse Image",
+      "label": null
+    },
+    {
+      "tail": "Inverse Image",
+      "head": "Mean Average",
+      "label": null
+    },
+    {
+      "tail": "Mean Average",
+      "head": "Operator",
+      "label": null
+    },
+    {
+      "tail": "Operator",
+      "head": "Interpolation Image",
+      "label": null
+    },
+    {
+      "tail": "Operator",
+      "head": "Correlation Image",
+      "label": null
+    },
+    {
+      "tail": "Operator",
+      "head": "Sampling",
+      "label": null
+    },
+    {
+      "tail": "Correlation Image",
+      "head": "Edge Detection",
+      "label": null
+    }
+  ],
+  "groups": []
+}

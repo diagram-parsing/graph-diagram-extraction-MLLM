@@ -1,0 +1,82 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        88.0,
+        40.0,
+        44.0,
+        18.0
+      ]
+    },
+    {
+      "text": "Process step 1",
+      "id": "Process step 1",
+      "class": null,
+      "bbox": [
+        84.5,
+        107.5,
+        83.0,
+        13.0
+      ]
+    },
+    {
+      "text": "Decision?",
+      "id": "Decision?",
+      "class": null,
+      "bbox": [
+        86.5,
+        209.5,
+        53.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Process step 2",
+      "id": "Process step 2",
+      "class": null
+    },
+    {
+      "text": "A",
+      "id": "A",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "head": "Process step 1",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Decision?",
+      "tail": "Process step 1",
+      "label": null
+    },
+    {
+      "head": "Process step 1",
+      "tail": "Decision?",
+      "label": "Choice 2",
+      "bbox": [
+        180.0,
+        233.0,
+        50.0,
+        14.0
+      ]
+    },
+    {
+      "head": "Process step 2",
+      "tail": "Decision?",
+      "label": "Choice 1"
+    },
+    {
+      "head": "A",
+      "tail": "Process step 2",
+      "label": null
+    }
+  ],
+  "groups": []
+}

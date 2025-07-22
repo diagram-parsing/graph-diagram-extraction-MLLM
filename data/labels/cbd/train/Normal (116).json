@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Take Inputs",
+      "id": "Take Inputs",
+      "class": null
+    },
+    {
+      "text": "Perimeter=2*(length+width)",
+      "id": "Perimeter=2*(length+width)",
+      "class": null
+    },
+    {
+      "text": "Print the perimeter",
+      "id": "Print the perimeter",
+      "class": null
+    },
+    {
+      "text": "END",
+      "id": "END",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Take Inputs",
+      "label": null
+    },
+    {
+      "tail": "Take Inputs",
+      "head": "Perimeter=2*(length+width)",
+      "label": null
+    },
+    {
+      "tail": "Perimeter=2*(length+width)",
+      "head": "Print the perimeter",
+      "label": null
+    },
+    {
+      "tail": "Print the perimeter",
+      "head": "END",
+      "label": null
+    }
+  ],
+  "groups": []
+}

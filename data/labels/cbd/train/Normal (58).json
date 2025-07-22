@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initialize",
+      "id": "Initialize",
+      "class": null
+    },
+    {
+      "text": "Average=(num1+num2)/2",
+      "id": "Average=(num1+num2)/2",
+      "class": null
+    },
+    {
+      "text": "Print Average",
+      "id": "Print Average",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialize",
+      "label": null
+    },
+    {
+      "tail": "Initialize",
+      "head": "Average=(num1+num2)/2",
+      "label": null
+    },
+    {
+      "tail": "Average=(num1+num2)/2",
+      "head": "Print Average",
+      "label": null
+    },
+    {
+      "tail": "Print Average",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

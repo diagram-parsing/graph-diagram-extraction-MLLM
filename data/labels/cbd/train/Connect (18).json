@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "text": "Recruitment Requistion",
+      "id": "Recruitment Requistion",
+      "class": null
+    },
+    {
+      "text": "Talk with HR",
+      "id": "Talk with HR",
+      "class": null
+    },
+    {
+      "text": "Advertise for the Job",
+      "id": "Advertise for the Job",
+      "class": null
+    },
+    {
+      "text": "Recieve application for the Job",
+      "id": "Recieve application for the Job",
+      "class": null
+    },
+    {
+      "text": "Categorise applications",
+      "id": "Categorise applications",
+      "class": null
+    },
+    {
+      "text": "Good candidate",
+      "id": "Good candidate",
+      "class": null
+    },
+    {
+      "text": "Assess against criteria",
+      "id": "Assess against criteria",
+      "class": null
+    },
+    {
+      "text": "Unsuitable for the Job",
+      "id": "Unsuitable for the Job",
+      "class": null
+    },
+    {
+      "text": "Send Thank you letter email",
+      "id": "Send Thank you letter email",
+      "class": null
+    },
+    {
+      "text": "Interview candidates",
+      "id": "Interview candidates",
+      "class": null
+    },
+    {
+      "text": "Next round",
+      "id": "Next round",
+      "class": null
+    },
+    {
+      "text": "2nd Interview",
+      "id": "2nd Interview",
+      "class": null
+    },
+    {
+      "text": "Job offer",
+      "id": "Job offer",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Recruitment Requistion",
+      "head": "Talk with HR",
+      "label": null
+    },
+    {
+      "tail": "Talk with HR",
+      "head": "Advertise for the Job",
+      "label": null
+    },
+    {
+      "tail": "Advertise for the Job",
+      "head": "Recieve application for the Job",
+      "label": null
+    },
+    {
+      "tail": "Recieve application for the Job",
+      "head": "Categorise applications",
+      "label": null
+    },
+    {
+      "tail": "Categorise applications",
+      "head": "Good candidate",
+      "label": null
+    },
+    {
+      "tail": "Good candidate",
+      "head": "Assess against criteria",
+      "label": null
+    },
+    {
+      "tail": "Categorise applications",
+      "head": "Unsuitable for the Job",
+      "label": null
+    },
+    {
+      "tail": "Unsuitable for the Job",
+      "head": "Send Thank you letter email",
+      "label": null
+    },
+    {
+      "tail": "Assess against criteria",
+      "head": "Interview candidates",
+      "label": "Yes"
+    },
+    {
+      "tail": "Assess against criteria",
+      "head": "Send Thank you letter email",
+      "label": "No"
+    },
+    {
+      "tail": "Interview candidates",
+      "head": "Next round",
+      "label": null
+    },
+    {
+      "tail": "Next round",
+      "head": "Send Thank you letter email",
+      "label": "No"
+    },
+    {
+      "tail": "Next round",
+      "head": "2nd Interview",
+      "label": "Yes"
+    },
+    {
+      "tail": "2nd Interview",
+      "head": "Assess against criteria",
+      "label": null
+    },
+    {
+      "tail": "Assess against criteria",
+      "head": "Send Thank you letter email",
+      "label": "No"
+    },
+    {
+      "tail": "Assess against criteria",
+      "head": "Job offer",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

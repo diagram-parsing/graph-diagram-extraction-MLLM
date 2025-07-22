@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "text": "Peeled Peanuts",
+      "id": "Peeled Peanuts",
+      "class": null
+    },
+    {
+      "text": "Sorting",
+      "id": "Sorting",
+      "class": null
+    },
+    {
+      "text": "Baking (150C,15 minutes)",
+      "id": "Baking (150C,15 minutes)",
+      "class": null
+    },
+    {
+      "text": "Add Ingridents",
+      "id": "Add Ingridents",
+      "class": null
+    },
+    {
+      "text": "Milling/Grinding",
+      "id": "Milling/Grinding",
+      "class": null
+    },
+    {
+      "text": "Peanuts flour",
+      "id": "Peanuts flour",
+      "class": null
+    },
+    {
+      "text": "Wait for the result",
+      "id": "Wait for the result",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Peeled Peanuts",
+      "head": "Sorting",
+      "label": null
+    },
+    {
+      "tail": "Sorting",
+      "head": "Baking (150C,15 minutes)",
+      "label": null
+    },
+    {
+      "tail": "Baking (150C,15 minutes)",
+      "head": "Add Ingridents",
+      "label": null
+    },
+    {
+      "tail": "Add Ingridents",
+      "head": "Milling/Grinding",
+      "label": null
+    },
+    {
+      "tail": "Milling/Grinding",
+      "head": "Peanuts flour",
+      "label": null
+    },
+    {
+      "tail": "Peanuts flour",
+      "head": "Wait for the result",
+      "label": null
+    }
+  ],
+  "groups": []
+}

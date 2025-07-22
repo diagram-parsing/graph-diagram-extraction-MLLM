@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Login Page",
+      "id": "Login Page",
+      "class": null
+    },
+    {
+      "text": "Check",
+      "id": "Check",
+      "class": null
+    },
+    {
+      "text": "Reconfirm",
+      "id": "Reconfirm",
+      "class": null
+    },
+    {
+      "text": "NewsFeed",
+      "id": "NewsFeed",
+      "class": null
+    },
+    {
+      "text": "Like",
+      "id": "Like",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Login Page",
+      "label": null
+    },
+    {
+      "tail": "Login Page",
+      "head": "Check",
+      "label": "Yes"
+    },
+    {
+      "tail": "Login Page",
+      "head": "Reconfirm",
+      "label": "No"
+    },
+    {
+      "tail": "Reconfirm",
+      "head": "Login Page",
+      "label": null
+    },
+    {
+      "tail": "Check",
+      "head": "NewsFeed",
+      "label": null
+    },
+    {
+      "tail": "NewsFeed",
+      "head": "Like",
+      "label": null
+    },
+    {
+      "tail": "Like",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

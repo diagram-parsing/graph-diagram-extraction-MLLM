@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Food poision",
+      "id": "Food poision",
+      "class": null
+    },
+    {
+      "text": "Damaged bone marrow",
+      "id": "Damaged bone marrow",
+      "class": null
+    },
+    {
+      "text": "virus",
+      "id": "virus",
+      "class": null
+    },
+    {
+      "text": "Toxic item",
+      "id": "Toxic item",
+      "class": null
+    },
+    {
+      "text": "Inability to digest food",
+      "id": "Inability to digest food",
+      "class": null
+    },
+    {
+      "text": "Anemia, neutropenia, and thrombocytoperia",
+      "id": "Anemia, neutropenia, and thrombocytoperia",
+      "class": null
+    },
+    {
+      "text": "Infection, bleeding",
+      "id": "Infection, bleeding",
+      "class": null
+    },
+    {
+      "text": "high risk",
+      "id": "high risk",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Food poision",
+      "head": "Damaged bone marrow",
+      "label": null
+    },
+    {
+      "tail": "virus",
+      "head": "Damaged bone marrow",
+      "label": null
+    },
+    {
+      "tail": "Toxic item",
+      "head": "Damaged bone marrow",
+      "label": null
+    },
+    {
+      "tail": "Damaged bone marrow",
+      "head": "Inability to digest food",
+      "label": null
+    },
+    {
+      "tail": "Inability to digest food",
+      "head": "Anemia, neutropenia, and thrombocytoperia",
+      "label": null
+    },
+    {
+      "tail": "Anemia, neutropenia, and thrombocytoperia",
+      "head": "Infection, bleeding",
+      "label": null
+    },
+    {
+      "tail": "Infection, bleeding",
+      "head": "high risk",
+      "label": null
+    }
+  ],
+  "groups": []
+}

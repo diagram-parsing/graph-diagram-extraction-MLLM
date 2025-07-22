@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "Kitchen",
+      "id": "Kitchen",
+      "class": null
+    },
+    {
+      "text": "Open fridge",
+      "id": "Open fridge",
+      "class": null
+    },
+    {
+      "text": "Cook yourself",
+      "id": "Cook yourself",
+      "class": null
+    },
+    {
+      "text": "Enjoy",
+      "id": "Enjoy",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Kitchen",
+      "head": "Open fridge",
+      "label": null
+    },
+    {
+      "tail": "Open fridge",
+      "head": "Cook yourself",
+      "label": null
+    },
+    {
+      "tail": "Cook yourself",
+      "head": "Enjoy",
+      "label": null
+    },
+    {
+      "tail": "Enjoy",
+      "head": "Kitchen",
+      "label": null
+    }
+  ],
+  "groups": []
+}

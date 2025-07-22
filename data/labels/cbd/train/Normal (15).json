@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "text": "If (angka%2==1)",
+      "id": "If (angka%2==1)",
+      "class": null
+    },
+    {
+      "text": "Non prime",
+      "id": "Non prime",
+      "class": null
+    },
+    {
+      "text": "Prime Number",
+      "id": "Prime Number",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "If (angka%2==1)",
+      "head": "Non prime",
+      "label": "False"
+    },
+    {
+      "tail": "If (angka%2==1)",
+      "head": "Prime Number",
+      "label": "True"
+    },
+    {
+      "tail": "Prime Number",
+      "head": "Finish",
+      "label": null
+    },
+    {
+      "tail": "Non prime",
+      "head": "Finish",
+      "label": null
+    }
+  ],
+  "groups": []
+}

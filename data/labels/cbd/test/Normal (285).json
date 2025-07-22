@@ -1,0 +1,104 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Image",
+      "id": "Image",
+      "class": null,
+      "bbox": [
+        150.0,
+        40.5,
+        78.0,
+        29.0
+      ]
+    },
+    {
+      "text": "3D point cloud",
+      "id": "3D point cloud",
+      "class": null,
+      "bbox": [
+        152.5,
+        172.5,
+        125.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Threshold",
+      "id": "Threshold",
+      "class": null,
+      "bbox": [
+        161.5,
+        306.5,
+        115.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Preprocessing",
+      "id": "Preprocessing",
+      "class": null,
+      "bbox": [
+        150.0,
+        434.5,
+        118.0,
+        23.0
+      ]
+    },
+    {
+      "text": "Information",
+      "id": "Information",
+      "class": null,
+      "bbox": [
+        164.0,
+        557.0,
+        140.0,
+        24.0
+      ]
+    },
+    {
+      "text": "Gesture recognition",
+      "id": "Gesture recognition",
+      "class": null,
+      "bbox": [
+        150.5,
+        694.0,
+        163.0,
+        20.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "3D point cloud",
+      "tail": "Image",
+      "label": null
+    },
+    {
+      "head": "Threshold",
+      "tail": "3D point cloud",
+      "label": null
+    },
+    {
+      "head": "Preprocessing",
+      "tail": "Threshold",
+      "label": null
+    },
+    {
+      "head": "Information",
+      "tail": "Preprocessing",
+      "label": null
+    },
+    {
+      "head": "Gesture recognition",
+      "tail": "Information",
+      "label": null
+    },
+    {
+      "head": "Image",
+      "tail": "Gesture recognition",
+      "label": null
+    }
+  ],
+  "groups": []
+}

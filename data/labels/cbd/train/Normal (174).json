@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Cell in human body",
+      "id": "Cell in human body",
+      "class": null
+    },
+    {
+      "text": "Flexible Assembly Cell",
+      "id": "Flexible Assembly Cell",
+      "class": null
+    },
+    {
+      "text": "Study cell particle",
+      "id": "Study cell particle",
+      "class": null
+    },
+    {
+      "text": "Multi Functional Layer Bonding Cell",
+      "id": "Multi Functional Layer Bonding Cell",
+      "class": null
+    },
+    {
+      "text": "Slicing Cell",
+      "id": "Slicing Cell",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Cell in human body",
+      "head": "Flexible Assembly Cell",
+      "label": null
+    },
+    {
+      "tail": "Flexible Assembly Cell",
+      "head": "Study cell particle",
+      "label": null
+    },
+    {
+      "tail": "Study cell particle",
+      "head": "Multi Functional Layer Bonding Cell",
+      "label": null
+    },
+    {
+      "tail": "Multi Functional Layer Bonding Cell",
+      "head": "Slicing Cell",
+      "label": null
+    }
+  ],
+  "groups": []
+}

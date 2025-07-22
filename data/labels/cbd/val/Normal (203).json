@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Update the status of the Application on Do-it as Placed",
+      "id": "Update the status of the Application on Do-it as Placed",
+      "class": null
+    },
+    {
+      "text": "Create link for process",
+      "id": "Create link for process",
+      "class": null
+    },
+    {
+      "text": "Create 'Application Placed' activity",
+      "id": "Create 'Application Placed' activity",
+      "class": null
+    },
+    {
+      "text": "Process Complete",
+      "id": "Process Complete",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Update the status of the Application on Do-it as Placed",
+      "label": null
+    },
+    {
+      "tail": "Update the status of the Application on Do-it as Placed",
+      "head": "Create link for process",
+      "label": null
+    },
+    {
+      "tail": "Create link for process",
+      "head": "Create 'Application Placed' activity",
+      "label": null
+    },
+    {
+      "tail": "Create 'Application Placed' activity",
+      "head": "Process Complete",
+      "label": null
+    },
+    {
+      "tail": "Process Complete",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Raw materials",
+      "id": "Raw materials",
+      "class": null
+    },
+    {
+      "text": "Addition of water containing yeast",
+      "id": "Addition of water containing yeast",
+      "class": null
+    },
+    {
+      "text": "Kneading",
+      "id": "Kneading",
+      "class": null
+    },
+    {
+      "text": "Proofing",
+      "id": "Proofing",
+      "class": null
+    },
+    {
+      "text": "Read again",
+      "id": "Read again",
+      "class": null
+    },
+    {
+      "text": "Proofing (30 min)",
+      "id": "Proofing (30 min)",
+      "class": null
+    },
+    {
+      "text": "Filling in greased pan",
+      "id": "Filling in greased pan",
+      "class": null
+    },
+    {
+      "text": "Proofing (35 min)",
+      "id": "Proofing (35 min)",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Raw materials",
+      "head": "Addition of water containing yeast",
+      "label": null
+    },
+    {
+      "tail": "Addition of water containing yeast",
+      "head": "Kneading",
+      "label": null
+    },
+    {
+      "tail": "Kneading",
+      "head": "Proofing",
+      "label": null
+    },
+    {
+      "tail": "Proofing",
+      "head": "Read again",
+      "label": null
+    },
+    {
+      "tail": "Read again",
+      "head": "Proofing (30 min)",
+      "label": null
+    },
+    {
+      "tail": "Proofing (30 min)",
+      "head": "Filling in greased pan",
+      "label": null
+    },
+    {
+      "tail": "Filling in greased pan",
+      "head": "Proofing (35 min)",
+      "label": null
+    }
+  ],
+  "groups": []
+}

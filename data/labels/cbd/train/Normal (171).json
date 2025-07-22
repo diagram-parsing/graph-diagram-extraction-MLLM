@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Information source",
+      "id": "Information source",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    },
+    {
+      "text": "Channel",
+      "id": "Channel",
+      "class": null
+    },
+    {
+      "text": "Noise source",
+      "id": "Noise source",
+      "class": null
+    },
+    {
+      "text": "Receiver",
+      "id": "Receiver",
+      "class": null
+    },
+    {
+      "text": "Destination",
+      "id": "Destination",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Information source",
+      "head": "Amplifier",
+      "label": null
+    },
+    {
+      "tail": "Amplifier",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Noise source",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Channel",
+      "head": "Receiver",
+      "label": null
+    },
+    {
+      "tail": "Receiver",
+      "head": "Destination",
+      "label": null
+    }
+  ],
+  "groups": []
+}

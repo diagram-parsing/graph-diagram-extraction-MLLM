@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Pre-processing using",
+      "id": "Pre-processing using",
+      "class": null
+    },
+    {
+      "text": "Feature Extraction",
+      "id": "Feature Extraction",
+      "class": null
+    },
+    {
+      "text": "Parameter Optimization",
+      "id": "Parameter Optimization",
+      "class": null
+    },
+    {
+      "text": "Classification",
+      "id": "Classification",
+      "class": null
+    },
+    {
+      "text": "Pure speech",
+      "id": "Pure speech",
+      "class": null
+    },
+    {
+      "text": "Music",
+      "id": "Music",
+      "class": null
+    },
+    {
+      "text": "Environmental sound",
+      "id": "Environmental sound",
+      "class": null
+    },
+    {
+      "text": "Amplifier",
+      "id": "Amplifier",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Pre-processing using",
+      "head": "Feature Extraction",
+      "label": null
+    },
+    {
+      "tail": "Feature Extraction",
+      "head": "Parameter Optimization",
+      "label": null
+    },
+    {
+      "tail": "Parameter Optimization",
+      "head": "Classification",
+      "label": null
+    },
+    {
+      "tail": "Classification",
+      "head": "Pure speech",
+      "label": null
+    },
+    {
+      "tail": "Classification",
+      "head": "Music",
+      "label": null
+    },
+    {
+      "tail": "Classification",
+      "head": "Environmental sound",
+      "label": null
+    },
+    {
+      "tail": "Classification",
+      "head": "Amplifier",
+      "label": null
+    }
+  ],
+  "groups": []
+}

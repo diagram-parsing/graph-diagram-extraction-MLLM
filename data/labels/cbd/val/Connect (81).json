@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Light Energy",
+      "id": "Light Energy",
+      "class": null
+    },
+    {
+      "text": "Reaction",
+      "id": "Reaction",
+      "class": null
+    },
+    {
+      "text": "Water",
+      "id": "Water",
+      "class": null
+    },
+    {
+      "text": "Oxygen",
+      "id": "Oxygen",
+      "class": null
+    },
+    {
+      "text": "Hydrogen",
+      "id": "Hydrogen",
+      "class": null
+    },
+    {
+      "text": "Diffuses out of chloroplast",
+      "id": "Diffuses out of chloroplast",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Light Energy",
+      "head": "Reaction",
+      "label": null
+    },
+    {
+      "tail": "Reaction",
+      "head": "Water",
+      "label": null
+    },
+    {
+      "tail": "Water",
+      "head": "Oxygen",
+      "label": null
+    },
+    {
+      "tail": "Water",
+      "head": "Hydrogen",
+      "label": null
+    },
+    {
+      "tail": "Oxygen",
+      "head": "Diffuses out of chloroplast",
+      "label": null
+    }
+  ],
+  "groups": []
+}

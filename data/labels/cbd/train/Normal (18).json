@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "START",
+      "id": "START",
+      "class": null
+    },
+    {
+      "text": "Is it necessary?",
+      "id": "Is it necessary?",
+      "class": null
+    },
+    {
+      "text": "Don't do it",
+      "id": "Don't do it",
+      "class": null
+    },
+    {
+      "text": "Will it fail?",
+      "id": "Will it fail?",
+      "class": null
+    },
+    {
+      "text": "Do it!",
+      "id": "Do it!",
+      "class": null
+    },
+    {
+      "text": "Knowledge",
+      "id": "Knowledge",
+      "class": null
+    },
+    {
+      "text": "Don't do it!",
+      "id": "Don't do it!",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "START",
+      "head": "Is it necessary?",
+      "label": null
+    },
+    {
+      "tail": "Is it necessary?",
+      "head": "Don't do it",
+      "label": "NO"
+    },
+    {
+      "tail": "Is it necessary?",
+      "head": "Will it fail?",
+      "label": "YES"
+    },
+    {
+      "tail": "Will it fail?",
+      "head": "Do it!",
+      "label": "NO"
+    },
+    {
+      "tail": "Will it fail?",
+      "head": "Knowledge",
+      "label": "YES"
+    },
+    {
+      "tail": "Knowledge",
+      "head": "Don't do it!",
+      "label": "NO"
+    },
+    {
+      "tail": "Knowledge",
+      "head": "Do it!",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

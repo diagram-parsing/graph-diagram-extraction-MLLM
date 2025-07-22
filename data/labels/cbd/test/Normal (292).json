@@ -1,0 +1,173 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        239.5,
+        46.5,
+        41.0,
+        15.0
+      ]
+    },
+    {
+      "text": "Edit video",
+      "id": "Edit video",
+      "class": null,
+      "bbox": [
+        238.5,
+        98.0,
+        47.0,
+        14.0
+      ]
+    },
+    {
+      "text": "smaller than 2GB?",
+      "id": "smaller than 2GB?",
+      "class": null,
+      "bbox": [
+        238.5,
+        179.0,
+        85.0,
+        10.0
+      ]
+    },
+    {
+      "text": "Click to upload",
+      "id": "Click to upload",
+      "class": null
+    },
+    {
+      "text": "Have an account already?",
+      "id": "Have an account already?",
+      "class": null
+    },
+    {
+      "text": "Register",
+      "id": "Register",
+      "class": null,
+      "bbox": [
+        124.5,
+        341.5,
+        59.0,
+        19.0
+      ]
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Find on computer",
+      "id": "Find on computer",
+      "class": null,
+      "bbox": [
+        241.5,
+        488.0,
+        55.0,
+        30.0
+      ]
+    },
+    {
+      "text": "Add description and tags",
+      "id": "Add description and tags",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null,
+      "bbox": [
+        237.5,
+        628.5,
+        33.0,
+        19.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Edit video",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "smaller than 2GB?",
+      "tail": "Edit video",
+      "label": null
+    },
+    {
+      "head": "Edit video",
+      "tail": "smaller than 2GB?",
+      "label": "NO",
+      "bbox": [
+        345.0,
+        138.0,
+        18.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Click to upload",
+      "tail": "smaller than 2GB?",
+      "label": "YES",
+      "bbox": [
+        256.0,
+        380.5,
+        20.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Have an account already?",
+      "tail": "Click to upload",
+      "label": null
+    },
+    {
+      "head": "Register",
+      "tail": "Have an account already?",
+      "label": "NO",
+      "bbox": [
+        345.0,
+        138.0,
+        18.0,
+        12.0
+      ]
+    },
+    {
+      "head": "Login",
+      "tail": "Register",
+      "label": null
+    },
+    {
+      "head": "Login",
+      "tail": "Have an account already?",
+      "label": "YES",
+      "bbox": [
+        256.0,
+        380.5,
+        20.0,
+        11.0
+      ]
+    },
+    {
+      "head": "Find on computer",
+      "tail": "Login",
+      "label": null
+    },
+    {
+      "head": "Add description and tags",
+      "tail": "Find on computer",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Add description and tags",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Head extracted",
+      "id": "Head extracted",
+      "class": null
+    },
+    {
+      "text": "Head tracking",
+      "id": "Head tracking",
+      "class": null
+    },
+    {
+      "text": "check threshold",
+      "id": "check threshold",
+      "class": null
+    },
+    {
+      "text": "Centroid height lower than threshold",
+      "id": "Centroid height lower than threshold",
+      "class": null
+    },
+    {
+      "text": "head tracking",
+      "id": "head tracking",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Head extracted",
+      "label": null
+    },
+    {
+      "tail": "Head extracted",
+      "head": "Head tracking",
+      "label": null
+    },
+    {
+      "tail": "Head tracking",
+      "head": "check threshold",
+      "label": null
+    },
+    {
+      "tail": "check threshold",
+      "head": "Head tracking",
+      "label": "NO"
+    },
+    {
+      "tail": "check threshold",
+      "head": "Centroid height lower than threshold",
+      "label": "YES"
+    },
+    {
+      "tail": "Centroid height lower than threshold",
+      "head": "head tracking",
+      "label": "NO"
+    },
+    {
+      "tail": "Centroid height lower than threshold",
+      "head": "End",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

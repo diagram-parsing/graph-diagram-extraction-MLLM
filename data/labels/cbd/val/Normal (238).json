@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Home",
+      "id": "Home",
+      "class": null
+    },
+    {
+      "text": "Inverter",
+      "id": "Inverter",
+      "class": null
+    },
+    {
+      "text": "Main circuit",
+      "id": "Main circuit",
+      "class": null
+    },
+    {
+      "text": "AC loads",
+      "id": "AC loads",
+      "class": null
+    },
+    {
+      "text": "Electricity utility",
+      "id": "Electricity utility",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Home",
+      "head": "Inverter",
+      "label": null
+    },
+    {
+      "tail": "Inverter",
+      "head": "Main circuit",
+      "label": null
+    },
+    {
+      "tail": "Main circuit",
+      "head": "AC loads",
+      "label": null
+    },
+    {
+      "tail": "Main circuit",
+      "head": "Electricity utility",
+      "label": null
+    }
+  ],
+  "groups": []
+}

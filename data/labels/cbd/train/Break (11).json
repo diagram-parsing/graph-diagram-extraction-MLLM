@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Username acceptable?",
+      "id": "Username acceptable?",
+      "class": null
+    },
+    {
+      "text": "Close as \"Apolicy\" or \"Invalid\"",
+      "id": "Close as \"Apolicy\" or \"Invalid\"",
+      "class": null
+    },
+    {
+      "text": "Any blocks?",
+      "id": "Any blocks?",
+      "class": null
+    },
+    {
+      "text": "Account already exist?",
+      "id": "Account already exist?",
+      "class": null
+    },
+    {
+      "text": "Created recently",
+      "id": "Created recently",
+      "class": null
+    },
+    {
+      "text": "Close",
+      "id": "Close",
+      "class": null
+    },
+    {
+      "text": "Drope request",
+      "id": "Drope request",
+      "class": null
+    },
+    {
+      "text": "SUL taken?",
+      "id": "SUL taken?",
+      "class": null
+    },
+    {
+      "text": "Close Program",
+      "id": "Close Program",
+      "class": null
+    },
+    {
+      "text": "Conficting accounts?",
+      "id": "Conficting accounts?",
+      "class": null
+    },
+    {
+      "text": "Check another website",
+      "id": "Check another website",
+      "class": null
+    },
+    {
+      "text": "Create account",
+      "id": "Create account",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Username acceptable?",
+      "label": null
+    },
+    {
+      "tail": "Username acceptable?",
+      "head": "Close as \"Apolicy\" or \"Invalid\"",
+      "label": "No"
+    },
+    {
+      "tail": "Username acceptable?",
+      "head": "Any blocks?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Any blocks?",
+      "head": "Account already exist?",
+      "label": "No"
+    },
+    {
+      "tail": "Account already exist?",
+      "head": "Created recently",
+      "label": "Yes"
+    },
+    {
+      "tail": "Created recently",
+      "head": "Close",
+      "label": "No"
+    },
+    {
+      "tail": "Created recently",
+      "head": "Drope request",
+      "label": "Yes"
+    },
+    {
+      "tail": "Account already exist?",
+      "head": "SUL taken?",
+      "label": "No"
+    },
+    {
+      "tail": "SUL taken?",
+      "head": "Close Program",
+      "label": "Yes"
+    },
+    {
+      "tail": "SUL taken?",
+      "head": "Conficting accounts?",
+      "label": "No"
+    },
+    {
+      "tail": "Conficting accounts?",
+      "head": "Check another website",
+      "label": "Yes"
+    },
+    {
+      "tail": "Conficting accounts?",
+      "head": "Create account",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,131 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null,
+      "bbox": [
+        294.0,
+        90.0,
+        62.0,
+        28.0
+      ]
+    },
+    {
+      "text": "document-filter",
+      "id": "document-filter",
+      "class": null,
+      "bbox": [
+        297.5,
+        236.5,
+        157.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Screening",
+      "id": "Screening",
+      "class": null,
+      "bbox": [
+        292.0,
+        381.5,
+        116.0,
+        29.0
+      ]
+    },
+    {
+      "text": "document-converter",
+      "id": "document-converter",
+      "class": null,
+      "bbox": [
+        298.0,
+        527.0,
+        204.0,
+        22.0
+      ]
+    },
+    {
+      "text": "document-converter-topic",
+      "id": "document-converter-topic",
+      "class": null,
+      "bbox": [
+        297.5,
+        672.5,
+        261.0,
+        21.0
+      ]
+    },
+    {
+      "text": "published",
+      "id": "published",
+      "class": null,
+      "bbox": [
+        301.5,
+        819.0,
+        115.0,
+        30.0
+      ]
+    },
+    {
+      "text": "s3-publisher-topic",
+      "id": "s3-publisher-topic",
+      "class": null,
+      "bbox": [
+        166.0,
+        962.5,
+        182.0,
+        25.0
+      ]
+    },
+    {
+      "text": "workflow-s3",
+      "id": "workflow-s3",
+      "class": null,
+      "bbox": [
+        428.5,
+        962.5,
+        123.0,
+        25.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "document-filter",
+      "tail": "Start",
+      "label": null
+    },
+    {
+      "head": "Screening",
+      "tail": "document-filter",
+      "label": null
+    },
+    {
+      "head": "document-converter",
+      "tail": "Screening",
+      "label": null
+    },
+    {
+      "head": "document-converter-topic",
+      "tail": "document-converter",
+      "label": null
+    },
+    {
+      "head": "published",
+      "tail": "document-converter-topic",
+      "label": null
+    },
+    {
+      "head": "s3-publisher-topic",
+      "tail": "published",
+      "label": null
+    },
+    {
+      "head": "workflow-s3",
+      "tail": "published",
+      "label": null
+    }
+  ],
+  "groups": []
+}

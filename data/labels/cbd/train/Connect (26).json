@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Round 1 T=1",
+      "id": "Round 1 T=1",
+      "class": null
+    },
+    {
+      "text": "Draw lots to select witness nodes",
+      "id": "Draw lots to select witness nodes",
+      "class": null
+    },
+    {
+      "text": "Binarize block",
+      "id": "Binarize block",
+      "class": null
+    },
+    {
+      "text": "Packing block",
+      "id": "Packing block",
+      "class": null
+    },
+    {
+      "text": "Block verification",
+      "id": "Block verification",
+      "class": null
+    },
+    {
+      "text": "Timeout verification",
+      "id": "Timeout verification",
+      "class": null
+    },
+    {
+      "text": "Authentication",
+      "id": "Authentication",
+      "class": null
+    },
+    {
+      "text": "Next round draw",
+      "id": "Next round draw",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Round 1 T=1",
+      "label": null
+    },
+    {
+      "tail": "Round 1 T=1",
+      "head": "Draw lots to select witness nodes",
+      "label": null
+    },
+    {
+      "tail": "Draw lots to select witness nodes",
+      "head": "Binarize block",
+      "label": null
+    },
+    {
+      "tail": "Binarize block",
+      "head": "Packing block",
+      "label": null
+    },
+    {
+      "tail": "Packing block",
+      "head": "Block verification",
+      "label": null
+    },
+    {
+      "tail": "Block verification",
+      "head": "Timeout verification",
+      "label": "Verification failed"
+    },
+    {
+      "tail": "Block verification",
+      "head": "Authentication",
+      "label": null
+    },
+    {
+      "tail": "Authentication",
+      "head": "Binarize block",
+      "label": null
+    },
+    {
+      "tail": "Timeout verification",
+      "head": "Next round draw",
+      "label": "Timeout"
+    },
+    {
+      "tail": "Next round draw",
+      "head": "Draw lots to select witness nodes",
+      "label": null
+    },
+    {
+      "tail": "Block verification",
+      "head": "Finish",
+      "label": "Success"
+    }
+  ],
+  "groups": []
+}

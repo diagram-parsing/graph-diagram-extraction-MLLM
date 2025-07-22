@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "TV not working",
+      "id": "TV not working",
+      "class": null
+    },
+    {
+      "text": "Switch On?",
+      "id": "Switch On?",
+      "class": null
+    },
+    {
+      "text": "Switch on",
+      "id": "Switch on",
+      "class": null
+    },
+    {
+      "text": "Power supply?",
+      "id": "Power supply?",
+      "class": null
+    },
+    {
+      "text": "Wait for power",
+      "id": "Wait for power",
+      "class": null
+    },
+    {
+      "text": "Finish",
+      "id": "Finish",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "TV not working",
+      "head": "Switch On?",
+      "label": null
+    },
+    {
+      "tail": "Switch On?",
+      "head": "Switch on",
+      "label": "No"
+    },
+    {
+      "tail": "Switch On?",
+      "head": "Power supply?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Power supply?",
+      "head": "Wait for power",
+      "label": "No"
+    },
+    {
+      "tail": "Power supply?",
+      "head": "Finish",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

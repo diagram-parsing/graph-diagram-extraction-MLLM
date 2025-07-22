@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Lamp doesn't work",
+      "id": "Lamp doesn't work",
+      "class": null
+    },
+    {
+      "text": "Lamp plugged in?",
+      "id": "Lamp plugged in?",
+      "class": null
+    },
+    {
+      "text": "Plug in lamp",
+      "id": "Plug in lamp",
+      "class": null
+    },
+    {
+      "text": "Replace bulb",
+      "id": "Replace bulb",
+      "class": null
+    },
+    {
+      "text": "PRINT K",
+      "id": "PRINT K",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Lamp doesn't work",
+      "head": "Lamp plugged in?",
+      "label": null
+    },
+    {
+      "tail": "Lamp plugged in?",
+      "head": "Plug in lamp",
+      "label": "No"
+    },
+    {
+      "tail": "Lamp plugged in?",
+      "head": "Lamp plugged in?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Lamp plugged in?",
+      "head": "Replace bulb",
+      "label": "Yes"
+    },
+    {
+      "tail": "Lamp plugged in?",
+      "head": "PRINT K",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Get n",
+      "id": "Get n",
+      "class": null
+    },
+    {
+      "text": "n%2==0",
+      "id": "n%2==0",
+      "class": null
+    },
+    {
+      "text": "Even",
+      "id": "Even",
+      "class": null
+    },
+    {
+      "text": "Odd",
+      "id": "Odd",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Get n",
+      "label": null
+    },
+    {
+      "tail": "Get n",
+      "head": "n%2==0",
+      "label": null
+    },
+    {
+      "tail": "n%2==0",
+      "head": "Even",
+      "label": "Yes"
+    },
+    {
+      "tail": "n%2==0",
+      "head": "Odd",
+      "label": "No"
+    },
+    {
+      "tail": "Even",
+      "head": "Stop",
+      "label": null
+    },
+    {
+      "tail": "Odd",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

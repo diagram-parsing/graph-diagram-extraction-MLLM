@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "Application",
+      "id": "Application",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Apply",
+      "id": "Apply",
+      "class": null
+    },
+    {
+      "text": "Shortlist resumes",
+      "id": "Shortlist resumes",
+      "class": null
+    },
+    {
+      "text": "E-mail resumes to departments",
+      "id": "E-mail resumes to departments",
+      "class": null
+    },
+    {
+      "text": "Resumes approved?",
+      "id": "Resumes approved?",
+      "class": null
+    },
+    {
+      "text": "Screen more resumes",
+      "id": "Screen more resumes",
+      "class": null
+    },
+    {
+      "text": "Call for interview",
+      "id": "Call for interview",
+      "class": null
+    },
+    {
+      "text": "End hiring Stage 1",
+      "id": "End hiring Stage 1",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Application",
+      "head": "Login",
+      "label": null
+    },
+    {
+      "tail": "Login",
+      "head": "Apply",
+      "label": null
+    },
+    {
+      "tail": "Apply",
+      "head": "Shortlist resumes",
+      "label": null
+    },
+    {
+      "tail": "Shortlist resumes",
+      "head": "E-mail resumes to departments",
+      "label": null
+    },
+    {
+      "tail": "E-mail resumes to departments",
+      "head": "Resumes approved?",
+      "label": null
+    },
+    {
+      "tail": "Resumes approved?",
+      "head": "Screen more resumes",
+      "label": "No"
+    },
+    {
+      "tail": "Screen more resumes",
+      "head": "E-mail resumes to departments",
+      "label": null
+    },
+    {
+      "tail": "Resumes approved?",
+      "head": "Call for interview",
+      "label": "Yes"
+    },
+    {
+      "tail": "Call for interview",
+      "head": "End hiring Stage 1",
+      "label": null
+    }
+  ],
+  "groups": []
+}

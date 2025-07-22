@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Take all the inputs",
+      "id": "Take all the inputs",
+      "class": null
+    },
+    {
+      "text": "Assign each variable",
+      "id": "Assign each variable",
+      "class": null
+    },
+    {
+      "text": "Calculate loss",
+      "id": "Calculate loss",
+      "class": null
+    },
+    {
+      "text": "Reduce loss",
+      "id": "Reduce loss",
+      "class": null
+    },
+    {
+      "text": "Search vector",
+      "id": "Search vector",
+      "class": null
+    },
+    {
+      "text": "Update values",
+      "id": "Update values",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Take all the inputs",
+      "head": "Assign each variable",
+      "label": null
+    },
+    {
+      "tail": "Assign each variable",
+      "head": "Calculate loss",
+      "label": null
+    },
+    {
+      "tail": "Calculate loss",
+      "head": "Reduce loss",
+      "label": null
+    },
+    {
+      "tail": "Reduce loss",
+      "head": "Search vector",
+      "label": null
+    },
+    {
+      "tail": "Search vector",
+      "head": "Update values",
+      "label": null
+    }
+  ],
+  "groups": []
+}

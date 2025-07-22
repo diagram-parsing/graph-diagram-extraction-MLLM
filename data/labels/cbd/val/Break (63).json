@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Does the TV turn on?",
+      "id": "Does the TV turn on?",
+      "class": null
+    },
+    {
+      "text": "Are there any error messages?",
+      "id": "Are there any error messages?",
+      "class": null
+    },
+    {
+      "text": "Is the TV power light on?",
+      "id": "Is the TV power light on?",
+      "class": null
+    },
+    {
+      "text": "Perform a search for the error message",
+      "id": "Perform a search for the error message",
+      "class": null
+    },
+    {
+      "text": "TV is fine",
+      "id": "TV is fine",
+      "class": null
+    },
+    {
+      "text": "Turn the TV monitor on",
+      "id": "Turn the TV monitor on",
+      "class": null
+    },
+    {
+      "text": "Check the TV power cord",
+      "id": "Check the TV power cord",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Does the TV turn on?",
+      "label": null
+    },
+    {
+      "tail": "Does the TV turn on?",
+      "head": "Are there any error messages?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Does the TV turn on?",
+      "head": "Is the TV power light on?",
+      "label": "No"
+    },
+    {
+      "tail": "Are there any error messages?",
+      "head": "Perform a search for the error message",
+      "label": "Yes"
+    },
+    {
+      "tail": "Are there any error messages?",
+      "head": "TV is fine",
+      "label": "No"
+    },
+    {
+      "tail": "Is the TV power light on?",
+      "head": "Turn the TV monitor on",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is the TV power light on?",
+      "head": "Check the TV power cord",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

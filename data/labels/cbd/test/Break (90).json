@@ -1,0 +1,89 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        48.0,
+        24.0,
+        30.0,
+        16.0
+      ]
+    },
+    {
+      "text": "Pick up item",
+      "id": "Pick up item",
+      "class": null,
+      "bbox": [
+        49.5,
+        121.5,
+        67.0,
+        17.0
+      ]
+    },
+    {
+      "text": "Does this item spark joy for me?",
+      "id": "Does this item spark joy for me?",
+      "class": null,
+      "bbox": [
+        185.5,
+        122.0,
+        119.0,
+        28.0
+      ]
+    },
+    {
+      "text": "Delete",
+      "id": "Delete",
+      "class": null,
+      "bbox": [
+        132.0,
+        232.5,
+        36.0,
+        11.0
+      ]
+    },
+    {
+      "text": "Save",
+      "id": "Save",
+      "class": null,
+      "bbox": [
+        255.0,
+        231.0,
+        26.0,
+        14.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Pick up item",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Does this item spark joy for me?",
+      "tail": "Pick up item",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Does this item spark joy for me?",
+      "label": "No",
+      "bbox": [
+        166.5,
+        194.5,
+        15.0,
+        7.0
+      ]
+    },
+    {
+      "head": "Save",
+      "tail": "Does this item spark joy for me?",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

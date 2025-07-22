@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "text": "New case",
+      "id": "New case",
+      "class": null
+    },
+    {
+      "text": "Case retrieval",
+      "id": "Case retrieval",
+      "class": null
+    },
+    {
+      "text": "Similar cases",
+      "id": "Similar cases",
+      "class": null
+    },
+    {
+      "text": "Case reuse",
+      "id": "Case reuse",
+      "class": null
+    },
+    {
+      "text": "Print Result",
+      "id": "Print Result",
+      "class": null
+    },
+    {
+      "text": "Case revise",
+      "id": "Case revise",
+      "class": null
+    },
+    {
+      "text": "Case update",
+      "id": "Case update",
+      "class": null
+    },
+    {
+      "text": "Case base",
+      "id": "Case base",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "New case",
+      "head": "Case retrieval",
+      "label": "Input"
+    },
+    {
+      "tail": "Case retrieval",
+      "head": "Similar cases",
+      "label": "Obtain"
+    },
+    {
+      "tail": "Similar cases",
+      "head": "Case reuse",
+      "label": "Input"
+    },
+    {
+      "tail": "Case reuse",
+      "head": "Print Result",
+      "label": "Output"
+    },
+    {
+      "tail": "Print Result",
+      "head": "Case revise",
+      "label": "Evaluate"
+    },
+    {
+      "tail": "Case revise",
+      "head": "Case update",
+      "label": null
+    },
+    {
+      "tail": "Case update",
+      "head": "Case base",
+      "label": "Store"
+    },
+    {
+      "tail": "Case base",
+      "head": "Case retrieval",
+      "label": "Retrieve"
+    }
+  ],
+  "groups": []
+}

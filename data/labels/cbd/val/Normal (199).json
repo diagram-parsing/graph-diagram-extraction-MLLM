@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Initialization",
+      "id": "Initialization",
+      "class": null
+    },
+    {
+      "text": "Pre process",
+      "id": "Pre process",
+      "class": null
+    },
+    {
+      "text": "Dispaly output C (sum) to user",
+      "id": "Dispaly output C (sum) to user",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Initialization",
+      "label": null
+    },
+    {
+      "tail": "Initialization",
+      "head": "Pre process",
+      "label": null
+    },
+    {
+      "tail": "Pre process",
+      "head": "Dispaly output C (sum) to user",
+      "label": null
+    },
+    {
+      "tail": "Dispaly output C (sum) to user",
+      "head": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "Enter ID and password",
+      "id": "Enter ID and password",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Success",
+      "id": "Success",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Begin",
+      "head": "Enter ID and password",
+      "label": null
+    },
+    {
+      "tail": "Enter ID and password",
+      "head": "Process",
+      "label": "No"
+    },
+    {
+      "tail": "Enter ID and password",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Success",
+      "label": "Yes"
+    },
+    {
+      "tail": "Success",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Administrator",
+      "id": "Administrator",
+      "class": null
+    },
+    {
+      "text": "Admin two",
+      "id": "Admin two",
+      "class": null
+    },
+    {
+      "text": "Admin one",
+      "id": "Admin one",
+      "class": null
+    },
+    {
+      "text": "User One",
+      "id": "User One",
+      "class": null
+    },
+    {
+      "text": "User Four",
+      "id": "User Four",
+      "class": null
+    },
+    {
+      "text": "Login",
+      "id": "Login",
+      "class": null
+    },
+    {
+      "text": "Unknown",
+      "id": "Unknown",
+      "class": null
+    },
+    {
+      "text": "Secret Question",
+      "id": "Secret Question",
+      "class": null
+    },
+    {
+      "text": "Database",
+      "id": "Database",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Administrator",
+      "label": null
+    },
+    {
+      "tail": "Administrator",
+      "head": "Admin two",
+      "label": null
+    },
+    {
+      "tail": "Administrator",
+      "head": "Admin one",
+      "label": null
+    },
+    {
+      "tail": "Admin two",
+      "head": "User One",
+      "label": null
+    },
+    {
+      "tail": "Admin one",
+      "head": "User Four",
+      "label": null
+    },
+    {
+      "tail": "Admin two",
+      "head": "Login",
+      "label": null
+    },
+    {
+      "tail": "Admin one",
+      "head": "Unknown",
+      "label": null
+    },
+    {
+      "tail": "Login",
+      "head": "Secret Question",
+      "label": null
+    },
+    {
+      "tail": "Unknown",
+      "head": "Database",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,91 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null
+    },
+    {
+      "text": "READ N",
+      "id": "READ N",
+      "class": null
+    },
+    {
+      "text": "M=1 F=1",
+      "id": "M=1 F=1",
+      "class": null
+    },
+    {
+      "text": "F=F*M",
+      "id": "F=F*M",
+      "class": null
+    },
+    {
+      "text": "M=N?",
+      "id": "M=N?",
+      "class": null
+    },
+    {
+      "text": "M=M+1",
+      "id": "M=M+1",
+      "class": null,
+      "bbox": [
+        26.0,
+        156.5,
+        44.0,
+        11.0
+      ]
+    },
+    {
+      "text": "PRINT F",
+      "id": "PRINT F",
+      "class": null,
+      "bbox": [
+        99.0,
+        204.5,
+        34.0,
+        11.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "READ N",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "M=1 F=1",
+      "tail": "READ N",
+      "label": null
+    },
+    {
+      "head": "F=F*M",
+      "tail": "M=1 F=1",
+      "label": null
+    },
+    {
+      "head": "M=M+1",
+      "tail": "M=N?",
+      "label": "NO",
+      "bbox": [
+        57.5,
+        151.0,
+        13.0,
+        8.0
+      ]
+    },
+    {
+      "head": "F=F*M",
+      "tail": "M=M+1",
+      "label": null
+    },
+    {
+      "head": "PRINT F",
+      "tail": "M=N?",
+      "label": "YES"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Read Temperature",
+      "id": "Read Temperature",
+      "class": null
+    },
+    {
+      "text": "Temperature<32?",
+      "id": "Temperature<32?",
+      "class": null
+    },
+    {
+      "text": "Not so cold",
+      "id": "Not so cold",
+      "class": null
+    },
+    {
+      "text": "Cold",
+      "id": "Cold",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Read Temperature",
+      "label": null
+    },
+    {
+      "tail": "Read Temperature",
+      "head": "Temperature<32?",
+      "label": null
+    },
+    {
+      "tail": "Temperature<32?",
+      "head": "Not so cold",
+      "label": "YES"
+    },
+    {
+      "tail": "Temperature<32?",
+      "head": "Cold",
+      "label": "NO"
+    },
+    {
+      "tail": "Not so cold",
+      "head": "End",
+      "label": null
+    },
+    {
+      "tail": "Cold",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

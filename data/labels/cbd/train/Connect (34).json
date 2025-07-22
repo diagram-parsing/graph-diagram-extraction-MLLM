@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Hard work",
+      "id": "Hard work",
+      "class": null
+    },
+    {
+      "text": "Franchise",
+      "id": "Franchise",
+      "class": null
+    },
+    {
+      "text": "New Strategy",
+      "id": "New Strategy",
+      "class": null
+    },
+    {
+      "text": "Success",
+      "id": "Success",
+      "class": null
+    },
+    {
+      "text": "Order more",
+      "id": "Order more",
+      "class": null
+    },
+    {
+      "text": "Sold",
+      "id": "Sold",
+      "class": null
+    },
+    {
+      "text": "Expandable",
+      "id": "Expandable",
+      "class": null
+    },
+    {
+      "text": "open more store",
+      "id": "open more store",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Hard work",
+      "label": null
+    },
+    {
+      "tail": "Hard work",
+      "head": "Franchise",
+      "label": null
+    },
+    {
+      "tail": "Hard work",
+      "head": "New Strategy",
+      "label": null
+    },
+    {
+      "tail": "Franchise",
+      "head": "Success",
+      "label": null
+    },
+    {
+      "tail": "Success",
+      "head": "New Strategy",
+      "label": "No"
+    },
+    {
+      "tail": "Success",
+      "head": "Order more",
+      "label": "Yes"
+    },
+    {
+      "tail": "Order more",
+      "head": "Sold",
+      "label": null
+    },
+    {
+      "tail": "Sold",
+      "head": "New Strategy",
+      "label": "No"
+    },
+    {
+      "tail": "Sold",
+      "head": "Expandable",
+      "label": "Yes"
+    },
+    {
+      "tail": "Expandable",
+      "head": "open more store",
+      "label": "Yes"
+    },
+    {
+      "tail": "open more store",
+      "head": "Success",
+      "label": null
+    },
+    {
+      "tail": "Expandable",
+      "head": "End",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

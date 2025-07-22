@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "text": "connector",
+      "id": "connector",
+      "class": null
+    },
+    {
+      "text": "Check Time",
+      "id": "Check Time",
+      "class": null
+    },
+    {
+      "text": "Before 4 pm?",
+      "id": "Before 4 pm?",
+      "class": null
+    },
+    {
+      "text": "Home",
+      "id": "Home",
+      "class": null
+    },
+    {
+      "text": "Office",
+      "id": "Office",
+      "class": null
+    },
+    {
+      "text": "Check",
+      "id": "Check",
+      "class": null
+    },
+    {
+      "text": "Before 7 pm?",
+      "id": "Before 7 pm?",
+      "class": null
+    },
+    {
+      "text": "School",
+      "id": "School",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "connector",
+      "head": "Check Time",
+      "label": null
+    },
+    {
+      "tail": "Check Time",
+      "head": "Before 4 pm?",
+      "label": null
+    },
+    {
+      "tail": "Before 4 pm?",
+      "head": "Home",
+      "label": "Yes"
+    },
+    {
+      "tail": "Before 4 pm?",
+      "head": "Office",
+      "label": "No"
+    },
+    {
+      "tail": "Office",
+      "head": "Check",
+      "label": null
+    },
+    {
+      "tail": "Check",
+      "head": "Before 7 pm?",
+      "label": null
+    },
+    {
+      "tail": "Before 7 pm?",
+      "head": "Office",
+      "label": "No"
+    },
+    {
+      "tail": "Before 7 pm?",
+      "head": "School",
+      "label": "Yes"
+    },
+    {
+      "tail": "School",
+      "head": "End",
+      "label": null
+    }
+  ],
+  "groups": []
+}

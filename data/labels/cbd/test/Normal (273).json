@@ -1,0 +1,175 @@
+{
+  "diagram_type": "flowchart",
+  "nodes": [
+    {
+      "text": "Begin",
+      "id": "Begin",
+      "class": null,
+      "bbox": [
+        277.5,
+        25.5,
+        47.0,
+        21.0
+      ]
+    },
+    {
+      "text": "Pour Cold Water",
+      "id": "Pour Cold Water",
+      "class": null,
+      "bbox": [
+        278.0,
+        81.0,
+        76.0,
+        14.0
+      ]
+    },
+    {
+      "text": "Set Water Level Reached?",
+      "id": "Set Water Level Reached?",
+      "class": null,
+      "bbox": [
+        277.0,
+        172.0,
+        50.0,
+        42.0
+      ]
+    },
+    {
+      "text": "Pour Hot Water",
+      "id": "Pour Hot Water",
+      "class": null
+    },
+    {
+      "text": "Check Water Temperature",
+      "id": "Check Water Temperature",
+      "class": null,
+      "bbox": [
+        277.0,
+        344.5,
+        86.0,
+        37.0
+      ]
+    },
+    {
+      "text": "Washing Process (Pump ON)",
+      "id": "Washing Process (Pump ON)",
+      "class": null,
+      "bbox": [
+        277.5,
+        419.0,
+        79.0,
+        56.0
+      ]
+    },
+    {
+      "text": "Check Time Limit",
+      "id": "Check Time Limit",
+      "class": null
+    },
+    {
+      "text": "Check TIme Limit",
+      "id": "Check TIme Limit",
+      "class": null
+    },
+    {
+      "text": "End",
+      "id": "End",
+      "class": null,
+      "bbox": [
+        276.0,
+        601.5,
+        30.0,
+        15.0
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "head": "Pour Cold Water",
+      "tail": "Begin",
+      "label": null
+    },
+    {
+      "head": "Set Water Level Reached?",
+      "tail": "Pour Cold Water",
+      "label": null
+    },
+    {
+      "head": "Pour Cold Water",
+      "tail": "Set Water Level Reached?",
+      "label": "No",
+      "bbox": [
+        178.5,
+        65.5,
+        19.0,
+        15.0
+      ]
+    },
+    {
+      "head": "Pour Hot Water",
+      "tail": "Set Water Level Reached?",
+      "label": "Yes",
+      "bbox": [
+        300.5,
+        570.0,
+        13.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Check Water Temperature",
+      "tail": "Pour Hot Water",
+      "label": null
+    },
+    {
+      "head": "Pour Hot Water",
+      "tail": "Check Water Temperature",
+      "label": "No",
+      "bbox": [
+        178.5,
+        65.5,
+        19.0,
+        15.0
+      ]
+    },
+    {
+      "head": "Washing Process (Pump ON)",
+      "tail": "Check Water Temperature",
+      "label": "Yes",
+      "bbox": [
+        300.5,
+        570.0,
+        13.0,
+        8.0
+      ]
+    },
+    {
+      "head": "Check Time Limit",
+      "tail": "Washing Process (Pump ON)",
+      "label": null
+    },
+    {
+      "head": "Washing Process (Pump ON)",
+      "tail": "Check Time Limit",
+      "label": "No",
+      "bbox": [
+        178.5,
+        65.5,
+        19.0,
+        15.0
+      ]
+    },
+    {
+      "head": "End",
+      "tail": "Check TIme Limit",
+      "label": "Yes",
+      "bbox": [
+        300.5,
+        570.0,
+        13.0,
+        8.0
+      ]
+    }
+  ],
+  "groups": []
+}

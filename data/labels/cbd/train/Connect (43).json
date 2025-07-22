@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "text": "Construction",
+      "id": "Construction",
+      "class": null
+    },
+    {
+      "text": "Acceptance of transformer",
+      "id": "Acceptance of transformer",
+      "class": null
+    },
+    {
+      "text": "Accessories Installation",
+      "id": "Accessories Installation",
+      "class": null
+    },
+    {
+      "text": "Insulating oil treatment",
+      "id": "Insulating oil treatment",
+      "class": null
+    },
+    {
+      "text": "Sample Test",
+      "id": "Sample Test",
+      "class": null
+    },
+    {
+      "text": "Vacuum",
+      "id": "Vacuum",
+      "class": null
+    },
+    {
+      "text": "Hot oil circulation",
+      "id": "Hot oil circulation",
+      "class": null
+    },
+    {
+      "text": "Check impurities",
+      "id": "Check impurities",
+      "class": null
+    },
+    {
+      "text": "Standing",
+      "id": "Standing",
+      "class": null
+    },
+    {
+      "text": "Completed",
+      "id": "Completed",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Construction",
+      "head": "Acceptance of transformer",
+      "label": null
+    },
+    {
+      "tail": "Acceptance of transformer",
+      "head": "Accessories Installation",
+      "label": null
+    },
+    {
+      "tail": "Acceptance of transformer",
+      "head": "Insulating oil treatment",
+      "label": null
+    },
+    {
+      "tail": "Insulating oil treatment",
+      "head": "Sample Test",
+      "label": null
+    },
+    {
+      "tail": "Accessories Installation",
+      "head": "Vacuum",
+      "label": null
+    },
+    {
+      "tail": "Vacuum",
+      "head": "Sample Test",
+      "label": null
+    },
+    {
+      "tail": "Sample Test",
+      "head": "Hot oil circulation",
+      "label": null
+    },
+    {
+      "tail": "Hot oil circulation",
+      "head": "Check impurities",
+      "label": null
+    },
+    {
+      "tail": "Check impurities",
+      "head": "Standing",
+      "label": null
+    },
+    {
+      "tail": "Standing",
+      "head": "Completed",
+      "label": null
+    }
+  ],
+  "groups": []
+}

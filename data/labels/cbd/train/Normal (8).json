@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "text": "JOHN",
+      "id": "JOHN",
+      "class": null
+    },
+    {
+      "text": "MANGO",
+      "id": "MANGO",
+      "class": null
+    },
+    {
+      "text": "ALLEN",
+      "id": "ALLEN",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "JOHN",
+      "head": "MANGO",
+      "label": "LIKES"
+    },
+    {
+      "tail": "ALLEN",
+      "head": "MANGO",
+      "label": "DISLIKES"
+    }
+  ],
+  "groups": []
+}

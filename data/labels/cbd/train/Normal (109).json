@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "text": "Lamp doesn't work",
+      "id": "Lamp doesn't work",
+      "class": null
+    },
+    {
+      "text": "Want more lamp?",
+      "id": "Want more lamp?",
+      "class": null
+    },
+    {
+      "text": "Plug in lamp",
+      "id": "Plug in lamp",
+      "class": null
+    },
+    {
+      "text": "Bulb burned out?",
+      "id": "Bulb burned out?",
+      "class": null
+    },
+    {
+      "text": "Replace bulb",
+      "id": "Replace bulb",
+      "class": null
+    },
+    {
+      "text": "Repair lamp",
+      "id": "Repair lamp",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Lamp doesn't work",
+      "head": "Want more lamp?",
+      "label": null
+    },
+    {
+      "tail": "Want more lamp?",
+      "head": "Plug in lamp",
+      "label": "No"
+    },
+    {
+      "tail": "Want more lamp?",
+      "head": "Bulb burned out?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Bulb burned out?",
+      "head": "Replace bulb",
+      "label": "Yes"
+    },
+    {
+      "tail": "Bulb burned out?",
+      "head": "Repair lamp",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

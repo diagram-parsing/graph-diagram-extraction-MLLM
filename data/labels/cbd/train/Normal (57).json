@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "text": "Money",
+      "id": "Money",
+      "class": null
+    },
+    {
+      "text": "Depots",
+      "id": "Depots",
+      "class": null
+    },
+    {
+      "text": "Distributors",
+      "id": "Distributors",
+      "class": null
+    },
+    {
+      "text": "Retailers",
+      "id": "Retailers",
+      "class": null
+    },
+    {
+      "text": "Consumers",
+      "id": "Consumers",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Money",
+      "head": "Depots",
+      "label": "Delivery Dispatch"
+    },
+    {
+      "tail": "Depots",
+      "head": "Money",
+      "label": "Indents"
+    },
+    {
+      "tail": "Depots",
+      "head": "Distributors",
+      "label": null
+    },
+    {
+      "tail": "Distributors",
+      "head": "Retailers",
+      "label": null
+    },
+    {
+      "tail": "Retailers",
+      "head": "Consumers",
+      "label": null
+    }
+  ],
+  "groups": []
+}

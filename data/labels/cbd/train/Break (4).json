@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "text": "Can I Have a Baby?",
+      "id": "Can I Have a Baby?",
+      "class": null
+    },
+    {
+      "text": "Are you married?",
+      "id": "Are you married?",
+      "class": null
+    },
+    {
+      "text": "Can you afford his/her expense?",
+      "id": "Can you afford his/her expense?",
+      "class": null
+    },
+    {
+      "text": "Are you an adult?",
+      "id": "Are you an adult?",
+      "class": null
+    },
+    {
+      "text": "Adopt a baby",
+      "id": "Adopt a baby",
+      "class": null
+    },
+    {
+      "text": "Do you have a girlfriend",
+      "id": "Do you have a girlfriend",
+      "class": null
+    },
+    {
+      "text": "Ready for operation",
+      "id": "Ready for operation",
+      "class": null
+    },
+    {
+      "text": "Do you have enough time to take care of him/her?",
+      "id": "Do you have enough time to take care of him/her?",
+      "class": null
+    },
+    {
+      "text": "Yes, you can have a baby.",
+      "id": "Yes, you can have a baby.",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Can I Have a Baby?",
+      "head": "Are you married?",
+      "label": null
+    },
+    {
+      "tail": "Are you married?",
+      "head": "Can you afford his/her expense?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Are you married?",
+      "head": "Are you an adult?",
+      "label": "No"
+    },
+    {
+      "tail": "Are you an adult?",
+      "head": "Adopt a baby",
+      "label": "No"
+    },
+    {
+      "tail": "Are you an adult?",
+      "head": "Do you have a girlfriend",
+      "label": "Yes"
+    },
+    {
+      "tail": "Do you have a girlfriend",
+      "head": "Can you afford his/her expense?",
+      "label": "No"
+    },
+    {
+      "tail": "Do you have a girlfriend",
+      "head": "Ready for operation",
+      "label": "Yes"
+    },
+    {
+      "tail": "Ready for operation",
+      "head": "Can you afford his/her expense?",
+      "label": "Yes"
+    },
+    {
+      "tail": "Can you afford his/her expense?",
+      "head": "Do you have enough time to take care of him/her?",
+      "label": "yes"
+    },
+    {
+      "tail": "Can you afford his/her expense?",
+      "head": "Adopt a baby",
+      "label": "No"
+    },
+    {
+      "tail": "Ready for operation",
+      "head": "Adopt a baby",
+      "label": "No"
+    },
+    {
+      "tail": "Do you have enough time to take care of him/her?",
+      "head": "Adopt a baby",
+      "label": "No"
+    },
+    {
+      "tail": "Do you have enough time to take care of him/her?",
+      "head": "Yes, you can have a baby.",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,157 @@
+{
+  "nodes": [
+    {
+      "text": "modulation mapping",
+      "id": "modulation mapping",
+      "class": null
+    },
+    {
+      "text": "EE operations",
+      "id": "EE operations",
+      "class": null
+    },
+    {
+      "text": "pilot/DC/guard band insertion",
+      "id": "pilot/DC/guard band insertion",
+      "class": null
+    },
+    {
+      "text": "CP insertion",
+      "id": "CP insertion",
+      "class": null
+    },
+    {
+      "text": "iF",
+      "id": "iF",
+      "class": null
+    },
+    {
+      "text": "analog gain control",
+      "id": "analog gain control",
+      "class": null
+    },
+    {
+      "text": "front-end",
+      "id": "front-end",
+      "class": null
+    },
+    {
+      "text": "Channel",
+      "id": "Channel",
+      "class": null
+    },
+    {
+      "text": "correction",
+      "id": "correction",
+      "class": null
+    },
+    {
+      "text": "Synchronization+CFO estimation",
+      "id": "Synchronization+CFO estimation",
+      "class": null
+    },
+    {
+      "text": "removal",
+      "id": "removal",
+      "class": null
+    },
+    {
+      "text": "Add",
+      "id": "Add",
+      "class": null
+    },
+    {
+      "text": "EEE operations",
+      "id": "EEE operations",
+      "class": null
+    },
+    {
+      "text": "channel estimation",
+      "id": "channel estimation",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "modulation mapping",
+      "head": "EE operations",
+      "label": null
+    },
+    {
+      "tail": "EE operations",
+      "head": "pilot/DC/guard band insertion",
+      "label": null
+    },
+    {
+      "tail": "pilot/DC/guard band insertion",
+      "head": "CP insertion",
+      "label": null
+    },
+    {
+      "tail": "CP insertion",
+      "head": "iF",
+      "label": null
+    },
+    {
+      "tail": "iF",
+      "head": "analog gain control",
+      "label": null
+    },
+    {
+      "tail": "analog gain control",
+      "head": "front-end",
+      "label": null
+    },
+    {
+      "tail": "front-end",
+      "head": "Channel",
+      "label": null
+    },
+    {
+      "tail": "Channel",
+      "head": "front-end",
+      "label": null
+    },
+    {
+      "tail": "front-end",
+      "head": "analog gain control",
+      "label": null
+    },
+    {
+      "tail": "analog gain control",
+      "head": "correction",
+      "label": null
+    },
+    {
+      "tail": "correction",
+      "head": "Synchronization+CFO estimation",
+      "label": null
+    },
+    {
+      "tail": "Synchronization+CFO estimation",
+      "head": "correction",
+      "label": null
+    },
+    {
+      "tail": "Synchronization+CFO estimation",
+      "head": "removal",
+      "label": null
+    },
+    {
+      "tail": "removal",
+      "head": "Add",
+      "label": null
+    },
+    {
+      "tail": "Add",
+      "head": "EEE operations",
+      "label": null
+    },
+    {
+      "tail": "EEE operations",
+      "head": "channel estimation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

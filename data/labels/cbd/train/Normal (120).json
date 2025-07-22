@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Count=0",
+      "id": "Count=0",
+      "class": null
+    },
+    {
+      "text": "Operation",
+      "id": "Operation",
+      "class": null
+    },
+    {
+      "text": "count=count+1",
+      "id": "count=count+1",
+      "class": null
+    },
+    {
+      "text": "Is count<10",
+      "id": "Is count<10",
+      "class": null
+    },
+    {
+      "text": "Stop",
+      "id": "Stop",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Count=0",
+      "label": null
+    },
+    {
+      "tail": "Count=0",
+      "head": "Operation",
+      "label": null
+    },
+    {
+      "tail": "Operation",
+      "head": "count=count+1",
+      "label": null
+    },
+    {
+      "tail": "count=count+1",
+      "head": "Is count<10",
+      "label": null
+    },
+    {
+      "tail": "Is count<10",
+      "head": "Operation",
+      "label": "YES"
+    },
+    {
+      "tail": "Is count<10",
+      "head": "Stop",
+      "label": "NO"
+    }
+  ],
+  "groups": []
+}

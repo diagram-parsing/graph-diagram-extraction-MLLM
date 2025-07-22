@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "text": "Start",
+      "id": "Start",
+      "class": null
+    },
+    {
+      "text": "Download game",
+      "id": "Download game",
+      "class": null
+    },
+    {
+      "text": "Update Game",
+      "id": "Update Game",
+      "class": null
+    },
+    {
+      "text": "Render game state onto window",
+      "id": "Render game state onto window",
+      "class": null
+    },
+    {
+      "text": "Process",
+      "id": "Process",
+      "class": null
+    },
+    {
+      "text": "Is window still open?",
+      "id": "Is window still open?",
+      "class": null
+    },
+    {
+      "text": "Application Shutdown",
+      "id": "Application Shutdown",
+      "class": null
+    }
+  ],
+  "relations": [
+    {
+      "tail": "Start",
+      "head": "Download game",
+      "label": null
+    },
+    {
+      "tail": "Download game",
+      "head": "Update Game",
+      "label": null
+    },
+    {
+      "tail": "Update Game",
+      "head": "Render game state onto window",
+      "label": null
+    },
+    {
+      "tail": "Render game state onto window",
+      "head": "Process",
+      "label": null
+    },
+    {
+      "tail": "Process",
+      "head": "Is window still open?",
+      "label": null
+    },
+    {
+      "tail": "Is window still open?",
+      "head": "Update Game",
+      "label": "Yes"
+    },
+    {
+      "tail": "Is window still open?",
+      "head": "Application Shutdown",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}
