@@ -45,7 +45,7 @@ The tables below shows F1 scores for diagram recognition across several datasets
 
 
 ### SAM-UML 
-The following table reports scores for the SAM-UML dataset, including methods and attributes, as well as edge cardinalities.
+The following table reports F1 scores for the SAM-UML dataset, including methods and attributes, as well as edge cardinalities.
 
 | Method | Node (Text) | Node (Class) | Node (Methods) | Node (Attributes) | Node (Full)\* | Edge (Path) | Edge (Class) | Edge (Label) | Edge (Cardinality) | Edge (Full) |
 | ------ | ----------- | ------------ | -------------- | ----------------- | ------------- | ----------- | ------------ | ------------ | ------------------ | ----------- |
@@ -55,7 +55,7 @@ The following table reports scores for the SAM-UML dataset, including methods an
 &#42; For UML-specific node recognition, a node is considered correctly matched only if its text, class, methods, and attributes all match the ground truth.
 
 ### hdBPMN and SAM-BPMN
-The following table reports group recognition scores for the hdBPMN and SAM-BPMN dataset. 
+The following table reports group recognition F1 scores for the hdBPMN and SAM-BPMN dataset. 
 
 | Dataset  | Method | Group (Name) | Group (Class) | Group (Texts)\* | Group (Full) |
 | -------- | ------ | ------------ | ------------- | ------------- | ------------ |
@@ -66,3 +66,11 @@ The following table reports group recognition scores for the hdBPMN and SAM-BPMN
 
 &#42; Group (Texts) refers to the nodes contained inside a group. 
 
+### SEM 
+The following table reports F1 scores for node and edge recognition on the SEM dataset using 2-shot prompting, the PEFT model, and the PEFT model with 2-shot prompting during inference.
+
+| Dataset | Method        | Node      | Edge      |
+| ------- | ------------- | --------- | --------- |
+| SEM     | 2-Shot        | **0.675** | **0.394** |
+|         | PEFT          | 0.516     | 0.287     |
+|         | 2-Shot + PEFT | 0.635     | 0.360     |
