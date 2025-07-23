@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Switch",
+      "label": "Drag"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Ready?",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Create",
+      "tail": "Unplug",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

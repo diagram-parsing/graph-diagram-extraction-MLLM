@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Resume",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

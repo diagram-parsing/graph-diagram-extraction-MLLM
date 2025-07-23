@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "payroll",
+      "label": "replies"
+    },
+    {
+      "head": "phone",
+      "tail": "fees",
+      "label": null
+    }
+  ],
+  "groups": []
+}

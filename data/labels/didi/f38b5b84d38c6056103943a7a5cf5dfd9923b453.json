@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Quit",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

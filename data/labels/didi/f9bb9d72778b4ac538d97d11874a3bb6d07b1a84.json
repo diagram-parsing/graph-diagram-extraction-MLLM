@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Unplug",
+      "label": "Slide"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Plug",
+      "label": "Drag"
+    },
+    {
+      "head": "Advance",
+      "tail": "Plug",
+      "label": "Drag"
+    }
+  ],
+  "groups": []
+}

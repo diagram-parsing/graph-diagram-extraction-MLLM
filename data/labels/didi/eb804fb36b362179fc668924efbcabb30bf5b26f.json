@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "order",
+      "label": "drops"
+    },
+    {
+      "head": "hotline",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "customer",
+      "label": "sends"
+    },
+    {
+      "head": "street number",
+      "tail": "purchase",
+      "label": null
+    }
+  ],
+  "groups": []
+}

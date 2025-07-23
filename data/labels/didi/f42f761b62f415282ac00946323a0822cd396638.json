@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "oval"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Ready?",
+      "label": "Scroll"
+    },
+    {
+      "head": "Stop",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Quit",
+      "label": "Click"
+    },
+    {
+      "head": "Quit",
+      "tail": "Advance",
+      "label": null
+    }
+  ],
+  "groups": []
+}

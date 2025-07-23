@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "place",
+      "text": "place",
+      "class": "box"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "parallelogram"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "oval"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "box"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "box"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "order",
+      "tail": "place",
+      "label": "produces"
+    },
+    {
+      "head": "name",
+      "tail": "place",
+      "label": "produces"
+    },
+    {
+      "head": "phone",
+      "tail": "place",
+      "label": "connects"
+    },
+    {
+      "head": "phone",
+      "tail": "communication",
+      "label": "manufactures"
+    },
+    {
+      "head": "market",
+      "tail": "name",
+      "label": "builds"
+    },
+    {
+      "head": "phone",
+      "tail": "name",
+      "label": "calls"
+    },
+    {
+      "head": "communication",
+      "tail": "market",
+      "label": "helps"
+    },
+    {
+      "head": "market",
+      "tail": "phone",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

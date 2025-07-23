@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Quit?",
+      "label": "Drag"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Search",
+      "label": "Fling"
+    },
+    {
+      "head": "Search",
+      "tail": "Close",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

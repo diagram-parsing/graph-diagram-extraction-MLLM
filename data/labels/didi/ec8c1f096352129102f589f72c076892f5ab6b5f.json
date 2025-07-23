@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "zip code",
+      "label": "sends"
+    },
+    {
+      "head": "zip code",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "zip code",
+      "label": null
+    }
+  ],
+  "groups": []
+}

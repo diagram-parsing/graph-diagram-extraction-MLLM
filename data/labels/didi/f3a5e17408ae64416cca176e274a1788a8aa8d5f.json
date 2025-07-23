@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "box"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "octagon"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "oval"
+    },
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "oval"
+    },
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "ruby",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "navy blue",
+      "tail": "ruby",
+      "label": null
+    }
+  ],
+  "groups": []
+}

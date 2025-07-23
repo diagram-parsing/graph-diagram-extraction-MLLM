@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "location",
+      "text": "location",
+      "class": "octagon"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "location",
+      "label": "sends"
+    },
+    {
+      "head": "product",
+      "tail": "location",
+      "label": "calls"
+    },
+    {
+      "head": "location",
+      "tail": "street",
+      "label": "replies"
+    },
+    {
+      "head": "name",
+      "tail": "street",
+      "label": "bills"
+    },
+    {
+      "head": "name",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "email",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

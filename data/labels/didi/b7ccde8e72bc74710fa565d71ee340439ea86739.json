@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Move",
+      "label": "Fling"
+    },
+    {
+      "head": "Search",
+      "tail": "Move",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Advance",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

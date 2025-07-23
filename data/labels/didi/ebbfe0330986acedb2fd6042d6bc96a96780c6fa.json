@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Delete",
+      "label": "Top"
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": "Yes"
+    },
+    {
+      "head": "Quit",
+      "tail": "Plug",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Replace",
+      "tail": "Stop",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

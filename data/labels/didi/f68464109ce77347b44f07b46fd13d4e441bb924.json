@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Delete",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Wait",
+      "tail": "Delete",
+      "label": "No"
+    },
+    {
+      "head": "Wait",
+      "tail": "Ready?",
+      "label": "Scroll"
+    },
+    {
+      "head": "Delete",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Wait",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Create",
+      "tail": "Wait",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

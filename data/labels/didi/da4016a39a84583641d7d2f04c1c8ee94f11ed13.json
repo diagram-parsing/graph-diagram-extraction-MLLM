@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "box"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "parallelogram"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "oval"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "sales",
+      "label": "sends"
+    },
+    {
+      "head": "payment",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "sales",
+      "tail": "taxes",
+      "label": "calls"
+    },
+    {
+      "head": "recipient",
+      "tail": "taxes",
+      "label": "replies"
+    },
+    {
+      "head": "payment",
+      "tail": "taxes",
+      "label": "helps"
+    },
+    {
+      "head": "account no",
+      "tail": "payment",
+      "label": "connects"
+    },
+    {
+      "head": "taxes",
+      "tail": "payment",
+      "label": "bills"
+    },
+    {
+      "head": "sales",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

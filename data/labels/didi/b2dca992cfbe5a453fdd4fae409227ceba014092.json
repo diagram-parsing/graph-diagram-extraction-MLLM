@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "parallelogram"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "oval"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark cyan",
+      "text": "dark cyan",
+      "class": "parallelogram"
+    },
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "diamond"
+    },
+    {
+      "id": "dark gray",
+      "text": "dark gray",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "dark gray",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "dark cyan",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "dark gray",
+      "label": null
+    }
+  ],
+  "groups": []
+}

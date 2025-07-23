@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "blue",
+      "text": "blue",
+      "class": "box"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "box"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "octagon"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "blue",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "gold",
+      "label": null
+    }
+  ],
+  "groups": []
+}

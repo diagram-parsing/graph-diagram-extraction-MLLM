@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "box"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "parallelogram"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "box"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "billing",
+      "label": "builds"
+    },
+    {
+      "head": "shipment",
+      "tail": "manager",
+      "label": "connects"
+    },
+    {
+      "head": "street number",
+      "tail": "manager",
+      "label": "helps"
+    },
+    {
+      "head": "manager",
+      "tail": "shipment",
+      "label": "drops"
+    },
+    {
+      "head": "sales",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "sales",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "street number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

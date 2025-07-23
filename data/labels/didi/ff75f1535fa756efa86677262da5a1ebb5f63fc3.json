@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "diamond"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "diamond"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "street",
+      "label": "connects"
+    },
+    {
+      "head": "letter",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "employee",
+      "label": "connects"
+    },
+    {
+      "head": "letter",
+      "tail": "employee",
+      "label": null
+    }
+  ],
+  "groups": []
+}

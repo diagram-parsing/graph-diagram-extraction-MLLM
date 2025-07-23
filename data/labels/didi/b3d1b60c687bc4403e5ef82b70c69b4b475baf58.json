@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "box"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "phone",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "target",
+      "tail": "purchase",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "target",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

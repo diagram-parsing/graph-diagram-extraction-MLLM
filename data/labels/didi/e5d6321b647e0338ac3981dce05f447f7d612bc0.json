@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "oval"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "zip code",
+      "label": "builds"
+    },
+    {
+      "head": "zip code",
+      "tail": "number",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

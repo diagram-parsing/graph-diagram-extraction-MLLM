@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Plug",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Replace",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

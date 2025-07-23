@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "oval"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "customs",
+      "label": null
+    }
+  ],
+  "groups": []
+}

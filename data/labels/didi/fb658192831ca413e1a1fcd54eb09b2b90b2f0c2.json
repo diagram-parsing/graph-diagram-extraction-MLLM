@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Quit?",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Switch",
+      "label": "Tap"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Delete",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Create",
+      "tail": "Delete",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

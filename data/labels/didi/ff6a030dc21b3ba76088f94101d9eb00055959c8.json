@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Reload",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Plug",
+      "tail": "Reload",
+      "label": "Slide"
+    },
+    {
+      "head": "Reload",
+      "tail": "Repair",
+      "label": "Zoom out"
+    }
+  ],
+  "groups": []
+}

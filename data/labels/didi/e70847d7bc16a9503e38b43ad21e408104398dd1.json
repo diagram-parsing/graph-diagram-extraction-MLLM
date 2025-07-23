@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "oval"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "oval"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "last name",
+      "tail": "website",
+      "label": "replies"
+    },
+    {
+      "head": "city",
+      "tail": "phone",
+      "label": "manufactures"
+    },
+    {
+      "head": "last name",
+      "tail": "fees",
+      "label": "produces"
+    },
+    {
+      "head": "website",
+      "tail": "last name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

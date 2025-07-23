@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "place",
+      "text": "place",
+      "class": "box"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "place",
+      "label": "sends"
+    },
+    {
+      "head": "purchase",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "shipment",
+      "label": "drops"
+    },
+    {
+      "head": "first name",
+      "tail": "shipment",
+      "label": null
+    }
+  ],
+  "groups": []
+}

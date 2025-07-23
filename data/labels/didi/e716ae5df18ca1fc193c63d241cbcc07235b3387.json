@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "box"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "number",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "promotion",
+      "label": "builds"
+    },
+    {
+      "head": "number",
+      "tail": "process",
+      "label": null
+    }
+  ],
+  "groups": []
+}

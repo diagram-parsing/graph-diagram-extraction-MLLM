@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "octagon"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Create",
+      "label": "Tap"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Quit",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "oval"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "diamond"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "box"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "last name",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "last name",
+      "label": "processes"
+    },
+    {
+      "head": "name",
+      "tail": "customer",
+      "label": "sends"
+    },
+    {
+      "head": "customer",
+      "tail": "fees",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "fees",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "name",
+      "label": "sends"
+    },
+    {
+      "head": "customer",
+      "tail": "place",
+      "label": null
+    }
+  ],
+  "groups": []
+}

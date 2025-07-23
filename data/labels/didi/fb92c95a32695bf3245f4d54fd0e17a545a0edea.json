@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Close",
+      "label": "Zoom out"
+    }
+  ],
+  "groups": []
+}

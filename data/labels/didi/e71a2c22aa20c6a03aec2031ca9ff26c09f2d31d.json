@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "octagon"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Wait",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Wait",
+      "tail": "Advance",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

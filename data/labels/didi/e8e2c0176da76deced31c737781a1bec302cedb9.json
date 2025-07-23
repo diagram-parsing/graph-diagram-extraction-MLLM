@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "box"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "diamond"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "octagon"
+    },
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "chestnut",
+      "tail": "chestnut",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "chestnut",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

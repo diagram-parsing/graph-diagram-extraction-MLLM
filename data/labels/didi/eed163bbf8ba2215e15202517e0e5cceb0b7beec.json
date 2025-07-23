@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Quit",
+      "label": "Top"
+    },
+    {
+      "head": "Stop",
+      "tail": "Quit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

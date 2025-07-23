@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "parallelogram"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "city",
+      "label": "processes"
+    },
+    {
+      "head": "city",
+      "tail": "documentation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

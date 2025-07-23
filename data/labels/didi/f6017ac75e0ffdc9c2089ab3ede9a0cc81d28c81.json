@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "parallelogram"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "blond",
+      "tail": "dark brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

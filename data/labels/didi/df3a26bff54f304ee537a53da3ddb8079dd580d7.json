@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "oval"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "octagon"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "diamond"
+    },
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "violet",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

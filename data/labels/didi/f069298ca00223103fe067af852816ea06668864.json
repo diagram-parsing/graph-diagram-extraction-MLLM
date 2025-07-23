@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "octagon"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Go",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Repair",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Quit",
+      "label": "Click"
+    },
+    {
+      "head": "Go",
+      "tail": "Repair",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

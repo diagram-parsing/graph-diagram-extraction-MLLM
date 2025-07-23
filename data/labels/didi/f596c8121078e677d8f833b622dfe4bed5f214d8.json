@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Stop",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Reload",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "octagon"
+    },
+    {
+      "id": "rose",
+      "text": "rose",
+      "class": "octagon"
+    },
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "octagon"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "oval"
+    },
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "orange",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "rose",
+      "tail": "eggshell",
+      "label": null
+    }
+  ],
+  "groups": []
+}

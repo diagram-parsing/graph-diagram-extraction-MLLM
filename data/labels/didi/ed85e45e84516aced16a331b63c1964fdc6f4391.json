@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "oval"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "payment",
+      "label": null
+    }
+  ],
+  "groups": []
+}

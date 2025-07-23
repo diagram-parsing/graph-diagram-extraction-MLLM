@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "box"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sender",
+      "tail": "zip code",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

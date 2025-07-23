@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "diamond"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "fees",
+      "label": null
+    }
+  ],
+  "groups": []
+}

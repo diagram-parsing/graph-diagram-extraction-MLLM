@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "diamond"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "octagon"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "magenta",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "azure",
+      "label": null
+    }
+  ],
+  "groups": []
+}

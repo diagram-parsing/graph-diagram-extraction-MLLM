@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "diamond"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sender",
+      "tail": "order",
+      "label": "builds"
+    },
+    {
+      "head": "manager",
+      "tail": "sender",
+      "label": "connects"
+    },
+    {
+      "head": "order",
+      "tail": "sender",
+      "label": "produces"
+    },
+    {
+      "head": "shipment",
+      "tail": "zip code",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

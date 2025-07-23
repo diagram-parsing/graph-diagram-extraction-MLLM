@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "oval"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "parallelogram"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "purchase",
+      "label": "helps"
+    },
+    {
+      "head": "id",
+      "tail": "purchase",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "purchase",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "taxes",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

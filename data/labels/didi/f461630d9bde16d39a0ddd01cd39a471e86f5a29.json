@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "diamond"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "parallelogram"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "diamond"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "communication",
+      "tail": "location",
+      "label": "replies"
+    },
+    {
+      "head": "letter",
+      "tail": "location",
+      "label": "ships"
+    },
+    {
+      "head": "customer",
+      "tail": "letter",
+      "label": "calls"
+    },
+    {
+      "head": "phone",
+      "tail": "customer",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

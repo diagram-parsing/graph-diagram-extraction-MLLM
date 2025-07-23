@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "octagon"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "parallelogram"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "box"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "first name",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "id",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "market",
+      "text": "market",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "parallelogram"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "oval"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "purchase",
+      "tail": "market",
+      "label": "drops"
+    },
+    {
+      "head": "market",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "customer",
+      "label": "bills"
+    },
+    {
+      "head": "market",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "process",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "parallelogram"
+    },
+    {
+      "id": "rose",
+      "text": "rose",
+      "class": "octagon"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "octagon"
+    },
+    {
+      "id": "dark green",
+      "text": "dark green",
+      "class": "octagon"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cyan",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "white",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "charcoal",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "dark green",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "white",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "rose",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "dark green",
+      "tail": "white",
+      "label": null
+    }
+  ],
+  "groups": []
+}

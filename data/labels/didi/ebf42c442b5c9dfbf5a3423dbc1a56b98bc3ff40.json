@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "dark cyan",
+      "text": "dark cyan",
+      "class": "box"
+    },
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "light green",
+      "tail": "dark cyan",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "octagon"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "parallelogram"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "price",
+      "label": "produces"
+    },
+    {
+      "head": "price",
+      "tail": "street",
+      "label": null
+    }
+  ],
+  "groups": []
+}

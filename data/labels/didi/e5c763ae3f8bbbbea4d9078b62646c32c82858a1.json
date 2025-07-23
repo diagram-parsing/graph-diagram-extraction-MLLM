@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Stop",
+      "label": "Pinch"
+    },
+    {
+      "head": "Search",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Ready?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

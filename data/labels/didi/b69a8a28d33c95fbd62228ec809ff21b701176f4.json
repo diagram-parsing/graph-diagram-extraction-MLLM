@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Open",
+      "label": "Tap"
+    },
+    {
+      "head": "Stop",
+      "tail": "Open",
+      "label": "No"
+    },
+    {
+      "head": "Open",
+      "tail": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

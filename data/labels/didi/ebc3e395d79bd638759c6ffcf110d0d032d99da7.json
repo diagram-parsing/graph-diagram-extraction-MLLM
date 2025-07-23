@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "diamond"
+    },
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "oval"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "brown",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "navy blue",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "fuchsia",
+      "label": null
+    }
+  ],
+  "groups": []
+}

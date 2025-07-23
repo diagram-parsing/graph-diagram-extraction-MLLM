@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "market",
+      "text": "market",
+      "class": "octagon"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "address",
+      "tail": "market",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

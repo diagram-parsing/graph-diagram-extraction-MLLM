@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Delete",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Delete",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

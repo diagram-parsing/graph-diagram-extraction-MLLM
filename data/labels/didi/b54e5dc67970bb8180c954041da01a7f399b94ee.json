@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Create",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

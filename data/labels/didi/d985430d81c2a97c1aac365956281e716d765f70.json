@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "box"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "box"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "business",
+      "tail": "payroll",
+      "label": "processes"
+    },
+    {
+      "head": "payroll",
+      "tail": "business",
+      "label": "manufactures"
+    },
+    {
+      "head": "payroll",
+      "tail": "recipient",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Search",
+      "label": "Top"
+    },
+    {
+      "head": "Search",
+      "tail": "Switch",
+      "label": "Yes"
+    },
+    {
+      "head": "Switch",
+      "tail": "Unplug",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

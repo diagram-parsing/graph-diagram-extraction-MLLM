@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "support",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

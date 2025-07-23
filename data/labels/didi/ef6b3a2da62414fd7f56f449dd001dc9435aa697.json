@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "parallelogram"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "billing",
+      "label": "ships"
+    },
+    {
+      "head": "product",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

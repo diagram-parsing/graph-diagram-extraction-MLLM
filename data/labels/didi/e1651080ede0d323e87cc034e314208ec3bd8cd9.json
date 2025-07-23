@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Go",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Reload",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

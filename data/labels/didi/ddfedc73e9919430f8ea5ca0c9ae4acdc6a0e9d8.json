@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "diamond"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "oval"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "target",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "target",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "business",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "target",
+      "label": null
+    }
+  ],
+  "groups": []
+}

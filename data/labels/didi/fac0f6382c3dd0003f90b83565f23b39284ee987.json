@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "box"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "box"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "parallelogram"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "hotline",
+      "label": "helps"
+    },
+    {
+      "head": "hotline",
+      "tail": "help",
+      "label": "sends"
+    },
+    {
+      "head": "promotion",
+      "tail": "city",
+      "label": "manufactures"
+    },
+    {
+      "head": "help",
+      "tail": "help",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

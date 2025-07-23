@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Create",
+      "label": "Drag"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Quit?",
+      "label": "No"
+    },
+    {
+      "head": "Create",
+      "tail": "Ready?",
+      "label": "Scroll"
+    }
+  ],
+  "groups": []
+}

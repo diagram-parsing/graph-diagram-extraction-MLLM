@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "oval"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "parallelogram"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "place",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "email",
+      "label": null
+    }
+  ],
+  "groups": []
+}

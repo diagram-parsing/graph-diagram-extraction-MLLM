@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "documentation",
+      "label": "processes"
+    },
+    {
+      "head": "email",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "letter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

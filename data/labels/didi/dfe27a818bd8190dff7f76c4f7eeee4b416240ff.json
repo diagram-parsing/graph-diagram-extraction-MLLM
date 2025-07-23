@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "address",
+      "text": "address",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "box"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "diamond"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "address",
+      "label": "produces"
+    },
+    {
+      "head": "street number",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "letter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

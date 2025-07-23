@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

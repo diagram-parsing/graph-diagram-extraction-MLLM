@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "octagon"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "process",
+      "tail": "payment",
+      "label": "drops"
+    },
+    {
+      "head": "help",
+      "tail": "payment",
+      "label": "connects"
+    },
+    {
+      "head": "email",
+      "tail": "payment",
+      "label": "connects"
+    },
+    {
+      "head": "help",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "communication",
+      "label": "produces"
+    },
+    {
+      "head": "documentation",
+      "tail": "communication",
+      "label": null
+    }
+  ],
+  "groups": []
+}

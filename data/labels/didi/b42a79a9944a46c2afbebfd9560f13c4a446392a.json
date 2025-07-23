@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "oval"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "billing",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "taxes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

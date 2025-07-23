@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "help",
+      "text": "help",
+      "class": "diamond"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "diamond"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "fees",
+      "tail": "help",
+      "label": null
+    }
+  ],
+  "groups": []
+}

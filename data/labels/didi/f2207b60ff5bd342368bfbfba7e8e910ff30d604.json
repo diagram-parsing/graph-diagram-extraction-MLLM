@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Quit",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

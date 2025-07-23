@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "box"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "payroll",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

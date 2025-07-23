@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Turn off",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

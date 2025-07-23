@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "diamond"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "octagon"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "location",
+      "tail": "street number",
+      "label": "calls"
+    },
+    {
+      "head": "fees",
+      "tail": "street number",
+      "label": "produces"
+    },
+    {
+      "head": "location",
+      "tail": "letter",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Advance",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

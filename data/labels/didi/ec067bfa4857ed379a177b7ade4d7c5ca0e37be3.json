@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "parallelogram"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "diamond"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "ruby",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "chestnut",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "lime",
+      "label": null
+    }
+  ],
+  "groups": []
+}

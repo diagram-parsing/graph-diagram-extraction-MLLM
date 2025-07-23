@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "oval"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "fees",
+      "label": "ships"
+    },
+    {
+      "head": "fees",
+      "tail": "target",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

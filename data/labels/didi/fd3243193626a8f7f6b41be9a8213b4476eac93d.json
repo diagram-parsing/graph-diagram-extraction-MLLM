@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "octagon"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cobalt blue",
+      "tail": "ruby",
+      "label": null
+    }
+  ],
+  "groups": []
+}

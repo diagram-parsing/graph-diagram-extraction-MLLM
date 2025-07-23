@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "green",
+      "text": "green",
+      "class": "oval"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "oval"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cyan",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "green",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "cyan",
+      "label": null
+    }
+  ],
+  "groups": []
+}

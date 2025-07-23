@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "box"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Turn off",
+      "label": "Back"
+    },
+    {
+      "head": "Plug",
+      "tail": "Wait",
+      "label": "Click"
+    },
+    {
+      "head": "Close",
+      "tail": "Wait",
+      "label": "Top"
+    },
+    {
+      "head": "Plug",
+      "tail": "Close",
+      "label": "Pinch"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Close",
+      "label": "Top"
+    },
+    {
+      "head": "Wait",
+      "tail": "Close",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

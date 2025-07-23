@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "diamond"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "diamond"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "auburn",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "apricot",
+      "label": null
+    }
+  ],
+  "groups": []
+}

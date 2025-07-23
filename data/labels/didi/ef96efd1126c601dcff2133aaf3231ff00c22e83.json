@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "oval"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Advance",
+      "label": "Back"
+    },
+    {
+      "head": "Advance",
+      "tail": "Reload",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Reload",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Ready?",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

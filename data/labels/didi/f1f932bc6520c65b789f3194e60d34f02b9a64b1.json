@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "box"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "target",
+      "label": null
+    }
+  ],
+  "groups": []
+}

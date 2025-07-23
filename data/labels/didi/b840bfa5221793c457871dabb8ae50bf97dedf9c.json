@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "diamond"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "evaluation",
+      "tail": "taxes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

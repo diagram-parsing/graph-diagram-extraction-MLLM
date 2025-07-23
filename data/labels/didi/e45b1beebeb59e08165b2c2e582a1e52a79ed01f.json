@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Move",
+      "label": "Pinch"
+    },
+    {
+      "head": "Move",
+      "tail": "Move",
+      "label": "Yes"
+    },
+    {
+      "head": "Move",
+      "tail": "Turn on",
+      "label": "Scroll"
+    },
+    {
+      "head": "Delete",
+      "tail": "Turn on",
+      "label": "Click"
+    },
+    {
+      "head": "Move",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Move",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

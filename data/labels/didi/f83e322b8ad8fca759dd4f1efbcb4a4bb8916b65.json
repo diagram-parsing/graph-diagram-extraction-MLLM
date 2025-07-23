@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Copy",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "octagon"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "communication",
+      "label": "helps"
+    },
+    {
+      "head": "purchase",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "communication",
+      "label": "builds"
+    },
+    {
+      "head": "sender",
+      "tail": "city",
+      "label": "bills"
+    },
+    {
+      "head": "help",
+      "tail": "city",
+      "label": "processes"
+    },
+    {
+      "head": "city",
+      "tail": "sender",
+      "label": "bills"
+    },
+    {
+      "head": "help",
+      "tail": "sender",
+      "label": "builds"
+    },
+    {
+      "head": "communication",
+      "tail": "help",
+      "label": "ships"
+    },
+    {
+      "head": "city",
+      "tail": "help",
+      "label": "produces"
+    },
+    {
+      "head": "sender",
+      "tail": "help",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Wait",
+      "label": null
+    }
+  ],
+  "groups": []
+}

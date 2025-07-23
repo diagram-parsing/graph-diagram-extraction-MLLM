@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "price",
+      "text": "price",
+      "class": "box"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "price",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

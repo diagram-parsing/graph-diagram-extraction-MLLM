@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Go",
+      "label": "Yes"
+    },
+    {
+      "head": "Go",
+      "tail": "Unplug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

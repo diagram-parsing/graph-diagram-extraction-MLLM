@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Close",
+      "tail": "Search",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

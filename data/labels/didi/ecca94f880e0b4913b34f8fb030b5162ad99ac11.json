@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Search",
+      "label": "Scroll"
+    },
+    {
+      "head": "Copy",
+      "tail": "Search",
+      "label": "Pinch"
+    },
+    {
+      "head": "Search",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Copy",
+      "label": "Top"
+    },
+    {
+      "head": "Search",
+      "tail": "Search",
+      "label": "Drag"
+    },
+    {
+      "head": "Copy",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

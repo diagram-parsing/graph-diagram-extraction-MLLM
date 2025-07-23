@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Stop",
+      "tail": "Ready?",
+      "label": "Fling"
+    },
+    {
+      "head": "Quit",
+      "tail": "Ready?",
+      "label": "Top"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

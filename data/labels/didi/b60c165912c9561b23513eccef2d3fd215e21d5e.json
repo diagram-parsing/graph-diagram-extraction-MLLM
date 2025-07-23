@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Unplug",
+      "label": "Back"
+    },
+    {
+      "head": "Repair",
+      "tail": "Unplug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

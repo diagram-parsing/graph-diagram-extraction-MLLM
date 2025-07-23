@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "box"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "octagon"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "parallelogram"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "fees",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "fees",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "fees",
+      "label": null
+    },
+    {
+      "head": "sales",
+      "tail": "fees",
+      "label": "helps"
+    },
+    {
+      "head": "support",
+      "tail": "first name",
+      "label": "builds"
+    },
+    {
+      "head": "support",
+      "tail": "first name",
+      "label": "replies"
+    },
+    {
+      "head": "first name",
+      "tail": "support",
+      "label": "produces"
+    },
+    {
+      "head": "support",
+      "tail": "employee",
+      "label": null
+    }
+  ],
+  "groups": []
+}

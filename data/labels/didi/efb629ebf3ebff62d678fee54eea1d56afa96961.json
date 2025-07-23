@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "diamond"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer care",
+      "tail": "billing",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "box"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "oval"
+    },
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "diamond"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "diamond"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "magenta",
+      "tail": "navy blue",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "navy blue",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "navy blue",
+      "tail": "purple",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "auburn",
+      "label": null
+    }
+  ],
+  "groups": []
+}

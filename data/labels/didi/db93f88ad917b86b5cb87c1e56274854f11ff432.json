@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "diamond"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "street",
+      "label": "connects"
+    },
+    {
+      "head": "price",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "location",
+      "label": "bills"
+    },
+    {
+      "head": "price",
+      "tail": "location",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "oval"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "navy blue",
+      "tail": "bone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

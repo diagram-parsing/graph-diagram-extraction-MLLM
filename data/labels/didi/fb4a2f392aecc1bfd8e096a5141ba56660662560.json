@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "parallelogram"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "account no",
+      "label": "calls"
+    },
+    {
+      "head": "city",
+      "tail": "email",
+      "label": "calls"
+    },
+    {
+      "head": "city",
+      "tail": "promotion",
+      "label": "ships"
+    },
+    {
+      "head": "promotion",
+      "tail": "city",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

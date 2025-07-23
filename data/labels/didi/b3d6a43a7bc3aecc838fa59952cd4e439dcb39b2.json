@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "oval"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "gray",
+      "tail": "beige",
+      "label": null
+    }
+  ],
+  "groups": []
+}

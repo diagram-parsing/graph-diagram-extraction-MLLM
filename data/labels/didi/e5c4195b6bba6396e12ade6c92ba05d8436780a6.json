@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "octagon"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Turn on",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Switch",
+      "label": "Pinch"
+    },
+    {
+      "head": "Advance",
+      "tail": "Switch",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Move",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Plug",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

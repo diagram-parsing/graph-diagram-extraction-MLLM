@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "oval"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer care",
+      "tail": "evaluation",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "evaluation",
+      "tail": "customer care",
+      "label": null
+    }
+  ],
+  "groups": []
+}

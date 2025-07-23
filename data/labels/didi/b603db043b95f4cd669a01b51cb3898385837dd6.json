@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "parallelogram"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "oval"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chocolate",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "chocolate",
+      "label": null
+    }
+  ],
+  "groups": []
+}

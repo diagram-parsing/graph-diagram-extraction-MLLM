@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "diamond"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chocolate",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "bone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

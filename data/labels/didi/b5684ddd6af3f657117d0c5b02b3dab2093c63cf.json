@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "oval"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "parallelogram"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "sender",
+      "label": "calls"
+    },
+    {
+      "head": "communication",
+      "tail": "first name",
+      "label": "bills"
+    },
+    {
+      "head": "first name",
+      "tail": "manager",
+      "label": "calls"
+    },
+    {
+      "head": "first name",
+      "tail": "help",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

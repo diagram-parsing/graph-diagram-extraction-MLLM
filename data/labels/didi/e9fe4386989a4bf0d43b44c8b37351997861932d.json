@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "box"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "box"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "lime",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "bubble gum",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Turn off",
+      "label": null
+    }
+  ],
+  "groups": []
+}

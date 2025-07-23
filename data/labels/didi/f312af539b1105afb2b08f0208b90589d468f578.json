@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "octagon"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sales",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "place",
+      "label": null
+    },
+    {
+      "head": "business",
+      "tail": "place",
+      "label": "replies"
+    },
+    {
+      "head": "business",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "business",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "place",
+      "tail": "business",
+      "label": null
+    }
+  ],
+  "groups": []
+}

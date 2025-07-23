@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "parallelogram"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "beige",
+      "tail": "chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

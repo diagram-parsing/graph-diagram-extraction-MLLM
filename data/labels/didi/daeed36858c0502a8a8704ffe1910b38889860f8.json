@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "diamond"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "support",
+      "label": "manufactures"
+    },
+    {
+      "head": "website",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "location",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "location",
+      "label": "helps"
+    }
+  ],
+  "groups": []
+}

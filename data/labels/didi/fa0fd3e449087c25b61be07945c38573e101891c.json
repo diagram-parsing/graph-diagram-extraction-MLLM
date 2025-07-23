@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Reload",
+      "label": "Click"
+    },
+    {
+      "head": "Create",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

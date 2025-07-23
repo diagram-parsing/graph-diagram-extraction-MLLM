@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "box"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "octagon"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "letter",
+      "label": "manufactures"
+    },
+    {
+      "head": "sender",
+      "tail": "letter",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "sender",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

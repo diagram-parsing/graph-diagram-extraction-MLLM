@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "diamond"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "box"
+    },
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "box"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "lime",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "brown",
+      "tail": "azure",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "parallelogram"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "letter",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "city",
+      "label": null
+    }
+  ],
+  "groups": []
+}

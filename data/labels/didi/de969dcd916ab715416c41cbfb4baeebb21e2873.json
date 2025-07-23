@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "octagon"
+    },
+    {
+      "id": "rose",
+      "text": "rose",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "box"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "rose",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "beige",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "rose",
+      "label": null
+    }
+  ],
+  "groups": []
+}

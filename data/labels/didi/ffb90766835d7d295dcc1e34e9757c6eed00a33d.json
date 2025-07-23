@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "box"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "oval"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "ruby",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "ruby",
+      "label": null
+    }
+  ],
+  "groups": []
+}

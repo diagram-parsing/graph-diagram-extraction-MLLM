@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Plug",
+      "label": "No"
+    },
+    {
+      "head": "Plug",
+      "tail": "Plug",
+      "label": "Tap"
+    },
+    {
+      "head": "Plug",
+      "tail": "Move",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

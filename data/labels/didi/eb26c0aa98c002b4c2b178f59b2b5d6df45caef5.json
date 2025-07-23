@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "octagon"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "last name",
+      "tail": "customer",
+      "label": "ships"
+    },
+    {
+      "head": "customer",
+      "tail": "street number",
+      "label": "builds"
+    },
+    {
+      "head": "email",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "last name",
+      "label": "connects"
+    },
+    {
+      "head": "street number",
+      "tail": "last name",
+      "label": "sends"
+    },
+    {
+      "head": "customer",
+      "tail": "email",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

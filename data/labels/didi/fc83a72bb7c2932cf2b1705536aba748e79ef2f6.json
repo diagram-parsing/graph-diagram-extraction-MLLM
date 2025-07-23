@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "diamond"
+    },
+    {
+      "id": "dark green",
+      "text": "dark green",
+      "class": "octagon"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "dark green",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "chestnut",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

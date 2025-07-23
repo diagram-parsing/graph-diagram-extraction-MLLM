@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Open",
+      "label": null
+    }
+  ],
+  "groups": []
+}

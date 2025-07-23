@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "octagon"
+    },
+    {
+      "id": "light blue",
+      "text": "light blue",
+      "class": "oval"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "box"
+    },
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "light blue",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "light blue",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "light blue",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "eggshell",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "diamond"
+    },
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "box"
+    },
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "parallelogram"
+    },
+    {
+      "id": "green",
+      "text": "green",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "charcoal",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "green",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "orange",
+      "tail": "green",
+      "label": null
+    }
+  ],
+  "groups": []
+}

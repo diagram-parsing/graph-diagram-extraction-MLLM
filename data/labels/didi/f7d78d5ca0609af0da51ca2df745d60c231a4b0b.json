@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Switch",
+      "label": null
+    }
+  ],
+  "groups": []
+}

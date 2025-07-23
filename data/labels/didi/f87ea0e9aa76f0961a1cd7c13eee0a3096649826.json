@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "octagon"
+    },
+    {
+      "id": "dark green",
+      "text": "dark green",
+      "class": "octagon"
+    },
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "parallelogram"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark green",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "dark green",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "gray",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "sender",
+      "label": null
+    }
+  ],
+  "groups": []
+}

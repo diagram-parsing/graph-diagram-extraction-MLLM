@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "oval"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "oval"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "process",
+      "tail": "sales",
+      "label": "manufactures"
+    },
+    {
+      "head": "email",
+      "tail": "sales",
+      "label": "bills"
+    },
+    {
+      "head": "price",
+      "tail": "sales",
+      "label": "connects"
+    },
+    {
+      "head": "sales",
+      "tail": "email",
+      "label": "builds"
+    },
+    {
+      "head": "sales",
+      "tail": "email",
+      "label": "drops"
+    },
+    {
+      "head": "sales",
+      "tail": "price",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

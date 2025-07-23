@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "parallelogram"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "bank",
+      "label": "ships"
+    },
+    {
+      "head": "email",
+      "tail": "order",
+      "label": "bills"
+    },
+    {
+      "head": "manager",
+      "tail": "email",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

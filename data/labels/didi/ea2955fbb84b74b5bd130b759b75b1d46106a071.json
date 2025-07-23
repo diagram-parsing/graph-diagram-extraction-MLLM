@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Open",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Advance",
+      "label": "Tap"
+    },
+    {
+      "head": "Plug",
+      "tail": "Quit",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

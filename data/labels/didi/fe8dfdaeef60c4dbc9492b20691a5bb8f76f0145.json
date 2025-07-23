@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "diamond"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bone",
+      "tail": "auburn",
+      "label": null
+    }
+  ],
+  "groups": []
+}

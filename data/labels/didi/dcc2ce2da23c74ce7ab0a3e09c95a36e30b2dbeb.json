@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "parallelogram"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "bank",
+      "label": "calls"
+    },
+    {
+      "head": "payment",
+      "tail": "purchase",
+      "label": null
+    }
+  ],
+  "groups": []
+}

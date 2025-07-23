@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "oval"
+    },
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "eggshell",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "fuchsia",
+      "label": null
+    }
+  ],
+  "groups": []
+}

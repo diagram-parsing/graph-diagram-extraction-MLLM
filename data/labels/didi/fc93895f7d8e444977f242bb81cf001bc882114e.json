@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Quit?",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Create",
+      "tail": "Quit?",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Replace",
+      "tail": "Search",
+      "label": "Tap"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Create",
+      "label": "Scroll"
+    },
+    {
+      "head": "Replace",
+      "tail": "Create",
+      "label": "Fling"
+    },
+    {
+      "head": "Create",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Resume",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

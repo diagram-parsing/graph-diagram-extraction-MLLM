@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer",
+      "tail": "number",
+      "label": "replies"
+    },
+    {
+      "head": "documentation",
+      "tail": "customer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

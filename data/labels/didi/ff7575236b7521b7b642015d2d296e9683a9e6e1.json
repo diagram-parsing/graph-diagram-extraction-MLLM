@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Delete",
+      "label": "Pinch"
+    },
+    {
+      "head": "Delete",
+      "tail": "Replace",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

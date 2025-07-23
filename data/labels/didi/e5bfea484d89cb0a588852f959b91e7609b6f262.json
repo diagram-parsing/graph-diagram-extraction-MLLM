@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Switch",
+      "label": "Drag"
+    }
+  ],
+  "groups": []
+}

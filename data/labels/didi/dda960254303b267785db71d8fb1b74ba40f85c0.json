@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "name",
+      "text": "name",
+      "class": "diamond"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "diamond"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "box"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "price",
+      "label": null
+    },
+    {
+      "head": "employee",
+      "tail": "price",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "employee",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "documentation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

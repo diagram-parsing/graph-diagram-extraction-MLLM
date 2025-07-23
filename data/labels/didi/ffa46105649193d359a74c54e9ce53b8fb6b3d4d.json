@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "parallelogram"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "octagon"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "box"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "octagon"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "billing",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "purchase",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "billing",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "billing",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "location",
+      "label": "drops"
+    },
+    {
+      "head": "billing",
+      "tail": "phone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

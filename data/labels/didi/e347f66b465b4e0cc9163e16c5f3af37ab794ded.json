@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "octagon"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "dark chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

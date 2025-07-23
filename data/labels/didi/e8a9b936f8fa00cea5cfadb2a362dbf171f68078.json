@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Quit",
+      "label": "Pinch"
+    },
+    {
+      "head": "Quit",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Advance",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

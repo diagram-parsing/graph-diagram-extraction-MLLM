@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "box"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cyan",
+      "tail": "gray",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Delete",
+      "label": "No"
+    },
+    {
+      "head": "Resume",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Delete",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

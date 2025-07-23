@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "box"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "bank",
+      "tail": "target",
+      "label": "processes"
+    },
+    {
+      "head": "customer care",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "target",
+      "tail": "customer care",
+      "label": null
+    }
+  ],
+  "groups": []
+}

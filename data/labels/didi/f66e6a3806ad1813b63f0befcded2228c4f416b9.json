@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "first name",
+      "tail": "account no",
+      "label": "processes"
+    },
+    {
+      "head": "account no",
+      "tail": "promotion",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

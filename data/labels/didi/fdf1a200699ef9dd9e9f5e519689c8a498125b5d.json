@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "place",
+      "tail": "location",
+      "label": null
+    }
+  ],
+  "groups": []
+}

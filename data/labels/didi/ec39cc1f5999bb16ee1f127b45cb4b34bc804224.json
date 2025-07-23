@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Repair",
+      "label": "Scroll"
+    },
+    {
+      "head": "Resume",
+      "tail": "Unplug",
+      "label": "Top"
+    },
+    {
+      "head": "Create",
+      "tail": "Unplug",
+      "label": "Fling"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Create",
+      "label": "No"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Reload",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

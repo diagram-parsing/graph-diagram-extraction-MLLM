@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "oval"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "oval"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "diamond"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "target",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "target",
+      "label": null
+    }
+  ],
+  "groups": []
+}

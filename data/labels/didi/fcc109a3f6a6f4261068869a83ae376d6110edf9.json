@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "box"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "employee",
+      "tail": "product",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

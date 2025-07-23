@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "box"
+    },
+    {
+      "id": "dark red",
+      "text": "dark red",
+      "class": "box"
+    },
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark red",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "purple",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "dark red",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "purple",
+      "label": null
+    }
+  ],
+  "groups": []
+}

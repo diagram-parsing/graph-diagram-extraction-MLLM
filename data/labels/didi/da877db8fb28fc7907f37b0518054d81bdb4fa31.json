@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "payment",
+      "tail": "hotline",
+      "label": "calls"
+    },
+    {
+      "head": "promotion",
+      "tail": "hotline",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

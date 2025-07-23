@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "parallelogram"
+    },
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "teal",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "pink",
+      "tail": "teal",
+      "label": null
+    }
+  ],
+  "groups": []
+}

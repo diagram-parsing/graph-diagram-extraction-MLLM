@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Create",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

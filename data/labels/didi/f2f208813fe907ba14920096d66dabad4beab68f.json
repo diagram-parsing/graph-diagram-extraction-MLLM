@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

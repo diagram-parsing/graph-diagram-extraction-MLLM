@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "diamond"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "octagon"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "saffron",
+      "label": null
+    }
+  ],
+  "groups": []
+}

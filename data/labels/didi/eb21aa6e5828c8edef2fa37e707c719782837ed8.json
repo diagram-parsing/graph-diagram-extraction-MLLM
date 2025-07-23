@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "diamond"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "diamond"
+    },
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "brown",
+      "tail": "magenta",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "navy blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

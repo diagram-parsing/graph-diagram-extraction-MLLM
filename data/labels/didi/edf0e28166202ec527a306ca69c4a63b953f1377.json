@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "oval"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer",
+      "tail": "target",
+      "label": "calls"
+    },
+    {
+      "head": "customer",
+      "tail": "taxes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

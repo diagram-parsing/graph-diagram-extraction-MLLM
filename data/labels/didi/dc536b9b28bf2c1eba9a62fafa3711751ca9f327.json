@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "box"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "fuchsia",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

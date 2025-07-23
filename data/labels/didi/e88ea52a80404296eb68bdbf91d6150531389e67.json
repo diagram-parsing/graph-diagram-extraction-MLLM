@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "dark cyan",
+      "text": "dark cyan",
+      "class": "octagon"
+    },
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "oval"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "octagon"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "orange",
+      "tail": "dark cyan",
+      "label": null
+    },
+    {
+      "head": "dark cyan",
+      "tail": "magenta",
+      "label": null
+    },
+    {
+      "head": "orange",
+      "tail": "ruby",
+      "label": null
+    }
+  ],
+  "groups": []
+}

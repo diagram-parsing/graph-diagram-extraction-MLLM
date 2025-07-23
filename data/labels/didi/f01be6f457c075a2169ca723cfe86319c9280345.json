@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "box"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "sales",
+      "label": "connects"
+    },
+    {
+      "head": "payroll",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "communication",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "email",
+      "label": "processes"
+    },
+    {
+      "head": "payroll",
+      "tail": "manager",
+      "label": null
+    }
+  ],
+  "groups": []
+}

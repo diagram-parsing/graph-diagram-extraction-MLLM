@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Advance",
+      "label": "Scroll"
+    },
+    {
+      "head": "Create",
+      "tail": "Unplug",
+      "label": "Top"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Unplug",
+      "label": "Click"
+    },
+    {
+      "head": "Create",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Open",
+      "label": "Fling"
+    },
+    {
+      "head": "Advance",
+      "tail": "Unplug",
+      "label": "Back"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Unplug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

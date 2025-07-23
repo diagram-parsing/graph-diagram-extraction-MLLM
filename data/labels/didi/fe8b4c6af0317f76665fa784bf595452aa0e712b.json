@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "oval"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "box"
+    },
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "parallelogram"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "box"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "fuchsia",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "purple",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "fuchsia",
+      "label": null
+    }
+  ],
+  "groups": []
+}

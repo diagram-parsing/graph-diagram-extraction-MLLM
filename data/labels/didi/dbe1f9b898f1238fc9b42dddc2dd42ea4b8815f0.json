@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "box"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "communication",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "communication",
+      "tail": "feedback",
+      "label": null
+    }
+  ],
+  "groups": []
+}

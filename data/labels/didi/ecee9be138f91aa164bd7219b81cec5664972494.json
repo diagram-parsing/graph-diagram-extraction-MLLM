@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "box"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

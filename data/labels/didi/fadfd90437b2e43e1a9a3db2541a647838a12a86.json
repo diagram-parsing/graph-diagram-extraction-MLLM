@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "first name",
+      "label": "replies"
+    },
+    {
+      "head": "email",
+      "tail": "shipment",
+      "label": "calls"
+    },
+    {
+      "head": "shipment",
+      "tail": "email",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "parallelogram"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "target",
+      "label": "produces"
+    },
+    {
+      "head": "customer",
+      "tail": "manager",
+      "label": "ships"
+    },
+    {
+      "head": "website",
+      "tail": "manager",
+      "label": "sends"
+    },
+    {
+      "head": "market",
+      "tail": "manager",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

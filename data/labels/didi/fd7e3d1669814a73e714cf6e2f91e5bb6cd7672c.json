@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Wait",
+      "label": "Drag"
+    },
+    {
+      "head": "Wait",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Advance",
+      "label": "Back"
+    },
+    {
+      "head": "Wait",
+      "tail": "Switch",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Repair",
+      "tail": "Switch",
+      "label": "Slide"
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit?",
+      "label": "Slide"
+    },
+    {
+      "head": "Open",
+      "tail": "Quit?",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

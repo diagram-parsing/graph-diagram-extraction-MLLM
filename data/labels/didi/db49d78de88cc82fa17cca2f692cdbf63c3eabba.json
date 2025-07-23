@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "oval"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "diamond"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sales",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "target",
+      "label": "manufactures"
+    },
+    {
+      "head": "target",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "street",
+      "tail": "bank",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

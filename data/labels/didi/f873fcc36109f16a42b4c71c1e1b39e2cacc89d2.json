@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "box"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

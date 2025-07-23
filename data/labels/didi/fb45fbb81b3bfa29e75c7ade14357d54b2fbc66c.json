@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "box"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "diamond"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "price",
+      "tail": "website",
+      "label": "builds"
+    },
+    {
+      "head": "website",
+      "tail": "taxes",
+      "label": "builds"
+    },
+    {
+      "head": "feedback",
+      "tail": "payroll",
+      "label": "replies"
+    },
+    {
+      "head": "payroll",
+      "tail": "payroll",
+      "label": "processes"
+    },
+    {
+      "head": "website",
+      "tail": "payroll",
+      "label": "manufactures"
+    },
+    {
+      "head": "website",
+      "tail": "price",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

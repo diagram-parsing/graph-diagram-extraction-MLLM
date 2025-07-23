@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "box"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "hotline",
+      "label": "sends"
+    },
+    {
+      "head": "bank",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "octagon"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "oval"
+    },
+    {
+      "id": "light blue",
+      "text": "light blue",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "magenta",
+      "tail": "chestnut",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "light blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

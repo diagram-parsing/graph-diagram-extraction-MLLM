@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "octagon"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "oval"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "parallelogram"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "process",
+      "tail": "first name",
+      "label": "sends"
+    },
+    {
+      "head": "process",
+      "tail": "letter",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

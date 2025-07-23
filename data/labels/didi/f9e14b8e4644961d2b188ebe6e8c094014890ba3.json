@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "oval"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "phone",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "phone",
+      "label": "replies"
+    },
+    {
+      "head": "help",
+      "tail": "phone",
+      "label": "bills"
+    },
+    {
+      "head": "help",
+      "tail": "shipment",
+      "label": "helps"
+    },
+    {
+      "head": "phone",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "help",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

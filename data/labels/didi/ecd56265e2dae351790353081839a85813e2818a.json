@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "oval"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "parallelogram"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "diamond"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "number",
+      "tail": "purchase",
+      "label": null
+    },
+    {
+      "head": "evaluation",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "business",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "box"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "support",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "zip code",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "octagon"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Replace",
+      "label": null
+    }
+  ],
+  "groups": []
+}

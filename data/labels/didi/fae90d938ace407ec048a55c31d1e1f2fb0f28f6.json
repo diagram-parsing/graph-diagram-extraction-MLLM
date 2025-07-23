@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "octagon"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "box"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "box"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sender",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "market",
+      "label": null
+    }
+  ],
+  "groups": []
+}

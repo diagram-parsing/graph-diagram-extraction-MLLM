@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

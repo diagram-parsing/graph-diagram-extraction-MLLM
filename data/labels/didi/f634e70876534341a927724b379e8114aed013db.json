@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "octagon"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "oval"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "saffron",
+      "label": null
+    }
+  ],
+  "groups": []
+}

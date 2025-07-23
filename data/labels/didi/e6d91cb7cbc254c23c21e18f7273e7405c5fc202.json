@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "octagon"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "oval"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "diamond"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "red",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "red",
+      "tail": "blond",
+      "label": null
+    },
+    {
+      "head": "brown",
+      "tail": "violet",
+      "label": null
+    }
+  ],
+  "groups": []
+}

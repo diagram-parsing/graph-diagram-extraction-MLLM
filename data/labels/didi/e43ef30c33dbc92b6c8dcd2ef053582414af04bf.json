@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "oval"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "diamond"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "diamond"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "box"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "place",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "place",
+      "label": "processes"
+    },
+    {
+      "head": "id",
+      "tail": "process",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "id",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

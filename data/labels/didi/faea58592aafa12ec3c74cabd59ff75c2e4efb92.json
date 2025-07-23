@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Advance",
+      "label": "Fling"
+    },
+    {
+      "head": "Plug",
+      "tail": "Advance",
+      "label": "Click"
+    },
+    {
+      "head": "Replace",
+      "tail": "Advance",
+      "label": "Tap"
+    },
+    {
+      "head": "Advance",
+      "tail": "Repair",
+      "label": "Yes"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Repair",
+      "label": "Click"
+    },
+    {
+      "head": "Delete",
+      "tail": "Repair",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Delete",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

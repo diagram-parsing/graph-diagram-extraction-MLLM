@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Open",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

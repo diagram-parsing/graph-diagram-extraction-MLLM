@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Close",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

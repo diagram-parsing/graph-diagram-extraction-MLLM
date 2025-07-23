@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "communication",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

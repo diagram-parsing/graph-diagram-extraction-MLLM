@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "diamond"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "oval"
+    },
+    {
+      "id": "dark cyan",
+      "text": "dark cyan",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark cyan",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "dark cyan",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "dark cyan",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "dark chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

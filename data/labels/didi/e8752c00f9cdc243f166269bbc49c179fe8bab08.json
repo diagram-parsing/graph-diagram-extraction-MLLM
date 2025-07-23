@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Plug",
+      "tail": "Move",
+      "label": "Scroll"
+    },
+    {
+      "head": "Delete",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

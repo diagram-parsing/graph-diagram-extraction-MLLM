@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Delete",
+      "label": "No"
+    },
+    {
+      "head": "Switch",
+      "tail": "Open",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Open",
+      "tail": "Switch",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

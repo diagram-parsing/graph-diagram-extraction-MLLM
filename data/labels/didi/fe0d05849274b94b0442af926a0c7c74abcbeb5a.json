@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Wait",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Plug",
+      "label": "Scroll"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Turn on",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Turn on",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

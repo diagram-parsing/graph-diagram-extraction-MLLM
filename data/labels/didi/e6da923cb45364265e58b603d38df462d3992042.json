@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "order",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "street",
+      "label": null
+    }
+  ],
+  "groups": []
+}

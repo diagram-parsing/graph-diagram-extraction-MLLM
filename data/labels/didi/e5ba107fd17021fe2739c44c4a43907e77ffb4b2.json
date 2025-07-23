@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "target",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Go",
+      "label": "Yes"
+    },
+    {
+      "head": "Wait",
+      "tail": "Go",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Resume",
+      "tail": "Quit?",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

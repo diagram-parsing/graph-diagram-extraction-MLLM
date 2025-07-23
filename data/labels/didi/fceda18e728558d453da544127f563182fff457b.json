@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Turn on",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Open",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Move",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Open",
+      "label": "Drag"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Open",
+      "label": "Click"
+    },
+    {
+      "head": "Open",
+      "tail": "Open",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Move",
+      "tail": "Open",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

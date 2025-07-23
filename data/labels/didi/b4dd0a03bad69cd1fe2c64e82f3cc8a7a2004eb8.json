@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Resume",
+      "label": "Tap"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Unplug",
+      "label": "Scroll"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Turn off",
+      "label": null
+    }
+  ],
+  "groups": []
+}

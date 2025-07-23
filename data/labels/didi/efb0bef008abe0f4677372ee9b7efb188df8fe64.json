@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "octagon"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "box"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "box"
+    },
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "octagon"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "silver",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "blond",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "bronze",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "bronze",
+      "label": null
+    }
+  ],
+  "groups": []
+}

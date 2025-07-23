@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "oval"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "location",
+      "label": "processes"
+    },
+    {
+      "head": "manager",
+      "tail": "location",
+      "label": "helps"
+    }
+  ],
+  "groups": []
+}

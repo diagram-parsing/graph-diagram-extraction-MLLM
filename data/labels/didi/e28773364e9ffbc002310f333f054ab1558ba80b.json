@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "box"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "id",
+      "label": "drops"
+    },
+    {
+      "head": "customer",
+      "tail": "feedback",
+      "label": "builds"
+    },
+    {
+      "head": "feedback",
+      "tail": "documentation",
+      "label": "produces"
+    },
+    {
+      "head": "customer",
+      "tail": "street number",
+      "label": "replies"
+    },
+    {
+      "head": "feedback",
+      "tail": "street number",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

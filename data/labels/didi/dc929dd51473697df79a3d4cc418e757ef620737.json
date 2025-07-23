@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Stop",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Stop",
+      "label": "Pinch"
+    },
+    {
+      "head": "Repair",
+      "tail": "Stop",
+      "label": "Slide"
+    },
+    {
+      "head": "Go",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Repair",
+      "label": null
+    }
+  ],
+  "groups": []
+}

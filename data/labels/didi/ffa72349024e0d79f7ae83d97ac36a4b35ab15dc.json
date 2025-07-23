@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "box"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "diamond"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "blond",
+      "tail": "beige",
+      "label": null
+    },
+    {
+      "head": "blond",
+      "tail": "lime",
+      "label": null
+    }
+  ],
+  "groups": []
+}

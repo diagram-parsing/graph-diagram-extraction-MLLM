@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Open",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

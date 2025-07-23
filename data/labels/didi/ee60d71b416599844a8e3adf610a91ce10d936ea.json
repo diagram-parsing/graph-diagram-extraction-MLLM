@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "box"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "box"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "silver",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "gray",
+      "tail": "silver",
+      "label": null
+    }
+  ],
+  "groups": []
+}

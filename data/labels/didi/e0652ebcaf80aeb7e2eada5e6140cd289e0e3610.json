@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Stop",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Stop",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Advance",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Switch",
+      "tail": "Turn on",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Turn on",
+      "label": null
+    }
+  ],
+  "groups": []
+}

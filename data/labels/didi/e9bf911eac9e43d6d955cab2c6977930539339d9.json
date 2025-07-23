@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "market",
+      "tail": "phone",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

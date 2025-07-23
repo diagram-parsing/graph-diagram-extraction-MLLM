@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "octagon"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "oval"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "taxes",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "taxes",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

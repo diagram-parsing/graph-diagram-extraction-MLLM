@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Unplug",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

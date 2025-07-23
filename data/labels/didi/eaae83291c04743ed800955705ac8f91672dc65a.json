@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "box"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "sender",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

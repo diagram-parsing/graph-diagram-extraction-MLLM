@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "documentation",
+      "tail": "fees",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

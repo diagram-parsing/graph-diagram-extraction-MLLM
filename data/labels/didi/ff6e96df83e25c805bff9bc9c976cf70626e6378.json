@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "oval"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Turn off",
+      "label": "Top"
+    },
+    {
+      "head": "Replace",
+      "tail": "Turn off",
+      "label": "Back"
+    },
+    {
+      "head": "Switch",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Turn off",
+      "label": "Fling"
+    },
+    {
+      "head": "Create",
+      "tail": "Replace",
+      "label": "Scroll"
+    },
+    {
+      "head": "Create",
+      "tail": "Switch",
+      "label": "Tap"
+    },
+    {
+      "head": "Replace",
+      "tail": "Switch",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

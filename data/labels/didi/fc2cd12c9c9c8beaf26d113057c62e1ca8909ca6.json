@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "process",
+      "label": null
+    }
+  ],
+  "groups": []
+}

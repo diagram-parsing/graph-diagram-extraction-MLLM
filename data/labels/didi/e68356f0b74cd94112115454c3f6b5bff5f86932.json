@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "octagon"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "oval"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "oval"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "address",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "address",
+      "label": "sends"
+    },
+    {
+      "head": "billing",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "manager",
+      "label": "processes"
+    },
+    {
+      "head": "address",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

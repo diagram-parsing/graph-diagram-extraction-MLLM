@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "feedback",
+      "label": null
+    }
+  ],
+  "groups": []
+}

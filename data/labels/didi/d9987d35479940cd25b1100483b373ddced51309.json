@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Unplug",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

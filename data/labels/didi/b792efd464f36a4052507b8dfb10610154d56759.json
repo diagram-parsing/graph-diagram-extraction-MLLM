@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "taxes",
+      "label": "helps"
+    },
+    {
+      "head": "id",
+      "tail": "letter",
+      "label": "connects"
+    },
+    {
+      "head": "taxes",
+      "tail": "letter",
+      "label": "manufactures"
+    },
+    {
+      "head": "account no",
+      "tail": "letter",
+      "label": "drops"
+    },
+    {
+      "head": "letter",
+      "tail": "account no",
+      "label": "manufactures"
+    },
+    {
+      "head": "letter",
+      "tail": "fees",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

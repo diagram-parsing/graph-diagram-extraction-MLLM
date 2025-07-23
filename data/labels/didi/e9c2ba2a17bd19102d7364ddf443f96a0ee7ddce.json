@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "oval"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "octagon"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "diamond"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "artichoke",
+      "label": null
+    }
+  ],
+  "groups": []
+}

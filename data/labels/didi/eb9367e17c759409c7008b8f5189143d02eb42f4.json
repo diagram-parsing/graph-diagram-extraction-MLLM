@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

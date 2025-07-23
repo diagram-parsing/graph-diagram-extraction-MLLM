@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Quit?",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

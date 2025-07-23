@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "box"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "diamond"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "phone",
+      "label": "replies"
+    },
+    {
+      "head": "first name",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "customer care",
+      "label": "processes"
+    },
+    {
+      "head": "promotion",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "price",
+      "label": null
+    }
+  ],
+  "groups": []
+}

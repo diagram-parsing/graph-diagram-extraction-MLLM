@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Create",
+      "label": null
+    }
+  ],
+  "groups": []
+}

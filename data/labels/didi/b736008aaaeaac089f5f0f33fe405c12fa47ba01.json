@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "oval"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "parallelogram"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "octagon"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "diamond"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "diamond"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "light brown",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "white",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

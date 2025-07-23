@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "oval"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "diamond"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "account no",
+      "label": "bills"
+    },
+    {
+      "head": "city",
+      "tail": "account no",
+      "label": "manufactures"
+    },
+    {
+      "head": "product",
+      "tail": "account no",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

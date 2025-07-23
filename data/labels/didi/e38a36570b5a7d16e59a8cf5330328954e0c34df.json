@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Resume",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

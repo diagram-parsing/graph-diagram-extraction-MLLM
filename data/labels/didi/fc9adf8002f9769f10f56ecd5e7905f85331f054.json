@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "address",
+      "text": "address",
+      "class": "octagon"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "oval"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "address",
+      "label": "replies"
+    },
+    {
+      "head": "recipient",
+      "tail": "address",
+      "label": "replies"
+    },
+    {
+      "head": "price",
+      "tail": "feedback",
+      "label": "helps"
+    },
+    {
+      "head": "recipient",
+      "tail": "feedback",
+      "label": "calls"
+    },
+    {
+      "head": "sales",
+      "tail": "feedback",
+      "label": "ships"
+    },
+    {
+      "head": "address",
+      "tail": "price",
+      "label": "manufactures"
+    },
+    {
+      "head": "recipient",
+      "tail": "price",
+      "label": "processes"
+    },
+    {
+      "head": "address",
+      "tail": "recipient",
+      "label": "drops"
+    },
+    {
+      "head": "feedback",
+      "tail": "recipient",
+      "label": "connects"
+    },
+    {
+      "head": "price",
+      "tail": "recipient",
+      "label": "processes"
+    },
+    {
+      "head": "price",
+      "tail": "sender",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

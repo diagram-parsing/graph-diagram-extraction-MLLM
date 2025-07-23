@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "octagon"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "email",
+      "label": null
+    }
+  ],
+  "groups": []
+}

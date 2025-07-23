@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "box"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "zip code",
+      "tail": "product",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

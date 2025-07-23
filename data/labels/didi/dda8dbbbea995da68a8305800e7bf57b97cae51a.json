@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "octagon"
+    },
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "box"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cobalt blue",
+      "tail": "pink",
+      "label": null
+    },
+    {
+      "head": "pink",
+      "tail": "cobalt blue",
+      "label": null
+    },
+    {
+      "head": "pink",
+      "tail": "cobalt blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

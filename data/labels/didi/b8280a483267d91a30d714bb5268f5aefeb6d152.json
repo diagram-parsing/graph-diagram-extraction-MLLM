@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Move",
+      "label": null
+    }
+  ],
+  "groups": []
+}

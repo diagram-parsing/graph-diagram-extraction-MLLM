@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "oval"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "octagon"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "oval"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "website",
+      "label": "sends"
+    },
+    {
+      "head": "website",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "business",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "phone",
+      "label": "produces"
+    },
+    {
+      "head": "location",
+      "tail": "phone",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

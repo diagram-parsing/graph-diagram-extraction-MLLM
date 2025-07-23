@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "octagon"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "recipient",
+      "tail": "website",
+      "label": "connects"
+    },
+    {
+      "head": "website",
+      "tail": "location",
+      "label": null
+    }
+  ],
+  "groups": []
+}

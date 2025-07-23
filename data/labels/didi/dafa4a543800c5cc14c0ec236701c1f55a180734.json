@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "diamond"
+    },
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "parallelogram"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "orange",
+      "tail": "navy blue",
+      "label": null
+    },
+    {
+      "head": "orange",
+      "tail": "red",
+      "label": null
+    }
+  ],
+  "groups": []
+}

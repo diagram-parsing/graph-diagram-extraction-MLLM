@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "oval"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "box"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "oval"
+    },
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "oval"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "oval"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bronze",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "bronze",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "bronze",
+      "label": null
+    },
+    {
+      "head": "bubble gum",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "auburn",
+      "label": null
+    }
+  ],
+  "groups": []
+}

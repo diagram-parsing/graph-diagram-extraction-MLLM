@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "octagon"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "octagon"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "octagon"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "oval"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sales",
+      "tail": "employee",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "employee",
+      "label": "calls"
+    },
+    {
+      "head": "city",
+      "tail": "payment",
+      "label": "sends"
+    },
+    {
+      "head": "payment",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "phone",
+      "label": "calls"
+    },
+    {
+      "head": "evaluation",
+      "tail": "city",
+      "label": "helps"
+    },
+    {
+      "head": "sales",
+      "tail": "city",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

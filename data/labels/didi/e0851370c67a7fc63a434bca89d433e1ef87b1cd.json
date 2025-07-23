@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "business",
+      "text": "business",
+      "class": "diamond"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "business",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

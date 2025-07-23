@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

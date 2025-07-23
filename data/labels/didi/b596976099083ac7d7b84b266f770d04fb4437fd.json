@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "octagon"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer",
+      "tail": "documentation",
+      "label": "replies"
+    },
+    {
+      "head": "shipment",
+      "tail": "documentation",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

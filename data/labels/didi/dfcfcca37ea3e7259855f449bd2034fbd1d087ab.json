@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "diamond"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "oval"
+    },
+    {
+      "id": "black",
+      "text": "black",
+      "class": "box"
+    },
+    {
+      "id": "black",
+      "text": "black",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "blond",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "blond",
+      "tail": "black",
+      "label": null
+    },
+    {
+      "head": "black",
+      "tail": "black",
+      "label": null
+    }
+  ],
+  "groups": []
+}

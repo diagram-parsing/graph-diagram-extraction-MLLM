@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "fees",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "taxes",
+      "label": null
+    },
+    {
+      "head": "fees",
+      "tail": "shipment",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

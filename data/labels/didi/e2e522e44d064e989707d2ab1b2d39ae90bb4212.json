@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "box"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "octagon"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "diamond"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "ruby",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

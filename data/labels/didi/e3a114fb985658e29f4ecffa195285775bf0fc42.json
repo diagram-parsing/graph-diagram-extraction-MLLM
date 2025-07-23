@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "oval"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "zip code",
+      "tail": "feedback",
+      "label": "drops"
+    },
+    {
+      "head": "zip code",
+      "tail": "evaluation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

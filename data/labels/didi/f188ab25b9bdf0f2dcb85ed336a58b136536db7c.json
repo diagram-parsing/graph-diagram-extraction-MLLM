@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "diamond"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "sales",
+      "label": "calls"
+    },
+    {
+      "head": "customs",
+      "tail": "sales",
+      "label": "manufactures"
+    },
+    {
+      "head": "customs",
+      "tail": "help",
+      "label": "drops"
+    },
+    {
+      "head": "target",
+      "tail": "help",
+      "label": "produces"
+    },
+    {
+      "head": "sales",
+      "tail": "street number",
+      "label": "drops"
+    },
+    {
+      "head": "help",
+      "tail": "street number",
+      "label": "connects"
+    },
+    {
+      "head": "help",
+      "tail": "customs",
+      "label": "drops"
+    },
+    {
+      "head": "feedback",
+      "tail": "customs",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

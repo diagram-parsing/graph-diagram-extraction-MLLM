@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "box"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "box"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "box"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "box"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "parallelogram"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "recipient",
+      "tail": "communication",
+      "label": "bills"
+    },
+    {
+      "head": "feedback",
+      "tail": "number",
+      "label": "builds"
+    },
+    {
+      "head": "letter",
+      "tail": "number",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "recipient",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

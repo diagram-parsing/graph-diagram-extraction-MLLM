@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "octagon"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "taxes",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "street",
+      "label": "helps"
+    },
+    {
+      "head": "taxes",
+      "tail": "support",
+      "label": "processes"
+    },
+    {
+      "head": "support",
+      "tail": "support",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "oval"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "bank",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "bank",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

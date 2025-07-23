@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "box"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "payment",
+      "tail": "name",
+      "label": "replies"
+    },
+    {
+      "head": "communication",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "communication",
+      "tail": "payment",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "octagon"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "diamond"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "diamond"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "address",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "price",
+      "label": null
+    },
+    {
+      "head": "price",
+      "tail": "address",
+      "label": "bills"
+    },
+    {
+      "head": "number",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "price",
+      "tail": "email",
+      "label": null
+    }
+  ],
+  "groups": []
+}

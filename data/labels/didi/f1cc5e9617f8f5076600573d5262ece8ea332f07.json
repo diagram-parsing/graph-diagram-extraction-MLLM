@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "diamond"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "parallelogram"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chestnut",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "beige",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "beige",
+      "label": null
+    }
+  ],
+  "groups": []
+}

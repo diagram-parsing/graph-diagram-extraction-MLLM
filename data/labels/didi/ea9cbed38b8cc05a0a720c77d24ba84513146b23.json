@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "diamond"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "box"
+    },
+    {
+      "id": "black",
+      "text": "black",
+      "class": "octagon"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "artichoke",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "black",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "black",
+      "tail": "blond",
+      "label": null
+    }
+  ],
+  "groups": []
+}

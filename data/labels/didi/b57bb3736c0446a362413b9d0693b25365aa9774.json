@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Advance",
+      "label": "Top"
+    },
+    {
+      "head": "Create",
+      "tail": "Create",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

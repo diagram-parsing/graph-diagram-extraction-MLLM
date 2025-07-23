@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "oval"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "diamond"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "parallelogram"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "communication",
+      "tail": "customer",
+      "label": "sends"
+    },
+    {
+      "head": "zip code",
+      "tail": "communication",
+      "label": "processes"
+    },
+    {
+      "head": "communication",
+      "tail": "zip code",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

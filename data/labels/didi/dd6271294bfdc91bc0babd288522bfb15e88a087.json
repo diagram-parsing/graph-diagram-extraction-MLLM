@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "email",
+      "text": "email",
+      "class": "oval"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "email",
+      "tail": "zip code",
+      "label": null
+    }
+  ],
+  "groups": []
+}

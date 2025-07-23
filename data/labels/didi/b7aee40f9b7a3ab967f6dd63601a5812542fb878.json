@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "process",
+      "text": "process",
+      "class": "box"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "parallelogram"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "recipient",
+      "tail": "process",
+      "label": "drops"
+    },
+    {
+      "head": "location",
+      "tail": "process",
+      "label": "replies"
+    },
+    {
+      "head": "bank",
+      "tail": "process",
+      "label": "manufactures"
+    },
+    {
+      "head": "location",
+      "tail": "documentation",
+      "label": "builds"
+    },
+    {
+      "head": "process",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "recipient",
+      "label": "processes"
+    },
+    {
+      "head": "bank",
+      "tail": "recipient",
+      "label": "sends"
+    },
+    {
+      "head": "recipient",
+      "tail": "location",
+      "label": "processes"
+    },
+    {
+      "head": "bank",
+      "tail": "location",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "bank",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

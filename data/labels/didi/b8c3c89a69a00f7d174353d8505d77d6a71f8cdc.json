@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "box"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "help",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "market",
+      "label": null
+    }
+  ],
+  "groups": []
+}

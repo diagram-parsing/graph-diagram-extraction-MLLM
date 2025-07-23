@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Open",
+      "label": "No"
+    },
+    {
+      "head": "Stop",
+      "tail": "Advance",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

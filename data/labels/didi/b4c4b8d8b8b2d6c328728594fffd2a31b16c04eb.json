@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Replace",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Quit",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Go",
+      "tail": "Ready?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

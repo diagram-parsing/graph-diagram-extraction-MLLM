@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

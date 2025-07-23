@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "diamond"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "location",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "location",
+      "label": null
+    }
+  ],
+  "groups": []
+}

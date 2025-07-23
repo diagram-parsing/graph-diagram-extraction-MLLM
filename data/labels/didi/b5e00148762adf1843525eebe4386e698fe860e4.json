@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Stop",
+      "label": "Drag"
+    },
+    {
+      "head": "Search",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Move",
+      "tail": "Search",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Go",
+      "tail": "Search",
+      "label": "No"
+    },
+    {
+      "head": "Create",
+      "tail": "Search",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Stop",
+      "tail": "Go",
+      "label": "No"
+    },
+    {
+      "head": "Search",
+      "tail": "Go",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Stop",
+      "tail": "Create",
+      "label": "Scroll"
+    }
+  ],
+  "groups": []
+}

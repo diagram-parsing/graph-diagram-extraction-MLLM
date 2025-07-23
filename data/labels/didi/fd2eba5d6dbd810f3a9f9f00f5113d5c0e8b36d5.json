@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "oval"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "box"
+    },
+    {
+      "id": "rose",
+      "text": "rose",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "bronze",
+      "label": null
+    },
+    {
+      "head": "rose",
+      "tail": "bronze",
+      "label": null
+    }
+  ],
+  "groups": []
+}

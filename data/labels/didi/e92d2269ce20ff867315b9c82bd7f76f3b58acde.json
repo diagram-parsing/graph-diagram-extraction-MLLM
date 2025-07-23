@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "purchase",
+      "tail": "location",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

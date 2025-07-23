@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "octagon"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "box"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "box"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cyan",
+      "tail": "brown",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "cyan",
+      "label": null
+    }
+  ],
+  "groups": []
+}

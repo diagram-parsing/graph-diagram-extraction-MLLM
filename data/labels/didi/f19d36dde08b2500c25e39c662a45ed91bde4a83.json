@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "process",
+      "text": "process",
+      "class": "diamond"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "parallelogram"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "box"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "process",
+      "label": "processes"
+    },
+    {
+      "head": "phone",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "process",
+      "tail": "sender",
+      "label": null
+    }
+  ],
+  "groups": []
+}

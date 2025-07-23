@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Stop",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

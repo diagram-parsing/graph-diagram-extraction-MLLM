@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Switch",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Switch",
+      "tail": "Turn on",
+      "label": "No"
+    },
+    {
+      "head": "Reload",
+      "tail": "Turn on",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Reload",
+      "tail": "Wait",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

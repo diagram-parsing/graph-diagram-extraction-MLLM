@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "business",
+      "text": "business",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "octagon"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "place",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "business",
+      "tail": "place",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

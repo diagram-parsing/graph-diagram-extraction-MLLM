@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "oval"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "shipment",
+      "label": "produces"
+    },
+    {
+      "head": "hotline",
+      "tail": "shipment",
+      "label": "calls"
+    },
+    {
+      "head": "shipment",
+      "tail": "city",
+      "label": "processes"
+    },
+    {
+      "head": "city",
+      "tail": "support",
+      "label": "helps"
+    }
+  ],
+  "groups": []
+}

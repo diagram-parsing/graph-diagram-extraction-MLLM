@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Stop",
+      "label": "Back"
+    },
+    {
+      "head": "Plug",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Quit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

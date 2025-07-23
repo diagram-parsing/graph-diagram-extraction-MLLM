@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "oval"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "diamond"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "market",
+      "tail": "feedback",
+      "label": "drops"
+    },
+    {
+      "head": "website",
+      "tail": "feedback",
+      "label": "replies"
+    },
+    {
+      "head": "website",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "bank",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

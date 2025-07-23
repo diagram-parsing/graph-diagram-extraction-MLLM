@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Replace",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

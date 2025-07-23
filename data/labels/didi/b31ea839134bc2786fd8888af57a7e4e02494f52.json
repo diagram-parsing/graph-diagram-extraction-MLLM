@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "octagon"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cyan",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "gold",
+      "label": null
+    }
+  ],
+  "groups": []
+}

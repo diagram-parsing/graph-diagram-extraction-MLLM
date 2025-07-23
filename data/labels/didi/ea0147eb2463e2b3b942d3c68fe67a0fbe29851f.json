@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "diamond"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "parallelogram"
+    },
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "box"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "charcoal",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "charcoal",
+      "tail": "apricot",
+      "label": null
+    }
+  ],
+  "groups": []
+}

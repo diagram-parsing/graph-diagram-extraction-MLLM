@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "octagon"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "zip code",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "manager",
+      "label": "processes"
+    },
+    {
+      "head": "zip code",
+      "tail": "product",
+      "label": "produces"
+    },
+    {
+      "head": "website",
+      "tail": "product",
+      "label": "calls"
+    },
+    {
+      "head": "street",
+      "tail": "website",
+      "label": "sends"
+    },
+    {
+      "head": "zip code",
+      "tail": "website",
+      "label": "helps"
+    }
+  ],
+  "groups": []
+}

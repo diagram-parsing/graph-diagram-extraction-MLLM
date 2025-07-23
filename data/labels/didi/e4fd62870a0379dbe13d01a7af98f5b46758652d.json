@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Close",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "green",
+      "text": "green",
+      "class": "parallelogram"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "diamond"
+    },
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "box"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "green",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "light green",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Open",
+      "label": "Slide"
+    },
+    {
+      "head": "Open",
+      "tail": "Quit",
+      "label": "No"
+    },
+    {
+      "head": "Open",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Repair",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

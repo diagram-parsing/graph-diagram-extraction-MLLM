@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

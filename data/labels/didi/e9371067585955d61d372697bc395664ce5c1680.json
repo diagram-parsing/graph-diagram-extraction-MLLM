@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark chocolate",
+      "tail": "bubble gum",
+      "label": null
+    }
+  ],
+  "groups": []
+}

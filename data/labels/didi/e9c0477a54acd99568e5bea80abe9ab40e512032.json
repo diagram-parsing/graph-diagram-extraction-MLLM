@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "purchase",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "order",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

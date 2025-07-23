@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Wait",
+      "label": "No"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Open",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

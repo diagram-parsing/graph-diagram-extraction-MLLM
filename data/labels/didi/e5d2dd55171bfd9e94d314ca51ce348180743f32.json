@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "oval"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "oval"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "letter",
+      "tail": "bank",
+      "label": "builds"
+    },
+    {
+      "head": "manager",
+      "tail": "letter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

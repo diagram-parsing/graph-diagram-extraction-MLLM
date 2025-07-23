@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Plug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

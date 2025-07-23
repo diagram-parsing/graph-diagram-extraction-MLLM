@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "parallelogram"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "octagon"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bronze",
+      "tail": "violet",
+      "label": null
+    },
+    {
+      "head": "white",
+      "tail": "violet",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "cobalt blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "diamond"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "oval"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "oval"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "street",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "street",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "address",
+      "label": null
+    }
+  ],
+  "groups": []
+}

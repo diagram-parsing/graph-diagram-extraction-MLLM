@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "octagon"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Copy",
+      "label": "No"
+    },
+    {
+      "head": "Quit",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

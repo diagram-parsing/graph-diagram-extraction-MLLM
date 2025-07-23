@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "id",
+      "text": "id",
+      "class": "box"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "parallelogram"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "place",
+      "tail": "id",
+      "label": "replies"
+    },
+    {
+      "head": "place",
+      "tail": "email",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

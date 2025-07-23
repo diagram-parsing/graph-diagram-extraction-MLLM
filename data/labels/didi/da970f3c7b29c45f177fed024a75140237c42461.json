@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "box"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "oval"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "box"
+    },
+    {
+      "id": "yellow",
+      "text": "yellow",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "box"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "ruby",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "gray",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "yellow",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "beige",
+      "label": null
+    },
+    {
+      "head": "gray",
+      "tail": "beige",
+      "label": null
+    }
+  ],
+  "groups": []
+}

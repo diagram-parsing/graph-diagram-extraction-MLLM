@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "octagon"
+    },
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "box"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "box"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "oval"
+    },
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "purple",
+      "tail": "pink",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "purple",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "light green",
+      "label": null
+    }
+  ],
+  "groups": []
+}

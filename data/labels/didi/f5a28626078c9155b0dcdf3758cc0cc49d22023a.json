@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Plug",
+      "label": "Fling"
+    },
+    {
+      "head": "Stop",
+      "tail": "Plug",
+      "label": "Slide"
+    },
+    {
+      "head": "Search",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Repair",
+      "label": "No"
+    },
+    {
+      "head": "Search",
+      "tail": "Search",
+      "label": "Back"
+    },
+    {
+      "head": "Search",
+      "tail": "Stop",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

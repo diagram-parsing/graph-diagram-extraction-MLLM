@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Turn off",
+      "label": "Drag"
+    }
+  ],
+  "groups": []
+}

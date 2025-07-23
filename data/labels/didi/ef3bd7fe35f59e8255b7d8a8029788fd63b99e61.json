@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Switch",
+      "label": "Yes"
+    },
+    {
+      "head": "Replace",
+      "tail": "Wait",
+      "label": "Yes"
+    },
+    {
+      "head": "Switch",
+      "tail": "Wait",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Switch",
+      "tail": "Resume",
+      "label": "Top"
+    },
+    {
+      "head": "Wait",
+      "tail": "Close",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

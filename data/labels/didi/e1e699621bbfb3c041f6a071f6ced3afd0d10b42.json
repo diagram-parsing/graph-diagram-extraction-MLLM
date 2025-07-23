@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "id",
+      "text": "id",
+      "class": "oval"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "id",
+      "tail": "communication",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Delete",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

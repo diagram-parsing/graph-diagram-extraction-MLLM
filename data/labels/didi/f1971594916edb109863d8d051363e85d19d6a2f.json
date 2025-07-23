@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "octagon"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Move",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

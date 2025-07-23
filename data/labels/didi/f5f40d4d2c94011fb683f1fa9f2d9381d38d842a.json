@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "octagon"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Wait",
+      "label": "Click"
+    },
+    {
+      "head": "Reload",
+      "tail": "Wait",
+      "label": null
+    }
+  ],
+  "groups": []
+}

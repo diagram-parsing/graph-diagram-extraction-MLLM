@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "email",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

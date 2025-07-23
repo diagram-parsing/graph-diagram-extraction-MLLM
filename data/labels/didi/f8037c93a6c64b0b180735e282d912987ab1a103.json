@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "name",
+      "text": "name",
+      "class": "box"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "octagon"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "payment",
+      "tail": "market",
+      "label": "processes"
+    },
+    {
+      "head": "market",
+      "tail": "payroll",
+      "label": null
+    }
+  ],
+  "groups": []
+}

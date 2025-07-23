@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "box"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Resume",
+      "label": "Scroll"
+    },
+    {
+      "head": "Resume",
+      "tail": "Plug",
+      "label": "Slide"
+    },
+    {
+      "head": "Delete",
+      "tail": "Plug",
+      "label": "Scroll"
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Plug",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Delete",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Resume",
+      "tail": "Replace",
+      "label": "Top"
+    },
+    {
+      "head": "Plug",
+      "tail": "Replace",
+      "label": "Scroll"
+    }
+  ],
+  "groups": []
+}

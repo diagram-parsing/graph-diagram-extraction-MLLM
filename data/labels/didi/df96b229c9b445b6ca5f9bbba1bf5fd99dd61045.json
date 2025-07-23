@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "octagon"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "street number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Move",
+      "label": "Slide"
+    },
+    {
+      "head": "Copy",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Create",
+      "label": "Pinch"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Switch",
+      "label": null
+    }
+  ],
+  "groups": []
+}

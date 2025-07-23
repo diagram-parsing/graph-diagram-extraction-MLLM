@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "octagon"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "box"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "parallelogram"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "employee",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "fees",
+      "tail": "account no",
+      "label": null
+    }
+  ],
+  "groups": []
+}

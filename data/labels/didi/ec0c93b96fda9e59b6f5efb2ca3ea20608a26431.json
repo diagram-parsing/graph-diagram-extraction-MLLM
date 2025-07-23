@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "box"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "parallelogram"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "account no",
+      "label": null
+    }
+  ],
+  "groups": []
+}

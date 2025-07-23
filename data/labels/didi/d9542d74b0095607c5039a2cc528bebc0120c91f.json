@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Move",
+      "label": null
+    }
+  ],
+  "groups": []
+}

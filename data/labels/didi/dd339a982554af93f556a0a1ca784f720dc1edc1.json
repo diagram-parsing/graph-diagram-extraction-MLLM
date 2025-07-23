@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Unplug",
+      "label": "Tap"
+    },
+    {
+      "head": "Close",
+      "tail": "Switch",
+      "label": "Drag"
+    },
+    {
+      "head": "Replace",
+      "tail": "Switch",
+      "label": "Scroll"
+    },
+    {
+      "head": "Close",
+      "tail": "Move",
+      "label": "Click"
+    },
+    {
+      "head": "Replace",
+      "tail": "Move",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

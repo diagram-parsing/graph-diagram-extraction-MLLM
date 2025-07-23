@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "support",
+      "tail": "first name",
+      "label": "calls"
+    },
+    {
+      "head": "support",
+      "tail": "shipment",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

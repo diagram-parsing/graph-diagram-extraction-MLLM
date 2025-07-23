@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "octagon"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "zip code",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "employee",
+      "tail": "phone",
+      "label": "sends"
+    },
+    {
+      "head": "phone",
+      "tail": "documentation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

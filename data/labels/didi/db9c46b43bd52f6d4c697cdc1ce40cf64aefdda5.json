@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "octagon"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "parallelogram"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bone",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "bone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

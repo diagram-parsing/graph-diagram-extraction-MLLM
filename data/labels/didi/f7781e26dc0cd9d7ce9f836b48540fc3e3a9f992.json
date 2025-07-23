@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "help",
+      "text": "help",
+      "class": "octagon"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "help",
+      "tail": "sales",
+      "label": "helps"
+    },
+    {
+      "head": "zip code",
+      "tail": "sales",
+      "label": "calls"
+    },
+    {
+      "head": "sales",
+      "tail": "zip code",
+      "label": "bills"
+    },
+    {
+      "head": "help",
+      "tail": "feedback",
+      "label": "replies"
+    },
+    {
+      "head": "sales",
+      "tail": "feedback",
+      "label": "ships"
+    },
+    {
+      "head": "billing",
+      "tail": "feedback",
+      "label": "bills"
+    },
+    {
+      "head": "street",
+      "tail": "feedback",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "diamond"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "diamond"
+    },
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "octagon"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "cobalt blue",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "cobalt blue",
+      "label": null
+    },
+    {
+      "head": "orange",
+      "tail": "saffron",
+      "label": null
+    }
+  ],
+  "groups": []
+}

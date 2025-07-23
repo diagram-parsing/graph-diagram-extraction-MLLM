@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "octagon"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "violet",
+      "tail": "purple",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "purple",
+      "label": null
+    }
+  ],
+  "groups": []
+}

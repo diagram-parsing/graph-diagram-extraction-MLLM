@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "process",
+      "text": "process",
+      "class": "octagon"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "diamond"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "process",
+      "label": "connects"
+    },
+    {
+      "head": "email",
+      "tail": "process",
+      "label": "drops"
+    },
+    {
+      "head": "email",
+      "tail": "support",
+      "label": "sends"
+    },
+    {
+      "head": "employee",
+      "tail": "support",
+      "label": "produces"
+    },
+    {
+      "head": "process",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "manager",
+      "label": "drops"
+    },
+    {
+      "head": "process",
+      "tail": "email",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Resume",
+      "label": "Back"
+    },
+    {
+      "head": "Repair",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Advance",
+      "label": null
+    }
+  ],
+  "groups": []
+}

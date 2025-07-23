@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Switch",
+      "label": "Pinch"
+    },
+    {
+      "head": "Resume",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

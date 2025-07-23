@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "box"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "box"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "box"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "support",
+      "label": "bills"
+    },
+    {
+      "head": "feedback",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "feedback",
+      "label": "sends"
+    },
+    {
+      "head": "feedback",
+      "tail": "website",
+      "label": "helps"
+    },
+    {
+      "head": "support",
+      "tail": "payroll",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

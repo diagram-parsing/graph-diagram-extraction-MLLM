@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "box"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Wait",
+      "label": "Slide"
+    },
+    {
+      "head": "Stop",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Turn off",
+      "label": "Back"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Stop",
+      "label": "Fling"
+    },
+    {
+      "head": "Switch",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Turn off",
+      "label": null
+    }
+  ],
+  "groups": []
+}

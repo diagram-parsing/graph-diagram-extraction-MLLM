@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "oval"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Switch",
+      "label": "Top"
+    },
+    {
+      "head": "Copy",
+      "tail": "Switch",
+      "label": "Fling"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Switch",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

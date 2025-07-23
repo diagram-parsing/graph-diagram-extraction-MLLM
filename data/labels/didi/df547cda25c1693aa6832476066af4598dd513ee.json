@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "market",
+      "text": "market",
+      "class": "octagon"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "help",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

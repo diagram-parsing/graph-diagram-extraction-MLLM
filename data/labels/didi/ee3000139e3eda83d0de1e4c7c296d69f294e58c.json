@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Move",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Resume",
+      "tail": "Move",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Move",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

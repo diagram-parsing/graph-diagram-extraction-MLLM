@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Repair",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

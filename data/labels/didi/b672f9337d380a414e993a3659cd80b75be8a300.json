@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "octagon"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Close",
+      "label": "Pinch"
+    },
+    {
+      "head": "Replace",
+      "tail": "Close",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Close",
+      "tail": "Replace",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

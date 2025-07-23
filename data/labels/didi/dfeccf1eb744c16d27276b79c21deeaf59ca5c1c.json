@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "octagon"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "last name",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

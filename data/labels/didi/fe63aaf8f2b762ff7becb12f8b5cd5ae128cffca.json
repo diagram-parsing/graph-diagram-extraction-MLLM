@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "octagon"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "octagon"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "white",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "white",
+      "label": null
+    }
+  ],
+  "groups": []
+}

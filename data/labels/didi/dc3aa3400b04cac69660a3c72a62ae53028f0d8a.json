@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Stop",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Quit?",
+      "label": "Drag"
+    }
+  ],
+  "groups": []
+}

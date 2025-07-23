@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Move",
+      "label": null
+    }
+  ],
+  "groups": []
+}

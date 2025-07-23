@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Reload",
+      "label": "Yes"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Reload",
+      "label": "Tap"
+    },
+    {
+      "head": "Repair",
+      "tail": "Reload",
+      "label": "Back"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Switch",
+      "label": "Scroll"
+    },
+    {
+      "head": "Repair",
+      "tail": "Switch",
+      "label": "Fling"
+    },
+    {
+      "head": "Copy",
+      "tail": "Ready?",
+      "label": "Click"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Ready?",
+      "label": "Top"
+    },
+    {
+      "head": "Reload",
+      "tail": "Repair",
+      "label": "Drag"
+    },
+    {
+      "head": "Reload",
+      "tail": "Quit?",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

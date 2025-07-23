@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "octagon"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

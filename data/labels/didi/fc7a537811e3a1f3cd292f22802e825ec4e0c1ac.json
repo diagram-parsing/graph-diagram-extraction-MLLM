@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "octagon"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "phone",
+      "label": "sends"
+    },
+    {
+      "head": "feedback",
+      "tail": "business",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

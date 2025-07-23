@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "oval"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "octagon"
+    },
+    {
+      "id": "dark gray",
+      "text": "dark gray",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bone",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "dark gray",
+      "tail": "bone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

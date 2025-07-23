@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "oval"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "octagon"
+    },
+    {
+      "id": "yellow",
+      "text": "yellow",
+      "class": "parallelogram"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "oval"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "yellow",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "yellow",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "yellow",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "yellow",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "gold",
+      "label": null
+    }
+  ],
+  "groups": []
+}

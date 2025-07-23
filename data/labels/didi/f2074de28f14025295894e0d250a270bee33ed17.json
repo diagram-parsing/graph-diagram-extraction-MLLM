@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "box"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "zip code",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

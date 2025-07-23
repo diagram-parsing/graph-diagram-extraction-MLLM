@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "octagon"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "octagon"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "lime",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "lime",
+      "label": null
+    }
+  ],
+  "groups": []
+}

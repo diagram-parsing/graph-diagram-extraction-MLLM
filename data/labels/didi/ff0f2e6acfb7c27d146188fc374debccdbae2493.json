@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

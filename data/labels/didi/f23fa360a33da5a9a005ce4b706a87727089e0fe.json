@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "diamond"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "diamond"
+    },
+    {
+      "id": "black",
+      "text": "black",
+      "class": "oval"
+    },
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "navy blue",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "navy blue",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "black",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "black",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "navy blue",
+      "label": null
+    },
+    {
+      "head": "black",
+      "tail": "navy blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

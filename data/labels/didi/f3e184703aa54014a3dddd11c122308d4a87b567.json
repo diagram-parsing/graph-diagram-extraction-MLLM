@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "octagon"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "oval"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "phone",
+      "tail": "promotion",
+      "label": "connects"
+    },
+    {
+      "head": "payment",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "place",
+      "tail": "city",
+      "label": null
+    }
+  ],
+  "groups": []
+}

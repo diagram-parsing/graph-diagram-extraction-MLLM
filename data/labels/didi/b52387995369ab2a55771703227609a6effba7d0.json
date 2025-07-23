@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "box"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "box"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "feedback",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "feedback",
+      "label": null
+    }
+  ],
+  "groups": []
+}

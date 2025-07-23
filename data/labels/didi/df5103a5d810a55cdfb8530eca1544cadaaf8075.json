@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Wait",
+      "label": "Fling"
+    },
+    {
+      "head": "Wait",
+      "tail": "Stop",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

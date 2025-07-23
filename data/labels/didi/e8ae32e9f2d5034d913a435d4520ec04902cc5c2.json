@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "billing",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

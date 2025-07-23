@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "box"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "octagon"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "beige",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "beige",
+      "label": null
+    }
+  ],
+  "groups": []
+}

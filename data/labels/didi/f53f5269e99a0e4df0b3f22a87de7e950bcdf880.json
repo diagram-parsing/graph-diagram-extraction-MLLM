@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Turn off",
+      "label": "Pinch"
+    },
+    {
+      "head": "Wait",
+      "tail": "Close",
+      "label": "Slide"
+    },
+    {
+      "head": "Resume",
+      "tail": "Turn on",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Turn on",
+      "label": "Yes"
+    },
+    {
+      "head": "Resume",
+      "tail": "Wait",
+      "label": "Top"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Wait",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

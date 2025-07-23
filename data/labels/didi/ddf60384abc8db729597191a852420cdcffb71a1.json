@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Ready?",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

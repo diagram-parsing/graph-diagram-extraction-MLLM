@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "parallelogram"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "taxes",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "taxes",
+      "tail": "price",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "oval"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Switch",
+      "label": "Back"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Unplug",
+      "label": "Fling"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Unplug",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Resume",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Reload",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

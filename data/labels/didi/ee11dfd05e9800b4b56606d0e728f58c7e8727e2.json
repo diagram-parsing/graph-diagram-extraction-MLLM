@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "oval"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "diamond"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "billing",
+      "label": "sends"
+    },
+    {
+      "head": "billing",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "sender",
+      "label": null
+    }
+  ],
+  "groups": []
+}

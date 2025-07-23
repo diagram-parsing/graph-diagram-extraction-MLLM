@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "oval"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "price",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "payroll",
+      "label": "calls"
+    },
+    {
+      "head": "name",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "price",
+      "label": "calls"
+    },
+    {
+      "head": "address",
+      "tail": "name",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

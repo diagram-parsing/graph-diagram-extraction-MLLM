@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Go",
+      "label": "Slide"
+    },
+    {
+      "head": "Move",
+      "tail": "Go",
+      "label": "Top"
+    },
+    {
+      "head": "Resume",
+      "tail": "Close",
+      "label": "Drag"
+    },
+    {
+      "head": "Move",
+      "tail": "Switch",
+      "label": "Yes"
+    },
+    {
+      "head": "Go",
+      "tail": "Move",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

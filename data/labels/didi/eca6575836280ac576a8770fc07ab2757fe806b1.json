@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Create",
+      "label": "Drag"
+    },
+    {
+      "head": "Create",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Create",
+      "tail": "Replace",
+      "label": "Scroll"
+    }
+  ],
+  "groups": []
+}

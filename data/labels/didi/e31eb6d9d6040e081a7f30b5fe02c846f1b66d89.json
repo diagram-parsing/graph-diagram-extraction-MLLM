@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "box"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "oval"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "parallelogram"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "location",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "process",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "process",
+      "tail": "process",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "feedback",
+      "label": null
+    }
+  ],
+  "groups": []
+}

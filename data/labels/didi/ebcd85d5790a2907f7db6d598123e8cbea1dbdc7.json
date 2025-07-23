@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "taxes",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "billing",
+      "label": "connects"
+    },
+    {
+      "head": "taxes",
+      "tail": "billing",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

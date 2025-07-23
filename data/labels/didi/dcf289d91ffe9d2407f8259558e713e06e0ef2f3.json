@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "octagon"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Stop",
+      "tail": "Go",
+      "label": "Zoom out"
+    }
+  ],
+  "groups": []
+}

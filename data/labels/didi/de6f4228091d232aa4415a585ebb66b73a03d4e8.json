@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Repair",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "octagon"
+    },
+    {
+      "id": "blue",
+      "text": "blue",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "blue",
+      "tail": "eggshell",
+      "label": null
+    }
+  ],
+  "groups": []
+}

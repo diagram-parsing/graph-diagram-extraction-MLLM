@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "octagon"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer care",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "phone",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

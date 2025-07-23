@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Repair",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

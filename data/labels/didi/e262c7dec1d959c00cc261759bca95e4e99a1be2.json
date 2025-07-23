@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "customer care",
+      "label": null
+    }
+  ],
+  "groups": []
+}

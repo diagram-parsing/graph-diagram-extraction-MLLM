@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Plug",
+      "label": "No"
+    },
+    {
+      "head": "Reload",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Close",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Close",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

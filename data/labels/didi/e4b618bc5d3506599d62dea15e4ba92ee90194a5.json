@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Repair",
+      "label": "Tap"
+    },
+    {
+      "head": "Advance",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Repair",
+      "label": "Click"
+    },
+    {
+      "head": "Advance",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Reload",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Advance",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Repair",
+      "label": "Scroll"
+    }
+  ],
+  "groups": []
+}

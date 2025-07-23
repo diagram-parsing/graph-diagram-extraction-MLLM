@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "octagon"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "diamond"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "octagon"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "feedback",
+      "label": "calls"
+    },
+    {
+      "head": "payroll",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "target",
+      "label": null
+    }
+  ],
+  "groups": []
+}

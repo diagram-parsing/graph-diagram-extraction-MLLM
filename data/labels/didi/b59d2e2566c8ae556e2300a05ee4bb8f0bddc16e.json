@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "diamond"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "market",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "parallelogram"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark green",
+      "text": "dark green",
+      "class": "box"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "octagon"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "gold",
+      "tail": "dark green",
+      "label": null
+    },
+    {
+      "head": "blond",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "gold",
+      "label": null
+    }
+  ],
+  "groups": []
+}

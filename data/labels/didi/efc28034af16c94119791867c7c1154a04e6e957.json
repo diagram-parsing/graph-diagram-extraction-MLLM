@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "box"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "octagon"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "beige",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "beige",
+      "label": null
+    },
+    {
+      "head": "beige",
+      "tail": "lime",
+      "label": null
+    }
+  ],
+  "groups": []
+}

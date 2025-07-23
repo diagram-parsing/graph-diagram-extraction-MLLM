@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "parallelogram"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "oval"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "help",
+      "tail": "business",
+      "label": "helps"
+    },
+    {
+      "head": "payroll",
+      "tail": "help",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

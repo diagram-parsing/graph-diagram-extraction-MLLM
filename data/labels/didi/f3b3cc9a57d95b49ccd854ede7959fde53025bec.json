@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "octagon"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "octagon"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "octagon"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "octagon"
+    },
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "silver",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "light green",
+      "label": null
+    }
+  ],
+  "groups": []
+}

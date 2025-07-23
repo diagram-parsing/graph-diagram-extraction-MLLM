@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "octagon"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "order",
+      "label": "replies"
+    },
+    {
+      "head": "sender",
+      "tail": "order",
+      "label": null
+    }
+  ],
+  "groups": []
+}

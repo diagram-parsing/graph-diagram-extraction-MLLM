@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "customer care",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "octagon"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "name",
+      "label": "helps"
+    },
+    {
+      "head": "support",
+      "tail": "bank",
+      "label": null
+    }
+  ],
+  "groups": []
+}

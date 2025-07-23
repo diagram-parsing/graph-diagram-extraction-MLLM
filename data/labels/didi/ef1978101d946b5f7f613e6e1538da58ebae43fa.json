@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Repair",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Switch",
+      "tail": "Repair",
+      "label": "Tap"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Repair",
+      "label": "Scroll"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Delete",
+      "label": "Pinch"
+    },
+    {
+      "head": "Repair",
+      "tail": "Switch",
+      "label": "Pinch"
+    },
+    {
+      "head": "Repair",
+      "tail": "Unplug",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

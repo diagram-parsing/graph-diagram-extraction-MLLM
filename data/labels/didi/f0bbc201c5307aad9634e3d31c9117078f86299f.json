@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "place",
+      "tail": "customer",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

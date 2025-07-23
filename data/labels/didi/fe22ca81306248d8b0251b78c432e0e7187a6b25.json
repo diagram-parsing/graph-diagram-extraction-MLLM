@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "octagon"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "box"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "promotion",
+      "label": null
+    }
+  ],
+  "groups": []
+}

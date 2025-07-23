@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Search",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

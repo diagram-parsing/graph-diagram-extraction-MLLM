@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "octagon"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "parallelogram"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "box"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark brown",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "gray",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

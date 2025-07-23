@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "parallelogram"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "box"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "last name",
+      "tail": "id",
+      "label": "bills"
+    },
+    {
+      "head": "business",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "product",
+      "label": "bills"
+    },
+    {
+      "head": "help",
+      "tail": "last name",
+      "label": "connects"
+    },
+    {
+      "head": "phone",
+      "tail": "last name",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

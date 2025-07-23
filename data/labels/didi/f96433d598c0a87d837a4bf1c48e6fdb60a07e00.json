@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "price",
+      "text": "price",
+      "class": "box"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "box"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "zip code",
+      "tail": "price",
+      "label": "bills"
+    },
+    {
+      "head": "price",
+      "tail": "email",
+      "label": "connects"
+    },
+    {
+      "head": "process",
+      "tail": "email",
+      "label": "connects"
+    },
+    {
+      "head": "zip code",
+      "tail": "customs",
+      "label": null
+    }
+  ],
+  "groups": []
+}

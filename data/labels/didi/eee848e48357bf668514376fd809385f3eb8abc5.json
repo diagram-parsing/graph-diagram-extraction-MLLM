@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Switch",
+      "label": null
+    }
+  ],
+  "groups": []
+}

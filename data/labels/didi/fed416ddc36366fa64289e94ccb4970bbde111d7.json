@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Turn off",
+      "label": "Slide"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Go",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

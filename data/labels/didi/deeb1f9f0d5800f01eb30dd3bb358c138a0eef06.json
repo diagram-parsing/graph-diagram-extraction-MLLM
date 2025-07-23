@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "box"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "box"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "octagon"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "navy blue",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "ruby",
+      "label": null
+    }
+  ],
+  "groups": []
+}

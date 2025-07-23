@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "octagon"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "oval"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "octagon"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "parallelogram"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "support",
+      "tail": "communication",
+      "label": "helps"
+    },
+    {
+      "head": "employee",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "employee",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "employee",
+      "label": "bills"
+    },
+    {
+      "head": "communication",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "employee",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

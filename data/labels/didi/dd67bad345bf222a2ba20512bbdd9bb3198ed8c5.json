@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "octagon"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Move",
+      "label": "Yes"
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

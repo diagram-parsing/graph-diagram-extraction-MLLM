@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "box"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "id",
+      "label": "ships"
+    },
+    {
+      "head": "payroll",
+      "tail": "bank",
+      "label": "replies"
+    },
+    {
+      "head": "customs",
+      "tail": "payroll",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

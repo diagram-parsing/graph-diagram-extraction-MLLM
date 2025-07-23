@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "box"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "box"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "phone",
+      "tail": "hotline",
+      "label": "bills"
+    },
+    {
+      "head": "taxes",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "address",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "octagon"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Plug",
+      "label": "Pinch"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Create",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

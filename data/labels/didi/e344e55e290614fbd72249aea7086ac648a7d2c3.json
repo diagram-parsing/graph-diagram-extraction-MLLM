@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "first name",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "evaluation",
+      "label": "calls"
+    },
+    {
+      "head": "evaluation",
+      "tail": "payroll",
+      "label": null
+    }
+  ],
+  "groups": []
+}

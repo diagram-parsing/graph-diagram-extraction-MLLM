@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "taxes",
+      "tail": "feedback",
+      "label": "produces"
+    },
+    {
+      "head": "place",
+      "tail": "feedback",
+      "label": "ships"
+    },
+    {
+      "head": "feedback",
+      "tail": "taxes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

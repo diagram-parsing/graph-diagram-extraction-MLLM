@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "box"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "box"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "oval"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "diamond"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "payment",
+      "tail": "fees",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "fees",
+      "label": null
+    }
+  ],
+  "groups": []
+}

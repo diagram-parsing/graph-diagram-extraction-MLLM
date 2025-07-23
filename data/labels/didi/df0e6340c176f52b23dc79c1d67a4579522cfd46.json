@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Copy",
+      "label": "Pinch"
+    },
+    {
+      "head": "Reload",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Quit",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Reload",
+      "tail": "Plug",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

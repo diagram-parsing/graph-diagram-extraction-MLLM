@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Ready?",
+      "label": "Yes"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Ready?",
+      "label": "Click"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

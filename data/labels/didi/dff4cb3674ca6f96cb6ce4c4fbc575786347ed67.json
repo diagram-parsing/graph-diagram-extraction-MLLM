@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "octagon"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "box"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "parallelogram"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "oval"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "zip code",
+      "label": "ships"
+    },
+    {
+      "head": "hotline",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "process",
+      "label": "ships"
+    },
+    {
+      "head": "zip code",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "communication",
+      "label": null
+    }
+  ],
+  "groups": []
+}

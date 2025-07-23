@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Quit",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Quit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

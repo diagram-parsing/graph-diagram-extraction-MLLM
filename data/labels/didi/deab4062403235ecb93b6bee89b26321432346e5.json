@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "parallelogram"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "oval"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "customs",
+      "label": null
+    }
+  ],
+  "groups": []
+}

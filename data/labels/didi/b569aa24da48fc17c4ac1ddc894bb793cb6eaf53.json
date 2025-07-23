@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "octagon"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "oval"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "parallelogram"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "violet",
+      "tail": "charcoal",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "charcoal",
+      "tail": "violet",
+      "label": null
+    }
+  ],
+  "groups": []
+}

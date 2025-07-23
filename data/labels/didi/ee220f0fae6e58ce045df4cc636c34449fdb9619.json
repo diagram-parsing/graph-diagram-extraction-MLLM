@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "box"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "parallelogram"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "box"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "oval"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chocolate",
+      "tail": "cobalt blue",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "eggshell",
+      "tail": "chocolate",
+      "label": null
+    }
+  ],
+  "groups": []
+}

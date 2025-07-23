@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "parallelogram"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "diamond"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "diamond"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "diamond"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "white",
+      "tail": "navy blue",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "dark brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "taxes",
+      "label": "calls"
+    },
+    {
+      "head": "taxes",
+      "tail": "hotline",
+      "label": "manufactures"
+    },
+    {
+      "head": "recipient",
+      "tail": "hotline",
+      "label": "bills"
+    },
+    {
+      "head": "hotline",
+      "tail": "recipient",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

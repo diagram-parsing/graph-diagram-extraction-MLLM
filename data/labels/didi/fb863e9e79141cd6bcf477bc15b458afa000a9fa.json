@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "location",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "price",
+      "label": null
+    }
+  ],
+  "groups": []
+}

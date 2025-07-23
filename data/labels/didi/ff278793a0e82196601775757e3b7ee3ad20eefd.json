@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "parallelogram"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "diamond"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sales",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "evaluation",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "evaluation",
+      "tail": "target",
+      "label": null
+    }
+  ],
+  "groups": []
+}

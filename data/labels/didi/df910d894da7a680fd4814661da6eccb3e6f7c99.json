@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Open",
+      "label": "Scroll"
+    },
+    {
+      "head": "Reload",
+      "tail": "Switch",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

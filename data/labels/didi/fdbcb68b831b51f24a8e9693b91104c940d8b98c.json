@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "dark gray",
+      "text": "dark gray",
+      "class": "oval"
+    },
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "diamond"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "box"
+    },
+    {
+      "id": "black",
+      "text": "black",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "black",
+      "tail": "dark gray",
+      "label": null
+    },
+    {
+      "head": "dark gray",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "beige",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "beige",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "bronze",
+      "label": null
+    }
+  ],
+  "groups": []
+}

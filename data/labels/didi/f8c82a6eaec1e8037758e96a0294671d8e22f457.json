@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "box"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chestnut",
+      "tail": "gold",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "box"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "oval"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "parallelogram"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "hotline",
+      "label": "produces"
+    },
+    {
+      "head": "hotline",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "place",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "place",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "place",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "shipment",
+      "label": "ships"
+    },
+    {
+      "head": "documentation",
+      "tail": "shipment",
+      "label": "helps"
+    },
+    {
+      "head": "hotline",
+      "tail": "shipment",
+      "label": "ships"
+    },
+    {
+      "head": "hotline",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "website",
+      "label": null
+    }
+  ],
+  "groups": []
+}

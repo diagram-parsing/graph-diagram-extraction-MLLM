@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "box"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "octagon"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "diamond"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "email",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

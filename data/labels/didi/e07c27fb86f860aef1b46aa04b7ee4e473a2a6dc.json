@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "octagon"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "promotion",
+      "label": "sends"
+    },
+    {
+      "head": "documentation",
+      "tail": "first name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

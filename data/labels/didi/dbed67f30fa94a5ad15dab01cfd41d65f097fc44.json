@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "business",
+      "text": "business",
+      "class": "diamond"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "oval"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "box"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "business",
+      "label": null
+    },
+    {
+      "head": "business",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "street",
+      "label": null
+    }
+  ],
+  "groups": []
+}

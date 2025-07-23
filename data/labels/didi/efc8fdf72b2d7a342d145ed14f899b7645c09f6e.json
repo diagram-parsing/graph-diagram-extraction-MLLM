@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Search",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

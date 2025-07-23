@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "box"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "box"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cobalt blue",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "dark brown",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "cobalt blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

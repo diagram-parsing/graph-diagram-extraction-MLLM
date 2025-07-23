@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "evaluation",
+      "label": "calls"
+    },
+    {
+      "head": "location",
+      "tail": "letter",
+      "label": "manufactures"
+    },
+    {
+      "head": "evaluation",
+      "tail": "letter",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

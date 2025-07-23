@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "parallelogram"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "diamond"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "process",
+      "tail": "number",
+      "label": null
+    },
+    {
+      "head": "process",
+      "tail": "billing",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "market",
+      "label": null
+    }
+  ],
+  "groups": []
+}

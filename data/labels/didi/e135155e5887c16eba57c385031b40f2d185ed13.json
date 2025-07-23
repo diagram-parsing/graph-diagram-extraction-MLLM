@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "diamond"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "octagon"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bubble gum",
+      "tail": "dark chestnut",
+      "label": null
+    },
+    {
+      "head": "dark chestnut",
+      "tail": "apricot",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "oval"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "billing",
+      "label": "connects"
+    },
+    {
+      "head": "billing",
+      "tail": "id",
+      "label": "connects"
+    },
+    {
+      "head": "name",
+      "tail": "id",
+      "label": "produces"
+    },
+    {
+      "head": "billing",
+      "tail": "city",
+      "label": "replies"
+    },
+    {
+      "head": "name",
+      "tail": "city",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

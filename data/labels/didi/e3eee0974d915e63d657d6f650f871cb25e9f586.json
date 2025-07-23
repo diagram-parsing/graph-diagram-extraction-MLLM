@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "parallelogram"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "process",
+      "tail": "city",
+      "label": "helps"
+    },
+    {
+      "head": "process",
+      "tail": "employee",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

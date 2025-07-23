@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

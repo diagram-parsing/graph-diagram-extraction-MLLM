@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Go",
+      "label": "Yes"
+    },
+    {
+      "head": "Copy",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Reload",
+      "label": "Pinch"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

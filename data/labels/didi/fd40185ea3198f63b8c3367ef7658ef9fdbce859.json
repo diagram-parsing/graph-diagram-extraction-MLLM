@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "parallelogram"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "box"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "number",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "manager",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -71,6 +71,6 @@ The following table reports F1 scores for node and edge recognition on the SEM d
 
 | Dataset | Method        | Node      | Edge      |
 | ------- | ------------- | --------- | --------- |
-| SEM     | 2-Shot        | **0.675** | **0.394** |
+| SEM     | 2-Shot        | 0.675     | 0.394     |
 |         | PEFT          | 0.516     | 0.287     |
 |         | 2-Shot + PEFT | 0.635     | 0.360     |

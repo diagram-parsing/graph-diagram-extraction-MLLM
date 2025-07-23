@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "parallelogram"
+    },
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "oval"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "diamond"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "box"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "silver",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "ruby",
+      "label": null
+    }
+  ],
+  "groups": []
+}

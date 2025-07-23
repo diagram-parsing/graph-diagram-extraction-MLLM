@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "id",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "sales",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "help",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

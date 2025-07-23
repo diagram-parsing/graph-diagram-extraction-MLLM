@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "diamond"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "parallelogram"
+    },
+    {
+      "id": "green",
+      "text": "green",
+      "class": "box"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "box"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "green",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "green",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "fuchsia",
+      "label": null
+    }
+  ],
+  "groups": []
+}

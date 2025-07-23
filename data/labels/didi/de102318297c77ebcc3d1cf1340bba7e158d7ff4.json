@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "parallelogram"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "diamond"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "box"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "employee",
+      "label": "calls"
+    },
+    {
+      "head": "market",
+      "tail": "employee",
+      "label": "drops"
+    },
+    {
+      "head": "account no",
+      "tail": "communication",
+      "label": "sends"
+    },
+    {
+      "head": "customer",
+      "tail": "communication",
+      "label": null
+    },
+    {
+      "head": "market",
+      "tail": "customer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

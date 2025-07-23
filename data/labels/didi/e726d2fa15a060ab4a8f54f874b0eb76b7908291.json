@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "oval"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Close",
+      "tail": "Delete",
+      "label": "Slide"
+    },
+    {
+      "head": "Resume",
+      "tail": "Ready?",
+      "label": "Fling"
+    },
+    {
+      "head": "Close",
+      "tail": "Ready?",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Advance",
+      "tail": "Resume",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

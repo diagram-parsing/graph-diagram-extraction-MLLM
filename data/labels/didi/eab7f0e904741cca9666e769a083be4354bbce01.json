@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "payroll",
+      "label": null
+    }
+  ],
+  "groups": []
+}

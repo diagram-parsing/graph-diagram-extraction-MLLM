@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Ready?",
+      "label": "Fling"
+    },
+    {
+      "head": "Search",
+      "tail": "Ready?",
+      "label": "Click"
+    },
+    {
+      "head": "Quit",
+      "tail": "Go",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Search",
+      "label": "Drag"
+    },
+    {
+      "head": "Wait",
+      "tail": "Close",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

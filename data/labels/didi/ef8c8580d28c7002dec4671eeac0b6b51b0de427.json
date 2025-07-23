@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "box"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "diamond"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "box"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer care",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "employee",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "customer care",
+      "label": null
+    }
+  ],
+  "groups": []
+}

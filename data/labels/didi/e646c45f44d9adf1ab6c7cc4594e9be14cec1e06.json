@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "octagon"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "octagon"
+    },
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "diamond"
+    },
+    {
+      "id": "dark red",
+      "text": "dark red",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "pink",
+      "tail": "violet",
+      "label": null
+    },
+    {
+      "head": "dark red",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "pink",
+      "label": null
+    }
+  ],
+  "groups": []
+}

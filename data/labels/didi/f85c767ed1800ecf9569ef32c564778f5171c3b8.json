@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Reload",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "oval"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "diamond"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "azure",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "oval"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "box"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "oval"
+    },
+    {
+      "id": "chestnut",
+      "text": "chestnut",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bubble gum",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "chestnut",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "gray",
+      "tail": "chestnut",
+      "label": null
+    },
+    {
+      "head": "chestnut",
+      "tail": "chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

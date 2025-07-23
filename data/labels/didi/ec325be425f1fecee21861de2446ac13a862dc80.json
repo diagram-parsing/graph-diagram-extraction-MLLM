@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Create",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

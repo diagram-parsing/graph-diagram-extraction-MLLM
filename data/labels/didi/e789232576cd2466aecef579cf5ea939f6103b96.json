@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "market",
+      "text": "market",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "box"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "market",
+      "label": "replies"
+    },
+    {
+      "head": "market",
+      "tail": "street",
+      "label": "produces"
+    },
+    {
+      "head": "billing",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "street",
+      "tail": "billing",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

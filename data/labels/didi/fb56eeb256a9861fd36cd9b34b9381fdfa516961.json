@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "oval"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "box"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "diamond"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "box"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "octagon"
+    },
+    {
+      "id": "black",
+      "text": "black",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "silver",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "cobalt blue",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "cobalt blue",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "black",
+      "tail": "cobalt blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

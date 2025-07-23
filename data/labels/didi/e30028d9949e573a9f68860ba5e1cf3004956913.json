@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "diamond"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "oval"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "parallelogram"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "support",
+      "label": "calls"
+    },
+    {
+      "head": "price",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "order",
+      "label": "produces"
+    },
+    {
+      "head": "order",
+      "tail": "city",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

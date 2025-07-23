@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "parallelogram"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "recipient",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "city",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "city",
+      "label": null
+    }
+  ],
+  "groups": []
+}

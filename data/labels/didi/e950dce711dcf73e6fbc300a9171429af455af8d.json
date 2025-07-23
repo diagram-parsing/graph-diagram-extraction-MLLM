@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "box"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "first name",
+      "label": "builds"
+    },
+    {
+      "head": "taxes",
+      "tail": "first name",
+      "label": "produces"
+    },
+    {
+      "head": "street",
+      "tail": "street",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

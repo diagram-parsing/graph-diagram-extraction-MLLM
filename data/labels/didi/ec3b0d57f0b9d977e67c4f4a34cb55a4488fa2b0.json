@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "parallelogram"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "parallelogram"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "box"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "business",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "billing",
+      "label": "sends"
+    },
+    {
+      "head": "business",
+      "tail": "hotline",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

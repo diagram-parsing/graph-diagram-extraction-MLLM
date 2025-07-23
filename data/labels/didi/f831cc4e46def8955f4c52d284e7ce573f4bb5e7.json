@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "product",
+      "label": "replies"
+    },
+    {
+      "head": "shipment",
+      "tail": "customer care",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

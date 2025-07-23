@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "octagon"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "octagon"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "octagon"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "box"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "website",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "bank",
+      "label": null
+    }
+  ],
+  "groups": []
+}

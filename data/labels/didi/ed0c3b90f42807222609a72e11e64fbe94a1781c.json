@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "oval"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer care",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "phone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

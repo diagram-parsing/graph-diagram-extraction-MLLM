@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Quit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

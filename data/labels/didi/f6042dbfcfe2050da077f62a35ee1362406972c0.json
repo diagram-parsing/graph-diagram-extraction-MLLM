@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "box"
+    },
+    {
+      "id": "yellow",
+      "text": "yellow",
+      "class": "octagon"
+    },
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "yellow",
+      "tail": "violet",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "yellow",
+      "label": null
+    },
+    {
+      "head": "purple",
+      "tail": "yellow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

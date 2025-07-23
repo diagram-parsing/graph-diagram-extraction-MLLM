@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "diamond"
+    },
+    {
+      "id": "blue",
+      "text": "blue",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "blue",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "blue",
+      "label": null
+    },
+    {
+      "head": "bubble gum",
+      "tail": "blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

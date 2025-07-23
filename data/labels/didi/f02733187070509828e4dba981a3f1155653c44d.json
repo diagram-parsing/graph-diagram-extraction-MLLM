@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "order",
+      "text": "order",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "diamond"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "payment",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "last name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

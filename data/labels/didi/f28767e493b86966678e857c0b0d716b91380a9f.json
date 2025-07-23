@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Create",
+      "label": null
+    }
+  ],
+  "groups": []
+}

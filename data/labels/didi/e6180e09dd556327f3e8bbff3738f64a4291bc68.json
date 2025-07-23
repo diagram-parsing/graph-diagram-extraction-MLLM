@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "customer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

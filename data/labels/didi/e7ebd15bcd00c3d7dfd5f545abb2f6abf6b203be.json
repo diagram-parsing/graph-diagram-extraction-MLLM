@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "oval"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Open",
+      "label": "Drag"
+    },
+    {
+      "head": "Reload",
+      "tail": "Repair",
+      "label": "Click"
+    },
+    {
+      "head": "Quit",
+      "tail": "Repair",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Close",
+      "tail": "Quit",
+      "label": "Click"
+    },
+    {
+      "head": "Open",
+      "tail": "Stop",
+      "label": "Drag"
+    },
+    {
+      "head": "Repair",
+      "tail": "Stop",
+      "label": "Drag"
+    }
+  ],
+  "groups": []
+}

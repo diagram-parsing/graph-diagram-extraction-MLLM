@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "help",
+      "text": "help",
+      "class": "oval"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "parallelogram"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "communication",
+      "tail": "help",
+      "label": "replies"
+    },
+    {
+      "head": "help",
+      "tail": "product",
+      "label": "helps"
+    },
+    {
+      "head": "process",
+      "tail": "product",
+      "label": "processes"
+    },
+    {
+      "head": "communication",
+      "tail": "product",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

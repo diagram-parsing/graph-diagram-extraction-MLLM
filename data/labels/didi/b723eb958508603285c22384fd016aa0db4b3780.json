@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Quit?",
+      "label": "No"
+    },
+    {
+      "head": "Copy",
+      "tail": "Quit?",
+      "label": "Yes"
+    },
+    {
+      "head": "Create",
+      "tail": "Close",
+      "label": "Fling"
+    },
+    {
+      "head": "Create",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

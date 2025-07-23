@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "city",
+      "tail": "shipment",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

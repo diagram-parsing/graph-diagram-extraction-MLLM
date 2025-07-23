@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "employee",
+      "text": "employee",
+      "class": "oval"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "employee",
+      "tail": "zip code",
+      "label": "bills"
+    },
+    {
+      "head": "name",
+      "tail": "employee",
+      "label": "helps"
+    },
+    {
+      "head": "target",
+      "tail": "employee",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

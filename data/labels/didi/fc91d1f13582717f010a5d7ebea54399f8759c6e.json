@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Delete",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

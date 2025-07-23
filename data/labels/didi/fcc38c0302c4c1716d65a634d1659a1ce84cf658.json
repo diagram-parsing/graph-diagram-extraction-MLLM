@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Close",
+      "label": null
+    }
+  ],
+  "groups": []
+}

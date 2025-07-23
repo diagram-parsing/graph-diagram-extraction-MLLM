@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "city",
+      "text": "city",
+      "class": "box"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "city",
+      "label": null
+    }
+  ],
+  "groups": []
+}

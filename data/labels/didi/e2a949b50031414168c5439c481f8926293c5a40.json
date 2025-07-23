@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "parallelogram"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "oval"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "support",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "account no",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "product",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

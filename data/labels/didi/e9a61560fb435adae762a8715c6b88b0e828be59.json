@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "diamond"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "octagon"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "diamond"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "evaluation",
+      "tail": "website",
+      "label": "replies"
+    },
+    {
+      "head": "help",
+      "tail": "evaluation",
+      "label": "produces"
+    },
+    {
+      "head": "help",
+      "tail": "market",
+      "label": "replies"
+    },
+    {
+      "head": "evaluation",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "evaluation",
+      "tail": "help",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}

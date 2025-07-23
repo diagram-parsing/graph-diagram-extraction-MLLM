@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "octagon"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "box"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "fees",
+      "tail": "manager",
+      "label": "sends"
+    },
+    {
+      "head": "manager",
+      "tail": "fees",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "fees",
+      "label": "bills"
+    },
+    {
+      "head": "fees",
+      "tail": "customer",
+      "label": "sends"
+    },
+    {
+      "head": "manager",
+      "tail": "feedback",
+      "label": "builds"
+    },
+    {
+      "head": "manager",
+      "tail": "taxes",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "octagon"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Reload",
+      "label": null
+    }
+  ],
+  "groups": []
+}

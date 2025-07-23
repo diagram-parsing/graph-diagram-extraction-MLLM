@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "oval"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sender",
+      "tail": "hotline",
+      "label": "manufactures"
+    },
+    {
+      "head": "evaluation",
+      "tail": "hotline",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

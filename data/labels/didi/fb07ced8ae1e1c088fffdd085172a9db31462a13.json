@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "oval"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "octagon"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Close",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Close",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Close",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Turn on",
+      "label": "Fling"
+    },
+    {
+      "head": "Go",
+      "tail": "Turn on",
+      "label": "Fling"
+    },
+    {
+      "head": "Delete",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Go",
+      "label": null
+    }
+  ],
+  "groups": []
+}

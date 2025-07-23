@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "oval"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Close",
+      "tail": "Close",
+      "label": null
+    }
+  ],
+  "groups": []
+}

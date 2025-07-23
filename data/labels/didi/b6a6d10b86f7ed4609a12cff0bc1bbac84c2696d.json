@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn off",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Create",
+      "label": "Top"
+    },
+    {
+      "head": "Copy",
+      "tail": "Create",
+      "label": null
+    }
+  ],
+  "groups": []
+}

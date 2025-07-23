@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "box"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "azure",
+      "tail": "apricot",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "octagon"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "evaluation",
+      "tail": "fees",
+      "label": "replies"
+    },
+    {
+      "head": "evaluation",
+      "tail": "shipment",
+      "label": "processes"
+    },
+    {
+      "head": "support",
+      "tail": "evaluation",
+      "label": "calls"
+    },
+    {
+      "head": "shipment",
+      "tail": "address",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

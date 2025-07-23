@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "oval"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "price",
+      "tail": "billing",
+      "label": null
+    },
+    {
+      "head": "payment",
+      "tail": "price",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "city",
+      "label": "builds"
+    },
+    {
+      "head": "price",
+      "tail": "name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

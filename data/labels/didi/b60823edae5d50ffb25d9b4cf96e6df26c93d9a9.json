@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Search",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

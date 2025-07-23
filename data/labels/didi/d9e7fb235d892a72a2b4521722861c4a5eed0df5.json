@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "email",
+      "text": "email",
+      "class": "octagon"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "octagon"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "diamond"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "price",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "place",
+      "tail": "bank",
+      "label": "ships"
+    },
+    {
+      "head": "manager",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "email",
+      "tail": "place",
+      "label": null
+    },
+    {
+      "head": "bank",
+      "tail": "place",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "octagon"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sender",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "id",
+      "label": null
+    }
+  ],
+  "groups": []
+}

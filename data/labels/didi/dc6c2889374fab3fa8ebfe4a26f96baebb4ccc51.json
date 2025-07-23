@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Plug",
+      "label": "Pinch"
+    },
+    {
+      "head": "Plug",
+      "tail": "Stop",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

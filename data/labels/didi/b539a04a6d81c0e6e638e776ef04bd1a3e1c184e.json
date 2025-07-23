@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "box"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "documentation",
+      "tail": "documentation",
+      "label": "bills"
+    },
+    {
+      "head": "documentation",
+      "tail": "documentation",
+      "label": "processes"
+    },
+    {
+      "head": "business",
+      "tail": "documentation",
+      "label": "drops"
+    },
+    {
+      "head": "manager",
+      "tail": "documentation",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

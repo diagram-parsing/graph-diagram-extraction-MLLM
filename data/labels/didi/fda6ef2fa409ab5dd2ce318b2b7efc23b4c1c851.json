@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "address",
+      "tail": "phone",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

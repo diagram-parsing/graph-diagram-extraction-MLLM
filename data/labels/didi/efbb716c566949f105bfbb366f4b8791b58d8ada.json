@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "oval"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "box"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "payment",
+      "label": "builds"
+    },
+    {
+      "head": "sender",
+      "tail": "promotion",
+      "label": null
+    },
+    {
+      "head": "sales",
+      "tail": "promotion",
+      "label": "drops"
+    },
+    {
+      "head": "promotion",
+      "tail": "sales",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

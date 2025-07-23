@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

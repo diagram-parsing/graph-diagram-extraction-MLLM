@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Move",
+      "tail": "Advance",
+      "label": "Back"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "bank",
+      "label": null
+    }
+  ],
+  "groups": []
+}

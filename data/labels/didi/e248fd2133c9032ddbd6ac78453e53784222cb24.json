@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "box"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "support",
+      "tail": "promotion",
+      "label": "helps"
+    },
+    {
+      "head": "promotion",
+      "tail": "support",
+      "label": "helps"
+    },
+    {
+      "head": "support",
+      "tail": "sales",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

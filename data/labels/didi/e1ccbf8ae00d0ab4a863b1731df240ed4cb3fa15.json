@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Quit?",
+      "label": "No"
+    },
+    {
+      "head": "Create",
+      "tail": "Copy",
+      "label": "Fling"
+    },
+    {
+      "head": "Create",
+      "tail": "Ready?",
+      "label": "Yes"
+    },
+    {
+      "head": "Reload",
+      "tail": "Ready?",
+      "label": "No"
+    },
+    {
+      "head": "Quit",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Quit",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

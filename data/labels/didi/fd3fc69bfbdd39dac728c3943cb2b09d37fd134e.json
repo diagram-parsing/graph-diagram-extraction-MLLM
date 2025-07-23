@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "letter",
+      "tail": "street",
+      "label": null
+    },
+    {
+      "head": "street",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

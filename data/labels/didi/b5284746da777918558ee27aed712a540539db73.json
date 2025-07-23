@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "box"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "id",
+      "tail": "letter",
+      "label": null
+    }
+  ],
+  "groups": []
+}

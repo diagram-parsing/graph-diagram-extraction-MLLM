@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "diamond"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "parallelogram"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "octagon"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "diamond"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "first name",
+      "tail": "sales",
+      "label": "replies"
+    },
+    {
+      "head": "taxes",
+      "tail": "sales",
+      "label": "bills"
+    },
+    {
+      "head": "promotion",
+      "tail": "taxes",
+      "label": "sends"
+    },
+    {
+      "head": "billing",
+      "tail": "city",
+      "label": "helps"
+    },
+    {
+      "head": "first name",
+      "tail": "billing",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

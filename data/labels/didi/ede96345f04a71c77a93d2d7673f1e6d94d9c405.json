@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "parallelogram"
+    },
+    {
+      "id": "dark chestnut",
+      "text": "dark chestnut",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "navy blue",
+      "tail": "dark chestnut",
+      "label": null
+    }
+  ],
+  "groups": []
+}

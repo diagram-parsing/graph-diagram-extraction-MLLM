@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "octagon"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Delete",
+      "label": "Scroll"
+    },
+    {
+      "head": "Resume",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Create",
+      "label": "Drag"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Resume",
+      "label": "Drag"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Move",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

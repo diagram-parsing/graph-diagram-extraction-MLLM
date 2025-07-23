@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Switch",
+      "label": "Tap"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Plug",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

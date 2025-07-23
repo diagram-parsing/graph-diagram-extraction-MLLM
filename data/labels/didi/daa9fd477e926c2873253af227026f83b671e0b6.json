@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Reload",
+      "label": null
+    }
+  ],
+  "groups": []
+}

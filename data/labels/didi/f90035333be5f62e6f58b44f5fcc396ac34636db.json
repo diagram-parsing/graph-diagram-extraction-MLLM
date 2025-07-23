@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "parallelogram"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "product",
+      "label": null
+    }
+  ],
+  "groups": []
+}

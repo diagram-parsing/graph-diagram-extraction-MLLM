@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Copy",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

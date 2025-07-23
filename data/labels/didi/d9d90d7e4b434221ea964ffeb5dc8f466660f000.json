@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Close",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "diamond"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "first name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "parallelogram"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "box"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "place",
+      "tail": "street",
+      "label": "bills"
+    },
+    {
+      "head": "city",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "city",
+      "tail": "place",
+      "label": null
+    }
+  ],
+  "groups": []
+}

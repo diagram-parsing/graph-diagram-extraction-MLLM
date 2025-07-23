@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "octagon"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Reload",
+      "label": null
+    }
+  ],
+  "groups": []
+}

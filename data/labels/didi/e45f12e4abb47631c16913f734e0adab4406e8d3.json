@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "parallelogram"
+    },
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "box"
+    },
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "oval"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "blond",
+      "tail": "orange",
+      "label": null
+    },
+    {
+      "head": "orange",
+      "tail": "blond",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "blond",
+      "tail": "apricot",
+      "label": null
+    }
+  ],
+  "groups": []
+}

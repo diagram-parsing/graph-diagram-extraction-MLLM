@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "process",
+      "text": "process",
+      "class": "octagon"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "diamond"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "oval"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "diamond"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "help",
+      "tail": "process",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "process",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "location",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

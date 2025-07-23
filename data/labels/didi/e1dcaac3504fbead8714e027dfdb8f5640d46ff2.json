@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Copy",
+      "label": "Fling"
+    },
+    {
+      "head": "Open",
+      "tail": "Plug",
+      "label": "Top"
+    },
+    {
+      "head": "Plug",
+      "tail": "Close",
+      "label": "Back"
+    },
+    {
+      "head": "Close",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Copy",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

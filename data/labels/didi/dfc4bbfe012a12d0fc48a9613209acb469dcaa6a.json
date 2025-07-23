@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Wait",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Search",
+      "tail": "Wait",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

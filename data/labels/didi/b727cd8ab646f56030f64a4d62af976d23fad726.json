@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "octagon"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Close",
+      "label": null
+    }
+  ],
+  "groups": []
+}

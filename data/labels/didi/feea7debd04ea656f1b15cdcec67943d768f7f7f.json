@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "address",
+      "text": "address",
+      "class": "oval"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "box"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "address",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "taxes",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "taxes",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "oval"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Close",
+      "label": "Click"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Ready?",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

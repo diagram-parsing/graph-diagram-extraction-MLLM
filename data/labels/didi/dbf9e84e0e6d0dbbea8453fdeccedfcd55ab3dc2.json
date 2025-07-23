@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "oval"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Ready?",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Switch",
+      "label": null
+    }
+  ],
+  "groups": []
+}

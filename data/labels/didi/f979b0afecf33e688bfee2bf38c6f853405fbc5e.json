@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "box"
+    },
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "box"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "box"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "brown",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "brown",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "brown",
+      "tail": "saffron",
+      "label": null
+    }
+  ],
+  "groups": []
+}

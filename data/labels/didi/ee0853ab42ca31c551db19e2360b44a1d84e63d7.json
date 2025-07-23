@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Unplug",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Go",
+      "tail": "Unplug",
+      "label": "Drag"
+    },
+    {
+      "head": "Go",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Go",
+      "label": null
+    }
+  ],
+  "groups": []
+}

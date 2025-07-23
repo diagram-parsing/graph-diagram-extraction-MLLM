@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "diamond"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "price",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "price",
+      "label": null
+    }
+  ],
+  "groups": []
+}

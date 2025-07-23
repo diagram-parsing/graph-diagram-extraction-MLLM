@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Wait",
+      "label": "Slide"
+    },
+    {
+      "head": "Search",
+      "tail": "Open",
+      "label": "Scroll"
+    }
+  ],
+  "groups": []
+}

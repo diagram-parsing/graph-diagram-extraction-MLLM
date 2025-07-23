@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Close",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Switch",
+      "label": "Back"
+    },
+    {
+      "head": "Wait",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Reload",
+      "label": null
+    }
+  ],
+  "groups": []
+}

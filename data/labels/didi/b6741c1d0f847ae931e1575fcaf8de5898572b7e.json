@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Repair",
+      "label": "Pinch"
+    },
+    {
+      "head": "Quit",
+      "tail": "Stop",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Stop",
+      "tail": "Switch",
+      "label": "Drag"
+    },
+    {
+      "head": "Repair",
+      "tail": "Quit",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

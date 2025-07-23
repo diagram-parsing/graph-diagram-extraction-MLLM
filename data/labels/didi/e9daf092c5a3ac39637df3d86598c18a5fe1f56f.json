@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit",
+      "label": null
+    }
+  ],
+  "groups": []
+}

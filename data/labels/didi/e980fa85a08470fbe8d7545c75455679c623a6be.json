@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "octagon"
+    },
+    {
+      "id": "green",
+      "text": "green",
+      "class": "octagon"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "box"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "box"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "octagon"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chocolate",
+      "tail": "green",
+      "label": null
+    },
+    {
+      "head": "green",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "charcoal",
+      "tail": "magenta",
+      "label": null
+    }
+  ],
+  "groups": []
+}

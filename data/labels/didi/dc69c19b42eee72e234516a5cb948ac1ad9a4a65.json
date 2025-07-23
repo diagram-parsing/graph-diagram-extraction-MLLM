@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Close",
+      "label": "Scroll"
+    },
+    {
+      "head": "Copy",
+      "tail": "Close",
+      "label": "Drag"
+    },
+    {
+      "head": "Turn on",
+      "tail": "Close",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

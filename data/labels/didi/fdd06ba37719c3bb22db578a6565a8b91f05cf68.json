@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Stop",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Stop",
+      "label": null
+    }
+  ],
+  "groups": []
+}

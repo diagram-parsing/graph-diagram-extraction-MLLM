@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

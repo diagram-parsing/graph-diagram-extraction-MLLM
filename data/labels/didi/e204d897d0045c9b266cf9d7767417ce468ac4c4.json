@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Go",
+      "label": null
+    }
+  ],
+  "groups": []
+}

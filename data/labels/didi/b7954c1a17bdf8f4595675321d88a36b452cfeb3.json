@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "order",
+      "text": "order",
+      "class": "diamond"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "octagon"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "oval"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "manager",
+      "label": "helps"
+    },
+    {
+      "head": "customer",
+      "tail": "manager",
+      "label": "sends"
+    },
+    {
+      "head": "order",
+      "tail": "price",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

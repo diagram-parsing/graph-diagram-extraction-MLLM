@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "product",
+      "text": "product",
+      "class": "parallelogram"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "diamond"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "business",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "recipient",
+      "tail": "product",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "location",
+      "label": null
+    }
+  ],
+  "groups": []
+}

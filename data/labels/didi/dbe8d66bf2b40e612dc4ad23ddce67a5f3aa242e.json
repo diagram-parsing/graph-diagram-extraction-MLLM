@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "diamond"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "box"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "oval"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "lime",
+      "tail": "beige",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "lime",
+      "label": null
+    },
+    {
+      "head": "bubble gum",
+      "tail": "violet",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "parallelogram"
+    },
+    {
+      "id": "fees",
+      "text": "fees",
+      "class": "diamond"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer",
+      "tail": "payment",
+      "label": "bills"
+    },
+    {
+      "head": "hotline",
+      "tail": "fees",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

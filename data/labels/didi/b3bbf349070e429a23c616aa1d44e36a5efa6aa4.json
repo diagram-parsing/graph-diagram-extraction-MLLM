@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "target",
+      "text": "target",
+      "class": "oval"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "diamond"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "box"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "target",
+      "label": "connects"
+    },
+    {
+      "head": "target",
+      "tail": "feedback",
+      "label": "replies"
+    },
+    {
+      "head": "street number",
+      "tail": "feedback",
+      "label": "helps"
+    },
+    {
+      "head": "target",
+      "tail": "website",
+      "label": "replies"
+    },
+    {
+      "head": "target",
+      "tail": "taxes",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

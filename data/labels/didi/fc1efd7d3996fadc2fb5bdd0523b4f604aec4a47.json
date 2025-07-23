@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "octagon"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Advance",
+      "label": null
+    }
+  ],
+  "groups": []
+}

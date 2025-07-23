@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "parallelogram"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "octagon"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "parallelogram"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "parallelogram"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "artichoke",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "cyan",
+      "label": null
+    },
+    {
+      "head": "artichoke",
+      "tail": "magenta",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "magenta",
+      "label": null
+    }
+  ],
+  "groups": []
+}

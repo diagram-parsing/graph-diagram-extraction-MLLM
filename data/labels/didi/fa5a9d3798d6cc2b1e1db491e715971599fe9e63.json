@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "business",
+      "text": "business",
+      "class": "box"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "business",
+      "tail": "letter",
+      "label": "calls"
+    }
+  ],
+  "groups": []
+}

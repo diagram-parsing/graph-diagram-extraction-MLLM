@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Create",
+      "label": null
+    }
+  ],
+  "groups": []
+}

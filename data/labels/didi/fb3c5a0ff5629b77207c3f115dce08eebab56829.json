@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "oval"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Ready?",
+      "tail": "Wait",
+      "label": "Yes"
+    },
+    {
+      "head": "Quit?",
+      "tail": "Ready?",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Quit?",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Quit?",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

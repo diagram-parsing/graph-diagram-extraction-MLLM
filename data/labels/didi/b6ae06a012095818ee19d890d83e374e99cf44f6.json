@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

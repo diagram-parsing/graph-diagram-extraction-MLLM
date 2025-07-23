@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "diamond"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "octagon"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customs",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "zip code",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "box"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "oval"
+    },
+    {
+      "id": "fuchsia",
+      "text": "fuchsia",
+      "class": "diamond"
+    },
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "parallelogram"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "eggshell",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "apricot",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "fuchsia",
+      "label": null
+    },
+    {
+      "head": "fuchsia",
+      "tail": "eggshell",
+      "label": null
+    },
+    {
+      "head": "bone",
+      "tail": "azure",
+      "label": null
+    }
+  ],
+  "groups": []
+}

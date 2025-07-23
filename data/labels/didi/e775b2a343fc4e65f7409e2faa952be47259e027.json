@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "parallelogram"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "octagon"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "documentation",
+      "label": "replies"
+    },
+    {
+      "head": "billing",
+      "tail": "documentation",
+      "label": "processes"
+    },
+    {
+      "head": "documentation",
+      "tail": "shipment",
+      "label": "produces"
+    },
+    {
+      "head": "street",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "customer care",
+      "tail": "street",
+      "label": null
+    }
+  ],
+  "groups": []
+}

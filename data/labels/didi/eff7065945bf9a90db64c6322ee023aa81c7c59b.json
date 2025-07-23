@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "parallelogram"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "octagon"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "sales",
+      "tail": "zip code",
+      "label": "bills"
+    },
+    {
+      "head": "sales",
+      "tail": "communication",
+      "label": "calls"
+    },
+    {
+      "head": "zip code",
+      "tail": "sales",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

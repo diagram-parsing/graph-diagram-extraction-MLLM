@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "diamond"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

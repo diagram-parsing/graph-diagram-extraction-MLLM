@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "parallelogram"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "diamond"
+    },
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chocolate",
+      "tail": "cobalt blue",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "teal",
+      "label": null
+    }
+  ],
+  "groups": []
+}

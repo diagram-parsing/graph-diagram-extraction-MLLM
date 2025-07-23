@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "parallelogram"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "auburn",
+      "tail": "cyan",
+      "label": null
+    }
+  ],
+  "groups": []
+}

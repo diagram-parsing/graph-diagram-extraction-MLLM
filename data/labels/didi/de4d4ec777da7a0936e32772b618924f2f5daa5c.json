@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "email",
+      "text": "email",
+      "class": "box"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "oval"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "address",
+      "tail": "email",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "promotion",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "diamond"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Turn on",
+      "label": "Drag"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Repair",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Unplug",
+      "label": "Zoom in"
+    }
+  ],
+  "groups": []
+}

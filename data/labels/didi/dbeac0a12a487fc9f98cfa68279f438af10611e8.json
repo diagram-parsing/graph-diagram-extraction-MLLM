@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "oval"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "diamond"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "diamond"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "bank",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "price",
+      "tail": "bank",
+      "label": null
+    },
+    {
+      "head": "price",
+      "tail": "price",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "process",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

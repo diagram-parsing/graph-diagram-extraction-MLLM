@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "oval"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "parallelogram"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "oval"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "box"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "taxes",
+      "tail": "order",
+      "label": "drops"
+    },
+    {
+      "head": "market",
+      "tail": "order",
+      "label": "bills"
+    },
+    {
+      "head": "order",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "market",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Replace",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Replace",
+      "label": null
+    }
+  ],
+  "groups": []
+}

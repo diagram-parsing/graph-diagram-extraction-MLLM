@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Replace",
+      "label": "Fling"
+    },
+    {
+      "head": "Resume",
+      "tail": "Replace",
+      "label": "Back"
+    },
+    {
+      "head": "Replace",
+      "tail": "Plug",
+      "label": "Drag"
+    },
+    {
+      "head": "Resume",
+      "tail": "Plug",
+      "label": "No"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Resume",
+      "label": "Fling"
+    },
+    {
+      "head": "Stop",
+      "tail": "Resume",
+      "label": "Pinch"
+    },
+    {
+      "head": "Open",
+      "tail": "Resume",
+      "label": "Slide"
+    },
+    {
+      "head": "Plug",
+      "tail": "Stop",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Resume",
+      "tail": "Stop",
+      "label": "Tap"
+    },
+    {
+      "head": "Replace",
+      "tail": "Open",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

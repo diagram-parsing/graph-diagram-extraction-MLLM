@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "octagon"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Repair",
+      "label": null
+    }
+  ],
+  "groups": []
+}

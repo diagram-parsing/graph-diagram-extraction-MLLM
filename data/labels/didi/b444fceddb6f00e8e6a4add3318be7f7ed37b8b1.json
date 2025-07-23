@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "box"
+    },
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "parallelogram"
+    },
+    {
+      "id": "blue",
+      "text": "blue",
+      "class": "diamond"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "blue",
+      "tail": "magenta",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "blue",
+      "label": null
+    },
+    {
+      "head": "charcoal",
+      "tail": "bone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

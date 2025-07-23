@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit?",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

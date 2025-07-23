@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Quit?",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Switch",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

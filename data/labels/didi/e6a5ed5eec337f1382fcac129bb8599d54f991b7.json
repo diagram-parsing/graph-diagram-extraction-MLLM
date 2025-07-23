@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "oval"
+    },
+    {
+      "id": "yellow",
+      "text": "yellow",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "yellow",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

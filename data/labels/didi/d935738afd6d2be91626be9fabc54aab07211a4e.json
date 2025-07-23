@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "oval"
+    },
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "diamond"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "box"
+    },
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "last name",
+      "tail": "zip code",
+      "label": "bills"
+    },
+    {
+      "head": "sender",
+      "tail": "zip code",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "zip code",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "sender",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

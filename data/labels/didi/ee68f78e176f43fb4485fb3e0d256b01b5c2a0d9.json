@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "box"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "oval"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "box"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "oval"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "customs",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "address",
+      "label": "drops"
+    },
+    {
+      "head": "letter",
+      "tail": "address",
+      "label": null
+    }
+  ],
+  "groups": []
+}

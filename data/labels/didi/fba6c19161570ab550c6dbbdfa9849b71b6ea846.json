@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "orange",
+      "text": "orange",
+      "class": "oval"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "parallelogram"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "diamond"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "orange",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "violet",
+      "tail": "bone",
+      "label": null
+    },
+    {
+      "head": "artichoke",
+      "tail": "violet",
+      "label": null
+    }
+  ],
+  "groups": []
+}

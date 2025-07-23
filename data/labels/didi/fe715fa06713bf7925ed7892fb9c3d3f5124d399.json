@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "box"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Quit?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Close",
+      "text": "Close",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Close",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Search",
+      "label": "Click"
+    },
+    {
+      "head": "Advance",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

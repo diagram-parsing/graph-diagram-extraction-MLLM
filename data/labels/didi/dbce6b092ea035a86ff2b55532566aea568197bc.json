@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Copy",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

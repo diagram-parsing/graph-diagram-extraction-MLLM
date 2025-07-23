@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Plug",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

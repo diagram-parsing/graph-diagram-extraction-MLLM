@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "name",
+      "text": "name",
+      "class": "octagon"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "box"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "parallelogram"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "name",
+      "tail": "letter",
+      "label": null
+    },
+    {
+      "head": "letter",
+      "tail": "letter",
+      "label": null
+    },
+    {
+      "head": "letter",
+      "tail": "account no",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "octagon"
+    },
+    {
+      "id": "green",
+      "text": "green",
+      "class": "oval"
+    },
+    {
+      "id": "green",
+      "text": "green",
+      "class": "oval"
+    },
+    {
+      "id": "navy blue",
+      "text": "navy blue",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "green",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "green",
+      "tail": "green",
+      "label": null
+    },
+    {
+      "head": "green",
+      "tail": "navy blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

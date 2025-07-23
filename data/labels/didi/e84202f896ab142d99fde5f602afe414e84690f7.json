@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "parallelogram"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "box"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "parallelogram"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "octagon"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "last name",
+      "label": null
+    },
+    {
+      "head": "documentation",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "number",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "box"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Unplug",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

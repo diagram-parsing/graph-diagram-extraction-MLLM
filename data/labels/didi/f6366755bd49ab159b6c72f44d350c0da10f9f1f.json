@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "oval"
+    },
+    {
+      "id": "dark cyan",
+      "text": "dark cyan",
+      "class": "parallelogram"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark cyan",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "bubble gum",
+      "tail": "red",
+      "label": null
+    }
+  ],
+  "groups": []
+}

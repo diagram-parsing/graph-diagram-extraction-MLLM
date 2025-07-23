@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Turn off",
+      "label": null
+    },
+    {
+      "head": "Turn off",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Unplug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

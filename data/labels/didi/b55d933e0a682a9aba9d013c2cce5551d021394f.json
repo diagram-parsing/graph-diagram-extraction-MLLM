@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Replace",
+      "tail": "Move",
+      "label": "Fling"
+    },
+    {
+      "head": "Replace",
+      "tail": "Copy",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Copy",
+      "tail": "Copy",
+      "label": "Scroll"
+    },
+    {
+      "head": "Resume",
+      "tail": "Copy",
+      "label": "Click"
+    },
+    {
+      "head": "Copy",
+      "tail": "Reload",
+      "label": "Zoom out"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "oval"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit?",
+      "tail": "Reload",
+      "label": "Tap"
+    },
+    {
+      "head": "Copy",
+      "tail": "Reload",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

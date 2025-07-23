@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "diamond"
+    },
+    {
+      "id": "brown",
+      "text": "brown",
+      "class": "diamond"
+    },
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "chocolate",
+      "tail": "brown",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "pink",
+      "label": null
+    }
+  ],
+  "groups": []
+}

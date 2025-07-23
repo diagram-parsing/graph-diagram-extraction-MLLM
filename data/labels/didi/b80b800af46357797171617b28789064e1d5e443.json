@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "box"
+    },
+    {
+      "id": "business",
+      "text": "business",
+      "class": "octagon"
+    },
+    {
+      "id": "letter",
+      "text": "letter",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "business",
+      "tail": "sales",
+      "label": "replies"
+    },
+    {
+      "head": "letter",
+      "tail": "sales",
+      "label": "produces"
+    },
+    {
+      "head": "sales",
+      "tail": "letter",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

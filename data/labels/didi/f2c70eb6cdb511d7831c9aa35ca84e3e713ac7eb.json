@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "black",
+      "text": "black",
+      "class": "diamond"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "parallelogram"
+    },
+    {
+      "id": "cyan",
+      "text": "cyan",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "lime",
+      "tail": "black",
+      "label": null
+    },
+    {
+      "head": "cyan",
+      "tail": "black",
+      "label": null
+    }
+  ],
+  "groups": []
+}

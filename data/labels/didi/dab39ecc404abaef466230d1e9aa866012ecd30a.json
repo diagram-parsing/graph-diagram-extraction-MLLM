@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Reload",
+      "label": "Tap"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Reload",
+      "label": null
+    }
+  ],
+  "groups": []
+}

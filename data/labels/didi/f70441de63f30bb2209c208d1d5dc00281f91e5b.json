@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "box"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "documentation",
+      "label": null
+    },
+    {
+      "head": "target",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

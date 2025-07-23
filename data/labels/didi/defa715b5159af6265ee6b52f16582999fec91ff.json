@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "oval"
+    },
+    {
+      "id": "name",
+      "text": "name",
+      "class": "octagon"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "diamond"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "name",
+      "tail": "zip code",
+      "label": "helps"
+    },
+    {
+      "head": "id",
+      "tail": "zip code",
+      "label": "processes"
+    },
+    {
+      "head": "id",
+      "tail": "name",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "documentation",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

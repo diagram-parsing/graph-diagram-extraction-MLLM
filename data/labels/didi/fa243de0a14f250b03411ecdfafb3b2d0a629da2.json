@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Unplug",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Stop",
+      "tail": "Unplug",
+      "label": "Top"
+    }
+  ],
+  "groups": []
+}

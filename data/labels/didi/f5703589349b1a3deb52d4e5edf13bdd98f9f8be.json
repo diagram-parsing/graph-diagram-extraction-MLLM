@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "blond",
+      "text": "blond",
+      "class": "diamond"
+    },
+    {
+      "id": "beige",
+      "text": "beige",
+      "class": "oval"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "apricot",
+      "tail": "blond",
+      "label": null
+    },
+    {
+      "head": "apricot",
+      "tail": "beige",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "oval"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Wait",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Delete",
+      "label": null
+    },
+    {
+      "head": "Wait",
+      "tail": "Delete",
+      "label": null
+    }
+  ],
+  "groups": []
+}

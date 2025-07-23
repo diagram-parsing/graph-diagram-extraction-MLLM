@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    },
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "octagon"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Search",
+      "tail": "Delete",
+      "label": "Pinch"
+    },
+    {
+      "head": "Search",
+      "tail": "Turn off",
+      "label": "Slide"
+    },
+    {
+      "head": "Delete",
+      "tail": "Reload",
+      "label": "Scroll"
+    },
+    {
+      "head": "Search",
+      "tail": "Reload",
+      "label": "Tap"
+    },
+    {
+      "head": "Delete",
+      "tail": "Search",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

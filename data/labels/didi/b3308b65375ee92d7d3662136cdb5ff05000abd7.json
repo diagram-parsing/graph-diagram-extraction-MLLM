@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Wait",
+      "tail": "Replace",
+      "label": "Tap"
+    },
+    {
+      "head": "Ready?",
+      "tail": "Wait",
+      "label": null
+    }
+  ],
+  "groups": []
+}

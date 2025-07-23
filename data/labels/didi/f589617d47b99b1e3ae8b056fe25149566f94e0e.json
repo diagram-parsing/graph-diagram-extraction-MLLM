@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Copy",
+      "label": "No"
+    },
+    {
+      "head": "Plug",
+      "tail": "Ready?",
+      "label": null
+    }
+  ],
+  "groups": []
+}

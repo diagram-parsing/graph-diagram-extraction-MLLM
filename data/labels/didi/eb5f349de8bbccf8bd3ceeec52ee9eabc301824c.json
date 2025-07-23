@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Open",
+      "label": null
+    }
+  ],
+  "groups": []
+}

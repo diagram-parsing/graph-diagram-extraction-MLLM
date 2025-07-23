@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "box"
+    },
+    {
+      "id": "yellow",
+      "text": "yellow",
+      "class": "diamond"
+    },
+    {
+      "id": "apricot",
+      "text": "apricot",
+      "class": "box"
+    },
+    {
+      "id": "magenta",
+      "text": "magenta",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "apricot",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "artichoke",
+      "tail": "yellow",
+      "label": null
+    },
+    {
+      "head": "magenta",
+      "tail": "yellow",
+      "label": null
+    }
+  ],
+  "groups": []
+}

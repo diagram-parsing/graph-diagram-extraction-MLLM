@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "product",
+      "tail": "customer",
+      "label": null
+    }
+  ],
+  "groups": []
+}

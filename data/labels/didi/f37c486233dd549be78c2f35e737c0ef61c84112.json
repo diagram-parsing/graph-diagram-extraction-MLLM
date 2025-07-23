@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "diamond"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "parallelogram"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "diamond"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "id",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "street number",
+      "label": "ships"
+    },
+    {
+      "head": "manager",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "customs",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "customs",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "octagon"
+    },
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "diamond"
+    },
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "light brown",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "auburn",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

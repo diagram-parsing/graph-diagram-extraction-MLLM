@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Stop",
+      "label": "Slide"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "octagon"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    },
+    {
+      "id": "email",
+      "text": "email",
+      "class": "parallelogram"
+    },
+    {
+      "id": "city",
+      "text": "city",
+      "class": "octagon"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "box"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "city",
+      "label": "sends"
+    },
+    {
+      "head": "city",
+      "tail": "city",
+      "label": "processes"
+    },
+    {
+      "head": "account no",
+      "tail": "shipment",
+      "label": "ships"
+    },
+    {
+      "head": "email",
+      "tail": "shipment",
+      "label": "replies"
+    },
+    {
+      "head": "city",
+      "tail": "shipment",
+      "label": "manufactures"
+    }
+  ],
+  "groups": []
+}

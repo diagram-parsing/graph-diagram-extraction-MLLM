@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Stop",
+      "text": "Stop",
+      "class": "diamond"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Stop",
+      "tail": "Advance",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

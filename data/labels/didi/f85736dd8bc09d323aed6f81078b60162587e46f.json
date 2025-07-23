@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Delete",
+      "tail": "Replace",
+      "label": "Click"
+    }
+  ],
+  "groups": []
+}

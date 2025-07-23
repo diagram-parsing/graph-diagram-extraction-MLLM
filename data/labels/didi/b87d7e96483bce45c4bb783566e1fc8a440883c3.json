@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "box"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "diamond"
+    },
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "manager",
+      "label": null
+    },
+    {
+      "head": "manager",
+      "tail": "location",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "location",
+      "label": null
+    }
+  ],
+  "groups": []
+}

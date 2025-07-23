@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "parallelogram"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "box"
+    },
+    {
+      "id": "light blue",
+      "text": "light blue",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "light blue",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "bubble gum",
+      "label": null
+    },
+    {
+      "head": "light green",
+      "tail": "light blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

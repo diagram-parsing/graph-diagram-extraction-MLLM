@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "teal",
+      "text": "teal",
+      "class": "diamond"
+    },
+    {
+      "id": "purple",
+      "text": "purple",
+      "class": "diamond"
+    },
+    {
+      "id": "gold",
+      "text": "gold",
+      "class": "octagon"
+    },
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "octagon"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "octagon"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "purple",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "teal",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "gold",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "red",
+      "tail": "dark chocolate",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "gold",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "dark chocolate",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "silver",
+      "tail": "red",
+      "label": null
+    },
+    {
+      "head": "teal",
+      "tail": "silver",
+      "label": null
+    }
+  ],
+  "groups": []
+}

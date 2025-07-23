@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "order",
+      "text": "order",
+      "class": "box"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "documentation",
+      "tail": "order",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

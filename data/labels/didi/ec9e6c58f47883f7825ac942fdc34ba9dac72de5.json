@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "oval"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "artichoke",
+      "tail": "light brown",
+      "label": null
+    }
+  ],
+  "groups": []
+}

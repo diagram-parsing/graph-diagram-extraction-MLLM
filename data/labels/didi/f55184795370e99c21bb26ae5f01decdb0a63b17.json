@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "diamond"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "box"
+    },
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Open",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Reload",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Open",
+      "label": null
+    },
+    {
+      "head": "Reload",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Turn on",
+      "tail": "Advance",
+      "label": null
+    }
+  ],
+  "groups": []
+}

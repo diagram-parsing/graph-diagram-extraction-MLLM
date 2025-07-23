@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "pink",
+      "text": "pink",
+      "class": "diamond"
+    },
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "pink",
+      "tail": "eggshell",
+      "label": null
+    }
+  ],
+  "groups": []
+}

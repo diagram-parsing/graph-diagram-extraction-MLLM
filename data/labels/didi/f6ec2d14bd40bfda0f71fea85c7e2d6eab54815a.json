@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "box"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "box"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "last name",
+      "tail": "customs",
+      "label": "builds"
+    },
+    {
+      "head": "customs",
+      "tail": "purchase",
+      "label": "builds"
+    },
+    {
+      "head": "documentation",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "last name",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "box"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "process",
+      "label": null
+    }
+  ],
+  "groups": []
+}

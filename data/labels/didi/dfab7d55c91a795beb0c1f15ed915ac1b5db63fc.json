@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "diamond"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "octagon"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "parallelogram"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "target",
+      "tail": "documentation",
+      "label": "ships"
+    },
+    {
+      "head": "number",
+      "tail": "target",
+      "label": "produces"
+    },
+    {
+      "head": "street",
+      "tail": "number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

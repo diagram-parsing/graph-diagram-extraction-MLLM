@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "number",
+      "text": "number",
+      "class": "box"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    },
+    {
+      "id": "manager",
+      "text": "manager",
+      "class": "oval"
+    },
+    {
+      "id": "market",
+      "text": "market",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "manager",
+      "tail": "number",
+      "label": "ships"
+    },
+    {
+      "head": "number",
+      "tail": "market",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "market",
+      "label": null
+    }
+  ],
+  "groups": []
+}

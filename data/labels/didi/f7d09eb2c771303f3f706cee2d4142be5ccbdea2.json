@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "light green",
+      "text": "light green",
+      "class": "diamond"
+    },
+    {
+      "id": "white",
+      "text": "white",
+      "class": "octagon"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "diamond"
+    },
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "white",
+      "tail": "light green",
+      "label": null
+    },
+    {
+      "head": "lime",
+      "tail": "white",
+      "label": null
+    },
+    {
+      "head": "white",
+      "tail": "lime",
+      "label": null
+    }
+  ],
+  "groups": []
+}

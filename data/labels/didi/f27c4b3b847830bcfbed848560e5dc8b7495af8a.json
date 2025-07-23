@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "eggshell",
+      "text": "eggshell",
+      "class": "diamond"
+    },
+    {
+      "id": "bone",
+      "text": "bone",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "eggshell",
+      "tail": "bone",
+      "label": null
+    }
+  ],
+  "groups": []
+}

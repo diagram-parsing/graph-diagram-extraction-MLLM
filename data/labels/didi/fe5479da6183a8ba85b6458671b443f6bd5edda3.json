@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "oval"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "octagon"
+    },
+    {
+      "id": "customs",
+      "text": "customs",
+      "class": "box"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "feedback",
+      "label": "ships"
+    },
+    {
+      "head": "feedback",
+      "tail": "last name",
+      "label": "bills"
+    },
+    {
+      "head": "last name",
+      "tail": "customs",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

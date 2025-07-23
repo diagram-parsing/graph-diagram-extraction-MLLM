@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "bank",
+      "text": "bank",
+      "class": "oval"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bank",
+      "tail": "id",
+      "label": "builds"
+    }
+  ],
+  "groups": []
+}

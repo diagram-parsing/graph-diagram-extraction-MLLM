@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "lime",
+      "text": "lime",
+      "class": "diamond"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "lime",
+      "tail": "saffron",
+      "label": null
+    }
+  ],
+  "groups": []
+}

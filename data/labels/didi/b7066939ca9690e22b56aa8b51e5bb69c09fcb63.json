@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "oval"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "diamond"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Search",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Copy",
+      "label": "Pinch"
+    },
+    {
+      "head": "Move",
+      "tail": "Reload",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

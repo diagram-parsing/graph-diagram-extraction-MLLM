@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    },
+    {
+      "id": "id",
+      "text": "id",
+      "class": "octagon"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "octagon"
+    },
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "oval"
+    },
+    {
+      "id": "support",
+      "text": "support",
+      "class": "parallelogram"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "location",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "id",
+      "label": null
+    },
+    {
+      "head": "location",
+      "tail": "place",
+      "label": null
+    },
+    {
+      "head": "purchase",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "support",
+      "tail": "target",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

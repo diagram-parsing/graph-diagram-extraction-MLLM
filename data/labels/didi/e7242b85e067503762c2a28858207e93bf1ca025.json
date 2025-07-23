@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "oval"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "box"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer care",
+      "tail": "help",
+      "label": null
+    },
+    {
+      "head": "help",
+      "tail": "first name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

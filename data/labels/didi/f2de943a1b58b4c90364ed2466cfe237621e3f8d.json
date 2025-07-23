@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Unplug",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

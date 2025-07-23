@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "oval"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Replace",
+      "tail": "Repair",
+      "label": "Click"
+    },
+    {
+      "head": "Turn off",
+      "tail": "Replace",
+      "label": null
+    }
+  ],
+  "groups": []
+}

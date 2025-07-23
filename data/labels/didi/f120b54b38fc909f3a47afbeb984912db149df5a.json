@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Quit?",
+      "label": "Tap"
+    },
+    {
+      "head": "Switch",
+      "tail": "Repair",
+      "label": "Tap"
+    }
+  ],
+  "groups": []
+}

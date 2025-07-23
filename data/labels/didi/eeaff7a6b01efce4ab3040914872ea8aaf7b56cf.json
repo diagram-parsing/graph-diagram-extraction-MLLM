@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "octagon"
+    },
+    {
+      "id": "cobalt blue",
+      "text": "cobalt blue",
+      "class": "parallelogram"
+    },
+    {
+      "id": "charcoal",
+      "text": "charcoal",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "cobalt blue",
+      "tail": "cobalt blue",
+      "label": null
+    },
+    {
+      "head": "charcoal",
+      "tail": "cobalt blue",
+      "label": null
+    }
+  ],
+  "groups": []
+}

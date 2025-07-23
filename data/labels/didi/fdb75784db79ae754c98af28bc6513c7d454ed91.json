@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Copy",
+      "tail": "Search",
+      "label": "Scroll"
+    },
+    {
+      "head": "Resume",
+      "tail": "Search",
+      "label": "Tap"
+    },
+    {
+      "head": "Advance",
+      "tail": "Quit?",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Move",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Resume",
+      "label": null
+    }
+  ],
+  "groups": []
+}

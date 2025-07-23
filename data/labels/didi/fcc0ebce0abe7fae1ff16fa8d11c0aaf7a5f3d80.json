@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "octagon"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "box"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Resume",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Go",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Advance",
+      "label": null
+    },
+    {
+      "head": "Plug",
+      "tail": "Move",
+      "label": null
+    }
+  ],
+  "groups": []
+}

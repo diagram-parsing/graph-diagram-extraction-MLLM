@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "business",
+      "text": "business",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "box"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "diamond"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "first name",
+      "tail": "business",
+      "label": "ships"
+    },
+    {
+      "head": "business",
+      "tail": "sales",
+      "label": "drops"
+    },
+    {
+      "head": "first name",
+      "tail": "sales",
+      "label": "produces"
+    },
+    {
+      "head": "product",
+      "tail": "sales",
+      "label": "drops"
+    },
+    {
+      "head": "business",
+      "tail": "first name",
+      "label": "helps"
+    },
+    {
+      "head": "first name",
+      "tail": "evaluation",
+      "label": "connects"
+    }
+  ],
+  "groups": []
+}

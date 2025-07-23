@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "parallelogram"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "customer",
+      "tail": "street number",
+      "label": null
+    }
+  ],
+  "groups": []
+}

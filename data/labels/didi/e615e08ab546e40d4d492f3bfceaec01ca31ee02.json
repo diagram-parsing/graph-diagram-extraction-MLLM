@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "order",
+      "text": "order",
+      "class": "octagon"
+    },
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street number",
+      "tail": "order",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

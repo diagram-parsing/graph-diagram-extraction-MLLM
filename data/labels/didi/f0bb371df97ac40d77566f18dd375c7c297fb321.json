@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "box"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Quit",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Plug",
+      "label": "Zoom in"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Create",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Quit",
+      "label": "Yes"
+    },
+    {
+      "head": "Replace",
+      "tail": "Unplug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

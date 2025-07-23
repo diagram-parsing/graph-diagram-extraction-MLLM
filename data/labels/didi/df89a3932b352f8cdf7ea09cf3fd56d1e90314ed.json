@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "diamond"
+    },
+    {
+      "id": "azure",
+      "text": "azure",
+      "class": "octagon"
+    },
+    {
+      "id": "dark red",
+      "text": "dark red",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark red",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "azure",
+      "tail": "dark red",
+      "label": null
+    }
+  ],
+  "groups": []
+}

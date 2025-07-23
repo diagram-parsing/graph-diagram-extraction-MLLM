@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "oval"
+    },
+    {
+      "id": "number",
+      "text": "number",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "parallelogram"
+    },
+    {
+      "id": "documentation",
+      "text": "documentation",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "number",
+      "tail": "sales",
+      "label": null
+    },
+    {
+      "head": "taxes",
+      "tail": "number",
+      "label": null
+    },
+    {
+      "head": "sales",
+      "tail": "documentation",
+      "label": null
+    }
+  ],
+  "groups": []
+}

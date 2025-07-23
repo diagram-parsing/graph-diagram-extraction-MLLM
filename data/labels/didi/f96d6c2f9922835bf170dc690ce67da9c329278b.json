@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "parallelogram"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "account no",
+      "tail": "address",
+      "label": null
+    }
+  ],
+  "groups": []
+}

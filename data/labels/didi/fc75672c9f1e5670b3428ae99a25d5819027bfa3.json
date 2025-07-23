@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "octagon"
+    },
+    {
+      "id": "target",
+      "text": "target",
+      "class": "diamond"
+    },
+    {
+      "id": "customer",
+      "text": "customer",
+      "class": "diamond"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "evaluation",
+      "tail": "target",
+      "label": null
+    },
+    {
+      "head": "phone",
+      "tail": "customer",
+      "label": null
+    },
+    {
+      "head": "customer",
+      "tail": "evaluation",
+      "label": "replies"
+    }
+  ],
+  "groups": []
+}

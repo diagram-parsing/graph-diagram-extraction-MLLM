@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "box"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Plug",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Open",
+      "label": null
+    }
+  ],
+  "groups": []
+}

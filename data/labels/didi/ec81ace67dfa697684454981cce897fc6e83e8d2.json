@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn on",
+      "text": "Turn on",
+      "class": "diamond"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Turn on",
+      "tail": "Unplug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

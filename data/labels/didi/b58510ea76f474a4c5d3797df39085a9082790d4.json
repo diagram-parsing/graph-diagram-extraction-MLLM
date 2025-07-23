@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "light brown",
+      "text": "light brown",
+      "class": "oval"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "parallelogram"
+    },
+    {
+      "id": "gray",
+      "text": "gray",
+      "class": "parallelogram"
+    },
+    {
+      "id": "ruby",
+      "text": "ruby",
+      "class": "oval"
+    },
+    {
+      "id": "bubble gum",
+      "text": "bubble gum",
+      "class": "diamond"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "bubble gum",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "artichoke",
+      "tail": "light brown",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "gray",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "artichoke",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "gray",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "gray",
+      "label": null
+    },
+    {
+      "head": "saffron",
+      "tail": "ruby",
+      "label": null
+    },
+    {
+      "head": "light brown",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "gray",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "ruby",
+      "tail": "artichoke",
+      "label": null
+    }
+  ],
+  "groups": []
+}

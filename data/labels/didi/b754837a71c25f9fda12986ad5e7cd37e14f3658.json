@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "name",
+      "text": "name",
+      "class": "octagon"
+    },
+    {
+      "id": "address",
+      "text": "address",
+      "class": "oval"
+    },
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "diamond"
+    },
+    {
+      "id": "street",
+      "text": "street",
+      "class": "oval"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "street",
+      "tail": "address",
+      "label": "calls"
+    },
+    {
+      "head": "name",
+      "tail": "account no",
+      "label": null
+    },
+    {
+      "head": "street",
+      "tail": "account no",
+      "label": "builds"
+    },
+    {
+      "head": "order",
+      "tail": "street",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Reload",
+      "text": "Reload",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Reload",
+      "tail": "Wait",
+      "label": "Yes"
+    }
+  ],
+  "groups": []
+}

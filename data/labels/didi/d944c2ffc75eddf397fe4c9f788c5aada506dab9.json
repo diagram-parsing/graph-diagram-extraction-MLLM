@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "diamond"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Copy",
+      "label": null
+    },
+    {
+      "head": "Copy",
+      "tail": "Plug",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Repair",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Repair",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Quit?",
+      "label": "Back"
+    },
+    {
+      "head": "Repair",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

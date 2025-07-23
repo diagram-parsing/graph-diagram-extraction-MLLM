@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "purchase",
+      "text": "purchase",
+      "class": "diamond"
+    },
+    {
+      "id": "sales",
+      "text": "sales",
+      "class": "octagon"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "octagon"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "oval"
+    },
+    {
+      "id": "website",
+      "text": "website",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "website",
+      "tail": "purchase",
+      "label": "bills"
+    },
+    {
+      "head": "purchase",
+      "tail": "taxes",
+      "label": null
+    },
+    {
+      "head": "website",
+      "tail": "taxes",
+      "label": "replies"
+    },
+    {
+      "head": "website",
+      "tail": "price",
+      "label": "processes"
+    },
+    {
+      "head": "sales",
+      "tail": "website",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

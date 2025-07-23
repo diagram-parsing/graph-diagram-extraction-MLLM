@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "parallelogram"
+    },
+    {
+      "id": "red",
+      "text": "red",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "red",
+      "label": null
+    }
+  ],
+  "groups": []
+}

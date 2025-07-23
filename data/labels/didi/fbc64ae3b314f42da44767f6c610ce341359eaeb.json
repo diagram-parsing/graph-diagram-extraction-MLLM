@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "diamond"
+    },
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "octagon"
+    },
+    {
+      "id": "Copy",
+      "text": "Copy",
+      "class": "box"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Quit?",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Create",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Quit",
+      "label": null
+    },
+    {
+      "head": "Quit",
+      "tail": "Copy",
+      "label": null
+    }
+  ],
+  "groups": []
+}

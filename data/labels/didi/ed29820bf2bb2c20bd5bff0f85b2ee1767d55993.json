@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "business",
+      "text": "business",
+      "class": "oval"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "box"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "business",
+      "tail": "process",
+      "label": "builds"
+    },
+    {
+      "head": "order",
+      "tail": "process",
+      "label": "bills"
+    }
+  ],
+  "groups": []
+}

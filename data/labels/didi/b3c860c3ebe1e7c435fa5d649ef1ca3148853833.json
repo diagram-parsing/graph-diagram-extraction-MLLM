@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "octagon"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "octagon"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Unplug",
+      "label": null
+    },
+    {
+      "head": "Advance",
+      "tail": "Switch",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

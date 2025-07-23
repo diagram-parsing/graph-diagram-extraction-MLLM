@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "oval"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Go",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Go",
+      "tail": "Replace",
+      "label": null
+    },
+    {
+      "head": "Replace",
+      "tail": "Go",
+      "label": null
+    }
+  ],
+  "groups": []
+}

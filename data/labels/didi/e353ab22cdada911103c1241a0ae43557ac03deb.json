@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "address",
+      "text": "address",
+      "class": "diamond"
+    },
+    {
+      "id": "taxes",
+      "text": "taxes",
+      "class": "octagon"
+    },
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "diamond"
+    },
+    {
+      "id": "last name",
+      "text": "last name",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "taxes",
+      "tail": "address",
+      "label": null
+    },
+    {
+      "head": "taxes",
+      "tail": "phone",
+      "label": null
+    },
+    {
+      "head": "address",
+      "tail": "last name",
+      "label": null
+    }
+  ],
+  "groups": []
+}

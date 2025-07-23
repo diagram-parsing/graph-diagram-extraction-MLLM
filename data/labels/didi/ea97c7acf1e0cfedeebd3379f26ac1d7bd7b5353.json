@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "dark chocolate",
+      "text": "dark chocolate",
+      "class": "box"
+    },
+    {
+      "id": "violet",
+      "text": "violet",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "dark chocolate",
+      "tail": "violet",
+      "label": null
+    }
+  ],
+  "groups": []
+}

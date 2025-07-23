@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "diamond"
+    },
+    {
+      "id": "Open",
+      "text": "Open",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Open",
+      "tail": "Unplug",
+      "label": "Zoom out"
+    },
+    {
+      "head": "Open",
+      "tail": "Open",
+      "label": null
+    }
+  ],
+  "groups": []
+}

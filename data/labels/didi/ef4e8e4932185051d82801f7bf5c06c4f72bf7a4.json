@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "zip code",
+      "text": "zip code",
+      "class": "oval"
+    },
+    {
+      "id": "evaluation",
+      "text": "evaluation",
+      "class": "diamond"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payroll",
+      "tail": "zip code",
+      "label": "bills"
+    },
+    {
+      "head": "zip code",
+      "tail": "evaluation",
+      "label": "sends"
+    }
+  ],
+  "groups": []
+}

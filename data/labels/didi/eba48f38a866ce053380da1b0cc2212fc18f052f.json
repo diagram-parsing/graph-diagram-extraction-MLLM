@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "account no",
+      "text": "account no",
+      "class": "box"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "account no",
+      "label": "produces"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "octagon"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    },
+    {
+      "id": "feedback",
+      "text": "feedback",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "first name",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "feedback",
+      "label": null
+    },
+    {
+      "head": "first name",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "feedback",
+      "tail": "feedback",
+      "label": null
+    }
+  ],
+  "groups": []
+}

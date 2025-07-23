@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "Quit",
+      "text": "Quit",
+      "class": "box"
+    },
+    {
+      "id": "Advance",
+      "text": "Advance",
+      "class": "oval"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "diamond"
+    },
+    {
+      "id": "Repair",
+      "text": "Repair",
+      "class": "diamond"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Ready?",
+      "text": "Ready?",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Advance",
+      "tail": "Quit",
+      "label": "Yes"
+    },
+    {
+      "head": "Switch",
+      "tail": "Create",
+      "label": "Slide"
+    },
+    {
+      "head": "Quit",
+      "tail": "Switch",
+      "label": null
+    },
+    {
+      "head": "Repair",
+      "tail": "Switch",
+      "label": "Drag"
+    },
+    {
+      "head": "Advance",
+      "tail": "Ready?",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

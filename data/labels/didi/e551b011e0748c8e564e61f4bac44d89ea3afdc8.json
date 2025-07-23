@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "phone",
+      "text": "phone",
+      "class": "parallelogram"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "oval"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "octagon"
+    },
+    {
+      "id": "location",
+      "text": "location",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "phone",
+      "tail": "first name",
+      "label": "calls"
+    },
+    {
+      "head": "shipment",
+      "tail": "first name",
+      "label": "processes"
+    },
+    {
+      "head": "shipment",
+      "tail": "location",
+      "label": null
+    }
+  ],
+  "groups": []
+}

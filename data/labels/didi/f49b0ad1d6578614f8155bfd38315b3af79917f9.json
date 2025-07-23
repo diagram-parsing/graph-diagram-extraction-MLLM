@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "box"
+    },
+    {
+      "id": "Delete",
+      "text": "Delete",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Delete",
+      "tail": "Move",
+      "label": "No"
+    }
+  ],
+  "groups": []
+}

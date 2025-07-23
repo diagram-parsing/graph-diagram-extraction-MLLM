@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "red",
+      "text": "red",
+      "class": "octagon"
+    },
+    {
+      "id": "chocolate",
+      "text": "chocolate",
+      "class": "parallelogram"
+    },
+    {
+      "id": "blue",
+      "text": "blue",
+      "class": "oval"
+    },
+    {
+      "id": "bronze",
+      "text": "bronze",
+      "class": "diamond"
+    },
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "octagon"
+    },
+    {
+      "id": "artichoke",
+      "text": "artichoke",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "red",
+      "tail": "chocolate",
+      "label": null
+    },
+    {
+      "head": "chocolate",
+      "tail": "blue",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "red",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "blue",
+      "tail": "artichoke",
+      "label": null
+    },
+    {
+      "head": "bronze",
+      "tail": "artichoke",
+      "label": null
+    }
+  ],
+  "groups": []
+}

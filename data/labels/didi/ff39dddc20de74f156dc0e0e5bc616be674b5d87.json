@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "oval"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Wait",
+      "text": "Wait",
+      "class": "box"
+    },
+    {
+      "id": "Unplug",
+      "text": "Unplug",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Unplug",
+      "label": "No"
+    },
+    {
+      "head": "Wait",
+      "tail": "Plug",
+      "label": "Click"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Plug",
+      "label": "Scroll"
+    },
+    {
+      "head": "Unplug",
+      "tail": "Wait",
+      "label": "Drag"
+    }
+  ],
+  "groups": []
+}

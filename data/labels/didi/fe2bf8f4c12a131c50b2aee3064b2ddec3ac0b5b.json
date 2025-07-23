@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "website",
+      "text": "website",
+      "class": "octagon"
+    },
+    {
+      "id": "process",
+      "text": "process",
+      "class": "diamond"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    },
+    {
+      "id": "recipient",
+      "text": "recipient",
+      "class": "parallelogram"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "recipient",
+      "tail": "process",
+      "label": "drops"
+    },
+    {
+      "head": "website",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "recipient",
+      "label": "replies"
+    },
+    {
+      "head": "first name",
+      "tail": "recipient",
+      "label": "drops"
+    }
+  ],
+  "groups": []
+}

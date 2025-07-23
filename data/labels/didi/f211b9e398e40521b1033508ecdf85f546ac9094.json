@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "oval"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "box"
+    },
+    {
+      "id": "price",
+      "text": "price",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "price",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "price",
+      "tail": "first name",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "price",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "octagon"
+    },
+    {
+      "id": "Go",
+      "text": "Go",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Move",
+      "tail": "Go",
+      "label": null
+    }
+  ],
+  "groups": []
+}

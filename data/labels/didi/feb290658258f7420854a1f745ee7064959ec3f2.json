@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "sender",
+      "text": "sender",
+      "class": "parallelogram"
+    },
+    {
+      "id": "payment",
+      "text": "payment",
+      "class": "diamond"
+    },
+    {
+      "id": "billing",
+      "text": "billing",
+      "class": "octagon"
+    },
+    {
+      "id": "place",
+      "text": "place",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "payment",
+      "tail": "sender",
+      "label": null
+    },
+    {
+      "head": "sender",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "billing",
+      "tail": "payment",
+      "label": null
+    },
+    {
+      "head": "place",
+      "tail": "billing",
+      "label": null
+    }
+  ],
+  "groups": []
+}

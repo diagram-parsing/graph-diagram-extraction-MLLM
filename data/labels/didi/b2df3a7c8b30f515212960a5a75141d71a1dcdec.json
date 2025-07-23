@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "octagon"
+    },
+    {
+      "id": "Create",
+      "text": "Create",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Create",
+      "tail": "Resume",
+      "label": "Pinch"
+    }
+  ],
+  "groups": []
+}

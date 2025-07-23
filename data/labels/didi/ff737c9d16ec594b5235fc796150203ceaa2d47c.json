@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Quit?",
+      "text": "Quit?",
+      "class": "box"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Resume",
+      "tail": "Quit?",
+      "label": null
+    },
+    {
+      "head": "Switch",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Resume",
+      "tail": "Switch",
+      "label": null
+    }
+  ],
+  "groups": []
+}

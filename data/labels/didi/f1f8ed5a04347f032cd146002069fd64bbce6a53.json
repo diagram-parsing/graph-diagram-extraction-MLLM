@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "Turn off",
+      "text": "Turn off",
+      "class": "diamond"
+    },
+    {
+      "id": "Replace",
+      "text": "Replace",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Replace",
+      "tail": "Turn off",
+      "label": "Fling"
+    }
+  ],
+  "groups": []
+}

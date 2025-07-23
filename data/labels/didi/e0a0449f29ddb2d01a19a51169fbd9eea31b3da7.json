@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "parallelogram"
+    },
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    },
+    {
+      "id": "communication",
+      "text": "communication",
+      "class": "diamond"
+    },
+    {
+      "id": "order",
+      "text": "order",
+      "class": "octagon"
+    }
+  ],
+  "relations": [
+    {
+      "head": "shipment",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "communication",
+      "tail": "hotline",
+      "label": null
+    },
+    {
+      "head": "hotline",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "order",
+      "tail": "shipment",
+      "label": null
+    },
+    {
+      "head": "payroll",
+      "tail": "order",
+      "label": null
+    },
+    {
+      "head": "shipment",
+      "tail": "order",
+      "label": null
+    }
+  ],
+  "groups": []
+}

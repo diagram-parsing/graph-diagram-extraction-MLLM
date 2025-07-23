@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "street number",
+      "text": "street number",
+      "class": "oval"
+    },
+    {
+      "id": "payroll",
+      "text": "payroll",
+      "class": "octagon"
+    },
+    {
+      "id": "promotion",
+      "text": "promotion",
+      "class": "parallelogram"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "promotion",
+      "tail": "street number",
+      "label": null
+    },
+    {
+      "head": "street number",
+      "tail": "payroll",
+      "label": null
+    },
+    {
+      "head": "promotion",
+      "tail": "hotline",
+      "label": null
+    }
+  ],
+  "groups": []
+}

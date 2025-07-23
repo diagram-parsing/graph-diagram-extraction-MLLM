@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "Move",
+      "text": "Move",
+      "class": "parallelogram"
+    },
+    {
+      "id": "Plug",
+      "text": "Plug",
+      "class": "oval"
+    },
+    {
+      "id": "Switch",
+      "text": "Switch",
+      "class": "box"
+    },
+    {
+      "id": "Search",
+      "text": "Search",
+      "class": "oval"
+    }
+  ],
+  "relations": [
+    {
+      "head": "Switch",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Move",
+      "label": null
+    },
+    {
+      "head": "Search",
+      "tail": "Plug",
+      "label": null
+    },
+    {
+      "head": "Move",
+      "tail": "Search",
+      "label": null
+    }
+  ],
+  "groups": []
+}

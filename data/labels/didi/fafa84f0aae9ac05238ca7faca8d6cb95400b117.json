@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "customer care",
+      "text": "customer care",
+      "class": "box"
+    },
+    {
+      "id": "help",
+      "text": "help",
+      "class": "parallelogram"
+    },
+    {
+      "id": "product",
+      "text": "product",
+      "class": "box"
+    }
+  ],
+  "relations": [
+    {
+      "head": "help",
+      "tail": "customer care",
+      "label": null
+    },
+    {
+      "head": "product",
+      "tail": "customer care",
+      "label": "processes"
+    }
+  ],
+  "groups": []
+}

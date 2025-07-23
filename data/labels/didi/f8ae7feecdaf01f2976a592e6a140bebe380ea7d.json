@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "silver",
+      "text": "silver",
+      "class": "box"
+    },
+    {
+      "id": "auburn",
+      "text": "auburn",
+      "class": "oval"
+    },
+    {
+      "id": "saffron",
+      "text": "saffron",
+      "class": "oval"
+    },
+    {
+      "id": "dark brown",
+      "text": "dark brown",
+      "class": "oval"
+    },
+    {
+      "id": "dark red",
+      "text": "dark red",
+      "class": "diamond"
+    }
+  ],
+  "relations": [
+    {
+      "head": "saffron",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "silver",
+      "label": null
+    },
+    {
+      "head": "auburn",
+      "tail": "saffron",
+      "label": null
+    },
+    {
+      "head": "dark brown",
+      "tail": "dark red",
+      "label": null
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "shipment",
+      "text": "shipment",
+      "class": "diamond"
+    },
+    {
+      "id": "hotline",
+      "text": "hotline",
+      "class": "octagon"
+    },
+    {
+      "id": "first name",
+      "text": "first name",
+      "class": "parallelogram"
+    }
+  ],
+  "relations": [
+    {
+      "head": "hotline",
+      "tail": "shipment",
+      "label": "ships"
+    },
+    {
+      "head": "first name",
+      "tail": "shipment",
+      "label": "ships"
+    }
+  ],
+  "groups": []
+}
